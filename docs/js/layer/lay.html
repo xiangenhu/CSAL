@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://localhost:8080/layer/layer.js"></script>
+	<script>
+	$(document).ready(function(){ 
+     $('#test2').on("click", function(){
+    layer.confirm('are you sureare you sureare you sureare you sureare you sure?', {icon: 3, title: 'Hint'}, function(index){
+    layer.close(index);
+  });
+    });
+});
+	</script>
+
+</head>
+<body>
+	<button id="test2">小小提示层</button>
+
+</body>
+</html>
+
+
