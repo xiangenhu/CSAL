@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+				
+				var res = allText.split("\n");
+				var regExp = /<a[^>]*>([\s\S]*?)<\/a>/;
+				for (var i=0; i<res.length; i++)
+				{
+					var matches = regExp.exec(res[i]);
+					if(matches!=null)
+					{
+						var regExp2 = /<a\s+(?:[^>]*?\s+)?href="([^"]*)/;
+						var matches2 = regExp2.exec(matches[0]);
+						if(matches2!=null)
+						{
+						
+						console.log(matches[1]+"**"+matches2[1]);
+						}
+						else
+						{
+						console.log(matches[1]);
+						}
+		
+					
+					
+					}
+					
+				}
+				
+               
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+readTextFile("thebeehive.txt");
+</script> 
+
+</body>
+</html>
