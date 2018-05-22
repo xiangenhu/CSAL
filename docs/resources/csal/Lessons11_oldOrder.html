@@ -10,17 +10,17 @@
     </script>
 
     <script type="text/css" href="CSSReset.css" rel="stylesheet"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 
     <!--<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />-->
 
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <!--load jQuery libraries-->
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
     <script src="../../js/layer/layer.js"></script>
     <!--script type="text/javascript" src="../lessonsController/csal.js"></script-->
@@ -438,7 +438,7 @@
             var getIdArray = sessionStorage.getItem("UID").split("-");
             var getId = getIdArray[getIdArray.length - 1];
 
-            $.get("http://ace.autotutor.org/ACEAPICORS10/api/passfail/" + getId, function(data, status) {
+            $.get("https://ace.autotutor.org/ACEAPICORS10/api/passfail/" + getId, function(data, status) {
 
                 if (status == "success") {
 
@@ -474,7 +474,7 @@
         //THIS FUNCTION CALL ACE TO GET GeRecoverInfo
         function GeRecoverInfo() {
             var userID = sessionStorage.getItem("UID");
-            var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+            var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
             var inpjson = "{\"ID\":\"" + userID + "\",\"ScriptURL\":\"" + "" + "\",\"User\":\"" + "" + "\",\"UseDB\":\"" + "false" + "\"}";
             var content = JSON.parse(inpjson);
 

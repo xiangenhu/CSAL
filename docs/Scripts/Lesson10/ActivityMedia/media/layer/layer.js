@@ -8,7 +8,7 @@
  @QQ群：176047238(layUI交流群)
  @Copyright: Sentsin Xu(贤心)
  @官网说明：http://sentsin.com/jquery/layer
- @赞助layer: https://me.alipay.com/sentsin
+ @赞助layer: https://://me.alipay.com/sentsin
 		
  *************************************************************/
 

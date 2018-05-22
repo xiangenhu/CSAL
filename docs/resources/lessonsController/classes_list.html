@@ -176,9 +176,9 @@ function Save()
 {
 	var content={'className':className,'classInfo':"var "+className+"="+JSON.stringify(classObj)};
 	method = "POST";
-	//Url = 'http://localhost:5237/api/Lessons';
+	//Url = 'https://localhost:5237/api/Lessons';
 	//using pilot1 api
-	Url = 'http://ace.autotutor.org/lessonsController/api/Lessons';
+	Url = 'https://ace.autotutor.org/lessonsController/api/Lessons';
 	$.ajax({
 		type: method,
 		url: Url,
