@@ -128,8 +128,13 @@
         };
         d.defaultPorts = {
             http: "80",
-            https: //:"443",ftp:"21",gopher:"70",ws:"80",wss:"443"};d.invalid_hostname_characters=
-                /[^a-zA-Z0-9\.-]/;d.domAttributes = {
+            https:"443",
+			ftp:"21",
+			gopher:"70",
+			ws:"80",
+			wss:"443"};
+			d.invalid_hostname_characters=/[^a-zA-Z0-9\.-]/,
+			d.domAttributes = {
                 a: "href",
                 blockquote: "cite",
                 link: "href",
