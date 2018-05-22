@@ -418,7 +418,7 @@ function addQuestion(Character){
 	return Question;
 	}
 
-function loadCharas(){
+function loadCharasNew(){
 	o={};
 	var Avatars = document.getElementById("TopDiv");
 	var s = '';
