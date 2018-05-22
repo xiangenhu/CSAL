@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<style>
+			#myVideo
+			{
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+<body> 
+<script>document.domain = 'ace.autotutor.org'</script>
+<div style="text-align:center"> 
+  
+  <video id="myVideo" width="790" >
+    <source  type="video/mp4" >
+  </video>
+</div> 
+
+<script> 
+var videoLength;
+var videoCurrentTime;
+var videoBufferedLength;
+var videoState;
+var pauseAtTime=5000000;
+
+var PauseTimer;
+var vid = document.getElementById("myVideo");
+
+function myLocalVideoPlayer(url,replayVideo)
+{
+	if(url!='')
+	{
+		vid.src=url;
+	
+		//vid.clientWidth=400;
+		
+		vid.autoplay = true;
+		if(replayVideo==true)
+		{
+			vid.controls = true;
+		}
+		else
+		{
+			vid.controls = false;
+		}
+	
+	}
+	
+
+	
+}
+
+function setPauseTime(data)
+{
+	pauseAtTime=data;
+	PauseTimer=setTimeout(function(){StartPauseTimer()},100);
+}
+
+//video loaded event 
+vid.onloadeddata = function() {
+	myVideoStateChange(-1);
+	
+	   
+	};
+	
+//playing event
+vid.onplaying = function() {
+	
+	myVideoStateChange(1);
+	  
+};
+
+//video end event
+vid.onended = function() {
+	myVideoStateChange(0);
+};
+function StartPauseTimer()
+{
+	var currtimeTimer =Math.round( getCurTime());
+	if(currtimeTimer==pauseAtTime)
+	{
+		clearTimeout(PauseTimer);
+		videoPause();
+		pauseAtTime==5000000;
+		
+	}
+	else
+	{
+	PauseTimer=setTimeout(function(){StartPauseTimer()},100);
+	}
+}
+//Get current Video buffered Length (sec)	
+function getBufferedLength() { 
+
+    videoBufferedLength=vid.buffered.end(3);
+	videoLength=getVideoLength();
+	if(videoLength>videoBufferedLength)
+	{
+		myVideoStateChange(3);
+	}
+	else
+	{
+		myVideoStateChange(-1);
+	}
+	
+} 
+//Get current Video Length (sec)
+function getVideoLength() {
+	videoLength=vid.duration;
+	return videoLength;
+}
+
+//Get current time position (sec)
+function getCurTime() { 
+    videoCurrentTime=vid.currentTime;
+	return videoCurrentTime;
+}
+
+//play video 
+function videoPlay() { 
+	vid.play(); 
+} 
+
+function videoEnded(){
+	return vid.ended;
+}
+function videoonpause(){
+
+	return vid.onpause;
+}
+
+//pause video 
+function videoPause() { 
+    vid.pause(); 
+	if(vid.paused)
+	{
+		myVideoStateChange(2);
+	}
+}
+
+
+//get current  Video State
+function getVideoState() { 
+   return videoState;
+}
+ 
+//Get all state change event
+function myVideoStateChange(event) {
+	
+/////////////////////////////////THIS IS THE PART THAT OVERRIDES THE YOUTUBE API TO PAUSE AT A CERTAIN TIME////////////-1  unstarted /////0 ended ///// 1  playing /////2  paused ///// 3  buffering///////////////////////////////////////////////////////
+	videoState=event;
+	var checkVideoEnded=videoEnded();
+	var currtimeTimer =Math.round( getCurTime());
+	//console.log("currtimeTimer:"+currtimeTimer+",vid.duration:"+vid.duration+",checkVideoEnded:"+checkVideoEnded+",event:"+event);
+	if(checkVideoEnded==true && event==1)
+	{
+		videoState=0;
+		
+		
+	}
+	
+	parent.getLocalVideoState(videoState);
+
+}
+
+
+
+
+
+</script> 
+
+</body> 
+</html>
