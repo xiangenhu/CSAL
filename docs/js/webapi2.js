@@ -53,7 +53,7 @@ function Put(acePutjson) {
     }).done(function(data) {
         var errorInfo = GetRuleError(data);
         var actionsError = GetActions(data);
-		console.log(actions);
+//		console.log(actions);
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {
            
