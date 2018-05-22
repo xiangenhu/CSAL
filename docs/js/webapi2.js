@@ -1,5 +1,5 @@
 //var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
-var aceurl = "http://ace.autotutor.org/ACEAPI2017/api/aceaction";
+var aceurl = "https://ace.x-in-y.com/ACEAPI2017/api/aceaction";
 var actions;
 var PutStatus=false;
 
