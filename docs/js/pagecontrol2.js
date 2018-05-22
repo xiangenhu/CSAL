@@ -3,7 +3,7 @@ var AudioButtonOn, DisplayAreaOn, HomeButtonOn, NextButtonOn, PlayVideoButtonOn,
 var currentLessonStatus = false;
 var currentLessonID;
 var domainURL = "https://xiangenhu.github.io";
-var scriptFolderURL = "https://xiangenhu.github.io/CSAL/Scripts/";
+var scriptFolderURL = "https://onrstem.x-in-y.com/retrieve?json={'guid':'990a4c64-c614-4b4e-9ad4-5a877b8e8b43','authorname':'xiangenhu','source':'ScriptOnly','TagName':'AutoTutorScript'}&junk=1&";
 var talkingheadLoaded = false;
 var agentBusy = false;
 var lessonRecovery = false;
