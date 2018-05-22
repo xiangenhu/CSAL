@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>document.domain="x-in-y.com"</script>
+<title>Insert title here</title>
+<script type="text/javascript">
+function callBoth(speech)
+{
+	document.getElementById("cristina").value = "";
+	document.getElementById("jordan").value = "";
+	//alert(speech);
+	var str = speech;
+	if (!('contains' in String.prototype)) String.prototype.contains = function (str, startIndex) {
+	    return -1 !== String.prototype.indexOf.call(this, str, startIndex);
+	};
+	
+if(str.contains(":")==true)
+	{
+	var a = str.split(":");
+	}
+	//alert(a[0]);
+	//alert(a[1]);
+if(a[0]==0)
+	{
+    document.getElementById("cristina").value = a[1];
+    parent.getValue(0);
+	}
+else if(a[0]==1)
+	{
+    document.getElementById("jordan").value = a[1];
+    parent.getValue(1);
+	}
+}
+</script>
+<style type="text/css">
+#cristina
+{
+width: 500px;
+}
+#jordan
+{
+width: 500px;
+}
+</style>
+</head>
+<body>
+<label>Cristina</label>
+<input type="text" id="cristina">
+<br/>
+<br/>
+<label>Jordan</label>
+<input type="text" id="jordan">
+</body>
+</html>

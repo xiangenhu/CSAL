@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin">
+<title>CSAL Web Application</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+<link rel="stylesheet" type="text/css" href="css/mainPage.css">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<style>
+	#home {
+		position: absolute;
+		top: 150px;
+	}
+	
+	#textInputDialog {
+		width: 799px;
+		background-color: #474747;
+	}
+	
+	#textInput {
+		width: 500px;
+		height: 3em;
+		border: 3px solid #cccccc;
+		padding: 5px;
+		font-family: McLaren, Verdana, 'Times New Roman';
+		font-size: 24px;
+		font-weight: normal;
+		outline: 0;
+		border-radius: 10px;
+		border: 3px solid #999;
+		border-radius: 10px;
+	}
+	
+	#textInputSubmit {
+		margin-left: 8px;
+		width: 200px;
+		vertical-align: top;
+		background-color: #f1f1f1;
+		color: #121212;
+		text-align: center;
+		font-size: 24px;
+		font-family: 'McLaren', Verdana, 'Times New Roman';
+		font-weight: bold;
+		outline: 0;
+		border-radius: 10px;
+		border: 3px solid #999;
+		border-radius: 10px;
+	}
+	
+	#scoreBoardL {
+		background-color: #C0C0C0;
+		text-align: center;
+		width: 100px;
+		height: 100px;
+		margin: 388px 5px;
+		position: absolute;
+	}
+	
+	#scoreBoardR {
+		background-color: #C0C0C0;
+		text-align: center;
+		width: 100px;
+		height: 100px;
+		margin: 388px 695px;
+		position: absolute;
+	}
+	
+	.scoreDisplayName {
+		border: 5px;
+		width: 89px;
+		color: #121212;
+		border: 1px solid #f1f1f1;
+		font-size: 26px;
+	}
+	
+	.score {
+		color: #474747;
+		font-size: 48px;
+	}
+	
+	.no-close .ui-dialog-titlebar {
+		display: none;
+	}
+	
+	.no-close .ui-dialog-titlebar-close {
+		display: none;
+	}
+	
+	.pscontainer {
+		width: 600px;
+		/*border: 2px solid #989898;*/
+		border-radius: 3px;
+		overflow: hidden;
+		display: inline-block;
+		margin: 4px 0px 5px -22px;
+		vertical-align: top;
+		background-color: #d0d0d0;
+	}
+	
+	.progressbar {
+		color: #fff;
+		text-align: right;
+		height: 12px;
+		width: 0;
+		background-color: #51d24d;
+		/*#B3240E;*/
+		border-radius: 3px;
+	}
+	
+	#PB {
+		margin-top: -28px;
+		margin-left: 180px;
+	}
+
+	
+	#repeat {
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 80px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-top: 509px;
+		margin-left: 20px;
+		float: left;
+		border-radius: 7px;
+		border: 1px solid white;
+		cursor: pointer;
+	}
+	
+	#repeat:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+<!--script src="http://www.youtube.com/player_api"></script-->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="js/callYoutubePlayer.js"></script>
+<script src="js/processbar.js"></script>
+<script src="js/mainpageRecovery.js"></script>
+<script type="text/javascript">
+	var vidPlaying = false;
+	var actions = [];
+	var line = "";
+	var counter = 1;
+	var player;
+	var scriptbaseURL;
+	var scriptbasepath;
+	var webAPImethod;
+	var ID;
+	var Parse = false;
+	var isAgentBusy = false;
+	var inpjson = "";
+	var continueScript = true;
+	var time;
+	var willPause = false;
+	var useraction = "";
+	var input = "";
+	var idleTime = 0;
+	var maxIdle = 0;
+	var storeval = 0;
+	var audioPath = "";
+	var orientation = false;
+	var agentBusy = false;
+	var vidplayerBusy = false;
+	var canSpeakNow = true;
+	var pauseAtTime = 1000000000;
+	var flag = false;
+	var stopPlayTimer;
+	var talkingheadLoaded = false;
+	var getScriptFolder = "";
+	var VideoType = 0;
+	var strs = [];
+	var countPlay = 0;
+	var agentNum;
+	var SID;
+	var isTimerSet = false;
+	// 11/05 carl added this isEventExpected
+	var isEventExpected = false;
+	var startPorcessBar = false;
+	//var getProcessValue;
+	var mediaInput = false;
+
+	//06/18 for recover
+	var currnectlyLesson = "";
+	var currnectlyURL = "";
+	var getUserEvent = "";
+	var getSystemEvent = "";
+	var recover = false;
+	var recoverPage;
+	var videoMediaRecover = false;
+
+
+	var repeatArray = [];
+	var dup_repeatArray = [];
+	var repeatSpeechStatus = false;
+	var repeatSpeechCount = 0;
+	var repeatTime = 0;
+	var act = "";
+	var domainURL="http://ace.autotutor.org";
+	var html5Version=true;
+	var BrowserName;
+	var WaitForEventInput=false;
+	var userAnswerSpendTime=0;
+	//FOR CROSS DOMAIN AND RECIVE MESSAGE FORM SUBPAGE
+	window.addEventListener('message', receiveMessage, false);
+
+	function receiveMessage(evt)
+	{
+	  if (evt.origin === domainURL)
+	  {
+			getValue(evt.data)
+		//alert("got message: "+evt.data);
+	  }
+	}
+	
+	$(document).ready(function() {
+		getBrowserName();
+		//* for repeat function
+		$('#repeat').hide();
+		//* end repeat function
+		$('#scoreBoardR').hide();
+		$('#scoreBoardL').hide();
+
+		//BEGIN-CRAIG-TEXT
+		$('#textInputDialog').dialog({
+			width: 799,
+			height: 'auto',
+			minHeight: 75,
+			autoOpen: false,
+			closeOnEscape: true,
+			dialogClass: "no-close",
+			buttons: []
+		});
+
+		//By default, the enter key will create a line break in our text
+		//area.  We want the enter key to be the same as hittin our button
+		$('#textInput').keydown(function(e) {
+			if (e.keyCode == 13) {
+				e.preventDefault();
+				//Use the timeout so this function can return (or the dialog
+				//won't properly close)
+				setTimeout(function() {
+					$('#textInputSubmit').click()
+				}, 55);
+				return false;
+			}
+		});
+
+		$('#textInputSubmit').click(function(evt) {
+			evt.preventDefault();
+
+			input = $('#textInput').val();
+
+			if (input != "") {
+				maxIdle = 0;
+				$('#textInputDialog').dialog('close');
+			}
+
+
+		});
+
+
+		$('#home').click(function() {
+			$('#scoreBoardR').hide();
+			$('#scoreBoardL').hide();
+			clearCache();
+			location.replace(location.href);
+			if (sessionStorage.getItem("uname") != null) {
+
+				stopvideo();
+				clearTimeout(time);
+				$("#mainFrame").attr("src", "resources/hsc/CSALscreenPage.html");
+				$("#videoDiv").css('z-index', '-10');
+				$("#videoDiv").css('visibility', 'hidden');
+				$("#videoDiv2").css('z-index', '-10');
+				$("#videoDiv2").css('visibility', 'hidden');
+				$("#outputJSON").css('z-index', '-10');
+				$("#outputJSON").css('visibility', 'hidden');
+				$('#outputJSON').text("");
+				$("#vid").attr("src", '');
+			} else {
+				stopvideo();
+				clearTimeout(time);
+				$("#mainFrame").attr("src", "resources/hsc/startPage.html");
+				$("#videoDiv").css('z-index', '-10');
+				$("#videoDiv").css('visibility', 'hidden');
+				$("#videoDiv2").css('z-index', '-10');
+				$("#videoDiv2").css('visibility', 'hidden');
+				$("#outputJSON").css('z-index', '-10');
+				$("#outputJSON").css('visibility', 'hidden');
+				$('#outputJSON').text("");
+				$("#vid").attr("src", '');
+			}
+		});
+
+
+
+		$("body").keydown(function(event) {
+			var KeyID = event.keyCode;
+			switch (KeyID) {
+
+				case 120:
+					$("#iframeAgent").prop('disabled', false);
+					$("#iframeDummy").prop('disabled', false);
+					$("#tester").css('z-index', '10');
+					$("#tester").css('visibility', 'visible');
+					break;
+				case 121:
+					$("#iframeAgent").prop('disabled', true);
+					$("#iframeDummy").prop('disabled', true);
+					$("#tester").css('z-index', '-200');
+					$("#tester").css('visibility', 'hidden');
+					break;
+			}
+		});
+
+		$('#iframeAgent').click(function() {
+			$("#agents").attr("src", "http://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0");
+		});
+
+		$('#iframeDummy').click(function() {
+			$("#agents").attr("src", "dummyAgentPage.html");
+		});
+
+		$("#readText").click(function() {
+			if ($('#readTextImg').attr('src') == "images/SpeakBefore.png") {
+				$("#readTextImg").attr("src", "images/SpeakAfter.png");
+				document.getElementById('mainFrame').contentWindow.Lock();
+				maxIdle = 1000000000;
+				$("#audioPlayer2").attr("src", scriptbasepath + audioPath);
+				document.getElementById('audioPlayer2').play();
+
+			} else if ($('#readTextImg').attr('src') == "images/SpeakAfter.png") {
+				$("#readTextImg").attr("src", "images/SpeakBefore.png");
+				document.getElementById('mainFrame').contentWindow.Unlock();
+				var mediaElement = document.getElementById("audioPlayer2");
+				mediaElement.pause();
+				mediaElement.src = '';
+			}
+		});
+		//* for repeat function
+		$('#repeat').click(function() {
+			dup_repeatArray = repeatArray.slice();
+			repeatSpeechStatus = true;
+			repeatTime++;
+			var repeatSpeech = dup_repeatArray[0];
+			dup_repeatArray.splice(0, 1);
+			repeatSpeechFunction(repeatSpeech);
+			$('#repeat').hide();
+
+		});
+		//* end repeat function
+	});
+
+	function clearCache() {
+		$.ajax({
+			//url:'www.haorooms.com',
+			//url:'http://x-in-y.com/',
+			url: 'http://ace.autotutor.org',
+			dataType: 'json',
+			data: {},
+			beforeSend: function(xmlHttp) {
+				xmlHttp.setRequestHeader("If-Modified-Since", "0");
+				xmlHttp.setRequestHeader("Cache-Control", "no-cache");
+			},
+			success: function(response) {
+				alert("good")
+			}
+
+		});
+	}
+
+	//BEGIN-CRAIG-TEXT
+	// Function to show input text box with a submit button. Assumes that the
+	// above document ready function has run and the dialog has been configured
+	// initText - (string) the initial text to display in the input box
+	// onTop - (boolean) true to show at top of UI, false to show at bottom
+	function showSampleInputText(initText, atTop) {
+		if (!initText)
+			initText = '';
+
+		var newPos = {
+			of: '#mainBody',
+			my: '',
+			at: ''
+		};
+		if (!!atTop) {
+			newPos.my = 'left top';
+			newPos.at = 'left top';
+		} else {
+			newPos.my = 'left bottom';
+			newPos.at = 'left bottom';
+		}
+
+		$('#textInput').val(initText);
+		//$('#textInputDialog').dialog('option', 'position', newPos);
+		$('#textInputDialog').dialog('open');
+	}
+function getBrowserName()
+{
+		navigator.sayswho= (function(){
+		var ua= navigator.userAgent, tem, 
+		M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+		if(/trident/i.test(M[1])){
+			tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+			return 'IE '+(tem[1] || '');
+		}
+		if(M[1]=== 'Chrome'){
+			tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+			if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+		}
+		M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+		if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+		BrowserName=M[0];
+		return M.join(' ');
+	})();
+	
+
+}
+	function showInputText() {
+		var newPos = {
+			of: '#mainBody',
+			my: '',
+			at: ''
+		};
+		newPos.my = 'left bottom';
+		newPos.at = 'left bottom';
+		$('#textInput').val('');
+
+		$('#textInputDialog').dialog('open');
+	}
+
+
+	//END-CRAIG-TEXT
+
+	function ShowScoreBoard(ScoreName, Score) {
+		if (ScoreName != "JordanScore") {
+			var uname = sessionStorage.getItem("uname");
+			$('#scoreBoardL').show();
+			$('#scoreBoardUserNameL').html(uname);
+			$('#scoreL').html(Score);
+
+		} else {
+			$('#scoreBoardR').show();
+			$('#scoreBoardUserNameR').html("Jordan");
+			$('#scoreR').html(Score);
+		}
+
+	}
+	// Function that plays the sounds when buttons are clicked
+	function PlaySound(sound) {
+		var soundPath = "sounds/" + sound;
+		$("#audioPlayer").attr("src", soundPath);
+		document.getElementById('audioPlayer').play();
+	}
+	// Function that is triggered when the agents finish talking- returns 0 for Cristina and 1 for Jordan
+	function getValue(info) {
+	
+		if (info == "9") {
+			talkingheadLoaded = true;
+			agentBusy = false;
+			if (recover == false) {
+				GetScript(getScriptFolder);
+
+			} else {
+				document.getElementById('mainFrame').src = recoverPage;
+				recoverTime = setTimeout(function() {
+					Timer()
+				}, 1000);
+				currnectlyURL = recoverPage;
+			}
+		} else {
+			//* for repeat function
+			if (repeatSpeechStatus == true) {
+				if (dup_repeatArray.length > 0) {
+					if (strs.length > 0) {
+						parseStrs();
+					} else if (strs.length == 0) {
+						repeatSpeechFunction(dup_repeatArray[0]);
+						dup_repeatArray.splice(0, 1);
+					}
+
+				} else if (dup_repeatArray == 0) {
+					if (strs.length > 0) {
+						parseStrs();
+					} else if (strs.length == 0) {
+						repeatSpeechStatus = false;
+						$('#repeat').show();
+					}
+
+				}
+			}
+			//* end repeat function
+			else {
+				if (countPlay != 0) {
+					toPlay();
+
+				} else {
+					agentBusy = false;
+				}
+
+			}
+
+		}
+	}
+
+	function getLocalVideoState(event) {
+
+		var LocalVideoState = event;
+		if (event == 1) {
+			vidplayerBusy = true;
+
+		} else if (event == 2) {
+			useraction = "VideoPause";
+			vidplayerBusy = false;
+
+		}
+		if (LocalVideoState == "0") {
+			useraction = "VideoEnd";
+			videoMediaRecover = false;
+			vidplayerBusy = false;
+			$("#videoDiv").css('z-index', '-10');
+			$("#videoDiv").css('visibility', 'hidden');
+			$("#videoDiv2").css('z-index', '-10');
+			$("#videoDiv2").css('visibility', 'hidden');
+		}
+	}
+	var getMediaFeedBackData = "";
+	var getMediaFeedBack = "";
+	// Function that listens to the response of the user
+	function GetWorldEvent(s) {
+		useraction = s;
+		getUserEvent = s;
+		maxIdle = 0;
+		if(WaitForEventInput==true)
+		{
+			userAnswerSpendTime=stopCountForUserSpend();
+			WaitForEventInput=false;
+			
+		}
+		//-------this is for recovery------------------------
+		getProcessDefineJs();
+		//-------this is for recovery------------------------
+		//--this part for get user answer and selected item--
+		var n = s.indexOf("userAnswer_");
+		if (n != -1) {
+			var getUserAnswer = s.split("_");
+			useraction = getUserAnswer[1];
+			userSelectedItem = getUserAnswer[2];
+		}
+
+		var v = s.indexOf("questionNum_");
+		if (v != -1) {
+			var getQuestionNum = s.split("_");
+			questionNum = getQuestionNum[1];
+			useraction = "";
+		}
+
+
+		//* for repeat function
+		if (act == "WaitForEvent" || act == "WaitForInput" || act == "WaitForMediaInput") {
+			repeatSpeechStatus = false;
+			repeatArray = [];
+			repeatTime = 0;
+			$('#repeat').hide();
+		}
+		//end for repeat function
+
+		if (getMediaFeedBack == true) {
+			var feedBackInfo = s.split(':');
+			if (getMediaFeedBackData == "Instruction" || getMediaFeedBackData == "TAGoodAnswer") {
+
+				if (feedBackInfo[0] == "Cristina") {
+					if (feedBackInfo[1] == "Speak") {
+						var test = feedBackInfo[2];
+
+						if (test.indexOf("_user_") >= 0) {
+							speak("0:_user_," + feedBackInfo[3], "Play");
+						} else {
+							speak("0:" + feedBackInfo[3], "Play");
+						}
+					}
+				}
+
+			} else if (getMediaFeedBackData == "SAGoodAnswer" || getMediaFeedBackData == "SABadAnswer" || getMediaFeedBackData == "SABadAnswer") {
+				if (feedBackInfo[0] == "Jordan") {
+					if (feedBackInfo[1] == "Speak") {
+						// userID has compiled in talking head, then sentence compiled to talking head, ID same to content, Jodan selected item should compile to talking head (EX,ID=A, content="A")
+						speak("1:" + feedBackInfo[4], "Play");
+
+					}
+				}
+			}
+			getMediaFeedBack = false;
+		}
+		if (mediaInput == true) {
+			mediaInput = false;
+			useraction = "";
+			input = s;
+		}
+		//alert(useraction);
+	}
+
+
+	function sayHi(name) {
+		var speech = "0:Hi " + name;
+		//window.frames.agents.callBoth(speech);
+		//document.getElementById('agents').contentWindow.callBoth(speech, "Speak");
+	}
+
+	function sayBye() {
+		//http://x-in-y.com/Fakewww/CristinaAndJordanNewV1-webVersion/CristinaAndJordanNewV1.html
+		//dummyAgentPage.html
+		var speech = "1:See you later";
+		//document.getElementById('agents').contentWindow.callBoth(speech, "Speak");
+	}
+
+	function repeatSpeechFunction(speech) {
+
+		SID = sessionStorage.getItem("SID");
+		var splitSpeech = speech.split(":");
+		agentNum = splitSpeech[0];
+		var data = splitSpeech[1];
+		strs = data.split(",");
+		parseStrs();
+	}
+
+	function parseStrs() {
+		var getSentence = strs[0].trim();
+		if (getSentence == "_user_") {
+			var speech = agentNum + ":" + SID;
+			document.getElementById('agents').contentWindow.callBoth(speech, "Play");
+		} else {
+			var speech = agentNum + ":" + getSentence;
+			document.getElementById('agents').contentWindow.callBoth(speech, "Play");
+		}
+		strs.splice(0, 1);
+	}
+	// Function that send a string to the agents page for speech
+	function speak(speech, status) {
+		//agentBusy = true;
+
+		agentBusy = true;
+
+		if (status == "Play") {
+			SID = sessionStorage.getItem("SID");
+			var splitSpeech = speech.split(":");
+			agentNum = splitSpeech[0];
+			var data = splitSpeech[1];
+			strs = data.split(",");
+			toPlay();
+			
+		} else {
+
+			document.getElementById('agents').contentWindow.callBoth(speech, status);
+		}
+	}
+
+	function toPlay() {
+		if (countPlay < strs.length) {
+			agentBusy = true;
+			if (strs[countPlay] == "_user_") {
+				var speech = agentNum + ":" + SID;
+			} else {
+				var speech = agentNum + ":" + strs[countPlay];
+
+			}
+			if(html5Version==true)
+			{
+			document.getElementById('agents').contentWindow.postMessage(speech+",Play",'*');
+			}
+			else
+			{
+			document.getElementById('agents').contentWindow.callBoth(speech, "Play");
+			}
+			countPlay++;
+		} else if (countPlay == strs.length) {
+			countPlay = 0;
+			agentBusy = false;
+		}
+
+	}
+	//Function that loads the appropriate media in the main IFRAME
+	function showMedia(data) {
+		var resInpjson = "";
+		$("#mainFrame").attr("src", data);
+		resInpjson = inpjson.replace(/"([^"]*)"/g, "$1");
+		currnectlyURL = data;
+		//getPageName(data);
+	}
+
+	//Function that changes the page inside the main IFRAME
+	function nextPage(urllink) {
+
+		var resInpjson = "";
+		resInpjson = inpjson.replace(/"([^"]*)"/g, "$1");
+		currnectlyURL = scriptbaseURL + urllink;
+		document.getElementById('mainFrame').src = scriptbaseURL + urllink;
+		repeatArray = [];
+		repeatSpeechCount = 0;
+
+	}
+
+function FileExist(url) 
+{ 
+	$.ajax({ 
+	   url:url, 
+	   type:'HEAD', 
+	   error: function() { 
+		   //file not exists 
+	   }, 
+	   success: function() { 
+		   document.getElementById('agents').src = url;
+		   html5Version=true;
+	   },
+	   error: function() {
+				
+				document.getElementById('agents').contentWindow.GetLessonUrl(getScriptFolder);
+				html5Version=false;
+
+					}
+	});
+} 
+
+
+	// function that gets which script to be grabbed and sent to the ACE API
+	function GetScript(scriptFolder) {
+		//alert(scriptFolder);
+		//document.getElementById('agents').src = document.getElementById('agents').src;
+		if (scriptFolder != "") {
+			$("#mainFrame").attr("src", "resources/LoadingPage.html");
+		}
+
+		if (talkingheadLoaded == false && scriptFolder != "") {
+			var strs=scriptFolder.split('_');
+			var Url="http://ace.autotutor.org/pilot3/scripts/"+strs[0]+"/html5/index.html?lessonName="+strs[0];
+			getScriptFolder = scriptFolder;
+			var isExist=FileExist(Url);
+			/*
+			if(isExist==true)
+			{
+				document.getElementById('agents').src = Url;
+			}
+			
+			else
+			{
+				
+				document.getElementById('agents').contentWindow.GetLessonUrl(scriptFolder);
+			}*/
+			
+		} else if (talkingheadLoaded == true) {
+			currnectlyLesson = scriptFolder;
+			talkingheadLoaded = false;
+			vidPlaying = false;
+			vidPlaying = false;
+			actions = [];
+			line = "";
+			counter = 1;
+			scriptbaseURL = "";
+			scriptbasepath = "";
+			webAPImethod = "";
+			Parse = false;
+			isAgentBusy = false;
+			inpjson = "";
+			continueScript = true;
+			useraction = "";
+			input = "";
+			idleTime = 0;
+			maxIdle = 0;
+			storeval = 0;
+			audioPath = "";
+			orientation = false;
+			agentBusy = false;
+			vidplayerBusy = false;
+			canSpeakNow = true;
+			continueScript = true;
+			var str = scriptFolder;
+			if (!('contains' in String.prototype))
+				String.prototype.contains = function(str, startIndex) {
+					return -1 !== String.prototype.indexOf.call(this, str,
+						startIndex);
+				};
+			if (str.contains("_") == true) {
+				
+				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				
+				var scriptfolderurl = "http://ace.autotutor.org/pilot3/scripts/"
+				var scriptfolderpath = "C:\\inetpub\\wwwroot\\pilot3\\";
+				var a = str.split("_");
+				var folder = a[0];
+				folder = folder.replace(" ", "");
+				var script = a[1];
+				if (script == "Refresher Video") {
+					if (folder == "Lesson17") {
+						vidPlayerControl('68uP1rseofM');
+					}
+				} else {
+					/*if (folder == "Lesson1") {
+						if (script == "Activity") {
+							vidPlayerControl('0Bmhjf0rKe8');
+						} else if (script == "Practical") {
+							vidPlayerControl('-G5sx4MkJmk');
+						}
+						
+					} else if (folder == "Lesson12") {*/
+					$("#mainFrame").attr("src", "resources/interactionPage.html");
+					var scripturl = scriptfolderurl + folder + "/" + script + "Media/" + script + ".xml";
+					//var scripturl = "http://141.225.42.101/atsamplepacket.xml";
+					scriptbaseURL = scriptfolderurl + folder + "/" + script + "Media/";
+					scriptbasepath = "Scripts\\" + folder + "\\" + script + "Media\\";
+					//inpjson = "{\"ID\":\"" + sessionStorage.getItem("uname") + "\",\"ScriptURL\":\"" + scripturl + "\",\"User\":\"" + sessionStorage.getItem("uname") + "\"}";
+					if (getScriptFolder != "Lesson0_Activity") {
+						inpjson = "{\"ID\":\"" + sessionStorage.getItem("UID") + "\",\"ScriptURL\":\"" + scripturl + "\",\"User\":\"" + sessionStorage.getItem("uname") + "\",\"UseDB\":\"" + "true" + "\"}";
+						console.log("inpjson="+inpjson);
+					} else if (getScriptFolder == "Lesson0_Activity") {
+						inpjson = "{\"ID\":\"" + sessionStorage.getItem("GUID") + "\",\"ScriptURL\":\"" + scripturl + "\",\"User\":\"" + sessionStorage.getItem("uname") + "\",\"UseDB\":\"" + "true" + "\"}";
+					}
+
+					var content = JSON.parse(inpjson);
+					var method = "POST";
+					webAPImethod = method;
+					var getUrl = $.ajax({
+						type: method,
+						url: aceurl,
+						//dataType:'json',
+						data: content,
+						success: function(data) {
+							getJsonobj(data);
+						}
+					}).done(function(data) {
+						// for Lesson27 recovery 
+						if (folder == "Lesson27") {
+							videoMediaRecover = true;
+						}
+						//------------------------------
+						Run(inpjson); // calls the Run function that starts the conversation using PUT
+					});
+				}
+			} else {
+				if (str == "Prediction") {
+					vidPlayerControl('skqs29hi7jw');
+				} else if (str == "Typing") {
+					vidPlayerControl('sTCJFj_Czbg');
+				}
+			}
+		}
+	}
+
+
+	// The function that calls the web API using PUT method to start and carry forward the conversation
+	function Run(inpjson) {
+		
+		var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+		
+		
+		var content = JSON.parse(inpjson);
+		var method = "PUT";
+		webAPImethod = method;
+		var getUrl = $.ajax({
+			type: method,
+			url: aceurl,
+			//dataType:'json',
+			data: content,
+			success: function(data) {
+				getJsonobj(data);
+			}
+		}).done(function(data) {
+			Timer(); // Calls the Timer function which controls the whole interaction with the script
+		});
+	}
+
+	// Function that parses JSON object	
+	function getJsonobj(obj) {
+		for (var key in obj) {
+			if (key == "ACEActions" && Parse == false) {
+				Parse = true;
+			}
+			if (Parse == true && key != "Log") {
+				if (typeof obj[key] == 'object') {
+					getJsonobj(obj[key]);
+				} else {
+					if (webAPImethod == "PUT") {
+						if (counter == 1) {
+							line = obj[key];
+							counter += 1;
+						} else if (counter >= 1 && counter <= 3) {
+							line = line + "/////" + obj[key];
+							if (counter == 3) {
+								actions.push(line + "\n");
+								counter = 0;
+								line = "";
+							}
+							counter += 1;
+						}
+					}
+				}
+			} else if (key == "Log") {
+				Parse = false;
+				break;
+			}
+		}
+	}
+
+	//function that loads the main iframe based on whether a user is logged in or not
+	function loadIframe() {
+		if (sessionStorage.getItem("uname") != null) {
+			$("#mainFrame").attr("src", "resources/hsc/CSALscreenPage.html");
+		} else {
+			$("#mainFrame").attr("src", "resources/hsc/startPage.html");
+		}
+	}
+	//function that initializes a youtube embedded player
+	function onYouTubeIframeAPIReady() {
+		vidPlaying = true;
+		player = new YT.Player('videoDiv2', {
+			height: '490',
+			width: '799',
+			//videoId: vidId,
+			playerVars: {
+				autoplay: 1,
+				controls: 0,
+				autohide: 0,
+				showinfo: 0,
+				rel: 0,
+				modestbranding: 1,
+				hd: 1,
+				wmode: 'opaque'
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+
+	//function that loads new video and plays them
+	function vidPlayerControl(vidId) {
+
+		str = vidId.split(':')
+		Vid = str[0];
+		VideoType = str[1];
+		if (VideoType == undefined) {
+			$("#videoDiv2").css('z-index', '10');
+			$("#videoDiv2").css('visibility', 'visible');
+			VideoType = 0;
+		}
+
+		if (canSpeakNow == true) {
+			vidplayerBusy = false;
+		} else {
+			vidplayerBusy = true;
+		}
+		if (VideoType == 0 || VideoType == 1) {
+			$("#videoDiv2").css('z-index', '10');
+			$("#videoDiv2").css('visibility', 'visible');
+			player.loadVideoById(Vid);
+		} else if (VideoType == 2) {
+			$("#videoDiv").css('z-index', '15');
+			$("#videoDiv").css('visibility', 'visible');
+			// myLocalVideoPlayer(Vid);
+			document.getElementById('vid').contentWindow.setPauseTime(pauseAtTime);
+			document.getElementById('vid').contentWindow.myLocalVideoPlayer(Vid);
+		}
+	}
+
+
+	//function that stops a video
+	function stopvideo() {
+		player.stopVideo();
+		vidplayerBusy = false;
+	}
+
+	//function that plays a video
+	function playvideo() {
+		if (VideoType == 1) {
+			player.playVideo();
+		} else if (VideoType == 2) {
+			document.getElementById('vid').contentWindow.videoPlay();
+		}
+	}
+
+	function controlPauseVideo() {
+		clearTimeout(stopPlayTimer);
+		currtime = player.getCurrentTime();
+		// Add .4 of a second to the time in case it's close to the current time
+		// (The API kept returning ~9.7 when hitting play after stopping at 10s)
+		if (currtime + .4 < pauseAtTime) {
+			vidplayerBusy = true;
+			rate = player.getPlaybackRate();
+			remainingTime = (pauseAtTime - currtime) / rate;
+			stopPlayTimer = setTimeout(pausevideo, remainingTime * 1000);
+		}
+	}
+	//function that pauses a video
+	function pausevideo() {
+		vidplayerBusy = false;
+		useraction = "VideoPause";
+		if (VideoType == 1) {
+			player.pauseVideo();
+		} else if (VideoType == 2) {
+			document.getElementById('vid').contentWindow.videoPause();
+		}
+	}
+
+	//function that listens when player is ready
+	function onPlayerReady(event) {
+		//vidplayerBusy = true;
+		//event.target.playVideo();
+	}
+
+	// function that listens when video ends
+	function onPlayerStateChange(event) {
+
+		///////THIS IS THE PART THAT OVERRIDES THE YOUTUBE API TO PAUSE AT A CERTAIN TIME////////////-1 – unstarted /////0 – ended ///// 1 – playing /////2 – paused ///// 3 – buffering///// 5 – video cued//////////////////////////////////////////////////
+		var currtime, rate, remainingTime;
+		if (VideoType == "0") {
+		   
+			if (event.data == YT.PlayerState.PLAYING) {
+
+				clearTimeout(stopPlayTimer);
+				currtime = player.getCurrentTime();
+				// Add .4 of a second to the time in case it's close to the current time
+				// (The API kept returning ~9.7 when hitting play after stopping at 10s)
+				if (currtime + .4 < pauseAtTime) {
+					rate = player.getPlaybackRate();
+					remainingTime = (pauseAtTime - currtime) / rate;
+					stopPlayTimer = setTimeout(pausevideo, remainingTime * 1000);
+				}
+			}
+		}
+
+		///////////////////////////////////////////////////////////////////////////////////////////////
+		if (event.data === 0) {
+			event.target.stopVideo();
+			event.target.clearVideo();
+			vidPlaying = false;
+			vidplayerBusy = false;
+			useraction = "VideoEnd";
+			videoMediaRecover = false;
+			//maxIdle=0;
+			$("#videoDiv2").css('z-index', '-10');
+			$("#videoDiv2").css('visibility', 'hidden');
+		}
+	}
+
+	//Function to call any javascript function in the scripts and pass parameters
+	function InvokeScript(funcName, funcParam) {
+		if (funcParam != "") {
+			document.getElementById('mainFrame').contentWindow[funcName](funcParam);
+		} else {
+			document.getElementById('mainFrame').contentWindow[funcName]();
+		}
+	}
+
+
+	// The main Timer function that makes the user interact with the script
+	function Timer() {
+		 if (agentBusy) {
+			isTimerSet = true;
+			time = setTimeout(function() {
+				Timer()
+			}, 100);
+			return;
+		}
+		//2015 06/18 for recover
+		if (recover == true) {
+			if (questionNumIsSeted == false) {
+				if (getScriptFolder == "Lesson10_Activity") {
+					document.getElementById('mainFrame').contentWindow.setQuestionNum(questionNum - 1);
+					questionNumIsSeted = true;
+				} else if (getScriptFolder == "Lesson9_Activity") {
+					document.getElementById('mainFrame').contentWindow.setQuestionNum(questionNum - 1);
+					questionNumIsSeted = true;
+				}
+			}
+			if (actions.length == 1 || actions.length == 0) {
+				var Wait = actions[actions.length - 1].indexOf("System/////Wait");
+				if (Wait != -1) {
+					useraction = getUserEvent;
+				} else {
+					useraction = "";
+				}
+				var WaitForEvent = actions[actions.length - 1].indexOf("System/////WaitForEvent");
+				if (WaitForEvent != -1) {
+					var WaitForEvent5s = actions[actions.length - 1].indexOf("System/////WaitForEvent/////5");
+					if (WaitForEvent5s == -1) {
+						useraction = "";
+					} else {
+						useraction = getUserEvent;
+					}
+
+				} else {
+					useraction = getUserEvent;
+				}
+				recover = false;
+				clearTimeout(recoverTime);
+
+			} else {
+				useraction = "";
+			}
+
+		}
+		idleTime++;
+		if (idleTime < maxIdle && useraction == "") {
+			isTimerSet = true;
+			time = setTimeout(function() {
+				Timer()
+			}, 100);
+			return;
+		}
+
+		if (isTimerSet) {
+			isTimerSet = false;
+			clearTimeout(time);
+		}
+		
+		clearTimeout(time);
+		idleTime = 0;
+		maxIdle = 0;
+		if (actions.length != 0) {
+			var actType = false;
+			var agent = "";
+			var data = "";
+			var agentNum;
+			var nowAction = actions[0];
+			var actionSplit = nowAction.split("/////");
+			agent = actionSplit[0].trim();
+			if (agent == "Cristina") {
+				agentNum = 0;
+			} else if (agent == "Jordan") {
+				agentNum = 1;
+			} else if (agent != "Cristina" && agent != "Jordan" && agent != "System") {
+				alert("Script does not contain the correct Agents! Click 'OK' to stop this script and play another.");
+				actions = [];
+				line = "";
+				counter = 1;
+				scriptbaseURL = "";
+				scriptbasepath = "";
+				webAPImethod = "";
+				Parse = false;
+				isAgentBusy = false;
+				inpjson = "";
+				continueScript = false;
+				
+				return;
+			}
+			act = actionSplit[1];
+			if (act == "ShowMedia") {
+				actType = true;
+			} else {
+				actType = false;
+			}
+			if (actionSplit.length >= 3) {
+				data = actionSplit[2];
+				data1 = actionSplit[1];
+				if (data <= 6 && data1 == "WaitForEvent") {
+					act = "Wait";
+				}
+				if (actType == true) {
+					if (!('contains' in String.prototype))
+						String.prototype.contains = function(str, startIndex) {
+							return -1 !== String.prototype.indexOf.call(this, str,
+								startIndex);
+						};
+					if (data.contains("\\") == true) {
+						data = data.replace("\\", "/");
+					}
+					data = scriptbaseURL + data;
+				}
+				data = data.toString().trim();
+			}
+
+			
+			// The switch case block for handling the different actions
+			switch (act) {
+				case "SetValue":
+					var ScoreInfo = actionSplit[2].split(":");
+					ScoreName = ScoreInfo[0];
+					Score = ScoreInfo[1];
+
+					break;
+				case "AddValue":
+					var ScoreInfo = actionSplit[2].split(":");
+					ScoreName = ScoreInfo[0];
+					Score = ScoreInfo[1];
+
+					break;
+
+				case "ShowValue":
+					var ScoreInfo = actionSplit[2].split(":");
+					ScoreName = ScoreInfo[0];
+					Score = ScoreInfo[1];
+					
+					ShowScoreBoard(ScoreName, Score);
+					break;
+				case "Speak":
+					var uname = sessionStorage.getItem("uname");
+					var uid = sessionStorage.getItem("UID");
+					var getDisplayAction = actions[1];
+					var displayActionSplit = getDisplayAction.split("/////");
+					var isDisplayActionEmpty = displayActionSplit[displayActionSplit.length - 1].split(":");
+					if (isDisplayActionEmpty[1].length < 3)
+
+					{
+						
+						break;
+
+					} else {
+						if (uid == "_user_") {
+							data = data.replace("_user_", uname);
+						}
+						var speech = agentNum + ":" + data;
+					}
+
+					speak(speech, "Speak"); // Calling the funtion that sends the speech string with the agent number to the agent page in the agent iframe
+					break;
+				case "Play":
+					var getDisplayAction = actions[1];
+					var displayActionSplit = getDisplayAction.split("/////");
+					var isDisplayActionEmpty = displayActionSplit[displayActionSplit.length - 1].split(":");
+					if (isDisplayActionEmpty[1].length < 2) {
+						alert("Empty speech:" + actions[0]);
+						break;
+
+					} else {
+						var speech = agentNum + ":" + data;
+						repeatArray.push(speech);
+						speak(speech, "Play"); // Calling the funtion that sends the speech string with the agent number to the agent page in the agent iframe	
+
+					}
+					break;
+				case "SpeakLater":
+					if (canSpeakNow == true) {
+						flag = false;
+						canSpeakNow = false;
+						willPause = false;
+					} else {
+						flag = true;
+						canSpeakNow = true;
+						willPause = true;
+					}
+					break;
+				case "ShowMedia":
+					if (!('contains' in String.prototype))
+						String.prototype.contains = function(str, startIndex) {
+							return -1 !== String.prototype.indexOf.call(this, str,
+								startIndex);
+						};
+					if (data.contains(".html") == true) {
+						showMedia(data); // Calling the showMedia function to load the HTML page in the main IFRAME
+					} else if (data.contains("youtube") == true) {
+						var datasplit = data.split(".");
+						var vidId = datasplit[datasplit.length - 1];
+						vidPlayerControl(vidId + ":1");
+						videoMediaRecover = true;
+					} else if (data.contains("mp4") == true) {
+						var datasplit = data.split("/");
+						var vidId = datasplit[datasplit.length - 1];
+						vidPlayerControl(vidId + ":2");
+						videoMediaRecover = true;
+					}
+					break;
+				case "PauseAt":
+					pauseAtTime = parseInt(data);
+
+					if (VideoType == 2) {
+						document.getElementById('vid').contentWindow.setPauseTime(pauseAtTime);
+					}
+					break;
+				case "PlayNow":
+					playvideo();
+					break;
+				case "Wait":
+					isEventExpected = true;
+					maxIdle = 5;
+					try {
+						maxIdle = parseInt(data) * 10;
+						
+						storeval = maxIdle;
+					} catch (e) {}
+					break;
+				case "WaitForEvent":
+					isEventExpected = true;
+					timedCountForUserSpend();
+					WaitForEventInput=true;
+					document.getElementById('mainFrame').contentWindow.Unlock();
+					maxIdle = 5;
+					try {
+						maxIdle = parseInt(data) * 10;
+						storeval = maxIdle;
+					} catch (e) {}
+					break;
+
+				case "WaitForInput":
+					input = "";
+					timedCountForUserSpend();
+					WaitForEventInput=true;
+					maxIdle = data;
+					if (data == "") {
+						maxIdle = 5;
+					}
+					try {
+						maxIdle = parseInt(data) * 10;
+						storeval = maxIdle;
+					} catch (e) {}
+					//
+					//false means the location at button, true means the location at top
+					showSampleInputText('', false);
+
+					//showinputbox;
+					//maxIdle=0;
+					//input=value from user;
+					//hide inputbox when user Click
+					break;
+				case "WaitForMediaInput":
+					mediaInput = true;
+					timedCountForUserSpend();
+					WaitForEventInput=true;
+					document.getElementById('mainFrame').contentWindow.Unlock();
+					maxIdle = data;
+					if (data == "") {
+						maxIdle = 5;
+					}
+					try {
+						maxIdle = parseInt(data) * 10;
+						storeval = maxIdle;
+					} catch (e) {}
+
+					break;
+
+				case "WaitForNothing":
+					isEventExpected = false;
+					useraction = "";
+					//document.getElementById('mainFrame').contentWindow.Unlock();
+					maxIdle = 5;
+					try {
+						maxIdle = parseInt(data) * 10;
+						storeval = maxIdle;
+					} catch (e) {}
+					break;
+				case "Lock":
+					document.getElementById('mainFrame').contentWindow.Lock();
+					break;
+				case "Unlock":
+					document.getElementById('mainFrame').contentWindow.Unlock();
+					break;
+				case "GetMediaItem":
+					document.getElementById('mainFrame').contentWindow.GetItem();
+					break;
+				case "ShowMediaItem":
+					document.getElementById('mainFrame').contentWindow.ShowItem();
+					break;
+				case "ShowAudioButton":
+					$("#readText").css('visibility', 'visible');
+					$("#readText").prop('disabled', false);
+					audioPath = data;
+					break;
+				case "HideAudioButton":
+					$("#readText").css('visibility', 'hidden');
+					$("#readText").prop('disabled', true);
+					audioPath = "";
+					break;
+				case "GetMediaMessage":
+					var mediaMessage1 = "";
+					try {
+						mediaMessage1 = InvokeScript(act, data);
+						mediaMessage1 = mediaMessage1.Replace("_user_", sessionStorage.getItem("uname"));
+					} catch (e) {
+						break;
+					}
+					if (mediaMessage1 != null) {
+						if (mediaMessage1.Trim() != "") {
+							var fb = mediaMessage1.split('\n');
+							for (var i = fb.Length - 1; i > -1; i--) {
+								var fbitem = fb[i];
+								if (fbitem.Trim() != "") actions.unshift(fbitem);
+							}
+						}
+					}
+					break;
+				case "GetMediaEvent":
+					var mediaMessage1 = "";
+					try {
+						mediaMessage1 = InvokeScript(act, data);
+						mediaMessage1 = mediaMessage1.Replace("_user_", sessionStorage.getItem("uname"));
+					} catch (e) {
+						break;
+					}
+					if (mediaMessage1 != null) {
+						if (mediaMessage1.Trim() != "") {
+							var fb = mediaMessage1.split('\n');
+							for (var i = fb.Length - 1; i > -1; i--) {
+								var fbitem = fb[i];
+								if (fbitem.Trim() != "") actions.unshift(fbitem);
+							}
+						}
+					}
+					break;
+
+				case "GetMediaFeedback":
+					//this part for lesson8
+					getMediaFeedBackData = data;
+					getMediaFeedBack = true;
+
+					var mediaMessage1 = "";
+					try {
+						mediaMessage1 = InvokeScript(act, data);
+						mediaMessage1 = mediaMessage1.Replace("_user_", sessionStorage.getItem("uname"));
+					} catch (e) {
+						break;
+					}
+					if (mediaMessage1 != null) {
+						if (mediaMessage1.Trim() != "") {
+							var fb = mediaMessage1.split('\n');
+							for (var i = fb.Length - 1; i > -1; i--) {
+								var fbitem = fb[i];
+								if (fbitem.Trim() != "") actions.unshift(fbitem);
+							}
+						}
+					}
+					break;
+				case "GetMediaSpeech":
+					var mediaMessage1 = "";
+					try {
+						mediaMessage1 = InvokeScript(act, data);
+						mediaMessage1 = mediaMessage1.Replace("_user_", sessionStorage.getItem("uname"));
+					} catch (e) {
+						break;
+					}
+					if (mediaMessage1 != null) {
+						if (mediaMessage1.Trim() != "") {
+							var fb = mediaMessage1.split('\n');
+							for (var i = fb.Length - 1; i > -1; i--) {
+								var fbitem = fb[i];
+								if (fbitem.Trim() != "") actions.unshift(fbitem);
+							}
+						}
+					}
+					break;
+				case "ShowMediaAnswer":
+					document.getElementById('mainFrame').contentWindow.ShowMediaAnswer();
+					break;
+
+				case "End":
+					$('#scoreBoardR').hide();
+					$('#scoreBoardL').hide();
+					actions = [];
+					line = "";
+					counter = 1;
+					scriptbaseURL = "";
+					scriptbasepath = "";
+					webAPImethod = "";
+					Parse = false;
+					isAgentBusy = false;
+					inpjson = "";
+					continueScript = false;
+					//clearTimeout(time);
+					if (orientation == false) {
+						$("#mainFrame").attr("src", "resources/hsc/CSALscreenPage.html");
+						//window.location.reload();
+					} else {
+						$("#mainFrame").attr("src", "resources/hsc/startPage.html");
+						//window.location.reload();
+					}
+					clearCache();
+					location.replace(location.href);
+					return;
+					break;
+				default:
+					break;
+			}
+			//* for repeat function
+			if (act == "WaitForEvent" || act == "WaitForInput" || act == "WaitForMediaInput") {
+				$('#repeat').show();
+				repeatSpeechStatus = true;;
+			}
+			//* end repeat function
+			actions.splice(0, 1);
+
+			isTimerSet = true;
+			time = setTimeout(function() {
+				Timer()
+			}, 100);
+		} else if (actions.length == 0 && vidplayerBusy == false && recover == false) {
+
+			if (continueScript == true) {
+				if (isEventExpected && useraction == "") {
+					isTimerSet = true;
+					time = setTimeout(function() {
+						Timer()
+					}, 100);
+					return;
+				}
+				if (getScriptFolder != "Lesson0_Activity") {
+				
+					//---------new json format with multiple variable-----------------
+					inpjson = "{\"ID\":\"" + sessionStorage.getItem("UID") + "\",\"Text\":\"" + input + "\",\"Event\":\"" + useraction + "\",\"PresentationID\":\"" + currnectlyLesson + "\",\"PresentationHistory\":\"" + videoMediaRecover + "////" + currnectlyURL + "////" + processBarValue + "////userSelectedItem:" + userSelectedItem + "////" + questionNum + "////repeatTime:" + repeatTime  + "////BrowserName:" + BrowserName +"////userAnswerSpendTime:" + userAnswerSpendTime + "\"}";
+				} else if (getScriptFolder == "Lesson0_Activity") {
+					inpjson = "{\"ID\":\"" + sessionStorage.getItem("GUID") + "\",\"Text\":\"" + input + "\",\"Event\":\"" + useraction + "\"}";
+				}
+				useraction = "";
+				userAnswerSpendTime=0;
+				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				//var aceurl = "http://ace.autotutor.org/ACEAPICORS8/api/aceaction";
+				var content = JSON.parse(inpjson);
+				var method = "PUT";
+				webAPImethod = method;
+				var errorMessage = "";
+				var getUrl = $.ajax({
+					type: method,
+					url: aceurl,
+					//dataType:'json',
+					data: content,
+					success: function(data) {
+						
+						getJsonobj(data);
+						input = "";
+						
+						//Timer(); // Calls the Timer function which controls the whole interaction with the script
+					},
+					error: function(xhr, textStatus, errorThrown) {
+						errorMessage = xhr + "\n" + textStatus + "\n" + errorThrown;
+						alert(errorMessage);
+						repeatTime = 0;
+
+					}
+				}).done(function(data) {
+					if (actions.length == 0 || errorMessage != "") {
+						isTimerSet = true;
+						time = setTimeout(function() {
+							Timer()
+						}, 100);
+						return;
+					}
+					useraction = "";
+					isEventExpected = false;
+					if (actions.length > 0) {
+						var lastAction = actions[actions.length - 1];
+
+						var lastActionSplit = lastAction.split("/////");
+
+						lastAct = lastActionSplit[1].trim();
+						if (lastAct == "Wait" || lastAct == "WaitForEvent") {
+							isEventExpected = true;
+						}
+					}
+
+					Timer(); // Calls the Timer function which controls the whole interaction with the script
+				});
+			} else {
+				$("#mainFrame").attr("src", "resources/hsc/CSALscreenPage.html");
+				//clearTimeout(time);
+			}
+		} else {
+			isTimerSet = true;
+			time = setTimeout(function() {
+				Timer()
+			}, 100);
+		}
+	}
+	
+	//timedCountForUserSpend
+var t;
+
+function timedCountForUserSpend()
+ {
+ 
+ userAnswerSpendTime=userAnswerSpendTime+1
+ t=setTimeout("timedCountForUserSpend()",1000)
+ }
+
+function stopCountForUserSpend()
+ {
+
+ clearTimeout(t);
+ return userAnswerSpendTime;
+ }
+</script>
+
+</head>
+
+<body onload="loadIframe();">
+    <div id="container">
+
+        <div id="tester">
+            <input type="button" id="iframeAgent" value="Yes" disabled="disabled">
+            <input type="button" id="iframeDummy" value="No" disabled="disabled">
+        </div>
+
+        <div id="agentFrame">
+            <iframe id="agents" src="http://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
+        </div>
+
+        <div id="mainBody">
+            <iframe id="mainFrame" src=""></iframe>
+        </div>
+
+        <!--//process bar-->
+        <div id="videoDiv">
+         
+            <iframe id="vid" width="799" height="490" src="videos/playlocalvideo.html" frameborder="0" allowfullscreen="false" autoplay="true"></iframe>
+        </div>
+
+        <div id="videoDiv2">
+           
+            <iframe id="vid2" width="799" height="490" src="" frameborder="0" allowfullscreen="false" autoplay="true"></iframe>
+        </div>
+
+        <!--//process bar-->
+        <div id="PB">Process
+            <div class="pscontainer">
+                <div class="progressbar"></div>
+            </div>
+        </div>
+
+        <div id="outputJSON"></div>
+        <section id="btnControls">
+            <div id="home">
+                <img src="images/HomeButton.png" width="40" height="40" />
+            </div>
+            <div id="repeat">
+                Repeat
+            </div>
+            <div id="readText">
+                <img id="readTextImg" src="images/SpeakBefore.png" width="30" height="30" />
+                <audio id="audioPlayer2"></audio>
+            </div>
+            <audio id="audioPlayer">
+
+            </audio>
+            <!--//BEGIN-CRAIG-TEXT-->
+            <div id="textInputDialog">
+                <textarea id="textInput" name="textInput" autofocus></textarea>
+                <button id="textInputSubmit" name="textInputSubmit">Submit</button>
+            </div>
+            <div id="displayScoreBoard">
+                <div id="scoreBoardL" CLASS="scoreBoard">
+                    <span class="scoreDisplayName" id="scoreBoardUserNameL" style="background-color:#D0CECE">Qinyu</span>
+                    <br>
+                    <span class="score" id="scoreL">0</span>
+
+                </div>
+                <div id="scoreBoardR" CLASS="scoreBoard">
+                    <span class="scoreDisplayName" id="scoreBoardUserNameR" style="background-color:#D0CECE">Jordan</span>
+                    <br>
+                    <span class="score" id="scoreR">0</span>
+
+                </div>
+            </div>
+            <!--//END-CRAIG-TEXT-->
+
+        </section>
+    </div>
+</body>
+
+</html>
