@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+<div>
+Test URL<select id="mySelect">
+<option value="Lesson1">Lesson1</option>
+<option value="Lesson2">Lesson2</option>
+<option value="Lesson3">Lesson3</option>
+<option value="Lesson4">Lesson4</option>
+<option value="Lesson5">Lesson5</option>
+<option value="Lesson6">Lesson6</option>
+<option value="Lesson7">Lesson7</option>
+<option value="Lesson8">Lesson8</option>
+<option value="Lesson9">Lesson9</option>
+<option value="Lesson10">Lesson10</option>
+<option value="Lesson11">Lesson11</option>
+<option value="Lesson12">Lesson12</option>
+<option value="Lesson13">Lesson13</option>
+<option value="Lesson14">Lesson14</option>
+<option value="Lesson15">Lesson15</option>
+<option value="Lesson16">Lesson16</option>
+<option value="Lesson17">Lesson17</option>
+<option value="Lesson18">Lesson18</option>
+<option value="Lesson19">Lesson19</option>
+<option value="Lesson20">Lesson20</option>
+<option value="Lesson21">Lesson21</option>
+<option value="Lesson22">Lesson22</option>
+<option value="Lesson23">Lesson23</option>
+<option value="Lesson24">Lesson24</option>
+<option value="Lesson25">Lesson25</option>
+<option value="Lesson26">Lesson26</option>
+<option value="Lesson27">Lesson27</option>
+<option value="Lesson28">Lesson28</option>
+<option value="Lesson29">Lesson29</option>
+<option value="Lesson30">Lesson30</option>
+
+</select>
+<select id="mySelect2">
+<option value="A">Cristina</option>
+<option value="B">Jordan</option>
+
+</select>
+
+<input type="button" value="Please load xml file" id="loadXMLFile"></input>
+<input type="button" value="startTest" id="startTest"></input>
+</div>
+<div>
+</div>
+<script>document.domain='prod.x-in-y.com'</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+<script>
+	
+function loadXML(xmlUML)
+{
+
+	
+			
+	  if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+
+		xmlhttp.open("GET",xmlUML,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				xmlDoc=xmlhttp.responseXML; 
+				$("#tb").empty();
+				//document.write("<table id='tb1' border='1' width='400'><tr><th>ID</th><th>Content</th><th>test Result</th><th>Start Time</th><th>End Time</th></tr>");
+				$("#tb").append("<tr><th>ID</th><th>Content</th><th>test Result</th><th>Start Time</th><th>End Time</th><th>Interval</th></tr>");
+				var x=xmlDoc.getElementsByTagName("message");
+				for (i=3;i<x.length;i++)
+				{ 
+
+				arr=x[i].attributes;
+				say=x[i].getElementsByTagName("say")[0].childNodes[0].nodeValue;
+
+
+
+
+				$("#tb").append("<TR ><td id="+(i-2)+">"+arr[0].nodeValue+"</TD><td>"+say+"</td><td></td><td></td><td></td><td></td></TR>");
+				}
+
+			}
+		}
+
+	
+
+}
+function show()
+{
+	var tdStr = document.getElementById("tb1").getElementsByTagName("TD");
+	var endTime;
+	for(var i=0; i<tdStr.length; i++)
+	{
+	//alert(tdStr[i].innerText);
+	alert(tdStr[i].innerHTML);
+	}
+}
+function updataTable(index,getStartTime)
+{
+	var tdStr = document.getElementById("tb").rows;
+	tdStr[tdStr.length-index-1].cells[2].innerText="pass";
+	tdStr[tdStr.length-index-1].cells[3].innerText=getStartTime;
+	if(tdStr.length-index-1==1)
+	{
+		//endTime=tdStr[tdStr.length-index-2].cells[3].innerText;
+		 endTime=getStartTime;
+	}
+	else{
+	 
+	 endTime=getStartTime;
+	 tdStr[tdStr.length-index-2].cells[4].innerText=endTime;
+	tdStr[tdStr.length-index-2].cells[5].innerText=endTime-tdStr[tdStr.length-index-2].cells[3].innerText;
+	}
+	
+
+}
+
+$(document).ready(function() {
+
+	$('#loadXMLFile').click(function() {
+		var lesson = document.getElementById("mySelect").value;
+		var getValue = document.getElementById("mySelect2").value;
+	
+		if(getValue=="A")
+		{
+		 url="http://prod.x-in-y.com/csalwebtest1002/scripts/"+lesson+"/Cristina/"+lesson+getValue+".xml";
+		}
+		else{
+		 url="http://prod.x-in-y.com/csalwebtest1002/scripts/"+lesson+"/Jordan/"+lesson+getValue+".xml";
+		}
+		parent.GetWorldEvent(lesson,url,false);
+		
+		
+		});
+	$('#startTest').click(function() {
+	//var tdStr = document.getElementById("tb").getElementsByTagName("TD");
+	
+	var rows = document.getElementById("tb").rows;
+	var speakList=[];
+	
+	for(var i=1;i<rows.length;i++){  
+	 var speakContent=rows[i].children[0].innerText; 
+		speakList.push(speakContent);	
+
+        }  
+		var getValue = document.getElementById("mySelect2").value;
+		parent.SpeakListEvent(speakList,getValue);	
+		
+	});
+
+});
+
+</script>
+<table align="center" border="1" width="70%" id="tb">
+	  <tbody>
+	
+	   </tbody>
+	  </table>
+</body>
+</html>
