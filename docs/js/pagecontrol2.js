@@ -3,7 +3,7 @@ var AudioButtonOn, DisplayAreaOn, HomeButtonOn, NextButtonOn, PlayVideoButtonOn,
 var currentLessonStatus = false;
 var currentLessonID;
 var domainURL = "https://xiangenhu.github.io";
-var scriptFolderURL = "/scripts/";
+var scriptFolderURL = "/Scripts/";
 var talkingheadLoaded = false;
 var agentBusy = false;
 var lessonRecovery = false;
