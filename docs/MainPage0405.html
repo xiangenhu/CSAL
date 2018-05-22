@@ -201,7 +201,7 @@
 	var repeatSpeechCount = 0;
 	var repeatTime = 0;
 	var act = "";
-	var domainURL="https://ace.autotutor.org";
+	var domainURL="https://ace.x-in-y.com";
 	var html5Version=true;
 	var systemIdle=false;
 		var BrowserName;
@@ -322,7 +322,7 @@
 		});
 
 		$('#iframeAgent').click(function() {
-			$("#agents").attr("src", "https://ace.autotutor.org/pilot2/scripts/lesson0/html5/index.html?lessonName=Lesson0");
+			$("#agents").attr("src", "https://ace.x-in-y.com/pilot2/scripts/lesson0/html5/index.html?lessonName=Lesson0");
 		});
 
 		$('#iframeDummy').click(function() {
@@ -733,7 +733,7 @@ function FileExist(url)
 
 		if (talkingheadLoaded == false && scriptFolder != "") {
 			var strs=scriptFolder.split('_');
-			var Url="https://ace.autotutor.org/pilot2/scripts/"+strs[0]+"/html5/index.html?lessonName="+strs[0];
+			var Url="https://ace.x-in-y.com/pilot2/scripts/"+strs[0]+"/html5/index.html?lessonName="+strs[0];
 			getScriptFolder = scriptFolder;
 			var isExist=FileExist(Url);
 			/*
@@ -785,7 +785,7 @@ function FileExist(url)
 				
 				var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
 				
-				var scriptfolderurl = "https://ace.autotutor.org/pilot2/scripts/"
+				var scriptfolderurl = "https://ace.x-in-y.com/pilot2/scripts/"
 				var scriptfolderpath = "C:\\inetpub\\wwwroot\\Pilot2\\";
 				var a = str.split("_");
 				var folder = a[0];
@@ -1524,7 +1524,7 @@ function FileExist(url)
 				useraction = "";
 				userAnswerSpendTime=0;
 				var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
-				//var aceurl = "https://ace.autotutor.org/ACEAPICORS8/api/aceaction";
+				//var aceurl = "https://ace.x-in-y.com/ACEAPICORS8/api/aceaction";
 				var content = JSON.parse(inpjson);
 				var method = "PUT";
 				webAPImethod = method;
@@ -1611,7 +1611,7 @@ function stopCountForUserSpend()
         </div>
 
         <div id="agentFrame">
-            <iframe id="agents" src="https://ace.autotutor.org/pilot2/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
+            <iframe id="agents" src="https://ace.x-in-y.com/pilot2/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
         </div>
 
         <div id="mainBody">

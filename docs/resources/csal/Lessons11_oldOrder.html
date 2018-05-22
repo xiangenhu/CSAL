@@ -438,7 +438,7 @@
             var getIdArray = sessionStorage.getItem("UID").split("-");
             var getId = getIdArray[getIdArray.length - 1];
 
-            $.get("https://ace.autotutor.org/ACEAPICORS10/api/passfail/" + getId, function(data, status) {
+            $.get("https://ace.x-in-y.com/ACEAPICORS10/api/passfail/" + getId, function(data, status) {
 
                 if (status == "success") {
 

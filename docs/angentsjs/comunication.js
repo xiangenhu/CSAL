@@ -1,4 +1,4 @@
-   var domainURL = "https://xiangenhu.github.io/";
+   var domainURL = "https://xiangenhu.github.io/CSAL/";
         window.addEventListener('message', receiveMessage, false);
 	var lessonName;
         function receiveMessage(evt) {
