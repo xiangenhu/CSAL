@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L1Bkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			#main
+			{
+				height: 402px;
+				width: 798px;
+			}
+			#imgBox
+			{
+				width: 320px;
+				display: inline-block;
+				margin: 0px 0px 0px 235px;
+			}
+			#cover
+			{
+				height: 440px;
+				margin: 20px 0px 0px 20px;
+			}
+			.hideAnswer
+			{
+				background-color: #0f4873;
+				position: fixed;
+				border-radius: 8px;
+			}
+			#hide1
+			{
+				width: 290px;
+				height: 105px;
+				top: 80px;
+				left: 23px;
+			}
+			#hide2 /*in case you need more pieces to cover up stuff, best to remove html element if not needed*/
+			{
+				width: 116px;
+				height: 85px;
+				top: 275px;
+				left: 100px;
+				display: none; /*just remove this line or change to "inline" to show element*/
+			}
+			#questionBox
+			{
+				width: 450px;
+				margin: 40px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				display: inline-block;
+				vertical-align: top;
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 34px;
+				padding: 0px 20px;
+				color: #212121;
+				margin: 5px 0px 0px 5px;
+				width: 400px;
+			}
+			.qHighlight
+			{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			#buttonBox
+			{
+				margin: 30px auto;
+				width: 420px;
+			}
+			.mybutton
+			{
+				font-size: 24px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 420px;
+				height: 60px;
+				line-height: 60px;
+				margin: 8px 0px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+				padding: 1px 2px;
+				outline: none;
+				border-radius: 12px;
+			}
+			#text
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			$(document).ready(function()
+			{		
+				parent.GetWorldEvent("MainPageLoaded");
+				//lock the buttons
+				Lock();
+			});
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelected = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelected).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+					userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
+					//play appropriate sound
+					if (userAnswer == "Correct"){ parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);;
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#cdfff5"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#cdfff5", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="imgBox">
+				<img src="ComeToMeSoftlyCover.jpg" id="cover">
+			</div>
+		</div>
+	</body>
+</html>

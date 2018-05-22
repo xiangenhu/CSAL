@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L17Bkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Sintony', Verdana, 'Times New Roman';
+				font-size: 22px;
+				font-weight: 600;
+				cursor: default;
+			}
+			#main
+			{
+				margin: 10px auto;
+			}
+			.node
+			{
+				width: 300px;
+				margin: 0px auto;
+				text-align: center;
+				border-radius: 10px;
+				font-weight: bold;
+			}
+			#mainHead
+			{
+				background-color: #db1f1f;
+				color: white;
+				font-size: 50px;
+				width: 800px;
+				font-weight: bold;
+				border: 3px solid white;
+				border-left: none;
+				border-right: none;
+				margin: 20px auto;
+				border-radius: 0px;
+			}
+			#node1
+			{
+				
+				background-color: #1d3352;
+				color: white;
+				font-size: 45px;
+				width: 440px;
+				padding: 5px;
+			}
+			#node2
+			{
+				background-color: #db1f1f;
+				color: white;
+				width: 440px;
+				font-size: 45px;
+				padding: 5px;
+			}
+			#node3
+			{
+				background-color: white;
+				color: #212121;
+				width: 400px;
+				font-size: 30px;
+				border-radius: 2px;
+				border: 2px solid #252525;
+			}
+			#subNode
+			{
+				font-size: 24px;
+				font-style: italic;
+			}
+			.arrow
+			{
+				width: 75px;
+				margin: 0px auto;
+			}
+			.anim
+			{
+				display: none;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">			
+			var x = 1;
+			$(document).ready(function(){
+				$("#CHARLES").click(function()
+				{
+					var curAnim = "#anim" + x;
+					$(curAnim).fadeIn(1500);
+					x++;
+				});
+			});
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "Animation1") 
+				{
+					$("#anim1").fadeIn(1500);
+				}
+				else if (data == "Animation2")
+				{
+					$("#anim2").fadeIn(1500);
+				}
+				else if (data == "Animation3")
+				{
+					$("#anim3").fadeIn(1500);
+				}
+				else if (data == "Animation4")
+				{
+					$("#anim4").fadeIn(1500);
+				}
+			}
+		</script>
+	</head>
+	<body>
+	<span id="anim1">
+		<div id="main">
+			<div id="mainHead" class="node">
+				Persuasive Texts
+			</div>
+		</span>
+			
+			<span id="anim2" class="anim">
+				<div id="node1" class="node">
+					Topic
+				</div>
+			</span>
+			
+			<span id="anim3" class="anim">
+				<div class="arrow">
+					<img src="arrow.png">
+				</div>
+			
+				<div id="node2" class="node">
+					Main Argument
+				</div>
+			</span>
+			
+			<span id="anim4" class="anim">
+				<div class="arrow">
+					<img src="arrow.png">
+				</div>
+			
+				<div id="node3" class="node">
+					Supporting Info
+					<div id="subNode">
+						Facts, Opinions, Emotion Triggers
+					</div>
+				</div>
+			</span>
+		</div>
+	</body>
+</html>

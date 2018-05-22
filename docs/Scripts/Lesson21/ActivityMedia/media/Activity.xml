@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="_user_ try to answer the question." />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="Um... _user_ I don't think that's the right answer." speech="Um... _user_ I don't think that's the right answer." />
+        <Item text="Um... _user_ I don't think that was the right answer. " speech="Um... _user_ I don't think that was the right answer. " />
+        <Item text="Try again _user_ I don't think that was the right answer." speech="Try again _user_ I don't think that was the right answer." />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Awesome _user_! You got it right!" speech="Awesome _user_! You got it right!" />
+        <Item text="Super _user_! You got the question right!" speech="Super _user_! You got the question right!" />
+        <Item text="Great job _user_! You answered right! Thanks for helping me so much!" speech="Great job _user_! You answered right! Thanks for helping me so much!" />
+        <Item text="You answered right _user_!Awesome job!" speech="You answered right _user_!Awesome job!" />
+        <Item text="Amazing _user_! You're good at this! You picked the right answer." speech="Amazing _user_! You're good at this! You picked the right answer." />
+        <Item text="Great job _user_!" speech="Great job _user_!" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Perfect!" speech="" />
+        <Item text="Amazing!" speech="" />
+        <Item text=" Great!" speech="" />
+        <Item text="Wonderful!" speech="" />
+        <Item text="Great!" speech="" />
+        <Item text="Wonderful!" speech="" />
+        <Item text="Splendid!" speech="" />
+        <Item text="Terrific!" speech="" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="_user_ try your best and answer the question." />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="Sorry _user_! Try again that wasn't the right answer." speech="Sorry _user_! Try again that wasn't the right answer." />
+        <Item text="_user_ try again. Your answer choice was not correct." speech="_user_ try again. Your answer choice was not correct." />
+        <Item text="Whoops! Looks like you picked the wrong answer _user_. Try again." speech="Whoops! Looks like you picked the wrong answer _user_. Try again." />
+        <Item text="_user_ please try again! Your answer was not correct." speech="_user_ please try again! Your answer was not correct." />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok _user_ here is the answer." speech="Ok _user_ here is the answer." />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="Jordan you didn't pick the correct answer!" speech="Jordan you didn't pick the correct answer!" />
+        <Item text="Jordan you actually got that question wrong!" speech="Jordan you actually got that question wrong!" />
+        <Item text="Jordan that's not right!" speech="Jordan that's not right!" />
+        <Item text="Jordan you gave an incorrect answer." speech="Jordan you gave an incorrect answer!" />
+        <Item text="Jordan you were wrong." speech="Jordan you were wrong." />
+        <Item text="Sorry Jordan that's not right." speech="Sorry Jordan that's not right." />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback2">
+        <Item text="_user_ you did not answer correctly. Here is the answer." speech="" />
+        <Item text="_user_ that was not the correct answer." speech="" />
+        <Item text="Oops _user_ that wasn't the correct answer. " speech="" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition9999" usedIn="">
+      <Item id="1" agent="Cristina" text="Guys let's continue with more questions! This question is slightly different than the others before it. " speech="" />
+    </RigidPack>
+    <RigidPack name="Transition444" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another questions _user_ and Jordan." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition9" usedIn="">
+      <Item id="1" agent="Cristina" text="Great! let's continue! Here is another question!" speech="" />
+    </RigidPack>
+    <RigidPack name="OpeningHard" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the second article on minimum wage that I have for you guys to read! When you are finished please click continue." speech="" media="media/Lesson17-Article20-0.html" />
+    </RigidPack>
+    <RigidPack name="Transition999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ Let's try typing your opinion in!" speech="" />
+    </RigidPack>
+    <RigidPack name="Transition99999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question you two." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the first question you two!" speech="" />
+    </RigidPack>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope these questions are helpful! Here is another question! _user_ try to remember that the main argument of this article is not to increase minimum wage." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope you are enjoying the article. Here is another question." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan here is the second article." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition44" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan the next 3 questions will be about 3 sentences within the article. Let's take a look." speech="" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="Hi _user_ and Jordan! How are you two today!" speech="" />
+      <Item id="2" agent="Jordan" text="Hi" speech="" />
+      <Item id="3" agent="Cristina" text="Click continue" speech="" media="Lesson21-Main0-0.html" />
+    </RigidPack>
+    <RigidPack name="Transition99999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the most important question _user_ and Jordan!" speech="" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope these questions are helping you _user_ and Jordan." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Great! Let's continue you two!" speech="" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's continue you two! With the next question pay close attention to the supporting information. " speech="" />
+    </RigidPack>
+    <RigidPack name="Transition999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question guys!! Remember the supportive information." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question _user_! Let's try it together." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition9999999" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ here is another question!" speech="" />
+    </RigidPack>
+    <RigidPack name="Transition99" usedIn="">
+      <Item id="1" agent="Cristina" text="You two are doing great! These sentences are supportive of the main argument. Here is another question. " speech="" />
+    </RigidPack>
+    <RigidPack name="Transition999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here are more questions! Remember the main argument of the article!" speech="" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ you helped Jordan so much! " speech="" />
+      <Item id="2" agent="Jordan" text="Yes _user_ you have! I think we both learned a lot in today's lesson! Cristina can you run through what we did today?" speech="" />
+      <Item id="3" agent="Cristina" text="Of course Jordan! Today we practiced evaluating persuasive texts! In order to evaluate persuasive texts we must identify the topic, the main agrument, and then any supportive information. " speech="" />
+      <Item id="4" agent="Jordan" text="Remind me what supportive information is again?" speech="" />
+      <Item id="5" agent="Cristina" text="Supportive information is the information a writer includes in their main argument to back up their argument. " speech="" />
+      <Item id="6" agent="Jordan" text="Got it!" speech="" />
+      <Item id="7" agent="Cristina" text="I hope you two remember these tips as you continue on with your future lessons." speech="" />
+      <Item id="8" agent="Jordan" text="Thanks Cristina! I'm sure we will!" speech="" />
+      <Item id="9" agent="Cristina" text="Have a great day you two! Bye" speech="" media="media\Lesson17-IntroTitle.html" />
+      <Item id="10" agent="Jordan" text="Bye _user_ and Cristina." speech="" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the third question! Remember the main argument of the article." speech="" />
+    </RigidPack>
+    <RigidPack name="OpeningEasy" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan! Here is another article about minimum wage I have for you two to read! Please click continue when you are finished reading!" speech="" media="media/Lesson17-Article20-0.html" />
+    </RigidPack>
+    <RigidPack name="Transition4444" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan is here the third question about the 3 sentences highlighted in the article. " speech="" />
+    </RigidPack>
+    <RigidPack name="Transition44444" usedIn="">
+      <Item id="1" agent="Cristina" text="Jordan and _user_ here is the final question for our first article. Yay!" speech="" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ what is the topic of the article?" speech="_user_ what is the topic of the article?" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ You selected the correct answer! The topic of the article is minimum wage!" speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ after reading the article what do you think the topic of the article is?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What do you think the topic of the article is?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_ the topic of the article is minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the topic of the article is?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I'm not sure Cristina but if I had to guess I would say governmental issues." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ what is the writer’s main argument?" speech="_user_ what is the writer’s main argument?" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ that's correct!Great job! The writer’s main argument is to increase minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_in this article there is one argument. The title of the article gives you a hint to the writer’s main argument.  What is the main argument of the article?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What do you think the writer’s main argument is?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The writer's main argument is to increase minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the main argument of the article is?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I really don't know but I think its to keep the wage the same" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  here is a highlighted sentence. Does this sentence support the writer’s main argument?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Amazing job _user_ You picked the correct answer! This sentence does not support the writer’s argument because it is not supportive information to the main argument.   It is an emotional appeal to the audience." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_  the sentence reads “So, it would be best for the government to increase minimum wage, after all the government is for the people. right?” Does this sentence sound like it supports the writer’s main argument?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BLankPrompt" text="_user_  did you need more time to answer the question? Try your best! So, user does this sentence support the writer’s main argument?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_ this sentence does not support the writer’s argument because it is not supportive information to the main argument. It is an emotional appeal to the audience." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you know if this sentence supports the writer's main argument?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I don't know but I think this sentence does support the main argument Cristina." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_  could an emotional appeal, like an emotion trigger, be used as a valid piece of supporting information? I'm not sure." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great work _user_ you answered correctly! An emotional appeal is not supporting information because it does not contain valid information." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that an emotional appeal can contain emotion triggers, and emotion triggers are opinions. Can an opinion be used as a valid piece of supporting information?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time?  Try your best! Can an emotional appeal be used as a piece of supporting information?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="An emotional appeal is not supporting information because it does not contain valid information" speech="" keys="any" threshold="" />
+            <Answer name="JordanAsnwer" agent="Jordan" type="JordanAnswer" text="I understand now _user_! An emotional appeal is not supporting information because it is used to persuade the audience." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ which sentence is supportive information for the writer’s argument?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! The sentence you selected is supportive information for the writer’s argument." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ the writer is for increasing minimum wage in America, one of these sentences supports their argument. Which one is it?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_  did you need more time to answer my question? That’s ok! Try your best! Which sentence is supportive to the writer’s argument?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_ this sentence is supportive information for the writer’s argument because it backs up  the writer’s opinion." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan which sentence do you think is supportive?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Cristina I don't know but I think the first sentence is supportive." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ why is this sentence considered supporting information for the writer’s argument?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_  you are correct Great job! This sentence is considered supportive because it backs up the writer’s argument for raising minimum wage. The other answer options are not correct because this sentence does not support government policies on wages and it is not the main argument. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ the main argument is to increase minimum wage, how does this sentence support that?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer my question? That’s ok! Try your best! Why is this sentence considered supportive of the main argument?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_This sentence is considered supportive because it backs up the writer’s argument for raising minimum wage. The other answer options are not correct because this sentence does not support government policies on wages and it is not the main argument. " speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I understand now _user_ and Cristina! The sentence is supportive because it backs up the writer's argument." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ how will employees keeping their jobs save the employers money? Please click on the sentence in the text that best answers this question." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are doing so well! You answered correctly. Employers would save money because it will save them from training new people to replace older workers. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the article that refers to employers saving money with the benefit of the wage increase. How will employees keeping their jobs save the employers money?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? That's okay! Try your best! How will employees save the employers money?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Employers would save money because it will save them from training new people to replace older workers. " speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan how do you think employees save employers money when they keep their jobs?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Cristina I don't know. but I guess because families will have more money to buy goods and this will save the employers money in the long run." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ what will happen if families are more financially secure? Click on the sentence in the text that best answers this question." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ that's great! you answered correctly. Families will be more financially secure and they will be able to buy more goods with more money. The other two options are not correct because they do not give specific information about how families will be impacted by the wage increase. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the text that refers to families being more financially secure if the wage increase took place. Once you do this, ask yourself what will happen if families are more financially secure. Here try again." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BLankPrompt" text="_user_ did you need more time answering the question? That's okay! try your best! What will happen if families are more financially secure?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Families will be more financially secure and they will be able to buy more goods with more money. The other two options are not correct because they do not give specific information about how families will be impacted by the wage increase. " speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think will happen if families are more financially secure?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Cristina I don't know I can't locate the information in the article. But from what we read before I think it that the miniwage wage will increase." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will be the overall impact if there was an increase in minimum wage? Can you help me by clicking on the sentence in the article that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered correctly! The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the text that best answers the question. Find the supporting  information in the sentence that shows what the overall impact would be if minimum wage would increase." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question. Try your best. What would be the overall impact in minimum wage increased?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I understand now. if there was an increase in minimum wage then 900,000 people would  live above the poverty line. I also see why the other two sentences are not correct now." speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA99">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will be the overall impact if there was an increase in minimum wage? Can you help me by clicking on the sentence in the article that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered correctly! The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the text that best answers the question. Find the supporting  information in the sentence that shows what the overall impact would be if minimum wage would increase." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question. Try your best. What would be the overall impact in minimum wage increased?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I understand now. if there was an increase in minimum wage then 900,000 people would  live above the poverty line. I also see why the other two sentences are not correct now." speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA999">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will be the overall impact if there was an increase in minimum wage? Can you help me by clicking on the sentence in the article that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered correctly! The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the text that best answers the question. Find the supporting  information in the sentence that shows what the overall impact would be if minimum wage would increase." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question. Try your best. What would be the overall impact in minimum wage increased?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I understand now. if there was an increase in minimum wage then 900,000 people would  live above the poverty line. I also see why the other two sentences are not correct now." speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9999">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will be the overall impact if there was an increase in minimum wage? Can you help me by clicking on the sentence in the article that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered correctly! The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the text that best answers the question. Find the supporting  information in the sentence that shows what the overall impact would be if minimum wage would increase." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question. Try your best. What would be the overall impact in minimum wage increased?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I understand now. if there was an increase in minimum wage then 900,000 people would  live above the poverty line. I also see why the other two sentences are not correct now." speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The overall impact that increasing the minimum wage can have is that 900,000 people will be able to live above the poverty line. The other two sentences are not correct because they refer to smaller things that can be affected but having 900,000 people affected is a bigger impact." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD0">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Hey _user_ when you are finished reading click continue at the bottom of the page." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ I think we are ready to move on now. Let's continue with more questions." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Great Cristina! Let's keep going." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ what is the writer’s main argument in this article?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you selected the correct answer! The writer’s main argument is against raising minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ the writer's main argument is the attitude or belief the writer has about a given topic. What do you think the writer's main argument is?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What is the writer’s main argument." speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The writer's main argument is against raising minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the main argument is?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I'm not sure Cristina but I think its increase pay for Americans." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ why is the writer against increasing minimum wage?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great work _user_! The writer may be against raising minimum wage because it can ruin the quality of life for many Americans." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ I know this maybe a harder question but why do you think the writer is against increasing minimum wage? Could this affect alot of people?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! Why is the writer against raising minimum wage?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The writer may be against raising minimum wage because it can ruin the quality of life for many Americans." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why do you think the writer is against increasing minimum wage?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think because the inflation rate is increasing that is why the writer is against the increase. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ why is this sentence considered supportive information?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are going so well! This sentence provides a possible consequence of increasing minimum wage. The other answer options are not correct because this sentence does not show the role of the government or the impact on people." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember in a persuasive article, the writer is trying to convince us of something, So why would this sentence be conisdered supportive information?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! why would this sentence be supportive information?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence provides a possible consequence of increasing minimum wage. The other answer options are not correct because this sentence does not show the role of the government or the impact on people." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I understand now _user_! This sentence shows us that there are consequences to increasing minimum wage. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ how does this newly highlighted sentence support the previous highlighted sentence above it?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you selected the correct answer! The sentence is supportive because the writer provides information that supports or backs up their argument." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that supporting information must back up the main argument. Does this sentence support the writer's main argument for not increasing minimum wage? How?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ do you need more time? Try your best! how would this sentence be considered supportive?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sentence is supportive because the writer provides information that supports or backs up their argument." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I see now! This sentence provides additional information for the claims above, that's what makes it supportive of the argument. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ why would this newly highlighted sentence be supportive of the previous sentences we have highlighted above it?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are on a roll! The sentence supports the claim that people would not want to lose their jobs just to help someone get a 2 dollar raise when inflation rates are currently high in the economy. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_  supportive information must back up the main agrument, this supportive information must back up the argument to not increase minimum wage. How does this sentence support the previous sentences?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_  did you need more time to answer the question? Try your best! How does this sentence support the rest above it?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" The sentence supports the claim that people would not want to lose their jobs just to help someone get a 2 dollar raise when inflation rates are currently high in the economy. " speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think that this sentence is not supportive of the previous sentences. But I'm not sure." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan! Why is this sentence supportive of the others?" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  how does this sentence support the previous sentences highlighted above it?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ that was the correct answer! this sentence connects the previous claims together. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that supportive information must back up the main argument, how does this sentence support the previous sentences?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_  did you need more time to answer the question? Try your best! How does this sentence back up the others we highlighted?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="this sentence connects the previous claims together. " speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan how does this sentence support the others?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I'm not sure but I think this sentence doesn't support the others Cristina." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ here are a few highlighted sentences Cristina gave us. Which one is not supportive of the argument?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! This sentence is not supportive because it does not present any valid information that supports the argument. The other sentences are indeed supportive of the main argument, which is not to increase minimum wage. That is why those sentences are not correct for this type of question Jordan asked." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember supportive information must back up the argument. Which sentence does not?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence is not supportive because it does not present any valid information that supports the argument. The other sentences are indeed supportive of the main argument, which is not to increase minimum wage. That is why those sentences are not correct for this type of question Jordan asked." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need mroe time to answer? Try you best! Which sentence is not supportive?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Gotcha _user_. this sentence is not supportive because it does not support the argument" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD77">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will be the overall impact if the increase occurred?  Can you click the sentence that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! If the increase occurred more than 500,000 Americans would be unemployed." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that the main argument is against minimum wage and the question is asking you to figure out what will be the overall impact of the wage increase. Which sentence best answers this question?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" If the increase occurred more than 500,000 Americans would be unemployed." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I see now! This sentence shows that 500,000 Americans will be out of work if the increase occurred." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD777">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ How will American goods be affected by the wage increase? Click on the sentence that best answers the question." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! Great job! The sentence you picked describes what will happen to American goods. The reason American goods will  be affected is due to inflation rates that will increase. The other sentences are not correct because they do not show how American goods can be affected by the increase." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that the writer is presenting us with supporting information and some of this information shows the impact on American goods. What can occur?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! which sentence shows the affect on American goods?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence describes what will happen to American goods. The reason American goods will  be affected is due to inflation rates that will increase. The other sentences are not correct because they do not show how American goods can be affected by the increase." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="No Cristina I don't but I think American goods will be cheaper." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you know what the impact could be on American goods?" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7777">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_  how is job competition amongst low wage workers? Can you pick the sentence that you think best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are on a roll! The sentence you picked is correct because it shows that low wage workers currently have an easier time finding work due to less competition." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the article that best describes how job competition among low wage workers are currently." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BLankPrompt" text="_user_ did you need more time to answer the question? Try your best it's okay. Which sentence shows how job competition is among low wage workers?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sentence  is correct because it shows that low wage workers currently have an easier time finding work due to less competition." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Gotcha _user_! So the sentence highlighted shows that currently low wage workers have an easier time but later it would be harder to find work if the increase took place. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="So _user_ after all of this, which article was more persuasive to you?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great _user_! I wonder why you thought that main argument was more persuasive. Can you tell us about it?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Can you tell us why you thought that, _user_!" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ click on the button below to give your opinion. When you are finished press ok to submit it." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ that's great! I'm happy you gave us your input on the articles! This is exciting!" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ thanks for typing! " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE0">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Hey when you are  finished click to continue at the bottom of the page _user_." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ I think we are ready to move on now! Let's continue with more questions." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Great Cristina let's keep going." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  what is the writer’s main argument in this article?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_  you are correct! The writer’s main argument is against increasing minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_  the first article’s main argument was for increasing minimum wage and this second article’s main argument is what?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What is the writer’s main argument?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the writer's main argument is against increasing minimum wage." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the writer's main agrument is?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I'm not completely sure Cristina but I think it's about the increasing the pay for professors." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  here is a highlighted sentence. Does this sentence contain an opinion, fact, or emotion trigger?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered right! The sentence contains an opinion. This article is a persuasive text." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ persuasive texts are used to convince us of something or make us believe what the writer does. Does this sentence contain an opinion, fact, or emotion trigger?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! Does this sentence contain an opinion, emotion trigger, or fact?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_  the sentence contains an opinion. This article is a persuasive text." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you think the sentence contains an opinion, fact, or emotion trigger?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I really don't know but I think it contains a fact." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_  here are three highlighted sentences which one is supporting the writer’s main argument?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you answered correctly. The sentence you selected is supportive of the main argument. The firs sentence is not supportive because it opens the article and the second sentence is the main argument but it is not supportive information to the main argument." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ recall that supportive information must help the main argument. Which sentence helps the main argument?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ user did you need more time to answer the question? Try your best! Which sentence supports the main argument?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="_user_ This sentence is supportive of the main argument. The firs sentence is not supportive because it opens the article and the second sentence is the main argument but it is not supportive information to the main argument." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I get it now _user_! The green highlighted sentence is the one that is supportive because it backs up the writer's argument. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_  why isn’t this sentence considered supporting information? I don't understand." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are on a roll! Great work! The sentence is merely a statement that is presented in the writer's argument but it does not support the argument." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that supportive information backs up the writer's agrument. Does this sentence back up the writer's argument?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ do you need more time to answer the question?It's okay! try your best! Why isn't this sentence considered supporting information?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sentence is a statement that is present in the article but it does not support the writer's main argument." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Gotcha! So this sentence is not supportive because it does not back up the writer's main argument. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ how is this highlighted sentence supportive information?" speech="" media="">
+          <Answers>
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_  did you need more time to answer the question? Try your best! Why is this highlighted sentence supportive information?" speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_  the sentence is supportive to the argument but why? How does it support the main idea of the article?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sentence is supportive to the argument because it helps the writer make their case by providing a number of possible job losses." speech="" keys="any" threshold="" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ great work! This sentence is supportive to the argument because it helps the writer make their case by providing a number of possible job losses. " speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think the answer is because it has an emotional impact on the reader. But I don't know Cristina and _user_. " speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan how is this highlighted sentence supportive information?" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  how is this highlighted sentence supportive of the previous sentence we just highlighted above it?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! This sentence is supportive of the previous sentence because it shows that low wage workers will still have jobs if the wage stayed the same. " speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that supportive information must back up the writer's argument, how does this sentence support the previous highlighted sentence?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_  did you need more time to answer the question? Try your best! How is this sentence supportive to the previous sentence?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence is supportive of the previous sentence because it shows that low wage workers will still have jobs if the wage stayed the same." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why do you think this sentence supports the previous sentence?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think this sentence shows that low wage workers will benefit from the wage increase. " speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ here is another highlighted sentence, how is this sentence supportive of the previous two highlighted sentences above it?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ great job! You answered correctly! This sentence is supportive of the previous two because it makes a connection that low wage workers benefit from the current wage because there is no competition and if the wage increased it would be tougher for them to find jobs." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that supportive information must be able to back up the writer's argument. How does this sentence connect to the other supportive information in the text?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time? Try your best! How does this sentence support the other two sentences we highlighted?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence is supportive of the previous two because it makes a connection that low wage workers benefit from the current wage because there is no competition and if the wage increased it would be tougher for them to find jobs." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan how does this sentence support the previous sentences?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Cristina I don't know but I'll guess. I think it supports it because low wage workers will be able to keep their jobs." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE77">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ what will happen to workers if the minimum wage stays the same? Can you click the sentence that best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! If the wage stayed the same low wage workers have an easier time finding work. The other sentences are not correct because they describe what will happen to workers if the wage increased but if the wage stayed the same." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that the main argument is against minimum wage and the question is asking you to figure out what will happen if the minimum wage stays the same. Which sentence best answers this question?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="If the wage stayed the same low wage workers have an easier time finding work. The other sentences are not correct because they describe what will happen to workers if the wage increased but if the wage stayed the same." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I see now! This sentence shows that low wage workers will be able to keep their job because they will have an easier time finding work." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE777">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ what will be the impact on the common American if the federal debt is increased? Click on the sentence that best describes answers the question." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are correct! Great job! The sentence you picked describes the impact the increase of the federal debt will have on common Americans. The cost of products will be higher." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that the writer is presenting us with supporting information and some of this information shows the impact the federal debt increase will have on Americans. What is it?" speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! which sentence shows the impact of the federal debt increase on Americans?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sentence describes the impact the increase of the federal debt will have on common Americans. The cost of products will be higher." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="No Cristina I don't but I think that Americans will have more jobs." speech="" keys="any" threshold="" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you know what the impact could be on Americans?" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7777">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ how will working Americans be affected by the wage increase? Can you pick the sentence that you think best answers my question?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ you are on a roll! The sentence you picked is correct because this shows that working Americans will not be employeed. Approximately, 500,000 workers. The other sentences are not correct because they do not show what will happen to majority of American workers." speech="" keys="any" threshold="" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ try to locate the sentence in the article that best describes what will happen to working Americans if the wage increased." speech="" keys="any" threshold="" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BLankPrompt" text="_user_ did you need more time to answer the question? Try your best it's okay. Which sentence shows the affect on working Americans?" speech="" keys="any" threshold="" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" The highlighted sentence is correct because this shows that working Americans will not be employeed. Approximately, 500,000 workers. The other sentences are not correct because they do not show what will happen to majority of American workers." speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Gotcha _user_! So the sentence highlighted shows the affects on current working Americans with the increase in minimum wage." speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ so after all of this, which article was more persuasive to you?" speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great _user_! I wonder why you thought that main argument was more persuasive. Can you tell us about it?" speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ that is great! Can you tell us why you thought that?" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ click the button below to give your opinion. Then press okay to submit it." speech="" media="">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ thanks for answering! That's exciting to hear! " speech="" keys="any" threshold="" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Thanks _user_! That's amazing! I'm happy you submitted your opinion!" speech="" keys="any" threshold="" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading" status="DoneReading" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="Lesson21-Main0-1medium.html" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="WaitForEvent" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="End" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="ChristinaAsked" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="JordanNegativeFeedback" id="6" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedback" id="7" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="8" />
+      <Action agent="System" act="GetRule" data="" id="9" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="JordanNegativeFeedback" id="6" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedback" id="7" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="8" />
+      <Action agent="System" act="GetRule" data="" id="9" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback2" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

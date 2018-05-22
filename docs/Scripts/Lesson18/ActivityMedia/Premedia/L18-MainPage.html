@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 18 Media</title>
+<script>document.domain = 'prod.x-in-y.com'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+		
+		<style>
+			body
+			{
+				background-image:url('TriviaBkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+				cursor: default;
+			}
+			#fadeBody {display: none;}
+			#mainTable
+			{
+				font-family: Verdana, 'Times New Roman';
+				font-size: 30px;
+				text-align: center;
+				padding: 8px;
+				margin: 40px auto;
+				table-layout: fixed;
+				width: 750px;
+			}
+			TH{ }
+			.tableTitle
+			{
+				color: #005383;
+				font-family: 'Slackey', Verdana, 'Times New Roman';
+				border: 5px solid white;
+				padding: 5px 5px;
+				background-color: white;
+				border-radius: 6px;
+				margin: 0px 100px;
+			}
+			#tableTitle2
+			{
+				font-size: 24px;
+			}
+			#tableTitle4
+			{
+				font-size: 26px;
+			}
+			TD
+			{
+				border: none;
+			}
+			.tableButton
+			{
+				color: white;
+				font-family: Slackey, Verdana, 'Times New Roman';
+				font-weight: bold;
+				font-size: 38px;
+				border-radius: 8px;
+				padding: 1px 10px;
+				margin: 1px 12px;
+				width: 120px;
+				background-color: #8bd3fd;
+				border: 8px dotted #dbdbdb;
+				outline: none;
+			}
+			#scoreBar
+			{
+				position: absolute;
+				width: 680px;
+				z-index: 1;
+				top: 0;
+				margin: 4px 0px 0px 40px;
+			}
+			#scoreBar img
+			{
+				height: 38px;
+				width: 703px;
+			}
+			#scoreFill
+			{
+				position: relative;
+				z-index: -1;
+				width: 0px;
+				background-color: #00FF00;
+				top: 0;
+				margin: -32px 0px 0px 12px;
+				
+			}
+			#scoreLabel
+			{
+				color: white;
+				width: 680px;
+				font-size: 16px;
+				margin: 0px auto;
+				font-weight: bold;
+				font-family: Verdana, 'Times New Roman';
+				text-align: center;
+				display: inline-block;
+			}
+			.doIt
+			{
+				position: relative;
+				margin-top: 50px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			var strId="";
+			var newStrId="";
+			var questionNum=16;
+			var UserAnswer="";
+			var questionList=["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016"]
+			var idNameAndScore = new Array();
+			var newquestionList=new Array();
+			var UserScore=0;
+			var JordanScore=0;
+			var totalScore=0;
+			var countNum=0;
+			var numOfQs= 16;
+			var totalScoreArray= new Array();
+			var correctNum=0;
+			var wrongArray = new Array();
+			var scored = new Boolean();
+			var selectTime=0;
+			var pageRecord = new Array();
+			var scordRecord="";
+			var count=0;
+			var itemsList="001_0_0_0&002_0_0_0&003_0_0_0&004_0_0_0&005_0_0_0&006_0_0_0&007_0_0_0&008_0_0_0&009_0_0_0&010_0_0_0&011_0_0_0&012_0_0_0&013_0_0_0&014_0_0_0&015_0_0_0&016_0_0_0"
+			var flag=false;
+			
+			var clickFunc = function()
+			{
+				parent.PlaySound('clicked0.wav');
+				
+				var clickId=$(this).attr("id");
+				//checkID(clickId);
+				var butFontSize = $( ".tableButton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				$(this).animate({fontSize: butAnimSize}, 75);
+				$(this).animate({fontSize: butFontSize}, 600);
+				
+				var page=$(this).attr("pageAddress");
+				var itemsArray = itemsList.split("&");
+				//idNameAndScore
+				if (idNameAndScore.length>0)
+				{
+					itemsList="";
+					
+					flag=false;
+						for(var i = 0; i < idNameAndScore.length; i ++)
+						{
+							itemsList+=idNameAndScore[i]+"&";
+							var array=idNameAndScore[i].split("_");
+							if(array[1]==2 && clickId==array[0])
+							{
+								flag=true;
+							}
+							
+						}
+						if(flag!=true)
+						{
+						itemsList=itemsList.substring(0,itemsList.length-1);
+						parent.nextPage("media/"+page+"?id="+itemsList);
+						
+						}
+				
+				}
+				else
+				{
+					parent.nextPage("media/"+page+"?id="+itemsList);
+				}		
+			}
+			
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');	
+			}
+			
+			function sound_increase() 
+			{ return parent.PlaySound('increase.wav'); 
+			}
+			
+			///////////////////////////////
+			//GAME RULES AND POINT VALUES//
+			///////////////////////////////
+			
+			//IF USER GETS 2500 POINTS, THE LESSON IS OVER			
+			
+			//these pixel values represent the amount you need to fill the #scoreFill bar depending on the question they chose, and the user got the question right
+			//22.6px = 100pts; 45.2px = 200pts;
+			//68px = 300pts; 90.4px = 400pts;			
+			
+			//we should call the fillBar(#element, points) function when the user gets the correct answer
+			//if answer correct, pass question point value to fillBar()
+			//if answer incorrect, either don't call fillbar() or pass 0
+			
+			function Start()
+			{
+				Lock();
+				$("#fadeBody").fadeIn(1250);
+				//$("#scoreBar").fadeIn(1250);
+				GetRequest();
+				parent.GetWorldEvent("MainPageLoaded");
+				
+			}
+			
+			function GetItem()
+			{
+				//if(idNameAndScore.length <= questionNum)
+				//IF USER GETS 2500 POINTS, THE LESSON IS OVER
+				if(totalScore < 3000)
+				{
+					parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					parent.GetWorldEvent("Stop1");
+				}
+			}
+			
+			function ShowItem(){}	
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".tableButton" ).unbind("click");
+				$( ".tableButton" ).unbind("mouseover");
+				$( ".tableButton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".tableButton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".tableButton" ).animate({backgroundColor: "#474747", color: "gray", borderColor: "#474747"}, 500);
+			}
+			
+			function UnlockAll()
+			{
+				//this sets the hover animation & cursor for buttons
+				$( ".tableButton" ).mouseover(function()
+				{ $(this).stop().animate({backgroundColor: "#8bd3fd", color: "#005383", borderColor: "#f1f36b", borderStyle: "dotted", borderSize: "8px"}, 150); });
+				$( ".tableButton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "#8bd3fd", color: "#005383", borderColor: "#8bd3fd", borderStyle: "dotted", borderSize: "8px"}, 250); });
+				$( ".tableButton" ).css( 'cursor', 'pointer' );
+				
+				//bind the clickFunc to any ".mybutton"
+				$( ".tableButton" ).bind( "click", clickFunc );
+			}
+			function Unlock()
+			{
+				UnlockAll();
+				
+				//the function below is called once the animation is complete. this will ensure that the animation runs before it calls the remaining code. before I did this, the animation was causing the locking to not work
+				////////////
+					$( ".tableButton" ).animate({backgroundColor: "#background-color: #8bd3fd;", color: "#005383", borderColor: "#dbdbdb", borderStyle: "dotted", borderSize: "8px"}, 500,
+				function()
+					{
+						//cycle through all of the buttons
+						for(var i = 0; i < idNameAndScore.length; i++)
+						{
+							var breakOut = new Boolean();
+							var array = idNameAndScore[i].split("_");
+							
+							//alert("idNameAndScore.length: " + idNameAndScore.length);
+							for(var x = 0; x < wrongArray.length; x++)
+							{
+								//alert(wrongArray);
+								if(wrongArray[x].length>0)
+								{
+									var	getItems=wrongArray[x].split("_");
+								//if ( "#"+array[0] == wrongArray[x])
+									if ( "#"+array[0] == getItems[0] && getItems[1]==1)
+									{
+										$( "#"+array[0] ).css({color: "red"});
+										$( "#"+array[0] ).css({borderColor: "red"});
+																			
+										breakOut = true;
+										
+										$( "#"+array[0] ).unbind("mouseover");
+										$( "#"+array[0] ).unbind("mouseout");
+										
+										$( "#"+array[0] ).mouseover(function()
+										{ $(this).animate({borderColor: "#f1f36b", borderStyle: "dotted", borderSize: "8px"}, 150); });
+										$( "#"+array[0] ).mouseout(function()
+										{ $(this).animate({borderColor: "red"}, 250); });
+									}
+									else if ( "#"+array[0] == getItems[0] && getItems[1]==2)
+									{
+									
+										$( "#"+array[0] ).unbind("click");
+										$( "#"+array[0] ).unbind("mouseover");
+										$( "#"+array[0] ).unbind("mouseout");
+										$( "#"+array[0] ).css( 'cursor', 'not-allowed' );
+										$( "#"+array[0] ).animate({borderColor: "#B6B6B4", backgroundColor: "#B6B6B4", color: "white"}, 500);
+									}
+								}
+									
+								}
+								
+								
+								
+								if (array[2]>0)
+								{
+									//unbinds click function and hover
+									$( "#"+array[0] ).unbind("click");
+									$( "#"+array[0] ).unbind("mouseover");
+									$( "#"+array[0] ).unbind("mouseout");
+									
+									//sets disabled mouse cursor on buttons
+									$( "#"+array[0] ).css( 'cursor', 'not-allowed' );
+									
+									//sets disabled colors WITH animation
+									//$( "#"+array[0] ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+									$( "#"+array[0] ).animate({borderColor: "#2cc32c", backgroundColor: "#2cc32c", color: "white"}, 500);
+								}
+							
+							
+						
+						}
+					}
+				);
+			}
+			function GetMediaEvent(data)
+			{
+				if (data=="UserAnswer"){
+					return UserAnswer;
+				}
+				
+				if (data=="CristinaSelectedPage")
+				{
+					for(var i = 0; i < idNameAndScore.length; i ++) 
+					{
+						//var selectedItem= idNameAndScore[i];
+						var array=idNameAndScore[i].split("_");
+						if(array[2]>0)
+						{
+						questionList.splice($.inArray(array[0],questionList),1);
+						}
+						
+					} 
+				
+				  var ItemNum=Math.floor(Math.random() * questionList.length);
+				  var Item=questionList[ItemNum];
+				 // alert(Item);
+				  //checkID(001);
+				  //strId+="001"+"_"; 
+				  //var JordanPage=$("#"+"001").attr("pageAddress")
+				  var JordanPage=$("#"+Item).attr("pageAddress")
+				  parent.nextPage("media/"+JordanPage);
+				}
+			}
+			
+			function GetRequest()
+			{
+				var url = location.search; 
+				//alert("url: " + url);
+				
+				if (url.indexOf("?") != -1)
+				{					
+					str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//2-12 idNameAndScore to split a string to different strings that are different pageID with score.
+					idNameAndScore=strId.split("&");
+					//UserScore= strs[3];
+					//JordanScore= strs[5];
+					var wrongArrayCount=0;
+					for(var i = 0; i < idNameAndScore.length; i ++)
+					{
+						//2-12 this array is to split a idNameAndScore string to pageID and score.
+						var array=idNameAndScore[i].split("_");
+						
+						//2-12 if the return page score is "0", then relative button can click again, but the button border should change to red
+					
+						if (array[2]==0 && array[1]>0)
+						{
+							if (array[1]==1)
+							{
+							
+							wrongArray[wrongArrayCount]= "#" + array[0]+"_1";
+							
+							}
+							else if(array[1]==2)
+							{
+							wrongArray[wrongArrayCount]= "#" + array[0]+"_2";
+							}
+							//alert(wrongArray);
+							scored = false;
+							/*pageRecord[count] = new Array();
+							alert(array);
+							
+							pageRecord[count][0]=array[0];
+							pageRecord[count][1]=array[1];
+							count++;*/
+							wrongArrayCount++;
+						}
+						
+						else if (array[2]>0)
+						{
+							
+							scored = true;
+							countNum++;
+							totalScore+= array[2]<< 0;
+							totalScoreArray.push(array[2]);
+						}
+					}
+					
+					var percentage=7*totalScore/30;
+					fillBar("#scoreFill", percentage);
+					$("#scoreLabel").html(totalScore + "/3000");
+				}
+			}	
+			
+			function checkID(clickId)
+			{ 
+				for(var i = 0; i < idNameAndScore.length-1; i ++)
+				{
+					var array=idNameAndScore[i].split("_");
+					if (array[1]==0)
+					{
+						var getID=array[0];
+						//alert(getID)
+						if(getID==clickId)
+						{
+							strId=strId.replace(idNameAndScore[i]+"&","")
+							idNameAndScore.splice(jQuery.inArray(idNameAndScore[i],idNameAndScore),1); 
+						}
+					}
+				}
+			}
+			
+			//adds fillAmount to the current width of element and creates width animation based on the result
+			//when passing an element to this function, make sure if element is an id to include a # before the element name and a . if the element is a class
+			//fillAmount should be a positive integer value
+			function fillBar(element, fillAmount)
+			{
+				var newWidth = $(element).width() + fillAmount; //calculate the new width
+				
+				//ensures bar doesn't overflow
+				if (newWidth > 680)	{newWidth = 680;}
+				
+				if ( scored == true )
+				{
+					//queue the width animation
+					$(element).animate({width: newWidth}, 1000);
+					sound_increase();
+				}
+				else
+				{
+					$(element).css({width: newWidth});
+				}
+			}
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="fadeBody">
+			<div id="scoreBar">
+				<img src="ScoreBar2.png">
+				<div id="scoreFill"><span id="scoreLabel">0/2500</span></div>
+			</div>
+			
+			<table id="mainTable">
+			<th class="tableTitle" id="tableTitle1">Reading<br>Check</th>
+			<th class="tableTitle" id="tableTitle2">Text<br>Structures</th>
+			<th class="tableTitle" id="tableTitle3">Writer's<br>Purpose</th>
+			<th class="tableTitle" id="tableTitle4">Persuade<br>& Inform</th>
+			<tr style="height: 5px;">
+			<tr>
+			<td><div type="submit" id="001" pageAddress="L18-C1Q1.html" class="tableButton" >100</div></td>
+			<td><div type="submit" id="005" pageAddress="L18-C2Q1.html" class="tableButton" >100</div></td>
+			<td><div type="submit" id="009" pageAddress="L18-C3Q1.html" class="tableButton" >100</div></td>
+			<td><div type="submit" id="013" pageAddress="L18-C4Q1.html" class="tableButton" >100</div></td>
+			</tr>
+			<tr>
+			<td><div type="submit" id="002" pageAddress="L18-C1Q2.html" class="tableButton" >200</div></td>
+			<td><div type="submit" id="006" pageAddress="L18-C2Q2.html" class="tableButton" >200</div></td>
+			<td><div type="submit" id="010" pageAddress="L18-C3Q2.html" class="tableButton" >200</div></td>
+			<td><div type="submit" id="014" pageAddress="L18-C4Q2.html" class="tableButton" >200</div></td>
+			</tr>
+			</tr>
+			<tr>
+			<td><div type="submit" id="003" pageAddress="L18-C1Q3.html" class="tableButton" >300</div></td>
+			<td><div type="submit" id="007" pageAddress="L18-C2Q3.html" class="tableButton" >300</div></td>
+			<td><div type="submit" id="011" pageAddress="L18-C3Q3.html" class="tableButton" >300</div></td>
+			<td><div type="submit" id="015" pageAddress="L18-C4Q3.html" class="tableButton" >300</div></td>
+			</tr>
+			</tr>
+			<tr>
+			<td><div type="submit" id="004" pageAddress="L18-C1Q4.html" class="tableButton" >400</div></td>
+			<td><div type="submit" id="008" pageAddress="L18-C2Q4.html" class="tableButton" >400</div></td>
+			<td><div type="submit" id="012" pageAddress="L18-C3Q4.html" class="tableButton" >400</div></td>
+			<td><div type="submit" id="016" pageAddress="L18-C4Q4.html" class="tableButton" >400</div></td>
+			</tr>
+			</tr>
+		</div>
+	</body>
+</html>

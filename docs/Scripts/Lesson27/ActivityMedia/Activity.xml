@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Awesome" speech="Awesome" play="B1" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
+      <SpeechCan name="Pump">
+        <Item text="Give it a try, _user_!" speech="Give it a try, _user_!" play="A1,_user_" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,A2" />
+      </SpeechCan>
+      <SpeechCan name="Click">
+        <Item text="If you are ready to go on _user_, press click here to continue. " speech="If you are ready to go on _user_, press click here to continue. " play="A3,_user_,A4" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Great, _user_!" speech="Great, _user_!" play="A5,_user_" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Okay, _user_." speech="Okay, _user_." play="A6,_user_" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="Hello, welcome back _user_! Today I am going to show you and Jordan how to ask yourself important questions while reading. These questions will help us better understand texts we read." speech="Hello, welcome back _user_! Two day I am going to show you and Jordan how to ask yourself important questions while reading. These questions will help us better understand texts we read." media="media/Lesson15-IntroTitle.html" play="A7,_user_,A8" />
+      <Item id="2" agent="Jordan" text="Hey _user_ and Cristina. I'm looking forward to this lesson." speech="" play="B2,_user_,B3" />
+      <Item id="3" agent="Cristina" text="Before we get started, let me explain what you will have to do during this lesson." speech="" play="A9" />
+      <Item id="4" agent="Jordan" text="Great, this always helps me understand what to do during a lesson." speech="" media="media/Lesson15-Blank.html" play="B4" />
+    </RigidPack>
+    <RigidPack name="Reading" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_, read the following story, and then, click continue at the bottom of the story when you are done. This will move the lesson forward. If you need help reading the story, click the green voice button at the bottom of the screen and the story will be red to you." speech="" media="media/Lesson15-Activity-Main0.html" play="_user_,A10" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Cristina" text="First, you will need to read the passage that is displayed on the screen. To move through the passage you can drag the scroll bar on the right. You can also move through the passage by clicking the down arrow. Once you are done reading, click the continue button." speech="" play="A11" />
+      <Item id="2" agent="Jordan" text="I see, anything else Cristina?" speech="" play="B5" />
+    </RigidPack>
+    <RigidPack name="Opening3" usedIn="">
+      <Item id="1" agent="Cristina" text="After reading, you will be asked two types of multiple choice questions. Some questions you will click a button to respond." speech="" play="A12" />
+    </RigidPack>
+    <RigidPack name="Opening4" usedIn="">
+      <Item id="1" agent="Cristina" text="For the other question type you will need to click on a highlighted sentence in the text. Simply click one of the buttons to submit an answer." speech="" play="A13" />
+      <Item id="2" agent="Jordan" text="Ok great! Let's get started then _user_." speech="" play="B6,_user_" />
+    </RigidPack>
+    <RigidPack name="TP1" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." speech="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." play="A14" />
+      <Item id="2" agent="Cristina" text="Jordan, what was your answer to this question?" speech="Jordan, what was your answer to this question?" play="A15" />
+      <Item id="3" agent="Jordan" text=" I thought the answer was, the writer knows a lot about computers." speech=" I thought the answer was, the writer knows a lot about computers." play="B7" />
+      <Item id="4" agent="Cristina" text="No worries, Jordan! That is incorrect because the writer does not talk about knowing anything about computers, only that he or she likes them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" speech="No worries, Jordan! That is incorrect because the writer does not talk about knowing anything about computers, only that he or she likes them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" play="A16" />
+    </RigidPack>
+    <RigidPack name="TP4" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is, the only way to fulfill this dream is to go to college. This is because the writer is suggesting that he or she needs to go back to school to fulfill his or her dream." speech="The correct answer is, the only way to fulfill this dream is to go to college. This is because the writer is suggesting that he or she needs to go back to school to fulfill his or her dream." play="A17" />
+      <Item id="2" agent="Cristina" text="What did you think the correct answer was, Jordan?" speech="What did you think the correct answer was, Jordan?" play="A18" />
+      <Item id="3" agent="Jordan" text="I thought the answer was, I did everything I could to get money. Because If  the writer went back to school, he or she could make more money." speech="I thought the answer was, I did everything I could to get money. Because If  the writer went back to school, he or she could make more money." play="B8" />
+      <Item id="4" agent="Cristina" text="That is incorrect because the writer says he or she wants to pursue his or her dream. This could include making more money, but that is not the main reason to go back to school. Let's go to the next question." speech="That is incorrect because the writer says he or she wants to pursue his or her dream. This could include making more money, but that is not the main reason to go back to school. Let's go to the next question." play="A19" />
+    </RigidPack>
+    <RigidPack name="TP2" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." speech="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." play="A20" />
+      <Item id="2" agent="Cristina" text="What did you think, Jordan?" speech="What did you think, Jordan?" play="A21" />
+      <Item id="3" agent="Jordan" text="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " speech="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " play="B9" />
+      <Item id="4" agent="Cristina" text="Good catch, Jordan!" speech="Good Catch, Jordan!" play="A22" />
+      <Item id="5" agent="Jordan" text="Thanks Cristina. I'm on a role!" speech="Thanks Cristina. I'm on a role!" play="B10" />
+      <Item id="6" agent="Cristina" text="Alright Jordan, curb your enthusiasm. Let's move on to the next question. " speech="Alright Jordan, curb your enthusiasm. Let's move on to the next question. " play="A23" />
+    </RigidPack>
+    <RigidPack name="TP3" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is, the writer wants to go back to school. This is because he or she says that the only way to to work with computers is to continue his or her education." speech="The correct answer is, the writer wants to go back to school. This is because he or she says that the only way to to work with computers is to continue his or her education." play="A24" />
+      <Item id="2" agent="Cristina" text="What about you, Jordan?" speech="What about you, Jordan?" play="A25" />
+      <Item id="3" agent="Jordan" text="I thought the answer was the writer went to college and did not study." speech="I thought the answer was the writer went to college and did not study." play="B11" />
+      <Item id="4" agent="Cristina" text="That cannot be the correct answer because the writer says in the text that he or she did not graduate from high school, therefore he or she did not go to college." speech="That cannot be the correct answer because the writer says in the text that he or she did not graduate from high school, therefore he or she did not go to college." play="A26" />
+      <Item id="5" agent="Jordan" text="Oh that makes sense, I didn't think about it that way," speech="Oh that makes sense, I didn't think about it that way," play="B12" />
+      <Item id="6" agent="Cristina" text="Okay, let's move on." speech="Okay, let's move on." play="A27" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="That is the end of our lesson for today! _user_, feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" speech="That is the end of our lesson for today! _user_, feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" play="A28,_user_,A29" />
+      <Item id="2" agent="Jordan" text="See you later _user_!" speech="See you later!" play="B13" />
+    </RigidPack>
+    <RigidPack name="TP5" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling his or her dream of working with computers and the only way to do that is by furthering his or her education." speech="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling his or her dream of working with computers and the only way to do that is by furthering his or her education." play="A30" />
+      <Item id="2" agent="Cristina" text="What did you think, Jordan?" speech="What did you think, Jordan?" play="A31" />
+      <Item id="3" agent="Jordan" text="The writer also said that he or she didn't complete high school, so couldn't the first choice be the right answer too?" speech="The writer also said that he or she didn't complete high school, so couldn't the first choice be the right answer too?" play="B14" />
+      <Item id="4" agent="Cristina" text="I am impressed you spotted that, Jordan! While the writer does say that he or she did not complete high school, it is not really what the story is about. In this case, that is just a detail about the story!" speech="I am impressed you spotted that, Jordan! While the writer does say that he or she did not complete high school, it is not really what the story is about. In this case, that is just a detail about the story!" play="A32" />
+      <Item id="5" agent="Jordan" text="Okay, so just because the writer says something does not mean it is the main idea?" speech="Okay, so just because the writer says something does not mean it is the main idea?" play="B15" />
+      <Item id="6" agent="Cristina" text="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." speech="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." play="A33" />
+    </RigidPack>
+    <RigidPack name="TP6" usedIn="">
+      <Item id="1" agent="Cristina" text="The correct answer is, what the G E D means to me. This story is about how the writer is going to get his or her G E D in the hopes of working with computers in the future and how this is very important to him or her.  While this story does talk about the writer slacking off in school, he or she talks about how it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school . The writer does not talk about how to use a computer, so this can't be the title either." speech="The correct answer is, what the G E D means to me. This story is about how the writer is going to get his or her G E D in the hopes of working with computers in the future and how this is very important to him or her.  While this story does talk about the writer slacking off in school, he or she talks about how it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school . The writer does not talk about how to use a computer, so this can't be the title either." play="A34" />
+      <Item id="2" agent="Cristina" text="What about you, Jordan? What did you think the answer was?" speech="What about you, Jordan? What did you think the answer was?" play="A35" />
+      <Item id="3" agent="Jordan" text="I was not sure about this one. That involved a lot of thinking. This is a tough lesson." speech="I was not sure about this one. That involved a lot of thinking. This is a tough lesson." play="B16" />
+      <Item id="4" agent="Cristina" text="Yes, this lesson is a tough one, but you and _user_ did so well and practice makes perfect. The more we make these connections the easier it becomes!" speech="Yes, this lesson is a tough one, but you and _user_ did so well and practice makes perfect. The more we make these connections the easier it becomes!" play="A36,_user_,A37" />
+      <Item id="5" agent="Jordan" text="I sure hope so!" speech="I sure hope so!" play="B17" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TP1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Let's take a closer look at the first paragraph of the passage." speech="Let's take a closer look at the first paragraph of the passage." media="media/Lesson15-Activity-Main1.html" play="A38">
+          <Answers>
+            <Answer name="MainQuestion" agent="Cristina" type="MainQuestion" text="Okay, _user_, Why might the writer want to go back to school to get his or her G E D, based on what you red in this text?" speech="" keys="any" threshold="" play="A39,_user_,A40" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Okay!">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="The writer talks about how he or she was a poor student in high school. With this in mind, which of the following could be true? Try to click a different answer choice below." speech="The writer talks about how he or she was a poor student in high school. With this in mind, which of the following could be true? Try to click a different answer choice below." media="" play="A41">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Please reread the sentences in yellow in the passage." speech="Please reread the sentences in yellow in the passage." media="" play="A42">
+          <Answers>
+            <Answer name="MainQuestion1" agent="Cristina" type="MainQuestion" text="_user_, click on the sentence above that supports the statement, The writer did not learn about computers in high school." speech="" keys="any" threshold="" play="_user_,A43" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Okay!">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="In which of the yellow sentences does the writer give insight into his or her behavior while he or she was in high school? Click your answer below, _user_." speech="In which of the yellow sentences does the writer give insight into his or her behavior while he or she was in high school? Click your answer below, _user_." media="" play="A44,_user_">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Let's read this passage in the story again." speech="Let's read this passage in the story again.." media="media/Lesson15-Activity-Main2.html" play="A45">
+          <Answers>
+            <Answer name="MainQuestion2" agent="Cristina" type="MainQuestion" text="_user_, Why is the writer explaining the hardships of life without a high school diploma? Please click an answer below." speech="" keys="any" threshold="" play="_user_,A46" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Okay!">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="The writer is talking about pursuing his or her dream. Which of these choices will enable that dream to come true? Try again by clicking a different answer below." speech="The writer is talking about pursuing his or her dream. Which of these choices will enable that dream to come true? Try again by clicking a different answer below." media="" play="A47">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4">
+      <Questions>
+        <Question id="2" agent="Cristina" text="Take a look at the sentences in yellow in the passage." speech="Take a look at the sentences in yellow in the passage." media="" play="A48">
+          <Answers>
+            <Answer name="MainQuestion4" agent="Cristina" type="MainQuestion" text="_user_, click on the sentence above that supports the statement, the writer wants to go back to school." speech="" keys="any" threshold="" play="_user_,A49" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? Click your answer below." speech="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? Click your answer below." media="" play="A50">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Okay," speech="Okay," media="media/Lesson15-Activity-Main3.html" play="A51">
+          <Answers>
+            <Answer name="MainQuestion5" agent="Cristina" type="MainQuestion" text="_user_, what do you think the main idea of this story is? Click your answer below." speech="" keys="any" threshold="" play="_user_,A52" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Okay!">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="In this story, the writer has been talking about fulfilling his or her dream. Which of these choices mentions the writer's dream? Click your answer below." speech="In this story, the writer has been talking about fulfilling his or her dream. Which of these choices mentions the writer's dream? Click your answer below." media="" play="A53">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Okay, We have read the whole story and picked out the main idea." speech="Okay, We have read the whole story and picked out the main idea." media="media/Lesson15-Activity-Main4.html" play="A54">
+          <Answers>
+            <Answer name="MainQuestion6" agent="Cristina" type="MainQuestion" text=" _user_, which of these choices do you think is the title of this text? Click your answer at the top of the page." speech="" keys="any" threshold="" play="_user_,A55" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Okay!">
+          <Answers />
+          <Hints>
+            <Hint id="1" agent="Cristina" text="The writer talks about fulfilling his or her dream in this story and what he or she needs to do to do it. Which of these choices relates to the pursuit of that dream? Click your answer below." speech="The writer talks about fulfilling his or her dream in this story and what he or she needs to do to do it. Which of these choices relates to the pursuit of that dream? Click your answer below." media="" play="A56">
+              <Answers />
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Instruct1" id="2" />
+    </Rule>
+    <Rule name="Instruct1" status="Instruct1" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Instruct2" id="1" />
+      <Action agent="System" act="PauseAt" data="15" id="2" />
+      <!--Action agent="System" act="ShowMedia" data="youtube.VAnJIV75FnE" id="3" /-->
+      <Action agent="System" act="ShowMedia" data="L27ActivityDemo0.mp4" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Instruct2" status="Instruct2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Instruct3" id="1" />
+      <Action agent="System" act="PauseAt" data="30" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening3" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Instruct3" status="Instruct3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Instruct4" id="1" />
+      <Action agent="System" act="PauseAt" data="90000" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening4" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Instruct4" status="Instruct4" response="" event="VideoEnd" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Reading" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Activity15Audio.mp3" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading" status="DoneReading" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="Click" id="3" />
+      <Action agent="System" act="WaitForEvent" data="30" id="4" />
+    </Rule>
+    <Rule name="HasTP" status="NewPage" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="ShowItem" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="GetMediaItem" data="" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoTP" status="NewPage" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="ShowItem" status="ShowItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+    </Rule>
+    <Rule name="NewPage" status="ShowItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NewPage" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoTP1" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="HasTP1" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Prompt" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Prompt(TP)" status="Prompt" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="AskQ(inanswers)" status="AskQ" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="MainQuestion" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="HasExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetHint" id="1" />
+      <Action agent="System" act="GetHint" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoExpectation" status="GetExpectation" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="System" act="SetStatus" data="Pump" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="NoHint" status="GetHint" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+    </Rule>
+    <Rule name="HasHint" status="GetHint" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Cristina" act="DeliverHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="DeliverHint" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="PumpCorrect" status="Pump" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="PumpAny" status="Pump" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="GetExpectation" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HintCorrect" status="DeliverHint" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="HintAny" status="DeliverHint" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NewPage" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

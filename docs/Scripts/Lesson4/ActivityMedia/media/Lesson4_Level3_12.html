@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  
+  <style>
+  	body
+	{
+		background-image:url('L4Bkgd0.png');
+		background-size: cover;
+		background-repeat:no-repeat;
+		overflow: hidden;
+		width: 790px;
+		height: 472px;
+		cursor: default;
+		margin: 0px;
+	}
+	.scoreboardWrapper
+	{
+		width: 800px;
+		height: 95px;
+		display: none;
+		position: fixed;
+	}
+	.scoreboard
+	{
+		font-family: Nunito, Verdana, 'Times New Roman';
+		position: absolute;
+		width:280px;
+		height:60px;
+		padding: 0px;
+		background-color: #fbffe1;
+		color:#505050;
+		font-size: 45px;
+		text-align: center;
+		border-top: none;
+		vertical-align: middle;
+	}
+	#userBoard
+	{
+		top: 51px;
+		left: 0px;
+		border-bottom-right-radius: 10px;
+		border-left: none;
+		color: #b24d4d;
+	}
+	#agentBoard
+	{
+		top:51px;
+		right: 0;
+		border-bottom-left-radius: 10px;
+		border-right: none;
+		color: #6f9eca;
+	}
+	.textBox
+	{
+		background-color: #f6ffb6;
+		color: black;
+		font-family: 'Raleway', Verdana, 'Times New Roman';
+		width: 800px;
+		height: 30px;
+		font-size: 26px;
+		text-align: center;
+		padding: 10px 0px;
+		margin: 0px auto 4px auto;
+		opacity: 0.0;
+		border-bottom: 1px solid #505050;
+	}
+	.exampleSentence
+	{
+		font-size: 32px;
+		text-align: center;
+		background-color: white;
+		color: black;
+		border-radius: 12px;
+		width: 660px;
+		margin: 80px auto 20px auto;
+		opacity: 0.0;
+		padding: 10px 20px;
+		border: 6px dotted #424242;
+	}
+	.buttonWrapper
+	{
+		width: 780px;
+		height: 160px;
+		display: block;
+		position: fixed;
+		top: 285px;
+	}
+	.but
+	{
+		font-size: 20px;
+		font-family: Raleway, Verdana, 'Times New Roman';
+		font-weight: bold;
+		margin-bottom: 4px;
+		width: 796px;
+		height: 30px;
+		line-height: 30px;
+		color: #111111;
+		background-color: white;
+		text-decoration: none;
+		border-top: 2px solid #424242;
+		border-bottom: 2px solid #424242;
+		text-align: center;
+		padding: 5px 2px;
+		outline: none;
+		opacity: 0.0;
+		display: block;
+	}
+	#but0
+	{
+
+	}
+	#but1
+	{
+
+	}
+	#but2
+	{
+		
+	}
+	#but3
+	{
+		
+	}
+	.affix
+	{
+		background-color: #edff73;
+		color: #424242;
+		border-radius: 10px;
+		text-decoration: none;
+	}
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media =
+	{
+		//help ASAT determine information about the page
+		pageIdentifier: "Level3_MediaLoaded",
+		pageDifficulty: "Hard2",
+		
+		currentItem: -1,
+		numItems: 0,
+		
+		//page switching variable
+		nextPageStay: "",
+		
+		
+		//score tracking variables
+		answerList: null,
+		answerString: null,
+		userScore: 0,
+		agentScore: 0,
+		
+		
+		//variables for button selection
+		isSelected: false,
+		selectedButton: null,
+		
+		//variables for word highlighting 
+		exampleSentenceText: "Wombats are short and <span id='exampleWord'>muscul<span class='affix'>____</span></span> animals that walks on four strong legs and normally only have one baby.",
+		affixText:	"ar",
+		affixColor: "white",
+		
+		//variables to be used to fill in text of various elements 
+		//the affix choice should correspond to the affixes for each button choice
+		buttonChoices: [
+		"MUSCULITY - to indicate the condition of the wombats muscles", 
+		"MUSCULITY - to indicate a characteristic of the animal",
+		"MUSCULAR: - to indicate general characteristics of animals", 
+		"MUSCULAR: - to indicate a specific characteristic of the wombat"
+
+		],
+		affixChoices: ["ity", "ity", "ar", "ar"],
+		
+		//variables for the agent answer selection and scoring
+		correctButton: "but3",
+		incorrectButton1: "but0",
+		incorrectButton2: "but1",
+		incorrectButton3: "but2",
+		
+		agentIsCorrect: false,
+		
+	}
+	
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	
+	$(document).ready(function()
+	{
+		parent.GetWorldEvent(Media.pageIdentifier);		//reports the identifying name for the media page to ASAT
+		
+		/*
+			Gets the query string of the page and parses the user score and agent score from it.
+			Should not be used on the first page because the agent score and user score are not added to the query string until the second page
+		*/
+		
+		
+		Media.answerString = window.location.search.slice(1);
+		
+		Media.answerList = Media.answerString.split(",");
+		
+		Media.userScore = parseInt(Media.answerList[0]);
+		Media.agentScore = parseInt(Media.answerList[1]);
+		
+		
+	});
+	
+	/*
+		--------------------------------Helper Functions------------------------------
+	*/
+	
+  
+	function incrementUserScore()
+	{
+		Media.userScore++;
+		$("#userScore").text(Media.userScore);
+	}
+	
+	function incrementAgentScore()
+	{
+		Media.agentScore++;
+		$("#agentScore").text(Media.agentScore);
+	}
+	
+	//compares the scores of the agent and user and determines a winner
+	function reportWinner()
+	{
+		if(Media.userScore > Media.agentScore)
+		{
+			return "User";
+		}
+		else if(Media.userScore < Media.agentScore)
+		{
+			return "Agent";
+		}
+		else
+		{
+			return "Tie";
+		}
+	}
+  
+  
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	/*
+		Enables all events for designated elements after the visual cue is finished in the Unlock function
+	*/
+	function bindEvents()
+	{
+		//enables the functionality of the button elements 
+		$(".but").on("click", ButClick);
+		$(".but").on("mouseenter", ButMouseEnter);
+		$(".but").on("mouseleave", ButMouseLeave);
+	}	
+	
+	function ButClick()
+	{
+		Lock();
+		
+		//Stores the currently selected button globally, changes the border around the button element to the designated selection color, and raises the isSelected flag 
+		Media.selectedButton = $(this);
+		Media.selectedButton.animate({backgroundColor: "#edff73", color: "#212121", opacity: 1.0},400);
+		Media.isSelected = true;
+		
+		sound_clicked();
+		
+		//compare the selected button to the designated correctButton
+		var selectedID = $(Media.selectedButton).attr("id");
+		userSelectedValue = document.getElementById(selectedID).innerHTML;
+		userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+		userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+		if(selectedID == Media.correctButton)
+		{
+			parent.GetWorldEvent("userAnswer_Correct_"+userSelectedValue);	
+		}
+		else
+		{
+			Media.answerScore--;	//if the selected answer is incorrect, decrement the answerScore for the current page
+			parent.GetWorldEvent("userAnswer_Incorrect_"+userSelectedValue);
+		}
+	}
+	
+	function ButMouseEnter()
+	{
+		$(this).stop().animate({backgroundColor: "#edff73" },200);
+		
+		var curBut = $(this).attr("id");
+	
+		if (curBut == "but0") 
+		{ 
+			$(".affix").text(Media.affixChoices[0]) 
+		}
+		else if (curBut == "but1")
+		{ 
+			$(".affix").text(Media.affixChoices[1]) 
+		}
+		else if (curBut == "but2")
+		{ 
+			$(".affix").text(Media.affixChoices[2]) 
+		}
+		else if (curBut == "but3")
+		{ 
+			$(".affix").text(Media.affixChoices[3]) 
+		}
+		
+	}
+	function ButMouseLeave()
+	{
+		$(this).stop().animate({backgroundColor: "white"},200);
+	}
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	*/
+	
+	/*
+		This function tries to select an item. If an item is found, this function remembers 
+		the found item and calls the function parent.GetWorldEvent("Continue") 
+		to inform the parent program that there is an item to continue the exercise. 
+		Otherwise, it calls parent.GetWorldEvent("Stop") and any closing code should be added at that point.
+		
+	*/
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop3");
+		}
+	}	
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	
+	function ShowItem()
+	{
+		if(Media.currentItem == 0)
+		{
+			//add text to buttons and other elements
+			for(i = 0; i < Media.buttonChoices.length; i++)
+			{
+				$("#"+"but"+i).text(Media.buttonChoices[i]);
+			}
+			$(".exampleSentence").html(Media.exampleSentenceText);
+			$("#userScore").html(Media.userScore);
+			$("#agentScore").html(Media.agentScore);
+			$(".scoreboardWrapper").show("fade", 1000);
+			
+			
+			//fade in animation for each element needed for the current item
+			$(".textBox").animate({opacity: 1.0}, 1000);
+			$(".exampleSentence").animate({opacity: 1.0}, 1000);
+		}
+		
+		Lock();
+	}
+	function ShowMediaAnswer()
+	{
+		
+		if(Media.isSelected == true)	//checks to make sure a selection has been made in order to check correctness
+		{
+			//user is correct, highlight selection in green and play a sound
+			if(Media.selectedButton.attr("id") == Media.correctButton)
+			{
+				Media.selectedButton.animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+				incrementUserScore();	//increment User's score
+				sound_correct();
+			}
+			else
+			{
+				//user is incorrect, highlight selection in a shade of red and play a sound
+				Media.selectedButton.animate({backgroundColor: "#da3636", color: "white", opacity: 1.0},1000);
+				$("#" + Media.correctButton).animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+				sound_incorrect();
+			}
+			
+			//add an additional indicator of the correct answer inside the exampleWord element
+			$(".affix").text(Media.affixText).animate({color: Media.affixColor, backgroundColor: "green"}, 2000);
+			$("#exampleWord").css("font-weight","bold");
+			
+			//increment the Agent's score if the Agent's selection was correct
+			if(Media.agentIsCorrect)
+			{
+				incrementAgentScore();
+			}
+		}
+	}
+	
+	
+	/*
+		Preforms different actions based on a data string sent by ASAT
+	*/
+	function GetMediaEvent(data)
+	{
+		if (data == "MainQ")
+		{
+			parent.GetWorldEvent("Jordan");
+		}
+		else if (data == "ThisQ")
+		{
+			parent.GetWorldEvent("Cristina");
+		}
+		else if(data == "Difficulty")
+		{
+			//checks the designated page difficulty to begin appropriate agent dialogue
+			parent.GetWorldEvent(Media.pageDifficulty);
+		}
+		else if(data == "JordanCorrect")
+		{
+			//animates the answer choice chosen by the agent
+			$("#" + Media.correctButton).animate({backgroundColor: "white", color: "#212121", opacity: 1}, 300);
+			$("#" + Media.correctButton).effect("bounce",1500).animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 1000);
+			
+			//sets the flag in ShowMediaAnswer to increment and visually update agentScore
+			Media.agentIsCorrect = true;	
+		}
+		else if(data == "JordanIncorrect")
+		{
+			$("#" + Media.incorrectButton1).animate({backgroundColor: "white", color: "#212121", opacity: 1}, 300);
+			$("#" + Media.incorrectButton1).effect("bounce",1500).animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 1000);
+			
+			Media.agentIsCorrect = false;
+		}
+		else if(data == "JordanIncorrect2")
+		{
+			$("#" + Media.incorrectButton2).animate({backgroundColor: "white", color: "#212121", opacity: 1}, 300);
+			$("#" + Media.incorrectButton2).effect("bounce",1500).animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 1000);
+			
+			Media.agentIsCorrect = false;
+		}
+		else if(data == "JordanIncorrect3")
+		{
+			$("#" + Media.incorrectButton3).animate({backgroundColor: "white", color: "#212121", opacity: 1}, 300);
+			$("#" + Media.incorrectButton3).effect("bounce",1500).animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 1000);
+			
+			Media.agentIsCorrect = false;
+		}
+		else if(data == "NextPage")
+		{
+			parent.GetWorldEvent("Stop3");
+
+		}
+		else if(data == "ReportWinner")
+		{
+			//Reports the winner of the competition to ASAT
+			parent.GetWorldEvent(reportWinner());
+		}
+	}
+	
+
+	function Lock()
+	{
+		//creates a visual cue that the button elements are disabled
+		$(".but").animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 700);
+		$(".but").css("cursor", "not-allowed");
+		
+		//disables the functionality of the button elements 
+		$(".but").off("click", ButClick);
+		$(".but").off("mouseenter", ButMouseEnter);
+		$(".but").off("mouseleave", ButMouseLeave);
+	}
+	
+	/*
+		Enables functionality of any elements that were disabled by the Lock function
+	*/	
+	function Unlock()
+	{
+		//creates a visual cue that the button elements are enabled
+		//the functionality of the elements is enabled in the function bindEvents when all the visual cue animations are resolved
+		$(".but").css( 'cursor', 'pointer');
+		$(".but").animate({backgroundColor: "white", color: "#212121", opacity: 1}, 700).promise().done(bindEvents);	//some events can cause the visual cue animation to stop so they are enabled after the animation is finished
+		
+	}
+	/*
+		Signals ASAT to play a certain sounds during certain events such as clicking an answer, etc.
+	*/
+	function sound_clicked() 
+	{ 
+		return parent.PlaySound('clicked0.wav');
+		parent.GetWorldEvent("play clicked");
+	}
+
+	function sound_incorrect() 
+	{ 
+		return parent.PlaySound('incorrect0.wav');
+		parent.GetWorldEvent("play incorrect");
+	}
+	
+	function sound_correct()
+	{ 
+		return parent.PlaySound('success0.wav');
+		parent.GetWorldEvent("play correct");
+	}
+  </script>
+</head>
+<body>
+	<div class="scoreboardWrapper">
+		<div id="userBoard" class="scoreboard">You: <span id="userScore"></span></div>
+		<div id="agentBoard" class="scoreboard">Jordan: <span id="agentScore"></span></div>
+	</div>
+	<div class="textBox">Click the affix below that makes the example sentence work.</div>
+	<div class="exampleSentence"></div>
+	 <div class="buttonWrapper">
+		<div id="but0" class="but"></div>
+		<div id="but1" class="but"></div>
+		<div id="but2" class="but"></div>
+		<div id="but3" class="but"></div>
+	 </div>
+</body>
+
+</html>

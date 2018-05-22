@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,100" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="PhotoFitMan" position="-3,-13" size="132,108" animationlibrary="Library/Characters/PhotoFitManHead/PhotoFitManHead.xml" addons="Library/Addons/RM2HeadClothesPack1/RM2HeadClothesPack1.xml,Library/Addons/RM2HeadClothesPack2/RM2HeadClothesPack2.xml,Library/Addons/RM2HeadHairPack1/RM2HeadHairPack1.xml,Library/Addons/RM2HeadHairPack2/RM2HeadHairPack2.xml,Library/Addons/RM2HeadHairPack3/RM2HeadHairPack3.xml,Library/Addons/RM2HeadIndustryPack/RM2HeadIndustryPack.xml,Library/Addons/RM2HeadPolicePack/RM2HeadPolicePack.xml,Library/Addons/RM2HeadPropPack1/RM2HeadPropPack1.xml,Library/Addons/RM2HeadSoldierPack/RM2HeadSoldierPack.xml" defaultvoice="Neo James" defaultidle="eyetracker" top="shortsleeve1" hair="basiccut" detailtextureref="Library/Models/Detail/Male Young 01.jpg" detailstrength="0.75"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+	 
+   <message id="B1" name="B1">
+    <say>try to answer the question.</say>
+  </message>
+  <message id="B2" name="B2">
+    <say>, if you are having trouble with the passage, feel free to read along with the audio.</say>
+  </message>
+  <message id="B3" name="B3">
+    <say>Um...</say>
+  </message>
+  <message id="B4" name="B4">
+    <say>I don't think that's the right answer.</say>
+  </message>
+  <message id="B5" name="B5">
+    <say>Um...</say>
+  </message>
+  <message id="B6" name="B6">
+    <say>I don't think that was the right answer.</say>
+  </message>
+  <message id="B7" name="B7">
+    <say>I don't think that was the right answer.</say>
+  </message>
+  <message id="B8" name="B8">
+    <say>Good!</say>
+  </message>
+  <message id="B9" name="B9">
+    <say>! You got it right!</say>
+  </message>
+  <message id="B10" name="B10">
+    <say>Super</say>
+  </message>
+  <message id="B11" name="B11">
+    <say>! You got the question right!</say>
+  </message>
+  <message id="B12" name="B12">
+    <say>Great job</say>
+  </message>
+  <message id="B13" name="B13">
+    <say>! You answered right! Thanks for helping me so much!</say>
+  </message>
+  <message id="B14" name="B14">
+    <say>You answered right</say>
+  </message>
+  <message id="B15" name="B15">
+    <say>!Awesome job!</say>
+  </message>
+  <message id="B16" name="B16">
+    <say>Amazing</say>
+  </message>
+  <message id="B17" name="B17">
+    <say>! You're good at this! You picked the right answer.</say>
+  </message>
+  <message id="B18" name="B18">
+    <say>Great job</say>
+  </message>
+  <message id="B19" name="B19">
+    <say>Exactly, you nailed it</say>
+  </message>
+  <message id="B20" name="B20">
+    <say>Wow</say>
+  </message>
+  <message id="B21" name="B21">
+    <say>that's it!</say>
+  </message>
+  <message id="B22" name="B22">
+    <say>Hi again</say>
+  </message>
+  <message id="B23" name="B23">
+    <say>, Cristina what are we doing in this lesson?</say>
+  </message>
+  <message id="B24" name="B24">
+    <say>What kind of text would be a hybrid, Cristina?</say>
+  </message>
+  <message id="B25" name="B25">
+    <say>Yes - my mailbox is always overflowing!</say>
+  </message>
+  <message id="B26" name="B26">
+    <say>You mean like if it seems informative, but is actually trying to persuade us to buy something. </say>
+  </message>
+  <message id="B27" name="B27">
+    <say>I think I understand. I see that most texts have hybrid purposes. A writer is able to do more than one thing in each text.</say>
+  </message>
+  <message id="B28" name="B28">
+    <say>I get that! Thanks, Cristina. See you next time</say>
+  </message>
+  <message id="B29" name="B29">
+    <say>I see. When I think about it like that, I think most texts are hybrids.</say>
+  </message>
+  <message id="B30" name="B30">
+    <say>Maybe it would help to see some examples. </say>
+  </message>
+  <message id="B31" name="B31">
+    <say>let's take a look over this website. Press Click Here to Continue when you are done and hopefully we will finish at the same time.</say>
+  </message>
+  <message id="B32" name="B32">
+    <say>I think that the topic of the text is socializing over the internet</say>
+  </message>
+  <message id="B33" name="B33">
+    <say>I think that the topic of this website is online job searching</say>
+  </message>
+  <message id="B34" name="B34">
+    <say>I would say the topic of this website is online dating</say>
+  </message>
+  <message id="B35" name="B35">
+    <say>I think</say>
+  </message>
+  <message id="B36" name="B36">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B37" name="B37">
+    <say>I also think that Friend book is a site for online dating.</say>
+  </message>
+  <message id="B38" name="B38">
+    <say>I agreed with</say>
+  </message>
+  <message id="B39" name="B39">
+    <say>, I don't understand why persuade and inform were not the purposes of friend book</say>
+  </message>
+  <message id="B40" name="B40">
+    <say>Yeah, I thought the answer was entertain and persuade</say>
+  </message>
+  <message id="B41" name="B41">
+    <say>I think that the purposes of this website are to inform and entertain</say>
+  </message>
+  <message id="B42" name="B42">
+    <say>I think that the purposes of this website are to persuade and inform</say>
+  </message>
+  <message id="B43" name="B43">
+    <say>I think that the purposes of this website are to entertain and persuade</say>
+  </message>
+  <message id="B44" name="B44">
+    <say>I am not sure I understand.</say>
+  </message>
+  <message id="B45" name="B45">
+    <say>, can you show me which one of the highlighted text signals would let us know that a purpose of this website is to inform?</say>
+  </message>
+  <message id="B46" name="B46">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B47" name="B47">
+    <say>was right.</say>
+  </message>
+  <message id="B48" name="B48">
+    <say>I think it is type password here</say>
+  </message>
+  <message id="B49" name="B49">
+    <say>I think that it is new to friendbook?  sign up here</say>
+  </message>
+  <message id="B50" name="B50">
+    <say>let's take a look at Gurtie's Blog together. Press Click Here to Continue when you are done.</say>
+  </message>
+  <message id="B51" name="B51">
+    <say>I think that the topic of the website is sewing</say>
+  </message>
+  <message id="B52" name="B52">
+    <say>I think that the topic of this website is fashion</say>
+  </message>
+  <message id="B53" name="B53">
+    <say>I would say the topic of this website is feminism. It says so in her description.</say>
+  </message>
+  <message id="B54" name="B54">
+    <say>I think</say>
+  </message>
+  <message id="B55" name="B55">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B56" name="B56">
+    <say>I also think that Gurtie's blog is about feminism.</say>
+  </message>
+  <message id="B57" name="B57">
+    <say>I agreed with</say>
+  </message>
+  <message id="B58" name="B58">
+    <say>, I don't understand why persuade and inform were not the purposes of gurtie's blog</say>
+  </message>
+  <message id="B59" name="B59">
+    <say>Yeah, I thought the answer was entertain and persuade</say>
+  </message>
+  <message id="B60" name="B60">
+    <say>I think that the purposes gurtie's blog are to inform and entertain</say>
+  </message>
+  <message id="B61" name="B61">
+    <say>I think that the purposes of gurtie's blog are to persuade and inform</say>
+  </message>
+  <message id="B62" name="B62">
+    <say>I think that the purposes of gurtie's blog are to entertain and persuade</say>
+  </message>
+  <message id="B63" name="B63">
+    <say>, maybe you can help me. Can you show me which one of Cristina's highlighted text signals would let us know that one of the purposes for this site is to entertain?</say>
+  </message>
+  <message id="B64" name="B64">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B65" name="B65">
+    <say>was right.</say>
+  </message>
+  <message id="B66" name="B66">
+    <say>I think that it is sewing retreat 2014</say>
+  </message>
+  <message id="B67" name="B67">
+    <say>I will guess that the answer is the icons at the bottom of the screen</say>
+  </message>
+  <message id="B68" name="B68">
+    <say>, here is another one. I love dogs - this looks great! Press Click Here to Continue when you are done and we can review it together.</say>
+  </message>
+  <message id="B69" name="B69">
+    <say>It seems to me like the topic of this website is dog food quality. </say>
+  </message>
+  <message id="B70" name="B70">
+    <say>Maybe, the topic is dog food prices. </say>
+  </message>
+  <message id="B71" name="B71">
+    <say>Look at that picture at the top! I think the topic is cute dog breeds!</say>
+  </message>
+  <message id="B72" name="B72">
+    <say>I think</say>
+  </message>
+  <message id="B73" name="B73">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B74" name="B74">
+    <say>I agree with</say>
+  </message>
+  <message id="B75" name="B75">
+    <say>. The topic of this site probably cute dog breeds.</say>
+  </message>
+  <message id="B76" name="B76">
+    <say>I agreed with</say>
+  </message>
+  <message id="B77" name="B77">
+    <say>Yeah, I thought the answer was that too</say>
+  </message>
+  <message id="B78" name="B78">
+    <say>I think that the purpose of this website is to persuade and inform</say>
+  </message>
+  <message id="B79" name="B79">
+    <say>I think that the purpose of this website is to inform and entertain</say>
+  </message>
+  <message id="B80" name="B80">
+    <say>I think that the purpose of this website is to entertain and persuade</say>
+  </message>
+  <message id="B81" name="B81">
+    <say>, Cristina says that one of the main purposes of this hybrid website is to persuade. Can you click on the text signal that would make us think that?</say>
+  </message>
+  <message id="B82" name="B82">
+    <say>wait. I thought that</say>
+  </message>
+  <message id="B83" name="B83">
+    <say>was right.</say>
+  </message>
+  <message id="B84" name="B84">
+    <say>I think that it is the trophy  </say>
+  </message>
+  <message id="B85" name="B85">
+    <say>Maybe it is where to buy</say>
+  </message>
+  <message id="B86" name="B86">
+    <say>, wow. this is a new one!  let's read over my e-mail together. Press Click Here to Continue when you are done and hopefully we will finish at the same time.</say>
+  </message>
+  <message id="B87" name="B87">
+    <say>I think that the topic of the email is cat behavior</say>
+  </message>
+  <message id="B88" name="B88">
+    <say>Well, I think that the topic of this email is cat videos</say>
+  </message>
+  <message id="B89" name="B89">
+    <say>Maybe the topic of this email crazy cats because of the picture</say>
+  </message>
+  <message id="B90" name="B90">
+    <say>I think</say>
+  </message>
+  <message id="B91" name="B91">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B92" name="B92">
+    <say>I also think that this e-mail for cat etude is about crazy cats.</say>
+  </message>
+  <message id="B93" name="B93">
+    <say>I agreed with</say>
+  </message>
+  <message id="B94" name="B94">
+    <say>, I thought the purposes of cat etude are to inform and persuade</say>
+  </message>
+  <message id="B95" name="B95">
+    <say>What? I thought it was persuade and entertain also</say>
+  </message>
+  <message id="B96" name="B96">
+    <say>I think that the purposes of this email are to entertain and inform</say>
+  </message>
+  <message id="B97" name="B97">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B98" name="B98">
+    <say>I think that the purposes of this email are to persuade and entertain</say>
+  </message>
+  <message id="B99" name="B99">
+    <say>I don't think I am clear on this.</say>
+  </message>
+  <message id="B100" name="B100">
+    <say>, Can you show me which one of Cristina's highlighted text signals would let us know that one of the email's purposes is to entertain us?</say>
+  </message>
+  <message id="B101" name="B101">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B102" name="B102">
+    <say>was right.</say>
+  </message>
+  <message id="B103" name="B103">
+    <say>I am not sure. Maybe, it is the words Learn about the psychology of cats.</say>
+  </message>
+  <message id="B104" name="B104">
+    <say>Maybe it is come see our website </say>
+  </message>
+  <message id="B105" name="B105">
+    <say>I think that it is the picture of the funny kitty </say>
+  </message>
+  <message id="B106" name="B106">
+    <say>Cristina and</say>
+  </message>
+  <message id="B107" name="B107">
+    <say>, I just got this email from my friend, Linda. This might be interesting to look at since I know the writer!</say>
+  </message>
+  <message id="B108" name="B108">
+    <say>can you let me know when you are done reading it by clicking Click Here to Continue?</say>
+  </message>
+  <message id="B109" name="B109">
+    <say>I think that the topic of the email is Linda's new home in Toronto. It sounds pretty great!</say>
+  </message>
+  <message id="B110" name="B110">
+    <say>I would say that the  topic of this email is Night life  in Toronto</say>
+  </message>
+  <message id="B111" name="B111">
+    <say>Could it be hockey fans? She mentions the Hall of Fame.</say>
+  </message>
+  <message id="B112" name="B112">
+    <say>I think</say>
+  </message>
+  <message id="B113" name="B113">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B114" name="B114">
+    <say>'s answer looks right to me. The topic of this e-mail is hockey fans.</say>
+  </message>
+  <message id="B115" name="B115">
+    <say>I agreed with</say>
+  </message>
+  <message id="B116" name="B116">
+    <say>, I thought the purposes of Linda's email were to entertain and inform</say>
+  </message>
+  <message id="B117" name="B117">
+    <say>I was thinking persuade and entertain also</say>
+  </message>
+  <message id="B118" name="B118">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B119" name="B119">
+    <say>I think that the purposes of this email are to entertain and inform</say>
+  </message>
+  <message id="B120" name="B120">
+    <say>I think that the purposes of this email are to persuade and entertain</say>
+  </message>
+  <message id="B121" name="B121">
+    <say>I feel like even though Linda wants to persuade me to call her, it seems like she is mainly informing me about her new life in Toronto.</say>
+  </message>
+  <message id="B122" name="B122">
+    <say>,  Can you show me which one of Cristina's highlighted text signals would prove that Linda's purpose is to inform?</say>
+  </message>
+  <message id="B123" name="B123">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B124" name="B124">
+    <say>was right.</say>
+  </message>
+  <message id="B125" name="B125">
+    <say>I think that it is hey stranger </say>
+  </message>
+  <message id="B126" name="B126">
+    <say>Maybe it is we could go to the museum or go hiking like we used to do.</say>
+  </message>
+  <message id="B127" name="B127">
+    <say>Oh man, I get these e-mails from Jobs Today all the time.</say>
+  </message>
+  <message id="B128" name="B128">
+    <say>let's take a look over this email and then maybe you and Cristina can help me understand the point of it. Press Click Here to Continue when you finished reading it.</say>
+  </message>
+  <message id="B129" name="B129">
+    <say>I think that the topic of the email is job searching website</say>
+  </message>
+  <message id="B130" name="B130">
+    <say>I would say that the  topic of this email is building your resume</say>
+  </message>
+  <message id="B131" name="B131">
+    <say>Could it be jobs with good environments?</say>
+  </message>
+  <message id="B132" name="B132">
+    <say>I think</say>
+  </message>
+  <message id="B133" name="B133">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B134" name="B134">
+    <say>I also think that this e-mail is about jobs with good environments.</say>
+  </message>
+  <message id="B135" name="B135">
+    <say>I agreed with</say>
+  </message>
+  <message id="B136" name="B136">
+    <say>, I thought the purposes of the email were to entertain and inform</say>
+  </message>
+  <message id="B137" name="B137">
+    <say>I was thinking persuade and entertain also</say>
+  </message>
+  <message id="B138" name="B138">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B139" name="B139">
+    <say>I think that the purposes of this email are to entertain and inform</say>
+  </message>
+  <message id="B140" name="B140">
+    <say>I think that the purposes of this email are to persuade and entertain</say>
+  </message>
+  <message id="B141" name="B141">
+    <say>_user, maybe you can help me. I think Jobs Today wants to persuade me to use their service. Can you click on a text signal in the e-mail that makes it seem mostly persuasive?</say>
+  </message>
+  <message id="B142" name="B142">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B143" name="B143">
+    <say>was right.</say>
+  </message>
+  <message id="B144" name="B144">
+    <say> I bet it is jobs today dot com </say>
+  </message>
+  <message id="B145" name="B145">
+    <say>it could be the picture </say>
+  </message>
+  <message id="B146" name="B146">
+    <say>, here is the first e-mail in my inbox today. Can we read it together and then talk about it? Press Click Here to Continue when you are done reading.</say>
+  </message>
+  <message id="B147" name="B147">
+    <say>I think that the topic of the email is advertising soap and lotion</say>
+  </message>
+  <message id="B148" name="B148">
+    <say>Well, I think that the topic of this email is pear smelling soap which sounds great. </say>
+  </message>
+  <message id="B149" name="B149">
+    <say>Maybe the topic of this email is the science of skin care.</say>
+  </message>
+  <message id="B150" name="B150">
+    <say>I think</say>
+  </message>
+  <message id="B151" name="B151">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B152" name="B152">
+    <say>It seems like</say>
+  </message>
+  <message id="B153" name="B153">
+    <say>has the right idea. This e-mail's topic is the science of skin care.</say>
+  </message>
+  <message id="B154" name="B154">
+    <say>I agreed with</say>
+  </message>
+  <message id="B155" name="B155">
+    <say>, I thought the purposes of soap and lotion traders were to entertain and inform</say>
+  </message>
+  <message id="B156" name="B156">
+    <say>Yeah, I thought the answer was to persuade and entertain too</say>
+  </message>
+  <message id="B157" name="B157">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B158" name="B158">
+    <say>I think that the purposes of this email are to entertain and inform</say>
+  </message>
+  <message id="B159" name="B159">
+    <say>I think that the purposes of this email are to persuade and entertain</say>
+  </message>
+  <message id="B160" name="B160">
+    <say>, maybe you can help me. Can you show me which one of Cristina's highlighted text signals would let us know that the primary purpose of this email is to persuade?</say>
+  </message>
+  <message id="B161" name="B161">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B162" name="B162">
+    <say>was right.</say>
+  </message>
+  <message id="B163" name="B163">
+    <say>I think that it is scientific discovery in skin care </say>
+  </message>
+  <message id="B164" name="B164">
+    <say>Maybe it is the picture of the pears soap </say>
+  </message>
+  <message id="B165" name="B165">
+    <say>Oh man, I get these e-mails from Domestic Kitty all the time.</say>
+  </message>
+  <message id="B166" name="B166">
+    <say>let's take a look over this email and then maybe you and Cristina can help me understand the point of it. Press Click Here to Continue when you finished reading it.</say>
+  </message>
+  <message id="B167" name="B167">
+    <say>I think that the topic of the email is cat training but I don't think my cat could learn all of those tricks</say>
+  </message>
+  <message id="B168" name="B168">
+    <say>Well, I think that the topic of this email is cats and laundry because of the picture</say>
+  </message>
+  <message id="B169" name="B169">
+    <say>Maybe the topic of this email is cat treats. </say>
+  </message>
+  <message id="B170" name="B170">
+    <say>I think</say>
+  </message>
+  <message id="B171" name="B171">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B172" name="B172">
+    <say>I also think that this e-mail is about cat treats.</say>
+  </message>
+  <message id="B173" name="B173">
+    <say>I agreed with</say>
+  </message>
+  <message id="B174" name="B174">
+    <say>, I thought the purposes of domestic kitty are to inform and persuade</say>
+  </message>
+  <message id="B175" name="B175">
+    <say>Yeah, I thought the answer was to entertain and inform too</say>
+  </message>
+  <message id="B176" name="B176">
+    <say>I think that the purposes of this email are to persuade and entertain</say>
+  </message>
+  <message id="B177" name="B177">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B178" name="B178">
+    <say>I think that the purpose of this email is to entertain and inform</say>
+  </message>
+  <message id="B179" name="B179">
+    <say>This one is hilarious. It sounds informative, but I think the main purpose is to entertain.</say>
+  </message>
+  <message id="B180" name="B180">
+    <say>, can you click on the text signal that would let us know that one of the purposes of this email is to entertain?</say>
+  </message>
+  <message id="B181" name="B181">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B182" name="B182">
+    <say>was right.</say>
+  </message>
+  <message id="B183" name="B183">
+    <say>I think that it is domestic kitty dot com </say>
+  </message>
+  <message id="B184" name="B184">
+    <say>I really don't know what the right text signal is.</say>
+  </message>
+  <message id="B185" name="B185">
+    <say>Cristina and</say>
+  </message>
+  <message id="B186" name="B186">
+    <say>, I just got this email from my friend, Bob. This might be interesting to look at since I know the writer!</say>
+  </message>
+  <message id="B187" name="B187">
+    <say>can you let me know when you are done reading it by clicking Click Here to Continue?</say>
+  </message>
+  <message id="B188" name="B188">
+    <say>I think that the topic of the email is bob's birthday party</say>
+  </message>
+  <message id="B189" name="B189">
+    <say>Well, I think that the topic of this email is bob's son's party</say>
+  </message>
+  <message id="B190" name="B190">
+    <say>Maybe the topic of this email is a suprise party for Bob.</say>
+  </message>
+  <message id="B191" name="B191">
+    <say>I think</say>
+  </message>
+  <message id="B192" name="B192">
+    <say>has the right answer here.</say>
+  </message>
+  <message id="B193" name="B193">
+    <say>Yeah,</say>
+  </message>
+  <message id="B194" name="B194">
+    <say>. I also think that this e-mail is about Bob's surprise birthday party.</say>
+  </message>
+  <message id="B195" name="B195">
+    <say>I agreed with</say>
+  </message>
+  <message id="B196" name="B196">
+    <say>, I thought the purposes of the invitation were to entertain and inform</say>
+  </message>
+  <message id="B197" name="B197">
+    <say>Yeah, I thought the answer was to persuade and entertain too</say>
+  </message>
+  <message id="B198" name="B198">
+    <say>I think that the purposes of this email are to inform and persuade</say>
+  </message>
+  <message id="B199" name="B199">
+    <say>I think that the purposes of this email are to entertain and inform</say>
+  </message>
+  <message id="B200" name="B200">
+    <say>I think that the purpose of this email is to persuade and entertain</say>
+  </message>
+  <message id="B201" name="B201">
+    <say>So, I know that Bob is trying to persuade us to come to his party, but I think the primary purpose of this e-mail is to inform us about the details of the party.</say>
+  </message>
+  <message id="B202" name="B202">
+    <say>which of the text signals highlighted below seems like it is meant to inform us?</say>
+  </message>
+  <message id="B203" name="B203">
+    <say>wait. . I thought that</say>
+  </message>
+  <message id="B204" name="B204">
+    <say>was right.</say>
+  </message>
+  <message id="B205" name="B205">
+    <say>This is tough. Maybe it is the part where Bob says you are missing out if you don't come so r s v p a s a p.</say>
+  </message>
+  <message id="B206" name="B206">
+    <say>Maybe it is the picture with happy birthday in candles</say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+  
+  
+  
+  <message id="D20160204" name="D20160204">
+<say>User</say>
+</message>	
+<message id="D1" name="D1">
+<say>AMELIA</say>
+</message>
+<message id="D2" name="D2">
+	<say>OLIVIA</say>
+</message>
+<message id="D3" name="D3">
+	<say>EMILY</say>
+</message>
+<message id="D4" name="D4">
+	<say>AVA</say>
+</message>
+<message id="D5" name="D5">
+	<say>ISLA</say>
+</message>
+<message id="D6" name="D6">
+	<say>JESSICA</say>
+</message>
+<message id="D7" name="D7">
+	<say>POPPY</say>
+</message>
+<message id="D8" name="D8">
+	<say>ISABELLA</say>
+</message>
+<message id="D9" name="D9">
+	<say>SOPHIE</say>
+</message>
+<message id="D10" name="D10">
+	<say>MIA</say>
+</message>
+<message id="D11" name="D11">
+	<say>RUBY</say>
+</message>
+<message id="D12" name="D12">
+	<say>LILY</say>
+</message>
+<message id="D13" name="D13">
+	<say>GRACE</say>
+</message>
+<message id="D14" name="D14">
+	<say>EVIE</say>
+</message>
+<message id="D15" name="D15">
+	<say>SOPHIA</say>
+</message>
+<message id="D16" name="D16">
+	<say>ELLA</say>
+</message>
+<message id="D17" name="D17">
+	<say>SCARLETT</say>
+</message>
+<message id="D18" name="D18">
+	<say>CHLOE</say>
+</message>
+<message id="D19" name="D19">
+	<say>ISABELLE</say>
+</message>
+<message id="D20" name="D20">
+	<say>FREYA</say>
+</message>
+<message id="D21" name="D21">
+	<say>CHARLOTTE</say>
+</message>
+<message id="D22" name="D22">
+	<say>SIENNA</say>
+</message>
+<message id="D23" name="D23">
+	<say>DAISY</say>
+</message>
+<message id="D24" name="D24">
+	<say>PHOEBE</say>
+</message>
+<message id="D25" name="D25">
+	<say>MILLIE</say>
+</message>
+<message id="D26" name="D26">
+	<say>EVA</say>
+</message>
+<message id="D27" name="D27">
+	<say>ALICE</say>
+</message>
+<message id="D28" name="D28">
+	<say>LUCY</say>
+</message>
+<message id="D29" name="D29">
+	<say>FLORENCE</say>
+</message>
+<message id="D30" name="D30">
+	<say>SOFIA</say>
+</message>
+<message id="D31" name="D31">
+	<say>LAYLA</say>
+</message>
+<message id="D32" name="D32">
+	<say>LOLA</say>
+</message>
+<message id="D33" name="D33">
+	<say>HOLLY</say>
+</message>
+<message id="D34" name="D34">
+	<say>IMOGEN</say>
+</message>
+<message id="D35" name="D35">
+	<say>MOLLY</say>
+</message>
+<message id="D36" name="D36">
+	<say>MATILDA</say>
+</message>
+<message id="D37" name="D37">
+	<say>LILLY</say>
+</message>
+<message id="D38" name="D38">
+	<say>ROSIE</say>
+</message>
+<message id="D39" name="D39">
+	<say>ELIZABETH</say>
+</message>
+<message id="D40" name="D40">
+	<say>ERIN</say>
+</message>
+<message id="D41" name="D41">
+	<say>MAISIE</say>
+</message>
+<message id="D42" name="D42">
+	<say>LEXI</say>
+</message>
+<message id="D43" name="D43">
+	<say>ELLIE</say>
+</message>
+<message id="D44" name="D44">
+	<say>HANNAH</say>
+</message>
+<message id="D45" name="D45">
+	<say>EVELYN</say>
+</message>
+<message id="D46" name="D46">
+	<say>ABIGAIL</say>
+</message>
+<message id="D47" name="D47">
+	<say>ELSIE</say>
+</message>
+<message id="D48" name="D48">
+	<say>SUMMER</say>
+</message>
+<message id="D49" name="D49">
+	<say>MEGAN</say>
+</message>
+<message id="D50" name="D50">
+	<say>JASMINE</say>
+</message>
+<message id="D51" name="D51">
+	<say>MAYA</say>
+</message>
+<message id="D52" name="D52">
+	<say>AMELIE</say>
+</message>
+<message id="D53" name="D53">
+	<say>LACEY</say>
+</message>
+<message id="D54" name="D54">
+	<say>WILLOW</say>
+</message>
+<message id="D55" name="D55">
+	<say>EMMA</say>
+</message>
+<message id="D56" name="D56">
+	<say>BELLA</say>
+</message>
+<message id="D57" name="D57">
+	<say>ELEANOR</say>
+</message>
+<message id="D58" name="D58">
+	<say>ESME</say>
+</message>
+<message id="D59" name="D59">
+	<say>ELIZA</say>
+</message>
+<message id="D60" name="D60">
+	<say>GEORGIA</say>
+</message>
+<message id="D61" name="D61">
+	<say>HARRIET</say>
+</message>
+<message id="D62" name="D62">
+	<say>GRACIE</say>
+</message>
+<message id="D63" name="D63">
+	<say>ANNABELLE</say>
+</message>
+<message id="D64" name="D64">
+	<say>EMILIA</say>
+</message>
+<message id="D65" name="D65">
+	<say>AMBER</say>
+</message>
+<message id="D66" name="D66">
+	<say>IVY</say>
+</message>
+<message id="D67" name="D67">
+	<say>BROOKE</say>
+</message>
+<message id="D68" name="D68">
+	<say>ROSE</say>
+</message>
+<message id="D69" name="D69">
+	<say>ANNA</say>
+</message>
+<message id="D70" name="D70">
+	<say>ZARA</say>
+</message>
+<message id="D71" name="D71">
+	<say>LEAH</say>
+</message>
+<message id="D72" name="D72">
+	<say>MOLLIE</say>
+</message>
+<message id="D73" name="D73">
+	<say>MARTHA</say>
+</message>
+<message id="D74" name="D74">
+	<say>FAITH</say>
+</message>
+<message id="D75" name="D75">
+	<say>HOLLIE</say>
+</message>
+<message id="D76" name="D76">
+	<say>AMY</say>
+</message>
+<message id="D77" name="D77">
+	<say>BETHANY</say>
+</message>
+<message id="D78" name="D78">
+	<say>VIOLET</say>
+</message>
+<message id="D79" name="D79">
+	<say>KATIE</say>
+</message>
+<message id="D80" name="D80">
+	<say>MARYAM</say>
+</message>
+<message id="D81" name="D81">
+	<say>FRANCESCA</say>
+</message>
+<message id="D82" name="D82">
+	<say>JULIA</say>
+</message>
+<message id="D83" name="D83">
+	<say>MARIA</say>
+</message>
+<message id="D84" name="D84">
+	<say>DARCEY</say>
+</message>
+<message id="D85" name="D85">
+	<say>ISABEL</say>
+</message>
+<message id="D86" name="D86">
+	<say>TILLY</say>
+</message>
+<message id="D87" name="D87">
+	<say>MADDISON</say>
+</message>
+<message id="D88" name="D88">
+	<say>VICTORIA</say>
+</message>
+<message id="D89" name="D89">
+	<say>ISOBEL</say>
+</message>
+<message id="D90" name="D90">
+	<say>NIAMH</say>
+</message>
+<message id="D91" name="D91">
+	<say>SKYE</say>
+</message>
+<message id="D92" name="D92">
+	<say>MADISON</say>
+</message>
+<message id="D93" name="D93">
+	<say>DARCY</say>
+</message>
+<message id="D94" name="D94">
+	<say>AISHA</say>
+</message>
+<message id="D95" name="D95">
+	<say>BEATRICE</say>
+</message>
+<message id="D96" name="D96">
+	<say>SARAH</say>
+</message>
+<message id="D97" name="D97">
+	<say>ZOE</say>
+</message>
+<message id="D98" name="D98">
+	<say>PAIGE</say>
+</message>
+<message id="D99" name="D99">
+	<say>HEIDI</say>
+</message>
+<message id="D100" name="D100">
+	<say>LYDIA</say>
+</message>
+<message id="D101" name="D101">
+	<say>OLIVER</say>
+</message>
+<message id="D102" name="D102">
+	<say>JACK</say>
+</message>
+<message id="D103" name="D103">
+	<say>HARRY</say>
+</message>
+<message id="D104" name="D104">
+	<say>JACOB</say>
+</message>
+<message id="D105" name="D105">
+	<say>CHARLIE</say>
+</message>
+<message id="D106" name="D106">
+	<say>THOMAS</say>
+</message>
+<message id="D107" name="D107">
+	<say>OSCAR</say>
+</message>
+<message id="D108" name="D108">
+	<say>WILLIAM</say>
+</message>
+<message id="D109" name="D109">
+	<say>JAMES</say>
+</message>
+<message id="D110" name="D110">
+	<say>GEORGE</say>
+</message>
+<message id="D111" name="D111">
+	<say>ALFIE</say>
+</message>
+<message id="D112" name="D112">
+	<say>JOSHUA</say>
+</message>
+<message id="D113" name="D113">
+	<say>NOAH</say>
+</message>
+<message id="D114" name="D114">
+	<say>ETHAN</say>
+</message>
+<message id="D115" name="D115">
+	<say>MUHAMMAD</say>
+</message>
+<message id="D116" name="D116">
+	<say>ARCHIE</say>
+</message>
+<message id="D117" name="D117">
+	<say>LEO</say>
+</message>
+<message id="D118" name="D118">
+	<say>HENRY</say>
+</message>
+<message id="D119" name="D119">
+	<say>JOSEPH</say>
+</message>
+<message id="D120" name="D120">
+	<say>SAMUEL</say>
+</message>
+<message id="D121" name="D121">
+	<say>RILEY</say>
+</message>
+<message id="D122" name="D122">
+	<say>DANIEL</say>
+</message>
+<message id="D123" name="D123">
+	<say>MOHAMMED</say>
+</message>
+<message id="D124" name="D124">
+	<say>ALEXANDER</say>
+</message>
+<message id="D125" name="D125">
+	<say>MAX</say>
+</message>
+<message id="D126" name="D126">
+	<say>LUCAS</say>
+</message>
+<message id="D127" name="D127">
+	<say>MASON</say>
+</message>
+<message id="D128" name="D128">
+	<say>LOGAN</say>
+</message>
+<message id="D129" name="D129">
+	<say>ISAAC</say>
+</message>
+<message id="D130" name="D130">
+	<say>BENJAMIN</say>
+</message>
+<message id="D131" name="D131">
+	<say>DYLAN</say>
+</message>
+<message id="D132" name="D132">
+	<say>JAKE</say>
+</message>
+<message id="D133" name="D133">
+	<say>EDWARD</say>
+</message>
+<message id="D134" name="D134">
+	<say>FINLEY</say>
+</message>
+<message id="D135" name="D135">
+	<say>FREDDIE</say>
+</message>
+<message id="D136" name="D136">
+	<say>HARRISON</say>
+</message>
+<message id="D137" name="D137">
+	<say>TYLER</say>
+</message>
+<message id="D138" name="D138">
+	<say>SEBASTIAN</say>
+</message>
+<message id="D139" name="D139">
+	<say>ZACHARY</say>
+</message>
+<message id="D140" name="D140">
+	<say>ADAM</say>
+</message>
+<message id="D141" name="D141">
+	<say>THEO</say>
+</message>
+<message id="D142" name="D142">
+	<say>JAYDEN</say>
+</message>
+<message id="D143" name="D143">
+	<say>ARTHUR</say>
+</message>
+<message id="D144" name="D144">
+	<say>TOBY</say>
+</message>
+<message id="D145" name="D145">
+	<say>LUKE</say>
+</message>
+<message id="D146" name="D146">
+	<say>LEWIS</say>
+</message>
+<message id="D147" name="D147">
+	<say>MATTHEW</say>
+</message>
+<message id="D148" name="D148">
+	<say>HARVEY</say>
+</message>
+<message id="D149" name="D149">
+	<say>HARLEY</say>
+</message>
+<message id="D150" name="D150">
+	<say>DAVID</say>
+</message>
+<message id="D151" name="D151">
+	<say>RYAN</say>
+</message>
+<message id="D152" name="D152">
+	<say>TOMMY</say>
+</message>
+<message id="D153" name="D153">
+	<say>MICHAEL</say>
+</message>
+<message id="D154" name="D154">
+	<say>REUBEN</say>
+</message>
+<message id="D155" name="D155">
+	<say>NATHAN</say>
+</message>
+<message id="D156" name="D156">
+	<say>BLAKE</say>
+</message>
+<message id="D157" name="D157">
+	<say>MOHAMMAD</say>
+</message>
+<message id="D158" name="D158">
+	<say>JENSON</say>
+</message>
+<message id="D159" name="D159">
+	<say>BOBBY</say>
+</message>
+<message id="D160" name="D160">
+	<say>LUCA</say>
+</message>
+<message id="D161" name="D161">
+	<say>CHARLES</say>
+</message>
+<message id="D162" name="D162">
+	<say>FRANKIE</say>
+</message>
+<message id="D163" name="D163">
+	<say>DEXTER</say>
+</message>
+<message id="D164" name="D164">
+	<say>KAI</say>
+</message>
+<message id="D165" name="D165">
+	<say>ALEX</say>
+</message>
+<message id="D166" name="D166">
+	<say>CONNOR</say>
+</message>
+<message id="D167" name="D167">
+	<say>LIAM</say>
+</message>
+<message id="D168" name="D168">
+	<say>JAMIE</say>
+</message>
+<message id="D169" name="D169">
+	<say>ELIJAH</say>
+</message>
+<message id="D170" name="D170">
+	<say>STANLEY</say>
+</message>
+<message id="D171" name="D171">
+	<say>LOUIE</say>
+</message>
+<message id="D172" name="D172">
+	<say>JUDE</say>
+</message>
+<message id="D173" name="D173">
+	<say>CALLUM</say>
+</message>
+<message id="D174" name="D174">
+	<say>HUGO</say>
+</message>
+<message id="D175" name="D175">
+	<say>LEON</say>
+</message>
+<message id="D176" name="D176">
+	<say>ELLIOT</say>
+</message>
+<message id="D177" name="D177">
+	<say>LOUIS</say>
+</message>
+<message id="D178" name="D178">
+	<say>THEODORE</say>
+</message>
+<message id="D179" name="D179">
+	<say>GABRIEL</say>
+</message>
+<message id="D180" name="D180">
+	<say>OLLIE</say>
+</message>
+<message id="D181" name="D181">
+	<say>AARON</say>
+</message>
+<message id="D182" name="D182">
+	<say>FREDERICK</say>
+</message>
+<message id="D183" name="D183">
+	<say>EVAN</say>
+</message>
+<message id="D184" name="D184">
+	<say>ELLIOTT</say>
+</message>
+<message id="D185" name="D185">
+	<say>OWEN</say>
+</message>
+<message id="D186" name="D186">
+	<say>TEDDY</say>
+</message>
+<message id="D187" name="D187">
+	<say>FINLAY</say>
+</message>
+<message id="D188" name="D188">
+	<say>CALEB</say>
+</message>
+<message id="D189" name="D189">
+	<say>IBRAHIM</say>
+</message>
+<message id="D190" name="D190">
+	<say>RONNIE</say>
+</message>
+<message id="D191" name="D191">
+	<say>FELIX</say>
+</message>
+<message id="D192" name="D192">
+	<say>AIDEN</say>
+</message>
+<message id="D193" name="D193">
+	<say>CAMERON</say>
+</message>
+<message id="D194" name="D194">
+	<say>AUSTIN</say>
+</message>
+<message id="D195" name="D195">
+	<say>KIAN</say>
+</message>
+<message id="D196" name="D196">
+	<say>RORY</say>
+</message>
+<message id="D197" name="D197">
+	<say>SETH</say>
+</message>
+<message id="D198" name="D198">
+	<say>ROBERT</say>
+</message>
+<message id="D199" name="D199">
+	<say>ALBERT</say>
+</message>
+<message id="D200" name="D200">
+	<say>SONNY</say>
+</message>
+<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+
+
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>
+
+		<message id="CSU00491" name="CSU00491">
+		<say>Tarico</say>
+		</message>
+		<message id="CSU00504" name="CSU00504">
+		<say>Tammy</say>
+		</message>
+		<message id="CSU00509" name="CSU00509">
+		<say>Sadio</say>
+		</message>
+		<message id="CSU00490" name="CSU00490">
+		<say>Sandra</say>
+		</message>
+		<message id="CSU00465" name="CSU00465">
+		<say>Alma</say>
+		</message>
+		<message id="CSU00492" name="CSU00492">
+		<say>Elizabeth</say>
+		</message>
+		<message id="CSU00508" name="CSU00508">
+		<say>Samira</say>
+		</message>
+		<message id="CSU00515" name="CSU00515">
+		<say>Edgar</say>
+		</message>
+		<message id="CSU00516" name="CSU00516">
+		<say>Omega</say>
+		</message>
+		<message id="CSU00517" name="CSU00517">
+		<say>Gilda</say>
+		</message>
+		<message id="CSU00519" name="CSU00519">
+		<say>Farida</say>
+		</message>
+		<message id="CSU00520" name="CSU00520">
+		<say>Miran</say>
+		</message>
+		<message id="CSU00521" name="CSU00521">
+		<say>Azza</say>
+		</message>
+		<message id="CSU00522" name="CSU00522">
+		<say>Nao</say>
+		</message>
+		<message id="CSU00523" name="CSU00523">
+		<say>Oliva</say>
+		</message>
+		
+				<message id="HSC122301615" name="HSC122301615">
+		<say>Janna</say>
+		</message>
+		<message id="HSC122301616" name="HSC122301616">
+		<say>Jennifer</say>
+		</message>
+		<message id="HSC122301618" name="HSC122301618">
+		<say>Muhiadin</say>
+		</message>
+		<message id="HSC122301623" name="HSC122301623">
+		<say>Angel</say>
+		</message>
+		<message id="HSC122301625" name="HSC122301625">
+		<say>Dowell</say>
+		</message>
+		<message id="HSC122301627" name="HSC122301627">
+		<say>Offa</say>
+		</message>
+		<message id="HSC122301628" name="HSC122301628">
+		<say>Annemarie</say>
+		</message>
+		<message id="HSC122301630" name="HSC122301630">
+		<say>Arnaldo</say>
+		</message>
+		<message id="HSC122301631" name="HSC122301631">
+		<say>Sheelah</say>
+		</message>
+		<message id="HSC122301635" name="HSC122301635">
+		<say>shwa-wah-beck</say>
+		</message>
+		<message id="HSC122301620" name="HSC122301620">
+		<say>Haja</say>
+		</message>
+		<message id="HSC1223016" name="HSC1223016">
+		<say>Learner</say>
+		</message>
+		
+		<message id="HSC122301617" name="HSC122301617">
+		<say>Sheena</say>
+		</message>
+		<message id="HSC122301619" name="HSC122301619">
+		<say>Darlene</say>
+		</message>
+		<message id="HSC122301621" name="HSC122301621">
+		<say>Destiny</say>
+		</message>
+		<message id="HSC122301624" name="HSC122301624">
+		<say>Kenisha</say>
+		</message>
+		<message id="HSC122301626" name="HSC122301626">
+		<say>Tamara</say>
+		</message>
+		<message id="HSC122301629" name="HSC122301629">
+		<say>Yanenah</say>
+		</message>
+		<message id="HSC122301632" name="HSC122301632">
+		<say>Victoria</say>
+		</message>
+		<message id="HSC122301527" name="HSC122301527">
+		<say>Carleen</say>
+		</message>
+		<message id="HSC122301634" name="HSC122301634">
+		<say>Leila</say>
+		</message>
+		<message id="HSC122301636" name="HSC122301636">
+		<say>Luna</say>
+		</message>
+		<message id="HSC122301637" name="HSC122301637">
+		<say>Lucy</say>
+		</message>
+		<message id="HSC122301638" name="HSC122301638">
+		<say>Rahmelle</say>
+		</message>
+		</scene>
+	</stage>
+</project>

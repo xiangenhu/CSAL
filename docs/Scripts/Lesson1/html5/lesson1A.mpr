@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+    <include ref="Library/Objects/Bubbles/Bubble2.xml" />
+    <include ref="Library/Objects/AudioButton/MuteBtn1.xml" />
+    <include ref="Library/Objects/EntryPanels/ChatEntry1.xml" />
+    <variable id="Text" value="0" />
+    <stage id="Stage1">
+        <scene id="Scene1" name="Scene 1">
+            <character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml" />
+            <message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+            </message>
+
+            <message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+            </message>
+            <message id="Msg3" name="Eyenormal">
+                <eyesnormal/>
+            </message>
+            <message id="A1" name="A1">
+                <say>Great job</say>
+            </message>
+            <message id="A2" name="A2">
+                <say>Amazing! You answered the question correctly</say>
+            </message>
+            <message id="A3" name="A3">
+                <say>you are on a roll! You answered the question correctly.</say>
+            </message>
+            <message id="A4" name="A4">
+                <say>Wonderful</say>
+            </message>
+            <message id="A5" name="A5">
+                <say>! You answered the question correctly.</say>
+            </message>
+            <message id="A6" name="A6">
+                <say>you are doing so well! You answered correctly.</say>
+            </message>
+            <message id="A7" name="A7">
+                <say>Perfect! You answered the question correctly</say>
+            </message>
+            <message id="A8" name="A8">
+                <say>great! You answered correctly.</say>
+            </message>
+            <message id="A9" name="A9">
+                <say>you picked the right answer!</say>
+            </message>
+            <message id="A10" name="A10">
+                <say>You guys did great! You both picked the right answer</say>
+            </message>
+            <message id="A11" name="A11">
+                <say>You guys did great! You both picked the correct answer</say>
+            </message>
+            <message id="A12" name="A12">
+                <say>Both of you answered the question correctly!</say>
+            </message>
+            <message id="A13" name="A13">
+                <say>Great job you two! You guys picked the correct answer!</say>
+            </message>
+            <message id="A14" name="A14">
+                <say>Perfect</say>
+            </message>
+            <message id="A15" name="A15">
+                <say>and Jordan! You answered the question correctly! Okay?</say>
+            </message>
+            <message id="A16" name="A16">
+                <say>Perfect</say>
+            </message>
+            <message id="A17" name="A17">
+                <say>and Jordan! Both of you picked the right answer! Keep it up!</say>
+            </message>
+            <message id="A18" name="A18">
+                <say>you did great! Sorry Jordan you didn't pick the correct answer!</say>
+            </message>
+            <message id="A19" name="A19">
+                <say>you did an amazing job answering the question! Jordan you didn't do so well! You'll get the hang of it!</say>
+            </message>
+            <message id="A20" name="A20">
+                <say>you did great! You answered correctly, Jordan try again okay?</say>
+            </message>
+            <message id="A21" name="A21">
+                <say>keep it up! You are doing great! Jordan sorry you didn't picked the right answer!</say>
+            </message>
+            <message id="A22" name="A22">
+                <say>keep it up! You are doing great! Jordan you'll answer better next time!</say>
+            </message>
+            <message id="A23" name="A23">
+                <say>you answered correctly! Great job! Jordan try to answer the next question correctly!</say>
+            </message>
+            <message id="A24" name="A24">
+                <say>Sorry</say>
+            </message>
+            <message id="A25" name="A25">
+                <say>! that wasn't the right answer.</say>
+            </message>
+            <message id="A26" name="A26">
+                <say>Your answer choice was not correct.</say>
+            </message>
+            <message id="A27" name="A27">
+                <say>Whoops! Looks like you picked the wrong answer</say>
+            </message>
+            <message id="A28" name="A28">
+                <say>Your answer was not correct.</say>
+            </message>
+            <message id="A29" name="A29">
+                <say>did you need more time clicking?</say>
+            </message>
+            <message id="A30" name="A30">
+                <say>try your best and answer the question.</say>
+            </message>
+            <message id="A31" name="A31">
+                <say>you did an amazing job!</say>
+            </message>
+            <message id="A32" name="A32">
+                <say>you did a great job! You answered the question correctly! Keep up the good work!</say>
+            </message>
+            <message id="A33" name="A33">
+                <say>you did a great job!</say>
+            </message>
+            <message id="A34" name="A34">
+                <say>keep up the good work! You are on a roll!</say>
+            </message>
+            <message id="A35" name="A35">
+                <say>you are on a roll!</say>
+            </message>
+            <message id="A36" name="A36">
+                <say>great job!</say>
+            </message>
+            <message id="A37" name="A37">
+                <say>Ok</say>
+            </message>
+            <message id="A38" name="A38">
+                <say>here is the answer.</say>
+            </message>
+            <message id="A39" name="A39">
+                <say>Jordan you didn't pick the correct answer!</say>
+            </message>
+            <message id="A40" name="A40">
+                <say>Jordan you actually got that question wrong!</say>
+            </message>
+            <message id="A41" name="A41">
+                <say>Jordan that's not right!</say>
+            </message>
+            <message id="A42" name="A42">
+                <say>Jordan you gave an incorrect answer!</say>
+            </message>
+            <message id="A43" name="A43">
+                <say>Jordan you were wrong.</say>
+            </message>
+            <message id="A44" name="A44">
+                <say>Sorry Jordan that's not right.</say>
+            </message>
+            <message id="A45" name="A45">
+                <say>and Jordan! You are half way through the lesson! Here is more practice with identifying print and visual cues. As you can see this book cover is similar to the example cover we saw in the beginning of the lesson about Back Pain. Remember the title, What do do when you're having two, and it gives us general information about the book, the visual cue of the babies supports the title, and subtitle,the twins survival guide, give more detailed information about the book. When you are ready, click continue.</say>
+            </message>
+            <message id="A46" name="A46">
+                <say>Here is another question.</say>
+            </message>
+            <message id="A47" name="A47">
+                <say>Hi</say>
+            </message>
+            <message id="A48" name="A48">
+                <say>! Welcome to See Saul. I'm happy you are joining us for the first lesson! My name is Cristina and I will be your tutor throughout the See Saul program. And this is Jordan!</say>
+            </message>
+            <message id="A49" name="A49">
+                <say>Great! In this lesson we will show you how to identify print and visual cues, titles and subtitles. Also, how to make predictions using these signals. </say>
+            </message>
+            <message id="A50" name="A50">
+                <say>Yes! Take a look at this book! You can see the title of the book, "Ending Back Pain" in green, the visual cue of a person suffering from back pain in yellow, and the subtitle of the book in blue.</say>
+            </message>
+            <message id="A51" name="A51">
+                <say>Yes! In this activity you will need to select the print cues or visual cues that complete the book cover or street sign. From there you will have to make predictions about the material. Let's look over the current book cover and take note of the different text signals. When you are ready to move on</say>
+            </message>
+            <message id="A52" name="A52">
+                <say>click to continue!</say>
+            </message>
+            <message id="A53" name="A53">
+                <say>Let's keep going you guys!</say>
+            </message>
+            <message id="A54" name="A54">
+                <say>Here is the next section of the lesson!</say>
+            </message>
+            <message id="A55" name="A55">
+                <say>and Jordan You are half way through the lesson! As we saw in the first section, text signals help us make predictions.</say>
+            </message>
+            <message id="A56" name="A56">
+                <say>In this section you will be asked to find titles,subtitles, print and visual cues and make predictions about what you see. Take a look at this book cover! The title is located at the top, the visual cue of the babies in the middle and the subtitle the twins survival guide at the bottom.</say>
+            </message>
+            <message id="A57" name="A57">
+                <say>once you are comfortable with this idea of making sure the text signals make sense together, and with these sections of the book, click continue to keeo going!</say>
+            </message>
+            <message id="A58" name="A58">
+                <say>I hope you guys enjoyed this lesson with me!</say>
+            </message>
+            <message id="A59" name="A59">
+                <say>Yes you guys did! You guys did so well with the text signals you just named Jordan. Take a look at this recap of the sections so you have a final idea of title, subtitle, and visual cue.</say>
+            </message>
+            <message id="A60" name="A60">
+                <say>Yes you guys did learn that! In later lessons you two will use this skill to help you make tougher predictions.</say>
+            </message>
+            <message id="A61" name="A61">
+                <say>You got it Jordan and</say>
+            </message>
+            <message id="A62" name="A62">
+                <say>! I hope to see you two soon! Have a great day!</say>
+            </message>
+            <message id="A63" name="A63">
+                <say>I hope the lesson is helping you identify titles and subtitles, print and visual cues. </say>
+            </message>
+            <message id="A64" name="A64">
+                <say>Here is the last question</say>
+            </message>
+            <message id="A65" name="A65">
+                <say>and Jordan! Let's finish strong!</say>
+            </message>
+            <message id="A66" name="A66">
+                <say>Jordan and</say>
+            </message>
+            <message id="A67" name="A67">
+                <say>you guys are doing great with predictions and spotting your text signals. Let's keep going.</say>
+            </message>
+            <message id="A68" name="A68">
+                <say>Here are more questions guys!</say>
+            </message>
+            <message id="A69" name="A69">
+                <say>Here is another question you two.</say>
+            </message>
+            <message id="A70" name="A70">
+                <say>Guess what!? I have two more questions for you guys! Let's take a look now.</say>
+            </message>
+            <message id="A71" name="A71">
+                <say>Let's keep going you two!</say>
+            </message>
+            <message id="A72" name="A72">
+                <say>Here is another question!</say>
+            </message>
+            <message id="A73" name="A73">
+                <say>You guys did a great job with the questions</say>
+            </message>
+            <message id="A74" name="A74">
+                <say>and Jordan!</say>
+            </message>
+            <message id="A75" name="A75">
+                <say>I hope these questions are helping you</say>
+            </message>
+            <message id="A76" name="A76">
+                <say>and Jordan.</say>
+            </message>
+            <message id="A77" name="A77">
+                <say>Here is the last question for this section</say>
+            </message>
+            <message id="A78" name="A78">
+                <say>Let's keep going</say>
+            </message>
+            <message id="A79" name="A79">
+                <say>and Jordan!</say>
+            </message>
+            <message id="A80" name="A80">
+                <say>Here is another question!</say>
+            </message>
+            <message id="A81" name="A81">
+                <say>Let's keep going with these cool questions guys!</say>
+            </message>
+            <message id="A82" name="A82">
+                <say>Here is another question</say>
+            </message>
+            <message id="A83" name="A83">
+                <say>and Jordan! Let's keep it up!</say>
+            </message>
+            <message id="A84" name="A84">
+                <say>Here is another question you guys!</say>
+            </message>
+            <message id="A85" name="A85">
+                <say>Yes I do Jordan! Here is another.</say>
+            </message>
+            <message id="A86" name="A86">
+                <say>here you will be clicking on the multiple choice options to the right to determine an answer.</say>
+            </message>
+            <message id="A87" name="A87">
+                <say>the title is not shown. which would you predict to be the best title based on other cues on the book cover?</say>
+            </message>
+            <message id="A88" name="A88">
+                <say>you answered correctly. The book title that matches the other cues are Come to Me Softly.</say>
+            </message>
+            <message id="A89" name="A89">
+                <say>take a look at the answer options that are to the right! Remember that a title reveals the general information about the topic of a book. Look at the couple on the cover for help! Can you pick the title of the book that fits the other cues?</say>
+            </message>
+            <message id="A90" name="A90">
+                <say>the title of the book that is appropriate for the cover is Come to Me Softly.</say>
+            </message>
+            <message id="A91" name="A91">
+                <say>Jordan, what do you think the title of the cover is?</say>
+            </message>
+            <message id="A92" name="A92">
+                <say>can you predict the overall message of the book? Can you tell me what the topic or main idea of the book is?</say>
+            </message>
+            <message id="A93" name="A93">
+                <say>the prediction you picked is correct. The best prediction for the book is a couple dealing with each other's past and loving each other. This is given away by the subtitle on the cover!</say>
+            </message>
+            <message id="A94" name="A94">
+                <say>making a prediction calls for you to use the print cues and visual cues on the book cover. Really take a look at the subtitle on the cover for help. It says her love changed everything, expect his past. You can get the right answer by looking there.</say>
+            </message>
+            <message id="A95" name="A95">
+                <say>the prediction of the book is a couple dealing with each other's past and loving each other. This is based on the visual and print cues! This can be seen in the subtitle! Take a look!</say>
+            </message>
+            <message id="A96" name="A96">
+                <say>Jordan what do you predict the book is about?</say>
+            </message>
+            <message id="A97" name="A97">
+                <say>based on the cues on the cover, can you predict which event may occur in the book?</say>
+            </message>
+            <message id="A98" name="A98">
+                <say>you picked the best prediction for what might occur in the story! The couple will go through hardships. By looking at the couple on the cover and seeing the subtitle of the book you can see that their relationship will be tested.</say>
+            </message>
+            <message id="A99" name="A99">
+                <say>take a look at the book's print and visual cues. Mainly the subtitle that says her love changed everything except his past. This information can reveal additional information about what may occur in the story.</say>
+            </message>
+            <message id="A100" name="A100">
+                <say>The best prediction for what may occur in the book is that the couple will go through hardships. This information is found on the book's cover by looking at the couple and the subtitle.</say>
+            </message>
+            <message id="A101" name="A101">
+                <say>Jordan what do you think is the best prediction for what may occur in the book?</say>
+            </message>
+            <message id="A102" name="A102">
+                <say>picked the correct title. The title that matches the other cues are Lincoln's Boys. There is a picture of president Lincoln on the cover.</say>
+            </message>
+            <message id="A103" name="A103">
+                <say>you can use the visual cues of the men on the cover and the subtitle that says John Hay, John Nicolay, and the war for Lincoln's image found on the cover to help you pick the most appropriate title.</say>
+            </message>
+            <message id="A104" name="A104">
+                <say>the best title for the book that matches the visual cues are Lincoln's Boys. There is a picture of President Lincoln on the cover of the book.</say>
+            </message>
+            <message id="A105" name="A105">
+                <say>Jordan what do you think the title of the book should be?</say>
+            </message>
+            <message id="A106" name="A106">
+                <say>you selected the best prediction for what could be the book's message. A view into Lincoln's presidency from the view point of his close friends fits as the most appropriate prediction! This can be seen from the picture of lincoln and his friends on the cover.</say>
+            </message>
+            <message id="A107" name="A107">
+                <say>when you make a prediction keep in mind that title Lincoln's Boys, the subtitle John Hay John Nicolay, the war for Lincoln's image, and the picture of the men on the cover. This will give you more information into what the book is about.</say>
+            </message>
+            <message id="A108" name="A108">
+                <say>A view into Lincoln's presidency from the view point of this close friends fits as the most appropriate prediction! This can be seen from the picture of lincoln and his friends on the cover.</say>
+            </message>
+            <message id="A109" name="A109">
+                <say>Jordan which prediction do you think is the best prediction for the message of the book?</say>
+            </message>
+            <message id="A110" name="A110">
+                <say>you selected the correct title for the sign. Pedestrian crossing is the most appropriate title.</say>
+            </message>
+            <message id="A111" name="A111">
+                <say>take a look at the visual cue of the people walking! Base your answer choice on the visual cue of the sign.</say>
+            </message>
+            <message id="A112" name="A112">
+                <say>the appropriate title for this sign is Pedestrian crossing. The other options are not supported by the visual cue of the people walking across the road.</say>
+            </message>
+            <message id="A113" name="A113">
+                <say>Jordan what do you think the title of the sign is?</say>
+            </message>
+            <message id="A114" name="A114">
+                <say>which text cue would be appropriate for the sign? This means, which word below goes well with the rest of the sign.</say>
+            </message>
+            <message id="A115" name="A115">
+                <say>you picked the correct text cue. The most appropriate text cue for the sign would be the word SLOW.</say>
+            </message>
+            <message id="A116" name="A116">
+                <say>use the print cue that says pedestrian crossing and visual cue of the people walking across a road to help you pick the best text cue to complete the sign.</say>
+            </message>
+            <message id="A117" name="A117">
+                <say>the best text cue that would be appropriate for the sign is the word slow because this is a pedestrian cross walk and walkers have to be safe.</say>
+            </message>
+            <message id="A118" name="A118">
+                <say>Jordan which text cue do you think is most appropriate?</say>
+            </message>
+            <message id="A119" name="A119">
+                <say>can you predict what the sign is telling you to do? Use the context clues on the sign for help.</say>
+            </message>
+            <message id="A120" name="A120">
+                <say>you selected the best prediction for this sign. This sign is telling us to drive slow because pedestrians are crossing the road.</say>
+            </message>
+            <message id="A121" name="A121">
+                <say>try to tie together everything you see on the sign here! Look at the people crossing the road, the word slow, and the main phrase pedestrian crossing! Tie all of this together to make a prediction.</say>
+            </message>
+            <message id="A122" name="A122">
+                <say>the sign is telling us to drive slow because pedestrians are crossing the road. This is the best prediction for the sign's purpose.</say>
+            </message>
+            <message id="A123" name="A123">
+                <say>Jordan what do you think the sign is telling us to do?</say>
+            </message>
+            <message id="A124" name="A124">
+                <say>here is a completed sign, you won't have to pick the best text cues for this one. But you will have to predict what the sign is trying to tell us.</say>
+            </message>
+            <message id="A125" name="A125">
+                <say>the best prediction for the sign is to use caution when driving near a railroad crossing.</say>
+            </message>
+            <message id="A126" name="A126">
+                <say>This sign is found near railroads and can help drivers stay safe. The R R means Railroad, and the Big x you see in the middle of the sign means crossing. When you put it together it means railroad crossing. Make a prediction about the sign based on what I just told you.</say>
+            </message>
+            <message id="A127" name="A127">
+                <say>the best prediction for the sign is to use caution when driving over a railroad.</say>
+            </message>
+            <message id="A128" name="A128">
+                <say>Jordan what do you think the sign is trying to tell us?</say>
+            </message>
+            <message id="A129" name="A129">
+                <say>at which location will this sign most likely be found? That is, predict where this sign can be found.</say>
+            </message>
+            <message id="A130" name="A130">
+                <say>this sign can be found on the expressway! This sign helps drivers drive safer! If you merge over you can let someone else move into your lane! this can prevent accidents!</say>
+            </message>
+            <message id="A131" name="A131">
+                <say>this sign is a familiar sign that can be found on city streets and where else? It's most popular in this one location. This sign means that while driving you must move over to another lane because this one is coming to an end. Based on this can you pick a location now?</say>
+            </message>
+            <message id="A132" name="A132">
+                <say>the sign is most likely found on the expressway! It helps prevent accidents by telling drivers they must move over because the lane that they are driving in is ending.</say>
+            </message>
+            <message id="A133" name="A133">
+                <say>Jordan where do you think this sign can be found?</say>
+            </message>
+            <message id="A134" name="A134">
+                <say>does this title match the visual cues on the book cover? Click on the answer options to the right to select your answer.</say>
+            </message>
+            <message id="A135" name="A135">
+                <say>you selected the correct answer. The title does match the visual cues on the book's cover.</say>
+            </message>
+            <message id="A136" name="A136">
+                <say>take a look at the visual cue of the fruit on the cover. Does the fruit match up with the title, The Juice Lady's Guide to juicing for health?</say>
+            </message>
+            <message id="A137" name="A137">
+                <say>the title does in fact match the visual cue of the fruit shown on the book cover.</say>
+            </message>
+            <message id="A138" name="A138">
+                <say>Jordan do you believe the title matches the visual cue?</say>
+            </message>
+            <message id="A139" name="A139">
+                <say>you picked the best prediction for the book. It teaches people how to juice with fruit and how juicing may prevent diseases.</say>
+            </message>
+            <message id="A140" name="A140">
+                <say>use the visual cue of the fruit, the subtitle stating that the book is a guide to the prevention and treatment of common diseases, and the title stating juicing for health to help you figure out the best prediction for the book.</say>
+            </message>
+            <message id="A141" name="A141">
+                <say>the best prediction for the book is the prediction that states the book serves as a guide to showing people how to juice with fruits and prevent diseases. Juicing means that you can make your very own fresh juice using fruits.</say>
+            </message>
+            <message id="A142" name="A142">
+                <say>Jordan what do you think the book is about?</say>
+            </message>
+            <message id="A143" name="A143">
+                <say>the visual cue of the plane matches the other context clues on the cover.</say>
+            </message>
+            <message id="A144" name="A144">
+                <say>take a look at the title, which says a higher call and has a subtitle that says an incredible true story of combat and chivalry in the war-torn skies of world war two. Do all of these things I just read match with the visual cue of the two the planes on the cover?</say>
+            </message>
+            <message id="A145" name="A145">
+                <say>the visual cue of the plane does match the title and subtitle on the cover.</say>
+            </message>
+            <message id="A146" name="A146">
+                <say>Jordan do you think the visual cue matches the title and subtitle?</say>
+            </message>
+            <message id="A147" name="A147">
+                <say>you selected correctly. The book is about fighter planes and pilots in world war two.</say>
+            </message>
+            <message id="A148" name="A148">
+                <say>be mindful of the visual cue of the two planes, the title a higher calling, and the subtitle about it! Tie all of this information together in order to make a good prediction about the book.</say>
+            </message>
+            <message id="A149" name="A149">
+                <say>the best prediction for the book is a fighter and pilots in world war two.</say>
+            </message>
+            <message id="A150" name="A150">
+                <say>Jordan what do you think the book is about?</say>
+            </message>
+            <message id="A151" name="A151">
+                <say>does the title match the visual cue on the cover?</say>
+            </message>
+            <message id="A152" name="A152">
+                <say>the title of studying and applying physics to the real world does not match the visual cue of the well on the cover.</say>
+            </message>
+            <message id="A153" name="A153">
+                <say>take a look at the visual cue of the well and the title, studying and applying physics to the real world. Does this title support the picture of the well on the cover?</say>
+            </message>
+            <message id="A154" name="A154">
+                <say>the title of studying and applying physics does not match the visual cue of the well.</say>
+            </message>
+            <message id="A155" name="A155">
+                <say>Jordan do you think the title matches the visual cue?</say>
+            </message>
+            <message id="A156" name="A156">
+                <say>the best title for the cover based on the visual cue would be Aunt Dimity and the Wishing Well because it supports the well on the cover.</say>
+            </message>
+            <message id="A157" name="A157">
+                <say>look at the well on the cover. Try to make the best prediction as to what the title of the book is based on the well you see.</say>
+            </message>
+            <message id="A158" name="A158">
+                <say>the best predicted title for the book cover is Aunt Dimity and the Wishing Well. This is because it supports the visual cue of the well on the cover.</say>
+            </message>
+            <message id="A159" name="A159">
+                <say>Jordan what do you think the title of the book cover is?</say>
+            </message>
+            <message id="A160" name="A160">
+                <say>does the subtitle match the text signals that are on the book cover?</say>
+            </message>
+            <message id="A161" name="A161">
+                <say>the subtitle a how to for adult sewing does not support the visual cues on the cover. There is nothing related to sewing shown on the cover. Therefore, it does not support any of the text signals on the book.</say>
+            </message>
+            <message id="A162" name="A162">
+                <say>take a good look at the visual cues of the light tower in the background and then look at the subtitle, A how to for adult sewing. Does this visual cue support the idea of sewing adult clothing? Use this clue to answer the question.</say>
+            </message>
+            <message id="A163" name="A163">
+                <say>the subtitle entitled a how to for adult sewing does not support the visual cues on the cover. therefore, it does not support any of the text signals on the book.</say>
+            </message>
+            <message id="A164" name="A164">
+                <say>Jordan do you think the subtitle matches the context clues?</say>
+            </message>
+            <message id="A165" name="A165">
+                <say>Since we know that. A how to for adult sewing is the wrong subtitle, it has been removed!... try to predict what the real subtitle is based on the text signals you see here.</say>
+            </message>
+            <message id="A166" name="A166">
+                <say>the best predicted subtitle for the book cover is electric light and the invention of modern america. this supports the other text signals on the cover.</say>
+            </message>
+            <message id="A167" name="A167">
+                <say>take a look at the visual cue of the light tower and connect this with the right subtitle from the answer options on the right!</say>
+            </message>
+            <message id="A168" name="A168">
+                <say>the best predicted subtitle is electric light and invention of modern america. this supports all of the text signals on the cover.</say>
+            </message>
+            <message id="A169" name="A169">
+                <say>Jordan what do you think the subtitle is for the book cover?</say>
+            </message>
+            <message id="A170" name="A170">
+                <say>pick the visual cue that matches the print cues on the book cover.</say>
+            </message>
+            <message id="A171" name="A171">
+                <say>you picked the right visual cue. The dragon is the best visual cue that matches the title. this matches the other cues on the book cover because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described.</say>
+            </message>
+            <message id="A172" name="A172">
+                <say>take a look at the title and the other cues of the princess and wizards and try to pick the best visual cue.</say>
+            </message>
+            <message id="A173" name="A173">
+                <say>The dragon is the best visual cue that matches the title. this matches the other cues on the book because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described.</say>
+            </message>
+            <message id="A174" name="A174">
+                <say>Jordan what do you think the best visual cue is for the book title?</say>
+            </message>
+            <message id="A175" name="A175">
+                <say>predict the book's overall message based on the text signals you see on the cover.</say>
+            </message>
+            <message id="A176" name="A176">
+                <say>the best prediction for the book is that the dragon slayer must save a princess. This is supported by the text signals on the cover. The other options do not quite support the entire book cover.</say>
+            </message>
+            <message id="A177" name="A177">
+                <say>when making a prediction remember to look at everything on the cover! Use the picture of the dragon, the princess, and the two wizards. All of this information from the visual cue can be used to help you make a prediction. Now give it a shot and pick the best prediction.</say>
+            </message>
+            <message id="A178" name="A178">
+                <say>The dragon is the best visual cue that matches the title. This matches the other cues on the book because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described.</say>
+            </message>
+            <message id="A179" name="A179">
+                <say>Jordan what do you think the book is about?</say>
+            </message>
+            <message id="A180" name="A180">
+                <say>can you click on the book's title for me? you can do this by Clicking on the sections of the book in the middle of the screen! This will allow you to select your answer!</say>
+            </message>
+            <message id="A181" name="A181">
+                <say>you clicked on the title of the book! The title is Tower Lord! this is a fantasy book about a warrior who has to fight off enemies.</say>
+            </message>
+            <message id="A182" name="A182">
+                <say>try to remember that a title gives you general information regarding the book. which section gives you general information about the book? Click on the title of the book now.</say>
+            </message>
+            <message id="A183" name="A183">
+                <say>the title of the book is Tower Lord. It is shown here! this is a fantasy book about a warrior who has to fight off enemies.</say>
+            </message>
+            <message id="A184" name="A184">
+                <say>Jordan what do you think the title of the book is?</say>
+            </message>
+            <message id="A185" name="A185">
+                <say>Now</say>
+            </message>
+            <message id="A186" name="A186">
+                <say>can you click on the visual cue of the book's cover? Remember to click on the book on the screen to pick an answer.</say>
+            </message>
+            <message id="A187" name="A187">
+                <say>you clicked on the visual cue of the book. The visual cue is the man drawing a bow. this also supports what the book is about. remember I said that is was about a man fighting off enemies and to do this he will need a weapon and he uses a bow and arrow.</say>
+            </message>
+            <message id="A188" name="A188">
+                <say>remember that the visual cue is a photo that reveals more supporting information about the book. Click on the photo that is on the cover.</say>
+            </message>
+            <message id="A189" name="A189">
+                <say>The visual cue is the man drawing a bow. this also supports what the book is about, remember I said that is was about a man fighting off enemies and to do this he will need a weapon and he uses a bow and arrow.</say>
+            </message>
+            <message id="A190" name="A190">
+                <say>Jordan do you agree with</say>
+            </message>
+            <message id="A191" name="A191">
+                <say>'s answer?</say>
+            </message>
+            <message id="A192" name="A192">
+                <say>click on the book's title for me!</say>
+            </message>
+            <message id="A193" name="A193">
+                <say>you picked the correct title of the book. The title reads The new rules of running. this book is about helping people learn how to run faster and longer.</say>
+            </message>
+            <message id="A194" name="A194">
+                <say>the title should reveal general information about the book. It should tell you what the book may be about. Click on the section of the book that gives you a general idea about the book.</say>
+            </message>
+            <message id="A195" name="A195">
+                <say>The title reads The new rules of running. this book is about helping people learn how to run faster and longer.</say>
+            </message>
+            <message id="A196" name="A196">
+                <say>Jordan what do you think the title of the book is?</say>
+            </message>
+            <message id="A197" name="A197">
+                <say>you clicked on the right subtitle. The subtitle is five steps to run faster and longer for life. This supports the other text signals and shows what the book is about.</say>
+            </message>
+            <message id="A198" name="A198">
+                <say>a subtitle gives a little more information about the book that goes along with the title, which is the new rules of running! So what could the subtitle be?</say>
+            </message>
+            <message id="A199" name="A199">
+                <say>The subtitle is five steps to run faster and longer for life. This supports the other text signals and shows what the book is about.</say>
+            </message>
+            <message id="A200" name="A200">
+                <say>Jordan what do you think the subtitle of the book is?</say>
+            </message>
+            <message id="A201" name="A201">
+                <say>can you click on the title of the book for me!?</say>
+            </message>
+            <message id="A202" name="A202">
+                <say>a title gives general overall information about the book! It should give you an overall idea of what to expect when you read. click on the title of the book.</say>
+            </message>
+            <message id="A203" name="A203">
+                <say>the title of the book is Lord of the Flies. This is another fantasy book where the main character thinks a shell is magicial</say>
+            </message>
+            <message id="A204" name="A204">
+                <say>you picked the right title, It's Lord of the Flies. This is another fantasy book where the main character thinks a shell is magicial</say>
+            </message>
+            <message id="A205" name="A205">
+                <say>Jordan do you think</say>
+            </message>
+            <message id="A206" name="A206">
+                <say>picked the right title?</say>
+            </message>
+            <message id="A207" name="A207">
+                <say>now click on the visual cue for the same book cover.</say>
+            </message>
+            <message id="A208" name="A208">
+                <say>you selected the correct visual cue. The shell is the visual cue on the cover.</say>
+            </message>
+            <message id="A209" name="A209">
+                <say>keep in mind that a visual cue is a cue that can be a drawing, picture, or photo. all of this will be related to the book and title, Lord of the flies. click on the visual cue now.</say>
+            </message>
+            <message id="A210" name="A210">
+                <say>the visual cue is the seashell on the sand.</say>
+            </message>
+            <message id="A211" name="A211">
+                <say>Jordan what do you think the visual cue is on the cover?</say>
+            </message>
+            <message id="A212" name="A212">
+                <say>you picked the correct answer. The mixture of fruit is the visual cue. this supports what the book is about. Which is teaching people how to juice with fruits and showing the health benefits of juicing. If you don't know what juicing is it's when you take fruit or a vegetable and you squeeze it to make fresh juice of your own.</say>
+            </message>
+            <message id="A213" name="A213">
+                <say>a visual cue reveals more about the book's message by displaying a drawing or picture. Pick the visual cue on the cover.</say>
+            </message>
+            <message id="A214" name="A214">
+                <say>The mixture of fruit is the visual cue. this supports what the book is about. Which is teaching people how to juice with fruits and showing the health benefits of juicing. If you don't know what juicing is it's when you take fruit or a vegetable and you squeeze it to make fresh juice of your own.</say>
+            </message>
+            <message id="A215" name="A215">
+                <say>Jordan what do you think the visual cue on the cover is?</say>
+            </message>
+            <message id="A216" name="A216">
+                <say>you picked the right answer. The title of the book is the juice lady's guide to juicing for health.</say>
+            </message>
+            <message id="A217" name="A217">
+                <say>the title of a book gives the gist of the overall book. it is also supported by the visual cue of the fruit we just spoke about. What section on the cover gives the gist of the book?</say>
+            </message>
+            <message id="A218" name="A218">
+                <say>The title of the book is the juice lady's guide to juicing for health.</say>
+            </message>
+            <message id="A219" name="A219">
+                <say>Jordan what do you think the title is?</say>
+            </message>
+            <message id="A220" name="A220">
+                <say>this question is different from the other questions we did in this section. Here you will have to predict what you think the sign is telling you to do... Click on an answer option to the right.</say>
+            </message>
+            <message id="A221" name="A221">
+                <say>you picked the best prediction. The sign is telling you that you will be fined 100 to 500 dollars for parking in a handicap spot.</say>
+            </message>
+            <message id="A222" name="A222">
+                <say>in order to make a prediction based on your decision of the word penalty, tow away zone, and 100-500 dollar fine. What do you think this sign is telling us?</say>
+            </message>
+            <message id="A223" name="A223">
+                <say>The sign is telling you that you will be fined 100 to 500 dollars for parking in a handicap spot.</say>
+            </message>
+            <message id="A224" name="A224">
+                <say>Jordan what do you think the prediction of the sign is?</say>
+            </message>
+            <message id="A225" name="A225">
+                <say>you picked the right answer. By law you are required to wear your seat belt. This is the best prediction and best overall for your safety, this will keep you safe while driving and you will not get a pulled over by the police.</say>
+            </message>
+            <message id="A226" name="A226">
+                <say>take a look at all of the print cues. they say buckle up it's the law, and the visual cues of the seat belt and hands help with making a prediction.</say>
+            </message>
+            <message id="A227" name="A227">
+                <say>By law you are required to wear your seat belt. This is the best prediction and best overall for your safety, this will keep you safe while driving and you will not get a pulled over by the police.</say>
+            </message>
+            <message id="A228" name="A228">
+                <say>Jordan what do you think the sign is telling us?</say>
+            </message>
+            <message id="C1" name="C1">
+                <say>Art!</say>
+            </message>
+            <message id="C2" name="C2">
+                <say>Whitney!</say>
+            </message>
+            <message id="C3" name="C3">
+                <say>Carl!</say>
+            </message>
+            <message id="C4" name="C4">
+                <say>Qinyu!</say>
+            </message>
+            <message id="C5" name="C5">
+                <say>Tiffany!</say>
+            </message>
+            <message id="C6" name="C6">
+                <say>Amy!</say>
+            </message>
+            <message id="C7" name="C7">
+                <say>Andrew!</say>
+            </message>
+            <message id="C8" name="C8">
+                <say>Breya!</say>
+            </message>
+            <message id="C9" name="C9">
+                <say>Cadarrius!</say>
+            </message>
+            <message id="C10" name="C10">
+                <say>Craig!</say>
+            </message>
+            <message id="C11" name="C11">
+                <say>Danielle!</say>
+            </message>
+            <message id="C12" name="C12">
+                <say>Patrick!</say>
+            </message>
+            <message id="C13" name="C13">
+                <say>Habibah!</say>
+            </message>
+            <message id="C14" name="C14">
+                <say>Haiying!</say>
+            </message>
+            <message id="C15" name="C15">
+                <say>Janay!</say>
+            </message>
+            <message id="C16" name="C16">
+                <say>Jordan!</say>
+            </message>
+            <message id="C17" name="C17">
+                <say>Lijia!</say>
+            </message>
+            <message id="C18" name="C18">
+                <say>Logan!</say>
+            </message>
+            <message id="C19" name="C19">
+                <say>Mark!</say>
+            </message>
+            <message id="C20" name="C20">
+                <say>Megan!</say>
+            </message>
+            <message id="C21" name="C21">
+                <say>Morgan!</say>
+            </message>
+            <message id="C22" name="C22">
+                <say>Parya!</say>
+            </message>
+            <message id="C23" name="C23">
+                <say>Paul!</say>
+            </message>
+            <message id="C24" name="C24">
+                <say>Qiong!</say>
+            </message>
+            <message id="C25" name="C25">
+                <say>Qiping!</say>
+            </message>
+            <message id="C26" name="C26">
+                <say>Shi!</say>
+            </message>
+            <message id="C27" name="C27">
+                <say>Xiangen!</say>
+            </message>
+            <message id="C28" name="C28">
+                <say>Stephanie!</say>
+            </message>
+            <message id="C29" name="C29">
+                <say>Devi!</say>
+            </message>
+            <message id="C30" name="C30">
+                <say>Anthony!</say>
+            </message>
+            <message id="C31" name="C31">
+                <say>Yehui!</say>
+            </message>
+
+            <message id="D20160204" name="D20160204">
+                <say>User</say>
+            </message>
+            <message id="D1" name="D1">
+                <say>Amelia</say>
+            </message>
+            <message id="D2" name="D2">
+                <say>Olivia</say>
+            </message>
+            <message id="D3" name="D3">
+                <say>Emily</say>
+            </message>
+            <message id="D4" name="D4">
+                <say>Ava</say>
+            </message>
+            <message id="D5" name="D5">
+                <say>Isla</say>
+            </message>
+            <message id="D6" name="D6">
+                <say>Jessica</say>
+            </message>
+            <message id="D7" name="D7">
+                <say>Poppy</say>
+            </message>
+            <message id="D8" name="D8">
+                <say>Isabella</say>
+            </message>
+            <message id="D9" name="D9">
+                <say>Sophie</say>
+            </message>
+            <message id="D10" name="D10">
+                <say>Mia</say>
+            </message>
+            <message id="D11" name="D11">
+                <say>Ruby</say>
+            </message>
+            <message id="D12" name="D12">
+                <say>Lily</say>
+            </message>
+            <message id="D13" name="D13">
+                <say>Grace</say>
+            </message>
+            <message id="D14" name="D14">
+                <say>Evie</say>
+            </message>
+            <message id="D15" name="D15">
+                <say>Sophia</say>
+            </message>
+            <message id="D16" name="D16">
+                <say>Ella</say>
+            </message>
+            <message id="D17" name="D17">
+                <say>Scarlett</say>
+            </message>
+            <message id="D18" name="D18">
+                <say>Chloe</say>
+            </message>
+            <message id="D19" name="D19">
+                <say>Isabelle</say>
+            </message>
+            <message id="D20" name="D20">
+                <say>Freya</say>
+            </message>
+            <message id="D21" name="D21">
+                <say>Charlotte</say>
+            </message>
+            <message id="D22" name="D22">
+                <say>Sienna</say>
+            </message>
+            <message id="D23" name="D23">
+                <say>Daisy</say>
+            </message>
+            <message id="D24" name="D24">
+                <say>Phoebe</say>
+            </message>
+            <message id="D25" name="D25">
+                <say>Millie</say>
+            </message>
+            <message id="D26" name="D26">
+                <say>Eva</say>
+            </message>
+            <message id="D27" name="D27">
+                <say>Alice</say>
+            </message>
+            <message id="D28" name="D28">
+                <say>Lucy</say>
+            </message>
+            <message id="D29" name="D29">
+                <say>Florence</say>
+            </message>
+            <message id="D30" name="D30">
+                <say>Sofia</say>
+            </message>
+            <message id="D31" name="D31">
+                <say>Layla</say>
+            </message>
+            <message id="D32" name="D32">
+                <say>Lola</say>
+            </message>
+            <message id="D33" name="D33">
+                <say>Holly</say>
+            </message>
+            <message id="D34" name="D34">
+                <say>Imogen</say>
+            </message>
+            <message id="D35" name="D35">
+                <say>Molly</say>
+            </message>
+            <message id="D36" name="D36">
+                <say>Matilda</say>
+            </message>
+            <message id="D37" name="D37">
+                <say>Lilly</say>
+            </message>
+            <message id="D38" name="D38">
+                <say>Rosie</say>
+            </message>
+            <message id="D39" name="D39">
+                <say>Elizabeth</say>
+            </message>
+            <message id="D40" name="D40">
+                <say>Erin</say>
+            </message>
+            <message id="D41" name="D41">
+                <say>Maisie</say>
+            </message>
+            <message id="D42" name="D42">
+                <say>Lexi</say>
+            </message>
+            <message id="D43" name="D43">
+                <say>Ellie</say>
+            </message>
+            <message id="D44" name="D44">
+                <say>Hannah</say>
+            </message>
+            <message id="D45" name="D45">
+                <say>Evelyn</say>
+            </message>
+            <message id="D46" name="D46">
+                <say>Abigail</say>
+            </message>
+            <message id="D47" name="D47">
+                <say>Elsie</say>
+            </message>
+            <message id="D48" name="D48">
+                <say>Summer</say>
+            </message>
+            <message id="D49" name="D49">
+                <say>Megan</say>
+            </message>
+            <message id="D50" name="D50">
+                <say>Jasmine</say>
+            </message>
+            <message id="D51" name="D51">
+                <say>Maya</say>
+            </message>
+            <message id="D52" name="D52">
+                <say>Amelie</say>
+            </message>
+            <message id="D53" name="D53">
+                <say>Lacey</say>
+            </message>
+            <message id="D54" name="D54">
+                <say>Willow</say>
+            </message>
+            <message id="D55" name="D55">
+                <say>Emma</say>
+            </message>
+            <message id="D56" name="D56">
+                <say>Bella</say>
+            </message>
+            <message id="D57" name="D57">
+                <say>Eleanor</say>
+            </message>
+            <message id="D58" name="D58">
+                <say>Esme</say>
+            </message>
+            <message id="D59" name="D59">
+                <say>Eliza</say>
+            </message>
+            <message id="D60" name="D60">
+                <say>Georgia</say>
+            </message>
+            <message id="D61" name="D61">
+                <say>Harriet</say>
+            </message>
+            <message id="D62" name="D62">
+                <say>Gracie</say>
+            </message>
+            <message id="D63" name="D63">
+                <say>Annabelle</say>
+            </message>
+            <message id="D64" name="D64">
+                <say>Emilia</say>
+            </message>
+            <message id="D65" name="D65">
+                <say>Amber</say>
+            </message>
+            <message id="D66" name="D66">
+                <say>Ivy</say>
+            </message>
+            <message id="D67" name="D67">
+                <say>Brooke</say>
+            </message>
+            <message id="D68" name="D68">
+                <say>Rose</say>
+            </message>
+            <message id="D69" name="D69">
+                <say>Anna</say>
+            </message>
+            <message id="D70" name="D70">
+                <say>Zara</say>
+            </message>
+            <message id="D71" name="D71">
+                <say>Leah</say>
+            </message>
+            <message id="D72" name="D72">
+                <say>Mollie</say>
+            </message>
+            <message id="D73" name="D73">
+                <say>Martha</say>
+            </message>
+            <message id="D74" name="D74">
+                <say>Faith</say>
+            </message>
+            <message id="D75" name="D75">
+                <say>Hollie</say>
+            </message>
+            <message id="D76" name="D76">
+                <say>Amy</say>
+            </message>
+            <message id="D77" name="D77">
+                <say>Bethany</say>
+            </message>
+            <message id="D78" name="D78">
+                <say>Violet</say>
+            </message>
+            <message id="D79" name="D79">
+                <say>Katie</say>
+            </message>
+            <message id="D80" name="D80">
+                <say>Maryam</say>
+            </message>
+            <message id="D81" name="D81">
+                <say>Francesca</say>
+            </message>
+            <message id="D82" name="D82">
+                <say>Julia</say>
+            </message>
+            <message id="D83" name="D83">
+                <say>Maria</say>
+            </message>
+            <message id="D84" name="D84">
+                <say>Darcey</say>
+            </message>
+            <message id="D85" name="D85">
+                <say>Isabel</say>
+            </message>
+            <message id="D86" name="D86">
+                <say>Tilly</say>
+            </message>
+            <message id="D87" name="D87">
+                <say>Maddison</say>
+            </message>
+            <message id="D88" name="D88">
+                <say>Victoria</say>
+            </message>
+            <message id="D89" name="D89">
+                <say>Isobel</say>
+            </message>
+            <message id="D90" name="D90">
+                <say>Niamh</say>
+            </message>
+            <message id="D91" name="D91">
+                <say>Skye</say>
+            </message>
+            <message id="D92" name="D92">
+                <say>Madison</say>
+            </message>
+            <message id="D93" name="D93">
+                <say>Darcy</say>
+            </message>
+            <message id="D94" name="D94">
+                <say>Aisha</say>
+            </message>
+            <message id="D95" name="D95">
+                <say>Beatrice</say>
+            </message>
+            <message id="D96" name="D96">
+                <say>Sarah</say>
+            </message>
+            <message id="D97" name="D97">
+                <say>Zoe</say>
+            </message>
+            <message id="D98" name="D98">
+                <say>Paige</say>
+            </message>
+            <message id="D99" name="D99">
+                <say>Heidi</say>
+            </message>
+            <message id="D100" name="D100">
+                <say>Lydia</say>
+            </message>
+            <message id="D101" name="D101">
+                <say>Oliver</say>
+            </message>
+            <message id="D102" name="D102">
+                <say>Jack</say>
+            </message>
+            <message id="D103" name="D103">
+                <say>Harry</say>
+            </message>
+            <message id="D104" name="D104">
+                <say>Jacob</say>
+            </message>
+            <message id="D105" name="D105">
+                <say>Charlie</say>
+            </message>
+            <message id="D106" name="D106">
+                <say>Thomas</say>
+            </message>
+            <message id="D107" name="D107">
+                <say>Oscar</say>
+            </message>
+            <message id="D108" name="D108">
+                <say>William</say>
+            </message>
+            <message id="D109" name="D109">
+                <say>James</say>
+            </message>
+            <message id="D110" name="D110">
+                <say>George</say>
+            </message>
+            <message id="D111" name="D111">
+                <say>Alfie</say>
+            </message>
+            <message id="D112" name="D112">
+                <say>Joshua</say>
+            </message>
+            <message id="D113" name="D113">
+                <say>Noah</say>
+            </message>
+            <message id="D114" name="D114">
+                <say>Ethan</say>
+            </message>
+            <message id="D115" name="D115">
+                <say>Muhammad</say>
+            </message>
+            <message id="D116" name="D116">
+                <say>Archie</say>
+            </message>
+            <message id="D117" name="D117">
+                <say>Leo</say>
+            </message>
+            <message id="D118" name="D118">
+                <say>Henry</say>
+            </message>
+            <message id="D119" name="D119">
+                <say>Joseph</say>
+            </message>
+            <message id="D120" name="D120">
+                <say>Samuel</say>
+            </message>
+            <message id="D121" name="D121">
+                <say>Riley</say>
+            </message>
+            <message id="D122" name="D122">
+                <say>Daniel</say>
+            </message>
+            <message id="D123" name="D123">
+                <say>Mohammed</say>
+            </message>
+            <message id="D124" name="D124">
+                <say>Alexander</say>
+            </message>
+            <message id="D125" name="D125">
+                <say>Max</say>
+            </message>
+            <message id="D126" name="D126">
+                <say>Lucas</say>
+            </message>
+            <message id="D127" name="D127">
+                <say>Mason</say>
+            </message>
+            <message id="D128" name="D128">
+                <say>Logan</say>
+            </message>
+            <message id="D129" name="D129">
+                <say>Isaac</say>
+            </message>
+            <message id="D130" name="D130">
+                <say>Benjamin</say>
+            </message>
+            <message id="D131" name="D131">
+                <say>Dylan</say>
+            </message>
+            <message id="D132" name="D132">
+                <say>Jake</say>
+            </message>
+            <message id="D133" name="D133">
+                <say>Edward</say>
+            </message>
+            <message id="D134" name="D134">
+                <say>Finley</say>
+            </message>
+            <message id="D135" name="D135">
+                <say>Freddie</say>
+            </message>
+            <message id="D136" name="D136">
+                <say>Harrison</say>
+            </message>
+            <message id="D137" name="D137">
+                <say>Tyler</say>
+            </message>
+            <message id="D138" name="D138">
+                <say>Sebastian</say>
+            </message>
+            <message id="D139" name="D139">
+                <say>Zachary</say>
+            </message>
+            <message id="D140" name="D140">
+                <say>Adam</say>
+            </message>
+            <message id="D141" name="D141">
+                <say>Theo</say>
+            </message>
+            <message id="D142" name="D142">
+                <say>Jayden</say>
+            </message>
+            <message id="D143" name="D143">
+                <say>Arthur</say>
+            </message>
+            <message id="D144" name="D144">
+                <say>Toby</say>
+            </message>
+            <message id="D145" name="D145">
+                <say>Luke</say>
+            </message>
+            <message id="D146" name="D146">
+                <say>Lewis</say>
+            </message>
+            <message id="D147" name="D147">
+                <say>Matthew</say>
+            </message>
+            <message id="D148" name="D148">
+                <say>Harvey</say>
+            </message>
+            <message id="D149" name="D149">
+                <say>Harley</say>
+            </message>
+            <message id="D150" name="D150">
+                <say>David</say>
+            </message>
+            <message id="D151" name="D151">
+                <say>Ryan</say>
+            </message>
+            <message id="D152" name="D152">
+                <say>Tommy</say>
+            </message>
+            <message id="D153" name="D153">
+                <say>Michael</say>
+            </message>
+            <message id="D154" name="D154">
+                <say>Reuben</say>
+            </message>
+            <message id="D155" name="D155">
+                <say>Nathan</say>
+            </message>
+            <message id="D156" name="D156">
+                <say>Blake</say>
+            </message>
+            <message id="D157" name="D157">
+                <say>Mohammad</say>
+            </message>
+            <message id="D158" name="D158">
+                <say>Jenson</say>
+            </message>
+            <message id="D159" name="D159">
+                <say>Bobby</say>
+            </message>
+            <message id="D160" name="D160">
+                <say>Luca</say>
+            </message>
+            <message id="D161" name="D161">
+                <say>Charles</say>
+            </message>
+            <message id="D162" name="D162">
+                <say>Frankie</say>
+            </message>
+            <message id="D163" name="D163">
+                <say>Dexter</say>
+            </message>
+            <message id="D164" name="D164">
+                <say>Kai</say>
+            </message>
+            <message id="D165" name="D165">
+                <say>Alex</say>
+            </message>
+            <message id="D166" name="D166">
+                <say>Connor</say>
+            </message>
+            <message id="D167" name="D167">
+                <say>Liam</say>
+            </message>
+            <message id="D168" name="D168">
+                <say>Jamie</say>
+            </message>
+            <message id="D169" name="D169">
+                <say>Elijah</say>
+            </message>
+            <message id="D170" name="D170">
+                <say>Stanley</say>
+            </message>
+            <message id="D171" name="D171">
+                <say>Louie</say>
+            </message>
+            <message id="D172" name="D172">
+                <say>Jude</say>
+            </message>
+            <message id="D173" name="D173">
+                <say>Callum</say>
+            </message>
+            <message id="D174" name="D174">
+                <say>Hugo</say>
+            </message>
+            <message id="D175" name="D175">
+                <say>Leon</say>
+            </message>
+            <message id="D176" name="D176">
+                <say>Elliot</say>
+            </message>
+            <message id="D177" name="D177">
+                <say>Louis</say>
+            </message>
+            <message id="D178" name="D178">
+                <say>Theodore</say>
+            </message>
+            <message id="D179" name="D179">
+                <say>Gabriel</say>
+            </message>
+            <message id="D180" name="D180">
+                <say>Ollie</say>
+            </message>
+            <message id="D181" name="D181">
+                <say>Aaron</say>
+            </message>
+            <message id="D182" name="D182">
+                <say>Frederick</say>
+            </message>
+            <message id="D183" name="D183">
+                <say>Evan</say>
+            </message>
+            <message id="D184" name="D184">
+                <say>Elliott</say>
+            </message>
+            <message id="D185" name="D185">
+                <say>Owen</say>
+            </message>
+            <message id="D186" name="D186">
+                <say>Teddy</say>
+            </message>
+            <message id="D187" name="D187">
+                <say>Finlay</say>
+            </message>
+            <message id="D188" name="D188">
+                <say>Caleb</say>
+            </message>
+            <message id="D189" name="D189">
+                <say>Ibrahim</say>
+            </message>
+            <message id="D190" name="D190">
+                <say>Ronnie</say>
+            </message>
+            <message id="D191" name="D191">
+                <say>Felix</say>
+            </message>
+            <message id="D192" name="D192">
+                <say>Aiden</say>
+            </message>
+            <message id="D193" name="D193">
+                <say>Cameron</say>
+            </message>
+            <message id="D194" name="D194">
+                <say>Austin</say>
+            </message>
+            <message id="D195" name="D195">
+                <say>Kian</say>
+            </message>
+            <message id="D196" name="D196">
+                <say>Rory</say>
+            </message>
+            <message id="D197" name="D197">
+                <say>Seth</say>
+            </message>
+            <message id="D198" name="D198">
+                <say>Robert</say>
+            </message>
+            <message id="D199" name="D199">
+                <say>Albert</say>
+            </message>
+            <message id="D200" name="D200">
+                <say>Sonny</say>
+            </message>
+            <message id="D201" name="D201">
+                <say>Jack</say>
+            </message>
+            <message id="D202" name="D202">
+                <say>Rose</say>
+            </message>
+            <message id="D203" name="D203">
+                <say>Tyler</say>
+            </message>
+            <message id="D204" name="D204">
+                <say>Oscar</say>
+            </message>
+            <message id="D205" name="D205">
+                <say>Kim</say>
+            </message>
+            <message id="D206" name="D206">
+                <say>Cam</say>
+            </message>
+        </scene>
+    </stage>
+</project>

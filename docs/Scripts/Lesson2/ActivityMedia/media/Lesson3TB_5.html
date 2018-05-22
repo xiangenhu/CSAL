@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+	<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+  
+	<style>
+		body
+		{
+			background-image:url('L3Bkgd1.png');
+			background-size: cover;
+			background-repeat:no-repeat;
+			overflow: hidden;
+			width: 790px;
+			height: 472px;
+			cursor: default;
+		}
+		.textBox
+		{
+			z-index:0;
+			border: 4px dashed #212121;
+			font-family: Oxygen, Verdana, 'Times New Roman';
+			width: 750px;
+			height: 50px;
+			left: 25px;
+			top: 20px;
+			text-align: center;
+			display: block;
+			position: fixed;
+			font-size: 20px;
+			display: none;
+			border-radius: 8px;
+		}
+		.text
+		{
+			margin-top: 10px;
+		}
+		.book
+		{
+			z-index:2;
+			position: fixed;
+			width: 210px;
+			height: 300px;
+			border: 4px solid #525252;
+			border-radius: 3px;
+		}
+		.checkout img
+		{
+			z-index:0;
+			position: fixed;
+			border-top: 2px solid #212121;
+			width: 800px;
+			height: 270px;
+			top: 220px;
+			left: 0;
+			display: none;
+		}
+		.checkout div
+		{
+			z-index:1;
+			position: fixed;
+			border: 2px solid white;
+			border-bottom: none;
+			text-align: center;
+			font-family: Courgette, Verdana, 'Times New Roman';
+			font-size: 28px;
+			background-color: gray;
+			color: white;
+			width: 300px;
+			height: 40px;
+			left: 240px;
+			bottom: 0;
+			display: none;
+		}
+		#book0
+		{
+			top:100px;
+			left:35px;
+			display: none;
+		}
+		#book1
+		{
+			top:100px;
+			left:290px;
+			display: none;
+		}
+		#book2
+		{
+			top:100px;
+			left:545px;
+			display: none;
+		}
+	</style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	
+	var Media =
+	{
+		pageIdentifier: "TBMediaLoaded",
+	
+		currentItem: -1,
+		numItems: 0,
+		
+		hintSentence: "My church is recommending reading the history of Christianity.",
+		correctBookName: "Lesson3ActivityImages\\christian history.jpg",
+		isSelected: false,
+		selectedBook: null,
+		
+		nextPage: "Lesson3TB_6.html",
+		
+		bookOptions:["Lesson3ActivityImages\\christian history.jpg", "Lesson3ActivityImages\\mere Christianity.jpg", "Lesson3ActivityImages\\god whisper.jpg"],
+		
+		//variables for selecting agent's answer
+		//correctness for selecting a user answer is determined correctBookName which should be identical to a source image name in bookOptions
+		//make sure images sources line up with each book element, ex. book0 should correspond to bookOptions[0]
+		
+		correctBookElement: "book0",
+		incorrectBookElement1: "book2",
+		incorrectBookElement2: "book1"
+	}
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	$(document).ready(function()
+	{
+		parent.GetWorldEvent(Media.pageIdentifier);		//reports the identifying name for the media page to ASAT
+		
+		//add text to the textbox and an image source for the book images specified in the Media namespace
+		for(i=0; i < Media.bookOptions.length; i++)
+		{
+			$("#book"+i).attr("src", Media.bookOptions[i]);
+		}
+		$(".text").text(Media.hintSentence);
+		
+		//fade in animation for each element needed for the current item
+		$(".checkout img").show("fade", 1000);
+		$(".checkout div").show("fade", 1000);
+		$(".textBox").show("fade", 1000);
+		$(".book").show("fade", 1000);
+		
+		Lock();
+	});
+	
+	
+	/*
+		--------------------------------Helper Functions------------------------------
+	*/
+	
+	
+  	/*
+		Enables all events for designated elements after the visual cue is finished in the Unlock function
+	*/
+	function bindEvents()
+	{
+		//enables the functionality of the book elements 
+		$(".book").on("click", BookClick);
+		$(".book").on("mouseenter", BookMouseEnter);
+		$(".book").on("mouseleave", BookMouseLeave);	
+	}
+  
+  
+  
+  
+  
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	
+	/*
+	Event triggered by clicking on an html element of the ".book" class
+	*/
+	function BookClick()
+	{
+		Lock();
+		
+		$(this).animate({opacity: 1});
+		
+		//Stores the currently selected book globally, changes the border around the book element to the designated selection color, and raises the isSelected flag 
+		Media.selectedBook = $(this);
+		Media.selectedBook.animate({borderColor: "#edff73"},200);
+		Media.isSelected = true;
+		
+		//the compare the file name for the book image of selected book to the file name for the correct book designated in the global namespace
+		//if the file names match, assign a value of correct to the answerState, otherwise the answerState is incorrect
+		var answerState = "Incorrect";
+		var userSelectedValue=Media.selectedBook.attr("src");
+		userSelectedValue=userSelectedValue.replace("Lesson3ActivityImages\\","");
+		userSelectedValue=userSelectedValue.replace("\.jpg","");
+		if(Media.selectedBook.attr("src") == Media.correctBookName)
+		{
+			answerState = "Correct";
+			parent.PlaySound('clicked0.wav');
+		}
+		else
+		{
+			parent.PlaySound('incorrect0.wav');
+		}
+		
+		//sends the answerState to ASAT and locks the elements so additional clicks won't be registered
+		parent.GetWorldEvent("userAnswer_"+answerState+"_"+userSelectedValue);
+	}
+	
+	/*
+		Animates ".book" class html elements when the mouse pointer enters and leaves each element
+		The stop function limits how many animations can be spammed to enter the animation queue.
+	*/
+	function BookMouseEnter()
+	{
+		$(this).stop().animate({width: "230px", height:"320px", borderColor: "#edff73"});
+	}
+	function BookMouseLeave()
+	{
+		$(this).stop().animate({width: "210px", height:"300px", borderColor: "#525252"});
+	}
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	7. Sound Functions
+	*/	
+	
+	
+	
+	/*
+		This function tries to select an item. If an item is found, this function remembers 
+		the found item and calls the function parent.GetWorldEvent("Continue") 
+		to inform the parent program that there is an item to continue the exercise. 
+		Otherwise, it calls parent.GetWorldEvent("Stop") and any closing code should be added at that point.
+		
+	*/
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop");
+		}
+	}
+	/*
+		Initializes the media page to display all relevant html elements associated with the current item
+		Ex. displaying buttons, adding/changing text, resizing elements, playing animations, inserting pictures
+	*/
+	function ShowItem(){if(Media.currentItem == 0){}}
+	/*
+		After the user makes a selection, this function provides visual feedback 
+		which is usually coupled with ASAT agent dialogue to indicate whether or not that selection was correct
+	*/
+	function ShowMediaAnswer()
+	{
+		if(Media.isSelected == true)	//checks to make sure a selection has been made in order to check correctness
+		{
+			if(Media.selectedBook.attr("src") == Media.correctBookName)
+			{
+				//fade in the selection and change the border to green to indicate correctness
+				//an animation is played as if the book is being checked out at a desk while a sound queue plays
+				$("#" + Media.incorrectBookElement1).animate({top: "-100px", opacity: 0.0}, 1000);
+				$("#" + Media.incorrectBookElement2).animate({top: "-100px", opacity: 0.0}, 1000);
+				
+				Media.selectedBook.animate({borderColor: "green", opacity: 1.0, left: "290px"},1000)
+				.delay(7000).animate({top: "100px", opacity: 0.0}, 1000);
+				sound_correct();
+			}
+			else
+			{
+				//fade in the selection and change the border to red to indicate in-correctness
+				//A short time afterward a green border fades in green on the correctBookElement to show what the correct answer is to the user
+				Media.selectedBook.animate({borderColor: "red", opacity: 1.0},500);
+				$("#" + Media.correctBookElement).delay(1000).animate({borderColor: "green", opacity: 1.0}, 500);
+				sound_incorrect();
+			}			
+		}
+	}
+	
+	
+	/*
+		Preforms different actions based on a data string sent by ASAT
+	*/
+	function GetMediaEvent(data)
+	{	
+		if (data == "MainQ")
+		{
+			parent.GetWorldEvent("Jordan");
+		}
+		//Animates a book element based on a randomization done by ASAT rules to simulate an agent selecting an answer
+		//correctBookElement, incorrectBookElement1, and incorrectBookElement2 correspond with JordanGood, JordanBad1, and JordanBad2
+		//which book is correct and which are incorrect is manually determined in the global namespace		
+		else if (data == "JordanGood")
+		{
+			$("#" + Media.correctBookElement).animate({width: "230px", height:"320px", opacity: 1.0},500).animate({width: "210px", height:"300px"},300).animate({width: "230px", height:"320px"},500).animate({width: "210px", height:"300px", opacity: 0.5},300);
+		}
+		else if(data == "JordanBad1")
+		{
+			$("#" + Media.incorrectBookElement1).animate({width: "230px", height:"320px", opacity: 1.0},500).animate({width: "210px", height:"300px"},300).animate({width: "230px", height:"320px"},500).animate({width: "210px", height:"300px", opacity: 0.5},300);
+		}
+		else if(data == "JordanBad2")
+		{
+			$("#" + Media.incorrectBookElement2).animate({width: "230px", height:"320px", opacity: 1.0},500).animate({width: "210px", height:"300px"},300).animate({width: "230px", height:"320px"},500).animate({width: "210px", height:"300px", opacity: 0.5},300);
+		}
+		
+		//Switches the page location to next one in the current series
+		else if("NextPage")
+		{
+			parent.nextPage("media/"+ Media.nextPage);
+		}
+	}
+	
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	function Lock()
+	{
+		//creates a visual cue that the book elements are disabled
+		$(".book").animate({opacity: 0.5});
+		$(".book").css("cursor", "not-allowed");
+		$(".book").animate({width: "210px", height:"300px"},500);
+		
+		//disables the functionality of the cart elements 
+		$(".book").off("click", BookClick);
+		$(".book").off("mouseenter", BookMouseEnter);
+		$(".book").off("mouseleave", BookMouseLeave);
+	}
+	
+	/*
+		Enables functionality of any elements that were disabled by the Lock function
+	*/	
+	function Unlock()
+	{
+		//creates a visual cue that the book elements are enabled
+		//the functionality of the elements is enabled in the function bindEvents when all the visual cue animations are resolved
+		$(".book").css( 'cursor', 'pointer');
+		$(".book").css("border", "4px solid #525252");
+		$(".book").animate({opacity: 1.0}).promise().done(bindEvents);	//some events can cause the visual cue animation to stop so they are enabled after the animation is finished
+	}
+	
+	
+	/*
+		Signals ASAT to play a certain sounds during certain events such as clicking an answer, etc.
+	*/
+	function sound_clicked() 
+	{ 
+		return parent.PlaySound('clicked0.wav');
+		parent.GetWorldEvent("play clicked");
+	}
+	function sound_incorrect() 
+	{ 
+		return parent.PlaySound('incorrect0.wav');
+		parent.GetWorldEvent("play incorrect");
+	}
+	
+	function sound_correct()
+	{ 
+		return parent.PlaySound('success0.wav');
+		parent.GetWorldEvent("play correct");
+	}	
+  </script>
+</head>
+<body>
+	<div class="textBox"><div class="text"></div></div>
+	
+	<img id="book0" class="book"/>
+	<img id="book1" class="book"/>
+	<img id="book2" class="book"/>
+	
+	
+	<div class ="checkout"> 
+		<img src="wood.jpg"/>
+		<div>Checkout Counter</div>
+	</div>
+</body>
+</html>

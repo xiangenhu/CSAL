@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain='ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L8Bkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Pontano Sans', Verdana, 'Times New Roman';
+				cursor: pointer;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			.highlight
+			{
+				 background-color: grey; 
+				border-radius: 10px;
+			}
+			
+			#mainText
+			{
+				font-size: 28px;
+				padding: 15px 30px 0px 40px;
+				line-height: 40px;
+			}
+			.mainTextHead
+			{
+				font-family: 'Handlee', Verdana, 'Times New Roman';
+				font-size: 54px;
+				width: 720px;
+				margin: 20px 0px 40px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			#headSub
+			{
+				font-size: 32px;
+				font-weight: normal;
+			}
+			.mybutton
+			{
+				font-size: 32px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				width: 700px;
+				height: 50px;
+				line-height: 50px;
+				margin: 20px auto 30px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				border-radius: 12px;
+				box-shadow: 2px 2px 11px #888888;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			
+			var questionNum=0;
+			var flag=0;
+			var getSpan="";
+			var getSpanContent="";
+			var getQ="";
+			var getCorrect="";
+			var jordanAnswer="";
+			var qContent="";
+			var userAnswer="Incorrect";   
+			var correctAnswer="";
+			var lockStates=0;
+			var diff="Medium";
+			var hardDiff="Hard";
+			var easyDiff="Easy";
+			 var isCorrect="false";
+				var idScroll=1;
+				var strId = "";
+			
+			
+			
+			
+			
+			$(document).ready(function()
+			{	
+			
+			
+				
+			$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//lock the buttons
+				//LockSimple();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+			});
+			
+			 function changeText() 
+			 {
+
+			  var selected  = $('#UserAnswer option:selected');
+			  userAnswer=selected.val();
+			  newuserAnswer='<span id="s'+questionNum+'">'+userAnswer+'</span>'
+			 
+
+			  $("#UserAnswer").replaceWith(newuserAnswer);
+			  $(getSpan).css({"background-color": "#ffc"});
+			 
+			 }  
+			function setQuestionNum(data)
+			{
+				questionNum=data;
+				idScroll=data;
+				
+			}
+			function GetItem()
+			{
+			
+			 if(questionNum==0)
+			 {
+				questionNum++;
+				parent.GetWorldEvent("questionNum_"+questionNum);
+				parent.GetWorldEvent("Continue")   
+			 
+			 }
+			 else if(questionNum>0 && questionNum<11)
+			 {
+					idScroll++;
+					//parent.GetWorldEvent(idScroll)   ;
+					if(idScroll==3 || idScroll==5 || idScroll==8 || idScroll==9 || idScroll==10)
+					{
+				
+					
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(210);
+				
+					
+					
+					}
+					
+				getSpan2=".s"+(questionNum-1);
+			
+				$(getSpan2).removeAttr('style');
+				
+			   //parent.GetWorldEvent("here");
+			   
+				//$(getSpan).animate({backgroundColor: "transparent", color: "black"}, 1000);
+				//$(getQ).css({font-size: "28px", padding: "15px 30px 0px 40px",line-height:"40px"}, 1000);
+				$(getQ).css({"text-decoration": "none"});
+				$(getQ).css({"font-size": "28px"});
+				$(jordanAnswer).css({"font-size": "28px"});
+				$(jordanAnswer).css({"text-decoration": "none"});
+			 
+				questionNum++;
+				parent.GetWorldEvent("questionNum_"+questionNum);
+				parent.GetWorldEvent("Continue")   
+			 
+			 }
+			else
+			{
+				parent.GetWorldEvent("Stop") ;
+
+			}
+			
+		}
+		
+		function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-220);
+			}
+		
+		function Start()
+			{
+				parent.GetWorldEvent("MediaLoaded");
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				Lock();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+			function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+		
+		function ShowItem()
+		{
+			jordanAnswer="#j"+questionNum;
+			getSpan=".s"+questionNum;
+			getQ="#a"+questionNum;
+			getCorrect="#Correct"+questionNum;
+			getSpan2=".s"+(questionNum-1);
+			//getSpanContent=$(getSpan).html();
+			$(getSpan2).removeAttr('style');
+			$(getSpan).css({"border-radius": "12px"});
+			$(getSpan).css({"padding-left": "4px"});
+			$(getSpan).css({"padding-right":"4px"});
+			$(getSpan).css({"background-color": "#ae91e0"});
+				
+			
+			$(getQ).css({"text-decoration": "underline"});
+			$(getQ).css({"font-size": "50px"});
+			lockStates=1; 
+			parent.GetWorldEvent("MediaAnswerShown");
+		}
+		
+		function Unlock()
+		{
+			
+				qContent=$(getQ).html();
+				
+			
+			$( getSpan).mouseover(function()
+				{
+					$(this).stop().animate({backgroundColor: "#edff73"}, 300); 
+					newContent=$(this).html();
+					 
+							 if(newContent=="The nurse" && qContent=="their")
+							{
+								$(getQ).html(newContent+"'s");
+							  }
+							  else if(newContent=="the doctor" && qContent=="their")
+							  {
+								$(getQ).html(newContent+"'s");
+							  }
+							  else if(newContent=="Kim and Ben" && qContent=="their")
+							  {
+								$(getQ).html(newContent+"'s");
+							  }
+							   else if(newContent=="nurses" && qContent=="They")
+							  {
+								$(getQ).html("the "+newContent);
+							  }
+							    else if(newContent=="parents" && qContent=="their")
+							  {
+								$(getQ).html("the "+newContent+"'s");
+							  }
+							    else if(newContent=="classes" && qContent=="their")
+							  {
+								$(getQ).html("the "+newContent+"'s");
+							  }
+							  else
+							  {
+								$(getQ).html(newContent);
+							  }
+					
+					});
+				
+				
+				
+				$( getSpan ).mouseout(function()
+				{ 
+					$(this).stop().animate({backgroundColor: "#ae91e0"}, 300); 
+					
+					$(getQ).html(qContent);
+					  
+				  
+				});
+				
+				$(getSpan).click(function()
+				{
+				parent.PlaySound('clicked0.wav');
+				//
+				newContent=$(this).html();
+				
+				$(getQ).html(newContent);
+				var getSelctedID=$(this).attr("id");
+				var userRealAnswer= $(this).text();
+				var CorrectID="Correct"+questionNum;
+				if( getSelctedID== CorrectID)
+				//if( getValue== "Correct")
+				{
+				strId+="1";
+				parent.GetWorldEvent(strId);
+				userAnswer = $(this).attr("value");
+				}
+				Lock();
+				parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userRealAnswer);
+				//parent.GetWorldEvent(userAnswer);
+				userAnswer="Incorrect";
+				//$(this).animate({backgroundColor: "yellow", color: "black"}, 1000);
+				$(this).stop().animate({backgroundColor: "yellow", color: "black"}, 300); 
+				});
+				
+				
+				//$("#a1").replaceWith(newContent);
+				
+				
+				//$( ".s1" ).mouseout(function()
+				//{ $(this).animate({backgroundColor: "#c2faff"}, 300); });
+				$(getSpan).css({"border-radius": "12px"});
+				$(getSpan).css({"padding-left": "4px"});
+				$(getSpan).css({"padding-right":"4px"});
+				$(getSpan).css({"background-color": "#ae91e0"});
+				$( getSpan).css( 'cursor', 'pointer' );
+				
+				
+				
+				/*
+				$(getSpan).click(function(){
+						//$("#s1").css({"background-color": "green"});
+			var data=$(this).attr("id");
+				if(flag==1)
+				{
+					if(questionNum==1)
+					{
+					var newContent='<select id="UserAnswer" onchange = "changeText()" style="font-family:Segoe Print; font-size:22px; background-color: #ffc" > <option >'+"her"+'</option> <option id = A>'+"claiming"+'</option><option id = B>'+"stopping"+'</option><option id =C>'+"beginning"+'</option><option id =D>'+"pausing"+'</option></select>'
+						
+					$("#s1").replaceWith(newContent);
+					flag=0;
+					}
+					
+					
+					else if(questionNum==2)
+					{
+					var newContent='<select id="UserAnswer" onchange = "changeText()" style="font-family:Segoe Print; font-size:22px; background-color: #ffc" > <option >'+"she"+'</option> <option id = A>'+"different"+'</option><option id = B>'+"common"+'</option><option id =C>'+"the same"+'</option><option id =D>'+"rare"+'</option></select>'
+						
+					$("#s2").replaceWith(newContent);
+					flag=0;
+					}
+									
+			}
+			
+		});*/
+		}
+		
+		function ShowMediaAnswer()
+		{
+		//$(jordanAnswer).animate({backgroundColor: "yellow", color: "black"}, 1000);
+			$(getCorrect).animate({backgroundColor: "green", color: "white"}, 1000);
+			 return parent.PlaySound('success0.wav');
+			//$(getSpan).html(correctAnswer);
+			//$(getSpan).css({"background-color": "#55f055"});
+		}
+		
+		
+			
+		function Lock()
+		{
+
+			//unbinds click function and hover
+			$(getSpan ).unbind("click");
+			$( getSpan).unbind("mouseover");
+			$( getSpan ).unbind("mouseout");
+			
+			//sets disabled mouse cursor
+			$( "getSpan" ).css( 'cursor', 'not-allowed' );
+			
+			//sets disabled colors WITH animation
+			//$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+		}
+		
+		function LlockSimple()
+		{
+			//unbinds click function and hover
+			$( ".mybutton" ).unbind("click");
+			$( ".mybutton" ).unbind("mouseover");
+			$( ".mybutton" ).unbind("mouseout");
+			
+			//sets disabled mouse cursor
+			$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+			
+			//sets disabled colors WITHOUT animation
+			$( ".mybutton" ).css( 'backgroundColor', '#474747' );
+			$( ".mybutton" ).css( 'color', 'gray' );
+		}
+		
+		//NOTE! THIS IS NOT THE UNLOCK FUNCTION FOR QUESTIONS WITH A CORRECT OR INCORRECT ANSWER! THIS IS ONLY TO BE USED FOR SOMETHING LIKE A CONTINUE BUTTON.
+		function Uunlock()
+		{
+			//this section determines the font size for the click animation used in the clickFunc function below
+			var butFontSize = $( ".mybutton" ).css( "font-size" );
+			var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+			var butAnimSize = butFontSizeRaw - 2 + "px";
+			
+			var clickFunc = function()
+			{
+				//play clicked sound
+				parent.PlaySound('clicked0.wav');
+				
+				//animate the font size of clicked option
+				$(this).animate({fontSize: butAnimSize}, 75);
+				$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+				
+				//lock button and sent Stop call to ASAT
+				Lock();
+				return parent.GetWorldEvent("Stop");
+			};
+			
+			//this sets the hover animation & cursor for buttons
+			$( ".mybutton" ).mouseover(function()
+			{ $(this).stop().animate({backgroundColor: "#edff73"}, 300); });
+			$( ".mybutton" ).mouseout(function()
+			{ $(this).stop().animate({backgroundColor: "#c2faff"}, 300); });
+			$( ".mybutton" ).css( 'cursor', 'pointer' );
+			
+			//animates unlocking via font color & background color
+			$(".mybutton").animate({backgroundColor: "#background-color: #c2faff;", color: "#212121"}, 1000);
+			
+			//bind the clickFunc above to any ".mybutton"
+			$(".mybutton").bind( "click", clickFunc );
+		}
+		function setQuestionBumber(data)
+			{
+			questionNum=data;
+			}
+		function GetMediaEvent(data)
+			{
+			
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+					
+					if(questionNum==1 ||   questionNum==2 || questionNum==4 ||   questionNum==5 ||  questionNum==6 ||   questionNum==8 || questionNum==10 )
+						{
+						parent.GetWorldEvent("Cristina");
+						}
+						else
+						{
+						parent.GetWorldEvent("Jordan");
+						}
+				$(getSpan).css({"border-radius": "12px"});
+				$(getSpan).css({"padding-left": "4px"});
+				$(getSpan).css({"padding-right":"4px"});
+				$(getSpan).css({"background-color": "#ae91e0"});
+				
+				
+				}
+				else if(data == "NextPage")
+				{
+					$("#buttonBox").fadeOut(1000);
+					$("#questionText").fadeOut(1000);
+				
+					if (strId.length >= 7)
+					{
+					parent.nextPage("media/"+"Lesson9-Main2-0new.html?id="+strId);
+					}
+					else 
+					{
+						parent.nextPage("media/"+"Lesson9-Main1-0new.html?id="+strId);
+					}
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "JordanAnswer")
+				{
+				
+				}
+				else if (data == "Difficulty") 
+				{
+					
+					
+					
+					if(questionNum==11 && strId>=8)
+						{
+						parent.GetWorldEvent("ChangeToHard");
+						}
+					else if(questionNum==11 && strId<8)
+						{
+						parent.GetWorldEvent("ChangeToEasy");
+						}
+						else{
+						
+						parent.GetWorldEvent(diff);
+						}
+					
+					
+					
+				}
+			}
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div class="mainTextHead">
+					A Healthy Pregnancy
+				</div>
+				<div id="para1" class="para">
+				<span class="indent"></span> <span  class="s1">Kim</span> and Ben wanted to have a baby. <span id="j1" class="s1">Ben</span> is very happy because she is pregnant. They want to have a healthy baby. Seeing <span  id="Correct1" value="Correct"   class="s1">a doctor</span> regularly is an important part of prenatal care. Kim sees <span  id="a1" >her</span> every month for checkups.
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>At the clinic <span id="Correct2" value="Correct"  class="s2">the nurse</span> weighs <span    class="s2 s3">Kim</span> before she sees <span  class="s2">the doctor</span>. Then <span  id="a2">she</span> takes Kim's blood pressure and gets a blood sample. <span   class="s4 s3">The nurse</span> completes a lot of the first tasks but <span id="Correct3" value="Correct" class="s4 s3" >the doctor</span> listens to the baby's heart. <span  id="a3" >She</span> also lets <span id="Correct4" value="Correct" class="s4" >Kim and Ben</span> listen. It is very exciting for them to hear the "thump, <span id="3" >thump</span>, thump" of  <span  id="a4" >their</span> little one's heart!
+				</div>
+				
+				<div id="para3" class="para">
+				<span class="indent"></span>  Before <span id="5" class="s5 s6">the nurse</span> checks them out, <span  id="Correct5" value="Correct"  class="s5 s6">Kim</span> and Ben talk with the doctor.  <span  id="Correct6" value="Correct" class="s5 s6">The doctor</span> reminds <span  id="a5" >her</span> to eat healthy foods and drink lots of water. <span  id="a6" >She</span> also explains that Kim needs to take a daily vitamin. <span   class="s7">Good foods, water and vitamins</span> keep <span  id="Correct8" value="Correct"  class="s8">the baby</span> and mom healthy. <span class="s7">The doctor</span> explains <span  id="Correct7" value="Correct"  class="s7 s8">the harmful effects</span> of smoking, drinking alcohol and using drugs during pregnancy. <span   id="a7" >They</span> could harm the baby's <span  class="s8">health</span>. The doctor also tells Kim and Ben what to expect as <span  id="a8" >it</span> <span id="7">grows.</span> 
+				</div>
+				
+				<div id="para4" class="para">
+				<span class="indent"></span><span   id="Correct9" value="Correct"  class="s9">Kim and Ben</span> will visit the hospital soon to tour where their baby will be born. They will see <span  class="s9">the birthing rooms</span>. They will also visit the nursery where <span  class="s9"> the nurses</span> care for the babies while moms rest. <span  id="a9" >They</span> are eager to visit.
+				</div>
+				
+				<div id="para5" class="para">
+				<span class="indent"></span>  At the hospital, <span  id="Correct10" value="Correct"  class="s10 s11">Kim and Ben</span> will receive information about prenatal classes. The nurses and the doctors at the hospital are very helpful in providing this information. These <span  class="s10">classes</span>   are a good way to meet other <span  class="s10 s11">parents</span> and learn more about <span  id="a10" >their</span> baby. <span  id="Correct11" value="Correct"  class="s11">Teachers</span> will talk about the birthing process. <span  id="a11" >They</span> will also discuss feeding, dressing, diapering, and bathing babies.
+				</div>
+			</div>
+			<!-- <div class='mybutton'>Click HERE to continue . . .</div> -->
+		</div>
+	</body>
+</html>

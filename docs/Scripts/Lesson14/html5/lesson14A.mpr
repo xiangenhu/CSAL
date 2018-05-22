@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+   <message id="A1" name="A1">
+    <say>Jordan, which answer do you think is correct?</say>
+  </message>
+  <message id="A2" name="A2">
+    <say>Jordan, what is your answer?</say>
+  </message>
+  <message id="A3" name="A3">
+    <say>Jordan, your answer, please.</say>
+  </message>
+  <message id="A4" name="A4">
+    <say>Jordan, what about you? What do you think?</say>
+  </message>
+  <message id="A5" name="A5">
+    <say>Jordan, do you have an answer?</say>
+  </message>
+  <message id="A6" name="A6">
+    <say>JJordan, could you please tell us your answer?</say>
+  </message>
+  <message id="A7" name="A7">
+    <say>Jordan, what is your answer?</say>
+  </message>
+  <message id="A8" name="A8">
+    <say>Jordan, your answer, please.</say>
+  </message>
+  <message id="A9" name="A9">
+    <say>Jordan, it is your turn. What is your answer?</say>
+  </message>
+  <message id="A10" name="A10">
+    <say>Jordan, what about you? What do you think?</say>
+  </message>
+  <message id="A11" name="A11">
+    <say>Jordan, do you have an answer?</say>
+  </message>
+  <message id="A12" name="A12">
+    <say>JJordan, could you please tell us your answer?</say>
+  </message>
+  <message id="A13" name="A13">
+    <say>Jordan and</say>
+  </message>
+  <message id="A14" name="A14">
+    <say>, let's do it again.</say>
+  </message>
+  <message id="A15" name="A15">
+    <say>Jordan and</say>
+  </message>
+  <message id="A16" name="A16">
+    <say>, I am sorry, but both of you are incorrect.</say>
+  </message>
+  <message id="A17" name="A17">
+    <say>Oops, Jordan and</say>
+  </message>
+  <message id="A18" name="A18">
+    <say>, you are both wrong.</say>
+  </message>
+  <message id="A19" name="A19">
+    <say>Jordan and</say>
+  </message>
+  <message id="A20" name="A20">
+    <say>, sorry! you are both incorrect.</say>
+  </message>
+  <message id="A21" name="A21">
+    <say>Well, Jordan and</say>
+  </message>
+  <message id="A22" name="A22">
+    <say>, you both answered this question incorrectly.</say>
+  </message>
+  <message id="A23" name="A23">
+    <say>Unfortunately, Jordan and</say>
+  </message>
+  <message id="A24" name="A24">
+    <say>, you  are both incorrect this time.</say>
+  </message>
+  <message id="A25" name="A25">
+    <say>Sorry, Jordan and</say>
+  </message>
+  <message id="A26" name="A26">
+    <say>, unfortunately, you are both incorrect.</say>
+  </message>
+  <message id="A27" name="A27">
+    <say>Jordan and</say>
+  </message>
+  <message id="A28" name="A28">
+    <say>, this time you are both incorrect.</say>
+  </message>
+  <message id="A29" name="A29">
+    <say>Ok, let's see what answer Jordan chose.</say>
+  </message>
+  <message id="A30" name="A30">
+    <say>Alright, let's see what Jordan chose.</say>
+  </message>
+  <message id="A31" name="A31">
+    <say>Well, let's see whether Jordan agrees with this answer.</say>
+  </message>
+  <message id="A32" name="A32">
+    <say>Ok. </say>
+  </message>
+  <message id="A33" name="A33">
+    <say>Okay.</say>
+  </message>
+  <message id="A34" name="A34">
+    <say>Alright.</say>
+  </message>
+  <message id="A35" name="A35">
+    <say>, Good job! You got it.</say>
+  </message>
+  <message id="A36" name="A36">
+    <say>, you are right! Great job!</say>
+  </message>
+  <message id="A37" name="A37">
+    <say>, you are right! That's fantastic!</say>
+  </message>
+  <message id="A38" name="A38">
+    <say>, you are correct! Nice job!</say>
+  </message>
+  <message id="A39" name="A39">
+    <say>, nice work! You are right!</say>
+  </message>
+  <message id="A40" name="A40">
+    <say>, awesome! You are correct!</say>
+  </message>
+  <message id="A41" name="A41">
+    <say>, very good! You got it!</say>
+  </message>
+  <message id="A42" name="A42">
+    <say>and Jordan, you both got that one correct! Good job!</say>
+  </message>
+  <message id="A43" name="A43">
+    <say>and Jordan, you are both right! Great job!</say>
+  </message>
+  <message id="A44" name="A44">
+    <say>and Jordan, both of you are right! That's fantastic!</say>
+  </message>
+  <message id="A45" name="A45">
+    <say>and Jordan, both of you are correct! Nice job!</say>
+  </message>
+  <message id="A46" name="A46">
+    <say>and Jordan, nice work! You are both right!</say>
+  </message>
+  <message id="A47" name="A47">
+    <say>and Jordan, awesome! Both of you are correct!</say>
+  </message>
+  <message id="A48" name="A48">
+    <say>and Jordan, very good! You both got it!</say>
+  </message>
+  <message id="A49" name="A49">
+    <say>Yes,</say>
+  </message>
+  <message id="A50" name="A50">
+    <say>and Jordan! Nice job! You are both right!</say>
+  </message>
+  <message id="A51" name="A51">
+    <say>, you can do it! Please at least have a try! Let me repeat my question again.</say>
+  </message>
+  <message id="A52" name="A52">
+    <say>Yes,</say>
+  </message>
+  <message id="A53" name="A53">
+    <say>, come on! You can do it! Have a try! I will repeat my question again.</say>
+  </message>
+  <message id="A54" name="A54">
+    <say>Yes,</say>
+  </message>
+  <message id="A55" name="A55">
+    <say>, please give it a try! I belive you have an answer. Now I wil repeat my question again..</say>
+  </message>
+  <message id="A56" name="A56">
+    <say>Yes,</say>
+  </message>
+  <message id="A57" name="A57">
+    <say>, please try it. I think you know this one! I'll repeat the question.</say>
+  </message>
+  <message id="A58" name="A58">
+    <say>Yes,</say>
+  </message>
+  <message id="A59" name="A59">
+    <say>, I bet you know this one! Give it a try! I'll say the question again.</say>
+  </message>
+  <message id="A60" name="A60">
+    <say>Yes,</say>
+  </message>
+  <message id="A61" name="A61">
+    <say>, I bet you can come up with an answer for this. Give it a try! I'll repeat the question.</say>
+  </message>
+  <message id="A62" name="A62">
+    <say>Yes,</say>
+  </message>
+  <message id="A63" name="A63">
+    <say>, I'll repeat the question. I bet you know the answer for it! Give it a try!</say>
+  </message>
+  <message id="A64" name="A64">
+    <say>Yes,</say>
+  </message>
+  <message id="A65" name="A65">
+    <say>, you can do it! Give it a try! I'll say the question again.</say>
+  </message>
+  <message id="A66" name="A66">
+    <say>Yes,</say>
+  </message>
+  <message id="A67" name="A67">
+    <say>, give it a go! I'll repeat the question and I bet you'll know the answer.</say>
+  </message>
+  <message id="A68" name="A68">
+    <say>Yes,</say>
+  </message>
+  <message id="A69" name="A69">
+    <say>, I think you know this one. Give it a go! I'll repeat the question, first.</say>
+  </message>
+  <message id="A70" name="A70">
+    <say>Let me repeat my question again.</say>
+  </message>
+  <message id="A71" name="A71">
+    <say>I'll say the question again.</say>
+  </message>
+  <message id="A72" name="A72">
+    <say>Now I wil repeat my question again.</say>
+  </message>
+  <message id="A73" name="A73">
+    <say>I'll repeat the question.</say>
+  </message>
+  <message id="A74" name="A74">
+    <say>I'll repeat the question, first.</say>
+  </message>
+  <message id="A75" name="A75">
+    <say>Jordan, do you think that is right?</say>
+  </message>
+  <message id="A76" name="A76">
+    <say>Jordan, do you think</say>
+  </message>
+  <message id="A77" name="A77">
+    <say>is correct?</say>
+  </message>
+  <message id="A78" name="A78">
+    <say>Jordan, what do you think the answer is?</say>
+  </message>
+  <message id="A79" name="A79">
+    <say>Jordan, you are absolutely correct, good job.</say>
+  </message>
+  <message id="A80" name="A80">
+    <say>Jordan, you got it right, excellent!</say>
+  </message>
+  <message id="A81" name="A81">
+    <say>Jordan, you are right, that's great!</say>
+  </message>
+  <message id="A82" name="A82">
+    <say>Jordan, that is correct, well done!</say>
+  </message>
+  <message id="A83" name="A83">
+    <say>Jordan, that's right, great job!</say>
+  </message>
+  <message id="A84" name="A84">
+    <say>Right, Jordan! That is correct!</say>
+  </message>
+  <message id="A85" name="A85">
+    <say>Jordan, that's it! Nice job!</say>
+  </message>
+  <message id="A86" name="A86">
+    <say>Yes, Jordan! That's right!</say>
+  </message>
+  <message id="A87" name="A87">
+    <say>, good job! You are correct. Jordan, I'm sorry, you didn't get that one right.</say>
+  </message>
+  <message id="A88" name="A88">
+    <say>, you are correct. Nicely done! Jordan,  you are wrong!</say>
+  </message>
+  <message id="A89" name="A89">
+    <say>, great! You're right! Jordan, you are wrong.</say>
+  </message>
+  <message id="A90" name="A90">
+    <say>, awesome! That's right! Jordan, you didn't get it correct this time</say>
+  </message>
+  <message id="A91" name="A91">
+    <say>, nice job! That is correct! Jordan, you need more practice, you didn't get it right.</say>
+  </message>
+  <message id="A92" name="A92">
+    <say>, wonderful! That is absolutely correct! Jordan, your answer is incorrect!</say>
+  </message>
+  <message id="A93" name="A93">
+    <say>, Perfect! You got it! Jordan, sorry, you were incorrect.</say>
+  </message>
+  <message id="A94" name="A94">
+    <say>, that's it! Nice job! Jordan, I hate to say this, but you are wrong!</say>
+  </message>
+  <message id="A95" name="A95">
+    <say>, great job! You're doing really well! Jordan, you are wrong.</say>
+  </message>
+  <message id="A96" name="A96">
+    <say>Jordan, I am sorry, but you are incorrect.</say>
+  </message>
+  <message id="A97" name="A97">
+    <say>Oops, Jordan, you are wrong.</say>
+  </message>
+  <message id="A98" name="A98">
+    <say>Jordan, sorry! you are incorrect.</say>
+  </message>
+  <message id="A99" name="A99">
+    <say>Well, Jordan, you answered this question incorrectly.</say>
+  </message>
+  <message id="A100" name="A100">
+    <say>Unfortunately, Jordan, you are incorrect this time.</say>
+  </message>
+  <message id="A101" name="A101">
+    <say>Sorry, Jordan, unfortunately, you are incorrect.</say>
+  </message>
+  <message id="A102" name="A102">
+    <say>Jordan, this time you are incorrect</say>
+  </message>
+  <message id="A103" name="A103">
+    <say>, have you finished reading the text? Don't forget to click to continue to the next section.</say>
+  </message>
+  <message id="A104" name="A104">
+    <say>, what about you? If you've finished, click to continue to answer the question.</say>
+  </message>
+  <message id="A105" name="A105">
+    <say>, what about you? If you've finished, click to continue to move to the next section.</say>
+  </message>
+  <message id="A106" name="A106">
+    <say>The first sentence is an example of an event that fits with Rose's personality. She considers the risks involved before taking action.</say>
+  </message>
+  <message id="A107" name="A107">
+    <say>You're right, Jordan. But Rose's unusual behavior in the third sentence is what the author needed to move the plot forward. She takes a risk and tells Agnes who she is! Let's look at the following sentence to decide if it is a a character description or an event.</say>
+  </message>
+  <message id="A108" name="A108">
+    <say>Ok, Jordan and</say>
+  </message>
+  <message id="A109" name="A109">
+    <say>, let's see how this event connects to the descriptions of Rose's character.</say>
+  </message>
+  <message id="A110" name="A110">
+    <say>Rose was distracted by Agnes's appearance and words. So Rose did not realize Agnes stole her wallet and left.</say>
+  </message>
+  <message id="A111" name="A111">
+    <say>Welcome back,</say>
+  </message>
+  <message id="A112" name="A112">
+    <say>and Jordan!</say>
+  </message>
+  <message id="A113" name="A113">
+    <say>We are going to practice connecting the character descriptions and events to the plot. This is one way we can elaborate on the story - or understand information that the writer does not tell us directly. </say>
+  </message>
+  <message id="A114" name="A114">
+    <say>Yes. One is, does this description or event connect to the plot? Another is, how does this event or description connect to the plot?</say>
+  </message>
+  <message id="A115" name="A115">
+    <say>Let's start by reading this story, Rose the Cop. Push the Click to Continue button at the bottom of the passage when you have finished reading. If you like, you can click the green Read Text button at the bottom of the screen and read along with the recording. </say>
+  </message>
+  <message id="A116" name="A116">
+    <say>and Jordan, let's briefly wrap up what we learned from this activity.</say>
+  </message>
+  <message id="A117" name="A117">
+    <say>Yes, Jordan! But sometimes, the characters don't act as you expect that they will. This can lead to a major event, like what happened with Rose.</say>
+  </message>
+  <message id="A118" name="A118">
+    <say>And then, Agnes stole her wallet! Do you see how the character descriptions and events help to form the plot?</say>
+  </message>
+  <message id="A119" name="A119">
+    <say>Perfect, Jordan! You and</say>
+  </message>
+  <message id="A120" name="A120">
+    <say>are on your way to mastering the elaborating strategy!</say>
+  </message>
+  <message id="A121" name="A121">
+    <say>This event shows the reader that Rose is trying to do her job. She is watching Joseph, while pretending to read the newspaper.</say>
+  </message>
+  <message id="A122" name="A122">
+    <say>That's true, Jordan. Let's see how the next event that happens to Rose connects to the plot. </say>
+  </message>
+  <message id="A123" name="A123">
+    <say>Yes- Rose is the police woman trying to catch a thief!</say>
+  </message>
+  <message id="A124" name="A124">
+    <say>Correct, Jordan!</say>
+  </message>
+  <message id="A125" name="A125">
+    <say>Agnes is the antagonist and Rose is the protagonist. They are the main characters who have a conflict.</say>
+  </message>
+  <message id="A126" name="A126">
+    <say>It's a good one. In the following exercise, you and</say>
+  </message>
+  <message id="A127" name="A127">
+    <say>will read the highlighted sentence from the passage. You will decide if it is a character description or an event. Then, you will select an orange or pink icon to drag and drop onto the highlighted sentence.</say>
+  </message>
+  <message id="A128" name="A128">
+    <say>Nice work with the reading. In this story, there are really only two main characters. There is a protagonist and an antagonist.</say>
+  </message>
+  <message id="A129" name="A129">
+    <say>The protagonist is the hero or character that we want to support. The antagonist is the villain or character that we root against.</say>
+  </message>
+  <message id="A130" name="A130">
+    <say>That makes it seem more certain that Agnes stole Rose's wallet.</say>
+  </message>
+  <message id="A131" name="A131">
+    <say>Alright, Jordan and</say>
+  </message>
+  <message id="A132" name="A132">
+    <say>. Let's look at this next part of the story.</say>
+  </message>
+  <message id="A133" name="A133">
+    <say>Jordan, why would this description of Rose make her a good policewoman?</say>
+  </message>
+  <message id="A134" name="A134">
+    <say>Both of those things would make her good at her job. Let's see how that affects the rest of the story, Jordan.</say>
+  </message>
+  <message id="A135" name="A135">
+    <say>Unfortunately, Rose realizes that she trusted the wrong person.</say>
+  </message>
+  <message id="A136" name="A136">
+    <say>Good point, Jordan. Well, let's take a closer look at how this event connects to the plot.</say>
+  </message>
+  <message id="A137" name="A137">
+    <say>, who is the protagonist in this story?</say>
+  </message>
+  <message id="A138" name="A138">
+    <say>The protagonist in this story is Rose. We can get a clue from the title, Rose the Cop. We empathize with Rose after reading this story. </say>
+  </message>
+  <message id="A139" name="A139">
+    <say>, the protagonist is the character that the reader or audience wants to support.</say>
+  </message>
+  <message id="A140" name="A140">
+    <say>Please click the highlighted name that you think is the answer.</say>
+  </message>
+  <message id="A141" name="A141">
+    <say>, who is the antagonist in this story?</say>
+  </message>
+  <message id="A142" name="A142">
+    <say>The antagonist in the story is Agnes. She creates the conflict in the story. </say>
+  </message>
+  <message id="A143" name="A143">
+    <say>, the antagonist is the character who opposes the hero.</say>
+  </message>
+  <message id="A144" name="A144">
+    <say>Please click the highlighted name that you think is the answer.</say>
+  </message>
+  <message id="A145" name="A145">
+    <say>Correct, Jordan!</say>
+  </message>
+  <message id="A146" name="A146">
+    <say>, is this highlighted sentence a character description or an event?</say>
+  </message>
+  <message id="A147" name="A147">
+    <say>This sentence describes Rose's character. So it is a character description.</say>
+  </message>
+  <message id="A148" name="A148">
+    <say>, character descriptions tell us more about a character's personality, physical appearance, motives, and behaviours. Events are the actions that occur in a story.</say>
+  </message>
+  <message id="A149" name="A149">
+    <say>Drag and drop the description or event icon on the highlighted sentence.</say>
+  </message>
+  <message id="A150" name="A150">
+    <say>, we have a description of Rose's character that says Rose was not one to talk to strangers. Based on this description, which of the three highlighted actions seems most unlike Rose?</say>
+  </message>
+  <message id="A151" name="A151">
+    <say>According to this character description, Rose was not a person who talked to strangers. However, in one of the events she tells Agnes that she is a police officer even though she is under cover. This event shouldn't have happened according to Rose's character description. </say>
+  </message>
+  <message id="A152" name="A152">
+    <say>, we know from the description of Rose that she is naturally cautious about talking to strangers. It seems like one of the highlighted events below should not have happened based on that information. Which one do you think it is?</say>
+  </message>
+  <message id="A153" name="A153">
+    <say>Click the correct answer, please.</say>
+  </message>
+  <message id="A154" name="A154">
+    <say>, how does this event connect to the plot?</say>
+  </message>
+  <message id="A155" name="A155">
+    <say>The correct answer is that Rose trusted Agnes because of her appearance. Even though Rose pauses to consider the risk which seems in character, she allows Agnes to join her which seems out of character for Rose. This implies that Rose trusts Agnes.</say>
+  </message>
+  <message id="A156" name="A156">
+    <say>, when Rose pauses to consider the risk, what does she allow to happen?</say>
+  </message>
+  <message id="A157" name="A157">
+    <say>Please click the correct answer among four choices.</say>
+  </message>
+  <message id="A158" name="A158">
+    <say>, is this a character description or an event?</say>
+  </message>
+  <message id="A159" name="A159">
+    <say>This sentence describes what Rose is doing, so it is an event.</say>
+  </message>
+  <message id="A160" name="A160">
+    <say>, events usually refer to something that occurs in a certain situation. Descriptions help us understand what a character or situation is like.</say>
+  </message>
+  <message id="A161" name="A161">
+    <say>Drag and drop the description or event icon on the highlighted sentence.</say>
+  </message>
+  <message id="A162" name="A162">
+    <say>, think about the event above in which Rose is seated comfortably sipping coffee. Which highlighted character description below is connected to the event above?</say>
+  </message>
+  <message id="A163" name="A163">
+    <say>The correct answer is she was always aware of her surroundings when she walked down the street and cautious about every possible wolf that crossed her path. This description makes us think that Rose would be cautious about her surroundings and would watch Joseph. </say>
+  </message>
+  <message id="A164" name="A164">
+    <say>, one description emphasizes that Rose is always aware of her surroundings. The other description lets us know that she is skilled at knowing when people are telling the truth.</say>
+  </message>
+  <message id="A165" name="A165">
+    <say>Please click the correct orange character description below.</say>
+  </message>
+  <message id="A166" name="A166">
+    <say>, is this sentence a character description or an event?</say>
+  </message>
+  <message id="A167" name="A167">
+    <say>Action verbs are good clues for events. This event is crucial to the plot, because Rose realizes that the person she trusted has stolen her wallet.</say>
+  </message>
+  <message id="A168" name="A168">
+    <say>, events usually refer to an action that occurs in this story. Description refers to a static description.</say>
+  </message>
+  <message id="A169" name="A169">
+    <say>Drag and drop the description or event icon on the highlighted sentence.</say>
+  </message>
+  <message id="A170" name="A170">
+    <say>, how does this event connect to the plot?</say>
+  </message>
+  <message id="A171" name="A171">
+    <say>The correct answer is Rose was distracted and Agnes got away, because Rose looked at Agnes and decided that she must not be the pickpocket based on her appearance.</say>
+  </message>
+  <message id="A172" name="A172">
+    <say>, based on the highlighted event, what happens to Rose?</say>
+  </message>
+  <message id="A173" name="A173">
+    <say>Click the correct answer please.</say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+  	<message id="HSC010301550" name="HSC010301550">
+        <say>Ah-fee-a</say>
+		</message>
+		<message id="HSC010301551" name="HSC010301551">
+        <say>Dave</say>
+		</message>
+		<message id="HSC010301553" name="HSC010301553">
+        <say>Qudsia</say>
+		</message>
+		<message id="HSC010301556" name="HSC010301556">
+        <say>Nee-Low-Far</say>
+		</message>
+		<message id="HSC010301557" name="HSC010301557">
+        <say>Tracey</say>
+		</message>
+		<message id="HSC010301552" name="HSC010301552">
+        <say>Kevin</say>
+		</message>
+		<message id="HSC010301554" name="HSC010301554">
+        <say>Ree-Sham-ah-jeet</say>
+		</message>
+		<message id="HSC010301555" name="HSC010301555">
+        <say>Robyn</say>
+		</message>
+		<message id="HSC010301561" name="HSC010301561">
+        <say>Kayla</say>
+		</message>
+		<message id="HSC010301562" name="HSC010301562">
+        <say>Shan-ah-ees</say>
+		</message>
+		<message id="HSC010301563" name="HSC010301563">
+        <say>Paulette</say>
+		</message>
+		
+		<message id="HSC111701199" name="HSC111701199">
+			<say>Sh-ee-k</say>
+		</message>
+		<message id="HSC111701247" name="HSC111701247">
+			<say>Gloria</say>
+		</message>
+		<message id="HSC111701275" name="HSC111701275">
+			<say>Yo-me</say>
+		</message>
+		<message id="HSC111701500" name="HSC111701500">
+			<say>Aw-muhd</say>
+		</message>
+		<message id="MHSC111701501" name="HSC111701501">
+			<say>Aw-muhd</say>
+		</message>
+		<message id="HSC111701502" name="HSC111701502">
+			<say>Eric</say>
+		</message>
+		<message id="HSC111701503" name="HSC111701503">
+			<say>Sham-shod</say>
+		</message>
+		<message id="HSC111701504" name="HSC111701504">
+			<say>Joan</say>
+		</message>
+		<message id="HSC111701505" name="HSC111701505">
+			<say>Tan-beer</say>
+		</message>
+		<message id="HSC111701508" name="HSC111701508">
+			<say>Suzanne</say>
+		</message>
+		<message id="HSC111701510" name="HSC111701510">
+			<say>Anita</say>
+		</message>
+		
+		<message id="HSC122301521" name="HSC122301521">
+			<say>Steve</say>
+		</message>
+		<message id="HSC122301523" name="HSC122301523">
+			<say>David</say>
+		</message>
+		<message id="HSC122301526" name="HSC122301526">
+			<say>Derek</say>
+		</message>
+		<message id="HSC122301528" name="HSC122301528">
+			<say>Florence</say>
+		</message>
+		<message id="HSC122301529" name="HSC122301529">
+			<say>Ah-dah</say>
+		</message>
+		<message id="HSC122301534" name="HSC122301534">
+			<say>Alana</say>
+		</message>
+		<message id="HSC122301536" name="HSC122301536">
+			<say>Regina</say>
+		</message>
+		<message id="HSC122301520" name="HSC122301520">
+			<say>Julia</say>
+		</message>
+		<message id="HSC122301522" name="HSC122301522">
+			<say>Manuel</say>
+		</message>
+		<message id="HSC122301524" name="HSC122301524">
+			<say>Aretha</say>
+		</message>
+		<message id="HSC122301530" name="HSC122301530">
+			<say>Sandra</say>
+		</message>
+		<message id="HSC122301531" name="HSC122301531">
+			<say>Helen</say>
+		</message>
+		<message id="HSC122301533" name="HSC122301533">
+			<say>Hi-ah-sinth</say>
+		</message>
+		<message id="HSC122301535" name="HSC122301535">
+			<say>Dah-hah-boo</say>
+		</message>
+		<message id="HSC122301537" name="HSC122301537">
+			<say>Bridget</say>
+		</message>
+		<message id="HSC122301538" name="HSC122301538">
+			<say>Anna</say>
+		</message>
+		<message id="HSC122301539" name="HSC122301539">
+			<say>Azz-might</say>
+		</message>
+		<message id="CSU00413" name="CSU00413">
+			<say>Leonel</say>
+		</message>
+		<message id="CSU00422" name="CSU00422">
+			<say>Willie</say>
+		</message>
+		<message id="CSU00426" name="CSU00426">
+			<say>Jose</say>
+		</message>
+		<message id="CSU00451" name="CSU00451">
+			<say>Becky</say>
+		</message>
+		<message id="CSU00453" name="CSU00453">
+			<say>Diana</say>
+		</message>
+		<message id="CSU00461" name="CSU00461">
+			<say>Ibrahim</say>
+		</message>
+		<message id="CSU00417" name="CSU00417">
+			<say>Freddie</say>
+		</message>
+		<message id="CSU00446" name="CSU00446">
+			<say>William</say>
+		</message>
+		<message id="CSU00418" name="CSU00418">
+			<say>Jamar</say>
+		</message>
+		<message id="CSU00424" name="CSU00424">
+			<say>Marie</say>
+		</message>
+		<message id="CSU00442" name="CSU00442">
+			<say>Ronnie</say>
+		</message>
+		<message id="CSU00420" name="CSU00420">
+			<say>Jessie</say>
+		</message>
+		<message id="CSU00445" name="CSU00445">
+			<say>Bertha</say>
+		</message>
+		<message id="CSU00455" name="CSU00455">
+			<say>Amado</say>
+		</message>
+		<message id="CSU00457" name="CSU00457">
+			<say>Janna</say>
+		</message>
+		<message id="CSU00430" name="CSU00430">
+			<say>Fanny</say>
+		</message>
+		<message id="CSU00415" name="CSU00415">
+			<say>Gonzalo</say>
+		</message>
+		<message id="CSU00421" name="CSU00421">
+			<say>Chantale</say>
+		</message>
+		<message id="CSU00448" name="CSU00448">
+			<say>Emmanuel</say>
+		</message>
+		<message id="CSU00450" name="CSU00450">
+			<say>Edina</say>
+		</message>
+		<message id="CSU00449" name="CSU00449">
+			<say>Noah</say>
+		</message>
+		<message id="CSU00428" name="CSU00428">
+			<say>Manjang</say>
+		</message>
+		<message id="CSU00444" name="CSU00444">
+			<say>Maria</say>
+		</message>
+		<message id="CSU00433" name="CSU00433">
+			<say>Maria</say>
+		</message>
+		<message id="CSU00459" name="CSU00459">
+			<say>Rene</say>
+		</message>
+		<message id="CSU00431" name="CSU00431">
+			<say>Alicia</say>
+		</message>
+		<message id="CSU00400" name="CSU00400">
+			<say>Pamela</say>
+		</message>
+		<message id="CSU00402" name="CSU00402">
+			<say>Douglas</say>
+		</message>
+		<message id="CSU00403" name="CSU00403">
+			<say>Sanita</say>
+		</message>
+		<message id="CSU00405" name="CSU00405">
+			<say>Nekita</say>
+		</message>
+		<message id="CSU00439" name="CSU00439">
+			<say>De'Janique</say>
+		</message>
+		<message id="CSU00410" name="CSU00410">
+			<say>Corine</say>
+		</message>
+		<message id="CSU00435" name="CSU00435">
+			<say>Hazel</say>
+		</message>
+		<message id="CSU00456" name="CSU00456">
+			<say>Juanita</say>
+		</message>
+		<message id="CSU00441" name="CSU00441">
+			<say>Dexter</say>
+		</message>
+		<message id="CSU00458" name="CSU00458">
+			<say>Kimberly</say>
+		</message>
+		<message id="CSU00407" name="CSU00407">
+			<say>De-CAR-EE-elle</say>
+		</message>
+		<message id="CSU00437" name="CSU00437">
+			<say>SAY-bra</say>
+		</message>
+		<message id="CSU00408" name="CSU00408">
+			<say>Rashad</say>
+		</message>
+		<message id="CSU00409" name="CSU00409">
+			<say>Sylvia</say>
+		</message>
+		<message id="CSU00401" name="CSU00401">
+			<say>Fred</say>
+		</message>
+		<message id="CSU00404" name="CSU00404">
+			<say>Shelandra</say>
+		</message>
+		<message id="CSU00438" name="CSU00438">
+			<say>Cynthia</say>
+		</message>
+		<message id="CSU00440" name="CSU00440">
+			<say>Ellis</say>
+		</message>
+		<message id="CSU00460" name="CSU00460">
+			<say>Kenya</say>
+		</message>
+		<message id="CSU00406" name="CSU00406">
+			<say>Teatrick</say>
+		</message>
+		<message id="CSU00462" name="CSU00462">
+			<say>Carolyn</say>
+		</message>
+		
+		<message id="CSU00432" name="CSU00432">
+			<say>Zakia</say>
+		</message>
+		<message id="HSC010301564" name="HSC010301564">
+			<say>Katia</say>
+		</message>
+		
+		<message id="CSU00427" name="CSU00427">
+			<say>Alexy</say>
+		</message>
+		<message id="D20160204" name="D20160204">
+			<say>User</say>
+		</message>	
+    </scene>
+	</stage>
+</project>

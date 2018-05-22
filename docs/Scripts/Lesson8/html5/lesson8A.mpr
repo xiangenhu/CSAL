@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+	<message id="A" name="A">
+    <say>A</say>
+  </message>
+    <message id="B" name="B">
+    <say>B</say>
+  </message>
+    <message id="C" name="C">
+    <say>C</say>
+  </message>
+    <message id="D" name="D">
+    <say>D</say>
+  </message>
+  <message id="L1010" name="L1010">
+    <say>what does the word tie mean? Please click the correct meaning below.</say>
+  </message>
+    <message id="L1011" name="L1011">
+    <say>Whenever my friends compete in a bicycle race, they always end in a tie.</say>
+  </message>
+  <message id="L1012" name="L1012">
+    <say>an accessory worn around the neck.</say>
+  </message>
+  <message id="L1013" name="L1013">
+    <say>finishing a race at the same time.</say>
+  </message>
+  <message id="L1017" name="L1017">
+    <say>The correct meaning of tie in this sentence is finishing a race at the same time.</say>
+  </message>
+  <message id="L1020" name="L1020">
+    <say>what does the author mean by class? Click the correct meaning of class, please.</say>
+  </message>
+  <message id="L1021" name="L1021">
+    <say>The teacher is always patient with her class.</say>
+  </message>
+  <message id="L1022" name="L1022">
+    <say>a body of students meeting to learn a subject.</say>
+  </message>
+  <message id="L1023" name="L1023">
+    <say>a body of students meeting to learn a subject.</say>
+  </message>
+  <message id="L1027" name="L1027">
+    <say>The appropriate meaning of class here means a body of students meeting to learn a subject.</say>
+  </message>
+  <message id="L1030" name="L1030">
+    <say>which meaning of bank is correct in this sentence?</say>
+  </message>
+  <message id="L1031" name="L1031">
+    <say>Ira goes to the bank to pay bills.</say>
+  </message>
+  <message id="L1032" name="L1032">
+    <say>a place where money is held.</say>
+  </message>
+  <message id="L1033" name="L1033">
+    <say>the edge of a river or body of water.</say>
+  </message>
+  <message id="L1037" name="L1037">
+    <say>Ira goes to the place where she could use money to pay bills. So, the correct answer here is a place where money is held.</say>
+  </message>
+  <message id="L1040" name="L1040">
+    <say>what does left mean here?</say>
+  </message>
+  <message id="L1041" name="L1041">
+    <say>Elvis turned right when he left the building.</say>
+  </message>
+  <message id="L1042" name="L1042">
+    <say>the opposite of right.</say>
+  </message>
+  <message id="L1043" name="L1043">
+    <say>the act of departing or leaving.</say>
+  </message>
+  <message id="L1047" name="L1047">
+    <say>Elvis turned right when he departed the building. Thus, the appropriate meaning of left in this sentence is the act of departing or leaving.</say>
+  </message>
+  <message id="L1050" name="L1050">
+    <say>what is this author's meaning of tracks in this sentence?</say>
+  </message>
+  <message id="L1051" name="L1051">
+    <say>The lion tracks the zebra.</say>
+  </message>
+  <message id="L1052" name="L1052">
+    <say>to follow or pursue a series of marks.</say>
+  </message>
+  <message id="L1053" name="L1053">
+    <say>parallel lines of rail for a train.</say>
+  </message>
+  <message id="L1057" name="L1057">
+    <say>The lion follows the zebra because it wants to eat the zebra. The correct meaning of track is to follow or pursue a series of marks.</say>
+  </message>
+  <message id="L1060" name="L1060">
+    <say>what is the meaning of type here?</say>
+  </message>
+  <message id="L1061" name="L1061">
+    <say>Because of his new job Harold learned to type quickly using his computer.</say>
+  </message>
+  <message id="L1062" name="L1062">
+    <say>to write using a keyboard.</say>
+  </message>
+  <message id="L1063" name="L1063">
+    <say>a sort or kind.</say>
+  </message>
+  <message id="L1067" name="L1067">
+    <say>The correct answer of type is to write using a keyboard. Harold can write quickly when using a keyboard.</say>
+  </message>
+  <message id="L1070" name="L1070">
+    <say>what does light mean in this sentence?</say>
+  </message>
+  <message id="L1071" name="L1071">
+    <say>Please turn on the light; it is too dark in the room.</say>
+  </message>
+  <message id="L1072" name="L1072">
+    <say>something that makes things visible.</say>
+  </message>
+  <message id="L1073" name="L1073">
+    <say>having little weight, easy to carry.</say>
+  </message>
+  <message id="L1077" name="L1077">
+    <say>The correct answer is something that makes things visible. The speaker needs something that makes things in the room visible.</say>
+  </message>
+  <message id="L1080" name="L1080">
+    <say>what is a check?</say>
+  </message>
+  <message id="L1081" name="L1081">
+    <say>Yesterday I wrote a check for my new car.</say>
+  </message>
+  <message id="L1082" name="L1082">
+    <say>paper indicating payment made.</say>
+  </message>
+  <message id="L1083" name="L1083">
+    <say>to inspect and examine.</say>
+  </message>
+  <message id="L1087" name="L1087">
+    <say>I wrote a check for my car means I wrote a piece of paper indicating payment was made for my car. The correct answer is paper indicating payment made.</say>
+  </message>
+  <message id="L1090" name="L1090">
+    <say>what does missed mean in this sentence?</say>
+  </message>
+  <message id="L1091" name="L1091">
+    <say>I went home very late yesterday, so I missed my favorite TV show.</say>
+  </message>
+  <message id="L1092" name="L1092">
+    <say>to fail to do something.</say>
+  </message>
+  <message id="L1093" name="L1093">
+    <say>to feel the absence of something or someone.</say>
+  </message>
+  <message id="L1097" name="L1097">
+    <say>The correct answer is A, to fail to do something. In this sentence, I failed to watch my favorite TV show.</say>
+  </message>
+  <message id="L1100" name="L1100">
+    <say>what does the author mean by bear here?</say>
+  </message>
+  <message id="L1101" name="L1101">
+    <say>I couldn't bear having to give up my dog for adoption.</say>
+  </message>
+  <message id="L1102" name="L1102">
+    <say>to hold up under or be capable of.</say>
+  </message>
+  <message id="L1103" name="L1103">
+    <say>a large animal with coarse fur.</say>
+  </message>
+  <message id="L1107" name="L1107">
+    <say>The correct answer is to hold up or support.</say>
+  </message>
+  <message id="L2010" name="L2010">
+    <say>what is the meaning of tongue?</say>
+  </message>
+  <message id="L2011" name="L2011">
+    <say>What has a tongue but cannot talk? A shoe!</say>
+  </message>
+  <message id="L2012" name="L2012">
+    <say>the flap under the lacing or buckles of a shoe.</say>
+  </message>
+  <message id="L2013" name="L2013">
+    <say>the movable organ on the floor of the mouth.</say>
+  </message>
+  <message id="L2017" name="L2017">
+    <say>The correct answer is the flap under the lacing or buckles of a shoe, because it tells us this tongue can't talk like the organ in our mouth. In fact, it is the tongue of our shoe.</say>
+  </message>
+  <message id="L2020" name="L2020">
+    <say>what does point mean in this sentence?</say>
+  </message>
+  <message id="L2021" name="L2021">
+    <say>What did the pen say to the pencil? So what is your point?</say>
+  </message>
+  <message id="L2022" name="L2022">
+    <say>a sharp end.</say>
+  </message>
+  <message id="L2023" name="L2023">
+    <say>a particular point or spot.</say>
+  </message>
+  <message id="L2027" name="L2027">
+    <say>The pencil has a sharp end. So the correct answer is a sharp end.</say>
+  </message>
+  <message id="L2030" name="L2030">
+    <say>what is meant by rulers in this sentence?</say>
+  </message>
+  <message id="L2031" name="L2031">
+    <say>The king hated measuring objects so he destroyed all the rulers in the city.</say>
+  </message>
+  <message id="L2032" name="L2032">
+    <say>a tool used for measuring.</say>
+  </message>
+  <message id="L2033" name="L2033">
+    <say>person that governs and controls.</say>
+  </message>
+  <message id="L2037" name="L2037">
+    <say>The correct answer is a tool used for measuring. Rulers are used by students in math or art class.</say>
+  </message>
+  <message id="L2040" name="L2040">
+    <say>what are fans?</say>
+  </message>
+  <message id="L2041" name="L2041">
+    <say>Why are movie stars so cool? Because they have so many fans.</say>
+  </message>
+  <message id="L2042" name="L2042">
+    <say>enthusiastic followers.</say>
+  </message>
+  <message id="L2043" name="L2043">
+    <say>an instrument for producing a current of air.</say>
+  </message>
+  <message id="L2047" name="L2047">
+    <say>Fans of movie stars means Enthusiastic followers. So the correct answer is enthusiastic followers.</say>
+  </message>
+  <message id="L2050" name="L2050">
+    <say>what does this joke mean by bright?</say>
+  </message>
+  <message id="L2051" name="L2051">
+    <say>Why did the teacher wear sunglasses. ??Her students were too bright.</say>
+  </message>
+  <message id="L2052" name="L2052">
+    <say>radiating or reflecting light.</say>
+  </message>
+  <message id="L2053" name="L2053">
+    <say>smart.</say>
+  </message>
+  <message id="L2057" name="L2057">
+    <say>When do we wear sunglasses? When the sunlight is so strong. But in this joke, the joke says students are so bright or smart that the teacher must wear sunglasses in case their brightness is too strong. So the correct answer is smart.</say>
+  </message>
+  <message id="L2060" name="L2060">
+    <say>what does croak mean in this sentence?</say>
+  </message>
+  <message id="L2061" name="L2061">
+    <say>Scientists have found a way to remove frogs vocal cords, meaning they cannot croak.</say>
+  </message>
+  <message id="L2062" name="L2062">
+    <say>to make a deep harsh sound.</say>
+  </message>
+  <message id="L2063" name="L2063">
+    <say>slang for die.</say>
+  </message>
+  <message id="L2067" name="L2067">
+    <say>The correct answer is to make a deep harsh sound.</say>
+  </message>
+  <message id="L2070" name="L2070">
+    <say>what does the author mean by trip?</say>
+  </message>
+  <message id="L2071" name="L2071">
+    <say>Watch your step on the way out the door. Wouldn't want you to trip and break your nose.</say>
+  </message>
+  <message id="L2072" name="L2072">
+    <say>to stumble.</say>
+  </message>
+  <message id="L2073" name="L2073">
+    <say>a journey for some purpose.</say>
+  </message>
+  <message id="L2077" name="L2077">
+    <say>The correct answer is to stumble.</say>
+  </message>
+  <message id="L2080" name="L2080">
+    <say>what does crane mean here?</say>
+  </message>
+  <message id="L2081" name="L2081">
+    <say>There were two tall men sitting in front of her, so she had to crane her neck to see.</say>
+  </message>
+  <message id="L2082" name="L2082">
+    <say>to stretch toward an object of attention.</say>
+  </message>
+  <message id="L2083" name="L2083">
+    <say>a family of wading birds.</say>
+  </message>
+  <message id="L2087" name="L2087">
+    <say>The correct answer is to stretch toward an object of attention.</say>
+  </message>
+  <message id="L2090" name="L2090">
+    <say>what does engaged mean here?</say>
+  </message>
+  <message id="L2091" name="L2091">
+    <say>When the teacher said that 80% of the test would be reviewed, all of the students became very engaged.</say>
+  </message>
+  <message id="L2092" name="L2092">
+    <say>occupied the attention or efforts of a person.</say>
+  </message>
+  <message id="L2093" name="L2093">
+    <say>pledged to be married.</say>
+  </message>
+  <message id="L2097" name="L2097">
+    <say>The correct answer is occupied the attention or efforts of a person.</say>
+  </message>
+  <message id="L2100" name="L2100">
+    <say>what does buffet mean in this sentence?</say>
+  </message>
+  <message id="L2101" name="L2101">
+    <say>As 250 mph winds buffet the probe, its descent will then be slowed by a parachute.</say>
+  </message>
+  <message id="L2102" name="L2102">
+    <say>to force, move, or attack by repeated blows.</say>
+  </message>
+  <message id="L2103" name="L2103">
+    <say>a meal set out on a table for ready access.</say>
+  </message>
+  <message id="L2107" name="L2107">
+    <say>The correct answer is to force, move, or attack by repeated blows.</say>
+  </message>
+  <message id="L3010" name="L3010">
+    <say>in the following sentence, what does the underlined word of pale mean?</say>
+  </message>
+  <message id="L3011" name="L3011">
+    <say>Carrying a heavy pail for hours, she started trembling and her face turned pale.</say>
+  </message>
+  <message id="L3012" name="L3012">
+    <say>a  round container.</say>
+  </message>
+  <message id="L3013" name="L3013">
+    <say>light in color.</say>
+  </message>
+  <message id="L3017" name="L3017">
+    <say>and Jordan, the appropriate meaning of pale is light in color, Light in color is the meaning of p a l e.</say>
+  </message>
+  <message id="L3020" name="L3020">
+    <say>could you please tell me what the underlined bored means?</say>
+  </message>
+  <message id="L3021" name="L3021">
+    <say>Animal protection organizations published an announcement to blame hunters who bored on boars skin.</say>
+  </message>
+  <message id="L3022" name="L3022">
+    <say>a kind of male hog.</say>
+  </message>
+  <message id="L3023" name="L3023">
+    <say>to pierce with a tool.</say>
+  </message>
+  <message id="L3027" name="L3027">
+    <say>and Jordan, when we replace these two definitions in the sentence, that hunters used the tool to pierce on boars' skin makes sense. So the correct answer is to pierce with a turning or twisting movement of a tool.</say>
+  </message>
+  <message id="L3030" name="L3030">
+    <say>could you tell me what meaning of the underlined canons is?</say>
+  </message>
+  <message id="L3031" name="L3031">
+    <say>In the war, he quoted many canons to justify using a cannon against the enemy.</say>
+  </message>
+  <message id="L3032" name="L3032">
+    <say>general rules.</say>
+  </message>
+  <message id="L3033" name="L3033">
+    <say>large heavy guns on the carriage.</say>
+  </message>
+  <message id="L3037" name="L3037">
+    <say>and Jordan, he quoted many rules to justify his opinion, not using guns. In fact, large heavy guns on the carriage refers to the same pronounced word c a n n o n. So the correct answer is general rules.</say>
+  </message>
+  <message id="L3040" name="L3040">
+    <say>what is a course underlined in this sentence?</say>
+  </message>
+  <message id="L3041" name="L3041">
+    <say>The reading materials for this course are quite cheap, because they all are printed with coarse papers.</say>
+  </message>
+  <message id="L3042" name="L3042">
+    <say>harsh or grating.</say>
+  </message>
+  <message id="L3043" name="L3043">
+    <say>class, or progression in a particular direction.</say>
+  </message>
+  <message id="L3047" name="L3047">
+    <say>The correct answer is answer class.</say>
+  </message>
+  <message id="L3050" name="L3050">
+    <say>what is the meaning of the underlined maze?</say>
+  </message>
+  <message id="L3051" name="L3051">
+    <say>Whenever he visited the farm, the fields of maize, cotton, rice, and wheat were a maze to him.</say>
+  </message>
+  <message id="L3052" name="L3052">
+    <say>another word for corn.</say>
+  </message>
+  <message id="L3053" name="L3053">
+    <say>a confusing network of passages.</say>
+  </message>
+  <message id="L3057" name="L3057">
+    <say>The correct answer is a confusing network of passages.</say>
+  </message>
+  <message id="L3060" name="L3060">
+    <say>what is my-nyoot?</say>
+  </message>
+  <message id="L3061" name="L3061">
+    <say>Do check every step please. Keep in mind, minute problems cause serious damage.</say>
+  </message>
+  <message id="L3062" name="L3062">
+    <say>a short space of time; a moment.</say>
+  </message>
+  <message id="L3063" name="L3063">
+    <say>very small.</say>
+  </message>
+  <message id="L3067" name="L3067">
+    <say>The correct answer is very small.</say>
+  </message>
+  <message id="L3070" name="L3070">
+    <say>what does the author mean by learned?</say>
+  </message>
+  <message id="L3071" name="L3071">
+    <say>He is a very learned individual, because he spends all his spare time reading.</say>
+  </message>
+  <message id="L3072" name="L3072">
+    <say>having much knowledge, well informed.</say>
+  </message>
+  <message id="L3073" name="L3073">
+    <say>the act of studying.</say>
+  </message>
+  <message id="L3077" name="L3077">
+    <say>The correct answer is having much knowledge, well informed.</say>
+  </message>
+  <message id="L3080" name="L3080">
+    <say>what is meant by compact here?</say>
+  </message>
+  <message id="L3081" name="L3081">
+    <say>Boston is a compact city, which make it easier to travel by foot than by car.</say>
+  </message>
+  <message id="L3082" name="L3082">
+    <say>arranged within a small space.</say>
+  </message>
+  <message id="L3083" name="L3083">
+    <say>an agreement between two or more parties.</say>
+  </message>
+  <message id="L3087" name="L3087">
+    <say>The correct answer is arranged within a small space.</say>
+  </message>
+  <message id="L3090" name="L3090">
+    <say>what does this author mean by wound?</say>
+  </message>
+  <message id="L3091" name="L3091">
+    <say>Amanda was paid a large amount of money because she received a head wound while working.</say>
+  </message>
+  <message id="L3092" name="L3092">
+    <say>an injury to the body.</say>
+  </message>
+  <message id="L3093" name="L3093">
+    <say>to turn, twist, or bend something.</say>
+  </message>
+  <message id="L3097" name="L3097">
+    <say>The correct answer is an injury to the body.</say>
+  </message>
+  <message id="L3100" name="L3100">
+    <say>what is meant by whined in this sentence?</say>
+  </message>
+  <message id="L3101" name="L3101">
+    <say>Wind the clock up before you go to bed, or you may get up late for the first day of school.</say>
+  </message>
+  <message id="L3102" name="L3102">
+    <say>to move in a circular direction.</say>
+  </message>
+  <message id="L3103" name="L3103">
+    <say>a natural movement of air.</say>
+  </message>
+  <message id="L3107" name="L3107">
+    <say>the correct answer is to move in a circular direction.</say>
+  </message>
+ <message id="A1" name="A1">
+    <say>Jordan, which answer do you think is correct?</say>
+  </message>
+  <message id="A2" name="A2">
+    <say>Jordan, what is your answer?</say>
+  </message>
+  <message id="A3" name="A3">
+    <say>Jordan, your answer, please.</say>
+  </message>
+  <message id="A4" name="A4">
+    <say>Jordan, it is your turn. What is your answer?</say>
+  </message>
+  <message id="A5" name="A5">
+    <say>Jordan, what about you? What do you think?</say>
+  </message>
+  <message id="A6" name="A6">
+    <say>Jordan, do you have an answer?</say>
+  </message>
+  <message id="A7" name="A7">
+    <say>JJordan, could you please tell us your answer?</say>
+  </message>
+  <message id="A8" name="A8">
+    <say>Jordan, you are absolutely correct, good job.</say>
+  </message>
+  <message id="A9" name="A9">
+    <say>Jordan, you got it right, excellent!</say>
+  </message>
+  <message id="A10" name="A10">
+    <say>Jordan, you are right, that's great!</say>
+  </message>
+  <message id="A11" name="A11">
+    <say>Jordan, that is correct, well done!</say>
+  </message>
+  <message id="A12" name="A12">
+    <say>Jordan, that's right, great job!</say>
+  </message>
+  <message id="A13" name="A13">
+    <say>Right, Jordan! That is correct!</say>
+  </message>
+  <message id="A14" name="A14">
+    <say>Jordan, that's it! Nice job!</say>
+  </message>
+  <message id="A15" name="A15">
+    <say>Yes, Jordan! That's right!</say>
+  </message>
+  <message id="A16" name="A16">
+    <say>, have a try. Please click on the correct meaning of the underlined word in this sentence.</say>
+  </message>
+  <message id="A17" name="A17">
+    <say>, I know you can do it. What would you choose as your answer? Click on the correct meaning of the underlined word.</say>
+  </message>
+  <message id="A18" name="A18">
+    <say>, come on. Give it a try. Click on your answer, please!</say>
+  </message>
+  <message id="A19" name="A19">
+    <say>, go ahead and respond. What does the underlined word mean? Click on the correct answer.</say>
+  </message>
+  <message id="A20" name="A20">
+    <say>, now it's your turn to try. Click the correct meaning.</say>
+  </message>
+  <message id="A21" name="A21">
+    <say>, please have a try. Click the correct meaning.</say>
+  </message>
+  <message id="A22" name="A22">
+    <say>and Jordan, please remember we can always replace each definition of the word and check which one makes sense.</say>
+  </message>
+  <message id="A23" name="A23">
+    <say>and Jordan, We replace the multiple meaning word with both definitions and check which one makes sense.</say>
+  </message>
+  <message id="A24" name="A24">
+    <say>, I am sorry. Since you didn't give any answer, Jordan, it is your turn. What is your answer?</say>
+  </message>
+  <message id="A25" name="A25">
+    <say>, Well, since you didn't click an option, Jordan, what is your answer?</say>
+  </message>
+  <message id="A26" name="A26">
+    <say>, Well, you didn't click on a stamp. So, Jordan, what would you pick as your answer?</say>
+  </message>
+  <message id="A27" name="A27">
+    <say>, I'm sorry, I didn't recieve your answer. So, Jordan, your turn, please.</say>
+  </message>
+  <message id="A28" name="A28">
+    <say>, good job! You are correct. Jordan, I'm sorry, you didn't get that one right.</say>
+  </message>
+  <message id="A29" name="A29">
+    <say>, you are correct. Nicely done! Jordan, you are wrong!</say>
+  </message>
+  <message id="A30" name="A30">
+    <say>, great! You're right! Jordan, you are wrong.</say>
+  </message>
+  <message id="A31" name="A31">
+    <say>, awesome! That's right! Jordan, you didn't get it correct this time</say>
+  </message>
+  <message id="A32" name="A32">
+    <say>, nice job! That is correct! Jordan, you need more practice, you didn't get it right.</say>
+  </message>
+  <message id="A33" name="A33">
+    <say>, wonderful! That is absolutely correct! Jordan, that is incorrect!</say>
+  </message>
+  <message id="A34" name="A34">
+    <say>, Perfect! You got it! Jordan, sorry, you were incorrect.</say>
+  </message>
+  <message id="A35" name="A35">
+    <say>, that's it! Nice job! Jordan, I hate to say this, but you are wrong!</say>
+  </message>
+  <message id="A36" name="A36">
+    <say>, great job! You're doing really well! Jordan, you are wrong.</say>
+  </message>
+  <message id="A37" name="A37">
+    <say>and Jordan, you both got that one correct! Good job!</say>
+  </message>
+  <message id="A38" name="A38">
+    <say>and Jordan, you are both right! Great job!</say>
+  </message>
+  <message id="A39" name="A39">
+    <say>and Jordan, both of you are right! That's fantastic!</say>
+  </message>
+  <message id="A40" name="A40">
+    <say>and Jordan, both of you are correct! Nice job!</say>
+  </message>
+  <message id="A41" name="A41">
+    <say>and Jordan, nice work! You are both right!</say>
+  </message>
+  <message id="A42" name="A42">
+    <say>and Jordan, awesome! Both of you are correct!</say>
+  </message>
+  <message id="A43" name="A43">
+    <say>and Jordan, very good! You both got it!</say>
+  </message>
+  <message id="A44" name="A44">
+    <say>Yes,</say>
+  </message>
+  <message id="A45" name="A45">
+    <say>and Jordan! Nice job! You are both right!</say>
+  </message>
+  <message id="A46" name="A46">
+    <say>Jordan, I am sorry, but you are incorrect.</say>
+  </message>
+  <message id="A47" name="A47">
+    <say>Oops, Jordan, you are wrong.</say>
+  </message>
+  <message id="A48" name="A48">
+    <say>Jordan, sorry! you are incorrect.</say>
+  </message>
+  <message id="A49" name="A49">
+    <say>Well, Jordan, you answered this question incorrectly.</say>
+  </message>
+  <message id="A50" name="A50">
+    <say>Unfortunately, Jordan, you are incorrect this time.</say>
+  </message>
+  <message id="A51" name="A51">
+    <say>Sorry, Jordan, unfortunately, you are incorrect.</say>
+  </message>
+  <message id="A52" name="A52">
+    <say>Jordan, this time you are incorrect</say>
+  </message>
+  <message id="A53" name="A53">
+    <say>Jordan and</say>
+  </message>
+  <message id="A54" name="A54">
+    <say>, I am sorry, but both of you are incorrect.</say>
+  </message>
+  <message id="A55" name="A55">
+    <say>Oops, Jordan and</say>
+  </message>
+  <message id="A56" name="A56">
+    <say>, you are both wrong.</say>
+  </message>
+  <message id="A57" name="A57">
+    <say>Jordan and</say>
+  </message>
+  <message id="A58" name="A58">
+    <say>, sorry! you are both incorrect.</say>
+  </message>
+  <message id="A59" name="A59">
+    <say>Well, Jordan and</say>
+  </message>
+  <message id="A60" name="A60">
+    <say>, you both answered this question incorrectly.</say>
+  </message>
+  <message id="A61" name="A61">
+    <say>Unfortunately, Jordan and</say>
+  </message>
+  <message id="A62" name="A62">
+    <say>, you  are both incorrect this time.</say>
+  </message>
+  <message id="A63" name="A63">
+    <say>Sorry, Jordan and</say>
+  </message>
+  <message id="A64" name="A64">
+    <say>, unfortunately, you are both incorrect.</say>
+  </message>
+  <message id="A65" name="A65">
+    <say>Jordan and</say>
+  </message>
+  <message id="A66" name="A66">
+    <say>, this time you are both incorrect.</say>
+  </message>
+  <message id="A67" name="A67">
+    <say>Hello Jordan and</say>
+  </message>
+  <message id="A68" name="A68">
+    <say>Two day we are going to practice identifying the correct definition for multiple meaning words.</say>
+  </message>
+  <message id="A69" name="A69">
+    <say>That's right Jordan. In the first sentence, it is a verb that means to sound in a reverberating way and in the second sentence it means a circular object. So, how do you think we identify the correct definition of the word if it was used in a sentence?</say>
+  </message>
+  <message id="A70" name="A70">
+    <say>Great Jordan! Next, we reread and define the word by asking ourselves what the word means in that specific sentence. Finally, we replace the multiple meaning word with different definitions and check which one makes the most sense.</say>
+  </message>
+  <message id="A71" name="A71">
+    <say>A sentence will appear at the top of the screen. A multiple meaning word will be underlined in the sentence.</say>
+  </message>
+  <message id="A72" name="A72">
+    <say>will need to pick the correct definition for the multiple meaning word.</say>
+  </message>
+  <message id="A73" name="A73">
+    <say>Yep, exactly. Jordan you will take a turn after</say>
+  </message>
+  <message id="A74" name="A74">
+    <say>and we will keep track of how both of you do with a scoreboard at the bottom of the screen.</say>
+  </message>
+  <message id="A75" name="A75">
+    <say>Agreed Jordan! When you are confused, you need to stop and clarify what is confusing to you.</say>
+  </message>
+  <message id="A76" name="A76">
+    <say>Exactly. You want to use the clarifying questions to reread and clarify what confuses you. Last you will need to replace the confusing words with the different definitions and check which one makes the most sense in the sentence. Thanks for working on this together</say>
+  </message>
+  <message id="A77" name="A77">
+    <say>and Jordan!</say>
+  </message>
+  <message id="A78" name="A78">
+    <say>Great Jordan! Next, we reread the word and try to clarify what the word means in that specific sentence.</say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+  	
+		
+<message id="D1" name="D1">
+<say>AMELIA</say>
+</message>
+<message id="D2" name="D2">
+	<say>OLIVIA</say>
+</message>
+<message id="D3" name="D3">
+	<say>EMILY</say>
+</message>
+<message id="D4" name="D4">
+	<say>AVA</say>
+</message>
+<message id="D5" name="D5">
+	<say>ISLA</say>
+</message>
+<message id="D6" name="D6">
+	<say>JESSICA</say>
+</message>
+<message id="D7" name="D7">
+	<say>POPPY</say>
+</message>
+<message id="D8" name="D8">
+	<say>ISABELLA</say>
+</message>
+<message id="D9" name="D9">
+	<say>SOPHIE</say>
+</message>
+<message id="D10" name="D10">
+	<say>MIA</say>
+</message>
+<message id="D11" name="D11">
+	<say>RUBY</say>
+</message>
+<message id="D12" name="D12">
+	<say>LILY</say>
+</message>
+<message id="D13" name="D13">
+	<say>GRACE</say>
+</message>
+<message id="D14" name="D14">
+	<say>EVIE</say>
+</message>
+<message id="D15" name="D15">
+	<say>SOPHIA</say>
+</message>
+<message id="D16" name="D16">
+	<say>ELLA</say>
+</message>
+<message id="D17" name="D17">
+	<say>SCARLETT</say>
+</message>
+<message id="D18" name="D18">
+	<say>CHLOE</say>
+</message>
+<message id="D19" name="D19">
+	<say>ISABELLE</say>
+</message>
+<message id="D20" name="D20">
+	<say>FREYA</say>
+</message>
+<message id="D21" name="D21">
+	<say>CHARLOTTE</say>
+</message>
+<message id="D22" name="D22">
+	<say>SIENNA</say>
+</message>
+<message id="D23" name="D23">
+	<say>DAISY</say>
+</message>
+<message id="D24" name="D24">
+	<say>PHOEBE</say>
+</message>
+<message id="D25" name="D25">
+	<say>MILLIE</say>
+</message>
+<message id="D26" name="D26">
+	<say>EVA</say>
+</message>
+<message id="D27" name="D27">
+	<say>ALICE</say>
+</message>
+<message id="D28" name="D28">
+	<say>LUCY</say>
+</message>
+<message id="D29" name="D29">
+	<say>FLORENCE</say>
+</message>
+<message id="D30" name="D30">
+	<say>SOFIA</say>
+</message>
+<message id="D31" name="D31">
+	<say>LAYLA</say>
+</message>
+<message id="D32" name="D32">
+	<say>LOLA</say>
+</message>
+<message id="D33" name="D33">
+	<say>HOLLY</say>
+</message>
+<message id="D34" name="D34">
+	<say>IMOGEN</say>
+</message>
+<message id="D35" name="D35">
+	<say>MOLLY</say>
+</message>
+<message id="D36" name="D36">
+	<say>MATILDA</say>
+</message>
+<message id="D37" name="D37">
+	<say>LILLY</say>
+</message>
+<message id="D38" name="D38">
+	<say>ROSIE</say>
+</message>
+<message id="D39" name="D39">
+	<say>ELIZABETH</say>
+</message>
+<message id="D40" name="D40">
+	<say>ERIN</say>
+</message>
+<message id="D41" name="D41">
+	<say>MAISIE</say>
+</message>
+<message id="D42" name="D42">
+	<say>LEXI</say>
+</message>
+<message id="D43" name="D43">
+	<say>ELLIE</say>
+</message>
+<message id="D44" name="D44">
+	<say>HANNAH</say>
+</message>
+<message id="D45" name="D45">
+	<say>EVELYN</say>
+</message>
+<message id="D46" name="D46">
+	<say>ABIGAIL</say>
+</message>
+<message id="D47" name="D47">
+	<say>ELSIE</say>
+</message>
+<message id="D48" name="D48">
+	<say>SUMMER</say>
+</message>
+<message id="D49" name="D49">
+	<say>MEGAN</say>
+</message>
+<message id="D50" name="D50">
+	<say>JASMINE</say>
+</message>
+<message id="D51" name="D51">
+	<say>MAYA</say>
+</message>
+<message id="D52" name="D52">
+	<say>AMELIE</say>
+</message>
+<message id="D53" name="D53">
+	<say>LACEY</say>
+</message>
+<message id="D54" name="D54">
+	<say>WILLOW</say>
+</message>
+<message id="D55" name="D55">
+	<say>EMMA</say>
+</message>
+<message id="D56" name="D56">
+	<say>BELLA</say>
+</message>
+<message id="D57" name="D57">
+	<say>ELEANOR</say>
+</message>
+<message id="D58" name="D58">
+	<say>ESME</say>
+</message>
+<message id="D59" name="D59">
+	<say>ELIZA</say>
+</message>
+<message id="D60" name="D60">
+	<say>GEORGIA</say>
+</message>
+<message id="D61" name="D61">
+	<say>HARRIET</say>
+</message>
+<message id="D62" name="D62">
+	<say>GRACIE</say>
+</message>
+<message id="D63" name="D63">
+	<say>ANNABELLE</say>
+</message>
+<message id="D64" name="D64">
+	<say>EMILIA</say>
+</message>
+<message id="D65" name="D65">
+	<say>AMBER</say>
+</message>
+<message id="D66" name="D66">
+	<say>IVY</say>
+</message>
+<message id="D67" name="D67">
+	<say>BROOKE</say>
+</message>
+<message id="D68" name="D68">
+	<say>ROSE</say>
+</message>
+<message id="D69" name="D69">
+	<say>ANNA</say>
+</message>
+<message id="D70" name="D70">
+	<say>ZARA</say>
+</message>
+<message id="D71" name="D71">
+	<say>LEAH</say>
+</message>
+<message id="D72" name="D72">
+	<say>MOLLIE</say>
+</message>
+<message id="D73" name="D73">
+	<say>MARTHA</say>
+</message>
+<message id="D74" name="D74">
+	<say>FAITH</say>
+</message>
+<message id="D75" name="D75">
+	<say>HOLLIE</say>
+</message>
+<message id="D76" name="D76">
+	<say>AMY</say>
+</message>
+<message id="D77" name="D77">
+	<say>BETHANY</say>
+</message>
+<message id="D78" name="D78">
+	<say>VIOLET</say>
+</message>
+<message id="D79" name="D79">
+	<say>KATIE</say>
+</message>
+<message id="D80" name="D80">
+	<say>MARYAM</say>
+</message>
+<message id="D81" name="D81">
+	<say>FRANCESCA</say>
+</message>
+<message id="D82" name="D82">
+	<say>JULIA</say>
+</message>
+<message id="D83" name="D83">
+	<say>MARIA</say>
+</message>
+<message id="D84" name="D84">
+	<say>DARCEY</say>
+</message>
+<message id="D85" name="D85">
+	<say>ISABEL</say>
+</message>
+<message id="D86" name="D86">
+	<say>TILLY</say>
+</message>
+<message id="D87" name="D87">
+	<say>MADDISON</say>
+</message>
+<message id="D88" name="D88">
+	<say>VICTORIA</say>
+</message>
+<message id="D89" name="D89">
+	<say>ISOBEL</say>
+</message>
+<message id="D90" name="D90">
+	<say>NIAMH</say>
+</message>
+<message id="D91" name="D91">
+	<say>SKYE</say>
+</message>
+<message id="D92" name="D92">
+	<say>MADISON</say>
+</message>
+<message id="D93" name="D93">
+	<say>DARCY</say>
+</message>
+<message id="D94" name="D94">
+	<say>AISHA</say>
+</message>
+<message id="D95" name="D95">
+	<say>BEATRICE</say>
+</message>
+<message id="D96" name="D96">
+	<say>SARAH</say>
+</message>
+<message id="D97" name="D97">
+	<say>ZOE</say>
+</message>
+<message id="D98" name="D98">
+	<say>PAIGE</say>
+</message>
+<message id="D99" name="D99">
+	<say>HEIDI</say>
+</message>
+<message id="D100" name="D100">
+	<say>LYDIA</say>
+</message>
+<message id="D101" name="D101">
+	<say>OLIVER</say>
+</message>
+<message id="D102" name="D102">
+	<say>JACK</say>
+</message>
+<message id="D103" name="D103">
+	<say>HARRY</say>
+</message>
+<message id="D104" name="D104">
+	<say>JACOB</say>
+</message>
+<message id="D105" name="D105">
+	<say>CHARLIE</say>
+</message>
+<message id="D106" name="D106">
+	<say>THOMAS</say>
+</message>
+<message id="D107" name="D107">
+	<say>OSCAR</say>
+</message>
+<message id="D108" name="D108">
+	<say>WILLIAM</say>
+</message>
+<message id="D109" name="D109">
+	<say>JAMES</say>
+</message>
+<message id="D110" name="D110">
+	<say>GEORGE</say>
+</message>
+<message id="D111" name="D111">
+	<say>ALFIE</say>
+</message>
+<message id="D112" name="D112">
+	<say>JOSHUA</say>
+</message>
+<message id="D113" name="D113">
+	<say>NOAH</say>
+</message>
+<message id="D114" name="D114">
+	<say>ETHAN</say>
+</message>
+<message id="D115" name="D115">
+	<say>MUHAMMAD</say>
+</message>
+<message id="D116" name="D116">
+	<say>ARCHIE</say>
+</message>
+<message id="D117" name="D117">
+	<say>LEO</say>
+</message>
+<message id="D118" name="D118">
+	<say>HENRY</say>
+</message>
+<message id="D119" name="D119">
+	<say>JOSEPH</say>
+</message>
+<message id="D120" name="D120">
+	<say>SAMUEL</say>
+</message>
+<message id="D121" name="D121">
+	<say>RILEY</say>
+</message>
+<message id="D122" name="D122">
+	<say>DANIEL</say>
+</message>
+<message id="D123" name="D123">
+	<say>MOHAMMED</say>
+</message>
+<message id="D124" name="D124">
+	<say>ALEXANDER</say>
+</message>
+<message id="D125" name="D125">
+	<say>MAX</say>
+</message>
+<message id="D126" name="D126">
+	<say>LUCAS</say>
+</message>
+<message id="D127" name="D127">
+	<say>MASON</say>
+</message>
+<message id="D128" name="D128">
+	<say>LOGAN</say>
+</message>
+<message id="D129" name="D129">
+	<say>ISAAC</say>
+</message>
+<message id="D130" name="D130">
+	<say>BENJAMIN</say>
+</message>
+<message id="D131" name="D131">
+	<say>DYLAN</say>
+</message>
+<message id="D132" name="D132">
+	<say>JAKE</say>
+</message>
+<message id="D133" name="D133">
+	<say>EDWARD</say>
+</message>
+<message id="D134" name="D134">
+	<say>FINLEY</say>
+</message>
+<message id="D135" name="D135">
+	<say>FREDDIE</say>
+</message>
+<message id="D136" name="D136">
+	<say>HARRISON</say>
+</message>
+<message id="D137" name="D137">
+	<say>TYLER</say>
+</message>
+<message id="D138" name="D138">
+	<say>SEBASTIAN</say>
+</message>
+<message id="D139" name="D139">
+	<say>ZACHARY</say>
+</message>
+<message id="D140" name="D140">
+	<say>ADAM</say>
+</message>
+<message id="D141" name="D141">
+	<say>THEO</say>
+</message>
+<message id="D142" name="D142">
+	<say>JAYDEN</say>
+</message>
+<message id="D143" name="D143">
+	<say>ARTHUR</say>
+</message>
+<message id="D144" name="D144">
+	<say>TOBY</say>
+</message>
+<message id="D145" name="D145">
+	<say>LUKE</say>
+</message>
+<message id="D146" name="D146">
+	<say>LEWIS</say>
+</message>
+<message id="D147" name="D147">
+	<say>MATTHEW</say>
+</message>
+<message id="D148" name="D148">
+	<say>HARVEY</say>
+</message>
+<message id="D149" name="D149">
+	<say>HARLEY</say>
+</message>
+<message id="D150" name="D150">
+	<say>DAVID</say>
+</message>
+<message id="D151" name="D151">
+	<say>RYAN</say>
+</message>
+<message id="D152" name="D152">
+	<say>TOMMY</say>
+</message>
+<message id="D153" name="D153">
+	<say>MICHAEL</say>
+</message>
+<message id="D154" name="D154">
+	<say>REUBEN</say>
+</message>
+<message id="D155" name="D155">
+	<say>NATHAN</say>
+</message>
+<message id="D156" name="D156">
+	<say>BLAKE</say>
+</message>
+<message id="D157" name="D157">
+	<say>MOHAMMAD</say>
+</message>
+<message id="D158" name="D158">
+	<say>JENSON</say>
+</message>
+<message id="D159" name="D159">
+	<say>BOBBY</say>
+</message>
+<message id="D160" name="D160">
+	<say>LUCA</say>
+</message>
+<message id="D161" name="D161">
+	<say>CHARLES</say>
+</message>
+<message id="D162" name="D162">
+	<say>FRANKIE</say>
+</message>
+<message id="D163" name="D163">
+	<say>DEXTER</say>
+</message>
+<message id="D164" name="D164">
+	<say>KAI</say>
+</message>
+<message id="D165" name="D165">
+	<say>ALEX</say>
+</message>
+<message id="D166" name="D166">
+	<say>CONNOR</say>
+</message>
+<message id="D167" name="D167">
+	<say>LIAM</say>
+</message>
+<message id="D168" name="D168">
+	<say>JAMIE</say>
+</message>
+<message id="D169" name="D169">
+	<say>ELIJAH</say>
+</message>
+<message id="D170" name="D170">
+	<say>STANLEY</say>
+</message>
+<message id="D171" name="D171">
+	<say>LOUIE</say>
+</message>
+<message id="D172" name="D172">
+	<say>JUDE</say>
+</message>
+<message id="D173" name="D173">
+	<say>CALLUM</say>
+</message>
+<message id="D174" name="D174">
+	<say>HUGO</say>
+</message>
+<message id="D175" name="D175">
+	<say>LEON</say>
+</message>
+<message id="D176" name="D176">
+	<say>ELLIOT</say>
+</message>
+<message id="D177" name="D177">
+	<say>LOUIS</say>
+</message>
+<message id="D178" name="D178">
+	<say>THEODORE</say>
+</message>
+<message id="D179" name="D179">
+	<say>GABRIEL</say>
+</message>
+<message id="D180" name="D180">
+	<say>OLLIE</say>
+</message>
+<message id="D181" name="D181">
+	<say>AARON</say>
+</message>
+<message id="D182" name="D182">
+	<say>FREDERICK</say>
+</message>
+<message id="D183" name="D183">
+	<say>EVAN</say>
+</message>
+<message id="D184" name="D184">
+	<say>ELLIOTT</say>
+</message>
+<message id="D185" name="D185">
+	<say>OWEN</say>
+</message>
+<message id="D186" name="D186">
+	<say>TEDDY</say>
+</message>
+<message id="D187" name="D187">
+	<say>FINLAY</say>
+</message>
+<message id="D188" name="D188">
+	<say>CALEB</say>
+</message>
+<message id="D189" name="D189">
+	<say>IBRAHIM</say>
+</message>
+<message id="D190" name="D190">
+	<say>RONNIE</say>
+</message>
+<message id="D191" name="D191">
+	<say>FELIX</say>
+</message>
+<message id="D192" name="D192">
+	<say>AIDEN</say>
+</message>
+<message id="D193" name="D193">
+	<say>CAMERON</say>
+</message>
+<message id="D194" name="D194">
+	<say>AUSTIN</say>
+</message>
+<message id="D195" name="D195">
+	<say>KIAN</say>
+</message>
+<message id="D196" name="D196">
+	<say>RORY</say>
+</message>
+<message id="D197" name="D197">
+	<say>SETH</say>
+</message>
+<message id="D198" name="D198">
+	<say>ROBERT</say>
+</message>
+<message id="D199" name="D199">
+	<say>ALBERT</say>
+</message>
+<message id="D200" name="D200">
+	<say>SONNY</say>
+</message>
+<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+
+
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>
+
+		<message id="CSU00491" name="CSU00491">
+		<say>Tarico</say>
+		</message>
+		<message id="CSU00504" name="CSU00504">
+		<say>Tammy</say>
+		</message>
+		<message id="CSU00509" name="CSU00509">
+		<say>Sadio</say>
+		</message>
+		<message id="CSU00490" name="CSU00490">
+		<say>Sandra</say>
+		</message>
+		<message id="CSU00465" name="CSU00465">
+		<say>Alma</say>
+		</message>
+		<message id="CSU00492" name="CSU00492">
+		<say>Elizabeth</say>
+		</message>
+		<message id="CSU00508" name="CSU00508">
+		<say>Samira</say>
+		</message>
+		<message id="CSU00515" name="CSU00515">
+		<say>Edgar</say>
+		</message>
+		<message id="CSU00516" name="CSU00516">
+		<say>Omega</say>
+		</message>
+		<message id="CSU00517" name="CSU00517">
+		<say>Gilda</say>
+		</message>
+		<message id="CSU00519" name="CSU00519">
+		<say>Farida</say>
+		</message>
+		<message id="CSU00520" name="CSU00520">
+		<say>Miran</say>
+		</message>
+		<message id="CSU00521" name="CSU00521">
+		<say>Azza</say>
+		</message>
+		<message id="CSU00522" name="CSU00522">
+		<say>Nao</say>
+		</message>
+		<message id="CSU00523" name="CSU00523">
+		<say>Oliva</say>
+		</message>
+		
+				<message id="HSC122301615" name="HSC122301615">
+		<say>Janna</say>
+		</message>
+		<message id="HSC122301616" name="HSC122301616">
+		<say>Jennifer</say>
+		</message>
+		<message id="HSC122301618" name="HSC122301618">
+		<say>Muhiadin</say>
+		</message>
+		<message id="HSC122301623" name="HSC122301623">
+		<say>Angel</say>
+		</message>
+		<message id="HSC122301625" name="HSC122301625">
+		<say>Dowell</say>
+		</message>
+		<message id="HSC122301627" name="HSC122301627">
+		<say>Offa</say>
+		</message>
+		<message id="HSC122301628" name="HSC122301628">
+		<say>Annemarie</say>
+		</message>
+		<message id="HSC122301630" name="HSC122301630">
+		<say>Arnaldo</say>
+		</message>
+		<message id="HSC122301631" name="HSC122301631">
+		<say>Sheelah</say>
+		</message>
+		<message id="HSC122301635" name="HSC122301635">
+		<say>shwa-wah-beck</say>
+		</message>
+		<message id="HSC122301620" name="HSC122301620">
+		<say>Haja</say>
+		</message>
+		<message id="HSC1223016" name="HSC1223016">
+		<say>Learner</say>
+		</message>
+		
+		<message id="HSC122301617" name="HSC122301617">
+		<say>Sheena</say>
+		</message>
+		<message id="HSC122301619" name="HSC122301619">
+		<say>Darlene</say>
+		</message>
+		<message id="HSC122301621" name="HSC122301621">
+		<say>Destiny</say>
+		</message>
+		<message id="HSC122301624" name="HSC122301624">
+		<say>Kenisha</say>
+		</message>
+		<message id="HSC122301626" name="HSC122301626">
+		<say>Tamara</say>
+		</message>
+		<message id="HSC122301629" name="HSC122301629">
+		<say>Yanenah</say>
+		</message>
+		<message id="HSC122301632" name="HSC122301632">
+		<say>Victoria</say>
+		</message>
+		<message id="HSC122301527" name="HSC122301527">
+		<say>Carleen</say>
+		</message>
+    </scene>
+	</stage>
+</project>

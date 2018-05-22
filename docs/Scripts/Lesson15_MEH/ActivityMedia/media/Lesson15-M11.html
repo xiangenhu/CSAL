@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<!--CSS Reset-->
+		<script type="text/css" href="CSSReset.css" rel="stylesheet"></script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L15Bkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 828px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 19px;
+				padding: 5px 20px 0px 20px;
+				line-height: 25px;
+				color: #212121;
+				width: 730px;
+				margin: 170px 0px 0px 10px;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			#buttonBox
+			{
+				width: 780px;
+				margin: 0px 0px 0px 12px;
+				display: inline-block;
+			}
+			.mybutton
+			{
+				font-size: 16px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				color: white;
+				width: 760px;
+				margin: 5px 4px;
+				text-align: center;
+				padding: 2px 5px;
+				text-decoration: none;
+				display: block;
+				border: none;
+				outline: none;
+				border-radius: 8px;
+			}
+			#questionToggle
+			{
+				width: 800px;
+				height: 170px;
+				background-color: #424242;
+				position: fixed;
+				top: 0px;
+				right: 0;
+				z-index: 2;
+			}
+			#questionText
+			{
+				color: white;
+				font-size: 28px;
+				padding: 5px 20px;
+				text-align: center;
+				width: 720px;
+				margin: 2px 0px 2px 20px;
+				vertical-align: top;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var flag = 0;
+			var moveAmount = 0;
+			var newAmount = 0;
+			var calc;
+			var height;
+			var currentPos;
+			var toggleState = false;
+			var currentItem = -1;
+			var numItems = 0;
+			var itemsArray=["b1","b2","b3"];
+			var score=0;
+			var userAnswerTimes=0;
+			
+			var correctAnswerArray = ["b2"];
+			var JordanAnswer;
+			var userAnswerCode;
+			var JordanAnswerCode;
+			
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				GetRequest();
+				//sets opacity of questionToggle box
+				$( "#questionToggle" ).fadeTo( 0, .99 );
+			});
+				function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");	
+					
+						userAnswerTimes++;
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+						if (userAnswerTimes==1)
+						{
+						
+							score=score+2;
+						}
+						else if (userAnswerTimes==2)
+						{
+							score=score+1;
+						}
+						
+						parent.PlaySound('clicked0.wav');
+					}
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+				
+				
+				//go to next page
+				if (data == "NextPage")
+				{	
+				//*********
+					if (score>=6)
+					{
+					parent.nextPage("media/"+"Lesson15-EveningStar_Difficult.html");
+					}
+					else
+					{
+					parent.nextPage("media/"+"Lesson15-Turandot_Easy.html");
+					}
+					
+					
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad1")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad2")
+				{
+					JordanAnswer = $("#b3").attr("value");
+					$("#b3").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="bothAnswer")
+				{
+				  if (userAnswer=="Correct")
+				  {
+					userAnswerCode="C";
+				  }
+				  else if(userAnswer=="Incorrect1")
+				  {
+				  userAnswerCode="I1";
+				  }
+				  else if(userAnswer=="Incorrect2")
+				  {
+				  userAnswerCode="I2";
+				  }
+				   if (JordanAnswer=="Correct")
+				  {
+					JordanAnswerCode="C";
+				  }
+				  else if(JordanAnswer=="Incorrect1")
+				  {
+				  JordanAnswerCode="I1";
+				  }
+				  else if(JordanAnswer=="Incorrect2")
+				  {
+				  JordanAnswerCode="I2";
+				  }
+				  var getScore=userAnswerCode+JordanAnswerCode;
+				  parent.GetWorldEvent(getScore);
+				}
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = parseInt(strs[1]);
+				
+			   }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="questionToggle">
+				<div id="questionText">
+					Why is this a bad summary of the story?
+				</div>
+				<div id="buttonBox">
+					<div class="mybutton" id="b1" value="Incorrect1">
+						A. Viola is not described as the main character in this summary, and her disguise is also not described.
+					</div>
+					<div class="mybutton" id="b2" value="Correct">
+						B. The summary includes details that are not in the story like the letter to Orsino.
+					</div>
+					<div class="mybutton" id="b3" value="Incorrect2">
+						C. Sebastian is just a minor character, but he seems like the main character in the summary.
+					</div>
+				</div>
+			</div>
+			<div id="mainText">
+				<span class="indent"></span>Viola lands in Illyria after a terrible shipwreck in which she is separated from her twin brother, Sebastian. Viola hopes that her brother is safe like she is. The captain of the ship, who also manages to get ashore, tries to console her in the hopes of finding her brother alive. She dresses up as a man and becomes the servant to the Duke of Illyria. His name is Orsino. Duke Orsino is in love with Lady Olivia, but she won't have anything to do with suitors. Viola is sent to woo Olivia. However, Olivia falls in love with Viola, because her words are so sweet. Meanwhile, Olivia's suitors write a letter to Orsino in Olivia's hand, in which she confesses her love for Viola to the Duke Orsino. Sebastian, Viola's brother, turns up. Olivia believes him to be Viola and she asks him to marry her. He agrees, but then he must fight with Orsino for Olivia's love. Viola's identity is revealed and Orsino falls in love with her and they marry.
+			</div>
+		</div>
+	</body>
+</html>

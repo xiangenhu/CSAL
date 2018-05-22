@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-color: #37bffc;
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Montserrat', 'Roboto Slab', Verdana, 'Times New Roman';
+			}
+			.scroll-pane
+			{
+				overflow: hidden;
+				height: 482px;
+				width: 798px;
+				margin: 1px 0px 0px 0px;
+				background-image: url('ClearBkgd0.png');
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			
+			
+			.heading
+			{
+				width: 75%;
+				margin: 40px auto 10px auto;
+				padding: 10px 20px;
+				border-radius: 22px;
+				font-size: 50px;
+				text-align: center;
+			}
+			
+			.box
+			{
+				height: 35%;
+				width: 35%;
+				margin: 40px 10px 0px 60px;
+				padding: 10px;
+				border-radius: 22px;
+				font-size: 50px;
+				text-align: center;
+				display: inline-block;
+				float: left;
+			}
+			
+			.box2
+			{
+				height: 35%;
+				width: 35%;
+				margin: 40px 60px 0px 10px;
+				padding: 10px;
+				border-radius: 22px;
+				font-size: 50px;
+				text-align: center;
+				display: inline-block;
+				float: right;
+			}
+			
+			#heading1 { background-color: #c2e6f6; }
+			#heading2 { background-color: white; }
+			#heading3 { background-color: white; }
+			.subHead
+			{
+				font-size: 27px;
+				
+			}
+			
+			#img1
+			{
+			height: 160px;
+			padding: 5px;
+			}
+			
+			#img2
+			{
+			height: 150px;
+			padding: 10px;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			
+		/*	function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+		*/	
+			$(document).ready(function()
+			{
+				//parent.PlaySound('pageturn.wav');
+				
+
+				//call lock w/o animation
+				LockSimple();
+				
+				//reports to the parent program that the media page html has loaded
+				//parent.GetWorldEvent("MainPageLoaded");
+			});
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function LockSimple()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITHOUT animation
+				$( ".mybutton" ).css( 'backgroundColor', '#474747' );
+				$( ".mybutton" ).css( 'color', 'gray' );
+			}
+			
+			//NOTE! THIS IS NOT THE UNLOCK FUNCTION FOR QUESTIONS WITH A CORRECT OR INCORRECT ANSWER! THIS IS ONLY TO BE USED FOR SOMETHING LIKE A CONTINUE BUTTON.
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//play clicked sound
+					//sound_clicked();
+					parent.PlaySound('clicked0.wav');
+					//animate the font size of clicked option
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//lock button and sent Stop call to ASAT
+					Lock();
+					return parent.GetWorldEvent("Stop");
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#94b5ff"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #94b5ff;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				
+				
+				else if (data == "NextPage")
+				{
+				
+				parent.nextPage("media/"+"Lesson16-M0.html");
+				
+				}
+			}
+		</script>
+	</head>
+	
+		<body>
+		<!-- IMPORT DIFFERENT GOOGLE FONTS HERE, SPACES BECOME +'s -->
+		<!-- http://www.google.com/fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+		
+		<div id="heading1" class="heading">
+			<span class="bold">Ring</span>
+			
+		</div>
+	<span>
+		<div id="heading2" class="box">
+			<div class="subHead">The bell will ring when class is over.</div>
+			<img src="teacherbell.png" id="img1">
+		</div>
+		<div id="heading3" class="box2">
+			<div class="subHead">Her favorite ring is made of gold.</div>
+			<img src="freedo-Wedding-Ring.png" id="img2">
+		</div>
+	</span>		
+	</body>
+</html>

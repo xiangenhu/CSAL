@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L29Bkgd1.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 20px;
+				padding: 15px 30px 0px 30px;
+				line-height: 32px;
+				color: #212121;
+			}
+			#mainTextHead
+			{
+				font-family: 'Kreon', Verdana, 'Times New Roman';
+				font-size: 50px;
+				margin: 25px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+				letter-spacing: 3px;
+				z-index: 10;
+			}
+			.subHead1
+			{
+				font-family: 'Kreon', Verdana, 'Times New Roman';
+				font-size: 30px;
+				font-weight: bold;
+				margin: 15px 0px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				left: 0;
+				z-index:1;
+				width: 800px;
+				height: 180px;
+				background-color: #212121;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 28px;
+				padding: 10px 10px 0px 10px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 780px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 760px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 15px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+				var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;			
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
+			var correctAnswer = "#b1";
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "para3");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+			function ShowItem(){
+			}
+			
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+				function Start()
+			{
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+				function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						parent.PlaySound('clicked0.wav'); 
+						//parent.GetWorldEvent(strId.length);
+					}
+					else {
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function ShowMediaAnswer()
+			{
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				
+				//$(".hideAnswer").animate({backgroundColor: "transparent"}, 300);
+			}
+			
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if(data == "NextPage")
+				{
+			
+						parent.nextPage("media/"+"Lesson29-Hard-0-5.html?id="+strId);
+					
+					//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data == "Page")
+				{
+					parent.GetWorldEvent("Start1");
+				}
+				else if (data == "Difficulty") 
+				{
+					parent.GetWorldEvent("Hard");
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Why Fracking is Dangerous
+				</div>
+				
+				<div class="subHead1">What is Fracking?</div>
+				<div id="para1" class="para">
+				Fracking, also called "hydraulic fracturing," is a destructive process that corporations like Halliburton, BP and ExxonMobil use to extract natural gas and oil from rock that lies deep underground. They drill a deep well and inject millions of gallons of toxic fracking fluid - a mix of water, sand and harsh chemicals - at a high enough pressure to fracture the rock and release the oil or gas.
+				</div>
+				
+				<div id="para2" class="para">
+				Fracking is exempt from major environmental laws, including the Safe Drinking Water Act, and spills and accidents are far too common. Fracking is a danger that touches on every aspect of our lives - the water we drink, the air we breathe, the health of our communities. It also accelerates climate change. Fracking carries unavoidable risks; the oil and gas industry profits at the expense of the communities they frack.
+				</div>
+				
+				<div class="subHead1">The Water We Drink</div>
+				<div id="para3" class="para">
+				Affordable access to clean water is a public health issue and a human right. Fracking requires large amounts of fresh water in order to extract natural gas from the ground - about five million gallons of water per well. That water is mixed with sand and toxic chemicals, including over 100 suspected endocrine disruptors and carcinogens. Wastewater from fracking and water that escapes from fracking wells can pollute our streams, lakes and rivers, and ultimately our drinking water.
+				</div>
+				
+				<div id="para4" class="para">
+				Many families living near fracking have found their well water polluted to the point that it is no longer drinkable. And water respects no boundaries: water that's polluted by fracking can potentially affect people living in a wide area. As one of our precious natural resources, we can't afford to irreversibly pollute fresh drinking water.
+				</div>
+				
+				<div class="subHead1">The Air We Breathe</div>
+				<div id="para5" class="para">
+				The sand used in the fracking process includes silica dust, which pours out of fracking sites and into the atmosphere in large clouds. A recent review of the public health impacts of drilling and fracking noted that these silica dust clouds have been associated with tuberculosis, chronic obstructive pulmonary disease, kidney disease and autoimmune disease. Fracking also releases carbon dioxide, methane, nitrogen dioxide, carbon monoxide, benzene and other illness-causing pollutants into the air around communities near fracking sites.
+				</div>
+				
+				<div class="subHead1">The Health of Our Communities</div>
+				<div id="para6" class="para">
+				Any short-term economic benefits that communities may get from bringing in fracking are outweighed by the social and economic disruptions they experience. In addition to the health risks to people whose water is polluted, communities see increased demand for emergency and other social services, as well as increases in crime and sexually-transmitted diseases. Heavy trucks that transport materials cause noise pollution and damage to public roads. Declines in property values are common to the extent that affected families are unable to sell their homes and move away. Fracking also hurts local tourism and agriculture.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				How is the writer arguing that fracking is dangerous?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Correct">
+					By explaining how it can pollute nearby water sources
+				</div>
+				<div class='mybutton' id="b2" value="Incorrect">
+					By explaining how it is very expensive to do
+				</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect">
+					By explaining how it extracts natural gas and oil
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

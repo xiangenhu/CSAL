@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+ <script>document.domain = "ace.autotutor.org"</script>
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		<style type="text/css" id="page-css">
+			body
+			{
+				cursor:default;
+				background-image:url('L18Bkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Lato', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			/*.jspHorizontalBar { display: none !important; }*/
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#instructBox
+			{
+				background-color: #d8daab;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 780px;
+				font-size: 24px;
+				text-align: center;
+				padding: 10px 5px 10px 5px;
+				border-bottom: 5px dashed #8ca728;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainTextHead
+			{
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 6px;
+				text-align: center;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 24px;
+				width: 690px;
+				margin: 10px 0px 0px 40px;
+				padding: 10px 10px;
+				display: inline-block;
+			}
+			.mybutton
+			{
+				font-size: 22px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				text-decoration: none;
+				border: none;
+				padding: 1px 4px;
+				outline: none;
+				border-radius: 8px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 10px;
+			}
+			#textMap
+			{
+				background-color: #2a3c51;
+				font-family: Copse, Verdana, 'Times New Roman';
+				width: 800px;
+				height: 486px;
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				margin: 0px  0px auto;
+				padding: 0px;
+				border: none;
+				display: none;
+			}
+			.textTitleTopicBox
+			{
+				background-color: #ffbf40;
+				color: #835904;
+				width: 45%;
+				height: 112px;
+				margin: 12px 0px 0px 15px;
+				padding: 5px;
+				border: 4px solid #ffbf40;
+				border-radius: 10px;
+				display: inline-block;
+			}
+			#textTopicBox{margin-left: 12px;}
+			#headTitleTopic
+			{
+				font-size: 32px;
+				width: 22%;
+				padding: 40px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#titleEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 20px;
+				width: 70%;
+				height: 92%;
+				margin: 5px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText1 { padding: 15px 5px; }
+			#textMainIdeaBox
+			{
+				background-color: #ff6140;
+				color: #9f3019;
+				width: 94%;
+				height: 92px;
+				margin: 6px 0px 0px 15px;
+				padding: 5px;
+				border-radius: 10px;
+				border: 4px solid #ff6140;
+				display: inline-block;
+			}
+			#headMainIdea
+			{
+				font-size: 32px;
+				width: 16%;
+				padding: 12px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#mainIdeaEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 24px;
+				width: 80%;
+				height: 99%;
+				margin: 1px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.supportEntry
+			{
+				color: #292929;
+				background-color: #62b1d0;
+				font-size: 22px;
+				width: 95%;
+				height: 12%;
+				margin: 6px 0px 0px 15px;
+				border-radius: 10px;
+				border: 4px solid #9be1fc;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#supportEntry1
+			{
+			border: 6px dotted #dbdbdb;
+			}
+			.posText2
+			{
+				padding: 2px 8px;
+			}
+			.empty
+			{
+				border-width: 4px;
+				border-style: dashed;
+				border-color: red;
+			}
+			.indent
+			{
+				margin-left: 40px;
+			}
+			.para
+			{
+				margin: 10px 0px;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			var info="";
+			var selectedItem="";
+			var selectedAnswerId1,selectedAnswerId2,selectedAnswerId3;
+			var systemID1,systemID2,systemID3;
+			var score=0;
+			var info="";
+			var itemsArray=["b1","b2","b3","b4","b5","b6","b7","b8"];
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b1","b3","b6"];
+			var selectContent="";
+			var systemAnswer1,systemAnswer2,systemAnswer3;
+			var JordanAnswerID1;
+			var JordanAnswer;
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{		
+		
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//lock the buttons
+				Lock();
+				
+			
+				//create scroll pane element
+			
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				GetRequest();
+				
+				
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+				
+				
+				
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+
+			function GetItem()
+			{ 
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			//the Show & HideTextMap functions should be called automatically by the system when the user is building the text map; this means that the buttons in this file should be removed.
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				//animate text map appearance
+		
+				//fades the elements that belong to the fade class. Fades to 40%.
+				$(".textTitleTopicBox").fadeTo(1000,0.4);
+				$("#mainIdeaEntry").fadeTo(1000,0.4);
+				//$(".posText1").fadeTo(1000,0.4);
+				$(".supportEntry").fadeTo(1000,0.4);
+				
+				//This call toggles .slideUp and .slideDown every-time ShowTextMap is called.
+				$( "#textMap" ).slideToggle(1000);
+				
+				
+				
+				//loop allows the Main idea box to flash 2 times. 
+				for(i=0;i<3;i++) {
+				
+				$("#supportEntry1").fadeTo('medium', 0.5).fadeTo('medium', 1.0);
+				
+				}
+			}
+			function HideTextMap()
+			{
+				//hide text map
+				$( "#textMap" ).slideUp(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+					
+						systemAnswer1=correctAnswerArray[0];
+						$("#" + systemAnswer1).animate({backgroundColor: "green", color: "white"}, 1000);
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+						
+						$("#" + selectedAnswerId1).animate({backgroundColor: "green", color: "white"}, 1000);
+						
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					//$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+					
+					selectedAnswerId1=$(this).attr("id");
+					itemsArray.splice($.inArray(selectedAnswerId1,itemsArray),1); 
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+					
+					score++;
+					
+					selectContent= $(this).html();
+					//alert(selectContent)
+					
+					
+					sound_clicked(); 
+					}
+					else { 
+					sound_incorrect(); 
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#8ca728"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #8ca728;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ShowTextMap")
+				{
+					ShowTextMap();
+				}
+				else if (data == "HideTextMap")
+				{
+					HideTextMap();
+				}
+			
+				else if (data == "NextPage")
+				{
+				//alert(info);
+				//parent.nextPage("media/"+"Lesson18-TP6.html?score="+info);
+				parent.nextPage("media/"+"Lesson18-TP8_right.html?score="+score);
+				
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}
+				else if (data == "getScore")
+				{
+				parent.GetWorldEvent(score);
+				
+				}
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+				   strs = str.split("?");
+				   firstPart = strs[0];
+				   secondPart = strs[1];
+				   JordanPart = strs[2];
+				   
+				firstPart2 = firstPart.split("=");
+				info=firstPart2[1];
+				info2=info.split("&");
+				score=info2[0];
+				selectedAnswerId1=info2[1];
+			
+				
+				secondPart2=secondPart.split("=");
+				systemInfo=secondPart2[1];
+				systemInfo2=systemInfo.split("&");
+				systemID1=systemInfo2[0];
+				
+				JordanPart2=JordanPart.split("=");
+				JordanInfo=JordanPart2[1];
+				
+				JordanAnswer=JordanInfo.split("&");
+				JordanAnswerID1=JordanAnswer[0];
+				
+				$("#"+selectedAnswerId1).attr("disabled", true);
+			
+				$("#"+systemID1).attr("disabled", true);
+			
+				$("#"+JordanAnswerID1).attr("disabled", true);
+				
+					
+				
+				correctAnswerArray.splice(jQuery.inArray(systemID1,correctAnswerArray),1); 
+				correctAnswerArray.splice(jQuery.inArray(JordanAnswerID1,correctAnswerArray),1); 
+				
+			
+				
+				
+				
+					
+			   }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+				Click on the sentence that is good supporting information.
+			</div>
+			<br><br>
+		
+			<div id="mainText">
+				<div id="mainTextHead">
+						The Three Health Benefits of Asparagus
+				</div>
+				<div id="para1" class="para">
+					<span  id="b0" value="Incorrect">Asparagus is a very healthy vegetable.</span><span class="mybutton" id="b1" value="Correct">One of the reasons that asparagus is so good for you is that it is loaded with nutrients.</span><span class="mybutton" id="b2" value="Incorrect">It is a very good source of fiber and folate. It also contains vitamins like A, C, E and K.</span>
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="mybutton" id="b3" value="Correct">It is also believed that asparagus may help slow the aging process and fight against certain types of cancer.</span>
+					<span class="mybutton" id="b4" value="Incorrect">As mentioned above, asparagus provides folate, which works with vitamin B12 help prevent brain damage.</span><span class="mybutton" id="b5" value="Incorrect">B12 can be found in fish, poultry, meat and dairy.</span>
+				</div>
+				<div id="para3" class="para">
+				<span class="mybutton" id="b6" value="Correct">One more benefit of asparagus is it increases urination.</span>   
+					<span>This helps the body get rid of waste and extra salts.</span><span class="mybutton" id="b7" value="Incorrect">This is especially good for people who have high blood pressure or other heart-related diseases.</span><span class="mybutton" id="b8" value="Incorrect">These are some of the reasons why asparagus is very healthy. Consider eating some asparagus, or another healthy vegetable, with every meal!</span>
+				</div>
+		</div>
+		<div id="textMap">
+			<div class="textTitleTopicBox" id="textTopicBox">
+				<div id="headTitleTopic">Title</div>
+				<div id="titleEntry" data-state="">
+					<div class="posText1">The Three Health Benefits of Asparagus</div>
+				</div>
+			</div>
+			<div class="textTitleTopicBox" id="textTopicBox">
+				<div id="headTitleTopic">Topic</div>
+				<div id="titleEntry" data-state="">
+					<div class="posText1">Asparagus</div>
+				</div>
+			</div>
+			<div  id="textMainIdeaBox">
+				<div id="headMainIdea">Main<br>Idea</div>
+				<div id="mainIdeaEntry" data-state="">
+					<div class="posText1">
+						Asparagus is a very healthy vegetable
+					</div>
+				</div>
+			</div>
+			<div class=" supportEntry" id="supportEntry1" data-state="">
+				<div class="posText2">
+					<span id="supReplace1">
+						
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry2" data-state="">
+				<div class="posText2">
+					<span id="supReplace2">
+						
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry3" data-state="">
+				<div class="posText2">
+					<span id="supReplace3">
+					</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L19Bkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Life Savers', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{	overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;	}
+			.jspHorizontalBar
+			{ display: none; }
+			.horizontal-only
+			{	height: auto;
+				max-height: 200px;	}
+			#leftPane
+			{	width: 400px;
+				margin: 30px 0px 0px 20px;
+				display: inline-block;
+				vertical-align: top;	}
+			#questionText
+			{	font-family: McLaren, Verdana, 'Times New Roman';
+				font-size: 36px;
+				width: 360px;
+				margin: 6px 0px 0px 40px;
+				text-align: center;		}
+			#buttonbox
+			{	margin: 30px 0px 0px 20px;	}
+			.mybutton
+			{	width: 360px;
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				margin: 8px 0px;
+				padding: 10px 12px;
+				text-decoration: none;
+				outline: none;
+				border: 1px solid #212121;
+				border-radius: 8px;
+				text-align: center;		}
+			.mybutton:hover
+			{	cursor: pointer;	}
+			#rightPane
+			{	margin: 40px 0px 0px 40px;
+				display: inline-block;	}
+			#dogPoster
+			{	background-color: white;
+				width: 300px;
+				height: 400px;
+				border: 2px solid #212121;
+				padding: 8px 10px;
+				position: fixed;
+				font-weight: bold;	}
+			#posterTitle
+			{	font-size: 26px;
+				text-align: center;	}
+			#posterSub
+			{	font-size: 30px;
+				color: red;
+				margin: 0px 0px 10px 0px;	}
+			#posterText
+			{	font-size: 21px;
+				padding: 0px 10px;
+					}
+			#dogPoster img
+			{	height: 128px;
+				float: left;
+				padding: 4px;	}
+			#posterContact
+			{	font-size: 28px;
+				margin: 15px 0px 0px 0px;
+				text-align: center;
+				text-decoration: underline;	}
+			
+			.highlight
+			{	background-color: #ffeb43;
+				border-radius: 10px;	}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			var content="";
+			var userSelecteditem;
+			var score=0;
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b3"];
+			var items = ["b1","b2","b3"];
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{				
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoadedEasy");
+				GetRequest();
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				$( "#textMap" ).slideToggle(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							
+							
+							//play the correct answer sound
+							
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+						$("#posterText").append("She is about 60 pounds with short, black hair and a white spot on her front left paw.")
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userAnswerId = $(this).attr("id");
+					//get user answer's text
+					userSelectedValue = document.getElementById(userAnswerId).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					
+							//user selcted Item 4-7
+					userSelecteditem = $(this).attr("item");
+					
+					items.splice(jQuery.inArray(userAnswerId,items),1); 
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+						score++;
+						//$("#posterText").append("She is about 60 pounds with short, black hair and a white spot on her front left paw.")
+						
+						
+					
+					sound_clicked(); 
+					
+					}
+					else { 
+					sound_incorrect();
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#ab85b6"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #ab85b6;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data=="Jordan")
+				{
+				var value = parseInt(Math.random() * (items.length - 1 + 1) + 1);
+  				var JordanAnswerID=items[value-1];
+				var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+					$("#"+JordanAnswerID).animate({backgroundColor: "blue", color: "white"}, 1000);
+					parent.GetWorldEvent(JordanAnswer);
+			
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else if (data == "getScore")
+				{
+					
+					parent.GetWorldEvent(score);
+				}
+				else if(data == "NextPage")
+				{
+				parent.nextPage("media/"+"Lesson19-E4.html?score="+score);
+				}
+				
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+				
+				
+				
+			   }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="leftPane">
+				<div id="questionText">
+					Which description can help people identify Lola?
+				</div>
+				<div id="buttonbox">
+					<div class="mybutton" id="b1" item="A" value="Incorrect">
+						She is so cute and loves belly rubs.
+					</div>
+					
+					<div class="mybutton" id="b2" item="B" value="Incorrect">
+						She barks a lot, but always in a friendly way.
+					</div>
+					
+					<div class="mybutton" id="b3" item="C" value="Correct">
+					She is about 60 pounds with short, black hair and a white spot on her front left paw.
+
+					</div>
+				</div>
+			</div>
+			<div id="rightPane">
+				<div id="dogPoster">
+					<div id="posterTitle">
+							Lost Dog, Lola <br><span style='color:red'>($10 Reward)</span>
+						<div id="posterSub"></div>
+					</div>
+					<img src="labrador.png">
+					<div id="posterText">Lola is a 6-year old lab. 
+						
+					</div>
+					<div id="posterContact">
+						
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

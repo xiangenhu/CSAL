@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain='ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-color: #448fff;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.questionBox
+			{
+				width: 410px;
+				display: inline-block;
+				margin: 40px 0px 0px 15px;
+				padding: 0px;
+				border: none;
+				vertical-align: top;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 34px;
+				padding: 10px;
+				color: #212121;
+				margin: 0px;
+				vertical-align: top;
+			}
+			.buttonBox
+			{
+				margin: 0px 80px;
+				vertical-align: top;
+				display: inline-block;
+			}
+			.mybutton
+			{
+				font-size: 42px;
+				font-family: Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 70px;
+				height: 70px;
+				line-height: 65px;
+				margin: 8px 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				outline: none;
+				border-radius: 12px;
+				display: inline-block;
+			}
+			#pictureBox
+			{
+				display: inline-block;
+				margin: 24px 0px 0px 25px;
+			}
+			#answerPosition
+			{
+				position: fixed;
+				top: 49px;
+				left: 276px;
+				font-size: 19px;
+				line-height: 26px;
+				background-color: white;
+				font-weight: bold;
+				border-radius: 6px;
+				padding: 0px 3px;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+
+			var currentItem = -1;
+			var numItems = 0;
+			var userAnswer = "";
+			var score = 0;
+			var correctAnswer = "#b8";
+
+			function GetItem()
+			{
+				if (currentItem < numItems) {
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else {
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function GetRequest(){
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+			   }
+			}
+
+			function ShowItem(){ if (currentItem == 0){} }
+			
+			$(document).ready(function()
+			{
+				GetRequest();
+				Lock();
+				parent.GetWorldEvent("MediaLoadedNew");
+			});
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+
+			var clickFunc = function()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				userAnswer = $(this).attr("value");
+				userSelectedItem = $(this).attr("id");
+				userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+			userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");				
+				userSelectedValue=userSelectedValue.replace(/[\t ]+/g,"");
+				userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");				
+				userSelectedValue=userSelectedValue.replace(/[\t ]+/g,"");
+				userSelectedValue=userSelectedValue.replace(/["]+/g,"double quotations");
+				userSelectedValue=userSelectedValue.replace(/[!]+/g,"exclamation");
+				userSelectedValue=userSelectedValue.replace(/[@]+/g,"@");
+				userSelectedValue=userSelectedValue.replace(/[?]+/g,"question mark");
+				userSelectedValue=userSelectedValue.replace(".","period");
+				userSelectedValue=userSelectedValue.replace("...","ellipsis");
+				userSelectedValue=userSelectedValue.replace(/[,]+/g,"comma");
+				userSelectedValue=userSelectedValue.replace(/[-]+/g,"Dash");
+				userSelectedValue=userSelectedValue.replace(/[:]+/g,"colon");
+				userSelectedValue=userSelectedValue.replace(/[']+/g,"single question");
+				userSelectedValue=userSelectedValue.replace(/[()]+/g,"brackets");
+				userSelectedValue=userSelectedValue.replace(/[\/]+/g,"slash");
+				if (userAnswer == "Correct")
+				{
+					score++;
+					parent.PlaySound('success0.wav');
+				}
+				else
+				{
+					parent.PlaySound('incorrect0.wav');
+				}
+				
+				//animate button click
+				$(this).animate({fontSize: butAnimSize}, 75);
+				$(this).animate({fontSize: butFontSize}, 600);
+				
+				//lock buttons
+				Lock();
+				
+				if (userAnswer == "Correct") { $(this).animate({"backgroundColor": "green", color: "white"}, 600); }
+				else { $(this).animate({"backgroundColor": "#da3636", color: "white"}, 600); }
+				
+				return parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+			};
+			
+			function Unlock()
+			{				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ 
+					$(this).animate({backgroundColor: "#edff73"}, 300);
+					
+					var curBut = $(this).attr("id");
+					
+					if (curBut == "b1") { $("#answerPosition").text($("#b1").text()); }
+					else if (curBut == "b2"){ $("#answerPosition").text($("#b2").text()); }
+					else if (curBut == "b3"){ $("#answerPosition").text($("#b3").text()); }
+					else if (curBut == "b4"){ $("#answerPosition").text($("#b4").text()); }
+					else if (curBut == "b5"){ $("#answerPosition").text($("#b5").text()); }
+					else if (curBut == "b6"){ $("#answerPosition").text($("#b6").text()); }
+					else if (curBut == "b7"){ $("#answerPosition").text($("#b7").text()); }
+					else if (curBut == "b8"){ $("#answerPosition").text($("#b8").text()); }
+					else if (curBut == "b9"){ $("#answerPosition").text($("#b9").text()); }
+				});
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({"backgroundColor": "white", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+
+			function ShowMediaAnswer()
+			{
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				$( "#answerPosition" ).animate({"backgroundColor": "green", color: "white"}, 1000);
+				$( "#answerPosition" ).text($(correctAnswer).text());
+			}
+			
+			function changeAnswer(objId)
+			{
+				$("#answerPosition").text($("#"+objId).text());				 //alert ($("#obj").text);
+			} 
+
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Difficult");
+				}
+				else if (data == "NextPage")
+				{
+					parent.GetWorldEvent("Stop");	
+				}
+				else if (data == "getScore")
+				{
+					parent.GetWorldEvent(score);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="pictureBox">
+			<img src="LDP2-6.png">
+		</div>
+		<div id="answerPosition">
+			
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				Which punctuation mark correctly completes the sentence?
+			</div>
+			
+			<div class="buttonBox" id="buttonBox1">
+				<div class='mybutton' id="b1" value="Incorrect" title="period">
+					.
+				</div>
+
+				<div class='mybutton' id="b2" value="Incorrect" title="comma">
+					,
+				</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect" title="question mark">
+					?
+				</div>
+			</div>
+			<div class="buttonBox" id="buttonBox2">
+				<div class='mybutton' id="b4" value="Incorrect" title="exclamation point">
+					!
+				</div>
+
+				<div class='mybutton' id="b5" value="Incorrect" title="double dash">
+					--
+				</div>
+			
+				<div class='mybutton' id="b6" value="Incorrect" title="colon">
+					:
+				</div>
+			</div>
+			<div class="buttonBox" id="buttonBox3">
+				<div class='mybutton' id="b7" value="Incorrect" title="parentheses">
+					()
+				</div>
+
+				<div class='mybutton' id="b8" value="Correct" title="ellipsis">
+					...
+				</div>
+			
+				<div class='mybutton' id="b9" value="Incorrect" title="quotation mark">
+					"
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

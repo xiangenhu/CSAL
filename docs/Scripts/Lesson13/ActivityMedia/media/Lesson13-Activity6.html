@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 13 Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				//background-color: green;
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+			}
+			#instructBox
+			{
+				background-color: #e8d7ee;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 24px;
+				line-height: 30px;
+				text-align: center;
+				padding: 8px 5px 5px 5px;
+				border-bottom: 6px dotted #b99cc4;
+				margin: 0px auto 0px auto;
+			}
+			#questionBox
+			{
+				width: 730px;
+				background-image: url('ClearBkgd2.png');
+				margin: 15px auto 10px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 38px;
+				line-height: 44px;
+				padding: 3px;
+				color: #212121;
+				margin: auto;
+			}
+			#mian
+			{
+				margin: 10px ;
+			}
+			#dragDiv4
+			{
+				position:absolute;
+				top:265px;
+				left:170px;
+				width:450px;
+				height:40px;
+				line-height:40px;
+				background-color:#b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				border-radius: 10px;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv7
+			{
+				position:absolute;
+				top:320px;
+				left:170px;
+				width:450px;
+				height:40px;
+				line-height:40px;
+				background-color:#b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				border-radius: 10px;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv8
+			{
+				position:absolute;
+				top:375px;
+				left:170px;
+				width:450px;
+				height:40px;
+				line-height:40px;
+				background-color:#b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				border-radius: 10px;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv9
+			{
+				position:absolute;
+				top:430px;
+				left:170px;
+				width:450px;
+				height:40px;
+				line-height:40px;
+				background-color:#b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				border-radius: 10px;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+		
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		 <script type="text/javascript">
+		var flag=1;
+		var spanX=0;
+		var spanY=0;
+		var divid;
+		var questionNum=0;
+		var UserAnswer;
+		var dragArea="main";
+		var dragAreaID="#main1 div";
+		var slectedItems="";
+		var idName = new Array();
+		var insertDivId;
+		var SortArr=["dragDiv4","dragDiv7","dragDiv8","dragDiv9"];
+		
+		function Start()
+		{	
+			$(".drag").attr('disabled', true);
+			GetRequest() 
+			parent.GetWorldEvent("DDLoaded");
+		}
+	 
+		function GetItem()
+		{
+			questionNum++;
+			
+			if(questionNum<2)
+			{
+				
+				parent.GetWorldEvent("Continue");
+				
+			}
+			else
+			{
+				var getPageContent = " They were not sure how it happened. Before they were able to catch their breath, the threat of danger became real. They were forced to think quickly when " + "<span>" + $("#insert1").html() + "</span>";
+				
+				slectedItems += getPageContent + ".";
+				//alert(slectedItems);
+			
+				parent.nextPage("media/"+"Lesson13-Activity7.html?id="+slectedItems);
+			}
+			
+		}
+		
+		function GetRequest() 
+		{
+		   var url = location.search; 
+		   var idName = new Array();
+		   
+		   if (url.indexOf("?") != -1) 
+		   { 
+				str = url.substr(1); 
+				strs = str.split("=");
+				slectedItems = strs[1];
+		   }
+		}
+		
+		function ShowItem()
+		{
+		Lock();
+		
+		
+		}	
+		function Lock()
+		{
+		$(".drag").attr('disabled', true);
+		flag=1;
+		
+		
+		}
+		function Unlock()
+		{
+		$(".drag").attr('disabled', false);
+		flag=0;
+		
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				return UserAnswer;
+			
+			}
+			else if (data=="NextPage")
+			{
+			
+				var getPageContent = " They were not sure how it happened. Before they were able to catch their breath, the threat of danger became real. They were forced to think quickly when " + "<span>" + $("#insert1").html() + "</span>";
+				
+				slectedItems += getPageContent+"."
+			
+				parent.nextPage("media/"+"Lesson13-Activity7.html?id="+slectedItems);
+		
+			}
+			
+			else if (data=="JordanSelect")
+			{
+			
+				var getSelectIndex=Math.floor(Math.random() * SortArr.length )
+				
+				var getSelectName=SortArr[getSelectIndex];
+				
+				var getContent = $("#"+getSelectName).html();
+				
+				
+				insertDivId="insert"+questionNum;
+				$("#"+insertDivId).html(getContent);
+				$("#"+insertDivId).css({"text-decoration":"underline"});
+				//SortArr.splice(getSelectIndex,1)
+				SortArr.splice(jQuery.inArray(getSelectName,SortArr),1); 
+				
+				$("#"+getSelectName).remove();
+				parent.GetWorldEvent("JordanSelect");
+				
+		
+			}
+			
+			
+		}
+		function ShowMediaAnswer()
+		{
+			
+			
+
+		}
+	 
+	
+	 var main="mian1";
+	 	//$(function(){
+	 $(document).ready(function(){//$(function scrollIt()
+        $("#main div").mouseover(function (e) {
+		
+			var oe=e||window.event;
+             divid = $(this).attr("id"); //
+			 getContent = $(this).html();
+            var odiv = document.getElementById(divid); //
+            $(this).css("z-index", "100").siblings().css("z-index", "0"); //div????
+            moveDiv(odiv);
+			//alert(oe.clientY)
+        });
+		
+		
+	        function moveDiv(obj) 
+			{
+				obj.onmousedown = function (e) {//
+			
+                var oe = e || window.event;
+                var $this = this;
+				
+				insertDivId="insert"+questionNum;
+				
+                var startX = oe.clientX - $this.offsetLeft;
+                var startY = oe.clientY - $this.offsetTop;
+				
+				var DivStartX= $("#"+divid).offset().left ; 
+				var DivStartY = $("#"+divid).offset().top; 
+				var rangeLeft;
+				var rangeTop;
+				
+				
+                //obj.className = "on"; //css3
+				
+				if (flag==0)
+				{
+					document.onmousemove = function (e) {////??????
+                    var oe = e || window.event;
+
+                    $this.style.left = oe.clientX - startX + "px";
+					
+                    $this.style.top = oe.clientY - startY + "px";
+					rangeLeft=oe.clientX - startX  
+					rangeTop=oe.clientY - startY
+					
+					var spanX = $("#"+insertDivId).position().left; 
+					var spanY = $("#"+insertDivId).position().top;
+
+					if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+					{
+						$("#"+insertDivId).css({"color":"green"});
+						$("#"+insertDivId).css({"font-weight":"bold"});
+						$("#"+insertDivId).css({"font-size":"48px"});
+					}
+					else
+					{
+						$("#"+insertDivId).css({"color":"#212121"});
+						$("#"+insertDivId).css({"font-weight":"normal"});
+						$("#"+insertDivId).css({"font-size":"38px"});
+					}
+					
+					//$this.className='pointer';
+					
+		        }
+                
+				document.onmouseup = function () {//??????
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                    //obj.className = "off"; //css3??????
+					//var insertDivId="insert"+questionNum;
+					var spanX = $("#"+insertDivId).position().left ; 
+					var spanY = $("#"+insertDivId).position().top;
+					
+					if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+					{
+					
+						$("#"+insertDivId).html(getContent);
+						$("#"+insertDivId).css({"color":"#593367"});
+						$("#"+insertDivId).css({"text-decoration":"none"});
+						$("#"+insertDivId).css({"font-weight":"normal"});
+						$("#"+insertDivId).css({"font-size":"38px"});
+						
+						$("#"+divid).remove();
+					
+					flag=1;
+					
+					UserAnswer=getContent;
+					//parent.GetWorldEvent("UserAnswer");
+					parent.GetWorldEvent("userAnswer_"+"UserAnswer_"+UserAnswer);
+					Lock();
+
+					}
+					else
+					{
+					$this.style.left =DivStartX+ "px";
+					$this.style.top = DivStartY+ "px";
+					
+					}
+
+                    if ($this.releaseCapture) {//debug??????
+					
+                        $this.releaseCapture();
+                    }
+                }
+                if ($this.setCapture) {//debug??????
+                    $this.setCapture();
+
+                }
+
+				}
+			
+			}
+            
+        }
+    });
+</script>
+	</head>
+	<body onload="Start()">
+		<div id="instructBox">
+			Drag and drop an option onto the blank.
+		</div>
+		
+		<div id="questionBox">
+			<div id="questionText">
+				They were not sure how it happened. Before they were able to catch their breath, the threat of danger became real. They were forced to think quickly when  <span id="insert1" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>.   
+			</div>
+		</div>
+		 <div  style="width: 100%; height: 100%; margin: 0 auto;" id="main">
+   
+		<div class="drag" id="dragDiv4" >a ninja popped out of the bushes</div>
+		<div class="drag" id="dragDiv7" >they were captured by strange men</div>
+		<div class="drag" id="dragDiv8" >they were caught in a terrible storm</div>
+		<div class="drag" id="dragDiv9" >they had their bags stolen from them</div>
+		
+	      
+		</div>
+		
+		
+	</body>
+</html>

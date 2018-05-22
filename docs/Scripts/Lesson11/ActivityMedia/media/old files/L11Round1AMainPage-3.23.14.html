@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 11 Media</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+		
+		<script src="http://www.veryhuo.com/uploads/Common/jquery-1.3.2.min.js" type="text/javascript" charset="GBK"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			var strId="";
+			var newStrId="";
+			var questionNum=16;
+			var UserAnswer="";
+			var questionList=["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016"]
+			var idNameAndScore = new Array();
+			var newquestionList=new Array();
+			var UserScore=0;
+			var JordanScore=0;
+			var totalScore=0;
+			var countNum=0;
+			var totalScoreArray= new Array();
+			var correctNum=0;
+			var wrongArray = new Array();
+			
+			var clickFunc = function()
+			{
+				window.external.PlaySound('clicked0.wav');
+				
+				var clickId=$(this).attr("id");
+				checkID(clickId);
+				
+				strId+=$(this).attr("id")+"_"; 
+			
+				var page=$(this).attr("pageAddress");
+				
+				window.location.href=page+"?id="+strId;
+			}
+			
+			function sound_clicked() 
+			{ return window.external.PlaySound('clicked0.wav');	
+			}
+			
+			function sound_increase() 
+			{ return window.external.PlaySound('increase.wav'); 
+			}
+			
+			///////////////////////////////
+			//GAME RULES AND POINT VALUES//
+			///////////////////////////////
+			
+			//IF USER GETS 3000 POINTS, THE LESSON IS OVER			
+			
+			//these pixel values represent the amount you need to fill the #scoreFill bar depending on the question they chose, and the user got the question right
+			//22.6px = 100pts; 45.2px = 200pts;
+			//68px = 300pts; 90.4px = 400pts;			
+			
+			//we should call the fillBar(#element, points) function when the user gets the correct answer
+			//if answer correct, pass question point value to fillBar()
+			//if answer incorrect, either don't call fillbar() or pass 0
+			
+			function Start()
+			{
+				Lock();
+				//alert("Initial lock called");
+				GetRequest();
+				
+				window.external.GetWorldEvent("MainPageLoaded");
+			}
+			
+			function GetItem()
+			{
+				//if(idNameAndScore.length <= questionNum)
+				//IF USER GETS 3000 POINTS, THE LESSON IS OVER
+				if(totalScore<= 3000)
+				{
+				//alert(totalScore)
+					window.external.GetWorldEvent("Continue");
+				}
+				else
+				{
+					window.external.GetWorldEvent("Stop1");
+				}
+			}
+			
+			function ShowItem(){}	
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".tableButton" ).unbind("click");
+				$( ".tableButton" ).unbind("mouseover");
+				$( ".tableButton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".tableButton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".tableButton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function UnlockAll()
+			{
+				//this sets the hover animation & cursor for buttons
+				$( ".tableButton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#005383", color: "white", borderColor: "#f1f36b", borderStyle: "dotted", borderSize: "6px"}, 350); });
+				$( ".tableButton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#8bd3fd", color: "#005383", borderColor: "#f9facb", borderStyle: "solid", borderSize: "6px"}, 350); });
+				$( ".tableButton" ).css( 'cursor', 'pointer' );
+				
+				//sets font color & background color
+				$( ".tableButton" ).animate({backgroundColor: "#background-color: #8bd3fd;", color: "#005383", borderColor: "#dbdbdb", borderStyle: "dotted", borderSize: "6px"}, 500);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$( ".tableButton" ).bind( "click", clickFunc );
+			}
+
+			function Unlock()
+			{
+				UnlockAll();
+				
+				//cycle through all of the buttons
+				for(var i = 0; i < idNameAndScore.length-1; i++)
+				{
+					var breakOut = new Boolean();
+					var array = idNameAndScore[i].split("_");
+					
+					//if the score is 0
+					if (array[1]==0) //IF SCORE IS 0
+					{
+						//cycle through wrong answers and change border
+						for (var x = 0; x < wrongArray.length-1; x++)
+						{
+							//if current item matches the wrong answer
+							if ( "#"+array[0] == wrongArray[i])
+							{
+								//turn the border red
+								$( "#"+array[0] ).css({borderColor: "red"});
+								//alert("you made it!");
+								//set all border properties? also need to fix hover function so hovering doesn't cancel the new border color
+								breakOut = true;
+							}
+						}
+					}
+					else //IF SCORE IS > 0
+					{
+						for (var x = 0; x < idNameAndScore.length-1; x++)
+						{
+							
+							if ( "#"+array[0] == wrongArray[i])
+							{
+								//alert("you made it2!");
+								$( "#"+array[0] ).css({borderColor: "red"});
+								breakOut = true;
+							}
+						}
+						
+						if (breakOut == true)
+						{
+							continue;
+						}
+						else
+						{
+							//unbinds click function and hover
+							$( "#"+array[0] ).unbind("click");
+							$( "#"+array[0] ).unbind("mouseover");
+							$( "#"+array[0] ).unbind("mouseout");
+							
+							//sets disabled mouse cursor on buttons
+							$( "#"+array[0] ).css( 'cursor', 'not-allowed' );
+							
+							//sets disabled colors WITH animation
+							$( "#"+array[0] ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+						}
+					}
+				}
+			}
+
+			function GetMediaEvent(data)
+			{
+				if (data=="UserAnswer"){
+					return UserAnswer;
+				}
+				
+				if (data=="CristinaSelectedPage")
+				{
+					for(var i = 0; i < idNameAndScore.length; i ++) 
+					{
+						var selectedItem= idNameAndScore[i];
+						var array=idNameAndScore[i].split("_");
+
+						if ($.inArray(selectedItem, questionList) )
+						{
+							
+							if (array[1]>0)
+							{
+								questionList.splice($.inArray(selectedItem,questionList),1);
+							}
+						}
+					} 
+				
+				  var ItemNum=Math.floor(Math.random() * questionList.length);
+				  var Item=questionList[ItemNum];
+				 // alert(Item)
+				  checkID(001)
+				  strId+="001"+"_"; 
+				  var JordanPage=$("#"+"001").attr("pageAddress")
+				  window.location.href=JordanPage+"?id="+strId;
+				}
+			}
+			
+			function GetRequest()
+			{
+				var url = location.search; 
+				//alert("url: " + url);
+				
+				if (url.indexOf("?") != -1)
+				{					
+					str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//2-12 idNameAndScore to split a string to different strings that are different pageID with score.
+					idNameAndScore=strId.split("&");
+					//UserScore= strs[3];
+					//JordanScore= strs[5];
+					
+					for(var i = 0; i < idNameAndScore.length-1; i ++)
+					{
+						//2-12 this array is to split a idNameAndScore string to pageID and score.
+						var array=idNameAndScore[i].split("_");
+						
+						//2-12 if the return page score is "0", then relative button can click again, but the button border should change to red
+						
+						if (array[1]==0)
+						{
+							wrongArray[i] = "#" + array[0];
+							//$("#"+array[0]).attr("disabled", false);
+							//$("#"+array[0]).css({"border": "3px solid red"});
+							//$("#"+array[0]).css({borderColor: "#f13232"});
+						}
+						else
+						{
+							countNum++;
+							totalScore+= array[1]<< 0;
+							totalScoreArray.push(array[1]);
+							//$("#"+array[0]).attr("disabled", true);
+						}
+					}
+					
+					var percentage=7*totalScore/30;
+					fillBar("#scoreFill", percentage);
+					$("#scoreLabel").html(totalScore);
+				}
+			}			
+			
+			function checkID(clickId)
+			{ 
+				for(var i = 0; i < idNameAndScore.length-1; i ++)
+				{
+					var array=idNameAndScore[i].split("_");
+					if (array[1]==0)
+					{
+						var getID=array[0];
+						//alert(getID)
+						if(getID==clickId)
+						{
+							strId=strId.replace(idNameAndScore[i]+"&","")
+							idNameAndScore.splice(jQuery.inArray(idNameAndScore[i],idNameAndScore),1); 
+						}
+					}
+				}
+			}
+			
+			//adds fillAmount to the current width of element and creates width animation based on the result
+			//when passing an element to this function, make sure if element is an id to include a # before the element name and a . if the element is a class
+			//fillAmount should be a positive integer value
+			function fillBar(element, fillAmount)
+			{
+				var newWidth = $(element).width() + fillAmount; //calculate the new width
+				
+				//ensures bar doesn't overflow
+				if (newWidth > 680)	{newWidth = 680;}
+				
+				$(element).animate({width: newWidth}, 1000);		//queue the width animation
+				
+				//For some reason this sound will not play
+				sound_increase();
+			}
+			
+			function fillBar1()
+			{
+				var newWidth = "260px";
+				var barWidth = document.getElementById("scoreFill");
+				var barLabelWidth = document.getElementById("scoreLabel");
+				
+				barWidth.style.width = newWidth;
+				barLabelWidth.style.width = newWidth;
+				
+				$( "#scoreFill" ).animate({backgroundColor: "#00ff56"}, 1000);
+			}
+		</script>
+		
+		<style>
+			body
+			{
+				background-color: #1482c1;
+				overflow: hidden;
+				width: 790px;
+				height: 480px;
+				cursor: default;
+			}
+			#instructBox
+			{
+				/*background-color: #dff3ff;*/
+				font-family: Raleway, Verdana, 'Times New Roman';
+				color: white;
+				width: 500px;
+				font-size: 24px;
+				text-align: center;
+				padding: 5px;
+				border: 5px dotted #f1f36b;
+				margin: 0px auto 4px auto;
+			}
+			#mainTable
+			{
+				font-family: Verdana, 'Times New Roman';
+				font-size: 30px;
+				text-align: center;
+				padding: 8px;
+				margin: 30px auto;
+				table-layout: fixed;
+				width: 750px;
+			}
+			TH{ }
+			.tableTitle
+			{
+				color: #005383;
+				font-family: 'Slackey', Verdana, 'Times New Roman';
+				border: 5px solid white;
+				padding: 5px 5px;
+				background-color: white;
+				border-radius: 6px;
+				margin: 0px 100px;
+			}
+			TD
+			{
+				border: none;
+			}
+			.tableButton
+			{
+				color: white;
+				font-family: Slackey, Verdana, 'Times New Roman';
+				font-weight: bold;
+				font-size: 40px;
+				border-radius: 8px;
+				padding: 1px 10px;
+				margin: 2px 5px;
+				width: 146px;
+				background-color: #8bd3fd;
+				border: 6px dotted #dbdbdb;
+				outline: none;
+			}
+			#scoreBar
+			{
+				position: absolute;
+				width: 680px;
+				z-index: 1;
+				top: 10;
+				margin-left: 40px;
+			}
+			#scoreFill
+			{
+				position: relative;
+				z-index: -1;
+				width: 0px;
+				background-color: #00FF00;
+				top: 0;
+				margin: -28px 0px 0px 12px;
+				
+			}
+			#scoreLabel
+			{
+				margin: 0px 0px 0px 45%;
+				padding-bottom: 1px;
+				width: 100%;
+				font-weight: bold;
+				font-family: Verdana, 'Times New Roman';
+				color: white;
+			}
+			.doIt
+			{
+				position: relative;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body onload="Start()">
+		<!--<div id="instructBox">
+			Please click a category below.
+		</div>-->
+		
+		<!--it would be best to update the #scoreLabel display with the user's current points; if this is annoying simply remove the label-->
+		
+		<!--<button onclick="Lock()">Lock</button>
+		<button onclick="Unlock()">Unlock</button>
+		<button onclick="UnlockAll()">UnlockAll</button>-->
+		
+		<div id="scoreBar">
+			<img src="ScoreBar2.png">
+			<div id="scoreFill"><span id="scoreLabel">0</span></div>
+		</div>
+		
+		<table id="mainTable">
+		<th class="tableTitle">Text<br>Signals</th>
+		<th class="tableTitle">Writer's<br>Purpose</th>
+		<th class="tableTitle">Using<br>Clues</th>
+		<th class="tableTitle">Mixed<br>Review</th>
+		<tr style="height: 5px;">
+		<tr>
+		<td><button type="submit" id="001" pageAddress="L11Round1AQ1.html" class="tableButton" >100</button></td>
+		<td><button type="submit" id="005" pageAddress="L11Round1AQ5.html" class="tableButton" >100</button></td>
+		<td><button type="submit" id="009" pageAddress="L11Round1AQ9.html" class="tableButton" >100</button></td>
+		<td><button type="submit" id="013" pageAddress="L11Round1AQ13.html" class="tableButton" >100</button></td>
+		</tr>
+		<tr>
+		<td><button type="submit" id="002" pageAddress="L11Round1AQ2.html" class="tableButton" >200</button></td>
+		<td><button type="submit" id="006" pageAddress="L11Round1AQ6.html" class="tableButton" >200</button></td>
+		<td><button type="submit" id="010" pageAddress="L11Round1AQ10.html" class="tableButton" >200</button></td>
+		<td><button type="submit" id="014" pageAddress="L11Round1AQ14.html" class="tableButton" >200</button></td>
+		</tr>
+		</tr>
+		<tr>
+		<td><button type="submit" id="003" pageAddress="L11Round1AQ3.html" class="tableButton" >300</button></td>
+		<td><button type="submit" id="007" pageAddress="L11Round1AQ7.html" class="tableButton" >300</button></td>
+		<td><button type="submit" id="011" pageAddress="L11Round1AQ11.html" class="tableButton" >300</button></td>
+		<td><button type="submit" id="015" pageAddress="L11Round1AQ15.html" class="tableButton" >300</button></td>
+		</tr>
+		</tr>
+		<tr>
+		<td><button type="submit" id="004" pageAddress="L11Round1AQ4.html" class="tableButton" >400</button></td>
+		<td><button type="submit" id="008" pageAddress="L11Round1AQ8.html" class="tableButton" >400</button></td>
+		<td><button type="submit" id="012" pageAddress="L11Round1AQ12.html" class="tableButton" >400</button></td>
+		<td><button type="submit" id="016" pageAddress="L11Round1AQ16.html" class="tableButton" >400</button></td>
+		</tr>
+		</tr>
+		
+	</body>
+</html>

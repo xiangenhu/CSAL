@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  
+  <style>
+  	body
+	{
+		background-image:url('L4Bkgd0.png');
+		background-size: cover;
+		background-repeat:no-repeat;
+		overflow: hidden;
+		width: 790px;
+		height: 472px;
+		cursor: default;
+		margin: 0px;
+	}
+	.scoreboardWrapper
+	{
+		width: 800px;
+		height: 95px;
+		display: none;
+		position: fixed;
+	}
+	.scoreboard
+	{
+		font-family: Nunito, Verdana, 'Times New Roman';
+		position: absolute;
+		width:280px;
+		height:60px;
+		padding: 0px;
+		background-color: #fbffe1;
+		color:#505050;
+		font-size: 45px;
+		text-align: center;
+		border-top: none;
+		vertical-align: middle;
+	}
+	#userBoard
+	{
+		top: 38px;
+		left: 0px;
+		border-bottom-right-radius: 10px;
+		border-left: none;
+		color: #b24d4d;
+	}
+	#agentBoard
+	{
+		top:38px;
+		right: 0;
+		border-bottom-left-radius: 10px;
+		border-right: none;
+		color: #6f9eca;
+	}
+	.textBox
+	{
+		background-color: #f6ffb6;
+		color: black;
+		font-family: 'Raleway', Verdana, 'Times New Roman';
+		width: 800px;
+		height: 25px;
+		font-size: 26px;
+		text-align: center;
+		padding: 7px 0px;
+		margin: 0px auto 4px auto;
+		opacity: 0.0;
+	}
+
+	.exampleSentence
+	{
+		font-size: 30px;
+		text-align: center;
+		background-color: white;
+		color: black;
+		border-radius: 12px;
+		width: 660px;
+		margin: 75px auto 35px auto;
+		opacity: 0.0;
+		padding: 10px 20px;
+		border: 6px dotted #424242;
+	}
+	.buttonWrapper
+	{
+		width: 780px;
+		height: 160px;
+		display: block;
+		position: fixed;
+		top: 270px;
+	}
+	.but
+	{
+		font-size: 20px;
+		font-family: Raleway, Verdana, 'Times New Roman';
+		font-weight: bold;
+		margin-bottom: 4px;
+		width: 796px;
+		height: 30px;
+		line-height: 30px;
+		color: #111111;
+		background-color: white;
+		text-decoration: none;
+		border-top: 2px solid #424242;
+		border-bottom: 2px solid #424242;
+		text-align: center;
+		padding: 5px 2px;
+		outline: none;		
+		opacity: 0.0;
+		display: block;
+	}
+	#but0 {	}
+	#but1 {	}
+	#but2 {	}
+	#but3 {	}
+	.affix
+	{
+		background-color: #edff73;
+		color: #212121;
+		border-radius: 10px;
+	}
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media =
+	{
+		//help ASAT determine information about the page
+		pageIdentifier: "Level3_MediaLoadedOpen",
+		pageDifficulty: "Medium2",
+		
+		pageIsFinal: false,		//enable on final page of each diagnostic level so a score can be determined
+		
+		currentItem: -1,
+		numItems: 0,
+		
+		//page switching variables
+		nextPageStay: "Lesson4_Level3_1",
+		nextPageJumpEasy: "",	//easy and hard pages are only defined on the final page of each diagnostic series
+		nextPageJumpHard: "",
+		jumpTheshold: 7,
+		
+		//score tracking variables
+		answerScore: 2,
+		answerList: null,
+		answerString: null,
+		
+		//variables for button selection
+		isSelected: false,
+		selectedButton: null,
+		
+		//variables for word highlighting 
+		exampleSentenceText: "As the tropical storm is <span id='exampleWord'>becom<span class='affix'>____</span></span> a hurricane, I can see an eye forming in the center of the storm on the weather radar.",
+		affixText:	"ing",
+		affixColor: "white",
+		
+		buttonChoices: [
+		"BECOMMENT - tells the reader about the process of a tropical storm",
+		"BECOMMENT - tells the reader about a tropical storm becoming a hurricane",	
+		"BECOMING - tells the reader that the event is going on now", 
+		"BECOMING - tells the reader how a tropical storm becomes a hurricane"
+		
+		],
+		correctButton: "but2",
+		
+	}
+	
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	
+	$(document).ready(function()
+	{
+		parent.GetWorldEvent(Media.pageIdentifier);		//reports the identifying name for the media page to ASAT
+	
+		//Takes a concatenated string of the most recent user answers from the query string of the html page and parses it into a list of characters
+		Media.answerString = window.location.search.slice(1);
+		Media.answerList = Media.answerString.split("");
+		
+		
+		
+	}
+	);
+	
+	/*
+		--------------------------------Helper Functions------------------------------
+	*/
+	
+	/*
+		calculates a combined totalScore of each page's answerScore that is currently stored in answerList
+	*/
+	function calculatePageJumpScore()
+	{
+		var totalScore = 0;
+		for(i=0; i < Media.answerList.length; i++)
+		{
+			totalScore += parseInt(Media.answerList[i]);	//convert the digit string of the score to an integer and add it to the sum
+		}
+		return totalScore;	//return the sum of the scores
+	
+	}
+  
+  
+  
+  
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	/*
+		Enables all events for designated elements after the visual cue is finished in the Unlock function
+	*/
+	function bindEvents()
+	{
+		//enables the functionality of the button elements 
+		//$(".but").on("click", ButClick);
+		//$(".but").on("mouseenter", ButMouseEnter);
+		//$(".but").on("mouseleave", ButMouseLeave);
+	}	
+	
+	function ButClick()
+	{
+		Lock();
+		
+		//Stores the currently selected button globally, changes the border around the button element to the designated selection color, and raises the isSelected flag 
+		Media.selectedButton = $(this);
+		Media.selectedButton.animate({backgroundColor: "#edff73", color: "#212121", opacity: 1.0},400);
+		Media.isSelected = true;
+		
+		sound_clicked();
+		
+		//compare the selected button to the designated correctButton
+		var selectedID = $(Media.selectedButton).attr("id");
+		userSelectedValue = document.getElementById(selectedID).innerHTML;
+		userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+		userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+		if(selectedID == Media.correctButton)
+		{
+			parent.GetWorldEvent("userAnswer_Correct_"+userSelectedValue);	
+		}
+		else
+		{
+			Media.answerScore--;	//if the selected answer is incorrect, decrement the answerScore for the current page
+			parent.GetWorldEvent("userAnswer_Incorrect_"+userSelectedValue);
+		}
+	}
+	
+	function ButMouseEnter()
+	{
+		$(this).stop().animate({backgroundColor: "#edff73" },200);
+		
+		var curBut = $(this).attr("id");
+
+		if (curBut == "but0") { $(".affix").text("MENT") }
+		else if (curBut == "but1"){ $(".affix").text("MENT") }
+		else if (curBut == "but2"){ $(".affix").text("ING") }
+		else if (curBut == "but3"){ $(".affix").text("ING") }
+	}
+	function ButMouseLeave()
+	{
+		$(this).stop().animate({backgroundColor: "white"},200);
+	}
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	*/
+	
+	
+	
+	/*
+		This function tries to select an item. If an item is found, this function remembers 
+		the found item and calls the function parent.GetWorldEvent("Continue") 
+		to inform the parent program that there is an item to continue the exercise. 
+		Otherwise, it calls parent.GetWorldEvent("Stop") and any closing code should be added at that point.
+		
+	*/
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop");
+		}
+	}	
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	
+	function ShowItem()
+	{
+		if(Media.currentItem == 0)
+		{
+			//add text to the buttons and textbox
+			for(i = 0; i < Media.buttonChoices.length; i++)
+			{
+				$("#"+"but"+i).text(Media.buttonChoices[i]);
+			}
+			$(".exampleSentence").html(Media.exampleSentenceText);
+			
+			$(".scoreboardWrapper").show("fade", 1000);
+			
+			//fade in animation for each element needed for the current item
+			$(".textBox").animate({opacity: 1.0}, 1000);
+			$(".exampleSentence").animate({opacity: 1.0}, 1000);
+		}
+		
+		Lock();
+	}
+	function ShowMediaAnswer()
+	{
+		
+		if(Media.isSelected == true)	//checks to make sure a selection has been made in order to check correctness
+		{
+
+			if(Media.selectedButton.attr("id") == Media.correctButton)
+			{
+				Media.selectedButton.animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+				sound_correct();
+			}
+			else
+			{
+				Media.selectedButton.animate({backgroundColor: "#da3636", color: "white", opacity: 1.0},1000);
+				$("#" + Media.correctButton).animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+				sound_incorrect();
+			}
+			
+			$(".affix").text(Media.affixText).animate({color: Media.affixColor, backgroundColor: "green"}, 2000);
+			$("#exampleWord").css("font-weight","bold");
+			
+			//ShowMediaAnswer is called when there are no remaining guesses remaining, at which point score of the page is determined and is added to answerList
+			Media.answerList.push(Media.answerScore);
+		}
+	}
+	
+	
+	/*
+		Preforms different actions based on a data string sent by ASAT
+	*/
+	function GetMediaEvent(data)
+	{
+		if (data == "MainQ")
+		{
+			alert("HI");
+			parent.GetWorldEvent("Jordan");
+		}
+		else if (data == "ThisQ")
+		{
+			parent.GetWorldEvent("Cristina");
+		}
+		else if(data == "Difficulty")
+		{
+			//checks the designated page difficulty to begin appropriate agent dialogue
+			parent.GetWorldEvent(Media.pageDifficulty);
+		}
+		else if(data == "NextPage")
+		{
+			//if current page is not the final page in a series, move to the next page in the series 
+			if(!Media.pageIsFinal)
+			{
+				parent.nextPage("media/"+ Media.nextPageStay + "?" + Media.answerList.join(""));
+			}
+			//otherwise calculate the total score of all scored pages and determine whether to jump to the easy or hard series
+			else
+			{
+				//evaluation for jumping between easy and hard sections, this should only be done on the final page of each diagnostic section
+				
+				var totalScore = calculatePageJumpScore();//returns the total sum of scores for all the pages
+				
+				if(totalScore <= Media.jumpTheshold)
+				{
+					parent.nextPage("media/"+ Media.nextPageJumpEasy);	//jump to easy if the total is below or equal to the jumpThreshold
+				}
+				else
+				{
+					parent.nextPage("media/"+ Media.nextPageJumpHard);	//otherwise jump to hard
+				}
+			}
+		}
+		else if(data == "Anim1")
+		{
+			//flash scores yellow
+			var count=0;
+			
+			//MEGAN, CHANGE THIS # IF YOU WANT TO INCREASE OR DECREASE HOW LONG THE SCOREBOARD FLASHES
+			while(count<4)
+			{
+				$(".scoreboard").animate({backgroundColor: "#edff73"}, 1);
+				$(".scoreboard").fadeTo("slow",0.30);
+				$(".scoreboard").fadeTo("slow",1);
+				
+				count++;
+			}
+			$(".scoreboard").animate({backgroundColor: "#fbffe1"}, 400);
+		}
+		else if(data == "Anim2")
+		{
+			//flash answers yellow
+			var count=0;
+			
+			//MEGAN, CHANGE THIS # IF YOU WANT TO INCREASE OR DECREASE HOW LONG THE ANSWERS FLASH
+			while(count<8) 
+			{
+				$(".but").animate({backgroundColor: "#edff73"}, 1);
+				$(".but").fadeTo("slow",0.30);
+				$(".but").fadeTo("slow",1);
+				
+				count++;
+			}
+			$(".but").animate({backgroundColor: "white"}, 400);
+		}
+		else if(data == "Anim3")
+		{
+			//change correct answer yellow + click sound >> correct sound + turn green
+			parent.PlaySound('clicked0.wav');
+			$("#but2").animate({backgroundColor: "#edff73"}, 700, function()
+			{
+				setTimeout(function(){
+					sound_correct();
+					$("#but2").animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+				}, 4000);
+				//MEGAN CHANGE THIS LAST NUMBER IF YOU WANT TO ALTER THE DELAY BETWEEN THE CLICK AND THE CORRECT NOISE PLAYING
+			});
+		}
+	}
+
+	function Anim1()
+	{
+		//flash scores yellow
+		var count=0;
+		
+		//MEGAN, CHANGE THIS # IF YOU WANT TO INCREASE OR DECREASE HOW LONG THE SCOREBOARD FLASHES
+		while(count<8)
+		{
+			$(".scoreboard").animate({backgroundColor: "#edff73"}, 1);
+			$(".scoreboard").fadeTo("slow",0.30);
+			$(".scoreboard").fadeTo("slow",1);
+			
+			count++;
+		}
+		$(".scoreboard").animate({backgroundColor: "#fbffe1"}, 400);
+	}
+	
+	function Anim2()
+	{
+		//flash scores yellow
+		var count=0;
+		
+		//MEGAN, CHANGE THIS # IF YOU WANT TO INCREASE OR DECREASE HOW LONG THE ANSWERS FLASH
+		while(count<5) 
+		{
+			$(".but").animate({backgroundColor: "#edff73"}, 1);
+			$(".but").fadeTo("slow",0.30);
+			$(".but").fadeTo("slow",1);
+			
+			count++;
+		}
+		$(".but").animate({backgroundColor: "white"}, 400);
+	}
+	
+	function Anim3()
+	{
+		parent.PlaySound('clicked0.wav');
+		$("#but2").animate({backgroundColor: "#edff73"}, 700, function()
+		{
+			setTimeout(function(){
+				sound_correct();
+				$("#but2").animate({backgroundColor: "green", color: "white", opacity: 1.0},1000);
+			}, 2000);
+			//MEGAN CHANGE THIS LAST NUMBER IF YOU WANT TO ALTER THE DELAY BETWEEN THE CLICK AND THE CORRECT NOISE PLAYING
+		});
+	}
+	
+	function Lock()
+	{
+		//creates a visual cue that the button elements are disabled
+		$(".but").animate({backgroundColor: "#474747", color: "gray", opacity: 0.7}, 700);
+		$(".but").css("cursor", "not-allowed");
+		
+		//disables the functionality of the button elements 
+		$(".but").off("click", ButClick);
+		$(".but").off("mouseenter", ButMouseEnter);
+		$(".but").off("mouseleave", ButMouseLeave);
+		
+	}
+	
+	/*
+		Enables functionality of any elements that were disabled by the Lock function
+	*/	
+	function Unlock()
+	{
+		//creates a visual cue that the button elements are enabled
+		//the functionality of the elements is enabled in the function bindEvents when all the visual cue animations are resolved
+		$(".but").css( 'cursor', 'pointer');
+		$(".but").animate({backgroundColor: "white", color: "#212121", opacity: 1}, 700).promise().done(bindEvents);	//some events can cause the visual cue animation to stop so they are enabled after the animation is finished
+		
+	}
+	/*
+		Signals ASAT to play a certain sounds during certain events such as clicking an answer, etc.
+	*/
+	function sound_clicked() 
+	{ 
+		return parent.PlaySound('clicked0.wav');
+		parent.GetWorldEvent("play clicked");
+	}
+
+	function sound_incorrect() 
+	{ 
+		return parent.PlaySound('incorrect0.wav');
+		parent.GetWorldEvent("play incorrect");
+	}
+	
+	function sound_correct()
+	{ 
+		return parent.PlaySound('success0.wav');
+		parent.GetWorldEvent("play correct");
+	}
+  </script>
+</head>
+<body>
+	<div class="scoreboardWrapper">
+		<div id="userBoard" class="scoreboard">You: 0<span id="userScore"></span></div>
+		<div id="agentBoard" class="scoreboard">Jordan: 0<span id="agentScore"></span></div>
+	</div>
+	<div class="textBox">Click the affix below that makes the example sentence work.</div>
+	<div class="exampleSentence"></div>
+	 <div class="buttonWrapper">
+		<div id="but0" class="but"></div>
+		<div id="but1" class="but"></div>
+		<div id="but2" class="but"></div>
+		<div id="but3" class="but"></div>
+	 </div>
+</body>
+
+</html>

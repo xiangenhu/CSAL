@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L25Bkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 296px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 26px;
+				padding: 15px 30px 0px 30px;
+				line-height: 36px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Fredoka One', Verdana, 'Times New Roman';
+				font-size: 34px;
+				line-height: 52px;
+				margin: 0px 0px 20px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-color: white;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				border-top: 5px solid #a58870;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 30px;
+				padding: 0px 20px;
+				color: #212121;
+				margin: 10px 0px 0px 5px;
+				width: 740px;
+			}
+			#buttonBox
+			{
+				margin: 6px auto;
+				width: 700px;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 680px;
+				height: 34px;
+				line-height: 34px;
+				margin: 3px 0px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+				padding: 1px 2px;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 5px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+					var $scrollElement;
+					var currentItem = 0;
+					var numItems = 0;
+					var isSelected = false;
+					var tryCount=0;
+					var score=0;
+					var userSelecteditem="";
+			$(document).ready(function()
+			{		
+						parent.GetWorldEvent("MediaLoaded");		
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000, contentWidth: '0px'});
+				
+				//ScrollToId($scrollElement, "target");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-0);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a58870"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#a58870", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							parent.PlaySound('success0.wav');
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					//$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+					$("#" +"b2").animate({backgroundColor: "green", color: "white"}, 1000);
+				} 
+				
+				//$("#" +"b3").animate({backgroundColor: "green", color: "white"}, 1000);
+				// parent.PlaySound('success0.wav');
+			}
+			 function GetMediaEvent(data)
+			    {	if (data=="JordanGoodSecond"){
+					$("#b2").animate({fontSize:"14px"}, 75);
+					$("#b2").animate({fontSize: "20px"}, 600);
+					parent.GetWorldEvent("JordanGoodSecond");
+					}
+					if (data=="JordanBad1Second"){
+					$("#b1").animate({fontSize:"14px"}, 75);
+					$("#b1").animate({fontSize: "20px"}, 600);
+					parent.GetWorldEvent("JordanBad1Second");
+					}
+					if (data=="JordanBad2Second"){
+					$("#b3").animate({fontSize:"14px"}, 75);
+					$("#b3").animate({fontSize: "20px"}, 600);
+					parent.GetWorldEvent("JordanBad2Second");
+					}
+					if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+					else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Hard");
+				}	
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else
+				if (data=="NextPage")
+				{
+				// no next page, so it stops here
+				parent.nextPage("media/"+"Lesson25-Main2-10.html?score="+(score));
+				//window.location="Lesson25-Main2-7.html?score="+(score);
+				}
+				
+				}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Starting a Community Garden
+				</div>
+				<div id="para1" class="para">
+					<span class="indent">Ask your neighbors to see if they are interested in participating in starting a community garden. Then, you can form a garden committee. A garden committee is a way of formally organizing your garden members and assigning duties to each member.
+				</div>
+				
+				<div id="para2" class="para">
+					<span class="indent"></span>You should look around your community for potential garden sites. Remember to get permission to use the land for the community garden. First, determine who owns the property by contacting the county or city tax assessor's office. Next, be sure to contact the landowner about their willingness to use the property as a community garden.
+				</div>
+				<div id="para3" class="para">
+					<span class="indent"></span>Now, you need to get your soil tested. It might be advisable to have the soil at the site tested for fertility pH and presence of heavy metals. Once you know the plot is viable for planting you must make sure it is clean and free from debris.
+				</div>
+				<div id="para4" class="para">
+					<span class="indent"></span>At this point you will need to plan your irrigation system and install it. Then, you must install a fence around the perimeter. Fences should not exceed six feet in height, and should be constructed of wood, chain link or ornamental metal.
+				</div>
+				<div id="para5" class="para">
+					<span class="indent"></span>Finally, you will need to determine when to plant seeds and start planting. Depending on your climate and the plant variety, planting times may vary. Check the seed packets for details.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">
+			<div id="questionText">
+				Why do you need to check the seed packets?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Incorrect1">To know how much sunlight your plant needs</div>
+				<div class='mybutton' id="b2" value="Correct">To know when to plant the seed</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect2">To know how often the plant needs to be watered</div>
+			</div>
+		</div>
+	</body>
+</html>

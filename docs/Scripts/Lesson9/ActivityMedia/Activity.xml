@@ -1,0 +1,1050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_,  try to answer the question." speech="_user_,  try to answer the question." play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_, Um...  I don't think that's the right answer." speech="_user_, Um...  I don't think that's the right answer." play="_user_,B3" />
+        <Item text="_user_, Um...  I don't think that was the right answer. " speech="_user_, Um...  I don't think that was the right answer. " play="_user_,B4" />
+        <Item text="_user_, that wasn't the right answer." speech="_user_,  I don't think that was the right answer." play="_user_,B5" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, Good. . You got it right." speech="_user_, Good. . You got it right." play="_user_,B6" />
+        <Item text="_user_, Super . You got it." speech="_user_, Super . You got the question right." play="_user_,B7" />
+        <Item text="_user_, Great job. You answered right." speech="_user_, Great job . You answered right. Thanks for helping me with this stuff." play="_user_,B8" />
+        <Item text="_user_, You answered correctly . Good job." speech="_user_, You answered right .Awesome job." play="_user_,B9" />
+        <Item text="_user_, Amazing , you're doing great." speech="_user_, Amazing . You're good at this. You picked the right answer." play="_user_,B10" />
+        <Item text="_user_, Magnificent ." speech="_user_, Great job ." play="_user_,B11" />
+        <Item text="_user_, Exactly, you nailed it ." speech="" play="_user_,B12" />
+        <Item text="_user_, Wow  that's it. " speech="" play="_user_,B13" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_,  Great job." speech="" play="_user_,A1" />
+        <Item text="_user_,  Good. That is right." speech="" play="_user_,A2" />
+        <Item text="_user_,  yes. You answered the question correctly." speech="" play="_user_,A3" />
+        <Item text="_user_,  Wonderful. You answered the question correctly." speech="" play="_user_,A4" />
+        <Item text="_user_, Yes.   You are correct." speech="" play="_user_,A5" />
+        <Item text="_user_, you got it right." speech="" play="_user_,A6" />
+        <Item text="_user_,  great. You answered correctly." speech="" play="_user_,A7" />
+        <Item text="_user_, Yes. You got it right." speech="" play="_user_,A8" />
+        <Item text="_user_,  Exactly. You are right." speech="" play="_user_,A9" />
+        <Item text="_user_,  Amazing. You're doing great." speech="" play="_user_,A10" />
+        <Item text="_user_,  Awesome job. You answered correctly. " speech="" play="_user_,A11" />
+        <Item text="_user_,  Just superb. You're incredible." speech="" play="_user_,A12" />
+        <Item text="_user_,  Brilliant job. You got it right." speech="" play="_user_,A13" />
+        <Item text="_user_,  Perfect. Good work." speech="" play="_user_,A14" />
+        <Item text="_user_,  Well done." speech="" play="_user_,A15" />
+        <Item text="_user_,  You are right. Nice work." speech="" play="_user_,A16" />
+        <Item text="_user_,  That's correct. You're doing beautifully . " speech="" play="_user_,A17" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackToJordan">
+        <Item text="Jordan you didn't pick the correct answer." speech="Jordan you didn't pick the correct answer." play="A18" />
+        <Item text="Jordan you actually got that question wrong." speech="Jordan you actually got that question wrong." play="A19" />
+        <Item text="Jordan that's not right." speech="Jordan that's not right." play="A20" />
+        <Item text="Jordan you gave an incorrect answer." speech="Jordan you gave an incorrect answer." play="A21" />
+        <Item text="Jordan you were wrong." speech="Jordan you were wrong." play="A22" />
+        <Item text="Sorry Jordan that's not right." speech="Sorry Jordan that's not right." play="A23" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A24" />
+        <Item text="_user_, No, sorry, that answer is not correct. " speech="" play="_user_,A25" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="Oh sorry, that isn't what I was looking for" play="A26" />
+        <Item text="_user_, Not exactly, good try" speech="Not exactly, good try" play="A27" />
+        <Item text="_user_, Well, that wasn't what I was thinking. Here is the right choice in green" speech="Well,  that wasn't what I was thinking, here is the right choice" play="A28" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A29" />
+        <Item text="_user_, No, sorry, that answer is not correct. " speech="" play="_user_,A30" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="Oh sorry, that isn't what I was looking for" play="A31" />
+        <Item text="_user_, Not exactly, good try" speech="Not exactly, good try" play="A32" />
+        <Item text="_user_, Well, that wasn't what I was thinking. Here is the right choice in green" speech="Well,  that wasn't what I was thinking, here is the right choice" play="A33" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry. that wasn't what I was looking for. " speech=" Sorry. that wasn't what I was looking for. " play="A34" />
+        <Item text="_user_ and Jordan, no. That wasn't the correct answer. " speech="_user_ and Jordan, no. That wasn't the correct answer. " play="_user_,A35" />
+        <Item text="Well, Neither of you gave me the answer that I was looking for." speech="well, Neither of you gave me the answer that I was looking for. " play="A36" />
+        <Item text="Sorry you two. That wasn't right. " speech="Sorry you two. That wasn't right. " play="A37" />
+        <Item text="_user_ and Jordan Not quite . You both got that one incorrect. " speech="_user_ and Jordan Not quite . You both got that one incorrect. " play="_user_,A38" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="_user_, Ok  here is the answer." speech="_user_, Ok  here is the answer." play="_user_,A39" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_,  try your best and answer the question." speech="_user_,  try your best and answer the question." play="_user_,A40" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="_user_ and Jordan Dynamite.  you are both correct." speech="Dynamite. _user and Jordan you are both correct. " play="A41" />
+        <Item text="Phenomenal work you two. Way to go on getting it right." speech="Phenomenal work you two. Way to go on getting it right." play="A42" />
+        <Item text="Great answer you two. Outstanding work." speech="Great answer you two. Outstanding work." play="A43" />
+        <Item text="_user_ and Jordan  that's correct. Smooth move you two." speech="_user_ and Jordan  that's correct. Smooth move you two." play="_user_,A44" />
+        <Item text="You two rule. That's right." speech="You two rule. That's right." play="A45" />
+        <Item text="Excellent work. You are both right." speech="Excellent work. You are both right." play="A46" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A47" />
+        <Item text="_user_,  If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_,  If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A48" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToJordan">
+        <Item text="Jordan, you got it right, excellent." speech="" play="A49" />
+        <Item text="Jordan, you are right, that's great." speech="" play="A50" />
+        <Item text="Jordan, that is correct, well done." speech="" play="A51" />
+        <Item text="Jordan, that's right, great job." speech="" play="A52" />
+        <Item text="Jordan, great. That is correct." speech="" play="A53" />
+        <Item text="Jordan, that's it. Nice job." speech="" play="A54" />
+        <Item text="Jordan, yes. That's right." speech="" play="A55" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text="ok, Let's keep going. " speech="" play="A56" />
+      <Item id="2" agent="Jordan" text="Excellent. I feel like can get the hang of this." speech="" play="B14" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="Cristina" text="Great job on the first part of the activity. Remember to mouse-over the highlighted nouns to replace the pronoun in each sentence. This will help you to see what the best answer could be. To select an answer, click on the noun of your choice." speech="" play="A57" />
+      <Item id="2" agent="Jordan" text="Ah, just replace the nouns with pronouns again. Got it." speech="" play="B15" />
+      <Item id="3" agent="Cristina" text="_user_,  Excellent.  I hope you and Jordan find this helpful. Good luck." speech="" play="_user_,A58" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="You both are doing great. Let's get some more practice. " speech="" play="A59" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="You both did great today. I hope that you feel more confident clarifying pronouns. Remember that using the replace and check strategy can help you to clarify. When you replace the pronoun with the possible nouns that could fit in the sentence, it makes it easier to read the sentence to find the right fit. " speech="" media="media\Lesson9Close.html" play="A60" />
+      <Item id="2" agent="Jordan" text="_user_, Thank you so much. You really helped me out today. Cristina , all of your help made this lesson really helpful too. See you next time." speech="" play="_user_,B16" />
+      <Item id="3" agent="Cristina" text="See you next time. Bye bye" speech="" play="A61" />
+    </RigidPack>
+    <RigidPack name="Opening_1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan Welcome back ." speech="" media="media\Lesson9-IntroTitle.html" play="_user_,A62" />
+      <Item id="2" agent="Jordan" text="_user_ and Cristina, hello. What are we learning about today?" speech="" play="_user_,B17" />
+      <Item id="3" agent="Cristina" text="_user_ and Jordan, today we will be clarifying pronouns. A pronoun is a word used instead of a noun such as he, it, and their to name a few. He went to the store. Jane needs to fix it. Their backyard is huge. Pronouns are important text signals. These are all examples of pronouns and how they can be used. " speech="" media="media\Lesson9Intro.html" play="_user_,A63" />
+      <Item id="4" agent="Jordan" text="_user_, Cristina, I think that I may need help from  to clarify pronouns. " speech="" play="_user_,B18" />
+      <Item id="5" agent="Cristina" text="Jordan, don't worry. It will be fun and I am sure we can both help you." speech="" play="A64" />
+      <Item id="6" agent="Cristina" text="Here is what the first question will look like. For today's activity all you need to do is mouse-over the highlighted nouns to replace the pronoun underlined in each sentence. This will help you to see what the best answer could be. To select an answer click on the the noun of your choice. " speech="" media="media\L9example.html" play="A65" />
+      <Item id="7" agent="Jordan" text="I think I get it. So, in this example the underlined pronoun is her. We need to clarify who or what the pronoun, her,  is referring to. by replacing it with the correct highlighted noun. " speech="" play="B19" />
+      <Item id="8" agent="Cristina" text="Exactly. it will be helpful to read the paragraphs first so that you know what is going on. This will help to give you context for clarifying the pronouns. " speech="" play="A66" />
+      <Item id="9" agent="Jordan" text="_user_, I'm ready.  let's get started." speech="" media="media\Lesson9-Main0-0new.html" play="_user_,B20" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Here is another sentence.  Kim sees, her, every month for checkups.  Click on the noun that best replaces the pronoun, her." speech="" media="" itemDif="0.1" play="_user_,A67">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The noun that replaces the word, her, is a doctor. The previous sentence gives us context for clarifying the pronoun. The word, her, must refer to something feminine. Therefore, it cannot be Ben. " speech="" keys="any" threshold="" test="" play="A68" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A69" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you agree with that answer?" speech="" keys="any" threshold="" test="" play="A70" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'm pretty sure the answer is the doctor." speech="" keys="any" threshold="" test="" play="B21" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Lets see. I think the answer is Ben. " speech="" keys="any" threshold="" test="" play="B22" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are right here." speech="" keys="any" threshold="" test="" play="_user_,B23" />
+            <Answer name="JordanRespontoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Oh ok. now I get it. The pronoun, her, would not be used to refer to Ben because Ben is male. Her refers to feminine nouns, like a woman doctor." speech="" keys="any" threshold="" test="" play="B24" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="2" agent="Cristina" text="_user_,try this next one. Which of the highlighted nouns best replaces the pronoun, she, in this sentence? Then she takes Kim's blood pressure and gets a blood sample." speech="" media="" itemDif="0.1" play="_user_,A71">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="she refers to the nurse. The sentence that precedes the pronoun, she, tells us that it is the nurse who weighs Kim before she sees the doctor. " speech="" keys="any" threshold="" test="" play="A72" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer. " speech="" keys="any" threshold="" test="" play="A73" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, now its your turn. " speech="" keys="any" threshold="" test="" play="A74" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Well, I think the answer is the doctor. But I could be wrong.  " speech="" keys="any" threshold="" test="" play="B25" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I have to agree with you." speech="" keys="any" threshold="" test="" play="_user_,B26" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Good. I knew I got it right." speech="" keys="any" threshold="" test="" play="B27" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="The answer is the nurse." speech="" keys="any" threshold="" test="" play="B28" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, please help me. Which noun could replace the pronoun, she, in this sentence?: She also lets Kim and Ben listen." speech="" media="" itemDif="0.1" play="_user_,B29">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="she refers to the doctor this time because the doctor is the one who is listening to the baby's heart, so it makes sense that the doctor would be the one to let Kim and Ben listen. " speech="" keys="any" threshold="" test="" play="A75" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A76" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Super job.  you got it correct. I think i'm starting to get it too." speech="" keys="any" threshold="" test="" play="_user_,B30" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think about this one?" speech="" keys="any" threshold="" test="" play="A77" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text=" I'm unsure but I think the correct answer is the nurse." speech="" keys="any" threshold="" test="" play="B31" />
+            <Answer name="JordanAgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you picked the right answer. " speech="" keys="any" threshold="" test="" play="_user_,B32" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="Correct" text="I think the answer is the doctor." speech="" keys="any" threshold="" test="" play="B33" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="4" agent="Cristina" text="_user_ ,Here is the next sentence. It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. Which choice replaces the word, their, in this sentence?" speech="" media="" itemDif="0.1" play="_user_,A78">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, their, is referring to Kim and Ben. Their is a plural pronoun meaning it refers to more than one person or a group. The previous sentence also gives us context to clarify the meaning." speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please choose an answer. " speech="" keys="any" threshold="" test="" play="A80" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you agree with that answer choice?" speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Cristina, well lets see. I'm actually not sure I know the correct answer. If I took a guess I would choose, the nurse." speech="" keys="any" threshold="" test="" play="B34" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, That seems like the best answer to me too. " speech="" keys="any" threshold="" test="" play="_user_,B35" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Oh ok, so the phrase, Their little one's heart, is talking about the baby's heart. The baby is Kim and Ben's baby." speech="" keys="any" threshold="" test="" play="B36" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer is Kim and Ben" speech="" keys="any" threshold="" test="" play="B37" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="5" agent="Cristina" text="_user_, who does the pronoun, her, refer to in this sentence? The doctor reminds her to eat healthy food and drink lots of water." speech="" media="" itemDif="0.1" play="_user_,A82">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct noun to replace her is Kim. The doctor reminds Kim to eat healthy foods and drink lots of water because Kim is carrying the baby." speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer" speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Alright Jordan, let's see what you came up with. " speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ and I came up with the same answer." speech="" keys="any" threshold="" test="" play="_user_,B38" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Ok, I'm understanding this a little better. So basically the doctor is telling Kim to be healthy for the sake of the baby. The baby is getting its nutrition from Kim." speech="" keys="any" threshold="" test="" play="B39" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the answer is the doctor. " speech="" keys="any" threshold="" test="" play="B40" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I am pretty sure the answer is Kim." speech="" keys="any" threshold="" test="" play="B41" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="6" agent="Cristina" text="_user_, here is another one. Which is the best word to replace the pronoun, she, in this sentence? She also explains that Kim needs to take a daily vitamin." speech="" media="" itemDif="0.1" play="_user_,A86">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In the previous sentence, the doctor reminds Kim to eat healthy and drink lots of water. This gives us some context to clarify the pronoun she, in this sentence. She refers to the doctor because it is the doctor who also explains that Kim needs a daily vitamin. " speech="" keys="any" threshold="" test="" play="A87" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you're up." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="If I had to choose the best answer, I would choose the nurse." speech="" keys="any" threshold="" test="" play="B42" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, The answer that you selected seems like the correct one. " speech="" keys="any" threshold="" test="" play="_user_,B43" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Alright. You are doing great at clarifying pronouns. Im understanding much better because of you. Thanks " speech="" keys="any" threshold="" test="" play="_user_,B44" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'll go with the doctor." speech="" keys="any" threshold="" test="" play="B45" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_,can you help me with this one? Here is the sentence: They could harm the baby's health. Which word should we put in place of the pronoun, they?" speech="" media="" itemDif="0.1" play="_user_,B46">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, They, refers to harmful effects. It's helpful to remember, they, is a plural pronoun. It must be referring to more than one person or thing. For context, we can look at the previous sentence to clarify what thay refers to." speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please select an answer. " speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text=" Awesome, Im finally getting it. It's all starting to come together for me. " speech="" keys="any" threshold="" test="" play="B47" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell us the answer?" speech="" keys="any" threshold="" test="" play="A92" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="Im pretty sure the answer is, harmful effects. But i could be wrong." speech="" keys="any" threshold="" test="" play="B48" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think its the doctor but I'm not very confident. " speech="" keys="any" threshold="" test="" play="B49" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with your answer." speech="" keys="any" threshold="" test="" play="_user_,B50" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="8" agent="Cristina" text="_user_ ,here is another sentence. The doctor also tells Kim and Ben what to expect as it grows. In that sentence the pronoun,It, can be best replaced by which noun." speech="" media="" itemDif="0.1" play="_user_,A93">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The baby is the correct noun. If we ask ourselves who or what it refers to. We can conclude that the baby is the best answer. Kim and Ben are expecting a baby to grow, not the harmful effects or health in this case. " speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A95" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how would you replace the pronoun, it." speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I would replace, it, with the baby in this sentence. " speech="" keys="any" threshold="" test="" play="B51" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you on this  one." speech="" keys="any" threshold="" test="" play="_user_,B52" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Great. I am learning so much . &#xD;&#xA;Thank you." speech="" keys="any" threshold="" test="" play="_user_,B53" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Hmmm, I would guess that, it, refers to, the harmful effects. " speech="" keys="any" threshold="" test="" play="B54" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="9" agent="Jordan" text="_user_, alright. we just have a few more to knock out. How would you replace the pronoun, they, in the sentence: they are eager to visit?" speech="" media="" itemDif="0.1" play="_user_,B55">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="They, is replaced by the  nouns Kim and Ben. If we ask ourselves, who is eager to visit. We can easily replace, they, with Kim and Ben as the new subject of the sentence." speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer. " speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="ok. now this is a little clearer. We know Kim and Ben are eager to visit so the phrase, kim and ben, can replace the pronoun, they. " speech="" keys="any" threshold="" test="" play="B56" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer might be kim and Ben" speech="" keys="any" threshold="" test="" play="B57" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I bet the answer is the nurses." speech="" keys="any" threshold="" test="" play="B58" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, its your turn. What do you think the answer is?" speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, im going to go with your answer. " speech="" keys="any" threshold="" test="" play="_user_,B59" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA91">
+      <Questions>
+        <Question id="10" agent="Cristina" text="_user_, in this next sentence, how would you replace the pronoun, their. These classes are a good way to meet other parents and learn about their baby." speech="" media="" itemDif="0.1" play="_user_,A100">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="These classes are a good way to meet other parents and learn about their baby. The pronoun, Their, refers to Ben and Kim in this case. Kim and Ben are meeting other parents. The phrase, the parents, is not the best fit, and the classes cannot have a baby. " speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="Blank Prompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Ok, now Jordan what do you think?" speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Cristina, this one refers to the parents. " speech="" keys="any" threshold="" test="" play="B60" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I came up with the same answer." speech="" keys="any" threshold="" test="" play="B61" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Wow, you are doing a great job. I am starting to understand too. Thanks for your help." speech="" keys="any" threshold="" test="" play="_user_,B62" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="The right answer here is Kim and Ben i think." speech="" keys="any" threshold="" test="" play="B63" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA92">
+      <Questions>
+        <Question id="11" agent="Jordan" text="_user_, What do you think about this sentence?  They will also discuss feeding, dressing, diapering, and bathing babies. What could we put in place of the pronoun, they?" speech="" media="" itemDif="0.1" play="_user_,B64">
+          <Answers>
+            <Answer name="Correct " agent="Cristina" type="Correct" text="The word, Teachers, is the correct noun to replace, they, in this sentence. If we look at the previous sentence for context, we see that it is the teachers who will talk about the birthing process. The teachers will also discuss feeding, dressing, diapering, and bathing babies.  " speech="" keys="any" threshold="" test="" play="A104" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer from one of the highlighted choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A105" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Excellent. You have helped me a lot today. I can see why the teachers is the correct answer by using context from the other sentence." speech="" keys="any" threshold="" test="" play="_user_,B65" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I choose the teachers for this one." speech="" keys="any" threshold="" test="" play="B66" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I don't know. Is it the parents?" speech="" keys="any" threshold="" test="" play="B67" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the answer is?" speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with that answer." speech="" keys="any" threshold="" test="" play="B68" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted." speech="" media="" itemDif="0.1" play="_user_,A107">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The search planes are looking for the missing flight and the ocean currents are quickly moving pieces of debris, so it makes sense that they is best replaced by pieces of debris in this sentence.  Often ocean currents can quickly move pieces of debris miles from where pieces of debris are spotted. " speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan choose an answer" speech="" keys="any" threshold="" test="" play="A110" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I choose planes." speech="" keys="any" threshold="" test="" play="B69" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think that I agree with you" speech="" keys="any" threshold="" test="" play="_user_,B70" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, now I think I got it.  you are really helping me learn a lot today." speech="" keys="any" threshold="" test="" play="_user_,B71" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer is debris." speech="" keys="any" threshold="" test="" play="B72" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="2" agent="Cristina" text="_user_, which do you think is the correct noun to replace the pronoun, it, in this sentence? They hope it is a clue that could help solve the mystery of the missing plane; however, instead, they learn that it is garbage, a piece of fishing equipment, or it is a box that fell from a passing ship." speech="" media="" itemDif="0.1" play="_user_,A111">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" We can look at the previous sentence to gain context for clarifying the pronoun. It refers back to an object. For context in this sentence the location is not the best answer because it does not give us the clues necessary for solving the mystery of the missing plane. And  the sea is where the search is being conducted. Therefore we can conclude that an object is a clue that could help solve the mystery." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please choose an answer. " speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the answer is the sea. But I am not sure if that is correct. " speech="" keys="any" threshold="" test="" play="B73" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, Well, this one is tricky. I am going to have to agree with ." speech="" keys="any" threshold="" test="" play="_user_,B74" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Thank you for helping me to understand better. I can see why the pronoun, it, refers to an object in this case." speech="" keys="any" threshold="" test="" play="B75" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer is an object." speech="" keys="any" threshold="" test="" play="B76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="3" agent="Cristina" text="_user_,  here is the next sentence. In 1997, he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California." speech="" media="" itemDif="0.1" play="_user_,A115">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If we look back at the beginning of the paragraph, we learn that Curtis Ebbesmeyer is a scientist, but Ebbesmeyer has not made any discoveries according to this article. And Andy Scott is a commander with the New Zealand defense force simply helping with the search for the missing plane. Captain Charles Moore is the best noun to replace the pronoun, he. Captain Charles Moore is described as knowing a lot about the issue of finding objects in the ocean because he is the one who discovered the Great Pacific Garbage Patch." speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on one of the answer choices. " speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is your choice?" speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the best answer is Andy Scott the defense commander. " speech="" keys="any" threshold="" test="" play="B77" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_,  I think you might be right here. " speech="" keys="any" threshold="" test="" play="_user_,B78" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Great, it is all coming together for me. Thanks ." speech="" keys="any" threshold="" test="" play="_user_,B79" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="It's Captain Charlie Moore, i think," speech="" keys="any" threshold="" test="" play="B80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="_user_, this one is tricky to me. What noun should replace the pronoun, it, in this sentence: It, is at least the size of Texas. Will you help me to find the best answer for this one?" speech="" media="" itemDif="0.1" play="_user_,B81">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The Great Pacific Garbage Patch is at least the size of Texas. If we look at the previous sentence we see that the Great Pacific Garbage Patch was what was discovered. Hawaii and California simply give us details about its location. The size of these states is not important to the context of this sentence, and does not clarify the pronoun, it. If we use the replace and check strategy, we can see that the Great Pacific Garbage Patch is the best choice. " speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Super job. I am getting this down. I think I get it." speech="" keys="any" threshold="" test="" play="B82" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think California is the answer" speech="" keys="any" threshold="" test="" play="B83" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell us the answer?" speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you. I'm almost positive that is the right answer." speech="" keys="any" threshold="" test="" play="_user_,B84" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="Im pretty sure the answer is the great pacific garbage patch." speech="" keys="any" threshold="" test="" play="B85" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="5" agent="Cristina" text="_user_, lets go on to the next one.  Which of the nouns best replaces the word, it, in this sentence? The debris has a negative effect on marine life because much of it is not decomposed." speech="" media="" itemDif="0.1" play="_user_,A122">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We can replace and check for the best answer. Marine life is not the best choice because marine life would not be effecting itself, and Texas is not related to the context in which biodegrade-abowl is being used in this sentence. In this case, the word, it, refers to the debris. To establish context for clarifying we can refer back to the subject of the previous sentence. " speech="" keys="any" threshold="" test="" play="A123" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan pick a noun you think best fits this sentence. " speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the answer is marine life. " speech="" keys="any" threshold="" test="" play="B86" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are right. I'll stick with your answer. " speech="" keys="any" threshold="" test="" play="_user_,B87" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Ok, I'm starting to understand. Wow you are life saver for helping me." speech="" keys="any" threshold="" test="" play="_user_,B88" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="The correct answer is the debris." speech="" keys="any" threshold="" test="" play="B89" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="6" agent="Cristina" text="_user_, here is another one. Pick the best noun to replace the pronoun, that, for this phrase. That, means the water moves around in a circle." speech="" media="" itemDif="0.1" play="_user_,A126">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word, That, refers back to gyre. Gyre means the water moves around in a circle. The previous sentence gives us the name of the area of plastic garbage which gives us context to replace and check for the best answer to replace the pronoun that. " speech="The word, That, refers back to jyer... jyer means the water moves around in a circle. The previous sentence gives us the name of the area of plastic garbage. This then gives us context to replace and check for the best answer to replace the pronoun, that." keys="any" threshold="" test="" play="A127" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, It's your turn again." speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I pick a negative effect. Though I really don't know if that is the best answer. " speech="" keys="any" threshold="" test="" play="B90" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="That's my choice too." speech="" keys="any" threshold="" test="" play="B91" />
+            <Answer name="JordanReponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Ok, I get it. Thanks ." speech="" keys="any" threshold="" test="" play="_user_,B92" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think jyre is the best choice." speech="" keys="any" threshold="" test="" play="B93" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="7" agent="Cristina" text="_user_, Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean, while some is swept into the sea by tsunamis. How would you replace the pronoun, it? ?" speech="" media="" itemDif="0.1" play="_user_,A130">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The trash replaces the pronoun, it, in this sentence. We can ask ourselves what is being dumped? Using the replace and check strategy helps us to clarify the pronoun in this sentence. Energy is not something that can be physically possessed or dumped. And the searchers use supplies to search for the missing plane. The previous sentences tell us that trash is something that gets in the way of the search which allows us to conclude that its an issue because it gets dumped and moved around. " speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, Do you have an idea of what the best answer is?" speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Cristina, I am really not sure that i know the answer. I guess it could be supplies. " speech="" keys="any" threshold="" test="" play="B94" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_,  that was my answer too. " speech="" keys="any" threshold="" test="" play="_user_,B95" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Oh, alright, I understand a little better. Thanks." speech="" keys="any" threshold="" test="" play="B96" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="Well, i think I'm going to go with trash. " speech="" keys="any" threshold="" test="" play="B97" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="_user_,  Let's try another one. Here is the sentence.  Those are huge waves caused by earthquakes under the sea.   how would you replace the pronoun, those? I think the answer is rivers. What about you?" speech="" media="" itemDif="0.1" play="_user_,B98">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, Those, is replaced by the noun sue namis. If we look at the preceding sentence we can establish context to clarify. sue namis are what contribute to trash being carried into the sea not oceans and according to the article trash is swept into the ocean by sue namis. Therefore we can conclude that sue namis are huge waves caused by earthquakes under the sea. " speech="The pronoun, Those, is replaced by the noun sue nahmees. If we look at the preceding sentence we can establish context to clarify sue nahmees are what contribute to trash being carried into the sea, while rivers carry trash to the oceans. Then we know that sue nahmees are huge waves caused by earthquakes under the sea." keys="any" threshold="" test="" play="A134" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer. " speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Oh, got it. I am learning a lot today . Great  work." speech="" keys="any" threshold="" test="" play="_user_,B99" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'm pretty sure the answer is sue namis" speech="" keys="any" threshold="" test="" play="B100" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the right choice is oceans" speech="" keys="any" threshold="" test="" play="B101" />
+            <Answer name="AskJordan" agent="cristina" type="AskJordan" text="Jordan, can you tell me the answer to this one?" speech="" keys="any" threshold="" test="" />
+            <Answer name="AgreewithUser" agent="Jordan" type="AgreeswithUser" text="_user_, you are right alot so i'll choose that answer too." speech="" keys="any" threshold="" test="" play="_user_,B102" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="9" agent="Cristina" text="_user_, Just a couple more. Try this sentence. They are dangerous, floating around for months.  what is the best noun to replace the pronoun, they?" speech="" media="" itemDif="0.1" play="_user_,A136">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, They, refers back to containers. If we look at the previous sentence we can gain context for clarifying the pronoun. While sue nahmees could be dangerous they are waves and do not float around for months. And cargo ships do not break open and spill. The shipping containers fall off of the cargo ships and spill into the ocean.In this case, They, refers back to the containers. If we look back at the paragraph we gain context for clarifying the pronoun. " speech="" keys="any" threshold="" test="" play="A137" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A138" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="_user_, you're pretty much a genius at pronouns, so I'm going to agree with your answer " speech="" keys="any" threshold="" test="" play="_user_,A139" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="My choice would be the cargo ships but I am really not sure. " speech="" keys="any" threshold="" test="" play="B103" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I have to agree with you." speech="" keys="any" threshold="" test="" play="_user_,B104" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Ok, this is making more sense to me.  I hope you are learning too. " speech="" keys="any" threshold="" test="" play="_user_,B105" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the correct choice is containers." speech="" keys="any" threshold="" test="" play="B106" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD91">
+      <Questions>
+        <Question id="10" agent="Jordan" text="_user_, in the next sentence, which noun best replaces the pronoun, them. Waves break them up into much smaller pieces and animals swallow them." speech="" media="" itemDif="0.1" play="_user_,B107">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We can Ask ourselves ,who or what do the waves break up, and this can help us clarify the pronoun, them. Waves break the shopping bags and water bottles up into much smaller pieces, and animals swallow them. If we use the replace and check method we can see that the context in this sentence does not support the answer shipping containers, since the containers are huge and not likely to be broken up by waves. And the cargo ships are not made out of materials that could break up into small enough pieces for animals to consume. " speech="" keys="any" threshold="" test="" play="A140" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A141" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="_user_, Alright, I think I am getting it ." speech="" keys="any" threshold="" test="" play="_user_,B108" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'll go with shopping bags and water bottles." speech="" keys="any" threshold="" test="" play="B109" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text=" I think that the shipping containers is the best answer." speech="" keys="any" threshold="" test="" play="B110" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell us the answer?" speech="" keys="any" threshold="" test="" play="A142" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, i'll stick with your answer this time." speech="" keys="any" threshold="" test="" play="_user_,B111" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD92">
+      <Questions>
+        <Question id="11" agent="Cristina" text="_user_, which noun best replaces the pronoun, they, in this sentence? They understand the challenges garbage poses." speech="" media="" itemDif="0.1" play="_user_,A143">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The experts understand the challenges garbage poses. As we have seen throughout the activity today, the previous sentence can sometimes be used to create context for clarifying the pronoun. In this case the subject from the first sentence in this paragraph, the experts,  is the best answer. Animals are troubled by the existence of trash, but they do not possess the ability to form an opinion on the issue. And while the searchers most certainly understand the issues that garbage poses, the experts are much better qualified to know how garbage effects both marine life and the search for the missing plane.  " speech="" keys="any" threshold="" test="" play="A144" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A145" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, it is your turn. Which noun do you choose to replace they?" speech="" keys="any" threshold="" test="" play="A146" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Cristina, I think that the best answer is searchers. " speech="" keys="any" threshold="" test="" play="B112" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you have already chosen the best answer. " speech="" keys="any" threshold="" test="" play="_user_,B113" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="You are doing a pretty great job. I am getting this down." speech="" keys="any" threshold="" test="" play="B114" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think that the best answer is the experts. " speech="" keys="any" threshold="" test="" play="B115" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD93">
+      <Questions>
+        <Question id="12" agent="Cristina" text="_user_, here is the Last one. how would you replace the pronoun, it, in this sentence:  Not only is debris in the oceans an  issue for finding the missing plane, but it also has a greater global impact on the environment." speech="" media="" itemDif="0.1" play="_user_,A147">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="in this sentence, the debris is the best noun to replace the pronoun, it. The debris from the missing plane, and not the missing plane itself, is what has a greater global impact. And the oceans are what is being polluted, not what is causing the problem." speech="" keys="any" threshold="" test="" play="A148" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on one of the answer choices. " speech="" keys="any" threshold="" test="" play="A149" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you give an answer?" speech="" keys="any" threshold="" test="" play="A150" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I'll go with the missing plane as my answer." speech="" keys="any" threshold="" test="" play="B116" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are right here. I agree with that answer. " speech="" keys="any" threshold="" test="" play="_user_,B117" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Ah, I see. It's becoming clearer. My world is getting brighter. Great things await me. all because of pronouns." speech="" keys="any" threshold="" test="" play="B118" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'll say the answer is the debris." speech="" keys="any" threshold="" test="" play="B119" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, which noun best replaces the pronoun,  she, in this sentence? She made the U.S. olympic team." speech="" media="" itemDif="0.1" play="_user_,A151">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Tracy is the correct replacement for the pronoun, she. The previous sentence in the paragraph helps us to clarify who she refers to here. " speech="" keys="any" threshold="" test="" play="A152" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A153" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, it's your turn. What do you think the best answer is?" speech="" keys="any" threshold="" test="" play="A154" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the best answer here is Tracy." speech="" keys="any" threshold="" test="" play="B120" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="agreeswithUser" text="_user_, you and I got the same answer. " speech="" keys="any" threshold="" test="" play="_user_,B121" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Awesome. You are really helping me get the hang of this." speech="" keys="any" threshold="" test="" play="B122" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I'll pick the answer Lanny for this one." speech="" keys="any" threshold="" test="" play="B123" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="3" agent="Cristina" text="_user_, in this sentence which noun best replaces the pronoun, it. It was all over the news." speech="" media="" itemDif="0.1" play="_user_,A155">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It, refers to the choice Tracy made. We can gather context to clarify by looking at the previous sentence and ask ourselves, what is all over the news? Her choice was what was all over the news. " speech="" keys="any" threshold="" test="" play="A156" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A157" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, it's your turn. What do you think?" speech="" keys="any" threshold="" test="" play="A158" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the correct answer is the US Olympics team" speech="" keys="any" threshold="" test="" play="B124" />
+            <Answer name="AgreewithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you this time." speech="" keys="any" threshold="" test="" play="_user_,B125" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="That really helped me to understand this better. " speech="" keys="any" threshold="" test="" play="B126" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the right answer is her choice." speech="" keys="any" threshold="" test="" play="B127" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, I am really not sure about this next one. What does the pronoun, she, refer to in this sentence. She was shocked by the level of interest. Can you help me?" speech="" media="" itemDif="0.1" play="_user_,B128">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="She is best replaced by Tracy. Tracy is the one making  the choice. By referring back to the paragraph as a whole we can gather enough information to clarify the pronoun, she. " speech="" keys="any" threshold="" test="" play="A159" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer choice. Remember that if you scroll over the noun choices, you can replace and check for the best answer. " speech="" keys="any" threshold="" test="" play="A160" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what's your answer?" speech="" keys="any" threshold="" test="" play="A161" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer is Tracy. " speech="" keys="any" threshold="" test="" play="B129" />
+            <Answer name="AgreesWithUser" agent="Jordan" type="AgreeswithUser" text="_user_, Well, it seems to me like you picked the right one this time. " speech="" keys="any" threshold="" test="" play="_user_,B130" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="I think I'm getting the hang of this. " speech="" keys="any" threshold="" test="" play="B131" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I'm pretty sure the answer is Lanny. Lanny makes the most sense here. " speech="" keys="any" threshold="" test="" play="B132" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="5" agent="Cristina" text="_user_, Let's keep going. How would you replace the pronoun, she, in this sentence? Lanny was having a good season this winter, but she got sick during a set of races in Italy." speech="" media="" itemDif="0.1" play="_user_,A162">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, She, refers back to Lanny. In this case, we can refer back to the subject of the sentence to clarify the pronoun, she.  " speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer choice. " speech="" keys="any" threshold="" test="" play="A164" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, it's your turn. " speech="" keys="any" threshold="" test="" play="A165" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswer" text="In this case, Lanny makes the most sense." speech="" keys="any" threshold="" test="" play="B133" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_User_, you already said my answer  Cristina. I was going to pick that one too." speech="" keys="any" threshold="" test="" play="B134,B135" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Alright, I am getting a better understanding of pronouns. " speech="" keys="any" threshold="" test="" play="B136" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Hmm, i'll guess Tracy for this one." speech="" keys="any" threshold="" test="" play="B137" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="6" agent="Jordan" text="_user_, in the sentence, But she would not change her mind, the pronoun, she, is used. What does, she, refer to here?" speech="" media="" itemDif="0.1" play="_user_,B138">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The previous sentence helps us to clarify the pronoun, she, which refers back to Tracy. " speech="" keys="any" threshold="" test="" play="A166" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please choose an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A167" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Ah, I see. It is becoming clearer. " speech="" keys="any" threshold="" test="" play="B139" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="The answer is Tracy." speech="" keys="any" threshold="" test="" play="B140" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="The answer here is Lanny. " speech="" keys="any" threshold="" test="" play="B141" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, i agree with you on this one." speech="" keys="any" threshold="" test="" play="_user_,B142" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell us your answer?" speech="" keys="any" threshold="" test="" play="A168" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="7" agent="Cristina" text="_user_,  How would you replace the word, her, in the sentence, once I let her know how much it meant to me,  she realized it was a good thing to do." speech="" media="" itemDif="0.1" play="_user_,A169">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word, Her, is best replaced by Lanny here. Tracy is speaking about Lanny. " speech="" keys="any" threshold="" test="" play="A170" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer choice. " speech="" keys="any" threshold="" test="" play="A171" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan Give it a try. " speech="" keys="any" threshold="" test="" play="A172" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the answer is Lanny in this case. " speech="" keys="any" threshold="" test="" play="B143" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B144" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Now I understand a little better. " speech="" keys="any" threshold="" test="" play="B145" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think Tracy is the answer. " speech="" keys="any" threshold="" test="" play="B146" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="8" agent="Cristina" text="_user_, Which noun does the word, it, refer to in this sentence? But she doesn't mind missing it." speech="" media="" itemDif="0.1" play="_user_,A173">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The pronoun, It, refers to the Olympics. The previous sentence gives us context to clarify the pronoun." speech="" keys="any" threshold="" test="" play="A174" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A175" />
+            <Answer name="AskJordan" agent="Jordan" type="AskJordan" text="Jordan, let's hear your answer" speech="" keys="any" threshold="" test="" play="B147" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I guess i would choose The Vancouver games. I am really not sure that is correct though. " speech="" keys="any" threshold="" test="" play="B148" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_,  I think that your answer was correct. " speech="" keys="any" threshold="" test="" play="_user_,B149" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Alright, this is making more sense to me. " speech="" keys="any" threshold="" test="" play="B150" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I choose the Olympics." speech="" keys="any" threshold="" test="" play="B151" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="9" agent="Cristina" text="_user_, What is the best replacement for the pronoun, she, in this sentence?" speech="" media="" itemDif="0.1" play="_user_,A176">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word,She, refers back to Lanny. Tracy is speaking about Lanny" speech="" keys="any" threshold="" test="" play="A177" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select one of the answer choices below. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A178" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what is your choice?" speech="" keys="any" threshold="" test="" play="A179" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="Oh, I am not really sure. Is it Lanny?" speech="" keys="any" threshold="" test="" play="B152" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I have to go with the same answer as you." speech="" keys="any" threshold="" test="" play="_user_,B153" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Ok, now I think I understand. " speech="" keys="any" threshold="" test="" play="B154" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the right answer is Tracy here." speech="" keys="any" threshold="" test="" play="B155" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="10" agent="Cristina" text="_user_, What does the pronoun, She, refer to in this sentence. She is close to earning a degree in marketing." speech="" media="" itemDif="0.1" play="_user_,A180">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The  previous sentence helps to clarify the pronoun, she. We can best replace the word, she, with Tracy." speech="" keys="any" threshold="" test="" play="A181" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please choose an answer. " speech="" keys="any" threshold="" test="" play="A182" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="any" threshold="" test="" play="A183" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I really don't think I know this one. If I had to guess I would say Lanny. " speech="" keys="any" threshold="" test="" play="B156" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_,  I think you made a wise choice. Cristina that is my answer too." speech="" keys="any" threshold="" test="" play="_user_,B157" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Oh wow, I'm getting it now. I even made a rhyme because i feel so good about pronouns. Listen. Pronouns, pronouns are  so fun. I want to try another one. " speech="" keys="any" threshold="" test="" play="B158" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I'll go with Tracy on this one." speech="" keys="any" threshold="" test="" play="B159" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE91">
+      <Questions>
+        <Question id="11" agent="Jordan" text="_user_ I think I need a little help here. I am not sure what the correct answer is. Which is the best choice to replace the word, that, in this phrase? That, is helping a business to sell its products." speech="" media="" itemDif="0.1" play="_user_,B160">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer for this pronoun is the word, marketing. Marketing is helping a business sell its products. " speech="" keys="any" threshold="" test="" play="A184" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on one of the answer choices. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A185" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Ok. That makes sense. Now I think I understand. " speech="" keys="any" threshold="" test="" play="B161" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the correct answer is marketing. " speech="" keys="any" threshold="" test="" play="B162" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="Cristina, i dont think any of these answers are right." speech="" keys="any" threshold="" test="" play="B163" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, i bet you chose the right answer. I will choose that one too. " speech="" keys="any" threshold="" test="" play="_user_,B164" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell us the answer to this one?" speech="" keys="any" threshold="" test="" play="A186" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE92">
+      <Questions>
+        <Question id="12" agent="Cristina" text="Let's see what you come up with for another pronoun in this sentence. What is the best replacement for the pronoun, its?" speech="" media="" itemDif="0.1" play="A187">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word, Its, refers back to a business. We can find the correct noun directly before the pronoun in this case. " speech="" keys="any" threshold="" test="" play="A188" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer. Remember that if you scroll over the noun choices, you can replace and check for the best answer." speech="" keys="any" threshold="" test="" play="A189" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, your turn. " speech="" keys="any" threshold="" test="" play="A190" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="I think the right answer is a business." speech="" keys="any" threshold="" test="" play="B165" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you on this one. " speech="" keys="any" threshold="" test="" play="_user_,B166" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="Oh ok, I think I get it. " speech="" keys="any" threshold="" test="" play="B167" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I really dont see the right answer listed here. I dont think any of these choices are correct. " speech="" keys="any" threshold="" test="" play="B168" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE93">
+      <Questions>
+        <Question id="13" agent="Jordan" text="_user_, this is the Last question. Can you help me find the correct noun to replace the pronoun, their, in the sentence, that's what the twins do in their sport?" speech="" media="" itemDif="0.1" play="_user_,B169">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word, Their, refers to the preceding noun, the twins." speech="" keys="any" threshold="" test="" play="A191" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember that if you scroll over the noun choices, you can replace and check for the best answer. Please click on an answer choice. " speech="" keys="any" threshold="" test="" play="A192" />
+            <Answer name="JordanResponsetoCorrect" agent="Jordan" type="JordanResponsetoCorrect" text="ok. I am seeing this a little clearer now. " speech="" keys="any" threshold="" test="" play="B170" />
+            <Answer name="JordanAnswerWrong" agent="Jordan" type="JordanAnswerWrong" text="I think the pronoun, their, might refer to the hunters." speech="" keys="any" threshold="" test="" play="B171" />
+            <Answer name="JordanAnswerCorrect" agent="Jordan" type="JordanAnswerCorrect" text="The right answer is the twins." speech="" keys="any" threshold="" test="" play="B172" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please tell us your answer for this one." speech="" keys="any" threshold="" test="" play="A193" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, i think your answer is correct. I'll choose that one too." speech="" keys="any" threshold="" test="" play="_user_,B173" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="The lesson starts from this rule. It loads a page defined in the rigid pack Opening_1, delivers opening speeches and moves to the rule LoadPage.">
+      <Action agent="System" act="DeliverRigidPack" data="Opening_1" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="Finished medium and changes to easy or hard.">
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="2" />
+      <Action agent="System" act="SetStatus" data="LoadPage2" id="3" />
+      <Action agent="System" act="Wait" data="1" id="4" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="Unused rule.">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="Unused rule.">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="Unused rule.">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPage2" status="LoadPage2" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="The first page of the easy of hard loaded. Directs to GetDifficulty rule to find out the difficulty level.">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="At the status LoadPage, if a MediaLoaded event is received, the rule will be directed to the rule GetDifficulty">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="This rule is to check the difficulty level of the current page and direct to a rule that gets corresponding tutoring pack. To GetTutoringPack (3)">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="This rule checks if an Easy tutoring pack exists.">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="This rule chesk if a Medium tutoring pack exists.">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="This rule checks if a hard tutoring pack exists.">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="When the desired tutoring pack exists, the rule continues with an item on the media page. To GetItem (2)">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="When all tutoring pack are used, goes to Close status.">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="Delivers closing rigid pack and end the conversation.">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="The end of the lesson.">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="When there is a next item on the media page, activate the next item and direct to the rule MediaShown.">
+      <Action agent="System" act="SetStatus" data="MediaShown" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="MediaShown" status="MediaShown" response="" event="MediaAnswerShown" hasItem="" priority="" frequency="" description="After the media item is shown up, check which agent is supposed to ask the question and direct to the rule JordanAskQ or ChristinaAskQ.">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="WaitForEvent" data="5" id="3" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="When all items on the media are done, direct to the rule Start2.">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="Jordan asks main question. This assumes that every tutoring pack has a main question prepared for Jordan. The rule will trigger waiting event and then direct to UserAnswer rules.">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="Christina asks main question. This assumes every tutoring pack has a main question prepared for Christina. The rue will trigger a waiting event and then direct to UserAnswer rules.">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="When the user's answer is correct, check which agent asked the question and direct to the the corresponding QAsked rule.">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="This rule is for correct answer and questoin was asked by Jordan. Next will be GoBack rule.">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="ChristinaAskedJC" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="ChristinaAskedJI" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerWrong" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="When the user's answer is correct, check which agent asked the question and direct to the the corresponding QAsked rule.">
+      <Action agent="System" act="SetStatus" data="QAskedInc" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAskedInc" status="QAskedInc" response="" event="Jordan" hasItem="" priority="" frequency="" description="This rule is for correct answer and questoin was asked by Jordan. Next will be GoBack rule.">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="ChristinaAskedIncJC" status="QAskedInc" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="ChristinaAskedIncJI" status="QAskedInc" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerCorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="This is the rule for first time out. The rule is directed to the second round answer.">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="This rule is for correct answer after Blankprompt.It checks question agent and directs  to QAsked2 rules.">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="This is for correct second round answer and Jordan asked the question. Directs to GoBack.">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="ChristinaAsked2JC" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="ChristinaAsked2JI" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerWrong" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="When the user's answer is correct, check which agent asked the question and direct to the the corresponding QAsked rule.">
+      <Action agent="System" act="SetStatus" data="QAsked2Inc" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2Inc" status="QAsked2Inc" response="" event="Jordan" hasItem="" priority="" frequency="" description="This rule is for correct answer and questoin was asked by Jordan. Next will be GoBack rule.">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="ChristinaAsked2IncJC" status="QAsked2Inc" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="ChristinaAsked2IncJI" status="QAsked2Inc" response="" event="Cristina" hasItem="" priority="" frequency="" description="This rule is for correct user answer and Cristina asked the qustion. The rule is directed to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerCorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Blank2JC" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="Second time out. Directs to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerCorrect" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="Blank2JI" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="Second time out. Directs to GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerWrong" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="This rule checks the difficulty level and decide what transition to use for next item, if any.">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="Continue with next Medium item.">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition" response="" event="Easy" hasItem="" priority="" frequency="" description="Continue with next esay item.">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition" response="" event="Hard" hasItem="" priority="" frequency="" description="Continue with next hard item.">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelEasy" status="Transition" response="" event="ChangeToEasy" hasItem="" priority="" frequency="" description="Reached the last page of medium and chages to easy.">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="ChangeLevelHard" status="Transition" response="" event="ChangeToHard" hasItem="" priority="" frequency="" description="Reached the last page of medium and changes to hard.">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

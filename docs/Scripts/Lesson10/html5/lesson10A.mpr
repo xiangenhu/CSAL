@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+  <message id="A1" name="A1">
+    <say>Yeah,</say>
+  </message>
+  <message id="A2" name="A2">
+    <say>, that's right!</say>
+  </message>
+  <message id="A3" name="A3">
+    <say>Great,</say>
+  </message>
+  <message id="A4" name="A4">
+    <say>Nice job</say>
+  </message>
+  <message id="A5" name="A5">
+    <say>Perfect</say>
+  </message>
+  <message id="A6" name="A6">
+    <say>Good answer,</say>
+  </message>
+  <message id="A7" name="A7">
+    <say>Good job</say>
+  </message>
+  <message id="A8" name="A8">
+    <say>Good,</say>
+  </message>
+  <message id="A9" name="A9">
+    <say>Right,</say>
+  </message>
+  <message id="A10" name="A10">
+    <say>! Nice job!</say>
+  </message>
+  <message id="A11" name="A11">
+    <say>Excellent,</say>
+  </message>
+  <message id="A12" name="A12">
+    <say>Brilliant,</say>
+  </message>
+  <message id="A13" name="A13">
+    <say>Rock and roll,</say>
+  </message>
+  <message id="A14" name="A14">
+    <say>! Great job!</say>
+  </message>
+  <message id="A15" name="A15">
+    <say>Right on,</say>
+  </message>
+  <message id="A16" name="A16">
+    <say>Awesome job,</say>
+  </message>
+  <message id="A17" name="A17">
+    <say>, you are on a roll! Nice!</say>
+  </message>
+  <message id="A18" name="A18">
+    <say>Far out,</say>
+  </message>
+  <message id="A19" name="A19">
+    <say>! Great job!</say>
+  </message>
+  <message id="A20" name="A20">
+    <say>Once again.</say>
+  </message>
+  <message id="A21" name="A21">
+    <say>Once more.</say>
+  </message>
+  <message id="A22" name="A22">
+    <say>Let me say that again.</say>
+  </message>
+  <message id="A23" name="A23">
+    <say>Let me repeat.</say>
+  </message>
+  <message id="A24" name="A24">
+    <say>Okay.</say>
+  </message>
+  <message id="A25" name="A25">
+    <say>I bet you know this.</say>
+  </message>
+  <message id="A26" name="A26">
+    <say>Try this.</say>
+  </message>
+  <message id="A27" name="A27">
+    <say>I bet you can get this.</say>
+  </message>
+  <message id="A28" name="A28">
+    <say>See if you can get this.</say>
+  </message>
+  <message id="A29" name="A29">
+    <say>Let's try this.</say>
+  </message>
+  <message id="A30" name="A30">
+    <say>I bet you can get this.</say>
+  </message>
+  <message id="A31" name="A31">
+    <say>See if you know the answer to this.</say>
+  </message>
+  <message id="A32" name="A32">
+    <say>I bet you know the answer to this.</say>
+  </message>
+  <message id="A33" name="A33">
+    <say>I think you can get this.</say>
+  </message>
+  <message id="A34" name="A34">
+    <say>I am sure you can get this.</say>
+  </message>
+  <message id="A35" name="A35">
+    <say>What about this.</say>
+  </message>
+  <message id="A36" name="A36">
+    <say>Do you need more time to think about it?</say>
+  </message>
+  <message id="A37" name="A37">
+    <say>, don't forget to click an answer! Try it again!</say>
+  </message>
+  <message id="A38" name="A38">
+    <say>Please give it a try,</say>
+  </message>
+  <message id="A39" name="A39">
+    <say>, this can be tricky! Give it another try!</say>
+  </message>
+  <message id="A40" name="A40">
+    <say>, don't forget to click one of the answers! Try it again!</say>
+  </message>
+  <message id="A41" name="A41">
+    <say>Please give it a try</say>
+  </message>
+  <message id="A42" name="A42">
+    <say>, remember if you don't click, I can't tell what your answer was! Give it another try!</say>
+  </message>
+  <message id="A43" name="A43">
+    <say>Oh no,</say>
+  </message>
+  <message id="A44" name="A44">
+    <say>! You didn't click an answer! Please try again!</say>
+  </message>
+  <message id="A45" name="A45">
+    <say>, please give it a try, even if you're not sure.</say>
+  </message>
+  <message id="A46" name="A46">
+    <say>, please click one of the answers!</say>
+  </message>
+  <message id="A47" name="A47">
+    <say>No. That's incorrect.</say>
+  </message>
+  <message id="A48" name="A48">
+    <say>Unfortunately Jordan, that is wrong.</say>
+  </message>
+  <message id="A49" name="A49">
+    <say>Jordan, that's not right.</say>
+  </message>
+  <message id="A50" name="A50">
+    <say>That's wrong, Jordan</say>
+  </message>
+  <message id="A51" name="A51">
+    <say>Alright.</say>
+  </message>
+  <message id="A52" name="A52">
+    <say>All right.</say>
+  </message>
+  <message id="A53" name="A53">
+    <say>OK.</say>
+  </message>
+  <message id="A54" name="A54">
+    <say>Let's work through it together.</say>
+  </message>
+  <message id="A55" name="A55">
+    <say>Come on, I'm sure you can tell me something.</say>
+  </message>
+  <message id="A56" name="A56">
+    <say>I bet you have something to say that could answer at least part of the question.</say>
+  </message>
+  <message id="A57" name="A57">
+    <say>Come on, give me what you know, and we'll go from there.</say>
+  </message>
+  <message id="A58" name="A58">
+    <say>Could you at least try to give me an answer?  That way, we'll have something as a starting place to work from.</say>
+  </message>
+  <message id="A59" name="A59">
+    <say>If you give me some answer, we can start building from there.</say>
+  </message>
+  <message id="A60" name="A60">
+    <say>Try to answer, so that we have a starting point from which to build.</say>
+  </message>
+  <message id="A61" name="A61">
+    <say>If you give me some sort of an answer, we can at least start from there and build.</say>
+  </message>
+  <message id="A62" name="A62">
+    <say>What you said is not relevant to our conversation.</say>
+  </message>
+  <message id="A63" name="A63">
+    <say>This might help.</say>
+  </message>
+  <message id="A64" name="A64">
+    <say>Consider this.</say>
+  </message>
+  <message id="A65" name="A65">
+    <say>Think about this. </say>
+  </message>
+  <message id="A66" name="A66">
+    <say>Look at it this way.</say>
+  </message>
+  <message id="A67" name="A67">
+    <say>Let me help you a little.</say>
+  </message>
+  <message id="A68" name="A68">
+    <say>Let's try this together.</say>
+  </message>
+  <message id="A69" name="A69">
+    <say>Let me help you, here.</say>
+  </message>
+  <message id="A70" name="A70">
+    <say>Welcome Jordan! I am Cristina and this is</say>
+  </message>
+  <message id="A71" name="A71">
+    <say>! I will be your instructor for todays activities!</say>
+  </message>
+  <message id="A72" name="A72">
+    <say>Today, we are going to look at advertisements that use nonliteral langwidge, We will follow the steps of the clarifying strategy to help us understand what the writer is saying!</say>
+  </message>
+  <message id="A73" name="A73">
+    <say>Alright</say>
+  </message>
+  <message id="A74" name="A74">
+    <say>and Jordan, let's look at the first add!</say>
+  </message>
+  <message id="A75" name="A75">
+    <say>That is all the time we have for this activity! You got all the way through!</say>
+  </message>
+  <message id="A76" name="A76">
+    <say>and Jordan, thank you so much for all your hard work!</say>
+  </message>
+  <message id="A77" name="A77">
+    <say>Just remember to think about your clarifying strategy whenever you run into a word or phrase that is difficult to understand. The words or phrase may be a piece of non literal language and you may need to use your strategy to figure out the meaning.</say>
+  </message>
+  <message id="A78" name="A78">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A79" name="A79">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A80" name="A80">
+    <say>The correct answer is, take one at night, be out like a light! This phrase does not make sense when you read it literally.</say>
+  </message>
+  <message id="A81" name="A81">
+    <say>Is there a comparison being made in the slogan, take one at night, be out like a light? Click the correct answer.</say>
+  </message>
+  <message id="A82" name="A82">
+    <say>There is, a comparison being made in this slogan! Similes are a type of nonliteral langwidge that make comparisons using, like, or, as. This phrase uses the word, like, so this is a simile!</say>
+  </message>
+  <message id="A83" name="A83">
+    <say>Why is the writer comparing the reader and a light? Please click the correct response.</say>
+  </message>
+  <message id="A84" name="A84">
+    <say>The writer is making this comparison to describe the effects of the pill to the reader.</say>
+  </message>
+  <message id="A85" name="A85">
+    <say>What is the intended meaning of, out like a light? Click the correct response.</say>
+  </message>
+  <message id="A86" name="A86">
+    <say>The intended meaning of this simile is, to fall asleep quickly.</say>
+  </message>
+  <message id="A87" name="A87">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Click the correct response.</say>
+  </message>
+  <message id="A88" name="A88">
+    <say>The correct replacement is, take one at night to fall asleep quickly! Now we will move on to the next advertisement.</say>
+  </message>
+  <message id="A89" name="A89">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A90" name="A90">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A91" name="A91">
+    <say>The correct answer is the third choice. Blind as a bat? We can fix that! This does not make sense when red literally.</say>
+  </message>
+  <message id="A92" name="A92">
+    <say>Is there a comparison being made in the slogan, blind as a bat, we can fix that? Click the correct answer.</say>
+  </message>
+  <message id="A93" name="A93">
+    <say>There is, a comparison being made in this slogan! Similes are a type of nonliteral langwidge that makes comparisons using, like, or, as.This phrase uses the word, as, so this is a simile!</say>
+  </message>
+  <message id="A94" name="A94">
+    <say>Why is the writer comparing the reader's eyesight and a bat's eyesight? Please click the correct response.</say>
+  </message>
+  <message id="A95" name="A95">
+    <say>The writer is making this comparison in order to describe the reader's eyesight.Many people think bats can see in the dark, however they do not see very well at all. </say>
+  </message>
+  <message id="A96" name="A96">
+    <say>What is the intended meaning of, blind as a bat? We can fix that!? Click the correct response.</say>
+  </message>
+  <message id="A97" name="A97">
+    <say>The intended meaning of this simile is to say that someone has bad eyesight, or someone can not see very well.</say>
+  </message>
+  <message id="A98" name="A98">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Click the correct response.</say>
+  </message>
+  <message id="A99" name="A99">
+    <say>The slogan that appropriately replaces the nonliteral langwidge is, have bad eyesight? We can sell you glasses!</say>
+  </message>
+  <message id="A100" name="A100">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A101" name="A101">
+    <say>asdf</say>
+  </message>
+  <message id="A102" name="A102">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A103" name="A103">
+    <say>The nonliteral langwidge used in this advertisement is, it will keep you on the ball! This phrase does not make sense when taken literally.</say>
+  </message>
+  <message id="A104" name="A104">
+    <say>Is there a comparison being made in the slogan, it will keep you on the ball!? Click the correct answer.</say>
+  </message>
+  <message id="A105" name="A105">
+    <say>In this slogan, there is no comparison being made. Idioms are a type of nonliteral langwidge that does not make comparisons. This means that this is an idiom!</say>
+  </message>
+  <message id="A106" name="A106">
+    <say>Why is the writer using this nonliteral langwidge? Please click the correct response below.</say>
+  </message>
+  <message id="A107" name="A107">
+    <say>The writer is using this idiom to describe the purpose of this book.</say>
+  </message>
+  <message id="A108" name="A108">
+    <say>What is the intended meaning of this idiom? Click the correct response.</say>
+  </message>
+  <message id="A109" name="A109">
+    <say>The intended meaning of this idiom is, to stay up to date on tasks.</say>
+  </message>
+  <message id="A110" name="A110">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Please click the correct response below.</say>
+  </message>
+  <message id="A111" name="A111">
+    <say>The appropriate replacement for this idiom is, this book will keep you on task!</say>
+  </message>
+  <message id="A112" name="A112">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A113" name="A113">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A114" name="A114">
+    <say>The part of this advertisement that uses nonliteral langwidge is, the ultimate couch potato remote control. Specifically, couch potato, is what we will be looking at. This does not really make sense when taken literally.</say>
+  </message>
+  <message id="A115" name="A115">
+    <say>Is there a comparison being made in the phrase, couch potato? Click the correct answer.</say>
+  </message>
+  <message id="A116" name="A116">
+    <say>In the phrase, couch potato, there is no comparison being made. Idioms are a type of nonliteral langwidge that does not make comparisons.That means that this is an idiom!</say>
+  </message>
+  <message id="A117" name="A117">
+    <say>Why is the writer using this nonliteral langwidge? Please click the correct response below.</say>
+  </message>
+  <message id="A118" name="A118">
+    <say>The writer is using this idiom to describe the benefits of buying the remote. </say>
+  </message>
+  <message id="A119" name="A119">
+    <say>What is the intended meaning of, couch potato? Please click the correct answer below.</say>
+  </message>
+  <message id="A120" name="A120">
+    <say>The intended meaning of, couch potato, is, to stay seated.</say>
+  </message>
+  <message id="A121" name="A121">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Please click the correct response.</say>
+  </message>
+  <message id="A122" name="A122">
+    <say>The appropriate replacement is, you can stay seated while watching TV with this remote!</say>
+  </message>
+  <message id="A123" name="A123">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A124" name="A124">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A125" name="A125">
+    <say>The part of this advertisement that uses nonliteral langwidge is, on cloud nine day spa. We will specifically look at the phrase, on cloud nine. When red literally, this does not really make sense.</say>
+  </message>
+  <message id="A126" name="A126">
+    <say>Is a comparison being made in the phrase, on cloud nine? Please click yes or no.</say>
+  </message>
+  <message id="A127" name="A127">
+    <say>There is no comparison being made in the phrase, on cloud nine. Idioms do not make comparisons.This means that this phrase is an idiom!</say>
+  </message>
+  <message id="A128" name="A128">
+    <say>Why is the writer using this nonliteral langwidge? Please click the correct response.</say>
+  </message>
+  <message id="A129" name="A129">
+    <say>The writer is using this idiom to describe the purpose of the spa.</say>
+  </message>
+  <message id="A130" name="A130">
+    <say>What is the intended meaning of this nonliteral langwidge? Click the correct response.</say>
+  </message>
+  <message id="A131" name="A131">
+    <say>The intended meaning of this idiom is, to feel good.</say>
+  </message>
+  <message id="A132" name="A132">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Please click the correct response.</say>
+  </message>
+  <message id="A133" name="A133">
+    <say>The appropriate replacement is, this spa will make you feel good!</say>
+  </message>
+  <message id="A134" name="A134">
+    <say>Take a look at this advertisement. When you think you are ready, click on the image to view the first question,</say>
+  </message>
+  <message id="A135" name="A135">
+    <say>If you need to look at the image again, click on the advertisement to make it bigger. When you are ready, click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer.</say>
+  </message>
+  <message id="A136" name="A136">
+    <say>The part of this advertisement that uses nonliteral langwidge is, one sip and you're in heaven! When we read this literally, it does not make sense.</say>
+  </message>
+  <message id="A137" name="A137">
+    <say>Is there a comparison being made in the slogan, one sip and you're in heaven? Please click yes or no.</say>
+  </message>
+  <message id="A138" name="A138">
+    <say>There is, a comparison being made in this slogan! Metaphors are a type of nonliteral langwidge that makes comparisons without using, like, or, as.The comparison does not use, like, or, as, so this is a metaphor!</say>
+  </message>
+  <message id="A139" name="A139">
+    <say>Why is the writer comparing, a sip of tea, and, being in heaven? Please click the correct response.</say>
+  </message>
+  <message id="A140" name="A140">
+    <say>What is the intended meaning of, one sip and you're in heaven? Please click the correct response.</say>
+  </message>
+  <message id="A141" name="A141">
+    <say>The intended meaning of this metaphor is, to make you feel very happy and relaxed.</say>
+  </message>
+  <message id="A142" name="A142">
+    <say>Which of these is a good replacement for the nonliteral langwidge? Please click the correct response.</say>
+  </message>
+  <message id="A143" name="A143">
+    <say>The appropriate replacement is, this tea makes you feel very happy and relaxed.</say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+  	  		<message id="D1" name="D1">
+	<say>AMELIA</say>
+</message>
+<message id="D2" name="D2">
+	<say>OLIVIA</say>
+</message>
+<message id="D3" name="D3">
+	<say>EMILY</say>
+</message>
+<message id="D4" name="D4">
+	<say>AVA</say>
+</message>
+<message id="D5" name="D5">
+	<say>ISLA</say>
+</message>
+<message id="D6" name="D6">
+	<say>JESSICA</say>
+</message>
+<message id="D7" name="D7">
+	<say>POPPY</say>
+</message>
+<message id="D8" name="D8">
+	<say>ISABELLA</say>
+</message>
+<message id="D9" name="D9">
+	<say>SOPHIE</say>
+</message>
+<message id="D10" name="D10">
+	<say>MIA</say>
+</message>
+<message id="D11" name="D11">
+	<say>RUBY</say>
+</message>
+<message id="D12" name="D12">
+	<say>LILY</say>
+</message>
+<message id="D13" name="D13">
+	<say>GRACE</say>
+</message>
+<message id="D14" name="D14">
+	<say>EVIE</say>
+</message>
+<message id="D15" name="D15">
+	<say>SOPHIA</say>
+</message>
+<message id="D16" name="D16">
+	<say>ELLA</say>
+</message>
+<message id="D17" name="D17">
+	<say>SCARLETT</say>
+</message>
+<message id="D18" name="D18">
+	<say>CHLOE</say>
+</message>
+<message id="D19" name="D19">
+	<say>ISABELLE</say>
+</message>
+<message id="D20" name="D20">
+	<say>FREYA</say>
+</message>
+<message id="D21" name="D21">
+	<say>CHARLOTTE</say>
+</message>
+<message id="D22" name="D22">
+	<say>SIENNA</say>
+</message>
+<message id="D23" name="D23">
+	<say>DAISY</say>
+</message>
+<message id="D24" name="D24">
+	<say>PHOEBE</say>
+</message>
+<message id="D25" name="D25">
+	<say>MILLIE</say>
+</message>
+<message id="D26" name="D26">
+	<say>EVA</say>
+</message>
+<message id="D27" name="D27">
+	<say>ALICE</say>
+</message>
+<message id="D28" name="D28">
+	<say>LUCY</say>
+</message>
+<message id="D29" name="D29">
+	<say>FLORENCE</say>
+</message>
+<message id="D30" name="D30">
+	<say>SOFIA</say>
+</message>
+<message id="D31" name="D31">
+	<say>LAYLA</say>
+</message>
+<message id="D32" name="D32">
+	<say>LOLA</say>
+</message>
+<message id="D33" name="D33">
+	<say>HOLLY</say>
+</message>
+<message id="D34" name="D34">
+	<say>IMOGEN</say>
+</message>
+<message id="D35" name="D35">
+	<say>MOLLY</say>
+</message>
+<message id="D36" name="D36">
+	<say>MATILDA</say>
+</message>
+<message id="D37" name="D37">
+	<say>LILLY</say>
+</message>
+<message id="D38" name="D38">
+	<say>ROSIE</say>
+</message>
+<message id="D39" name="D39">
+	<say>ELIZABETH</say>
+</message>
+<message id="D40" name="D40">
+	<say>ERIN</say>
+</message>
+<message id="D41" name="D41">
+	<say>MAISIE</say>
+</message>
+<message id="D42" name="D42">
+	<say>LEXI</say>
+</message>
+<message id="D43" name="D43">
+	<say>ELLIE</say>
+</message>
+<message id="D44" name="D44">
+	<say>HANNAH</say>
+</message>
+<message id="D45" name="D45">
+	<say>EVELYN</say>
+</message>
+<message id="D46" name="D46">
+	<say>ABIGAIL</say>
+</message>
+<message id="D47" name="D47">
+	<say>ELSIE</say>
+</message>
+<message id="D48" name="D48">
+	<say>SUMMER</say>
+</message>
+<message id="D49" name="D49">
+	<say>MEGAN</say>
+</message>
+<message id="D50" name="D50">
+	<say>JASMINE</say>
+</message>
+<message id="D51" name="D51">
+	<say>MAYA</say>
+</message>
+<message id="D52" name="D52">
+	<say>AMELIE</say>
+</message>
+<message id="D53" name="D53">
+	<say>LACEY</say>
+</message>
+<message id="D54" name="D54">
+	<say>WILLOW</say>
+</message>
+<message id="D55" name="D55">
+	<say>EMMA</say>
+</message>
+<message id="D56" name="D56">
+	<say>BELLA</say>
+</message>
+<message id="D57" name="D57">
+	<say>ELEANOR</say>
+</message>
+<message id="D58" name="D58">
+	<say>ESME</say>
+</message>
+<message id="D59" name="D59">
+	<say>ELIZA</say>
+</message>
+<message id="D60" name="D60">
+	<say>GEORGIA</say>
+</message>
+<message id="D61" name="D61">
+	<say>HARRIET</say>
+</message>
+<message id="D62" name="D62">
+	<say>GRACIE</say>
+</message>
+<message id="D63" name="D63">
+	<say>ANNABELLE</say>
+</message>
+<message id="D64" name="D64">
+	<say>EMILIA</say>
+</message>
+<message id="D65" name="D65">
+	<say>AMBER</say>
+</message>
+<message id="D66" name="D66">
+	<say>IVY</say>
+</message>
+<message id="D67" name="D67">
+	<say>BROOKE</say>
+</message>
+<message id="D68" name="D68">
+	<say>ROSE</say>
+</message>
+<message id="D69" name="D69">
+	<say>ANNA</say>
+</message>
+<message id="D70" name="D70">
+	<say>ZARA</say>
+</message>
+<message id="D71" name="D71">
+	<say>LEAH</say>
+</message>
+<message id="D72" name="D72">
+	<say>MOLLIE</say>
+</message>
+<message id="D73" name="D73">
+	<say>MARTHA</say>
+</message>
+<message id="D74" name="D74">
+	<say>FAITH</say>
+</message>
+<message id="D75" name="D75">
+	<say>HOLLIE</say>
+</message>
+<message id="D76" name="D76">
+	<say>AMY</say>
+</message>
+<message id="D77" name="D77">
+	<say>BETHANY</say>
+</message>
+<message id="D78" name="D78">
+	<say>VIOLET</say>
+</message>
+<message id="D79" name="D79">
+	<say>KATIE</say>
+</message>
+<message id="D80" name="D80">
+	<say>MARYAM</say>
+</message>
+<message id="D81" name="D81">
+	<say>FRANCESCA</say>
+</message>
+<message id="D82" name="D82">
+	<say>JULIA</say>
+</message>
+<message id="D83" name="D83">
+	<say>MARIA</say>
+</message>
+<message id="D84" name="D84">
+	<say>DARCEY</say>
+</message>
+<message id="D85" name="D85">
+	<say>ISABEL</say>
+</message>
+<message id="D86" name="D86">
+	<say>TILLY</say>
+</message>
+<message id="D87" name="D87">
+	<say>MADDISON</say>
+</message>
+<message id="D88" name="D88">
+	<say>VICTORIA</say>
+</message>
+<message id="D89" name="D89">
+	<say>ISOBEL</say>
+</message>
+<message id="D90" name="D90">
+	<say>NIAMH</say>
+</message>
+<message id="D91" name="D91">
+	<say>SKYE</say>
+</message>
+<message id="D92" name="D92">
+	<say>MADISON</say>
+</message>
+<message id="D93" name="D93">
+	<say>DARCY</say>
+</message>
+<message id="D94" name="D94">
+	<say>AISHA</say>
+</message>
+<message id="D95" name="D95">
+	<say>BEATRICE</say>
+</message>
+<message id="D96" name="D96">
+	<say>SARAH</say>
+</message>
+<message id="D97" name="D97">
+	<say>ZOE</say>
+</message>
+<message id="D98" name="D98">
+	<say>PAIGE</say>
+</message>
+<message id="D99" name="D99">
+	<say>HEIDI</say>
+</message>
+<message id="D100" name="D100">
+	<say>LYDIA</say>
+</message>
+<message id="D101" name="D101">
+	<say>OLIVER</say>
+</message>
+<message id="D102" name="D102">
+	<say>JACK</say>
+</message>
+<message id="D103" name="D103">
+	<say>HARRY</say>
+</message>
+<message id="D104" name="D104">
+	<say>JACOB</say>
+</message>
+<message id="D105" name="D105">
+	<say>CHARLIE</say>
+</message>
+<message id="D106" name="D106">
+	<say>THOMAS</say>
+</message>
+<message id="D107" name="D107">
+	<say>OSCAR</say>
+</message>
+<message id="D108" name="D108">
+	<say>WILLIAM</say>
+</message>
+<message id="D109" name="D109">
+	<say>JAMES</say>
+</message>
+<message id="D110" name="D110">
+	<say>GEORGE</say>
+</message>
+<message id="D111" name="D111">
+	<say>ALFIE</say>
+</message>
+<message id="D112" name="D112">
+	<say>JOSHUA</say>
+</message>
+<message id="D113" name="D113">
+	<say>NOAH</say>
+</message>
+<message id="D114" name="D114">
+	<say>ETHAN</say>
+</message>
+<message id="D115" name="D115">
+	<say>MUHAMMAD</say>
+</message>
+<message id="D116" name="D116">
+	<say>ARCHIE</say>
+</message>
+<message id="D117" name="D117">
+	<say>LEO</say>
+</message>
+<message id="D118" name="D118">
+	<say>HENRY</say>
+</message>
+<message id="D119" name="D119">
+	<say>JOSEPH</say>
+</message>
+<message id="D120" name="D120">
+	<say>SAMUEL</say>
+</message>
+<message id="D121" name="D121">
+	<say>RILEY</say>
+</message>
+<message id="D122" name="D122">
+	<say>DANIEL</say>
+</message>
+<message id="D123" name="D123">
+	<say>MOHAMMED</say>
+</message>
+<message id="D124" name="D124">
+	<say>ALEXANDER</say>
+</message>
+<message id="D125" name="D125">
+	<say>MAX</say>
+</message>
+<message id="D126" name="D126">
+	<say>LUCAS</say>
+</message>
+<message id="D127" name="D127">
+	<say>MASON</say>
+</message>
+<message id="D128" name="D128">
+	<say>LOGAN</say>
+</message>
+<message id="D129" name="D129">
+	<say>ISAAC</say>
+</message>
+<message id="D130" name="D130">
+	<say>BENJAMIN</say>
+</message>
+<message id="D131" name="D131">
+	<say>DYLAN</say>
+</message>
+<message id="D132" name="D132">
+	<say>JAKE</say>
+</message>
+<message id="D133" name="D133">
+	<say>EDWARD</say>
+</message>
+<message id="D134" name="D134">
+	<say>FINLEY</say>
+</message>
+<message id="D135" name="D135">
+	<say>FREDDIE</say>
+</message>
+<message id="D136" name="D136">
+	<say>HARRISON</say>
+</message>
+<message id="D137" name="D137">
+	<say>TYLER</say>
+</message>
+<message id="D138" name="D138">
+	<say>SEBASTIAN</say>
+</message>
+<message id="D139" name="D139">
+	<say>ZACHARY</say>
+</message>
+<message id="D140" name="D140">
+	<say>ADAM</say>
+</message>
+<message id="D141" name="D141">
+	<say>THEO</say>
+</message>
+<message id="D142" name="D142">
+	<say>JAYDEN</say>
+</message>
+<message id="D143" name="D143">
+	<say>ARTHUR</say>
+</message>
+<message id="D144" name="D144">
+	<say>TOBY</say>
+</message>
+<message id="D145" name="D145">
+	<say>LUKE</say>
+</message>
+<message id="D146" name="D146">
+	<say>LEWIS</say>
+</message>
+<message id="D147" name="D147">
+	<say>MATTHEW</say>
+</message>
+<message id="D148" name="D148">
+	<say>HARVEY</say>
+</message>
+<message id="D149" name="D149">
+	<say>HARLEY</say>
+</message>
+<message id="D150" name="D150">
+	<say>DAVID</say>
+</message>
+<message id="D151" name="D151">
+	<say>RYAN</say>
+</message>
+<message id="D152" name="D152">
+	<say>TOMMY</say>
+</message>
+<message id="D153" name="D153">
+	<say>MICHAEL</say>
+</message>
+<message id="D154" name="D154">
+	<say>REUBEN</say>
+</message>
+<message id="D155" name="D155">
+	<say>NATHAN</say>
+</message>
+<message id="D156" name="D156">
+	<say>BLAKE</say>
+</message>
+<message id="D157" name="D157">
+	<say>MOHAMMAD</say>
+</message>
+<message id="D158" name="D158">
+	<say>JENSON</say>
+</message>
+<message id="D159" name="D159">
+	<say>BOBBY</say>
+</message>
+<message id="D160" name="D160">
+	<say>LUCA</say>
+</message>
+<message id="D161" name="D161">
+	<say>CHARLES</say>
+</message>
+<message id="D162" name="D162">
+	<say>FRANKIE</say>
+</message>
+<message id="D163" name="D163">
+	<say>DEXTER</say>
+</message>
+<message id="D164" name="D164">
+	<say>KAI</say>
+</message>
+<message id="D165" name="D165">
+	<say>ALEX</say>
+</message>
+<message id="D166" name="D166">
+	<say>CONNOR</say>
+</message>
+<message id="D167" name="D167">
+	<say>LIAM</say>
+</message>
+<message id="D168" name="D168">
+	<say>JAMIE</say>
+</message>
+<message id="D169" name="D169">
+	<say>ELIJAH</say>
+</message>
+<message id="D170" name="D170">
+	<say>STANLEY</say>
+</message>
+<message id="D171" name="D171">
+	<say>LOUIE</say>
+</message>
+<message id="D172" name="D172">
+	<say>JUDE</say>
+</message>
+<message id="D173" name="D173">
+	<say>CALLUM</say>
+</message>
+<message id="D174" name="D174">
+	<say>HUGO</say>
+</message>
+<message id="D175" name="D175">
+	<say>LEON</say>
+</message>
+<message id="D176" name="D176">
+	<say>ELLIOT</say>
+</message>
+<message id="D177" name="D177">
+	<say>LOUIS</say>
+</message>
+<message id="D178" name="D178">
+	<say>THEODORE</say>
+</message>
+<message id="D179" name="D179">
+	<say>GABRIEL</say>
+</message>
+<message id="D180" name="D180">
+	<say>OLLIE</say>
+</message>
+<message id="D181" name="D181">
+	<say>AARON</say>
+</message>
+<message id="D182" name="D182">
+	<say>FREDERICK</say>
+</message>
+<message id="D183" name="D183">
+	<say>EVAN</say>
+</message>
+<message id="D184" name="D184">
+	<say>ELLIOTT</say>
+</message>
+<message id="D185" name="D185">
+	<say>OWEN</say>
+</message>
+<message id="D186" name="D186">
+	<say>TEDDY</say>
+</message>
+<message id="D187" name="D187">
+	<say>FINLAY</say>
+</message>
+<message id="D188" name="D188">
+	<say>CALEB</say>
+</message>
+<message id="D189" name="D189">
+	<say>IBRAHIM</say>
+</message>
+<message id="D190" name="D190">
+	<say>RONNIE</say>
+</message>
+<message id="D191" name="D191">
+	<say>FELIX</say>
+</message>
+<message id="D192" name="D192">
+	<say>AIDEN</say>
+</message>
+<message id="D193" name="D193">
+	<say>CAMERON</say>
+</message>
+<message id="D194" name="D194">
+	<say>AUSTIN</say>
+</message>
+<message id="D195" name="D195">
+	<say>KIAN</say>
+</message>
+<message id="D196" name="D196">
+	<say>RORY</say>
+</message>
+<message id="D197" name="D197">
+	<say>SETH</say>
+</message>
+<message id="D198" name="D198">
+	<say>ROBERT</say>
+</message>
+<message id="D199" name="D199">
+	<say>ALBERT</say>
+</message>
+<message id="D200" name="D200">
+	<say>SONNY</say>
+</message>
+  	<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+<message id="D20160204" name="D20160204">
+<say>User</say>
+</message>
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>	
+
+
+<message id="CSU00491" name="CSU00491">
+		<say>Tarico</say>
+		</message>
+		<message id="CSU00504" name="CSU00504">
+		<say>Tammy</say>
+		</message>
+		<message id="CSU00509" name="CSU00509">
+		<say>Sadio</say>
+		</message>
+		<message id="CSU00490" name="CSU00490">
+		<say>Sandra</say>
+		</message>
+		<message id="CSU00465" name="CSU00465">
+		<say>Alma</say>
+		</message>
+		<message id="CSU00492" name="CSU00492">
+		<say>Elizabeth</say>
+		</message>
+		<message id="CSU00508" name="CSU00508">
+		<say>Samira</say>
+		</message>
+		<message id="CSU00515" name="CSU00515">
+		<say>Edgar</say>
+		</message>
+		<message id="CSU00516" name="CSU00516">
+		<say>Omega</say>
+		</message>
+		<message id="CSU00517" name="CSU00517">
+		<say>Gilda</say>
+		</message>
+		<message id="CSU00519" name="CSU00519">
+		<say>Farida</say>
+		</message>
+		<message id="CSU00520" name="CSU00520">
+		<say>Miran</say>
+		</message>
+		<message id="CSU00521" name="CSU00521">
+		<say>Azza</say>
+		</message>
+		<message id="CSU00522" name="CSU00522">
+		<say>Nao</say>
+		</message>
+		<message id="CSU00523" name="CSU00523">
+		<say>Oliva</say>
+		</message>
+		
+				<message id="HSC122301615" name="HSC122301615">
+		<say>Janna</say>
+		</message>
+		<message id="HSC122301616" name="HSC122301616">
+		<say>Jennifer</say>
+		</message>
+		<message id="HSC122301618" name="HSC122301618">
+		<say>Muhiadin</say>
+		</message>
+		<message id="HSC122301623" name="HSC122301623">
+		<say>Angel</say>
+		</message>
+		<message id="HSC122301625" name="HSC122301625">
+		<say>Dowell</say>
+		</message>
+		<message id="HSC122301627" name="HSC122301627">
+		<say>Offa</say>
+		</message>
+		<message id="HSC122301628" name="HSC122301628">
+		<say>Annemarie</say>
+		</message>
+		<message id="HSC122301630" name="HSC122301630">
+		<say>Arnaldo</say>
+		</message>
+		<message id="HSC122301631" name="HSC122301631">
+		<say>Sheelah</say>
+		</message>
+		<message id="HSC122301635" name="HSC122301635">
+		<say>shwa-wah-beck</say>
+		</message>
+		<message id="HSC122301620" name="HSC122301620">
+		<say>Haja</say>
+		</message>
+		<message id="HSC1223016" name="HSC1223016">
+		<say>Learner</say>
+		</message>
+		
+		<message id="HSC122301617" name="HSC122301617">
+		<say>Sheena</say>
+		</message>
+		<message id="HSC122301619" name="HSC122301619">
+		<say>Darlene</say>
+		</message>
+		<message id="HSC122301621" name="HSC122301621">
+		<say>Destiny</say>
+		</message>
+		<message id="HSC122301624" name="HSC122301624">
+		<say>Kenisha</say>
+		</message>
+		<message id="HSC122301626" name="HSC122301626">
+		<say>Tamara</say>
+		</message>
+		<message id="HSC122301629" name="HSC122301629">
+		<say>Yanenah</say>
+		</message>
+		<message id="HSC122301632" name="HSC122301632">
+		<say>Victoria</say>
+		</message>
+		<message id="HSC122301527" name="HSC122301527">
+		<say>Carleen</say>
+		</message>
+		<message id="HSC122301634" name="HSC122301634">
+		<say>Leila</say>
+		</message>
+		<message id="HSC122301636" name="HSC122301636">
+		<say>Luna</say>
+		</message>
+		<message id="HSC122301637" name="HSC122301637">
+		<say>Lucy</say>
+		</message>
+		<message id="HSC122301638" name="HSC122301638">
+		<say>Rahmelle</say>
+		</message>
+    </scene>
+	</stage>
+</project>

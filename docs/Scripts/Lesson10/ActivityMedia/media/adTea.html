@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Stoke' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<title></title>
+<script>document.domain='ace.autotutor.org'</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<script src="layer/layer.min.js"></script>
+		
+		<style type="text/css">
+			body
+			{
+				margin:0px;
+				padding:0px;
+				text-align:center;
+				overflow:hidden;
+				background-image:url(Backround2.png);
+				background-repeat:no-repeat;
+				/*width:840px;
+				height:567px;*/
+			}
+			#content
+			{
+				width:720px;
+				height:100%;
+				margin: auto;
+				position:relative;
+			}
+			#cim{position:absolute;left:200px;top:200px;opacity:0;}
+			#bin{position: relative;}
+			.moveText
+			{
+				margin-top: 12px;
+			}
+			.myText
+			{
+				display: table-cell;
+				vertical-align: middle;
+				overflow: auto;
+				width: 720px;
+				height: 120px;
+				padding: 20px 30px 15px 30px;
+				border: solid;
+				border-color: #5C5C5C;
+				background-color:#FFFFFF;
+				font-family: Stoke, 'Times New Roman';
+				font-size:30px;
+				text-align:center;
+			}
+			.pImg
+			{
+				width:180px;
+				cursor:crosshair;
+				border-style:none;
+				float:left;
+				padding: 58px 0px 0px 0px;
+				margin: 0px 5px 0px 0px;
+			}
+			.mImg
+			{
+				width:620px;
+				border-style:none;
+				margin:auto;
+				padding-top:20px;
+				cursor:pointer;
+			}
+			.bottom
+			{
+				display:inline-block;
+				width: 740px;
+				margin: 16px 0px 0px 0px;
+			}
+			.mybutton
+			{				
+				display: relative;
+				float: right;
+				font-size: 23px;
+				background-color: #cee2ee;
+				color: #111111;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 520px;
+				height: 78px;
+				line-height: 78px;
+				margin: 4px;
+				padding: 2px;
+				border-radius: 12px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			var questionNum=-1;
+			var ItemList=[["Which part of this advertisement uses nonliteral language?","C","International Tea Company","Assorted Teas from around the World!","One sip and you're in heaven!"],["Is a comparison being made in the slogan: 'One sip and you're in heaven!'?","A","Yes","No","I'm not sure."],["Why is the writer comparing a sip of tea and being in heaven?","B","To describe where the tea was grown.","To describe how the tea makes the reader feel.","To describe how to make tea."],["What is the intended meaning of 'One sip and you're in heaven!'?","B","To make you aware the tea is warm.","To make you feel very happy and relaxed.","To make you leave your house."],["Which of these is a good replacement for the nonliteral language?","B","Drinking this tea makes you want to travel.","A sip of this tea will make you very happy and relaxed.","This tea is from all over the world."]]
+			$(document).ready(function()
+			{				
+				$("#details").css("display","none");
+				document.getElementById('mainImg').src="AdTea0.png"
+				
+				parent.GetWorldEvent("MediaLoaded");
+				
+				Lock();
+			});
+			function fromMainPage()
+			{
+				questionNum++;
+				
+				ShowItem();
+				
+				parent.GetWorldEvent("LeaveMainPage");
+			}
+			function setQuestionNum(data)
+			{
+				questionNum=data;
+				
+			}
+			function GetItem()
+			{
+				questionNum++;
+				if(questionNum<ItemList.length)
+				{
+					parent.GetWorldEvent("questionNum_"+questionNum);
+					parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					parent.GetWorldEvent("Stop");
+				}
+			}
+			var question="";
+			var answerA="";
+			var answerB="";
+			var answerC="";
+			var correctAnswer="";
+			var userAnswer="";
+			function ShowItem()
+			{
+				$("#details").css("display","block");
+				$("#mainImg").css("display","none");
+				Lock();
+				
+				if(questionNum<ItemList.length)
+				{
+					var getLength=ItemList[questionNum].length;
+					if (getLength==5)
+					{
+						question=ItemList[questionNum][0];
+						correctAnswer=ItemList[questionNum][1];
+						answerA=ItemList[questionNum][2];
+						answerB=ItemList[questionNum][3];
+						answerC=ItemList[questionNum][4];
+						
+						if (questionNum == "2" || questionNum == "3")
+						{
+							$(".mybutton").css("font-size","21px");
+						}
+						else if (questionNum == "4")
+						{
+							$(".mybutton").css("font-size","20px");
+						}
+						else
+						{
+							$(".mybutton").css("font-size","24px");
+						}
+						
+						document.getElementById('question').innerHTML=question;
+						document.getElementById('A').innerHTML=answerA;
+						document.getElementById('B').innerHTML=answerB;
+						document.getElementById('C').innerHTML=answerC;
+						$("#C").css("display","block");
+					}else if(getLength==4)
+					{
+						question=ItemList[questionNum][0];
+						correctAnswer=ItemList[questionNum][1];
+						answerA=ItemList[questionNum][2];
+						answerB=ItemList[questionNum][3];
+					  
+						document.getElementById('question').innerHTML=question;
+						document.getElementById('A').innerHTML=answerA;
+						document.getElementById('B').innerHTML=answerB;
+						
+						$("#C").css("display","none");
+					}
+				}
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 300);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					userAnswer = $(this).attr("id");
+					userAnswerValue=document.getElementById(userAnswer).innerHTML;
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//report answer to ASAT
+					if(userAnswer==correctAnswer)
+					{
+						parent.PlaySound('clicked0.wav');
+						//parent.GetWorldEvent("Correct");
+						 parent.GetWorldEvent("userAnswer_Correct_"+userAnswerValue);
+					}
+					else
+					{
+						parent.PlaySound('incorrect0.wav');
+						//parent.GetWorldEvent("Incorrect");
+						 parent.GetWorldEvent("userAnswer_Incorrect_"+userAnswerValue);
+					}
+				};
+				
+				//this sets the hover animation for buttons
+				$( ".mybutton" ).mouseover(function(e)
+				{
+					$(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 250);
+				});
+				$( ".mybutton" ).mouseout(function()
+				{
+					$(this).stop().animate({backgroundColor: "#cee2ee", color: "#212121"}, 300);
+				});
+				
+				//sets cursor for buttons
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#cee2ee", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			function ShowMediaAnswer()
+			{				
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer != correctAnswer )
+				{
+					//do nothing
+				}else if( userAnswer == correctAnswer )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$("#" + correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+			}
+		</script>
+	</head>
+	<body>
+		<img src="AdTea0.png" id="noneImg" class="hide" style="display:none"  width="525" height="388" >
+		
+		<div id="content">
+		
+			<img id="mainImg"  class="mImg" onclick="fromMainPage()">
+			
+			<div id="details">
+				<div class="moveText">
+					<div  id= "question" class="myText" ></div>
+				</div>
+				
+				<div class="bottom">
+					<div class="image">
+						<img src="AdTea0.png" id="pageImg" class="pImg" alt="Click here to ZOOM.">
+					</div>
+					
+					<div id= "A"  class="mybutton" > </div>
+					<div id= "B" class="mybutton" > </div>
+					<div id= "C" class="mybutton" > </div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			(function()
+			{
+				//$('#pageImg').mouseover(function(){
+				$('#pageImg').click(function()
+				{
+					var i = $.layer({
+						type : 1,
+						title : false,
+						fix : false,
+						offset:['50px' , ''],
+						area : ['525px','388px'],
+						page : {dom : '#noneImg'}
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>

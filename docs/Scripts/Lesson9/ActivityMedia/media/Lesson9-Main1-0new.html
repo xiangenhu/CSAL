@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain='ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L8Bkgd1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Pontano Sans', Verdana, 'Times New Roman';
+				cursor: pointer;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			.highlight
+			{
+				 background-color: grey; 
+				border-radius: 10px;
+			}
+			
+			#mainText
+			{
+				font-size: 28px;
+				padding: 15px 30px 0px 40px;
+				line-height: 40px;
+			}
+			.mainTextHead
+			{
+				font-family: 'Handlee', Verdana, 'Times New Roman';
+				font-size: 54px;
+				width: 720px;
+				margin: 20px 0px 40px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			#headSub
+			{
+				font-size: 32px;
+				font-weight: normal;
+			}
+			.mybutton
+			{
+				font-size: 32px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				width: 700px;
+				height: 50px;
+				line-height: 50px;
+				margin: 20px auto 30px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				border-radius: 12px;
+				box-shadow: 2px 2px 11px #888888;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			
+			
+				
+					var questionNum=0;
+			var flag=0;
+			var getSpan="";
+			var getSpanContent="";
+			var getQ="";
+			var getCorrect="";
+			var jordanAnswer="";
+			var qContent="";
+			var userAnswer="Incorrect";   
+			var correctAnswer="";
+			var lockStates=0;
+			var diff="Easy";
+			 var isCorrect="false";
+				var idScroll=1;
+				var strId = "";
+			
+			
+			
+			
+			
+			
+			$(document).ready(function()
+			{	
+				
+			$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//lock the buttons
+				//LockSimple();
+				
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+			});
+			
+			 function changeText() {
+
+			  var selected  = $('#UserAnswer option:selected');
+			  userAnswer=selected.val();
+			  newuserAnswer='<span id="s'+questionNum+'">'+userAnswer+'</span>'
+			 
+
+			  $("#UserAnswer").replaceWith(newuserAnswer);
+			  $(getSpan).css({"background-color": "#ffc"});
+			  if(userAnswer==correctAnswer)
+			  {
+			  parent.GetWorldEvent("Correct");
+			  }
+			  else
+			  {
+			   parent.GetWorldEvent("Incorrect");
+			  }
+			 }  
+			function setQuestionNum(data)
+			{
+				questionNum=data;
+				idScroll=data;
+				
+			}
+		function GetItem()
+		{
+
+			 if(questionNum==0)
+			 {
+				questionNum++;
+				//correctAnswer=correctAnswerList[questionNum-1];
+				parent.GetWorldEvent("questionNum_"+questionNum);
+				parent.GetWorldEvent("Continue")   
+			 
+			 }
+			 else if(questionNum>0 && questionNum<13)
+			 {
+					idScroll++;
+					//1/12/2015parent.GetWorldEvent(idScroll)   ;
+					if(idScroll==2 || idScroll==5 || idScroll==6 || idScroll==8 || idScroll==9 || idScroll==10)
+					{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(210);
+					}
+					
+			 
+				
+			  // parent.GetWorldEvent("here");
+			   getSpan2=".s"+(questionNum-1);
+				$(getCorrect).removeAttr('style');
+				$(getSpan).removeAttr('style');
+				$(getSpan2).removeAttr('style');
+				
+				//$(getSpan).animate({backgroundColor: "transparent", color: "black"}, 1000);
+				//$(getQ).css({font-size: "28px", padding: "15px 30px 0px 40px",line-height:"40px"}, 1000);
+				$(getQ).css({"text-decoration": "none"});
+				$(getQ).css({"font-size": "28px"});
+				$(jordanAnswer).css({"font-size": "28px"});
+				$(jordanAnswer).css({"text-decoration": "none"});
+				questionNum++;
+				//correctAnswer=correctAnswerList[questionNum-1];
+				parent.GetWorldEvent("questionNum_"+questionNum);
+				parent.GetWorldEvent("Continue")   
+			 
+			 }
+			else
+			{
+				parent.GetWorldEvent("Stop") ;
+
+			}
+			
+		}
+		
+		function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				console.log(scrollTarget);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-120);
+			}
+		
+		function Start()
+			{
+			parent.GetWorldEvent("MediaLoaded");
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				Lock();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+			function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+		
+		function ShowItem()
+		{
+			/*jordanAnswer="#j"+questionNum;
+			getSpan=".s"+questionNum;
+			getQ="#a"+questionNum;
+			getCorrect="#Correct"+questionNum;
+			//getSpanContent=$(getSpan).html();
+			$(getSpan).css({"background-color": "#ae91e0"});
+				$(getSpan).css({"border-radius": "12px"});
+				$(getSpan).css({"padding-left": "4px"});
+				$(getSpan).css({"padding-right":"4px"});
+			
+			$(getQ).css({"text-decoration": "underline"});
+			$(getQ).css({"font-size": "50px"});
+			lockStates=1;
+			parent.GetWorldEvent("MediaAnswerShown");*/
+			jordanAnswer="#j"+questionNum;
+			getSpan=".s"+questionNum;
+			getQ="#a"+questionNum;
+			getCorrect="#Correct"+questionNum;
+			getSpan2=".s"+(questionNum-1);
+			//getSpanContent=$(getSpan).html();
+			$(getSpan2).removeAttr('style');
+			$(getSpan).css({"border-radius": "12px"});
+			$(getSpan).css({"padding-left": "4px"});
+			$(getSpan).css({"padding-right":"4px"});
+			$(getSpan).css({"background-color": "#ae91e0"});
+				
+			
+			$(getQ).css({"text-decoration": "underline"});
+			$(getQ).css({"font-size": "50px"});
+			lockStates=1; parent.GetWorldEvent("MediaAnswerShown");
+		}
+		
+		function Unlock()
+		{
+			
+				qContent=$(getQ).html();
+				
+			
+			$( getSpan).mouseover(function()
+				
+				{
+				$(this).stop().animate({backgroundColor: "#edff73"}, 300); 
+				newContent=$(this).html();
+				
+						if(newContent=="Olympics" && qContent=="it")
+							{
+								$(getQ).html("the "+newContent);
+							  }
+							  else if(newContent=="Turin Games" && qContent=="it")
+							  {
+								$(getQ).html("the "+newContent);
+							  }
+							  else if(newContent=="Vancouver Games" && qContent=="it")
+							  {
+								$(getQ).html("the "+newContent);
+							  }
+							   else if(newContent=="a degree" && qContent=="its")
+							  {
+								$(getQ).html(newContent+"'s");
+							  }
+							  else if(newContent=="a business" && qContent=="its")
+							  {
+								$(getQ).html(newContent+"'s");
+							  }
+							  else if(newContent=="hunters" && qContent=="their")
+							  {
+								$(getQ).html("the "+newContent);
+							  }
+							  else
+							  {
+								$(getQ).html(newContent);
+							  }
+							  
+							  });
+				
+				$( getSpan ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "#ae91e0"}, 300); 
+				  $(getQ).html(qContent);
+				});
+				
+					
+					$(getSpan).click(function()
+				{
+				parent.PlaySound('clicked0.wav');
+				
+				newContent=$(this).html();
+				$(getQ).html(newContent);
+				var getSelctedID=$(this).attr("id");
+				var userRealAnswer= $(this).text();
+				var CorrectID="Correct"+questionNum;
+				if( getSelctedID== CorrectID)
+				//if( $(this).attr("value") == "Correct")
+				{
+				strId+="1";
+				parent.GetWorldEvent(strId);
+				userAnswer = $(this).attr("value");
+				}
+				Lock();
+				parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userRealAnswer);
+				//parent.GetWorldEvent(userAnswer);
+				userAnswer="Incorrect";
+				$(this).stop().animate({backgroundColor: "yellow", color: "black"}, 300); 
+				});
+				
+				
+				//$("#a1").replaceWith(newContent);
+				
+				
+				
+				//$( ".s1" ).mouseout(function()
+				//{ $(this).animate({backgroundColor: "#c2faff"}, 300); });
+				$(getSpan).css({"border-radius": "12px"});
+				$(getSpan).css({"padding-left": "4px"});
+				$(getSpan).css({"padding-right":"4px"});
+				$(getSpan).css({"background-color": "#ae91e0"});
+				$( getSpan).css( 'cursor', 'pointer' );
+				
+				
+				
+				/*
+				$(getSpan).click(function(){
+						//$("#s1").css({"background-color": "green"});
+			var data=$(this).attr("id");
+				if(flag==1)
+				{
+					if(questionNum==1)
+					{
+					var newContent='<select id="UserAnswer" onchange = "changeText()" style="font-family:Segoe Print; font-size:22px; background-color: #ffc" > <option >'+"her"+'</option> <option id = A>'+"claiming"+'</option><option id = B>'+"stopping"+'</option><option id =C>'+"beginning"+'</option><option id =D>'+"pausing"+'</option></select>'
+						
+					$("#s1").replaceWith(newContent);
+					flag=0;
+					}
+					
+					
+					else if(questionNum==2)
+					{
+					var newContent='<select id="UserAnswer" onchange = "changeText()" style="font-family:Segoe Print; font-size:22px; background-color: #ffc" > <option >'+"she"+'</option> <option id = A>'+"different"+'</option><option id = B>'+"common"+'</option><option id =C>'+"the same"+'</option><option id =D>'+"rare"+'</option></select>'
+						
+					$("#s2").replaceWith(newContent);
+					flag=0;
+					}
+									
+			}
+			
+		});*/
+		}
+		
+		function ShowMediaAnswer()
+		{
+		//parent.GetWorldEvent("here!");
+			$(getCorrect).animate({backgroundColor: "green", color: "white"}, 300);
+			 return parent.PlaySound('success0.wav');
+			//$(getSpan).html(correctAnswer);
+			//$(getSpan).css({"background-color": "#55f055"});
+		}
+		
+		
+		
+		
+			
+			function Lock()
+			{
+				
+				$(getSpan).css({"border-radius": "12px"});
+				$(getSpan).css({"padding-left": "4px"});
+				$(getSpan).css({"padding-right":"4px"});
+				$(getSpan).css({"background-color": "#ae91e0"});
+				
+				//unbinds click function and hover
+				$(getSpan ).unbind("click");
+				$( getSpan).unbind("mouseover");
+				$( getSpan ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( "getSpan" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				//$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+
+			
+				function GetMediaEvent(data)
+			{
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+					
+					if(questionNum==1 ||   questionNum==2 || questionNum==4 ||   questionNum==6 ||  questionNum==7 ||   questionNum==8 || questionNum==9  ||   questionNum==11 )
+						{
+						parent.GetWorldEvent("Cristina");
+						}
+						else
+						{
+						parent.GetWorldEvent("Jordan");
+						}
+						
+				
+				
+				}
+				else if(data == "NextPage")
+				{
+					$("#buttonBox").fadeOut(1000);
+					$("#questionText").fadeOut(1000);
+					
+					if (strId.length >= 7)
+					{
+					parent.nextPage("media/"+"Lesson8-Main1-0new.html?id="+strId);
+					}
+					else 
+					{
+						parent.nextPage("media/"+"Lesson8-Main2-0new.html?id="+strId);
+					}
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "JordanAnswer")
+				{
+				
+				}
+				else if (data == "Difficulty") 
+				{
+					
+						parent.GetWorldEvent(diff);
+						
+					}
+			}
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div class="mainTextHead">
+					Olympian Sisters
+				</div>
+				
+				<div id="para1" class="para">
+				<span class="indent"></span> Tracy and Lanny Barnes are twin sisters. They both compete in the biathlon. That is a sport that mixes two skills. Athletes cross-country ski and shoot with a rifle.
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>   The 31-year-old twins tried out for the U.S. Winter Olympics team. The Olympics are in Sochi, Russia, this year. <span id="Correct1" value="Correct" class="s1">Tracy</span> finished just ahead of <span  class="s1">Lanny.</span>
+				</div>
+				
+				<div id="para3" class="para">
+				<span class="indent"></span><span  id="a1" >She</span> made <span  class="s2">the U.S. Olympic team</span>. 
+				<span  class="s3">Lanny</span> did not. So <span id="Correct3" value="Correct"  class="s3">Tracy</span> gave up her spot so her sister could take it. <span id="Correct2" value="Correct"  class="s2">Her choice</span> amazed people. <span  id="a2" >It</span> was all over the news. <span  id="a3" >She</span> was shocked by the level of interest. The choice made sense to her.
+				</div>
+				
+				<div id="para4" class="para">
+				<span class="indent"></span>   So why did she do it? <span  class="s4">Tracy</span> wanted her sister to get a second chance. <span id="Correct4" value="Correct"   class="s4">Lanny</span> was having a good season this winter but <span  id="a4" >she</span> got sick during a set of races in Italy. Those races decided who made the Olympic team.
+				</div>
+				
+				<div id="para5" class="para">
+				<span class="indent"></span>  <span id="Correct5" value="Correct" class="s5">Tracy</span> knew she wanted to give her spot to her sister. "It really meant a lot to me to be able to do something like that," she said. She told Lanny during a walk in the mountains of Italy.<span id="Correct6" value="Correct" class="s5 s6"> Lanny</span> asked Tracy not to do it."She felt like I should be going," <span class="s6">Tracy</span> said. But <span  id="a5" >she</span> would not change her mind. "Once I let <span  id="a6" >her</span> know how much it meant to me, she realized it was a good thing to do."
+				
+				<div id="para6" class="para">
+				<span class="indent"></span>  This will be Lanny's third <span id="Correct7" value="Correct" class="s7">Olympics</span>. The twins both made the team for the 2006 <span  class="s7">Turin Games</span>. Tracy just missed out on making the 2010 <span  class="s7">Vancouver Games</span>. But she doesn't mind missing <span  id="a7" >it.</span>
+				</div>
+				
+				
+				<div id="para7" class="para">
+				<span class="indent"></span>  "I care enough for Lanny to give up my dreams," Tracy said. "She's going to be able to go for hers, and that means the world to me." <span  class="s8">Tracy</span> thinks <span id="Correct8" value="Correct" class="s8 s9">Lanny</span> has a very strong will to win now. "<span  id="a8" >She's</span> really excited. She's got a mission," Tracy said. <span id="Correct9" value="Correct" class="s9">Tracy</span> is going back to college. <span  id="a9" >She</span> is close to earning <span  class="s10 s11">a degree</span> in  <span id="Correct10" value="Correct"  class="s10 s12">marketing</span>. <span  id="a10" >That</span> is helping <span id="Correct11" value="Correct"  class="s11">a business</span> to sell <span  id="a11" >its'</span> products.
+				</div>
+				
+				<div id="para8" class="para">
+				<span class="indent"></span>The twins hope to open a business one day. They want to teach members of <span  class="s13">the police and military</span>, as well as <span  class="s12">hunters</span>, how to shoot a rifle under different conditions. That's what <span  id="Correct12" value="Correct" class="s12">the twins</span> do in <span  id="a12" >their</span> sport. And they plan to do it together.
+				
+				</div>
+			</div>
+			<!-- <div class='mybutton'>Click HERE to continue . . .</div> -->
+		</div>
+	</body>
+</html>

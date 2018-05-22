@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 13 Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				//background-color: green;
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+				position: relative;
+			}
+			#instructBox
+			{
+				background-color: #e8d7ee;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 24px;
+				line-height: 30px;
+				text-align: center;
+				padding: 8px 5px 5px 5px;
+				border-bottom: 6px dotted #b99cc4;
+				margin: 0px auto 0px auto;
+			}
+			#questionBox
+			{
+				width: 760px;
+				height: 140px;
+				background-image: url('ClearBkgd2.png');
+				margin: 10px auto 10px auto;
+				padding: 0px;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+				positon: absolute;
+				display: table;
+			}
+			#questionText
+			{
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 26px;
+				line-height: 44px;
+				padding: 1px;
+				color: #212121;
+				margin: auto;
+			}
+			#mian
+			{
+				margin: 10px ;
+				
+			}
+			#dragDiv1
+			{
+				position:absolute;
+				top:210px;
+				left:55px;
+				width:680px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 18px;
+				border-radius: 10px;
+				line-height:26px;
+				padding: 5px;
+				background-color:#b99cc4;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv2
+			{
+				position:absolute;
+				top:275px;
+				left:55px;
+				width:680px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 18px;
+				border-radius: 10px;
+				line-height:26px;
+				padding: 5px;
+				background-color:#b99cc4;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv3
+			{
+				position:absolute;
+				top:340px;
+				left:55px;
+				width:680px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 18px;
+				border-radius: 10px;
+				line-height:26px;
+				padding: 5px;
+				background-color:#b99cc4;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			#dragDiv4
+			{
+				position:absolute;
+				top:405px;
+				left:55px;
+				width:680px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 18px;
+				border-radius: 10px;
+				line-height:26px;
+				padding: 5px;
+				background-color:#b99cc4;
+				text-align:center;
+				color:#212121;
+				cursor:default;
+			}
+			
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		 <script type="text/javascript">
+		var flag=1;
+		var spanX=0;
+		var spanY=0;
+		var divid;
+		var questionNum=0;
+		var UserAnswer;
+		var insertDivId;
+		var SortArr=["dragDiv1","dragDiv2","dragDiv4","dragDiv3"];
+	 
+		function Start()
+		{	
+			GetRequest() 
+			$(".drag").attr('disabled', true);
+			parent.GetWorldEvent("DDLoaded");
+		}
+		function GetRequest() 
+		{ 
+		   var url = location.search; 
+		   var idName = new Array();
+		   if (url.indexOf("?") != -1) 
+		   { 
+				str = url.substr(1); 
+				strs = str.split("=");
+				slectedItems = strs[1];
+		   }
+		}
+		function GetItem()
+		{
+			questionNum++;
+			
+			 if(questionNum<2)
+			 {
+				//dragAreaID="\"#"+dragArea+questionNum+ " div\"";
+				//alert(dragAreaID)
+				parent.GetWorldEvent("Continue");
+				
+			 }
+			else
+			{
+				var getPageContent = " " + "<span>" + $("#insert1").html() + "</span>" + " The whole experience was unbelievable, and they knew that they could never explain it to anyone.";
+				slectedItems += getPageContent
+				//alert(slectedItems);
+				parent.nextPage("media/"+"Lesson13-Activity11.html?id="+slectedItems);
+			}
+			
+		}
+		function ShowItem()
+		{
+		Lock();
+		
+		
+		}	
+		function Lock()
+		{
+		flag=1;
+			$(".drag").attr('disabled', true);
+		
+		
+		}
+		function Unlock()
+		{
+		flag=0;
+			$(".drag").attr('disabled', false);
+		
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				return UserAnswer;
+			
+			}
+			else if (data=="NextPage")
+			{
+				var getPageContent = " " + "<span>" + $("#insert1").html() + "</span>" + " The whole experience was unbelievable, and they knew that they could never explain it to anyone.";
+				slectedItems += getPageContent
+				
+				parent.nextPage("media/"+"Lesson13-Activity11.html?id="+slectedItems);
+			}
+				else if (data=="JordanSelect")
+			{
+			
+				var getSelectIndex=Math.floor(Math.random() * SortArr.length )
+				
+				var getSelectName=SortArr[getSelectIndex];
+				
+				var getContent = $("#"+getSelectName).html();
+				
+				
+				insertDivId="insert"+questionNum;
+				$("#"+insertDivId).html(getContent);
+				$("#"+insertDivId).css({"text-decoration":"underline"});
+				//SortArr.splice(getSelectIndex,1)
+				SortArr.splice(jQuery.inArray(getSelectName,SortArr),1); 
+				
+				$("#"+getSelectName).remove();
+				parent.GetWorldEvent("JordanSelect");
+				
+		
+			}
+		}
+		function ShowMediaAnswer()
+		{
+			
+			
+
+		}
+	 
+	
+	 var main="mian1";
+	 	//$(function(){
+	 $(document).ready(function(){//$(function scrollIt()
+        $("#main div").mouseover(function (e) {
+		
+			var oe=e||window.event;
+             divid = $(this).attr("id"); //
+			 getContent = $(this).html();
+            var odiv = document.getElementById(divid); //
+            $(this).css("z-index", "100").siblings().css("z-index", "0"); //div????
+            moveDiv(odiv);
+			//alert(oe.clientY)
+        });
+		
+	        function moveDiv(obj) {
+			
+				obj.onmousedown = function (e) {//
+			
+                var oe = e || window.event;
+                var $this = this;
+				
+				insertDivId="insert"+questionNum;
+				
+                var startX = oe.clientX - $this.offsetLeft;
+                var startY = oe.clientY - $this.offsetTop;
+				
+				var DivStartX= $("#"+divid).offset().left ; 
+				var DivStartY = $("#"+divid).offset().top; 
+				var rangeLeft;
+				var rangeTop;
+
+                //obj.className = "on"; //css3
+			if (flag==0)
+			{
+				document.onmousemove = function (e) {////??????
+                    var oe = e || window.event;
+
+                    $this.style.left = oe.clientX - startX + "px";
+					
+                    $this.style.top = oe.clientY - startY + "px";
+					rangeLeft=oe.clientX - startX  
+					rangeTop=oe.clientY - startY 
+					
+					var spanX = $("#"+insertDivId).position().left; 
+					var spanY = $("#"+insertDivId).position().top;
+
+					if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+					{
+						$("#"+insertDivId).css({"color":"green"});
+						$("#"+insertDivId).css({"font-weight":"bold"});
+						$("#"+insertDivId).css({"font-size":"36px"});
+					}
+					else
+					{
+						$("#"+insertDivId).css({"color":"#212121"});
+						$("#"+insertDivId).css({"font-weight":"normal"});
+						$("#"+insertDivId).css({"font-size":"26px"});
+					}
+					
+					//$this.className='pointer';
+					
+		         }
+                document.onmouseup = function () {//??????
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                    //obj.className = "off"; //css3??????
+					
+					//var insertDivId="insert"+questionNum;
+					var spanX = $("#"+insertDivId).position().left ; 
+					var spanY = $("#"+insertDivId).position().top;
+					if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+					{
+					$("#"+insertDivId).html(getContent);
+					$("#"+insertDivId).css({"color":"#593367"});
+					$("#"+insertDivId).css({"text-decoration":"none"});
+					$("#"+insertDivId).css({"font-weight":"normal"});
+					$("#"+insertDivId).css({"font-size":"26px"});
+					
+					$("#"+divid).remove();
+					
+					UserAnswer=getContent;
+					//parent.GetWorldEvent("UserAnswer");
+					parent.GetWorldEvent("userAnswer_"+"UserAnswer_"+UserAnswer);
+					
+					Lock();
+					}
+					else
+					{
+					$this.style.left =DivStartX+ "px";
+					$this.style.top = DivStartY+ "px";
+					
+					}
+
+                    if ($this.releaseCapture) {//debug??????
+					
+                        $this.releaseCapture();
+                    }
+                }
+                if ($this.setCapture) {//debug??????
+                    $this.setCapture();
+
+                }
+				}
+			
+			}
+            
+        }
+    });
+</script>
+	</head>
+	<body onload="Start()">
+		<div id="instructBox">
+			Drag and drop an option into the blank.<span style="text-decoration: underline;"></span>
+		</div>
+		
+		<div id="questionBox">
+			<div id="questionText"><span id="insert1" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> The whole experience was unbelievable, and they knew that they could never explain it to anyone.      
+			</div>
+		</div>
+		<div  style="width: 100%; height: 100%; margin: 0 auto;" id="main">
+		<div class="drag" id="dragDiv1" >Suddenly, the whole scene slipped away, and they were startled to find that it had all been a dream. </div>
+		<div class="drag" id="dragDiv2" >They decided to make the best of it. They built a shelter and still live there to this day.</div>
+		<div class="drag" id="dragDiv3" >The gunfire turned towards them and bullets whizzed by their heads. Suddenly, a helicopter swept into view. Help was on the way.</div>
+		<div class="drag" id="dragDiv4" >In the distance, they heard cheering. A man stepped out from the shadows."Congratulations," he called."You win!.</div>
+		
+		</div>
+		
+		
+	</body>
+</html>

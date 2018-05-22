@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L28Bkgd(H).jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 24px;
+				padding: 15px 30px 0px 30px;
+				line-height: 38px;
+				color: #212121;
+			}
+			#mainTextHead
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 52px;
+				line-height: 56px;
+				margin: 10px 0px 15px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.textImg
+			{
+				border: 2px solid white;
+				border-radius: 4px;
+			}
+			#img1
+			{
+				float: right;
+				margin: 10px 0px 0px 20px;
+				height: 275px;
+			}
+			#img2
+			{
+				float: left;
+				margin: 10px 20px 0px 0px;
+				height: 200px;
+			}
+			#img3
+			{
+				float: right;
+				margin: 10px 0px 0px 20px;
+				height: 200px;
+			}
+			#img4
+			{
+				float: left;
+				margin: 10px 20px 0px 0px;
+				height: 200px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 215px;
+				background-color: #212121;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}		
+			#questionText
+			{
+				text-align: center;
+				font-size: 20px;
+				padding: 10px 10px 0px 10px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 780px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 17px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 760px;
+				height: 50px;
+				line-height: 27px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+		 var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;			
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
+			var correctAnswer = "#b2";
+		
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoadedDifficult");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "Scroll");
+			});
+			
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+			function Start()
+			{
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+			function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+			
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					
+				}
+			}
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-90);
+			}
+			
+			
+			
+			
+			function ShowMediaAnswer()
+			{
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				$(".Helper").animate({backgroundColor: "green", color: "white"}, 1000);
+				//$(".hideAnswer").animate({backgroundColor: "transparent"}, 300);
+			}
+			
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");	
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						parent.PlaySound('clicked0.wav'); 
+						strId+="1";
+						//parent.GetWorldEvent(strId.length);
+					}
+					else {
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "white", color: "#212121"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				
+				
+				//go to next page
+				if (data == "NextPage")
+				{	
+				//*********
+					parent.nextPage("media/"+"Lesson28(H)-6.html");
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Hard");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad1")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad2")
+				{
+					JordanAnswer = $("#b3").attr("value");
+					$("#b3").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				
+				else if(data=="bothAnswer")
+				{
+				  if (userAnswer=="Correct")
+				  {
+					userAnswerCode="C";
+				  }
+				  else if(userAnswer=="Incorrect1")
+				  {
+				  userAnswerCode="I1";
+				  }
+				  else if(userAnswer=="Incorrect2")
+				  {
+				  userAnswerCode="I2";
+				  }
+				   if (JordanAnswer=="Correct")
+				  {
+					JordanAnswerCode="C";
+				  }
+				  else if(JordanAnswer=="Incorrect1")
+				  {
+				  JordanAnswerCode="I1";
+				  }
+				  else if(JordanAnswer=="Incorrect2")
+				  {
+				  JordanAnswerCode="I2";
+				  }
+				  var getScore=userAnswerCode+JordanAnswerCode;
+				  parent.GetWorldEvent(getScore);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					How Social Media is Reshaping News
+				</div>
+				<div id="para1" class="para">
+				<span class="indent"></span>When you take into account both the share of Americans who use it and the proportion of users who get news on the site, <img src="ComputerMan.png" id="img1" class="textImg">Facebook is the obvious news  powerhouse among the social media sites. Roughly two-thirds (64%) of U.S. adults use the site. Half of those users get news there. This amounts to 30% of the general population.
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>YouTube is the next biggest social news pathway. About half of Americans use the site. A fifth of them get news there. This translates to 10% of the adult population and puts the site on par with Twitter.</span> Twitter reaches 16% of Americans. Half of those users say they get news there. Although only 3% of the <img src="GroupPhones.png" id="img2" class="textImg">U.S. population use reddit, 62% of those 3% have gotten news from that site.
+				</div>
+				<div id="para3" class="para">
+				<span class="indent"></span><span class="Helper">Half of social network site users have shared news stories, images or vidoes.</span> Nearly as many (46%) have discussed a news issue or event. In addition to sharing news on social media, a small number are also covering the news themselves. They do that by posting photos or videos of news events. <span id="Scroll" class="Helper"><span style="text-decoration: underline;">Pew Research found that in 2014, 14% of social media users posted their own photos of news events to a social networking site.</span> </span> While 12% of them had posted videos.</span><span class="Helper"> This practice has played a role in a number of recent breaking news events;</span> including the riots in Ferguson, MO.
+				</div>
+				<div id="para4" class="para">
+				<span class="indent"></span>Facebook is an important source of website referrals for many news outlets. But the users who go to news via Facebook spend far less time and read fewer pages than those who go to news sources directly. The same is true of users who receive news by search. <img src="FriendPhones.png" id="img3" class="textImg">Our analysis found visitors who go to a news media website directly spend roughly three times as long as those who reached there through search or through Facebook. The visitors who go to news website directly view roughly five times as many pages per month. This higher level of engagement from direct visitors is true whether a site's traffic is driven by search or social sharing. And it has big implications for news organizations who are experimenting with digital subscriptions while attempting to build a loyal audience.
+				</div>
+				<div id="para5" class="para">
+				<span class="indent"></span>Our study of news consumption on Facebook found Facebook users are experiencing a relatively diverse group of news stories on Facebook.<span class="Helper"> Roughly half of Facebook users regularly see six different topic areas. The most common news people see is entertainment news. This is unlike Twitter, which is primarily for distributing information as news breaks out.</span> <img src="Keyboard.png" id="img4" class="textImg">Facebook is not yet a place where many turn to if they want to learn about breaking news. Just 28% of Facebook news consumers ever use the Facebook site to keep up with a news event as it unfolds. Less than half of those users would turn to Facebook first to follow breaking news.
+				</div>
+				<div id="para6" class="para">
+				<span class="indent"></span>Finally, our recent survey revealed that social media does not always facilitate conversation around important issues of the day. In fact, we found that people were less willing to discuss their opinion on for example the Snowden-NSA story on social media than they were in person. In addition, Facebook and Twitter users were less likely to want to share their opinions in many face-to-face settings. This is especially true if they felt their social audience disagreed with them.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				How does this information support the main idea?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Incorrect1">
+					A. Pew Research is used to put news into social media, which shapes how stories are getting to the public.
+				</div>
+				<div class='mybutton' id="b2" value="Correct">
+					B. Social media users actively share news with each other, which shapes how stories are being distributed. 
+				</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect2">
+					C. Posting photos on social sites shapes the source information of the news.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

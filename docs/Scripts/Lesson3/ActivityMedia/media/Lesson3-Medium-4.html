@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L3Bkgd1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			#buttonBox
+			{
+				
+				position:absolute;
+				bottom: 0px;
+				height: auto;
+				width: auto;
+				
+			}
+			.mybutton
+			{
+				width: 800px;
+				font-size: 28px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				color: white;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				display: block;
+				outline: none;
+				filter: alpha(Opacity = 60);
+				-moz-opacity: 0.8;
+				opacity: 0.8;
+				background: #000;
+				border-top: 3px dashed gray;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;
+			var questionBoxArray = [];
+			var selectedAnswer = "";
+			var isSelected = false;
+			var userAnswer = "";
+			var score = 0;
+			var itemsArray = ["b1"];
+			var correctAnswerArray = ["b1"];
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+
+			function GetItem(){
+				if (currentItem < numItems) 
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else {
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+
+			function ShowItem(){
+				if (currentItem == 0)
+				{
+					//
+				}
+			}
+
+			function ShowMediaAnswer(){
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							//sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					//$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function GetRequest(){
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+			   }
+			}
+
+
+			$(document).ready(function()
+			{				
+
+				GetRequest();
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+			});
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					selectedID=$(this).attr("id");
+					userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~();\"]/g,"");
+					userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+						//score++;
+						sound_clicked(); 
+					}
+					else { sound_incorrect(); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);;
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a5f096"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#a5f096;", color: "#212121", opacity: .9}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}				
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}
+				else if (data == "NextPage")
+				{
+					parent.nextPage("media/"+"Lesson3-Medium-5.html?socre="+score);
+				}
+				else if (data == "getScore")
+				{
+					parent.GetWorldEvent(score);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="buttonBox">
+			<div class="mybutton" id="b1" value="Correct">
+				Click HERE to Continue. . .
+			</div>
+		</div>
+	</body>
+</html>

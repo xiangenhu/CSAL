@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  
+  <style>
+  	body
+	{
+		background-image:url('L4Bkgd0.png');
+		background-size: cover;
+		background-repeat:no-repeat;
+		overflow: hidden;
+		width: 790px;
+		height: 472px;
+		cursor: default;
+		background-color: #0099FF;
+		margin: 0px;
+	}
+	.exampleWord
+	{
+		font-family: 'Times New Roman', Verdana;
+		font-size: 86px;
+		text-align: center;
+		background-color: white;
+		color: #212121;
+		border-radius: 12px;
+		position: fixed;
+		width: 590px;
+		top: 80px;
+		left: 80px;
+		padding: 0px 20px;
+		border: 6px dotted #424242;
+	}
+	.exampleSentence
+	{
+		font-family: Nunito, Verdana, 'Times New Roman';
+		background-color: white;
+		color: black;
+		border-radius: 12px;
+		text-align: center;
+		overflow: hidden;
+		font-size: 40px;
+		width: 730px;
+		height: 110px;
+		position: fixed;
+		padding: 20px 20px;
+		top: 250px;
+		left: 15px;
+		opacity: 0;
+	}
+	.root { color: black; }
+	.prefix { color: #3d78ff; }
+	.suffix { color: #ff4633; }
+	.root, .prefix, .suffix { opacity: 0; }
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media = 
+	{
+		pageIdentifier: "LoadStartPage2",
+		currentItem: -1,
+		numItems: 7,
+		
+		nextPage: "Lesson4_Level1_Diagonstic_1.html"
+	}
+	
+		$(document).ready(function()
+	{
+		parent.GetWorldEvent(Media.pageIdentifier);		//reports the identifying name for the media page to ASAT
+	});
+	
+	function GetItem(){	}	
+	
+	function ShowItem()	{}
+	
+	function GetMediaEvent(data)
+	{
+		if (data == "Animation1") 
+		{
+			$(".root").animate({opacity: 1},1000);
+		}
+		else if (data == "Animation2")
+		{
+			$(".prefix").animate({opacity: 1},1000);
+		}
+		else if (data == "Animation3")
+		{
+			$(".suffix").animate({opacity: 1},1000);
+		}
+		else if (data == "Animation4")
+		{
+			$(".exampleSentence").animate({opacity: 1},1000);
+		}
+	}	
+	
+	function Lock()	{}
+	
+	function Unlock() {}
+  </script>
+</head>
+<body>
+	<div class="exampleWord">
+		<span class="prefix">RE</span><span class="root">TEST</span><span class="suffix">ING</span>
+	</div>
+	<div class="exampleSentence">The class did not do well on the first test so they are <u>re</u><b>test</b><u>ing</u> today.</div>
+</body>
+
+</html>

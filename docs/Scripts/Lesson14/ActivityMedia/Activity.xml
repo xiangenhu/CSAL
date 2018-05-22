@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="PumpBlankRemind">
+        <Item text="_user_, I bet you know this." speech="" play="_user_,B1" />
+        <Item text="_user_, try this, please. " speech="" play="_user_,B2" />
+        <Item text="_user_, I bet you can get this. " speech="" play="_user_,B3" />
+        <Item text="_user_, see if you can get this. " speech="" play="_user_,B4" />
+        <Item text="_user_, see if you know this. " speech="" play="_user_,B5" />
+        <Item text="_user_, I bet you know the answer to this. " speech="" play="_user_,B6" />
+        <Item text="_user_, I think you can get this." speech="" play="_user_,B7" />
+        <Item text="_user_, I am sure you can get this. " speech="" play="_user_,B8" />
+      </SpeechCan>
+      <SpeechCan name="Incorrect">
+        <Item text="_user_ and Cristina, actually, I don't think that's right." speech="" play="_user_,B9" />
+        <Item text="_user_ and Cristina, I would have to disagree." speech="" play="_user_,B10" />
+        <Item text="_user_ and Cristina, I don't think this answer is right." speech="" play="_user_,B11" />
+        <Item text="_user_ and Cristina, I don't think that is correct." speech="" play="_user_,B12" />
+        <Item text="_user_ and Cristina, I was thinking that it might be something else." speech="" play="_user_,B13" />
+        <Item text="Cristina, the answer that was chosen doesn't seem right to me." speech="" play="B14" />
+        <Item text="_user_ and Cristina, I don't think that's quite right, but I could be wrong." speech="" play="_user_,B15" />
+        <Item text="_user_ and Cristina, actually, I would disagree." speech="" play="_user_,B16" />
+        <Item text="_user_ and Cristina, maybe the correct answer is something different." speech="" play="_user_,B17" />
+      </SpeechCan>
+      <SpeechCan name="SAAudioPump">
+        <Item text="Cristina, I haven't finished reading. I need one or two minutes. I'll let you know when I am done." speech="" play="B18" />
+        <Item text="Cristina, I haven't finished. I need more time. I will click to continue after I finish." speech="" play="B19" />
+        <Item text="Cristina, I need one more minute." speech="" play="B20" />
+      </SpeechCan>
+      <SpeechCan name="Correct">
+        <Item text="Cristina, I agree with that answer." speech="" play="B21" />
+        <Item text="Cristina, I think that is the correct answer too." speech="" play="B22" />
+        <Item text="Cristina, this is what I think too." speech="" play="B23" />
+        <Item text="Cristina, I agree with that answer." speech="" play="B24" />
+        <Item text="Cristina, that is what I would choose. We agree. " speech="" play="B25" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="RedoInstruction">
+        <Item text="_user_ and Jordan, let's do it again." speech="" play="_user_,A1" />
+      </SpeechCan>
+      <SpeechCan name="AskJordan">
+        <Item text="Jordan, which answer do you think is correct?" speech="" play="A2" />
+        <Item text="Jordan, what is your answer?" speech="" play="A3" />
+        <Item text="Jordan, your answer, please." speech="" play="A4" />
+        <Item text="Jordan, what about you? What do you think?" speech="" play="A5" />
+        <Item text="Jordan, do you have an answer?" speech="" play="A6" />
+        <Item text="Jordan, could you please tell us your answer?" speech="" play="A7" />
+        <Item text="Jordan, what is your answer?" speech="" play="A8" />
+        <Item text="Jordan, your answer, please." speech="" play="A9" />
+        <Item text="Jordan, it is your turn. What is your answer?" speech="" play="A10" />
+        <Item text="Jordan, what about you? What do you think?" speech="" play="A11" />
+        <Item text="Jordan, do you have an answer?" speech="" play="A12" />
+        <Item text="Jordan, could you please tell us your answer?" speech="" play="A13" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToBothUserSecond">
+        <Item text="_user_ and Jordan, nice work! You are both right!" speech="" play="_user_,A14" />
+        <Item text="_user_ and Jordan, awesome! Both of you are correct!" speech="" play="_user_,A15" />
+        <Item text="_user_ and Jordan, very good! You both got it!" speech="" play="_user_,A16" />
+        <Item text="_user_ and Jordan! Nice job! You are both right!" speech="" play="_user_,A17" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToBothUserFirst">
+        <Item text="_user_ and Jordan, you both got that one correct! Good job!" speech="" play="_user_,A18" />
+        <Item text="_user_ and Jordan, you are both right! Great job!" speech="" play="_user_,A19" />
+        <Item text="_user_ and Jordan, both of you are right! That's fantastic!" speech="" play="_user_,A20" />
+        <Item text="_user_ and Jordan, both of you are correct! Nice job!" speech="" play="_user_,A21" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok. " speech="" play="A22" />
+        <Item text="Okay." speech="" play="A23" />
+        <Item text="Alright." speech="" play="A24" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToBothUserFirst">
+        <Item text="_user_ and Jordan, I am sorry, but both of you are incorrect." speech="" play="_user_,A25" />
+        <Item text="_user_ and Jordan, you are both wrong." speech="" play="_user_,A26" />
+        <Item text="_user_ and Jordan, sorry! you are both incorrect." speech="" play="_user_,A27" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToUser">
+        <Item text="_user_, Good job! You got it." speech="" play="_user_,A28" />
+        <Item text="_user_, you are right! Great job!" speech="" play="_user_,A29" />
+        <Item text="_user_ , you are right! That's fantastic!" speech="" play="_user_,A30" />
+        <Item text="_user_, you are correct! Nice job!" speech="" play="_user_,A31" />
+        <Item text="_user_, nice work! You are right!" speech="" play="_user_,A32" />
+        <Item text="_user_, awesome! You are correct!" speech="" play="_user_,A33" />
+        <Item text="_user_, very good! You got it!" speech="" play="_user_,A34" />
+      </SpeechCan>
+      <SpeechCan name="PumpBlank">
+        <Item text="_user_, you can do it! Please at least have a try! Let me repeat my question again." speech="" play="_user_,A35" />
+        <Item text="_user_, You can do it. Have a try. I will repeat my question again." speech="" play="_user_,A36" />
+        <Item text="_user_, please give it a try. I believe you have an answer. I'll repeat my question again." speech="" play="_user_,A37" />
+        <Item text="_user_, please try it. I think you know this one. I'll repeat the question." speech="" play="_user_,A38" />
+        <Item text="_user_, I bet you know this one! Give it a try. I'll say the question again." speech="" play="_user_,A39" />
+        <Item text="_user_, I bet you can come up with an answer for this. Give it a try. I'll repeat the question." speech="" play="_user_,A40" />
+        <Item text="_user_, I'll repeat the question. I bet you know the answer for it! Give it a try." speech="" play="_user_,A41" />
+        <Item text="_user_, you can do it! Give it a try. I'll say the question again." speech="" play="_user_,A42" />
+        <Item text="_user_, give it a go! I'll repeat the question and I bet you'll know the answer." speech="" play="_user_,A43" />
+        <Item text="_user_, I think you know this one. Give it a go. I'll repeat the question, first." speech="" play="_user_,A44" />
+      </SpeechCan>
+      <SpeechCan name="RepeatQuestion">
+        <Item text="Let me repeat my question again." speech="" play="A45" />
+        <Item text="I'll say the question again." speech="" play="A46" />
+        <Item text="Now I'll repeat my question again." speech="" play="A47" />
+        <Item text="I'll repeat the question." speech="" play="A48" />
+        <Item text="I'll repeat the question." speech="" play="A49" />
+      </SpeechCan>
+      <SpeechCan name="AskJordanCheck">
+        <Item text="Jordan, do you think that is right?" speech="" play="A50" />
+        <Item text="Jordan, do you think that is correct?" speech="" play="A51" />
+        <Item text="Jordan, what do you think the answer is?" speech="" play="A52" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToAgent">
+        <Item text="Jordan, you are absolutely correct, good job." speech="" play="A53" />
+        <Item text="Jordan, you got it right, excellent!" speech="" play="A54" />
+        <Item text="Jordan, you are right, that's great!" speech="" play="A55" />
+        <Item text="Jordan, that is correct, well done!" speech="" play="A56" />
+        <Item text="Jordan, that's right, great job!" speech="" play="A57" />
+        <Item text="Jordan, right. That is correct!" speech="" play="A58" />
+        <Item text="Jordan, that's it! Nice job!" speech="" play="A59" />
+        <Item text="Yes, Jordan! That's right!" speech="" play="A60" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgent">
+        <Item text="_user_, Perfect! You got it! Jordan, sorry, you were incorrect." speech="" play="_user_,A61" />
+        <Item text="_user_, that's it! Nice job! Jordan, I hate to say this, but you are wrong!" speech="" play="_user_,A62" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgentUserFirst">
+        <Item text="Jordan, I'm sorry, you didn't get that one right. _user_, good job! You are correct." speech="" play="A63,_user_,A64" />
+        <Item text="Jordan, you are wrong! _user_, you are correct. Nicely done! " speech="" play="A65,_user_,A66" />
+        <Item text="Jordan, you are wrong. _user_, great! You're right! " speech="" play="A67,_user_,A68" />
+        <Item text="Jordan, you didn't get it correct this time. _user_, That's right! " speech="" play="A69,_user_,A70" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToBothUserSecond">
+        <Item text="_user_ and Jordan, you both answered this question incorrectly." speech="" play="_user_,A71" />
+        <Item text="_user_ and Jordan, unfortunately, you are both incorrect this time." speech="" play="_user_,A72" />
+        <Item text="_user_ and Jordan, unfortunately, you are both incorrect." speech="" play="_user_,A73" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToAgent">
+        <Item text="Jordan, I am sorry, but you are incorrect." speech="" play="A74" />
+        <Item text="no Jordan, you are wrong." speech="" play="A75" />
+        <Item text="Jordan, sorry! you are incorrect." speech="" play="A76" />
+        <Item text="Jordan, you answered this question incorrectly." speech="" play="A77" />
+        <Item text="Jordan, Unfortunately,  you are incorrect this time." speech="" play="A78" />
+        <Item text="Jordan, Sorry, unfortunately, you are incorrect." speech="" play="A79" />
+        <Item text="Jordan, this time you are incorrect." speech="" play="A80" />
+      </SpeechCan>
+      <SpeechCan name="SilenceFeedback">
+        <Item text="Jordan, ok,  let's see what answer you chose." speech="" play="A81" />
+        <Item text="Jordan, Alright, let's see what you chose." speech="" play="A82" />
+        <Item text="Jordan, do you agree with that answer? " speech="" play="A83" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgentUserSecond">
+        <Item text="_user_, nice job! That is correct! Jordan, you need more practice, you didn't get it right." speech="" play="_user_,A84" />
+        <Item text="_user_, wonderful! That is absolutely correct! Jordan, your answer is incorrect!" speech="" play="_user_,A85" />
+        <Item text="_user_, great job! You're doing really well! Jordan, you are wrong." speech="" play="_user_,A86" />
+      </SpeechCan>
+      <SpeechCan name="TAAudioPump">
+        <Item text="_user_, have you finished reading the text? Don't forget to click to continue to the next section." speech="" play="_user_,A87" />
+        <Item text="_user_, what about you? If you've finished, click to continue to answer the question. " speech="" play="_user_,A88" />
+        <Item text="_user_, what about you? If you've finished, click to continue to move to the next section." speech="" play="_user_,A89" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition7" usedIn="TP7">
+      <Item id="1" agent="Jordan" text="Rose trusted Agnes and talked to her. She even let Agnes know she was trying to catch Joseph when he was stealing." speech="" play="B26" />
+      <Item id="2" agent="Cristina" text="That makes it seem more certain that Agnes stole Rose's wallet." speech="" play="A90" />
+      <Item id="3" agent="Jordan" text="I am sure it is Agnes who stole her wallet. She was the only person who sat closely to Rose. Like Rose said, she shouldn't have trusted strangers and talked to Agnes." speech="" play="B27" />
+      <Item id="4" agent="Cristina" text="_user_ and Jordan, let's look at this next part of the story." speech="" play="_user_,A91" />
+    </RigidPack>
+    <RigidPack name="Transition9" usedIn="TP9">
+      <Item id="1" agent="Cristina" text="Rose was distracted by Agnes's appearance and words. So Rose did not realize Agnes stole her wallet and left." speech="" play="A92" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, welcome back! " speech="" media="media\IntroTitle.html" play="_user_,A93" />
+      <Item id="2" agent="Jordan" text="_user_.  Cristina. Hello again . What are we going to do today?" speech="" play="_user_,B28" />
+      <Item id="3" agent="Cristina" text="We are going to practice connecting the character descriptions and events to the plot. This is one way we can elaborate on the story - or understand information that the writer does not tell us directly. " speech="" media="media\L14ActivityOpening1B.html" play="A94" />
+      <Item id="4" agent="Jordan" text="Are there some questions we can ask to help us figure it out?" speech="" play="B29" />
+      <Item id="5" agent="Cristina" text="Yes. One is, does this description or event connect to the plot? Another is, how does this event or description connect to the plot?" speech="" media="media\L14ActivityOpening1C.html" play="A95" />
+      <Item id="6" agent="Jordan" text="I think we can do this!" speech="" play="B30" />
+      <Item id="7" agent="Cristina" text="Let's start by reading this story, Rose the Cop. Push the Click to Continue button at the bottom of the passage when you have finished reading. If you like, you can click the green Read Text button at the bottom of the screen and read along with the recording. " speech="" media="media\L14ActivityOpening1D.html" play="A96" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, let's briefly wrap up what we learned from this activity." speech="" play="_user_,A97" />
+      <Item id="2" agent="Jordan" text="Cristina, I think in the narrative stories, character descriptions and events are connected. The descriptions help you think about how the characters are likely to act in the plot of the story." speech="" media="media\L14ActivityClosing1.html" play="B31" />
+      <Item id="3" agent="Cristina" text="Jordan, yes. But sometimes, the characters don't act as you expect that they will. This can lead to a major event, like what happened with Rose." speech="" media="media\L14ActivityClosing2.html" play="A98" />
+      <Item id="4" agent="Jordan" text="Yeah! Her mistake makes the story interesting. For example, Rose doesn't like to talk to strangers, but she talked to Agnes." speech="" play="B32" />
+      <Item id="5" agent="Cristina" text="And then Agnes stole her wallet! Do you see how the character descriptions and events help to form the plot?" speech="" play="A99" />
+      <Item id="6" agent="Jordan" text="Yes,  The descriptions connect to the events. Then, the events form the plot." speech="" media="media\L14ActivityClosing3.html" play="B33" />
+      <Item id="7" agent="Cristina" text="Jordan, perfect. You both are on your way to mastering the elaborating strategy!" speech="" play="A100" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="TP4">
+      <Item id="1" agent="Cristina" text="The first sentence is an example of an event that fits with Roses personality. She considers the risks involved before taking action." speech="" play="A101" />
+      <Item id="2" agent="Jordan" text="But when she meets Agnes, Rose does not behave as usual. You would not think she would talk to Agnes. Although, I guess in the second sentence she is just letting Agnes talk to her." speech="" play="B34" />
+      <Item id="3" agent="Cristina" text="Jordan, You're right. But Roses unusual behavior in the third sentence is what the author needed to move the plot forward. She takes a risk and tells Agnes who she is. Let's look at the following sentence to decide if it is a character description or an event." speech="" play="A102" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="TP6">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, let's see how this event connects to the descriptions of Roses character." speech="" play="_user_,A103" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="TP2">
+      <Item id="1" agent="Cristina" text="Agnes is the antagonist and Rose is the protagonist. They are the main characters who have a conflict." speech="" play="A104" />
+      <Item id="2" agent="Jordan" text="oh yeah. Who could forget the conflict between Rose and Agnes?" speech="" play="B35" />
+      <Item id="3" agent="Cristina" text="It's a good one. In the following exercise, you will read the highlighted sentence from the passage. You will decide if it is a character description or an event. Then, you will select an orange or pink icon to drag and drop onto the highlighted sentence." speech="" media="media\L14example2.html" play="A105" />
+      <Item id="4" agent="Jordan" text="So, if the sentence is a character description, I would drag the orange character description icon on the sentence?" speech="" media="media\L14example3.html" play="B36" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="TP1">
+      <Item id="1" agent="Cristina" text="Yes. Rose is the police woman trying to catch a thief." speech="" play="A106" />
+      <Item id="2" agent="Jordan" text="Cristina, If there is a protagonist, there should be an antagonist. Right?" speech="" play="B37" />
+      <Item id="3" agent="Cristina" text="Jordan that is Correct" speech="" play="A107" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Cristina" text="In this story, there are really only two main characters. There is a protagonist and an antagonist." speech="" media="media\L14ActivityOpening2A.html" play="A108" />
+      <Item id="2" agent="Jordan" text="Cristina, What do you mean by protagonist and antagonist?" speech="" play="B38" />
+      <Item id="3" agent="Cristina" text="The protagonist is the hero or character that we want to support. The antagonist is the villain or character that we root against." speech="" media="media\L14ActivityOpening2B.html" play="A109" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="TP8">
+      <Item id="1" agent="Cristina" text="Unfortunately, Rose realizes that she trusted the wrong person." speech="" play="A110" />
+      <Item id="2" agent="Jordan" text="I guess we should never judge a person by their appearance." speech="" play="B39" />
+      <Item id="3" agent="Cristina" text="Jordan, thats a good point. let's take a closer look at how this event connects to the plot." speech="" play="A111" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="TP3">
+      <Item id="1" agent="Cristina" text="Jordan, why would this description of Rose make her a good policewoman?" speech="" play="A112" />
+      <Item id="2" agent="Jordan" text="Rose is a cautious person. She can keep a secret." speech="" play="B40" />
+      <Item id="3" agent="Cristina" text="Jordan, Both of those things would make her good at her job. Let's see how that affects the rest of the story" speech="" play="A113" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="TP5">
+      <Item id="1" agent="Cristina" text="This event shows the reader that Rose is trying to do her job. She is watching Joseph, while pretending to read the newspaper." speech="" play="A114" />
+      <Item id="2" agent="Jordan" text="ok. so Roses actions match her character description." speech="" play="B41" />
+      <Item id="3" agent="Cristina" text="Jordan, That's true. Let's see how the next event that happens to Rose connects to the plot. " speech="" play="A115" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TP1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, look at the highlighted names in the passage. Who is the protagonist in this story?" speech="" media="media\L14Activity1.html" itemDif="0.1" play="_user_,A116">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="The protagonist in this story is Rose. We can get a clue from the title, Rose the Cop. We empathize with Rose after reading this story. " speech="" keys="Rose" threshold=".9" test="" play="A117" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="Rose's name is in the story a lot, so I knew she must be a main character. Since she is trying to stop the pickpocketer, she must be our hero, or the protagonist. " speech="" keys="Rose" threshold=".9" test="" play="B42" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, the protagonist is the character that the reader or audience wants to support." speech="" keys="Rose" threshold=".9" test="" play="_user_,A118" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="Maybe the title of the story could give us some clues." speech="" keys="Rose" threshold=".9" test="" play="B43" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I thought Diana would be the protagonist. " speech="" keys="Rose" threshold=".9" test="" play="B44" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="I think Rose might be the protagonist in this story." speech="" keys="Rose" threshold=".9" test="" play="B45" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, please click the highlighted name that you think is the answer." speech="" keys="Click" threshold=".9" test="" play="_user_,A119" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, who is the antagonist in this story?" speech="" media="media\L14Activity2.html" itemDif="0.1" play="_user_,A120">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="The antagonist in the story is Agnes. She creates the conflict in the story. " speech="" keys="Anges" threshold=".9" test="" play="A121" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="I see. Agnes provides conflict in the story, plus she is responsible for stealing the wallets!" speech="" keys="Anges" threshold=".9" test="" play="B46" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, the antagonist is the character who opposes the hero." speech="" keys="Anges" threshold=".9" test="" play="_user_,A122" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, the name of the main characters are frequently repeated in the story. Besides Rose, whose name is repeated frequently?" speech="" keys="Anges" threshold=".9" test="" play="_user_,B47" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I don't know. Maybe, Joseph?" speech="" keys="Joseph" threshold=".9" test="" play="B48" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="I pick Agnes. She could be the antagonist." speech="" keys="Anges" threshold=".9" test="" play="B49" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, please click the highlighted name that you think is the answer." speech="" keys="Click" threshold=".9" test="" play="_user_,A123" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, is this highlighted sentence a character description or an event?" speech="" media="media\L14Activity3.html" itemDif="0.1" play="_user_,A124">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="This sentence describes Roses character. So it is a character description." speech="" keys="Rose" threshold=".9" test="" play="A125" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="This sentence tells us Rose was not a person who talks to strangers, so I guess it is  not something that Rose is doing or something that is happening to Rose." speech="" keys="Rose" threshold=".9" test="" play="B50" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, character descriptions tell us more about a character's personality, physical appearance, motives, and behaviors. Events are the actions that occur in a story." speech="" keys="Rose" threshold=".9" test="" play="_user_,A126" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, is this sentence an action that occurs in this story or just a description of personality?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B51" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I think it is an event." speech="I think it is an event." keys="event" threshold=".9" test="" play="B52" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="There is no action occurring in this sentence, it seems more like a description of Roses personality. So I think the correct answer is character description." speech="" keys="Rose" threshold=".9" test="" play="B53" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, drag and drop the description or event icon on the highlighted sentence." speech="" keys="Click" threshold=".9" test="" play="_user_,A127" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, we have a description of Rose's character that says Rose was not one to talk to strangers. Based on this description, which of the three highlighted actions seems most unlike Rose?" speech="" media="media\L14Activity7.html" itemDif="0.1" play="_user_,A128">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="According to this character description, Rose was not a person who talked to strangers. However, in one of the events she tells Agnes that she is a police officer even though she is under cover. This event shouldn't have happened according to Roses character description. " speech="" keys="Rose" threshold=".9" test="" play="A129" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text=" Yeah, these three events show Rose letting down her guard around Agnes. This event doesn't seem to agree with her character description. " speech="" keys="Rose" threshold=".9" test="" play="B54" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, we know from the description of Rose that she is naturally cautious about talking to strangers. It seems like one of the highlighted events below should not have happened based on that information. Which one do you think it is?" speech="" keys="Rose" threshold=".9" test="" play="_user_,A130" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, Let's see. Which event doesn't agree with Rose's character description?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B55" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I would like to choose the first one. Rose paused for a minute and considered the potential risk." speech="" keys="risk" threshold=".9" test="" play="B56" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="I think I will choose the part where Rose whispers that she is a police officer." speech="" keys="Rose" threshold=".9" test="" play="B57" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, please click the correct answer." speech="" keys="Click" threshold=".9" test="" play="_user_,A131" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, is this a character description or an event?" speech="" media="media\L14ActivityA.html" itemDif="0.1" play="_user_,A132">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="This sentence describes what Rose is doing, so it is an event." speech="" keys="Rose" threshold=".9" test="" play="A133" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="Rose participates in three actions according to the this sentence, she is seated, sipping and watching. So I see why it is an event." speech="" keys="Rose" threshold=".9" test="" play="B58" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, events usually refer to something that occurs in a certain situation. Descriptions help us understand what a character or situation is like." speech="" keys="Rose" threshold=".9" test="" play="_user_,A134" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, what do you think this sentence tells us about Rose. I am not sure." speech="" keys="Rose" threshold=".9" test="" play="_user_,B59" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="The correct answer is character description." speech="" keys="des" threshold=".9" test="" play="B60" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="The correct answer is event, because this sentence describes something that is happening in the story." speech="" keys="Rose" threshold=".9" test="" play="B61" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="Drag and drop the description or event icon on the highlighted sentence." speech="" keys="Click" threshold=".9" test="" play="A135" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, think about the event above in which Rose is comfortably seated and sipping coffee. Which highlighted character description below is connected to the event above?" speech="" media="media\L14ActivityB.html" itemDif="0.1" play="_user_,A136">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="The correct answer is she was always aware of her surroundings when she walked down the street and cautious about every possible wolf that crossed her path. This description makes us think that Rose would be cautious about her surroundings and would watch Joseph. " speech="" keys="Rose" threshold=".9" test="" play="A137" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text=" Yes, Rose watched Joseph carefully and cautiously. She pretended to read her paper to hide what she was doing." speech="" keys="Rose" threshold=".9" test="" play="B62" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, one description emphasizes that Rose is always aware of her surroundings. The other description lets us know that she is skilled at knowing when people are telling the truth." speech="" keys="Rose" threshold=".9" test="" play="_user_,A138" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, which of these two descriptions connects to an event where she would watch Joseph carefully?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B63" />
+            <Answer name="JordanAnswer" agent="Jordan" type="SAAnswer" text="The first description is correct she was always aware of her surroundings when she walked down the street and cautious about every possible wolf that crossed her path. I think the word cautiously in this description matches the word carefully in the event." speech="" keys="Rose" threshold=".9" test="" play="B64" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, please click the correct orange character description below." speech="" keys="Click" threshold=".9" test="" play="_user_,A139" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, how does this event connect to the plot?" speech="" media="media\L14Activity8.html" itemDif="0.1" play="_user_,A140">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="The correct answer is that Rose trusted Agnes because of her appearance. Even though Rose pauses to consider the risk which seems in character, Rose allows Agnes to join her which seems out of character. This implies that Rose trusts Agnes." speech="" keys="Rose" threshold=".9" test="" play="A141" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="The other choices don't seem relevant to the highlighted event. When Rose considers the risk involved in talking to Agnes, it has nothing to do with how Agnes feels about Rose or Joseph taking any action." speech="" keys="Rose" threshold=".9" test="" play="B65" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, when Rose pauses to consider the risk, what does she allow to happen?" speech="" keys="Rose" threshold=".9" test="" play="_user_,A142" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, think about the reasons Why Rose did not talk to strangers?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B66" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I will choose the last one. Rose let Joseph get away with her wallet." speech="" keys="wallet" threshold=".9" test="" play="B67" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="I will choose Rose trusted Agnes because of her appearance. Because if Rose didn't trust Agnes, she wouldn't talk to her." speech="" keys="Rose" threshold=".9" test="" play="B68" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, please click the correct answer among four choices." speech="" keys="Click" threshold=".9" test="" play="_user_,A143" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, is this sentence a character description or an event?" speech="" media="media\L14ActivityC.html" itemDif="0.1" play="_user_,A144">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="Action verbs are good clues for events. This event is crucial to the plot, because Rose realizes that the person she trusted has stolen her wallet." speech="" keys="Rose" threshold=".9" test="" play="A145" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text="In the highlighted sentence, Rose looks back and doesn't see her wallet or Agnes. This is an action that occurs in the story, so it is an event." speech="" keys="Rose" threshold=".9" test="" play="B69" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, events usually refer to an action that occurs in this story. Description refers to a static description." speech="" keys="Rose" threshold=".9" test="" play="_user_,A146" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, does anything happen to Rose in this sentence?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B70" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="I think it is a character description." speech="" keys="des" threshold=".9" test="" play="B71" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="The correct answer is event. Because Rose looks back to see that her wallet is stolen and Agnes is gone!" speech="" keys="Rose" threshold=".9" test="" play="B72" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, drag and drop the description or event icon on the highlighted sentence." speech="" keys="Click" threshold=".9" test="" play="_user_,A147" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, how does this event connect to the plot?" speech="" media="media\L14ActivityD.html" itemDif="0.1" play="_user_,A148">
+          <Answers>
+            <Answer name="CCCristina" agent="Cristina" type="TACorrectAnswer" text="The correct answer is Rose was distracted and Agnes got away, because Rose looked at Agnes and decided that she must not be the pickpocket based on her appearance." speech="" keys="Rose" threshold=".9" test="" play="A149" />
+            <Answer name="ExplanationJordan" agent="Jordan" type="SAExplanation" text=" So Rose relaxed around Agnes and this allowed Agnes to steal Roses wallet and get away." speech="" keys="Rose" threshold=".9" test="" play="B73" />
+            <Answer name="HintCristina" agent="Cristina" type="TAHint" text="_user_, based on the highlighted event, what happens to Rose?" speech="" keys="Rose" threshold=".9" test="" play="_user_,A150" />
+            <Answer name="HintJordan" agent="Jordan" type="SAHint" text="_user_, how does this event help us understand what happens in the story?" speech="" keys="Rose" threshold=".9" test="" play="_user_,B74" />
+            <Answer name="JordanAnswerIncor" agent="Jordan" type="SAAnswerIncor" text="The correct one should be the second one. Rose now knows who the thief is." speech="" keys="son" threshold=".9" test="" play="B75" />
+            <Answer name="JordanAnswerCor" agent="Jordan" type="SAAnswerCor" text="I think the correct one should be the third option, Rose was distracted and Agnes got away." speech="" keys="Rose" threshold=".9" test="" play="B76" />
+            <Answer name="ClickInstruction" agent="Cristina" type="Click" text="_user_, click the correct answer please." speech="" keys="Click" threshold=".9" test="" play="_user_,A151" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Audio" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="ShowAudioButton" data="media\Activity14Audio.mp3" id="3" />
+      <Action agent="System" act="WaitForEvent" data="600" id="4" />
+    </Rule>
+    <Rule name="AudioCon" status="Audio" response="" event="Continue" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="2" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetTutoringPack" data="" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="AudioAny" status="Audio" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AudioPump" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="SAAudioPump" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="TAAudioPump" id="3" />
+      <Action agent="System" act="WaitForEvent" data="140" id="4" />
+    </Rule>
+    <Rule name="AudioPumpCon" status="AudioPump" response="" event="Continue" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="2" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetTutoringPack" data="" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="AudioPumpAny" status="AudioPump" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="PlayAudio" data="media\Activity14Audio.mp3" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="3" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="4" />
+      <Action agent="System" act="GetTutoringPack" data="" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="NoMoreTP" status="GetTutoringPack" response="" event="" hasItem="false" priority="1" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="HasTP" status="GetTutoringPack" response="" event="" hasItem="true" priority="1" frequency="" description="">
+      <Action agent="System" act="GetMainQuestion" data="1" id="1" />
+      <Action agent="System" act="SetStatus" data="GetQ1" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="AskQ1UserFirst" status="GetQ1" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ1" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="1" id="2" />
+      <Action agent="System" act="GetMediaItem" data="" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Click" id="5" />
+      <Action agent="System" act="WaitForEvent" data="60" id="6" />
+    </Rule>
+    <Rule name="Q1CorJordanCorUserFirst" status="AskQ1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="Correct" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveToBothUserFirst" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="Summary" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="Q1CorJordanInorUserFirst" status="AskQ1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="Incorrect" id="2" />
+      <Action agent="Jordan" act="Answer" data="SAAnswerIncor" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveUserNegativeAgentUserFirst" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="Summary" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Q1IncorJordanCor" status="AskQ1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="Incorrect" id="2" />
+      <Action agent="Jordan" act="Answer" data="Correct" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="Summary" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Q1IncorJordanIncorUserFirst" status="AskQ1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="Incorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeToBothUserFirst" id="3" />
+      <Action agent="Cristina" act="Answer" data="TAHint" id="4" />
+      <Action agent="System" act="GetMediaItem" data="" id="5" />
+      <Action agent="Jordan" act="ShowMediaItem" data="" id="6" />
+      <Action agent="System" act="WaitForEvent" data="60" id="7" />
+    </Rule>
+    <Rule name="Q1Any" status="AskQ1" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="PumpBlank" id="1" />
+      <Action agent="System" act="SetStatus" data="RepeatQ" id="2" />
+      <Action agent="System" act="RepeatMainQuestion" data="" id="3" />
+      <Action agent="System" act="GetMediaItem" data="" id="4" />
+      <Action agent="System" act="ShowMediaItem" data="" id="5" />
+      <Action agent="System" act="WaitForEvent" data="60" id="6" />
+    </Rule>
+    <Rule name="Q1RepeatCorrect" status="RepeatQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="PositiveToUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="Summary" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Q1RepeatIncorrect" status="RepeatQ" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="Summary" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Q1RepeatAnyJordanIncor" status="RepeatQ" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="SilenceFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="Jordan" act="Answer" data="SAAnswerIncor" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="Summary" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Q1RepeatAnyJordanCor" status="RepeatQ" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="SilenceFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="Jordan" act="Answer" data="SAAnswerCor" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="Summary" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Summary" status="Summary" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

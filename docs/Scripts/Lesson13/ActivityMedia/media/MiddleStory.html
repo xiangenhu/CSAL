@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 11 Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				//background-color: green;
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+			}
+			#instructBox
+			{
+				background-color: #e8d7ee;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 600px;
+				font-size: 26px;
+				text-align: center;
+				padding: 5px;
+				border: 3px dashed #b99cc4;
+				margin: 20px auto 4px auto;
+			}
+			#questionBox
+			{
+				width: 760px;
+				height: 160px;
+				background-image: url('ClearBkgd2.png');
+				margin: 25px auto 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 36px;
+				padding: 5px;
+				color: #212121;
+				margin: auto;
+			}
+			#buttonBox
+			{
+				margin: 5px auto;
+				width: 780px;
+			}
+			.mybutton
+			{
+				font-size: 22px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 680px;
+				height: 48px;
+				
+				margin: 6px auto;
+				
+				color: #212121;
+				background-color: #b99cc4;
+				text-decoration: none;
+				border: none;//3px solid gray;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				
+				-webkit-border-radius: 12px;
+				-moz-border-radius: 12px;
+				border-radius: 12px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+				background-color: #e8d7ee;
+				color: black;
+				border: 3px solid #b99cc4;
+			}
+		</style>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+		
+		var HightlightColor="ffeb43";
+		var UserAnswerColor="#ff5a8d";
+		var CorrectAnswerColor="#7FFFD4";
+		var questionNum=0;
+		var UserAnswer="";
+		var CorrectAnswer="A";
+		var strId="";
+		var returnTag="";
+		
+		function Start()
+		{	
+		
+		$(".mybutton").attr("disabled", true);
+		
+		parent.GetWorldEvent("MCLoaded");
+		}
+
+		function GetItem()
+		{
+			questionNum++;
+			
+			 if(questionNum<2)
+			 {
+				
+				parent.GetWorldEvent("Continue");
+				//scrollMove("para1")
+			 
+			 }
+			else
+			{
+				parent.GetWorldEvent("Stop");
+			}
+			
+		}
+		function ShowItem()
+		{
+		Lock();
+		
+		}	
+		
+
+		function Lock()
+		{
+		$(".mybutton").attr("disabled", true);
+										
+		}
+		function Unlock()
+		{
+		$(".mybutton").attr("disabled", false);
+		//$(".mybutton").css({"background-color": "white"});
+	
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				//return UserAnswer;
+				return returnTag;
+			
+			}
+
+		}
+		
+		function ShowMediaAnswer()
+		{
+			
+			if (CorrectAnswer=="A")
+			{
+			
+			$("#A").css({"background-color": CorrectAnswerColor});
+			
+			}
+			else if (CorrectAnswer=="B")
+			{
+			$("#B").css({"background-color": CorrectAnswerColor});
+			
+			}
+			else if (CorrectAnswer=="C")
+			{
+			$("#C").css({"background-color": CorrectAnswerColor});
+			
+			}
+			
+		}
+		
+		 $(document).ready(function()//function scrollIt
+			{
+				 $(".mybutton").click(function() {  
+			
+						UserAnswer=$(this).attr("id"); 
+						returnTag=$(this).attr("returnTag"); 
+						var isCorrect=$(this).attr("isCorrect");
+						//alert(isCorrect)
+						$(this).css({"background-color":UserAnswerColor});
+						$('.mybutton').unbind("mouseenter mouseleave");
+						$(".mybutton").attr("disabled", true);
+						
+						parent.GetWorldEvent(isCorrect);
+						
+			 
+					}); 
+			});
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="instructBox">
+			Please read the question and select an answer from below.
+		</div>
+		
+		<div id="questionBox">
+			<div id="questionText">
+				They both had strong opinions about how to handle this.  They began to argue, and they realized that they were never going to agree.  It became almost impossible for them to work as a team.  At the height of their argument, they heard gunfire approaching.  They weren’t sure who was shooting or why, but they did not want to find out.  
+			</div>
+		</div><br>
+	
+	</body>
+</html>

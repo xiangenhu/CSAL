@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  
+  <style>
+	
+	body
+	{
+		background-image:url('L3Bkgd1.png');
+		background-size: cover;
+		background-repeat:no-repeat;
+		overflow: hidden;
+		width: 800px;
+		height: 482px;
+		cursor: default;
+		margin: 0;
+	}
+	.button
+	{
+		background-color: #424242;
+		font-size: 42px;
+		font-family: Raleway, Verdana, 'Times New Roman';
+		font-weight: normal;
+		color: white;
+		width: 600px;
+		height: 300px;
+		line-height: 80px;
+		margin: 0px;
+		text-decoration: none;
+		border: none;
+		position: relative;
+		text-align: center;
+		padding: 8px;
+		display: inline-block;
+		outline: none;
+		border-radius: 20px;
+		box-shadow: 2px 2px 11px #888888;
+		vertical-align: top;
+	}
+	.butText
+	{
+		margin-top: 20px;
+	}
+	#retryButton
+	{
+		top: 70px;
+		left: 55px;
+	}
+	#continueButton
+	{
+		top: 70px;
+		left: 105px;
+	}
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media =
+	{
+		pageIdentifier: "TARepeatQuestionLoaded",
+		
+		currentItem: -1,
+		numItems: 0,
+		
+		nextPageStay: "Lesson3TARepeat.html",	//location of the next page in the current series of pages, moves to the series of repeated pages
+		nextPageJump: "Lesson3TB_Instruction.html",	//location of the starting page for the new series that is to be "jumped" to, moves to part 2 without a check because this will be the final page
+		
+		choice: null
+	}
+	
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	
+	$(document).ready(function()
+	{
+		Lock();
+		
+		parent.GetWorldEvent(Media.pageIdentifier);
+	}
+	);
+	
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	function ButtonClick()
+	{
+		Media.choice = $(this).attr("value");
+		parent.GetWorldEvent(Media.choice);
+		
+		$(this).animate({top: "73px"},200).animate({top:"70px"},100);
+		sound_clicked();
+		
+		Lock();
+	}
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	*/
+	
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop");
+		}
+	}
+	function ShowItem()
+	{
+		if(Media.currentItem == 0)
+		{
+			$(".button").show("fade", 1000);
+		}
+		Lock();
+	}
+	
+	function ShowMediaAnswer()
+	{
+		return;	//this function currently has no function on this page but is called as part of the ASAT loop for this lesson so needs to be defined
+	}
+	
+	function GetMediaEvent(data)
+	{
+		if(data == "NextPage")
+		{
+			if(Media.choice == "retry")
+			{
+				parent.nextPage("media/"+ Media.nextPageStay);	
+			}
+			else if(Media.choice == "next")
+			{
+				parent.nextPage("media/"+ Media.nextPageJump);
+			}
+		}
+	}
+	
+	/*
+	Enables functionality of any elements that were disabled by the Lock function
+	*/
+	function Unlock()
+	{		
+		$( ".button" ).mouseover(function()
+		{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
+		$( ".button" ).mouseout(function()
+		{ $(this).stop().animate({backgroundColor: "green", color: "white"}, 300); });
+		$( ".button" ).css( 'cursor', 'pointer' );
+		
+		//animates unlocking via font color & background color
+		$(".button").animate({backgroundColor: "green", color: "white", opacity: 1.0}, 1000);
+		
+		//bind the clickFunc above to any ".button"
+		$(".button").on("click", ButtonClick);
+	}
+	
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	function Lock()
+	{		
+		$(".button").off();
+		
+		//sets disabled mouse cursor
+		$( ".button" ).css( 'cursor', 'not-allowed' );
+		
+		//sets disabled colors WITH animation
+		$( ".button" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+	}
+	/*
+	Signals ASAT to play a certain sound during certain events such as clicking an answer, etc.
+	*/
+	function sound_clicked() 
+	{ 
+		return parent.PlaySound('clicked0.wav');
+		parent.GetWorldEvent("play clicked");
+	}
+	function sound_incorrect() 
+	{ 
+		return parent.PlaySound('incorrect0.wav');
+		parent.GetWorldEvent("play incorrect");
+	}
+	
+	function sound_correct()
+	{ 
+		return parent.PlaySound('success0.wav');
+		parent.GetWorldEvent("play correct");
+	}
+  </script>
+</head>
+	<body>
+		<!--div id="retryButton" class="button" value="retry">
+			<div class="butText">I would like to try that part again.</div>
+		</div-->
+		<div id="continueButton" class="button" value="next">
+			<!--div class="butText">I would like to move on to the next part.</div-->
+			<div class="butText">Nice Going! Press here to move on to the next part</div>
+		</div>
+	</body>
+</html>

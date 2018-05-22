@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Great job! That's right!" speech="" play="B1" />
+        <Item text="Brilliant! That's right!" speech="" play="B2" />
+        <Item text="Awesome job!" speech="" play="B3" />
+        <Item text="You're on a roll! That's right!" speech="" play="B4" />
+        <Item text="That's right!" speech="" play="B5" />
+        <Item text="Stupendous job!" speech="" play="B6" />
+        <Item text="Wonderful job!" speech="" play="B7" />
+        <Item text="That is correct!" speech="" play="B8" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="That is incorrect." speech="" play="B9" />
+        <Item text="That's not quite right." speech="" play="B10" />
+        <Item text="That is not quite what i'm looking for." speech="" play="B11" />
+        <Item text="Not really." speech="" play="B12" />
+        <Item text="Not exactly." speech="" play="B13" />
+      </SpeechCan>
+      <SpeechCan name="IWasRight">
+        <Item text="Yay, I got it right!" speech="" play="B14" />
+        <Item text="I was lucky to get this one right." speech="" play="B15" />
+        <Item text="Yay, I was right on this one!" speech="" play="B16" />
+      </SpeechCan>
+      <SpeechCan name="JordanAlsoNotCorrect">
+        <Item text="Why wasn't my answer right?" speech="" play="B17" />
+        <Item text="Why was my answer wrong?" speech="" play="B18" />
+        <Item text="Why didn't I get the correct answer?" speech="" play="B19" />
+      </SpeechCan>
+      <SpeechCan name="IAgree">
+        <Item text="I agree with _user_." speech="" play="B20,_user_" />
+        <Item text="I would choose the same answer _user_ chose." speech="" play="B21,_user_,B22" />
+        <Item text="I agree with _user_'s choice." speech="" play="B23,_user_,B24" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, it seems that you might need a little bit more time. Go ahead and keep reading." speech="" play="_user_,A1" />
+      </SpeechCan>
+      <SpeechCan name="BothIncorrect">
+        <Item text="Unfortunately, neither of you got it correct. " speech="" play="A2" />
+      </SpeechCan>
+      <SpeechCan name="AskJordan">
+        <Item text="Jordan, now it's your turn to answer" speech="" play="A3" />
+        <Item text="What is your answer, Jordan?" speech="" play="A4" />
+        <Item text="Jordan, it's your turn." speech="" play="A5" />
+        <Item text="Jordan, what is your answer choice?" speech="" play="A6" />
+      </SpeechCan>
+      <SpeechCan name="UserIncorrect">
+        <Item text="Sorry _user_, you did not get it right this time." speech="" play="A7,_user_,A8" />
+        <Item text="Unfortunately _user_, your answer was not correct. " speech="" play="A9,_user_,A10" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="That is incorect." speech="" play="A11" />
+        <Item text="That's not quite right." speech="" play="A12" />
+        <Item text="That is not quite what i'm looking for." speech="" play="A13" />
+        <Item text="Not really." speech="" play="A14" />
+        <Item text="Not exactly." speech="" play="A15" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Great job! That's right!" speech="" play="A16" />
+        <Item text="Brilliant! That's right!" speech="" play="A17" />
+        <Item text="Awesome job!" speech="" play="A18" />
+        <Item text="You're on a roll! That's right!" speech="" play="A19" />
+        <Item text="That's right!" speech="" play="A20" />
+        <Item text="Stupendous job!" speech="" play="A21" />
+        <Item text="Wonderful job!" speech="" play="A22" />
+        <Item text="That is correct!" speech="" play="A23" />
+      </SpeechCan>
+      <SpeechCan name="JordanAnswerSecond">
+        <Item text="Ok. Jordan, it is your turn." speech="" play="A24" />
+        <Item text="Jordan, what is your answer for this question?" speech="" play="A25" />
+      </SpeechCan>
+      <SpeechCan name="UserCorrect">
+        <Item text="_user_, you are right. Good Job! Yes." speech="" play="_user_,A26" />
+        <Item text="You are correct _user_, excellent! Yes." speech="" play="A27,_user_,A28" />
+        <Item text="_user_, you are right! Nice going! Yes." speech="" play="_user_,A29" />
+      </SpeechCan>
+      <SpeechCan name="JordanCorrect">
+        <Item text="Jordan, you are right. Good job!" speech="" play="A30" />
+        <Item text="Jordan, you got it correct this time. Great job!" speech="" play="A31" />
+      </SpeechCan>
+      <SpeechCan name="User">
+        <Item text="_user_, for your answer," speech="" play="_user_,A32" />
+      </SpeechCan>
+      <SpeechCan name="AnsweringJordan">
+        <Item text="Well Jordan," speech="" play="A33" />
+      </SpeechCan>
+      <SpeechCan name="BothCorrect">
+        <Item text="_user_ and Jordan, you both got it correct! Great job!" speech="" play="_user_,A34" />
+      </SpeechCan>
+      <SpeechCan name="UserAnswerSecond">
+        <Item text="Okay. _user_, it's your turn now. Please click on one of the answers that you think is the correct answer. " speech="" play="A35,_user_,A36" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+    <RigidPack name="M1" usedIn="M1">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A37" />
+    </RigidPack>
+    <RigidPack name="D7" usedIn="D7">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A38" />
+    </RigidPack>
+    <RigidPack name="M4" usedIn="M4">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A39" />
+    </RigidPack>
+    <RigidPack name="E1" usedIn="E1">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A40" />
+    </RigidPack>
+    <RigidPack name="M9" usedIn="M9">
+      <Item id="1" agent="Cristina" text="Let us go to the last question for this first article." speech="" play="A41" />
+    </RigidPack>
+    <RigidPack name="D4" usedIn="D4">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A42" />
+    </RigidPack>
+    <RigidPack name="E4" usedIn="E4">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A43" />
+    </RigidPack>
+    <RigidPack name="D9" usedIn="D9">
+      <Item id="1" agent="Cristina" text="Let us go to the last question." speech="" play="A44" />
+    </RigidPack>
+    <RigidPack name="E9" usedIn="E9">
+      <Item id="1" agent="Cristina" text="Let us go to the last question." speech="" play="A45" />
+    </RigidPack>
+    <RigidPack name="EOpening" usedIn="">
+      <Item id="1" agent="Cristina" text="Good job _user_! You and Jordan got through the first article. " speech="" play="A46,_user_,A47" />
+      <Item id="2" agent="Jordan" text="The topic was interesting." speech="" play="B25" />
+      <Item id="3" agent="Cristina" text="Now that we are finished with the aritcle on drought in California, let us read another article for additional practice." speech="" play="A48" />
+      <Item id="4" agent="Jordan" text="Yes I definitely will. _user_, this has been informative. I hope you would also read another article with me." speech="" play="B26,_user_,B27" />
+      <Item id="5" agent="Cristina" text="The title of the second article will be Cancer Nearly as Old as Life Itself, Likely Here to Stay. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scrollbar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." speech="The title of the second article will be Cancer Nearly as Old as Life Itself, Likely Here to Stay. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scroll bar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." media="media\Lesson28(E)-Article.html" play="A49,_user_,A50,_user_,A51" />
+    </RigidPack>
+    <RigidPack name="E7" usedIn="E7">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A52" />
+    </RigidPack>
+    <RigidPack name="D1" usedIn="D1">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A53" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="Hi Jordan and _user_, today we are going to use the elaboration strategy to understand informational texts." speech="" media="media\Lesson28-IntroTitle.html" play="A54,_user_,A55" />
+      <Item id="2" agent="Jordan" text="I have heard that informational texts tend to be very challenging to read." speech="" play="B28" />
+      <Item id="3" agent="Cristina" text="That is right Jordan, which is why using elaboration through questioning is so important. Informational texts are based on facts and evidence, but sometimes it is necessary to think beyond what is written in the text.  By asking questions and making inferences, it is possible to understand more about what the writer is trying to tell us. To infer is to form ideas based off of your understanding of the text. Making inferences can be difficult at first, but it gets easier with practice. " speech="" media="media\Lesson 28-Opening1.html" play="A56" />
+      <Item id="4" agent="Jordan" text="I see, could you give me an example?" speech="I see, _user_, I hope you will join me in reading these texts, so we can learn something as well as improving our reeding." play="B29,_user_,B30" />
+      <Item id="5" agent="Cristina" text="Absolutely. Take a look at the medicine bottle below. The medicine bottle's label contains a warning to keep the bottle out of reach for any children. It instructs you to call the Poison Control Center if you have a problem like an overdose. The text doesn't specifically say that medicine will cause children harm - especially if too much is taken. However, you can infer this from the other instructions on the bottle.  " speech="" media="media\Lesson 28-Opening2.html" play="A57" />
+      <Item id="6" agent="Jordan" text="I see, _user_, I hope you will join me in reading these texts, so we can learn something as well as improving our reading." speech="I see, _user_, I hope you will join me in reading these texts, so we can learn something as well as improving our reeding." play="B31,_user_,B32" />
+      <Item id="7" agent="Cristina" text="Yes _user_, I hope you will also give these articles a shot! Here is the first article. The title of the story is Historic Drought Drains a Thirsty California." speech="" media="media\Lesson28(M)-Article.html" play="A58,_user_,A59" />
+      <Item id="8" agent="Jordan" text="That sounds like important news." speech="" play="B33" />
+      <Item id="9" agent="Cristina" text="_user_, please use the scrollbar at the right hand side to continue reading the rest of the text not shown. Then click, click to continue when you feel like you have finished, But take your time." speech="_user_, please use the scroll bar at the right hand side to continue reading the rest of the text not shown. Then click, click to continue when you feel like you have finished, But take your time." play="_user_,A60" />
+    </RigidPack>
+    <RigidPack name="E6" usedIn="E6">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A61" />
+    </RigidPack>
+    <RigidPack name="M2" usedIn="M2">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A62" />
+    </RigidPack>
+    <RigidPack name="D2" usedIn="D2">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A63" />
+    </RigidPack>
+    <RigidPack name="E2" usedIn="E2">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A64" />
+    </RigidPack>
+    <RigidPack name="D5" usedIn="D5">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A65" />
+    </RigidPack>
+    <RigidPack name="E5" usedIn="E5">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A66" />
+    </RigidPack>
+    <RigidPack name="DOpening" usedIn="">
+      <Item id="1" agent="Cristina" text="Good job _user_! You and Jordan got through the first article. " speech="" play="A67,_user_,A68" />
+      <Item id="2" agent="Jordan" text="The topic was interesting." speech="" play="B34" />
+      <Item id="3" agent="Cristina" text="Now that we are finished with the article on drought in California, let us read another article for additional practice." speech="" play="A69" />
+      <Item id="4" agent="Jordan" text="Yes I definitely will. _user_, this has been informative. I hope you would also read another article with me." speech="" play="B35,_user_,B36" />
+      <Item id="5" agent="Cristina" text="The title of the second article will be How social media is reshaping news. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scrollbar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." speech="The title of the second article will be How social media is reshaping news. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scroll bar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." media="media\Lesson28(H)-Article.html" play="A70,_user_,A71,_user_,A72" />
+    </RigidPack>
+    <RigidPack name="M6" usedIn="M6">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A73" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, you both worked hard in getting through these two texts, they are not so easy!" speech="" media="media\Lesson28-Close.html" play="_user_,A74" />
+      <Item id="2" agent="Jordan" text="Yes but now I feel like I learned a lot about what is going on in the world, as well as how to read informational texts." speech="" play="B37" />
+      <Item id="3" agent="Cristina" text="Good. That is the purpose of this lesson. I hope that you and _user_ will practice using the elaborating through questioning reading strategy for future articles that you might encounter." speech="" play="A75,_user_,A76" />
+      <Item id="4" agent="Jordan" text="I definitely will, thanks again Cristina, and you too _user_. I will see you next time. " speech="" play="B38,_user_,B39" />
+      <Item id="5" agent="Cristina" text="Goodbye." speech="" play="A77" />
+    </RigidPack>
+    <RigidPack name="M3" usedIn="M3">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A78" />
+    </RigidPack>
+    <RigidPack name="M8" usedIn="M8">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A79" />
+    </RigidPack>
+    <RigidPack name="D3" usedIn="D3">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A80" />
+    </RigidPack>
+    <RigidPack name="E3" usedIn="E3">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A81" />
+    </RigidPack>
+    <RigidPack name="D8" usedIn="D8">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A82" />
+    </RigidPack>
+    <RigidPack name="E8" usedIn="E8">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A83" />
+    </RigidPack>
+    <RigidPack name="D6" usedIn="D6">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A84" />
+    </RigidPack>
+    <RigidPack name="M7" usedIn="M7">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A85" />
+    </RigidPack>
+    <RigidPack name="M5" usedIn="M5">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A86" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="D1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Okay, let us start from the beginning of the story again. Jordan and _user_, based on the title and image, what is the topic? Jordan, why don't you start this round?" speech="" media="" itemDif="0.1" play="A87,_user_,A88">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A89" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A90" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="asdf" threshold="" test="" play="A91" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the topic is Social media sites" speech="" keys="sdf" threshold="" test="" play="B40" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the topic is Facebook." speech="I think the topic is Face book." keys="asdf" threshold="" test="" play="B41" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the topic is U.S. Adults" speech="" keys="asdf" threshold="" test="" play="B42" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered Face book. Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A92" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered U.S. adults. U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="sdf" threshold="" test="" play="A93" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, based on the text, what does powerhouse mean in this context? Please click on one of the buttons for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A94">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the last three sentence of this portion of the text shows, more U.S. adults use the social media site face book than any other sites." speech="" keys="asdf" threshold="" test="" play="A95" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text does not suggest that Face book somehow owns other social media sites. As the last three sentence of this portion of the text shows, more U.S. adults use the social media site face book than any other sites. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A96" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The text does not mention that Face book is a news distributing site. As the last three sentence of this portion of the text shows, more U.S. adults use the social media site face book than any other sites. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A97" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is A." speech="" keys="sdf" threshold="" test="" play="B43" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is B." speech="" keys="asdf" threshold="" test="" play="B44" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is C." speech="" keys="asdf" threshold="" test="" play="B45" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. The text does not suggest that Face book somehow owns other social media sites. Correct answer is A." speech="Jordan, you chose Bee. The text does not suggest that Face book somehow owns other social media sites. Correct answer is A." keys="asdf" threshold="" test="" play="A98" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. The text does not mention that Face book is a news distributing site. Correct answer is A." speech="Jordan, you chose Sea. The text does not mention that Face book is a news distributing site. Correct answer is A." keys="asdf" threshold="" test="" play="A99" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, from what you have read so far, what What does the writer want you to know about text? Jordan, it's your turn this time." speech="" media="" itemDif="0.1" play="A100,_user_,A101">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From both the title of the article and what we have read so far, the main idea is that social sites are shaping how news are distributed." speech="" keys="asdf" threshold="" test="" play="A102" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The main idea has more to do with how social media is shaping news distribution rather than how Americans like using the sites for news. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A103" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The article does not suggest that somehow social media sites are damaging news source. The main idea has more to do with how social media is shaping news distribution, so correct answer is C." speech="" keys="asdf" threshold="" test="" play="A104" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the main idea is stated in choice C." speech="" keys="sdf" threshold="" test="" play="B46" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the main idea is stated in choice A." speech="" keys="asdf" threshold="" test="" play="B47" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the main idea is stated in choice B." speech="" keys="asdf" threshold="" test="" play="B48" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose A. The main idea has more to do with how social media is shaping news distribution rather than how Americans like using the sites for news. Correct answer is C." speech="Jordan, you chose ei. The main idea has more to do with how social media is shaping news distribution rather than how Americans like using the sites for news. Correct answer is C." keys="asdf" threshold="" test="" play="A105" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you chose B. The article does not suggest that somehow social media sites are damaging news source. Correct answer is C." speech="Jordan, you chose Bee. The article does not suggest that somehow social media sites are damaging news source. Correct answer is C." keys="adsf" threshold="" test="" play="A106" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you tell me how does the underlined sentence help prove what the writer wants you to know about the text? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A107,_user_,A108">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The text showed statistics on how many Americans use social media sites." speech="" keys="asdf" threshold="" test="" play="A109" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text showed statistics on how many Americans use social media sites. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A110" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The text showed statistics on how many Americans use social media sites. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A111" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is A." speech="" keys="sdf" threshold="" test="" play="B49" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is B." speech="" keys="asdf" threshold="" test="" play="B50" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is C." speech="" keys="asdf" threshold="" test="" play="B51" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. The information is regarding how Americans use social media sites, not particularly about Americans themselves. Correct answer is A." speech="Jordan, you chose Bee. The information is regarding how Americans use social media sites, not particularly about Americans themselves. Correct answer is A." keys="asdf" threshold="" test="" play="A112" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. The text so far does not give any information about which site is the best news-getting site. Correct answer is A." speech="Jordan, you chose sea. The text so far does not give any information about which site is the best news-getting site. Correct answer is A." keys="asdf" threshold="" test="" play="A113" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, can you tell me how does this information as shown in this portion of the text help prove what the writer wants you to know about the text? Jordan, it's your turn." speech="" media="" itemDif="0.1" play="A114,_user_,A115">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text mentions, social media users are actively sharing news with each other, this in turn shapes which news are being distributed" speech="" keys="asdf" threshold="" test="" play="A116" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Pew research is for research only, not for inputing news. As the text mentions, social media users are actively sharing news with each other, this in turn shapes which news are being distributed" speech="" keys="asdf" threshold="" test="" play="A117" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As the text mentions, social media users are actively sharing news with each other, this in turn shapes which news are being distributed. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A118" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for choice B." speech="" keys="sdf" threshold="" test="" play="B52" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B53" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B54" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose A. Pew research is for research only, not for inputing news. Correct answer is B." speech="Jordan, you chose ei. Pew research is for research only, not for inputing news. Correct answer is B." keys="asdf" threshold="" test="" play="A119" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you chose C. The text does not suggest that pictures uploaded by social media site users get uploaded to news sites. Correct answer is B." speech="Jordan, you chose sea. The text does not suggest that pictures uploaded by social media site users get uploaded to news sites. Correct answer is B." keys="asdf" threshold="" test="" play="A120" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, what is the writer trying to suggest about the social media site, Facebook? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A121,_user_,A122">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The first two sentences of this portion of the text suggest that people who use Face book for news do not spend enough time on reading the news as they should." speech="" keys="asdf" threshold="" test="" play="A123" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The first two sentences of this portion of the text suggest that people who use Face book for news do not spend enough time on reading the news as they should. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A124" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The first two sentences of this portion of the text suggest that people who use Face book for news do not spend enough time on reading the news as they should. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A125" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the correct answer is choice C." speech="" keys="sdf" threshold="" test="" play="B55" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the correct answer is choice A." speech="" keys="asdf" threshold="" test="" play="B56" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B57" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. The article does not suggest that Face book users spread news from their own site. Correct answer is C." speech="Jordan, you chose ei. The article does not suggest that Face book users spread news from their own site. Correct answer is C." keys="asdf" threshold="" test="" play="A126" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose B. The article does not suggest that Face book is used for trustworthiness of news. Correct answer is C." speech="Jordan, you chose Bee. The article does not suggest that Face book is used for trustworthiness of news. Correct answer is C." keys="asdf" threshold="" test="" play="A127" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, the last sentence of this portion of the texts talked about implications for news organizations, What would be one of these implication? Jordan, it's your turn." speech="" media="" itemDif="0.1" play="_user_,A128">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the article mentions, people who go to news sites directly are more engaged in reading the news. Therefore, if news organizations want people to read more of their news, it would be good to make digital news more easy to access for users." speech="" keys="asdf" threshold="" test="" play="A129" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As the article mentions, people who go to news sites directly are more engaged in reading the news. Therefore, if news organizations want people to read more of their news, it would be good to make digital news more easy to access for users. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A130" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As the article mentions, people who go to news sites directly are more engaged in reading the news. Therefore, if news organizations want people to read more of their news, it would be good to make digital news more easy to access for users. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A131" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the correct answer is choice B." speech="" keys="sdf" threshold="" test="" play="B58" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the correct answer is choice A." speech="" keys="asdf" threshold="" test="" play="B59" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the correct answer is choice C." speech="" keys="asdf" threshold="" test="" play="B60" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose A. News come from news organizations, not face book? Correct answer is B." speech="Jordan, you chose ei. News come from news organizations, not face book? Correct answer is B." keys="adsf" threshold="" test="" play="A132" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you chose C. The article mentioned that building a loyal audience is what news organizations are attempting, meaning that they might not succeed. Correct answer is B." speech="Jordan, you chose sea. The article mentioned that building a loyal audience is what news organizations are attempting, meaning that they might not succeed. Correct answer is B." keys="asdf" threshold="" test="" play="A133" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, according to this portion of the text, how does Facebook compare to Twitter? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A134,_user_,A135">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the second to fourth sentence suggest, Face book has more diverse news topic, and is mostly for entertainment, whereas twitter is primarily used for breaking news events." speech="" keys="asdf" threshold="" test="" play="A136" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As the second to fourth sentence suggest, Face book has more diverse news topic, and is mostly for entertainment, whereas twitter is primarily used for breaking news events. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A137" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As the second to fourth sentence suggest, Face book has more diverse news topic, and is mostly for entertainment, whereas twitter is primarily used for breaking news events. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A138" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I choose the answer A." speech="" keys="sdf" threshold="" test="" play="B61" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I choose the answer B." speech="" keys="asdf" threshold="" test="" play="B62" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I choose the answer C." speech="" keys="asdf" threshold="" test="" play="B63" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. I'm not sure where you got your answer from. Correct answer is A." speech="Jordan, you chose Bee. I'm not sure where you got your answer from. Correct answer is A." keys="asdf" threshold="" test="" play="A139" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. I'm not sure where you got your answer from. Correct answer is A." speech="Jordan, you chose Sea. I'm not sure where you got your answer from. Correct answer is A." keys="asf" threshold="" test="" play="A140" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, according to this portion of the text, what is the underlined sentence trying to convey? Jordan, it's your turn now to go first." speech="" media="" itemDif="0.1" play="A141,_user_,A142">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The example of the Snowden NSA story given by the text shows that people don't always use social media for all news." speech="The example of the Snow den NSA story given by the text shows that people don't always use social media for all news." keys="asdf" threshold="" test="" play="A143" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The example of the Snowden NSA story given by the text shows that people don't always use social media for all news. The correct answer is B." speech="The example of the Snow den NSA story given by the text shows that people don't always use social media for all news. The correct answer is B." keys="asdf" threshold="" test="" play="A144" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The example of the Snowden NSA story given by the text shows that people don't always use social media for all news. The correct answer is B." speech="The example of the Snow den NSA story given by the text shows that people don't always use social media for all news. The correct answer is B." keys="asdf" threshold="" test="" play="A145" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the answer is B. " speech="" keys="sdf" threshold="" test="" play="B64" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B65" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the answer is C. " speech="" keys="asdf" threshold="" test="" play="B66" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose A. The text does not mention anything about using social media for social networking, since the topic of this article is about news distribution. Correct answer is B." speech="Jordan, you chose ei. The text does not mention anything about using social media for social networking, since the topic of this article is about news distribution. Correct answer is B." keys="asdf" threshold="" test="" play="A146" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you chose C. The article suggests that people were unwilling to share certain news, not how they assess them. Correct answer is B." speech="Jordan, you chose Sea. The article suggests that people were unwilling to share certain news, not how they assess them. Correct answer is B." keys="asdf" threshold="" test="" play="A147" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="So _user_ and Jordan, What might be one reason why people would not want to share opinions on social media? Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="A148,_user_,A149">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The last sentence of this article suggests that people tend to be sensitive about sharing dissenting information. Since social media makes it easy to distributing news both faster and more widespread, this might be one of the reasons why people would not want to share opinions that would result in outpouring large voices of dissent." speech="" keys="asdf" threshold="" test="" play="A150" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The last sentence of this article suggests that people tend to be sensitive about sharing dissenting information. Since social media makes it easy to distributing news both faster and more widespread, this might be one of the reasons why people would not want to share opinions that would result in outpouring large voices of dissent. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A151" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The last sentence of this article suggests that people tend to be sensitive about sharing dissenting information. Since social media makes it easy to distributing news both faster and more widespread, this might be one of the reasons why people would not want to share opinions that would result in outpouring large voices of dissent. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A152" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for C. " speech="" keys="sdf" threshold="" test="" play="B67" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B68" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for B. " speech="" keys="asdf" threshold="" test="" play="B69" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. It might be true that private information are compromised in social media, but that's certainly not mentioned in the article. Correct answer is C." speech="Jordan, you chose ei. It might be true that private information are compromised in social media, but that's certainly not mentioned in the article. Correct answer is C." keys="asdf" threshold="" test="" play="A153" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose B. It might be true that since social media can be a fast news getting resource, people might have hard time catching up, but that's not mentioned here. Correct answer is C." speech="Jordan, you chose Bee. It might be true that private information are compromised in social media, but that's certainly not mentioned in the article. Correct answer is C." keys="asdf" threshold="" test="" play="A154" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Okay, let us start from the beginning of the story again. Based on the title and image, what is the topic? Jordan, why don't you start this round?" speech="" media="" itemDif="0.1" play="A155">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From both the text signals in the title, and this introductory paragraph, the topic of this article is that cancer is very old." speech="" keys="asdf" threshold="" test="" play="A156" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The war against cancer would probably be talked about in this article, but the topic of this article, from both the text signals in the title and this introductory paragraph, is that cancer is very old." speech="" keys="asdf" threshold="" test="" play="A157" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="A single cell is only a piece of information here. From both the text signals in the title, and this introductory paragraph, the topic of this article is that cancer is very old." speech="" keys="asdf" threshold="" test="" play="A158" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the topic is cancer is very old." speech="" keys="sdf" threshold="" test="" play="B70" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the topic is war against cancer." speech="" keys="asdf" threshold="" test="" play="B71" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the topic is a single cell." speech="" keys="asdf" threshold="" test="" play="B72" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered war against cancer. The war against cancer would probably be talked about in this article, but the topic is cancer is very old." speech="" keys="asdf" threshold="" test="" play="A159" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered a single cell. A single cell is only a piece of information here. The topic is cancer is very old." speech="" keys="sdf" threshold="" test="" play="A160" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you tell me what is the purpose of the underlined phrase according to the text? _user_, it's your turn to answer first. Please click on one of the choices for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A161,_user_,A162">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The phrase according to the World Health Organization is to give support from an authority for the claims the author stated in this paragraph on cancer." speech="" keys="asdf" threshold="" test="" play="A163" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The phrase according to the World Health Organization is to give support from an authority for the claims the author stated in this paragraph on cancer. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A164" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The phrase according to the World Health Organization is to give support from an authority for the claims the author stated in this paragraph on cancer. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A165" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="The answer is choice is C." speech="" keys="sdf" threshold="" test="" play="B73" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="The answer is choice is A." speech="" keys="asdf" threshold="" test="" play="B74" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="The answer is choice is B." speech="" keys="asdf" threshold="" test="" play="B75" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you answered A. World health Organization is a specific organization, not representing the world as a whole. Correct answer is C." speech="Jordan, you answered ei. World health Organization is a specific organization, not representing the world as a whole. Correct answer is C." keys="asdf" threshold="" test="" play="A166" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you answered B. World health Organization is a specific organization, not representing the world as a whole. Correct answer is C." speech="Jordan, you answered Bee. World health Organization is a specific organization, not representing the world as a whole. Correct answer is C." keys="asdf" threshold="" test="" play="A167" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, can you tell me what is the writer telling us here about cancer? Jordan, it's your turn this time." speech="" media="" itemDif="0.1" play="A168,_user_,A169">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The author is telling us how cancer starts, which is when genes get damaged which results in cells being unable to stop dividing." speech="" keys="asdf" threshold="" test="" play="A170" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text does not indicate that genes would divide themselves. The author is telling us how cancer starts, which is when genes get damaged which results in cells being unable to stop dividing. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A171" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The author is telling us how cancer starts, which is when genes get damaged which results in cells being unable to stop dividing. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A172" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the choice B is correct." speech="" keys="sdf" threshold="" test="" play="B76" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the choice A is correct." speech="" keys="asdf" threshold="" test="" play="B77" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the choice C is correct." speech="" keys="asdf" threshold="" test="" play="B78" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. The text does not indicate that genes would divide themselves. Correct answer is B." speech="Jordan, you answered ei. The text does not indicate that genes would divide themselves. Correct answer is B." keys="asdf" threshold="" test="" play="A173" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered C. You clearly read the description on cancer wrong. Correct answer is B." speech="Jordan, you answered Sea. You clearly read the description on cancer wrong. Correct answer is B." keys="sdf" threshold="" test="" play="A174" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, According to the text, what is a tumor? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A175,_user_,A176">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the first sentence of the second paragraph tells us, tumor is formed when cancer cells build up and form a mass, which in turn kills healthy cells." speech="" keys="asdf" threshold="" test="" play="A177" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As the first sentence of the second paragraph tells us, tumor is formed when cancer cells build up and form a mass, which in turn kills healthy cells. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A178" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As the first sentence of the second paragraph tells us, tumor is formed when cancer cells build up and form a mass, which in turn kills healthy cells. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A179" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is C." speech="" keys="sdf" threshold="" test="" play="B79" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is A." speech="" keys="asdf" threshold="" test="" play="B80" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is B." speech="" keys="asdf" threshold="" test="" play="B81" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. As we have read, tumor kills heatlhy cells. Correct answer is C." speech="Jordan, you chose ei. As we have read, tumor kills heatlhy cells. Correct answer is C." keys="asdf" threshold="" test="" play="A180" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose B. As we have read, tumor is formed by cancer. Correct answer is C." speech="Jordan, you chose Bee. As we have read, tumor is formed by cancer. Correct answer is C." keys="asdf" threshold="" test="" play="A181" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, how does this information connect to the topic? Jordan, it's your turn." speech="" media="" itemDif="0.1" play="A182,_user_,A183">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="This portion of the text explains how cancer can spread once it stars." speech="" keys="asdf" threshold="" test="" play="A184" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="This portion of the text explains how cancer can spread once it stars. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A185" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="This portion of the text explains how cancer can spread once it stars. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A186" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for B." speech="" keys="sdf" threshold="" test="" play="B82" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B83" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B84" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. That's not what the text says. Please read again. Correct answer is B." speech="Jordan, you answered ei. That's not what the text says. Please read again. Correct answer is B." keys="asdf" threshold="" test="" play="A187" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered C. The text has already told us how cancer starts, this portion expands on how it spreads. Correct answer is B." speech="Jordan, you answered Sea. The text has already told us how cancer starts, this portion expands on how it spreads. Correct answer is B." keys="sdf" threshold="" test="" play="A188" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you tell me why is the following information important? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A189,_user_,A190">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="This portion of text primarily emphasizes on how we discovered that cancer is very old. As old as life in fact. And that is from research." speech="" keys="asdf" threshold="" test="" play="A191" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Although studying hydra is no doubt important, the text does not mention that it would lead to a cure for cancer. The correct answer is A. This portion of text primarily emphasizes on how we discovered that cancer is very old. As old as life in fact. And that is from research." speech="Although studying hydra is no doubt important, the text does not mention that it would lead to a cure for cancer. The correct answer is ei. This portion of text primarily emphasizes on how we discovered that cancer is very old. As old as life in fact. And that is from research." keys="asdf" threshold="" test="" play="A192" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="This portion of text primarily emphasizes on how we discovered that cancer is very old. As old as life in fact. And that is from research. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A193" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the correct answer is choice A." speech="" keys="sdf" threshold="" test="" play="B85" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B86" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the correct answer is choice C." speech="" keys="asdf" threshold="" test="" play="B87" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. Although studying hydra is no doubt important, the text does not mention that it would lead to a cure for cancer. Correct answer is A." speech="Jordan, you chose Bee. Although studying hydra is no doubt important, the text does not mention that it would lead to a cure for cancer. Correct answer is A." keys="asdf" threshold="" test="" play="A194" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. There is no mention in the article that tumors can grow in other ways. Correct answer is A." speech="Jordan, you chose sea. There is no mention in the article that tumors can grow in other ways. Correct answer is A." keys="asdf" threshold="" test="" play="A195" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, from what we have read so far, what have we learned about the role of hydras in humans? Jordan, it's your turn." speech="" media="" itemDif="0.1" play="_user_,A196">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="We learned that hydra is one of the simplest many-celled animals, and that it can cause cancer since it grows tumors." speech="" keys="asdf" threshold="" test="" play="A197" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A198" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A199" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the correct answer is choice C." speech="" keys="sdf" threshold="" test="" play="B88" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the correct answer is choice A." speech="" keys="asdf" threshold="" test="" play="B89" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B90" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. Correct answer is C." speech="Jordan, you answered ei. Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. Correct answer is C." keys="asdf" threshold="" test="" play="A200" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered B. Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. Correct answer is C." speech="Jordan, you answered Bee. Hydra is indeed a multi-celled organism that lives in ponds and lakes, but the role of hydra in humans is that it can cause cancer by growing tumors. Correct answer is C." keys="sdf" threshold="" test="" play="A201" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, what is the author trying to convey in the underlined paragraph? _user_, it's your turn. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A202,_user_,A203">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The text shows that people have been spending a large amount of money in order to find a cure for cancer, but we are probably too late and cancer will be here to stay." speech="" keys="asdf" threshold="" test="" play="A204" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text shows that people have been spending a large amount of money in order to find a cure for cancer, but we are probably too late and cancer will be here to stay. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A205" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The text shows that people have been spending a large amount of money in order to find a cure for cancer, but we are probably too late and cancer will be here to stay. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A206" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I choose the answer C." speech="" keys="sdf" threshold="" test="" play="B91" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I choose the answer A." speech="" keys="asdf" threshold="" test="" play="B92" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I choose the answer B." speech="" keys="asdf" threshold="" test="" play="B93" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. The text shows that President Nixon declared war on cancer, he wasn't responsible for any losses. Correct answer is C." speech="Jordan, you chose ei. The text shows that President Nixon declared war on cancer, he wasn't responsible for any losses. Correct answer is C." keys="asdf" threshold="" test="" play="A207" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose B. The battle for cancer is very expensive, but the important thing is that we were too late, not because it's too expensive. Correct answer is C." speech="Jordan, you chose Bee. The battle for cancer is very expensive, but the important thing is that we were too late, not because it's too expensive. Correct answer is C." keys="asdf" threshold="" test="" play="A208" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, can you tell me what does the phrase knowing your enemy try to imply? Jordan, it's your turn now." speech="" media="" itemDif="0.1" play="A209,_user_,A210">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="Knowing your enemy usually means we should learn about what harms us, in this case cancer, so we can learn to prevent it from happening before it happens." speech="" keys="asdf" threshold="" test="" play="A211" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Knowing your enemy usually means we should learn about what harms us, in this case cancer, so we can learn to prevent it from happening before it happens. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A212" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Knowing your enemy usually means we should learn about what harms us, in this case cancer, so we can learn to prevent it from happening before it happens. The correct answer is C." speech="" keys="asdf" threshold="" test="" play="A213" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the answer is C. " speech="" keys="sdf" threshold="" test="" play="B94" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B95" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the answer is B. " speech="" keys="asdf" threshold="" test="" play="B96" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. Knowing your enemy is a figure of speech, it does not necessarily mean literally finding your mortal enemies. Correct answer is C." speech="Jordan, you answered ei. Knowing your enemy is a figure of speech, it does not necessarily mean literally finding your mortal enemies. Correct answer is C." keys="asdf" threshold="" test="" play="A214" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered B. In this case, the word enemy is a metaphoric term that can me anything that can harm us. Correct answer is C." speech="Jordan, you answered Bee. In this case, the word enemy is a metaphoric term that can me anything that can harm us. Correct answer is C." keys="sdf" threshold="" test="" play="A215" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="So _user_ and Jordan, can you tell me What is the conclusion of this article? _user_, it's your turn for this last question. Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="A216,_user_,A217,_user_,A218">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The ending of the text suggest that we can at least treat cancer effectively, even if cancer will never go away." speech="" keys="asdf" threshold="" test="" play="A219" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The ending of the text suggest that we can at least treat cancer effectively, even if cancer will never go away. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A220" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The ending of the text suggest that we can at least treat cancer effectively, even if cancer will never go away. The correct answer is A." speech="" keys="asdf" threshold="" test="" play="A221" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for A. " speech="" keys="sdf" threshold="" test="" play="B97" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for B." speech="" keys="asdf" threshold="" test="" play="B98" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B99" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. The text clearly showed that we can do something about it, which is treat it. Correct answer is A." speech="Jordan, you chose Bee. The text clearly showed that we can do something about it, which is treat it. Correct answer is A." keys="asdf" threshold="" test="" play="A222" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. The text showed that treatments improve all the time, implying that there are many ways for a treatment to be effective. Correct answer is A." speech="Jordan, you chose sea. The text showed that treatments improve all the time, implying that there are many ways for a treatment to be effective. Correct answer is A." keys="asdf" threshold="" test="" play="A223" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Okay, let us start from the beginning. _user_ and Jordan, Based on the title and image, what is the topic? _user_, why don't you go first. Please click on one of the highlighted items that is the correct answer choice." speech="" media="" itemDif="0.1" play="A224,_user_,A225,_user_,A226">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From both the title of the article, and this beginning portion, the topic of the article is regarding a drought" speech="" keys="asdf" threshold="" test="" play="A227" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The rocky mountains is only a place that is mentioned here affected by the drought, which would be the main topic." speech="" keys="asdf" threshold="" test="" play="A228" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="U.S.'s beef is a product that California produces, which, as the article mentions, has been affected by the drought, which would be the main topic of this article." speech="" keys="asdf" threshold="" test="" play="A229" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="It is drought. That's what the title of this article suggests also." speech="" keys="sdf" threshold="" test="" play="B100" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="It is the rocky mountains." speech="" keys="asdf" threshold="" test="" play="B101" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="It is U.S.'s beef." speech="" keys="asdf" threshold="" test="" play="B102" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose rocky mountains. The rocky mountains is only a place that is mentioned here affected by the drought, which would be the main topic." speech="" keys="asdf" threshold="" test="" play="A230" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose U.S.'s beef. U.S.'s beef is a product that California produces, which, as the article mentions, has been affected by the drought, which would be the main topic of this article." speech="" keys="asdf" threshold="" test="" play="A231" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, you see here an underlined sentence. Can you tell me what is the author's purpose in writing this sentence? Jordan, why don't you answer first?" speech="" media="" itemDif="0.1" play="A232,_user_,A233">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The author wants to emphasize that the land that is affected by the drought is very important, therefore providing a reason for why we should care about the drought at all." speech="" keys="asdf" threshold="" test="" play="A234" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="So far the article does not mention whether the land is expensive or not. The correct answer is A. The author wants to emphasize that the land that is affected by the drought is very important, therefore providing a reason for why we should care about the drought at all." speech="" keys="asdf" threshold="" test="" play="A235" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="So far the article does not mention whether the land is fragile to wildlife or not. The correct answer is A. The author wants to emphasize that the land that is affected by the drought is very important, therefore providing a reason for why we should care about the drought at all." speech="" keys="asdf" threshold="" test="" play="A236" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="The answer is A." speech="" keys="sdf" threshold="" test="" play="B103" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="The answer is B." speech="" keys="asdf" threshold="" test="" play="B104" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="The answer is C." speech="" keys="asdf" threshold="" test="" play="B105" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered B. So far the article does not mention whether the land is expensive or not. The correct answer is A." speech="Jordan, you answered Bee. So far the article does not mention whether the land is expensive or not." keys="asdf" threshold="" test="" play="A237" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered C. So far the article does not mention whether the land is fragile to wildlife or not. The correct answer is A." speech="Jordan, you answered Sea. So far the article does not mention whether the land is fragile to wildlife or not. The correct answer is A." keys="sdf" threshold="" test="" play="A238" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you now tell me what does the writer want you to know about the text? _user_, please click on one of the choices as the correct answer." speech="" media="" itemDif="0.1" play="_user_,A239,_user_,A240">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The main idea is that although droughts in California is not new, this one is important because it devastated agriculture." speech="" keys="asdf" threshold="" test="" play="A241" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="In the second paragraph, the article mentioned that actually droughts are not new in California. But this drought is having devastating effects on agriculture. So correct answer is B." speech="" keys="asdf" threshold="" test="" play="A242" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Although the article does mention droughts before agriculture, the main idea is that although droughts in California is not new, this one is important because it devastated agriculture. So the correct answer is B." speech="" keys="asdf" threshold="" test="" play="A243" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think it is B." speech="" keys="sdf" threshold="" test="" play="B106" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think it is A." speech="" keys="asdf" threshold="" test="" play="B107" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think it is C. " speech="" keys="asdf" threshold="" test="" play="B108" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you answered A. In the second paragraph, the article mentioned that actually droughts are not new in California. But this drought is having devastating effects on agriculture. So correct answer is B." speech="Jordan, you answered A. In the second paragraph, the article mentioned that actually droughts are not new in California. But this drought is having devastating effects on agriculture. So correct answer is B." keys="asdf" threshold="" test="" play="A244" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you answered C. Although the article does mention droughts before agriculture, the main idea is that although droughts in California is not new, this one is important because it devastated agriculture. The correct answer is B" speech="Jordan, you answered sea. Although the article does mention droughts before agriculture, the main idea is that although droughts in California is not new, this one is important because it devastated agriculture. The correct answer is B" keys="asdf" threshold="" test="" play="A245" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, the highlighted sentence is an important supporting information to what the writer wants you to know about the text. But can you tell me why? Jordan, it's your turn now." speech="" media="" itemDif="0.1" play="A246,_user_,A247">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The drought is affecting farmer's collection of water, which would devastate agriculture." speech="" keys="asdf" threshold="" test="" play="A248" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Choice A seems to indicate that the drought somehow has had a positive effect on agriculture. But as the text shows, the drought is affecting farmer's collection of water, which would devastate agriculture. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A249" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="It's not closing down Nevada but the collection of Nevada's snow that is of importance here. As the text shows, the drought is affecting farmer's collection of water, which would devastate agriculture. The correct answer is B." speech="" keys="asdf" threshold="" test="" play="A250" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think it is B. " speech="" keys="sdf" threshold="" test="" play="B109" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think it is A. " speech="" keys="asdf" threshold="" test="" play="B110" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think it is C. " speech="" keys="asdf" threshold="" test="" play="B111" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. Choice A seems to indicate that the dought somehow has had a positive effect on agriculture. Correct answer is B." speech="Jordan, you answered ei. Choice A seems to indicate that the dought somehow has had a positive effect on agriculture. Correct answer is B." keys="asdf" threshold="" test="" play="A251" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered sea. It's not closing down Nevada but the collection of Nevada's snow that is of importance here. Correct answer is B." speech="Jordan, you answered C. It's not closing down Nevada but the collection of Nevada's snow that is of importance here. Correct answer is B." keys="sdf" threshold="" test="" play="A252" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, how does the highlighted information tell you about what the writer wants you to know about this text? _user_, it's your turn, please click on one of the buttons to choose the correct answer." speech="" media="" itemDif="0.1" play="_user_,A253,_user_,A254">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text describes, the farmers resort to digging wells from the drought, but too many so the land is devastated." speech="" keys="asdf" threshold="" test="" play="A255" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text did not mention that the farmers have gone elsewhere. Correct answer is B. As the text describes, the farmers resort to digging wells from the drought, but too many so the land is devastated." speech="The text did not mention that the farmers have gone elsewhere. Correct answer is Bee. As the text describes, the farmers resort to digging wells from the drought, but too many so the land is devastated." keys="asdf" threshold="" test="" play="A256" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Choice C make it sound like the farmers benefited from the drought. Correct answer is B. As the text describes, the farmers resort to digging wells from the drought, but too many so the land is devastated." speech="Choice sea make it sound like the farmers benefited from the drought. Correct answer is Bee. As the text describes, the farmers resort to digging wells from the drought, but too many so the land is devastated." keys="asdf" threshold="" test="" play="A257" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for B. " speech="" keys="sdf" threshold="" test="" play="B112" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B113" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B114" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. Choice A make it sound like the farmers benefited from the drought. Correct answer is B." speech="Jordan, you chose ei. Choice A make it sound like the farmers benefited from the drought. Correct answer is Bee." keys="asdf" threshold="" test="" play="A258" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. Choice C make it sound like the farmers benefited from the drought. Correct answer is B." speech="Jordan, you chose sea. Choice C make it sound like the farmers benefited from the drought. Correct answer is Bee." keys="asdf" threshold="" test="" play="A259" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, what is the writer trying to convey in this underlined sentence? Jordan, it's your turn to answer now." speech="" media="" itemDif="0.1" play="A260,_user_,A261">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The description that the land looks like a bowl of cereal after the milk has been taken out, gives one the image of a drying and sinking land due to the over-usage of the acquifers." speech="" keys="asdf" threshold="" test="" play="A262" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The description that the land looks like a bowl of cereal after the milk has been taken out, gives one the image of a drying and sinking land due to the over-usage of the acquifers. Correct answer is C." speech="" keys="asdf" threshold="" test="" play="A263" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The description that the land looks like a bowl of cereal after the milk has been taken out, gives one the image of a drying and sinking land due to the over-usage of the acquifers. Correct answer is C." speech="" keys="asdf" threshold="" test="" play="A264" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for C. " speech="" keys="sdf" threshold="" test="" play="B115" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B116" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for B. " speech="" keys="asdf" threshold="" test="" play="B117" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered A. the acquifers are made from the land, it cannot drown it. C is the correct answer." speech="Jordan, you answered ei. the acquifers are made from the land, it cannot drown it. sea is the correct answer." keys="asdf" threshold="" test="" play="A265" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered B. the acquifers are made from the land, it cannot feed the land. C is the correct answer." speech="Jordan, you answered Bee. the acquifers are made from the land, they cannot feed the land. Sea is the correct answer." keys="sdf" threshold="" test="" play="A266" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan. Can you tell me what imagery does the underlined phrase imply? _user_, it is now your turn, please click on one of the buttons for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A267,_user_,A268">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The imagery of a slow-moving train-wreck describes a disaster waiting to happen. In this case, it is referring to the over usage of the aquifers." speech="" keys="asdf" threshold="" test="" play="A269" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The imagery of a slow-moving train-wreck describes a disaster waiting to happen. In this case, it is referring to the over usage of the aquifers. Correct answer is C." speech="" keys="asdf" threshold="" test="" play="A270" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The imagery of a slow-moving train-wreck describes a disaster waiting to happen. In this case, it is referring to the over usage of the aquifers. Correct answer is C." speech="" keys="asdf" threshold="" test="" play="A271" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is C." speech="" keys="sdf" threshold="" test="" play="B118" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B119" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is B. " speech="" keys="asdf" threshold="" test="" play="B120" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose A. The text emphasized train-wreck, not just train. The correct answer is C." speech="Jordan, you chose ei. The text emphasized train-wreck, not just train. The correct answer is sea." keys="asdf" threshold="" test="" play="A272" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose B. Acquifers are wells in the ground, they cannot be moved. The correct answer is C." speech="Jordan, you chose Bee. Acquifers are wells in the ground, they cannot be moved. The correct answer is Sea." keys="asdf" threshold="" test="" play="A273" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, according to the text, why is the damage to the aquifers a serious problem? Jordan, it's your turn to answer now." speech="" media="" itemDif="0.1" play="A274,_user_,A275">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As shown in the last sentence, water underground takes even longer to fill than rain or snow." speech="" keys="asdf" threshold="" test="" play="A276" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As shown in the last sentence, water underground takes even longer to fill than rain or snow. Correct answer is B." speech="" keys="asdf" threshold="" test="" play="A277" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As shown in the last sentence, water underground takes even longer to fill than rain or snow. Correct answer is B." speech="" keys="asdf" threshold="" test="" play="A278" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I choose B." speech="" keys="sdf" threshold="" test="" play="B121" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I choose A." speech="" keys="asdf" threshold="" test="" play="B122" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I choose C." speech="" keys="asdf" threshold="" test="" play="B123" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, your choice was A. The text no where mentioned food growth. Correct answer is B." speech="Jordan, your choice was ei. The text no where mentioned food growth. Correct answer is Bee." keys="asdf" threshold="" test="" play="A279" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered C. Train wreck was just an imagery, as discussed. Correct answer is B." speech="Jordan, you answered sea. Train wreck was just an imagery, as discussed. Correct answer is Bee." keys="sdf" threshold="" test="" play="A280" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, What is the significance of comparing water usage between farms to cities? _user_, it's your turn, please click on one of the buttons for the correct answer choice." speech="" media="" play="_user_,A281,_user_,A282">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The text mentioned that the farmers use more than four times as much water as people from the city." speech="" keys="asdf" threshold="" play="A283" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Farmers blamed policies, not cities. The correct answer is A. The text mentioned that the farmers use more than four times as much water as people from the city." speech="Farmers blamed policies, not cities. The correct answer is ei. The text mentioned that the farmers use more than four times as much water as people from the city." keys="asdf" threshold="" play="A284" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The text made no mention of farmers sharing water. The correct answer is A. The text mentioned that the farmers use more than four times as much water as people from the city." speech="The text made no mention of farmers sharing water. The correct answer is ei. The text mentioned that the farmers use more than four times as much water as people from the city." keys="asdf" threshold="" play="A285" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think it's A. " speech="" keys="sdf" threshold="" play="B124" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think it's B. " speech="" keys="asdf" threshold="" play="B125" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think it's C. " speech="" keys="asdf" threshold="" play="B126" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="Jordan, you chose B. Farmers blamed policies, not cities. Correct answer is A." speech="Jordan, you chose Bee. Farmers blamed policies, not cities. Correct answer is A." keys="asdf" threshold="" play="A286" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. VThe text made no mention of farmers sharing water. Correct answer is A." speech="Jordan, you chose Sea. VThe text made no mention of farmers sharing water. Correct answer is A." keys="asdf" threshold="" play="A287" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, According to the text, what is one conclusion that can be drawn here? Jordan, why don't you go first for this last question?" speech="" media="" itemDif="0.1" play="A288,_user_,A289">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The article states that people are finding solutions, but everybody would have to work with less. This suggests that the problem will not be solved completely." speech="" keys="asdf" threshold="" test="" play="A290" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The text states that everybody would have to work with less. This means that although people are finding solutions, the problem certainly cannot be solved completely. Correct answer is A." speech="" keys="asdf" threshold="" test="" play="A291" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The text does not propose that farmers and city-dwellers coming together would solve anything. The article states that people are finding solutions, but everybody would have to work with less. This suggests that the problem will not be solved completely. Correct answer is A." speech="" keys="asdf" threshold="" test="" play="A292" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for A. " speech="" keys="sdf" threshold="" test="" play="B127" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for B." speech="" keys="asdf" threshold="" test="" play="B128" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B129" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered B. The text states that everybody would have to work with less. So taking from the city certainly would not be a solution. Correct answer is A." speech="Jordan, you answered Bee. The text states that everybody would have to work with less. So taking from the city certainly would not be a solution. Correct answer is A." keys="asdf" threshold="" test="" play="A293" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered C. The text does not propose that farmers and city-dwellers coming together would solve anything. Correct answer is A." speech="Jordan, you answered sea. The text does not propose that farmers and city-dwellers coming together would solve anything. Correct answer is A." keys="sdf" threshold="" test="" play="A294" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+    <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="MediumReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="4" />
+	  <Action agent="System" act="Wait" data="60" id="5" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+	  <Action agent="System" act="Wait" data="60" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="MediumReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+	    <Action agent="System" act="Wait" data="60" id="4" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+	    <Action agent="System" act="Wait" data="60" id="4" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPageMedium" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson28Medium.mp3" id="2" />
+    </Rule>
+    <Rule name="LoadPageEasy" status="LoadPage3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="EOpening" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson28Easy.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+    </Rule>
+    <Rule name="LoadPageDifficult" status="LoadPage2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="DOpening" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson28Hard.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+	   <Action agent="System" act="Wait" data="60" id="4" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="E" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="M" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="D" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasTutoringPack" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="NoMoreTutoringPack" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="AskMainQuestion" data="1" id="1" />
+      <Action agent="System" act="SetStatus" data="CheckJordanAnswerFirst" id="2" />
+	   <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadPage" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+	  <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAnswerFirstGood" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstGood" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanGoodFirst" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="JordanAnswerFirstBad1" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstBad1" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanBad1First" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="JordanAnswerFirstBad2" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstBad2" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanBad2First" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstGood" status="HasJordanAnswerFirstGood" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanGoodFirst" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanGood" id="5" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="6" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstBad1" status="HasJordanAnswerFirstBad1" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanBad1First" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanBad1" id="5" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="6" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstBad2" status="HasJordanAnswerFirstBad2" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanBad2First" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanBad2" id="5" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="6" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstGood" status="HasJordanAnswerFirstGood" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="3" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstBad1" status="HasJordanAnswerFirstBad1" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="3" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstBad2" status="HasJordanAnswerFirstBad2" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="1000000" id="3" />
+    </Rule>
+    <Rule name="LastPageFinal" status="PageLoaded" response="" event="Stop3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="3" />
+	        <Action agent="System" act="Wait" data="60" id="4" />
+    </Rule>
+    <Rule name="PageLoadedE" status="PageLoaded" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+    </Rule>
+    <Rule name="PageLoadedD" status="PageLoaded" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+    </Rule>
+    <Rule name="PageLoadedM" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanCorrect" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanIC1" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad1Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanIC2" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad2Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanCorrect" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
+      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanIC1" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanIC2" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad2Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="5" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="6" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="8" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="9" />
+      <Action agent="System" act="SetStatus" data="Transition" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanCorrect" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
+      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanIC1" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad1Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanIC2" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+    </Rule>
+    <Rule name="UserSecondC1JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="UserSecondCorrectJordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1First" id="5" />
+      <Action agent="System" act="SetStatus" data="Transition" id="6" />
+    </Rule>
+    <Rule name="UserSecondCorrectJordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2First" id="5" />
+      <Action agent="System" act="SetStatus" data="Transition" id="6" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="4" />
+      <Action agent="System" act="SetStatus" data="Transition" id="5" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="2" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2First" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="4" />
+      <Action agent="System" act="SetStatus" data="Transition" id="5" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="2" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1First" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedback" id="3" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt2" id="4" />
+      <Action agent="System" act="WaitForEvent" data="5" id="5" />
+    </Rule>
+    <Rule name="Transition" status="Transition" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="TransitionTo" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionToEasy" status="TransitionTo" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="E" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionToMedium" status="TransitionTo" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="M" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionToHard" status="TransitionTo" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="D" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelHard" status="TransitionTo" response="" event="MainPageLoadedH" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadPage2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="ChangeLevelEasy" status="TransitionTo" response="" event="MainPageLoadedE" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadPage3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="ChangetoEnd" status="TransitionTo" response="" event="Stop3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

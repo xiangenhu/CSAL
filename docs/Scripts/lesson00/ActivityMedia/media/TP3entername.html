@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<!--CHANGE TITLE HERE, ONLY VIEWABLE IN BROWSER THOUGH-->
+		<title>Example 1</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		<style>
+			body
+			{
+				/*----PLEASE USE ONE OF THESE FONTS, DELETE ONE IF YOU DONT LIKE IT----*/
+				/*MUST ADD NEW GOOGLE FONT HERE IF INCLUDED - SEE BELOW*/
+				font-family: 'Muli', Tahoma, 'Lucida Sans', Serif;
+				
+				/*-----CHANGE FONT SIZE HERE-----*/
+				font-size: 48px;
+				
+				/*----CHANGE 'NONE' TO 'BOLD' IF YOU WANT BOLD TEXT----*/
+				font-weight: none;
+				/*---------------------------------------------------------------------*/
+				
+				background-image:url('TabletBkgd.png');
+				background-repeat:no-repeat;
+				background-position:center;
+				vertical-align:text-top;
+				overflow: hidden;
+			}
+			.qheader
+			{
+				/*----CHANGES HOW FAR THE TEXT IS FROM THE TOP OF THE TABLET----*/
+				padding-top:20px;
+				/*--------------------------------------------------------------*/
+				
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.question
+			{
+				/*----CHANGES HOW FAR THE BKGD IMG & TEXT ARE FROM THE TOP OF THE TABLET----*/
+				margin-top: -30px;
+				
+				/* -------------------------------*/
+				/*  NO NEED TO EDIT BETWEEN LINES */
+				/* -------------------------------*/
+				width: 715px;
+				height: 567px;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				/* -------------------------------*/
+			}
+		</style>
+
+		<script>
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
+				
+				return parent.GetWorldEvent(results);
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<!-- IMPORT DIFFERENT GOOGLE FONTS HERE, SPACES BECOME +'s -->
+		<!-- http://www.google.com/fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+		
+		<div class="question" style="margin-left:10px;">
+			<br><br>
+			<div class="qheader" style="margin-left:40px;">
+			
+			<!-- EDIT THE MAIN TEXT HERE  -->
+				Please type your name and it will appear in the box below. 
+			
+			</div>
+			<br><br>
+		</div>
+	</body>
+</html>
+
+
+
+
+

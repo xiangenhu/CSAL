@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L23Background2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Nunito', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: hidden;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#instructBox
+			{
+				background-color: #d4d3d6;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 800px;
+				font-size: 26px;
+				text-align: center;
+				padding: 10px 0px;
+				border-bottom: 5px dashed #a287e1;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainText
+			{
+				font-size: 24px;
+				padding: 20px 10px 0px 20px;
+				line-height: 32px;
+			}
+			.mainTextHead
+			{
+				font-family: 'Gloria Hallelujah', Verdana, 'Times New Roman';
+				font-size: 40px;
+				margin: 0px auto 30px auto;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-color: #d4d3d6;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 24px;
+				padding: 0px 20px;
+				color: #212121;
+				margin: 10px 0px 0px 5px;
+				width: 740px;
+			}
+			#buttonBox
+			{
+				margin: 6px auto;
+				width: 750px;
+			}
+			.mybutton
+			{
+				font-size: 16px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 750px;
+				height: 34px;
+				line-height: 34px;
+				margin: 3px 0px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+				padding: 1px 2px;
+				outline: none;
+				border-radius: 12px;
+			}
+			.num
+			{
+				height: 24px;
+				font-size: 22px;
+				border-radius: 10px;
+				background-color: #d8d8d8;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			#image{
+				width: 650px;
+				}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var currentItem = -1;
+			var numItems = 0;
+			var isSelected = false;
+			var itemsArray=["b1","b2","b3"];
+			var userSelecteditem="";
+			var userAnswerItem="";
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b1"];
+			
+			$(document).ready(function()
+			{		
+				parent.GetWorldEvent("MediaLoadedDifficult");
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+			});
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+					
+				}
+			}
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userAnswerItem = $(this).attr("item");
+					selectedID=$(this).attr("id");
+					userSelecteditem=document.getElementById(selectedID).innerHTML;
+					userSelecteditem=userSelecteditem.replace(/[\r\n]/g,"");
+					userSelecteditem=userSelecteditem.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+					userSelecteditem=userSelecteditem.replace(/nbsp/g,'');
+					userSelecteditem=userSelecteditem.replace(/(^\s*)|(\s*$)/g, "");
+					userSelecteditem=userSelecteditem.replace(/<[^>].*?>/g,"");
+					userSelecteditem=userSelecteditem.replace(/[\t]+/g,"");
+					userSelecteditem=userSelecteditem.replace(/[,]/g,"");
+					//play appropriate sound
+					if (userAnswer == "Correct"){ parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelecteditem);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#faa49b"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				//$(".mybutton").animate({backgroundColor: "#background-color: #faa49b;", color: "#212121"}, 1000);
+				$(".mybutton").animate({backgroundColor: "#faa49b", color: "#212121"}, 1000);
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userAnswerItem);
+				}
+				//go to next page
+				else if (data == "NextPage")
+				{	
+				parent.nextPage("media/"+"Lesson23-D9.html");
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div class="mainTextHead">
+					<img id="image" src="Lesson23-Closing.png">
+				</div>
+				
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					Which statement is correct according to the chart? 
+				</div>
+				
+				<div id="buttonBox">
+					<div class='mybutton' id="b1" item="A" value="Correct">Running and walking can improve both physical and mental health. </div>
+
+					<div class='mybutton' id="b2" item="B" value="Incorrect">Both running and walking help lose weight, but walking reduces weight more quickly. </div>
+				
+					<div class='mybutton' id="b3" item="C" value="Incorrect">Dieting is a  more efficient way to reduce weight than walking and running. </div>
+				</div>
+			</div>
+
+	</body>
+</html>

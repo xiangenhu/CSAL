@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+    <include ref="Library/Objects/Bubbles/Bubble2.xml" />
+    <include ref="Library/Objects/AudioButton/MuteBtn1.xml" />
+    <include ref="Library/Objects/EntryPanels/ChatEntry1.xml" />
+    <variable id="Text" value="0" />
+    <stage id="Stage1">
+        <scene id="Scene1" name="Scene 1">
+            <character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml" />
+            <message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+            </message>
+
+            <message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+            </message>
+            <message id="Msg3" name="Eyenormal">
+                <eyesnormal/>
+            </message>
+            <message id="A1" name="A1">
+                <say>Jordan, which answer do you think is correct?</say>
+            </message>
+            <message id="A2" name="A2">
+                <say>Jordan, what is your answer?</say>
+            </message>
+            <message id="A3" name="A3">
+                <say>Jordan, your answer, please.</say>
+            </message>
+            <message id="A4" name="A4">
+                <say>Jordan, what about you? What do you think?</say>
+            </message>
+            <message id="A5" name="A5">
+                <say>Jordan, do you have an answer?</say>
+            </message>
+            <message id="A6" name="A6">
+                <say>Jordan, could you please tell us your answer?</say>
+            </message>
+            <message id="A7" name="A7">
+                <say>Jordan, what is your answer?</say>
+            </message>
+            <message id="A8" name="A8">
+                <say>Jordan, your answer, please.</say>
+            </message>
+            <message id="A9" name="A9">
+                <say>Jordan, it is your turn. What is your answer?</say>
+            </message>
+            <message id="A10" name="A10">
+                <say>Jordan, what about you? What do you think?</say>
+            </message>
+            <message id="A11" name="A11">
+                <say>Jordan, do you have an answer?</say>
+            </message>
+            <message id="A12" name="A12">
+                <say>Jordan, could you please tell us your answer?</say>
+            </message>
+            <message id="A13" name="A13">
+                <say>Ok, let's see what answer Jordan chose.</say>
+            </message>
+            <message id="A14" name="A14">
+                <say>Alright, let's see what Jordan chose.</say>
+            </message>
+            <message id="A15" name="A15">
+                <say>Well, let's see whether Jordan agrees with this answer.</say>
+            </message>
+            <message id="A16" name="A16">
+                <say>Jordan and</say>
+            </message>
+            <message id="A17" name="A17">
+                <say>, I am sorry, but both of you are incorrect.</say>
+            </message>
+            <message id="A18" name="A18">
+                <say>Oops, Jordan and</say>
+            </message>
+            <message id="A19" name="A19">
+                <say>, you are both wrong.</say>
+            </message>
+            <message id="A20" name="A20">
+                <say>Jordan and</say>
+            </message>
+            <message id="A21" name="A21">
+                <say>, sorry! you are both incorrect.</say>
+            </message>
+            <message id="A22" name="A22">
+                <say>Well, Jordan and</say>
+            </message>
+            <message id="A23" name="A23">
+                <say>, you both answered this question incorrectly.</say>
+            </message>
+            <message id="A24" name="A24">
+                <say>Unfortunately, Jordan and</say>
+            </message>
+            <message id="A25" name="A25">
+                <say>, you are both incorrect this time.</say>
+            </message>
+            <message id="A26" name="A26">
+                <say>Sorry, Jordan and</say>
+            </message>
+            <message id="A27" name="A27">
+                <say>, unfortunately, you are both incorrect.</say>
+            </message>
+            <message id="A28" name="A28">
+                <say>Jordan and</say>
+            </message>
+            <message id="A29" name="A29">
+                <say>, this time you are both incorrect.</say>
+            </message>
+            <message id="A30" name="A30">
+                <say>, thank you!</say>
+            </message>
+            <message id="A31" name="A31">
+                <say>, thanks!</say>
+            </message>
+            <message id="A32" name="A32">
+                <say>, thank you so much!</say>
+            </message>
+            <message id="A33" name="A33">
+                <say>After reading, remember to click to continue.</say>
+            </message>
+            <message id="A34" name="A34">
+                <say>Remember to click to continue after reading.</say>
+            </message>
+            <message id="A35" name="A35">
+                <say>If you finish reading, click to continue to move on.</say>
+            </message>
+            <message id="A36" name="A36">
+                <say>Ok. </say>
+            </message>
+            <message id="A37" name="A37">
+                <say>Okay.</say>
+            </message>
+            <message id="A38" name="A38">
+                <say>Alright.</say>
+            </message>
+            <message id="A39" name="A39">
+                <say>, Good job! You got it.</say>
+            </message>
+            <message id="A40" name="A40">
+                <say>, you are right! Great job!</say>
+            </message>
+            <message id="A41" name="A41">
+                <say>, you are right! That's fantastic!</say>
+            </message>
+            <message id="A42" name="A42">
+                <say>, you are correct! Nice job!</say>
+            </message>
+            <message id="A43" name="A43">
+                <say>, nice work! You are right!</say>
+            </message>
+            <message id="A44" name="A44">
+                <say>, awesome! You are correct!</say>
+            </message>
+            <message id="A45" name="A45">
+                <say>, very good! You got it!</say>
+            </message>
+            <message id="A46" name="A46">
+                <say>and Jordan, you both got that one correct! Good job!</say>
+            </message>
+            <message id="A47" name="A47">
+                <say>and Jordan, you are both right! Great job!</say>
+            </message>
+            <message id="A48" name="A48">
+                <say>and Jordan, both of you are right! That's fantastic!</say>
+            </message>
+            <message id="A49" name="A49">
+                <say>and Jordan, both of you are correct! Nice job!</say>
+            </message>
+            <message id="A50" name="A50">
+                <say>and Jordan, nice work! You are both right!</say>
+            </message>
+            <message id="A51" name="A51">
+                <say>and Jordan, awesome! Both of you are correct!</say>
+            </message>
+            <message id="A52" name="A52">
+                <say>and Jordan, very good! You both got it!</say>
+            </message>
+            <message id="A53" name="A53">
+                <say>Yes,</say>
+            </message>
+            <message id="A54" name="A54">
+                <say>and Jordan! Nice job! You are both right!</say>
+            </message>
+            <message id="A55" name="A55">
+                <say>, you can do it! Please at least have a try! Let me repeat my question again.</say>
+            </message>
+            <message id="A56" name="A56">
+                <say>Yes,</say>
+            </message>
+            <message id="A57" name="A57">
+                <say>, come on! You can do it! Have a try! I will repeat my question again.</say>
+            </message>
+            <message id="A58" name="A58">
+                <say>Yes,</say>
+            </message>
+            <message id="A59" name="A59">
+                <say>, please give it a try! I belive you have an answer. Now I wil repeat my question again.</say>
+            </message>
+            <message id="A60" name="A60">
+                <say>Yes,</say>
+            </message>
+            <message id="A61" name="A61">
+                <say>, please try it. I'll repeat the question.</say>
+            </message>
+            <message id="A62" name="A62">
+                <say>Yes,</say>
+            </message>
+            <message id="A63" name="A63">
+                <say>, give it a try! I'll say the question again.</say>
+            </message>
+            <message id="A64" name="A64">
+                <say>Yes,</say>
+            </message>
+            <message id="A65" name="A65">
+                <say>, I bet you can come up with an answer for this. Give it a try! I'll repeat the question.</say>
+            </message>
+            <message id="A66" name="A66">
+                <say>Yes,</say>
+            </message>
+            <message id="A67" name="A67">
+                <say>, I'll repeat the question. I bet you know the answer for it! Give it a try!</say>
+            </message>
+            <message id="A68" name="A68">
+                <say>Yes,</say>
+            </message>
+            <message id="A69" name="A69">
+                <say>, you can do it! Give it a try! I'll say the question again.</say>
+            </message>
+            <message id="A70" name="A70">
+                <say>Yes,</say>
+            </message>
+            <message id="A71" name="A71">
+                <say>, give it a go! I'll repeat the question and I bet you'll know the answer.</say>
+            </message>
+            <message id="A72" name="A72">
+                <say>Yes,</say>
+            </message>
+            <message id="A73" name="A73">
+                <say>, give it a go! I'll repeat the question, first.</say>
+            </message>
+            <message id="A74" name="A74">
+                <say>, Please have another try.</say>
+            </message>
+            <message id="A75" name="A75">
+                <say>, Have another try, please.</say>
+            </message>
+            <message id="A76" name="A76">
+                <say>, Try again, please.</say>
+            </message>
+            <message id="A77" name="A77">
+                <say>, Please take another try.</say>
+            </message>
+            <message id="A78" name="A78">
+                <say>Jordan, is that right?</say>
+            </message>
+            <message id="A79" name="A79">
+                <say>Jordan, is</say>
+            </message>
+            <message id="A80" name="A80">
+                <say>'s answer correct?</say>
+            </message>
+            <message id="A81" name="A81">
+                <say>Jordan, do you think</say>
+            </message>
+            <message id="A82" name="A82">
+                <say>'s answer is correct?</say>
+            </message>
+            <message id="A83" name="A83">
+                <say>Jordan, what do you think about</say>
+            </message>
+            <message id="A84" name="A84">
+                <say>'s answer?</say>
+            </message>
+            <message id="A85" name="A85">
+                <say>Jordan, you are absolutely correct, good job.</say>
+            </message>
+            <message id="A86" name="A86">
+                <say>Jordan, you got it right, excellent!</say>
+            </message>
+            <message id="A87" name="A87">
+                <say>Jordan, you are right, that's great!</say>
+            </message>
+            <message id="A88" name="A88">
+                <say>Jordan, that is correct, well done!</say>
+            </message>
+            <message id="A89" name="A89">
+                <say>Jordan, that's right, great job!</say>
+            </message>
+            <message id="A90" name="A90">
+                <say>Right, Jordan! That is correct!</say>
+            </message>
+            <message id="A91" name="A91">
+                <say>Jordan, that's it! Nice job!</say>
+            </message>
+            <message id="A92" name="A92">
+                <say>Yes, Jordan! That's right!</say>
+            </message>
+            <message id="A93" name="A93">
+                <say>, good job! You are correct. Jordan, I'm sorry, you didn't get that one right.</say>
+            </message>
+            <message id="A94" name="A94">
+                <say>, you are correct. Nicely done! Jordan, you are wrong!</say>
+            </message>
+            <message id="A95" name="A95">
+                <say>, great! You're right! Jordan, you are wrong.</say>
+            </message>
+            <message id="A96" name="A96">
+                <say>, awesome! That's right! Jordan, you didn't get it correct this time</say>
+            </message>
+            <message id="A97" name="A97">
+                <say>, nice job! That is correct! Jordan, you need more practice, you didn't get it right.</say>
+            </message>
+            <message id="A98" name="A98">
+                <say>, wonderful! That is absolutely correct! Jordan, your answer is incorrect!</say>
+            </message>
+            <message id="A99" name="A99">
+                <say>, Perfect! You got it! Jordan, sorry, you were incorrect.</say>
+            </message>
+            <message id="A100" name="A100">
+                <say>, that's it! Nice job! Jordan, I hate to say this, but you are wrong!</say>
+            </message>
+            <message id="A101" name="A101">
+                <say>, great job! You're doing really well! Jordan, you are wrong.</say>
+            </message>
+            <message id="A102" name="A102">
+                <say>Jordan and</say>
+            </message>
+            <message id="A103" name="A103">
+                <say>, let's do it again.</say>
+            </message>
+            <message id="A104" name="A104">
+                <say>Jordan, I am sorry, but you are incorrect.</say>
+            </message>
+            <message id="A105" name="A105">
+                <say>Oops, Jordan, you are wrong.</say>
+            </message>
+            <message id="A106" name="A106">
+                <say>Jordan, sorry! you are incorrect.</say>
+            </message>
+            <message id="A107" name="A107">
+                <say>Well, Jordan, you answered this question incorrectly.</say>
+            </message>
+            <message id="A108" name="A108">
+                <say>Unfortunately, Jordan, you are incorrect this time.</say>
+            </message>
+            <message id="A109" name="A109">
+                <say>Sorry, Jordan, unfortunately, you are incorrect.</say>
+            </message>
+            <message id="A110" name="A110">
+                <say>Jordan, this time you are incorrect</say>
+            </message>
+            <message id="A111" name="A111">
+                <say>Let me repeat my question again.</say>
+            </message>
+            <message id="A112" name="A112">
+                <say>I'll say the question again.</say>
+            </message>
+            <message id="A113" name="A113">
+                <say>Now I wil repeat my question again.</say>
+            </message>
+            <message id="A114" name="A114">
+                <say>I'll repeat the question.</say>
+            </message>
+            <message id="A115" name="A115">
+                <say>I'll repeat the question, first.</say>
+            </message>
+            <message id="A116" name="A116">
+                <say> Don't forget to click to continue to the next section.</say>
+            </message>
+            <message id="A117" name="A117">
+                <say>If you've finished, click to continue to answer the question. </say>
+            </message>
+            <message id="A118" name="A118">
+                <say>If you've finished, click to continue to move to the next section.</say>
+            </message>
+            <message id="A119" name="A119">
+                <say>Good luck, Jordan!</say>
+            </message>
+            <message id="A120" name="A120">
+                <say>and Jordan, let's briefly wrap up what we learned today.</say>
+            </message>
+            <message id="A121" name="A121">
+                <say>Right, Jordan! We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. </say>
+            </message>
+            <message id="A122" name="A122">
+                <say>Jordan and</say>
+            </message>
+            <message id="A123" name="A123">
+                <say>, a good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures. See you next time!</say>
+            </message>
+            <message id="A124" name="A124">
+                <say>Now let's listen to this car ad.</say>
+            </message>
+            <message id="A125" name="A125">
+                <say>Jordan, this summary is not good. </say>
+            </message>
+            <message id="A126" name="A126">
+                <say>Excellent, Jordan and</say>
+            </message>
+            <message id="A127" name="A127">
+                <say>! This poster is a good summary.</say>
+            </message>
+            <message id="A128" name="A128">
+                <say>At the bottom of the screen, you can see a text map. Text maps help us define the important information from a passage.</say>
+            </message>
+            <message id="A129" name="A129">
+                <say>No, Jordan! You can click the sentence, and it will automatically show in the text map.</say>
+            </message>
+            <message id="A130" name="A130">
+                <say>Let's listen to this email.</say>
+            </message>
+            <message id="A131" name="A131">
+                <say>You are welcome, Jordan. I hope your aunt is OK.</say>
+            </message>
+            <message id="A132" name="A132">
+                <say>and Jordan, let's briefly wrap up what we learned today.</say>
+            </message>
+            <message id="A133" name="A133">
+                <say>Right, Jordan! We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. </say>
+            </message>
+            <message id="A134" name="A134">
+                <say>Jordan and</say>
+            </message>
+            <message id="A135" name="A135">
+                <say>, a good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures. See you next time!</say>
+            </message>
+            <message id="A136" name="A136">
+                <say>Perhaps, we should add one more feature. </say>
+            </message>
+            <message id="A137" name="A137">
+                <say>Hold on, we forgot the most important part!</say>
+            </message>
+            <message id="A138" name="A138">
+                <say>Jordan, take it easy. Let's keep reading. </say>
+            </message>
+            <message id="A139" name="A139">
+                <say>Sounds good, Jordan!</say>
+            </message>
+            <message id="A140" name="A140">
+                <say>Let's see what other descriptions should be included.</say>
+            </message>
+            <message id="A141" name="A141">
+                <say>Let's see the heart attack list.</say>
+            </message>
+            <message id="A142" name="A142">
+                <say>Don't worry, Jordan! Let's see what happened.</say>
+            </message>
+            <message id="A143" name="A143">
+                <say>Sure!</say>
+            </message>
+            <message id="A144" name="A144">
+                <say>you can either read to yourself or listen to the audio by clicking on the green audio button at the bottom of the tablet.</say>
+            </message>
+            <message id="A145" name="A145">
+                <say>Hello</say>
+            </message>
+            <message id="A146" name="A146">
+                <say>and Jordan! Welcome back!</say>
+            </message>
+            <message id="A147" name="A147">
+                <say>You want to buy a car?</say>
+            </message>
+            <message id="A148" name="A148">
+                <say>No worries, Jordan! This is a good example of a descriptive text.</say>
+            </message>
+            <message id="A149" name="A149">
+                <say>and I can help you find the most important details that you need to know.</say>
+            </message>
+            <message id="A150" name="A150">
+                <say>Sure!</say>
+            </message>
+            <message id="A151" name="A151">
+                <say>you can either read to yourself or listen to the audio by clicking on the green audio button at the bottom of the tablet.</say>
+            </message>
+            <message id="A152" name="A152">
+                <say>I understand, Jordan. Let's try to make a summary of the important parts.</say>
+            </message>
+            <message id="A153" name="A153">
+                <say>Wow, Jordan, a $10 reward for finding Lola is a good idea!</say>
+            </message>
+            <message id="A154" name="A154">
+                <say>Sure!</say>
+            </message>
+            <message id="A155" name="A155">
+                <say>, you can either read to yourself or listen to the audio by clicking on the green audio button at the bottom of the tablet.</say>
+            </message>
+            <message id="A156" name="A156">
+                <say>and Jordan, let's briefly wrap up what we learned today.</say>
+            </message>
+            <message id="A157" name="A157">
+                <say>Right, Jordan! We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. </say>
+            </message>
+            <message id="A158" name="A158">
+                <say>Jordan and</say>
+            </message>
+            <message id="A159" name="A159">
+                <say>, a good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures. See you next time!</say>
+            </message>
+            <message id="A160" name="A160">
+                <say>Calm down, Jordan! Let's see what symptoms she has before calling her doctor.</say>
+            </message>
+            <message id="A161" name="A161">
+                <say>Definitely Jordan, especially since we are supposed to have a hot summer here. Let's continue.</say>
+            </message>
+            <message id="A162" name="A162">
+                <say>Sorry to hear that! Have you tried to write a poster to let people know the dog is lost?</say>
+            </message>
+            <message id="A163" name="A163">
+                <say>Jordan, no worries!</say>
+            </message>
+            <message id="A164" name="A164">
+                <say>and I will help. The poster will be like a summary of a description of Lola. First, let's think of a title for this poster.</say>
+            </message>
+            <message id="A165" name="A165">
+                <say>Jordan, let's try to figure this out together. Here is a list of the symptoms of a heart attack. </say>
+            </message>
+            <message id="A166" name="A166">
+                <say>The ad is trying to persuade people to buy this 2001 Honda Accord.</say>
+            </message>
+            <message id="A167" name="A167">
+                <say>Let's see what information this ad provides.</say>
+            </message>
+            <message id="A168" name="A168">
+                <say>Yes, Jordan. You can save money! Let's see what other information is provided.</say>
+            </message>
+            <message id="A169" name="A169">
+                <say>, which of the highlighted sentences describes a symptom that Aunt Kerry has? Click on the sentence please.</say>
+            </message>
+            <message id="A170" name="A170">
+                <say>The third sentence describes some symptoms such as abnormal pressure or squeezing pain in her chest.</say>
+            </message>
+            <message id="A171" name="A171">
+                <say>A symptom is a sign of a disease.</say>
+            </message>
+            <message id="A172" name="A172">
+                <say>, which of the highlighted sentences describes a symptom that Aunt Kerry has?</say>
+            </message>
+            <message id="A173" name="A173">
+                <say>The first sentence doesn't mention any sign of disease.</say>
+            </message>
+            <message id="A174" name="A174">
+                <say>The second sentence only mentions that Kerry is having some discomfort but does not clearly mention any symptoms.</say>
+            </message>
+            <message id="A175" name="A175">
+                <say>, which symptom described in the highlighted sentence is also on the list of heart attack symptoms? Please click your answer.</say>
+            </message>
+            <message id="A176" name="A176">
+                <say>This sentence describes the symptom chest pain. Abnormal pressure isn't on the list.</say>
+            </message>
+            <message id="A177" name="A177">
+                <say>The symptom on the list could be a more specific term for the symptom described in the highlighted sentence.</say>
+            </message>
+            <message id="A178" name="A178">
+                <say>, which symptom described in the highlighted sentence is on the list of heart attack symptoms?</say>
+            </message>
+            <message id="A179" name="A179">
+                <say>Abnormal pressure could mean that Aunt Kerry is feeling tightness in her chest or like a weight is on her. It doesn't mean stress.</say>
+            </message>
+            <message id="A180" name="A180">
+                <say>An upset stomach means belly ache. This symptom isn't mentioned in the highlighted sentence.</say>
+            </message>
+            <message id="A181" name="A181">
+                <say>Fatigue means exhaustion. That is not the symptom that Jordan's Aunt Kerry is describing here.</say>
+            </message>
+            <message id="A182" name="A182">
+                <say>Aunt Kerry is describing pain in her chest. This is different from nausea which means feeling like you may vomit.</say>
+            </message>
+            <message id="A183" name="A183">
+                <say>, which sentence has a description of a symptom that Aunt Kerry is experiencing? Please click on that sentence.</say>
+            </message>
+            <message id="A184" name="A184">
+                <say>The last sentence describes Aunt Kerry as feeling nauseous and lightheaded. </say>
+            </message>
+            <message id="A185" name="A185">
+                <say>The first two sentences do not give us descriptions that will help us figure out what is wrong. </say>
+            </message>
+            <message id="A186" name="A186">
+                <say>, which sentence has a description of a symptom that Aunt Kerry is experiencing?</say>
+            </message>
+            <message id="A187" name="A187">
+                <say>The first sentence doesn't mention any symptoms.</say>
+            </message>
+            <message id="A188" name="A188">
+                <say>The second sentence only mentions that Aunt Kerry doesn't want to eat anything. It does not clearly mention a symptom.</say>
+            </message>
+            <message id="A189" name="A189">
+                <say>, which symptom in the highlighted sentence is on the list of symptoms for heart attack? Please click on your answer.</say>
+            </message>
+            <message id="A190" name="A190">
+                <say>Yes. It is most likely that Aunt Kerry is experiencing nausea. </say>
+            </message>
+            <message id="A191" name="A191">
+                <say>Nausea means feeling like you might vomit. Lightheaded means dizzy.</say>
+            </message>
+            <message id="A192" name="A192">
+                <say>, which symptom in the highlighted sentence is on the list for heart attack?</say>
+            </message>
+            <message id="A193" name="A193">
+                <say>Nauseous means feeling like you are going to vomit. </say>
+            </message>
+            <message id="A194" name="A194">
+                <say>Lightheaded means that you feel like the room is spinning.</say>
+            </message>
+            <message id="A195" name="A195">
+                <say>Nauseous means feeling like you are going to vomit. </say>
+            </message>
+            <message id="A196" name="A196">
+                <say>Lightheaded means that you feel like the room is spinning.</say>
+            </message>
+            <message id="A197" name="A197">
+                <say>, which symptom in the highlighted sentences is on the list of heart attack symptoms? Please click on the symptom.</say>
+            </message>
+            <message id="A198" name="A198">
+                <say>Fatigue means extremely tired. So the correct symptom of heart attack would be fatigue.</say>
+            </message>
+            <message id="A199" name="A199">
+                <say>Aunt Kerry's lack of sleep is directly stated in the sentences. We can also understand that she must be exhausted from her description of feeling like she has "run a marathon."</say>
+            </message>
+            <message id="A200" name="A200">
+                <say>, which symptom in the highlighted sentences is on the list?</say>
+            </message>
+            <message id="A201" name="A201">
+                <say>When Aunt Kerry says she feels like she has run a marathon it does not mean she has chest pain. </say>
+            </message>
+            <message id="A202" name="A202">
+                <say>The fact that she did not get any rest this morning is probably not related to stress.</say>
+            </message>
+            <message id="A203" name="A203">
+                <say>Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as having an upset stomach.</say>
+            </message>
+            <message id="A204" name="A204">
+                <say>Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as experiencing nausea.</say>
+            </message>
+            <message id="A205" name="A205">
+                <say>, why is this summary NOT good? Click on your answer.</say>
+            </message>
+            <message id="A206" name="A206">
+                <say>This summary is not good because it includes too much information unrelated to specific symptoms.</say>
+            </message>
+            <message id="A207" name="A207">
+                <say>In order to make this a good summary you need to include some of the specific terms that we researched that match Aunt Kerry's descriptions.</say>
+            </message>
+            <message id="A208" name="A208">
+                <say>, why do you think this summary is not a good one?</say>
+            </message>
+            <message id="A209" name="A209">
+                <say>This summary does not include any symptoms from the list of heart attack symptoms. </say>
+            </message>
+            <message id="A210" name="A210">
+                <say>This summary does not appear to have any of Aunt Kerry's specific symptoms.</say>
+            </message>
+            <message id="A211" name="A211">
+                <say>, what is the best title for this poster? Click on your answer please.</say>
+            </message>
+            <message id="A212" name="A212">
+                <say>Lost Dog $10 Reward is the best title for our poster. </say>
+            </message>
+            <message id="A213" name="A213">
+                <say>The second one tells us it is a missing dog but doesn't have the incentive of the reward.</say>
+            </message>
+            <message id="A214" name="A214">
+                <say>, what do you think is the best title?</say>
+            </message>
+            <message id="A215" name="A215">
+                <say>People may not know what Lola is, so that part of the description is important.</say>
+            </message>
+            <message id="A216" name="A216">
+                <say>The second one does not give you a reason to look for the dog.</say>
+            </message>
+            <message id="A217" name="A217">
+                <say>, what information below should be included in the poster? Please click on your answer.</say>
+            </message>
+            <message id="A218" name="A218">
+                <say>It is most important to describe what kind of dog Lola is and how old she is. </say>
+            </message>
+            <message id="A219" name="A219">
+                <say>We need to include only the descriptions that are most likely to help people find Lola.</say>
+            </message>
+            <message id="A220" name="A220">
+                <say>, which one of these details should be included in the poster?</say>
+            </message>
+            <message id="A221" name="A221">
+                <say>It is cute that she loves walks but it does not help us find her. </say>
+            </message>
+            <message id="A222" name="A222">
+                <say>It is fun to watch Lola chase ducks, but it is not a description that will help others find her.</say>
+            </message>
+            <message id="A223" name="A223">
+                <say>, which description can help people identify Lola?</say>
+            </message>
+            <message id="A224" name="A224">
+                <say>The best description is the last one. It tells us Lola's weight and appearance. These unique features will help people identify Lola easily.</say>
+            </message>
+            <message id="A225" name="A225">
+                <say>We should include the description that is unique to Lola.</say>
+            </message>
+            <message id="A226" name="A226">
+                <say>, which description is unique to Lola? Choose an answer by clicking on the buttons.</say>
+            </message>
+            <message id="A227" name="A227">
+                <say>The first answer is not helpful because it is true of most dogs.</say>
+            </message>
+            <message id="A228" name="A228">
+                <say>The second answer is not a good description because it is true of most dogs not just Lola.</say>
+            </message>
+            <message id="A229" name="A229">
+                <say>, which of the following is the most unique description for Lola? Click on your answer.</say>
+            </message>
+            <message id="A230" name="A230">
+                <say>The descriptions of where she was last seen are not helpful because they are probably no longer true. The second option is the most helpful.</say>
+            </message>
+            <message id="A231" name="A231">
+                <say>We should not include descriptions that could not be true anymore. </say>
+            </message>
+            <message id="A232" name="A232">
+                <say>, which of the descriptions will help us find Lola?</say>
+            </message>
+            <message id="A233" name="A233">
+                <say>Playing with another dog is a temporary action. This action will probably not continue until people find Lola.</say>
+            </message>
+            <message id="A234" name="A234">
+                <say>Getting into a grocery store is a temporary action. By the time people see the poster it will probably not be true.</say>
+            </message>
+            <message id="A235" name="A235">
+                <say>, which important piece of information is missing from the poster? Click on your answer please.</say>
+            </message>
+            <message id="A236" name="A236">
+                <say>That's right, Jordan. The important details are complete when we add the contact information for Lola's owners!</say>
+            </message>
+            <message id="A237" name="A237">
+                <say>If someone finds Lola it is important that they know who to contact to return her. This is a very important part of the poster. </say>
+            </message>
+            <message id="A238" name="A238">
+                <say>, what important piece of information is not on the poster?</say>
+            </message>
+            <message id="A239" name="A239">
+                <say>Knowing her favorite food will not help people find Lola.</say>
+            </message>
+            <message id="A240" name="A240">
+                <say>Lola's picture is already on the poster.</say>
+            </message>
+            <message id="A241" name="A241">
+                <say>This poster is a good summary because it includes all of the most important descriptions of Lola to help us find her!</say>
+            </message>
+            <message id="A242" name="A242">
+                <say>A good summary should include only the most important information to support the writer's purpose.</say>
+            </message>
+            <message id="A243" name="A243">
+                <say>, why is this summary good?</say>
+            </message>
+            <message id="A244" name="A244">
+                <say>Based on the poster on the right, this summary doesn't include Lola's hobbies.</say>
+            </message>
+            <message id="A245" name="A245">
+                <say>Based on the poster on the right, this summary doesn't include any information about when Lola was last seen.</say>
+            </message>
+            <message id="A246" name="A246">
+                <say>, which sentence tells us the main idea of this ad? Please click on the sentence.</say>
+            </message>
+            <message id="A247" name="A247">
+                <say>The first sentence is the main idea because it tells us that the author is trying to persuade people to buy the car. </say>
+            </message>
+            <message id="A248" name="A248">
+                <say>The main idea is the essential point that the author is trying to make. </say>
+            </message>
+            <message id="A249" name="A249">
+                <say>, which sentence tells us the main idea of this ad?</say>
+            </message>
+            <message id="A250" name="A250">
+                <say>If the sentence delivers the main idea, the following sentences should support it.</say>
+            </message>
+            <message id="A251" name="A251">
+                <say>This sentence is too specific to be the main idea. It seems like supporting information.</say>
+            </message>
+            <message id="A252" name="A252">
+                <say>, what is the most important description in the highlighted sentences? Click on an answer</say>
+            </message>
+            <message id="A253" name="A253">
+                <say>These two sentences describe one feature. This car gets great gas mileage!</say>
+            </message>
+            <message id="A254" name="A254">
+                <say>The second sentence describes the feature introduced in the first sentence.</say>
+            </message>
+            <message id="A255" name="A255">
+                <say>, what feature is described in the highlighted sentences?</say>
+            </message>
+            <message id="A256" name="A256">
+                <say>The second sentence describes how you can save money on gas in the city. What feature of the car does it support?</say>
+            </message>
+            <message id="A257" name="A257">
+                <say>When this sentence describes the excellent gas mileage in rural areas it is elaborating on a feature of the car. What is that feature?</say>
+            </message>
+            <message id="A258" name="A258">
+                <say>, what is the most important description in the highlighted sentences? Please click on your answer.</say>
+            </message>
+            <message id="A259" name="A259">
+                <say>The AC and heat are in great condition, so that makes travel comfortable in any weather. </say>
+            </message>
+            <message id="A260" name="A260">
+                <say>The description should include both the AC and the heat to be complete.</say>
+            </message>
+            <message id="A261" name="A261">
+                <say>, is one of the sentences supported by the other sentences?</say>
+            </message>
+            <message id="A262" name="A262">
+                <say>The AC is necessary for warm weather but you might want something else when it is cold to be comfortable.</say>
+            </message>
+            <message id="A263" name="A263">
+                <say>One of the highlighted sentences says, they make travel comfortable in any weather. What is making travel comfortable in any weather?</say>
+            </message>
+            <message id="A264" name="A264">
+                <say>, which highlighted sentence gives the best car description to a future buyer? Please click on the sentence in the passage that is your answer.</say>
+            </message>
+            <message id="A265" name="A265">
+                <say>The new tires and brakes are the most attractive to the buyer even though there is some rust.</say>
+            </message>
+            <message id="A266" name="A266">
+                <say>This description should attract the buyer.</say>
+            </message>
+            <message id="A267" name="A267">
+                <say>, which highlighted sentence gives the best car description to a future buyer?</say>
+            </message>
+            <message id="A268" name="A268">
+                <say>The fact that the car is clean is not as important as the car's other features.</say>
+            </message>
+            <message id="A269" name="A269">
+                <say>This sentence does not provide a feature of the car. </say>
+            </message>
+            <message id="A270" name="A270">
+                <say>, why is this a good summary of the car ad? Please click your answer below.</say>
+            </message>
+            <message id="A271" name="A271">
+                <say>That's right. We need to know that the car can save gas, but also that it has some rust. So the correct answer is the first one. This summary includes all the important car descriptions.</say>
+            </message>
+            <message id="A272" name="A272">
+                <say>A good summary should include the most important information from the ad.</say>
+            </message>
+            <message id="A273" name="A273">
+                <say>, can you explain why this is a good summary of the ad?</say>
+            </message>
+            <message id="A274" name="A274">
+                <say>The summary should not be limited to the good descriptions.</say>
+            </message>
+            <message id="A275" name="A275">
+                <say>A good summary needs to include the unattractive descriptions, if they are important.</say>
+            </message>
+            <message id="C1" name="C1">
+                <say>Art!</say>
+            </message>
+            <message id="C2" name="C2">
+                <say>Whitney!</say>
+            </message>
+            <message id="C3" name="C3">
+                <say>Carl!</say>
+            </message>
+            <message id="C4" name="C4">
+                <say>Qinyu!</say>
+            </message>
+            <message id="C5" name="C5">
+                <say>Tiffany!</say>
+            </message>
+            <message id="C6" name="C6">
+                <say>Amy!</say>
+            </message>
+            <message id="C7" name="C7">
+                <say>Andrew!</say>
+            </message>
+            <message id="C8" name="C8">
+                <say>Breya!</say>
+            </message>
+            <message id="C9" name="C9">
+                <say>Cadarrius!</say>
+            </message>
+            <message id="C10" name="C10">
+                <say>Craig!</say>
+            </message>
+            <message id="C11" name="C11">
+                <say>Danielle!</say>
+            </message>
+            <message id="C12" name="C12">
+                <say>Patrick!</say>
+            </message>
+            <message id="C13" name="C13">
+                <say>Habibah!</say>
+            </message>
+            <message id="C14" name="C14">
+                <say>Haiying!</say>
+            </message>
+            <message id="C15" name="C15">
+                <say>Janay!</say>
+            </message>
+            <message id="C16" name="C16">
+                <say>Jordan!</say>
+            </message>
+            <message id="C17" name="C17">
+                <say>Lijia!</say>
+            </message>
+            <message id="C18" name="C18">
+                <say>Logan!</say>
+            </message>
+            <message id="C19" name="C19">
+                <say>Mark!</say>
+            </message>
+            <message id="C20" name="C20">
+                <say>Megan!</say>
+            </message>
+            <message id="C21" name="C21">
+                <say>Morgan!</say>
+            </message>
+            <message id="C22" name="C22">
+                <say>Parya!</say>
+            </message>
+            <message id="C23" name="C23">
+                <say>Paul!</say>
+            </message>
+            <message id="C24" name="C24">
+                <say>Qiong!</say>
+            </message>
+            <message id="C25" name="C25">
+                <say>Qiping!</say>
+            </message>
+            <message id="C26" name="C26">
+                <say>Shi!</say>
+            </message>
+            <message id="C27" name="C27">
+                <say>Xiangen!</say>
+            </message>
+            <message id="C28" name="C28">
+                <say>Stephanie!</say>
+            </message>
+            <message id="C29" name="C29">
+                <say>Devi!</say>
+            </message>
+            <message id="C30" name="C30">
+                <say>Anthony!</say>
+            </message>
+            <message id="C31" name="C31">
+                <say>Yehui!</say>
+            </message>
+
+            <message id="D1" name="D1">
+                <say>Amelia</say>
+            </message>
+            <message id="D2" name="D2">
+                <say>Olivia</say>
+            </message>
+            <message id="D3" name="D3">
+                <say>Emily</say>
+            </message>
+            <message id="D4" name="D4">
+                <say>Ava</say>
+            </message>
+            <message id="D5" name="D5">
+                <say>Isla</say>
+            </message>
+            <message id="D6" name="D6">
+                <say>Jessica</say>
+            </message>
+            <message id="D7" name="D7">
+                <say>Poppy</say>
+            </message>
+            <message id="D8" name="D8">
+                <say>Isabella</say>
+            </message>
+            <message id="D9" name="D9">
+                <say>Sophie</say>
+            </message>
+            <message id="D10" name="D10">
+                <say>Mia</say>
+            </message>
+            <message id="D11" name="D11">
+                <say>Ruby</say>
+            </message>
+            <message id="D12" name="D12">
+                <say>Lily</say>
+            </message>
+            <message id="D13" name="D13">
+                <say>Grace</say>
+            </message>
+            <message id="D14" name="D14">
+                <say>Evie</say>
+            </message>
+            <message id="D15" name="D15">
+                <say>Sophia</say>
+            </message>
+            <message id="D16" name="D16">
+                <say>Ella</say>
+            </message>
+            <message id="D17" name="D17">
+                <say>Scarlett</say>
+            </message>
+            <message id="D18" name="D18">
+                <say>Chloe</say>
+            </message>
+            <message id="D19" name="D19">
+                <say>Isabelle</say>
+            </message>
+            <message id="D20" name="D20">
+                <say>Freya</say>
+            </message>
+            <message id="D21" name="D21">
+                <say>Charlotte</say>
+            </message>
+            <message id="D22" name="D22">
+                <say>Sienna</say>
+            </message>
+            <message id="D23" name="D23">
+                <say>Daisy</say>
+            </message>
+            <message id="D24" name="D24">
+                <say>Phoebe</say>
+            </message>
+            <message id="D25" name="D25">
+                <say>Millie</say>
+            </message>
+            <message id="D26" name="D26">
+                <say>Eva</say>
+            </message>
+            <message id="D27" name="D27">
+                <say>Alice</say>
+            </message>
+            <message id="D28" name="D28">
+                <say>Lucy</say>
+            </message>
+            <message id="D29" name="D29">
+                <say>Florence</say>
+            </message>
+            <message id="D30" name="D30">
+                <say>Sofia</say>
+            </message>
+            <message id="D31" name="D31">
+                <say>Layla</say>
+            </message>
+            <message id="D32" name="D32">
+                <say>Lola</say>
+            </message>
+            <message id="D33" name="D33">
+                <say>Holly</say>
+            </message>
+            <message id="D34" name="D34">
+                <say>Imogen</say>
+            </message>
+            <message id="D35" name="D35">
+                <say>Molly</say>
+            </message>
+            <message id="D36" name="D36">
+                <say>Matilda</say>
+            </message>
+            <message id="D37" name="D37">
+                <say>Lilly</say>
+            </message>
+            <message id="D38" name="D38">
+                <say>Rosie</say>
+            </message>
+            <message id="D39" name="D39">
+                <say>Elizabeth</say>
+            </message>
+            <message id="D40" name="D40">
+                <say>Erin</say>
+            </message>
+            <message id="D41" name="D41">
+                <say>Maisie</say>
+            </message>
+            <message id="D42" name="D42">
+                <say>Lexi</say>
+            </message>
+            <message id="D43" name="D43">
+                <say>Ellie</say>
+            </message>
+            <message id="D44" name="D44">
+                <say>Hannah</say>
+            </message>
+            <message id="D45" name="D45">
+                <say>Evelyn</say>
+            </message>
+            <message id="D46" name="D46">
+                <say>Abigail</say>
+            </message>
+            <message id="D47" name="D47">
+                <say>Elsie</say>
+            </message>
+            <message id="D48" name="D48">
+                <say>Summer</say>
+            </message>
+            <message id="D49" name="D49">
+                <say>Megan</say>
+            </message>
+            <message id="D50" name="D50">
+                <say>Jasmine</say>
+            </message>
+            <message id="D51" name="D51">
+                <say>Maya</say>
+            </message>
+            <message id="D52" name="D52">
+                <say>Amelie</say>
+            </message>
+            <message id="D53" name="D53">
+                <say>Lacey</say>
+            </message>
+            <message id="D54" name="D54">
+                <say>Willow</say>
+            </message>
+            <message id="D55" name="D55">
+                <say>Emma</say>
+            </message>
+            <message id="D56" name="D56">
+                <say>Bella</say>
+            </message>
+            <message id="D57" name="D57">
+                <say>Eleanor</say>
+            </message>
+            <message id="D58" name="D58">
+                <say>Esme</say>
+            </message>
+            <message id="D59" name="D59">
+                <say>Eliza</say>
+            </message>
+            <message id="D60" name="D60">
+                <say>Georgia</say>
+            </message>
+            <message id="D61" name="D61">
+                <say>Harriet</say>
+            </message>
+            <message id="D62" name="D62">
+                <say>Gracie</say>
+            </message>
+            <message id="D63" name="D63">
+                <say>Annabelle</say>
+            </message>
+            <message id="D64" name="D64">
+                <say>Emilia</say>
+            </message>
+            <message id="D65" name="D65">
+                <say>Amber</say>
+            </message>
+            <message id="D66" name="D66">
+                <say>Ivy</say>
+            </message>
+            <message id="D67" name="D67">
+                <say>Brooke</say>
+            </message>
+            <message id="D68" name="D68">
+                <say>Rose</say>
+            </message>
+            <message id="D69" name="D69">
+                <say>Anna</say>
+            </message>
+            <message id="D70" name="D70">
+                <say>Zara</say>
+            </message>
+            <message id="D71" name="D71">
+                <say>Leah</say>
+            </message>
+            <message id="D72" name="D72">
+                <say>Mollie</say>
+            </message>
+            <message id="D73" name="D73">
+                <say>Martha</say>
+            </message>
+            <message id="D74" name="D74">
+                <say>Faith</say>
+            </message>
+            <message id="D75" name="D75">
+                <say>Hollie</say>
+            </message>
+            <message id="D76" name="D76">
+                <say>Amy</say>
+            </message>
+            <message id="D77" name="D77">
+                <say>Bethany</say>
+            </message>
+            <message id="D78" name="D78">
+                <say>Violet</say>
+            </message>
+            <message id="D79" name="D79">
+                <say>Katie</say>
+            </message>
+            <message id="D80" name="D80">
+                <say>Maryam</say>
+            </message>
+            <message id="D81" name="D81">
+                <say>Francesca</say>
+            </message>
+            <message id="D82" name="D82">
+                <say>Julia</say>
+            </message>
+            <message id="D83" name="D83">
+                <say>Maria</say>
+            </message>
+            <message id="D84" name="D84">
+                <say>Darcey</say>
+            </message>
+            <message id="D85" name="D85">
+                <say>Isabel</say>
+            </message>
+            <message id="D86" name="D86">
+                <say>Tilly</say>
+            </message>
+            <message id="D87" name="D87">
+                <say>Maddison</say>
+            </message>
+            <message id="D88" name="D88">
+                <say>Victoria</say>
+            </message>
+            <message id="D89" name="D89">
+                <say>Isobel</say>
+            </message>
+            <message id="D90" name="D90">
+                <say>Niamh</say>
+            </message>
+            <message id="D91" name="D91">
+                <say>Skye</say>
+            </message>
+            <message id="D92" name="D92">
+                <say>Madison</say>
+            </message>
+            <message id="D93" name="D93">
+                <say>Darcy</say>
+            </message>
+            <message id="D94" name="D94">
+                <say>Aisha</say>
+            </message>
+            <message id="D95" name="D95">
+                <say>Beatrice</say>
+            </message>
+            <message id="D96" name="D96">
+                <say>Sarah</say>
+            </message>
+            <message id="D97" name="D97">
+                <say>Zoe</say>
+            </message>
+            <message id="D98" name="D98">
+                <say>Paige</say>
+            </message>
+            <message id="D99" name="D99">
+                <say>Heidi</say>
+            </message>
+            <message id="D100" name="D100">
+                <say>Lydia</say>
+            </message>
+            <message id="D101" name="D101">
+                <say>Oliver</say>
+            </message>
+            <message id="D102" name="D102">
+                <say>Jack</say>
+            </message>
+            <message id="D103" name="D103">
+                <say>Harry</say>
+            </message>
+            <message id="D104" name="D104">
+                <say>Jacob</say>
+            </message>
+            <message id="D105" name="D105">
+                <say>Charlie</say>
+            </message>
+            <message id="D106" name="D106">
+                <say>Thomas</say>
+            </message>
+            <message id="D107" name="D107">
+                <say>Oscar</say>
+            </message>
+            <message id="D108" name="D108">
+                <say>William</say>
+            </message>
+            <message id="D109" name="D109">
+                <say>James</say>
+            </message>
+            <message id="D110" name="D110">
+                <say>George</say>
+            </message>
+            <message id="D111" name="D111">
+                <say>Alfie</say>
+            </message>
+            <message id="D112" name="D112">
+                <say>Joshua</say>
+            </message>
+            <message id="D113" name="D113">
+                <say>Noah</say>
+            </message>
+            <message id="D114" name="D114">
+                <say>Ethan</say>
+            </message>
+            <message id="D115" name="D115">
+                <say>Muhammad</say>
+            </message>
+            <message id="D116" name="D116">
+                <say>Archie</say>
+            </message>
+            <message id="D117" name="D117">
+                <say>Leo</say>
+            </message>
+            <message id="D118" name="D118">
+                <say>Henry</say>
+            </message>
+            <message id="D119" name="D119">
+                <say>Joseph</say>
+            </message>
+            <message id="D120" name="D120">
+                <say>Samuel</say>
+            </message>
+            <message id="D121" name="D121">
+                <say>Riley</say>
+            </message>
+            <message id="D122" name="D122">
+                <say>Daniel</say>
+            </message>
+            <message id="D123" name="D123">
+                <say>Mohammed</say>
+            </message>
+            <message id="D124" name="D124">
+                <say>Alexander</say>
+            </message>
+            <message id="D125" name="D125">
+                <say>Max</say>
+            </message>
+            <message id="D126" name="D126">
+                <say>Lucas</say>
+            </message>
+            <message id="D127" name="D127">
+                <say>Mason</say>
+            </message>
+            <message id="D128" name="D128">
+                <say>Logan</say>
+            </message>
+            <message id="D129" name="D129">
+                <say>Isaac</say>
+            </message>
+            <message id="D130" name="D130">
+                <say>Benjamin</say>
+            </message>
+            <message id="D131" name="D131">
+                <say>Dylan</say>
+            </message>
+            <message id="D132" name="D132">
+                <say>Jake</say>
+            </message>
+            <message id="D133" name="D133">
+                <say>Edward</say>
+            </message>
+            <message id="D134" name="D134">
+                <say>Finley</say>
+            </message>
+            <message id="D135" name="D135">
+                <say>Freddie</say>
+            </message>
+            <message id="D136" name="D136">
+                <say>Harrison</say>
+            </message>
+            <message id="D137" name="D137">
+                <say>Tyler</say>
+            </message>
+            <message id="D138" name="D138">
+                <say>Sebastian</say>
+            </message>
+            <message id="D139" name="D139">
+                <say>Zachary</say>
+            </message>
+            <message id="D140" name="D140">
+                <say>Adam</say>
+            </message>
+            <message id="D141" name="D141">
+                <say>Theo</say>
+            </message>
+            <message id="D142" name="D142">
+                <say>Jayden</say>
+            </message>
+            <message id="D143" name="D143">
+                <say>Arthur</say>
+            </message>
+            <message id="D144" name="D144">
+                <say>Toby</say>
+            </message>
+            <message id="D145" name="D145">
+                <say>Luke</say>
+            </message>
+            <message id="D146" name="D146">
+                <say>Lewis</say>
+            </message>
+            <message id="D147" name="D147">
+                <say>Matthew</say>
+            </message>
+            <message id="D148" name="D148">
+                <say>Harvey</say>
+            </message>
+            <message id="D149" name="D149">
+                <say>Harley</say>
+            </message>
+            <message id="D150" name="D150">
+                <say>David</say>
+            </message>
+            <message id="D151" name="D151">
+                <say>Ryan</say>
+            </message>
+            <message id="D152" name="D152">
+                <say>Tommy</say>
+            </message>
+            <message id="D153" name="D153">
+                <say>Michael</say>
+            </message>
+            <message id="D154" name="D154">
+                <say>Reuben</say>
+            </message>
+            <message id="D155" name="D155">
+                <say>Nathan</say>
+            </message>
+            <message id="D156" name="D156">
+                <say>Blake</say>
+            </message>
+            <message id="D157" name="D157">
+                <say>Mohammad</say>
+            </message>
+            <message id="D158" name="D158">
+                <say>Jenson</say>
+            </message>
+            <message id="D159" name="D159">
+                <say>Bobby</say>
+            </message>
+            <message id="D160" name="D160">
+                <say>Luca</say>
+            </message>
+            <message id="D161" name="D161">
+                <say>Charles</say>
+            </message>
+            <message id="D162" name="D162">
+                <say>Frankie</say>
+            </message>
+            <message id="D163" name="D163">
+                <say>Dexter</say>
+            </message>
+            <message id="D164" name="D164">
+                <say>Kai</say>
+            </message>
+            <message id="D165" name="D165">
+                <say>Alex</say>
+            </message>
+            <message id="D166" name="D166">
+                <say>Connor</say>
+            </message>
+            <message id="D167" name="D167">
+                <say>Liam</say>
+            </message>
+            <message id="D168" name="D168">
+                <say>Jamie</say>
+            </message>
+            <message id="D169" name="D169">
+                <say>Elijah</say>
+            </message>
+            <message id="D170" name="D170">
+                <say>Stanley</say>
+            </message>
+            <message id="D171" name="D171">
+                <say>Louie</say>
+            </message>
+            <message id="D172" name="D172">
+                <say>Jude</say>
+            </message>
+            <message id="D173" name="D173">
+                <say>Callum</say>
+            </message>
+            <message id="D174" name="D174">
+                <say>Hugo</say>
+            </message>
+            <message id="D175" name="D175">
+                <say>Leon</say>
+            </message>
+            <message id="D176" name="D176">
+                <say>Elliot</say>
+            </message>
+            <message id="D177" name="D177">
+                <say>Louis</say>
+            </message>
+            <message id="D178" name="D178">
+                <say>Theodore</say>
+            </message>
+            <message id="D179" name="D179">
+                <say>Gabriel</say>
+            </message>
+            <message id="D180" name="D180">
+                <say>Ollie</say>
+            </message>
+            <message id="D181" name="D181">
+                <say>Aaron</say>
+            </message>
+            <message id="D182" name="D182">
+                <say>Frederick</say>
+            </message>
+            <message id="D183" name="D183">
+                <say>Evan</say>
+            </message>
+            <message id="D184" name="D184">
+                <say>Elliott</say>
+            </message>
+            <message id="D185" name="D185">
+                <say>Owen</say>
+            </message>
+            <message id="D186" name="D186">
+                <say>Teddy</say>
+            </message>
+            <message id="D187" name="D187">
+                <say>Finlay</say>
+            </message>
+            <message id="D188" name="D188">
+                <say>Caleb</say>
+            </message>
+            <message id="D189" name="D189">
+                <say>Ibrahim</say>
+            </message>
+            <message id="D190" name="D190">
+                <say>Ronnie</say>
+            </message>
+            <message id="D191" name="D191">
+                <say>Felix</say>
+            </message>
+            <message id="D192" name="D192">
+                <say>Aiden</say>
+            </message>
+            <message id="D193" name="D193">
+                <say>Cameron</say>
+            </message>
+            <message id="D194" name="D194">
+                <say>Austin</say>
+            </message>
+            <message id="D195" name="D195">
+                <say>Kian</say>
+            </message>
+            <message id="D196" name="D196">
+                <say>Rory</say>
+            </message>
+            <message id="D197" name="D197">
+                <say>Seth</say>
+            </message>
+            <message id="D198" name="D198">
+                <say>Robert</say>
+            </message>
+            <message id="D199" name="D199">
+                <say>Albert</say>
+            </message>
+            <message id="D200" name="D200">
+                <say>Sonny</say>
+            </message>
+            <message id="D201" name="D201">
+                <say>Jack</say>
+            </message>
+            <message id="D202" name="D202">
+                <say>Rose</say>
+            </message>
+            <message id="D203" name="D203">
+                <say>Tyler</say>
+            </message>
+            <message id="D204" name="D204">
+                <say>Oscar</say>
+            </message>
+            <message id="D205" name="D205">
+                <say>Kim</say>
+            </message>
+            <message id="D206" name="D206">
+                <say>Cam</say>
+            </message>
+        </scene>
+    </stage>
+</project>

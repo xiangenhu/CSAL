@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//var arr=["./Lesson21-Ending1-0.html", "./Lesson21-Ending2-0.html", "./Lesson21-Intro0-1.html", "./Lesson21-Intro0-2.html", "./Lesson21-IntroTitle-old.html", "./Lesson21-IntroTitle.html", "./Lesson21-Main0-0.html", "./Lesson21-Main0-1.html", "./Lesson21-Main0-10easy.html", "./Lesson21-Main0-10hard.html", "./Lesson21-Main0-10medium.html", "./Lesson21-Main0-11easy.html", "./Lesson21-Main0-11hard.html", "./Lesson21-Main0-11medium.html", "./Lesson21-Main0-12easy.html", "./Lesson21-Main0-12hard.html", "./Lesson21-Main0-12medium.html", "./Lesson21-Main0-1easy.html", "./Lesson21-Main0-1hard.html", "./Lesson21-Main0-1medium.html", "./Lesson21-Main0-2.html", "./Lesson21-Main0-2easy.html", "./Lesson21-Main0-2hard.html", "./Lesson21-Main0-2medium.html", "./Lesson21-Main0-3.html", "./Lesson21-Main0-3easy.html", "./Lesson21-Main0-3hard.html", "./Lesson21-Main0-3medium.html", "./Lesson21-Main0-4.html", "./Lesson21-Main0-4easy.html", "./Lesson21-Main0-4hard.html", "./Lesson21-Main0-4medium.html", "./Lesson21-Main0-5.html", "./Lesson21-Main0-5easy.html", "./Lesson21-Main0-5hard.html", "./Lesson21-Main0-5medium.html", "./Lesson21-Main0-6easy.html", "./Lesson21-Main0-6hard.html", "./Lesson21-Main0-6medium.html", "./Lesson21-Main0-7easy.html", "./Lesson21-Main0-7hard.html", "./Lesson21-Main0-7medium.html", "./Lesson21-Main0-8easy.html", "./Lesson21-Main0-8hard.html", "./Lesson21-Main0-8medium.html", "./Lesson21-Main0-9easy.html", "./Lesson21-Main0-9hard.html", "./Lesson21-Main0-9medium.html", "./Lesson21-Main1-0.html", "./Lesson21-Main2-0.html"];
+//var arr=["./Lesson21-Main0-1.html", "./Lesson21-Ending1-0.html","./Lesson21-Main2-0.html"];
+//var arr=["./Lesson20-IntroTitle.html", "./Lesson20-Main0-0.html", "./Lesson20-Main0-1.html", "./Lesson20-Main0-1a.html", "./Lesson20-Main0-2.html", "./Lesson20-Main0-3.html", "./Lesson20-Main0-3a.html", "./Lesson20-Main0-4.html", "./Lesson20-Main0-4a.html", "./Lesson20-Main0-5.html", "./Lesson20-Main0-5a.html", "./Lesson20-Main0-6.html", "./Lesson20-Main0-6a.html", "./Lesson20-Main0-7.html", "./Lesson20-Main0-8.html", "./Lesson20-Main0-9.html", "./Lesson20-Main0-A.html", "./Lesson20-Main0-B.html", "./Lesson20-Main1-0.html", "./Lesson20-Main1-1.html", "./Lesson20-Main1-1a.html", "./Lesson20-Main1-2.html", "./Lesson20-Main1-3.html", "./Lesson20-Main1-3a.html", "./Lesson20-Main1-4.html", "./Lesson20-Main1-4a.html", "./Lesson20-Main1-5.html", "./Lesson20-Main1-5a.html", "./Lesson20-Main1-6.html", "./Lesson20-Main1-6a.html", "./Lesson20-Main1-7.html", "./Lesson20-Main1-8.html", "./Lesson20-Main1-8a.html", "./Lesson20-Main1-9.html", "./Lesson20Close.html", "./Lesson20ExamplePage.html"];
+//var arr=["./Lesson5-IntroTitle.html", "./PunctChart.html", "./Punctuation-Difficult-1.html", "./Punctuation-Difficult-10.html", "./Punctuation-Difficult-11.html", "./Punctuation-Difficult-12.html", "./Punctuation-Difficult-13.html", "./Punctuation-Difficult-2.html", "./Punctuation-Difficult-3.html", "./Punctuation-Difficult-4.html", "./Punctuation-Difficult-5.html", "./Punctuation-Difficult-6.html", "./Punctuation-Difficult-7.html", "./Punctuation-Difficult-8.html", "./Punctuation-Easy-1.html", "./Punctuation-Easy-2.html", "./Punctuation-Easy-3.html", "./Punctuation-Easy-4.html", "./Punctuation-Easy-5.html", "./Punctuation-Easy-6.html", "./Punctuation-Easy-7.html", "./Punctuation-Easy-8.html", "./Punctuation-Medium-1.html", "./Punctuation-Medium-2.html", "./Punctuation-Medium-3.html", "./Punctuation-Medium-4.html", "./Punctuation-Medium-5.html", "./Punctuation-Medium-6.html", "./Punctuation-Medium-7.html", "./Punctuation-Medium-8.html", "./Punctuation-Medium-9.html", "./Punctuation-Medium-a.html", "./test5.html"];
+//var arr=["./AdGlasses.html", "./AdOrganize.html", "./AdPerky.html", "./AdPotato.html", "./AdSpa.html", "./adTea.html", "./IntroTitle.html", "./Lesson10Close.html", "./Lesson10Close_old.html", "./NonLiteralOpening.html"];
+//var arr=["./Lesson4-IntroTitle-old.html", "./Lesson4-IntroTitle.html", "./Lesson4_Close.html", "./Lesson4_Intro_1.html", "./Lesson4_Intro_2.html", "./Lesson4_Level1_Diagnostic_1.html", "./Lesson4_Level1_Diagnostic_2.html", "./Lesson4_Level1_Diagnostic_3.html", "./Lesson4_Level1_Diagnostic_4.html", "./Lesson4_Level1_Diagnostic_5.html", "./Lesson4_Level1_Easy_1.html", "./Lesson4_Level1_Easy_10.html", "./Lesson4_Level1_Easy_2.html", "./Lesson4_Level1_Easy_3.html", "./Lesson4_Level1_Easy_4.html", "./Lesson4_Level1_Easy_5.html", "./Lesson4_Level1_Easy_6.html", "./Lesson4_Level1_Easy_7.html", "./Lesson4_Level1_Easy_8.html", "./Lesson4_Level1_Easy_9.html", "./Lesson4_Level1_Hard_1.html", "./Lesson4_Level1_Hard_10.html", "./Lesson4_Level1_Hard_2.html", "./Lesson4_Level1_Hard_3.html", "./Lesson4_Level1_Hard_4.html", "./Lesson4_Level1_Hard_5.html", "./Lesson4_Level1_Hard_6.html", "./Lesson4_Level1_Hard_7.html", "./Lesson4_Level1_Hard_8.html", "./Lesson4_Level1_Hard_9.html", "./Lesson4_Level3_1.html", "./Lesson4_Level3_10.html", "./Lesson4_Level3_11.html", "./Lesson4_Level3_12.html", "./Lesson4_Level3_2.html", "./Lesson4_Level3_3.html", "./Lesson4_Level3_4.html", "./Lesson4_Level3_5.html", "./Lesson4_Level3_6.html", "./Lesson4_Level3_7.html", "./Lesson4_Level3_8.html", "./Lesson4_Level3_9.html", "./Lesson4_Level3_Open.html", "./test 4.html", "./test.html"];
+//var arr=["./Lesson1-Closing0-1.html", "./Lesson1-Easy0-1.html", "./Lesson1-Easy0-10.html", "./Lesson1-Easy0-2.html", "./Lesson1-Easy0-3.html", "./Lesson1-Easy0-4.html", "./Lesson1-Easy0-5.html", "./Lesson1-Easy0-6.html", "./Lesson1-Easy0-7.html", "./Lesson1-Easy0-8.html", "./Lesson1-Easy0-9.html", "./Lesson1-Ending2-0.html", "./Lesson1-Hard0-.html", "./Lesson1-Hard0-0.html", "./Lesson1-Hard0-10.html", "./Lesson1-Hard0-11.html", "./Lesson1-Hard0-2.html", "./Lesson1-Hard0-3.html", "./Lesson1-Hard0-4.html", "./Lesson1-Hard0-5.html", "./Lesson1-Hard0-6.html", "./Lesson1-Hard0-7.html", "./Lesson1-Hard0-8.html", "./Lesson1-Intro0-1.html", "./Lesson1-Intro0-2.html", "./Lesson1-Intro0-3.html", "./Lesson1-IntroBack.html", "./Lesson1-IntroTitle.html", "./Lesson1-IntroTitle2.html", "./Lesson1-Medium0-0.html", "./Lesson1-Medium0-1.html", "./Lesson1-Medium0-10.html", "./Lesson1-Medium0-2.html", "./Lesson1-Medium0-3.html", "./Lesson1-Medium0-4.html", "./Lesson1-Medium0-5.html", "./Lesson1-Medium0-6.html", "./Lesson1-Medium0-7.html", "./Lesson1-Medium0-8.html", "./Lesson1-Medium0-9.html"];
+//var arr=["./Lesson3-IntroTitle-old.html","./Lesson3-IntroTitle.html", "./Lesson3TA.html", "./Lesson3TARepeat.html", "./Lesson3TARepeat_10.html", "./Lesson3TARepeat_11.html", "./Lesson3TARepeat_12.html", "./Lesson3TARepeat_13.html", "./Lesson3TARepeat_14.html", "./Lesson3TARepeat_15.html", "./Lesson3TARepeat_2.html", "./Lesson3TARepeat_3.html", "./Lesson3TARepeat_4.html", "./Lesson3TARepeat_5.html", "./Lesson3TARepeat_6.html", "./Lesson3TARepeat_7.html", "./Lesson3TARepeat_8.html", "./Lesson3TARepeat_9.html", "./Lesson3TA_10.html", "./Lesson3TA_11.html", "./Lesson3TA_12.html", "./Lesson3TA_13.html", "./Lesson3TA_14.html", "./Lesson3TA_15.html", "./Lesson3TA_2.html", "./Lesson3TA_3.html", "./Lesson3TA_4.html", "./Lesson3TA_5.html", "./Lesson3TA_6.html", "./Lesson3TA_7.html", "./Lesson3TA_8.html", "./Lesson3TA_9.html", "./Lesson3TA_End.html", "./Lesson3TA_Instruction.html", "./Lesson3TB.html", "./Lesson3TB_10.html", "./Lesson3TB_2.html", "./Lesson3TB_3.html", "./Lesson3TB_4.html", "./Lesson3TB_5.html", "./Lesson3TB_6.html", "./Lesson3TB_7.html", "./Lesson3TB_8.html", "./Lesson3TB_9.html", "./Lesson3TB_End.html", "./Lesson3TB_Instruction.html"];
+//var arr=["./Lesson3-Easy-0.html", "./Lesson3-Easy-1.html", "./Lesson3-Easy-10.html", "./Lesson3-Easy-11.html", "./Lesson3-Easy-2.html", "./Lesson3-Easy-3.html", "./Lesson3-Easy-4.html", "./Lesson3-Easy-5.html", "./Lesson3-Easy-6.html", "./Lesson3-Easy-7.html", "./Lesson3-Easy-8.html", "./Lesson3-Easy-9.html", "./Lesson3-Hard-0.html", "./Lesson3-Hard-1.html", "./Lesson3-Hard-10.html", "./Lesson3-Hard-11.html", "./Lesson3-Hard-2.html", "./Lesson3-Hard-3.html", "./Lesson3-Hard-4.html", "./Lesson3-Hard-5.html", "./Lesson3-Hard-6.html", "./Lesson3-Hard-7.html", "./Lesson3-Hard-8.html", "./Lesson3-Hard-9.html", "./Lesson3-IntroTitle-old.html", "./Lesson3-IntroTitle.html", "./Lesson3-MainClose.html", "./Lesson3-MainIntro.html", "./Lesson3-Medium-0.html", "./Lesson3-Medium-1.html", "./Lesson3-Medium-10.html", "./Lesson3-Medium-11.html", "./Lesson3-Medium-2.html", "./Lesson3-Medium-3.html", "./Lesson3-Medium-4.html", "./Lesson3-Medium-5.html", "./Lesson3-Medium-6.html", "./Lesson3-Medium-7.html", "./Lesson3-Medium-8.html", "./Lesson3-Medium-9.html", "./Lesson3Close.html", "./Lesson3Intro.html"];
+//var arr=["./Lesson6-IntroTitle-old.html", "./Lesson6-IntroTitle.html", "./Lesson6-Main0-0.html", "./Lesson6-Main0-1.html", "./Lesson6-Main0-10easy.html", "./Lesson6-Main0-10hard.html", "./Lesson6-Main0-10medium.html", "./Lesson6-Main0-1easy.html", "./Lesson6-Main0-1hard.html", "./Lesson6-Main0-1medium.html", "./Lesson6-Main0-2easy.html", "./Lesson6-Main0-2hard.html", "./Lesson6-Main0-2medium.html", "./Lesson6-Main0-3easy.html", "./Lesson6-Main0-3hard.html", "./Lesson6-Main0-3medium.html", "./Lesson6-Main0-4easy.html", "./Lesson6-Main0-4hard.html", "./Lesson6-Main0-4medium.html", "./Lesson6-Main0-5easy.html", "./Lesson6-Main0-5hard.html", "./Lesson6-Main0-5medium.html", "./Lesson6-Main0-6easy.html", "./Lesson6-Main0-6hard.html", "./Lesson6-Main0-6medium.html", "./Lesson6-Main0-7easy.html", "./Lesson6-Main0-7hard.html", "./Lesson6-Main0-7medium.html", "./Lesson6-Main0-8easy.html", "./Lesson6-Main0-8hard.html", "./Lesson6-Main0-8medium.html", "./Lesson6-Main0-9easy.html", "./Lesson6-Main0-9hard.html", "./Lesson6-Main0-9medium.html", "./Lesson6-Main1-0.html", "./Lesson6-Main2-0.html", "./Lesson6-MainClose.html", "./Lesson6-MainIntro.html"];
+//var arr=["./Copy of L11Round1AQ2.html", "./L11IntroBlue.html", "./L11IntroTitle.html", "./L11Round1AMainPage.html", "./L11Round1AQ1.html", "./L11Round1AQ10.html", "./L11Round1AQ11.html", "./L11Round1AQ12.html", "./L11Round1AQ13.html", "./L11Round1AQ14.html", "./L11Round1AQ15.html", "./L11Round1AQ16.html", "./L11Round1AQ2.html", "./L11Round1AQ3.html", "./L11Round1AQ4.html", "./L11Round1AQ5.html", "./L11Round1AQ6.html", "./L11Round1AQ7.html", "./L11Round1AQ8.html", "./L11Round1AQ9.html", "./oldL11Round1AQ5.html", "./oldL11Round1AQ6.html", "./oldL11Round1AQ7.html", "./oldL11Round1AQ8.html"];
+//var arr=["./Copy of Lesson12-Practical-Main0-4.html", "./Copy of Lesson12-Practical-Main2-2.html", "./Lesson12-IntroTextTypes.html", "./Lesson12-IntroTitle-old.html", "./Lesson12-IntroTitle.html", "./Lesson12-Practical-Main0-0.html", "./Lesson12-Practical-Main0-1.html", "./Lesson12-Practical-Main0-2.html", "./Lesson12-Practical-Main0-3.html", "./Lesson12-Practical-Main0-4.html", "./Lesson12-Practical-Main1-0.html", "./Lesson12-Practical-Main1-1.html", "./Lesson12-Practical-Main1-2.html", "./Lesson12-Practical-Main1-22.html", "./Lesson12-Practical-Main2-0.html", "./Lesson12-Practical-Main2-1.html", "./Lesson12-Practical-Main2-2.html", "./Lesson12-Practical-Main2-3.html", "./Lesson12-Practical-Main2-4.html", "./Lesson12-Practical-UnlockDemo.html"];
+var arr=["./IntroTitle-old.html", "./IntroTitle.html", "./L13-Opening1.html", "./Lesson13-Activity1.html", "./Lesson13-Activity10.html", "./Lesson13-Activity11.html", "./Lesson13-Activity2.html", "./Lesson13-Activity3.html", "./Lesson13-Activity4.html", "./Lesson13-Activity5.html", "./Lesson13-Activity6.html", "./Lesson13-Activity7.html", "./Lesson13-Activity8.html", "./Lesson13-Activity9.html", "./MiddleStory.html"];
+
+
+
+function GetWorldEvent(s){
+console.log(s);
+ $("#textarea").append(s+"\n");
+}
+
+function getitem() { 
+    document.getElementById('iframe').contentWindow.GetItem();
+}
+
+function showItem() { 
+   document.getElementById('iframe').contentWindow.ShowItem(); 
+}
+
+function lock() { 
+   document.getElementById('iframe').contentWindow.Lock(); 
+}
+
+function Unlock() { 
+   document.getElementById('iframe').contentWindow.Unlock(); 
+}
+
+function Unlock() { 
+   document.getElementById('iframe').contentWindow.Unlock(); 
+}
+
+function PlaySound() { 
+   
+}
+
+$(document).ready(function() {
+var arrCount=arr.length;
+for(i=0;i<arrCount;i++)
+{
+
+console.log(arr[i]);
+
+$("#linkBut").append("<a href='#' class='linkbutton' id=page"+i+">"+arr[i]+"</a>\n");
+}
+
+$('.linkbutton').click(function()
+{
+var link=$(this).html();
+ document.getElementById('iframe').src=link
+
+});
+
+});
+</script>
+		
+</head>
+<body>
+
+<iframe src="./Lesson13-Activity8.html" width="800" height="600" id="iframe">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<div id="linkBut" style="word-wrap: break-word; word-break: normal; ">
+</div>
+<button type="button" id="getitem" onclick="getitem()">getItem</button>
+<button type="button" id="showitem" onclick="showItem()">showItem</button>
+<button type="button" onclick="lock()">lock</button>
+<button type="button" onclick="Unlock()">Unlock</button>
+
+
+<textarea rows="10" cols="80" id="textarea">
+
+</textarea>
+
+</body>
+</html>

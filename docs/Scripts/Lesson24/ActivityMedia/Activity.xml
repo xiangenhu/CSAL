@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="JordanAgree">
+        <Item text="_user_,  I believe you are correct." speech="" play="_user_,B1" />
+        <Item text="_user_,  we are in agreement" speech="" play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="JordanDisagree">
+        <Item text="_user_, I don't think that's correct." speech="" play="_user_,B3" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="NegativeFeedbacktoUser">
+        <Item text="_user_, sorry! that wasn't what I was looking for." speech="" play="_user_,A1" />
+        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A2" />
+        <Item text="_user_, Whoops! Looks like you picked the wrong answer." speech="" play="_user_,A3" />
+        <Item text="_user_ Better luck next time! That wasn't the best answer." speech="" play="_user_,A4" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoUser">
+        <Item text="_user_ Great job!" speech="" play="_user_,A5" />
+        <Item text="_user_, Good! That is right." speech="" play="_user_,A6" />
+        <Item text=" _user_  You are correct!" speech="" play="_user_,A7" />
+        <Item text="_user_, Perfect! You got it right!" speech="" play="_user_,A8" />
+        <Item text="_user_, Exactly! You are right!" speech="" play="_user_,A9" />
+        <Item text="_user_, Amazing! " speech="" play="_user_,A10" />
+        <Item text="_user_, Awesome job! You answered correctly! " speech="" play="_user_,A11" />
+        <Item text="_user_, Just superb! You're incredible!" speech="" play="_user_,A12" />
+        <Item text="_user_, Brilliant job! You got it right!" speech="" play="_user_,A13" />
+        <Item text="_user_, Perfect! Good work." speech="" play="_user_,A14" />
+        <Item text="_user_, Well done! You're good!" speech="" play="_user_,A15" />
+        <Item text="_user_, That's correct! You're doing beautifully! " speech="" play="_user_,A16" />
+        <Item text="_user_, You rock my socks off! Awesome job getting that one right!" speech="" play="_user_,A17" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackToJordan">
+        <Item text="Jordan you didn't pick the correct answer!" speech="" play="A18" />
+        <Item text="Jordan you actually got that question wrong!" speech="!" play="A19" />
+        <Item text="Jordan that's not right!" speech="" play="A20" />
+        <Item text="Jordan you gave an incorrect answer." speech="" play="A21" />
+        <Item text="Jordan you were wrong." speech="" play="A22" />
+        <Item text="Jordan, Sorry, that's not right." speech="" play="A23" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToJordan">
+        <Item text="Jordan, Wonderful! You answered the question correctly." speech="" play="A24" />
+        <Item text="Jordan, You rock! That's right!" speech="" play="A25" />
+        <Item text="Jordan, That's right!" speech="" play="A26" />
+        <Item text="Jordan, great work! You got it right!" speech="" play="A27" />
+        <Item text="Jordan, Awesome work! That's it!" speech="" play="A28" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry. that wasn't what I was looking for. " speech="" play="A29" />
+        <Item text="_user_ and Jordan, no. That wasn't the correct answer. " speech="" play="_user_,A30" />
+        <Item text="Well, Neither of you gave me the answer that I was looking for." speech="" play="A31" />
+        <Item text="Sorry you two. That wasn't right. " speech="" play="A32" />
+        <Item text="_user_ and Jordan Not quite . You both got that one incorrect. " speech="" play="_user_,A33" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="_user_ and Jordan Dynamite.  you are both correct." speech="" play="_user_,A34" />
+        <Item text="Phenomenal work you two. Way to go on getting it right." speech="" play="A35" />
+        <Item text="Great answer you two. Outstanding work." speech="" play="A36" />
+        <Item text="_user_ and Jordan that's correct. Smooth move you two." speech="" play="_user_,A37" />
+        <Item text="You two rule. That's right." speech="" play="A38" />
+        <Item text="Excellent work. You are both right." speech="" play="A39" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, welcome back!." speech="" media="media\Lesson24-IntroTitle.html" play="_user_,A40" />
+      <Item id="2" agent="Jordan" text="Hello again." speech="" play="B4" />
+      <Item id="3" agent="Cristina" text="We are going to be learning about the order of events and order of importance. " speech="" play="A41" />
+      <Item id="4" agent="Jordan" text="Great, sounds very useful." speech="" play="B5" />
+      <Item id="5" agent="Cristina" text="Yes it is, Jordan! Order of events refers to the order in which certain things happen. This is important when it comes to scheduling or planning. In our lesson, order of importance refers to how to handle different situations based on the same text.Let's go ahead and get started. Start by reading this text. When you are finished, click on the button that says click to continue at the bottom! Go ahead and start!" speech="" media="media\Lesson24-Medium-0.html" play="A42" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's start with the topic." speech="" play="A43" />
+      <Item id="2" agent="Jordan" text="Awesome. I remember the topic is kind of what the writer is writing about." speech="" play="B6" />
+      <Item id="3" agent="Cristina" text="Great Jordan! What is the topic of this text?" speech="" play="A44" />
+      <Item id="4" agent="Jordan" text="The topic is bus schedules!" speech="" play="B7" />
+      <Item id="5" agent="Cristina" text="Nice, Jordan! The topic of this text is bus schedules, it seems kind of obvious but the topic is an important place to start. You're on a roll! Let's move on." speech="" play="A45" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's get some more practice in how to read this schedule." speech="" play="A46" />
+      <Item id="2" agent="Jordan" text="Cristina, I need to go to main street tomorrow. When does the bus arrive there?" speech="" play="B8" />
+      <Item id="3" agent="Cristina" text="Let's look at the schedule and find out!" speech="" play="A47" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Jordan" text="I need to go to the industrial district tomorrow." speech="" play="B9" />
+      <Item id="2" agent="Cristina" text="The popular line goes to the industrial diistrict." speech="" play="A48" />
+      <Item id="3" agent="Jordan" text="I need to be there before eight. When does the popular line arrive in the industrial district?" speech="" play="B10" />
+      <Item id="4" agent="Cristina" text="_user_ can you help Jordan find the time the popular line arrives in the industrial district?" speech="" play="_user_,A49" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Jordan" text="I want to take my dogs to the park soon. However, I do not know what bus goes to the park." speech="" play="B11" />
+      <Item id="2" agent="Cristina" text="Let's look at the schedule and find out!" speech="" play="A50" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Cristina" text="Sometimes buses stop more than once. It's important to know if a bus stops more than once." speech="" play="A51" />
+      <Item id="2" agent="Jordan" text="How do we find out if a bus stops more than once?" speech="" play="B12" />
+      <Item id="3" agent="Cristina" text="The schedule shows if a bus stops multiple times or not. Let's practice by looking at information about the Raines line." speech="" play="A52" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Cristina" text="The schedule provides all the information we need about the Raines line. Read the text carefully and answer the question." speech="" play="A53" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="Cristina" text="The writer includes a lot of information on the schedule. Let's look at the reasons the writer may have for including certain information." speech="" play="A54" />
+    </RigidPack>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="Cristina" text="The bus schedule is not always the same." speech="" play="A55" />
+      <Item id="2" agent="Jordan" text="Why is it not always the same?" speech="" play="B13" />
+      <Item id="3" agent="Cristina" text="Sometimes events or holidays can cause changes." speech="" play="A56" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="">
+      <Item id="1" agent="Cristina" text="Writers often used headings to indicate imporant information." speech="" play="A57" />
+      <Item id="2" agent="Jordan" text="So, if headings are used, there is often important information under them?" speech="" play="B14" />
+      <Item id="3" agent="Cristina" text="Yes, Jordan that is correct." speech="" play="A58" />
+    </RigidPack>
+    <RigidPack name="Transition9" usedIn="">
+      <Item id="1" agent="Cristina" text="So now we are going to talk about summaries. A summary for a schedule is a tricky thing because technically the whole text is summarized, however there are summaries in this text that can be picked out." speech="" play="A59" />
+      <Item id="2" agent="Jordan" text="But how do we know what to put in a summary for a text like this?" speech="" play="B15" />
+      <Item id="3" agent="Cristina" text="Good question! A summary would include information based on where you are going. A complete summary would include other information as well, but we can find the outline of summaries already in the text." speech="" play="A60" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan brilliant job! We are going to move on to another text." speech="" play="_user_,A61" />
+      <Item id="2" agent="Jordan" text="Alright! I'm pretty confident! Bring it on!" speech="" play="B16" />
+      <Item id="3" agent="Cristina" text="Read this text, when you are finished reading, click the click to continue button at the bottom of the page." speech="" play="A62" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-1" usedIn="">
+      <Item id="1" agent="Cristina" text="We are talking about importance in this passage. However, first we must identify  the topic of the text?" speech="" play="A63" />
+      <Item id="2" agent="Jordan" text="The topic tells us what we are talking about!" speech="" play="B17" />
+      <Item id="3" agent="Cristina" text="Jordan, that is correct." speech="" play="A64" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-2" usedIn="">
+      <Item id="1" agent="Jordan" text="What actions do we take to find a doctor?" speech="" play="B18" />
+      <Item id="2" agent="Cristina" text="Well, Jordan there are several steps to finding a good doctor. Let's talk about the most important step first!" speech="" play="A65" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-3" usedIn="">
+      <Item id="1" agent="Cristina" text="Now that we have identified the most important step to finding a dog, interviewing the doctor. Why is it the most important step?" speech="" play="A66" />
+      <Item id="2" agent="Jordan" text="I'm not sure." speech="" play="B19" />
+      <Item id="3" agent="Cristina" text="_user_ can you help Jordan?" speech="" play="_user_,A67" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-4" usedIn="">
+      <Item id="1" agent="Cristina" text="Now let's talk about the second most important thing to do when finding a doctor." speech="" play="A68" />
+      <Item id="2" agent="Jordan" text="Finding a doctor is hard, I'm not sure what the next step is." speech="" play="B20" />
+      <Item id="3" agent="Cristina" text="_user_please help Jordan." speech="" play="_user_,A69" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-5" usedIn="">
+      <Item id="1" agent="Cristina" text="So we know next we must next check the doctor's credentials. " speech="" play="A70" />
+      <Item id="2" agent="Jordan" text="Do we just ask the doctor?" speech="" play="B21" />
+      <Item id="3" agent="Cristina" text="Let's read the text and find out." speech="" play="A71" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-6" usedIn="">
+      <Item id="1" agent="Jordan" text="Okay, we have checked the doctor's credentials. What do we do next?" speech="" play="B22" />
+      <Item id="2" agent="Cristina" text="Excellent question! Let's look at the text and find out." speech="" play="A72" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-7" usedIn="">
+      <Item id="1" agent="Cristina" text="The office environment is important to check out before choosing a doctor." speech="" play="A73" />
+      <Item id="2" agent="Jordan" text="Why is that? " speech="" play="B23" />
+      <Item id="3" agent="Cristina" text="Let's read and find out!" speech="" play="A74" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-8" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's move on to the least important thing to do. When I say least, that doesn't mean it is, not, important. It means that the other things we discussed are, more, important." speech="" play="A75" />
+      <Item id="2" agent="Jordan" text="Oh that makes sense. I was going to ask you about that. Your mind reading skills are excellent, Cristina." speech="" play="B24" />
+      <Item id="3" agent="Cristina" text="Let's move on to the question!" speech="" play="A76" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-9" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's talk about why talking to the receptionist is the least most important thing to do. Read the text to find out!" speech="" play="A77" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-a" usedIn="">
+      <Item id="1" agent="Cristina" text="Talking to the receptionist can have its benefits. Look at the text to find out why you may want to talk to the receptionist." speech="" play="A78" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-b" usedIn="">
+      <Item id="1" agent="Cristina" text="So now we are going to talk about summaries. A summary of this order of importance text includes all of the important things the text includes." speech="" play="A79" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-c" usedIn="">
+      <Item id="1" agent="Cristina" text="Summaries that do not include all important information or include irrelevant information are bad summaries." speech="" play="A80" />
+    </RigidPack>
+    <RigidPack name="Easy-E0-d" usedIn="">
+      <Item id="1" agent="Cristina" text="Look at the summary provided, there appears to be information in the text that is not needed," speech="" play="A81" />
+      <Item id="2" agent="Jordan" text="Finding the irrelevant information is difficult. I need help." speech="" play="B25" />
+      <Item id="3" agent="Cristina" text="Jordan, don't worry, we will help you!" speech="" play="A82" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-1" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's talk about the topic of this text!&quot;" speech="" play="A83" />
+      <Item id="2" agent="Jordan" text="The topic is what to do when things happen at work, right?" speech="" play="B26" />
+      <Item id="3" agent="Cristina" text="Great, Jordan! Let's dig right into the text! We'll start by looking at the first thing the text tells us to do when having a problem with general conduct." speech="" play="A84" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-2" usedIn="">
+      <Item id="1" agent="Cristina" text="The next situation is a tough one. Someone is having a problem with sexual harrassment at work and the supervisor is involved." speech="" play="A85" />
+      <Item id="2" agent="Jordan" text="Oh no! What do we do?" speech="" play="B27" />
+      <Item id="3" agent="Cristina" text="Let's read the text and find out what we should do." speech="" play="A86" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-3" usedIn="">
+      <Item id="1" agent="Jordan" text="These are very difficult." speech="" play="B28" />
+      <Item id="2" agent="Cristina" text="Yes, these types of situations can be diifficult to handle. Let's continue to read the text and find out what to do if a conflict of interest exists." speech="" play="A87" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-4" usedIn="">
+      <Item id="1" agent="Cristina" text="It appears your supervisor is up to no good. There is evidence that he is committing fraud. Who do you speak to about this problem?" speech="" play="A88" />
+      <Item id="2" agent="Jordan" text="I do not know. I need help." speech="" play="B29" />
+      <Item id="3" agent="Cristina" text="_user_, please help Jordan." speech="" play="_user_,A89" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-5" usedIn="">
+      <Item id="1" agent="Cristina" text="There are certain times when you should speak to the department head first. When should you report a problem to the department head? Let's look at the text and find out." speech="" play="A90" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-6" usedIn="">
+      <Item id="1" agent="Jordan" text="Pat keeps stealing my friend, Frank's, lunches. Frank has asked Pat to stop, but he still does it." speech="" play="B30" />
+      <Item id="2" agent="Cristina" text="Poor Frank.What does the text say Frank should do about Pat stealing his lunches?" speech="" play="A91" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-7" usedIn="">
+      <Item id="1" agent="Jordan" text="I think my supervisor is stealing money. I am not sure what to do." speech="" play="B31" />
+      <Item id="2" agent="Cristina" text="Jordan, that's a terrible situation. Let's consult the test to see what you should do." speech="" play="A92" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-8" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ Here is another situation and I will ask you what to do about it. There is a woman named Maxine. She is being sexually harassed by a man named Larry at her work. He has been making very suggestive comments and making inappropriate advances in passing. Recently, he has been following her to her car and threatening her." speech="" play="_user_,A93" />
+      <Item id="2" agent="Jordan" text="What a creep!" speech="" play="B32" />
+      <Item id="3" agent="Cristina" text="She talked to human resources but all they said was to ignore it. Maxine feels very threatened by his behavior. What should she do?" speech="" play="A94" />
+      <Item id="4" agent="Jordan" text="I think she should punch him in the face." speech="" play="B33" />
+      <Item id="5" agent="Cristina" text="That's not an appropriate action." speech="" play="A95" />
+    </RigidPack>
+    <RigidPack name="Hard-H0-9" usedIn="">
+      <Item id="1" agent="Cristina" text="The order of importance often changes." speech="" play="A96" />
+      <Item id="2" agent="Jordan" text="It does not stay the same?" speech="" play="B34" />
+      <Item id="3" agent="Cristina" text="Jordan, no, it does not stay the same. Let's look at the text and find out why it changes." speech="" play="A97" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="Both of you did so well today! We got through some pretty tough passages! " speech="" media="media\Lesson24Close.html" play="A98" />
+      <Item id="2" agent="Jordan" text="Yeah we did. But I feel pretty good about it, really successful!" speech="" play="B35" />
+      <Item id="3" agent="Cristina" text="Remember, in this lesson, both order of events and order of importance are not always cut and dry. Circumstance can have a big impact on how we summarize. Also, signal words are great clues to tip you off to important information. Great job today, again! I will see you two next time!" speech="" play="A99" />
+      <Item id="4" agent="Jordan" text="See you two later!" speech="" play="B36" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ Click on the time the main line will arrive at main street." speech="" media="" play="_user_,A100">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The main line will reach main street at ten twenty five. We know this by looking at the arrival time column and the main line row." speech="" keys="." threshold="" test="" play="A101" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ Which arrival time corresponds to the main bus line? Give it another go." speech="" keys="." threshold="" test="" play="_user_,A102" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer. Even if you're not sure." speech="" keys="." threshold="" test="" play="A103" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you try this one. What time does the main line reach its destination?" speech="" keys="." threshold="" test="" play="A104" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it gets there at nine." speech="" keys="." threshold="" test="" play="B37" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it gets there at ten twenty five." speech="" keys="." threshold="" test="" play="B38" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ click on the time the poplar line will get to the industrial district." speech="" media="" play="_user_,A105">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The poplar line gets there at seven forty five! We can tell this by looking at the arrival time column and the poplar line row." speech="" keys="." threshold="" test="" play="A106" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ Which arrival time corresponds to the poplar line? Try it again!" speech="" keys="." threshold="" test="" play="_user_,A107" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to click an answer, please!" speech="" keys="." threshold="" test="" play="A108" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think, Jordan? When does the poplar line reach its destination!?" speech="" keys="." threshold="" test="" play="A109" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I'm pretty sure it gets there at seven thirty." speech="" keys="." threshold="" test="" play="B39" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it gets there at seven forty five." speech="" keys="." threshold="" test="" play="B40" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ Click on the bus line that goes to the park?" speech="" media="" play="_user_,A110">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The peach line goes to the park! We can tell by looking under the destination column, finding park, and looking to what row it corresponds to." speech="" keys="." threshold="" test="" play="A111" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, Which of these bus lines is in the same row as the word, park? Maybe that is more clear!" speech="" keys="." threshold="" test="" play="_user_,A112" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please click on an answer!" speech="" keys="." threshold="" test="" play="_user_,A113" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which line goes to the park?" speech="" keys="." threshold="" test="" play="A114" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The alberta line." speech="" keys="." threshold="" test="" play="B41" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it the peach line." speech="" keys="." threshold="" test="" play="B42" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ does the Raines line only stop when it reaches the shopping district? Click an answer." speech="" media="" play="_user_,A115">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="No, the raines line does not only stop at the shopping district." speech="" keys="." threshold="" test="" play="A116" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ read the text at the bottom of the chart. Try this one again." speech="" keys="." threshold="" test="" play="_user_,A117" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="I can't read your mind, give it a try!" speech="" keys="." threshold="" test="" play="A118" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, does the raines line only go to the shopping district?" speech="" keys="." threshold="" test="" play="A119" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it only stops in the shopping district." speech="" keys="." threshold="" test="" play="B43" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="No. It doesn't only stop in the shopping district." speech="" keys="." threshold="" test="" play="B44" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, How do we know that the raines line does not only stop at the shopping district?" speech="" media="" play="_user_,A120">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We can see that the raines line stops a total of five times! So we know it does not only stop at the shopping district." speech="" keys="." threshold="" test="" play="A121" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ take a look at the last column. Think about it and give this question another go!" speech="" keys="." threshold="" test="" play="_user_,A122" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember, if you do not click an answer, I can't tell what you are thinking!" speech="" keys="." threshold="" test="" play="A123" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how do we know the raines line does not only stop at the shopping district?" speech="" keys="." threshold="" test="" play="A124" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I have no idea. Because it's raining?" speech="" keys="." threshold="" test="" play="B45" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="We can see from the text that it stops five times." speech="" keys="." threshold="" test="" play="B46" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Why would the writer include the arrival time?" speech="" media="" play="_user_,A125">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The writer includes arrival time so passengers know when they will get there!" speech="" keys="." threshold="" test="" play="A126" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, arrival time is the same thing as when you will get there. Why might this be important?" speech="" keys="." threshold="" test="" play="_user_,A127" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer!" speech="" keys="." threshold="" test="" play="A128" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why does the writer include arrival time?" speech="" keys="." threshold="" test="" play="A129" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Well, maybe they need to know where they are going." speech="" keys="." threshold="" test="" play="B47" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="So passengers know when the bus will arrive." speech="" keys="." threshold="" test="" play="B48" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, What happens to the bus schedule on holidays?" speech="" media="" play="_user_,A130">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="On holidays, the bus schedule changes. " speech="" keys="." threshold="" test="" play="A131" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ look at the text on the bottom of the chart. What happens on holidays? Try it again." speech="" keys="." threshold="" test="" play="_user_,A132" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Click an answer, I'm sure you can get this one!" speech="" keys="." threshold="" test="" play="A133" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what happens on holidays?" speech="" keys="." threshold="" test="" play="A134" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text=" I think it would be really fun if the lines changed names. I would want to ride the missletow line!" speech="" keys="." threshold="" test="" play="B49" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The bus schedule changes." speech="" keys="." threshold="" test="" play="B50" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, How do we know that these are the important details?" speech="" media="" play="_user_,A135">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We know they are important details because they are headings in the text. Headings are important in schedules." speech="" keys="." threshold="" test="" play="A136" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ think about why the top row is included. What is the purpose of these details? " speech="" keys="." threshold="" test="" play="_user_,A137" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" test="" play="A138" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how do you think we know these are important details?" speech="" keys="." threshold="" test="" play="A139" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's because they appear multiple times." speech="" keys="." threshold="" test="" play="B51" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="They are important details because they are headings in the text." speech="" keys="." threshold="" test="" play="B52" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the information you would need to write a summary of how to get downtown?" speech="" media="" play="_user_,A140">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the alberta line row because it corresponds to going downtown." speech="" keys="." threshold="" play="A141" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, look on the table to see the relevant information for a trip downtown. Give it another try." speech="" keys="." threshold="" play="_user_,A142" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to click an answer!" speech="" keys="." threshold="" play="A143" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="." threshold="" play="A144" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the peach line." speech="" keys="." threshold="" play="B53" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the answer is the albera line." speech="" keys="." threshold="" play="B54" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, What is the topic of this text?" speech="" media="" play="_user_,A145">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is choosing a doctor." speech="" keys="." threshold="" test="" play="A146" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ look at the clues in the text. Which of these choices is specific about the topic of this text." speech="" keys="." threshold="" test="" play="_user_,A147" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="You must click on an answer!" speech="" keys="." threshold="" test="" play="A148" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the topic of this text is?" speech="" keys="." threshold="" test="" play="A149" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the topic is getting health insurance." speech="" keys="." threshold="" test="" play="B55" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the topic is choosing a doctor." speech="" keys="." threshold="" test="" play="B56" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the most important thing you do when looking for a doctor." speech="" media="" play="_user_,A150">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The most important thing when looking for a doctor is interviewing prospective doctors." speech="" keys=".." threshold="" test="" play="A151" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ look for signal words in the text. How about giving it another go!" speech="" keys="." threshold="" test="" play="_user_,A152" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Go ahead and click an answer, even if you are not sure." speech="" keys="." threshold="" test="" play="A153" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think is the most important thing when looking for a new doctor?" speech="" keys="." threshold="" test="" play="A154" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's reading about them." speech="" keys="." threshold="" test="" play="B57" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think interviewing doctors is the most important." speech="" keys="." threshold="" test="" play="B58" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Why is interviewing the doctor the most important thing to do?" speech="" media="" play="_user_,A155">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Interviewing is important because it allows you to ask the doctor questions." speech="" keys="." threshold="" test="" play="A156" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, in the text, the author explains what interviewing allows you to do. What is it?" speech="" keys="." threshold="" test="" play="_user_,A157" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to click an answer! " speech="" keys="." threshold="" test="" play="A158" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, does does interviewing allow you to do?" speech="" keys="." threshold="" test="" play="A159" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Well, probably so you can see if you get along." speech="" keys="." threshold="" test="" play="B59" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="So that you can ask the doctor questions." speech="" keys="." threshold="" test="" play="B60" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the second most important thing you do when looking for a doctor." speech="" media="" play="_user_,A160">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The second thing you do is check the doctor's credentials." speech="" keys="." threshold="" test="" play="A161" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, look for signal words in the text. Which of these sentences is the second thing you do?" speech="" keys="." threshold="" test="" play="_user_,A162" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" test="" play="A163" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these sentences is the second thing you do?" speech="" keys="." threshold="" test="" play="A164" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think seeing if he or she answers the phone is the second thing." speech="" keys="." threshold="" test="" play="B61" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think checking the doctor's credentials is next." speech="" keys="." threshold="" test="" play="B62" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, How do you check a doctor's credentials?" speech="" media="" play="_user_,B63">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You can check a doctor's credentials by asking your insurance agency." speech="" keys="," threshold="" test="" play="A165" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, re-read the part of the text that talks about credentials. Try this one again!" speech="" keys="," threshold="" test="" play="_user_,A166" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember, i'm not a mind reader. Please click an answer!" speech="" keys="," threshold="" test="" play="A167" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how do you check a doctor's credentials?" speech="" keys="," threshold="" test="" play="A168" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I don't know about this one." speech="" keys="," threshold="" test="" play="B64" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="You can ask your insurance company." speech="" keys="." threshold="" test="" play="B65" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the third most important thing you do when looking for a doctor." speech="" media="" play="_user_,A169">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The third thing you do is look at the environment in the doctor's office." speech="" keys="." threshold="" test="" play="A170" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ look for signal words in the text. Which sentence includes a signal word that indicates the third most important thing you can do?" speech="" keys="." threshold="" test="" play="_user_,A171" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please click on an answer." speech="" keys="." threshold="" test="" play="_user_,A172" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think is the third most important thing you do?" speech="" keys="." threshold="" test="" play="A173" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think you need to watch the other patients." speech="" keys="." threshold="" test="" play="B66" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="You need to check the enviroment of the doctor's office." speech="" keys="." threshold="" test="" play="B67" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Why might you check the environment in the waiting room?" speech="" media="" play="_user_,A174">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You check the waiting room to make sure patients are not waiting too long." speech="" keys="." threshold="" test="" play="A175" />
+            <Answer name="IncorectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, read the section about the waiting room. Try this question again!" speech="" keys="." threshold="" test="" play="_user_,A176" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to answer the question!" speech="" keys="." threshold="" test="" play="A177" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why might you check the environment in the waiting room?" speech="" keys="." threshold="" test="" play="A178" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I bet it's because people watching is fun." speech="" keys="." threshold="" test="" play="B68" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I bet it's to make sure patients are not waiting a long time." speech="" keys="." threshold="" test="" play="B69" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the least important thing you do when looking for a doctor." speech="" media="" play="_user_,A179">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Talking to the receptionist is the least important thing you can do when looking for a doctor." speech="" keys="," threshold="" test="" play="A180" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ look for signal words in the text. Which of these sentences contain a signal word that indicates the least important thing you do." speech="" keys="," threshold="" test="" play="_user_,A181" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer, even if you're not sure!" speech="" keys="," threshold="" test="" play="A182" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these do you think is the  least important thing you do?" speech="" keys="," threshold="" test="" play="A183" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's, if he or she is pleasant and efficient." speech="" keys="," threshold="" test="" play="B70" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I bet it's talking to the receptionist." speech="" keys="." threshold="" test="" play="B71" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, What is one way you know this is the least important thing to do?" speech="" media="" play="_user_,A184">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We know talking to the receptionist is the least important thing because we see the signal word finally." speech="" keys="." threshold="" test="" play="A185" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, remember how we use signal words. Is there a signal word in this part of the text?" speech="" keys="." threshold="" test="" play="_user_,A186" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click an answer!" speech="" keys="." threshold="" test="" play="A187" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="." threshold="" test="" play="A188" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Maybe it's because time is money." speech="" keys="." threshold="" test="" play="B72" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The signal word finally indicates it's the last thing to do meaning it's the least important." speech="" keys="." threshold="" test="" play="B73" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEa">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Why might you talk to the receptionist?" speech="" media="" play="_user_,A189">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You might want to talk to the receptionist to be sure you have a pleasant experience." speech="" keys="." threshold="" test="" play="A190" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, if you decide on this doctor, you will encounter the receptionist quite a bit. What could be important to know about the doctor's office." speech="" keys="." threshold="" test="" play="_user_,A191" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer, even if you're not sure!" speech="" keys="." threshold="" test="" play="A192" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why would you talk to the receptionist?" speech="" keys="." threshold="" test="" play="A193" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I would want to see if she was cute probably. " speech="" keys="." threshold="" test="" play="B74" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="So I could have a pleasant experience." speech="" keys="." threshold="" test="" play="B75" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEb">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Is this a good text summary?" speech="" media="" play="_user_,A194">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="No, this is not a good text summary. A good text summary includes important information." speech="" keys="." threshold="" test="" play="A195" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, Remember, a good text summary includes important information. Does this summary only include important information?" speech="" keys="." threshold="" test="" play="_user_,A196" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="My mind reading skills seem to be failing today, please click an answer!" speech="" keys="." threshold="" test="" play="A197" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, is this a good text summary?" speech="" keys="." threshold="" test="" play="A198" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think so, but I'm not sure." speech="" keys="." threshold="" test="" play="B76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEc">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Why is this a bad text summary?" speech="" media="" play="_user_,A199">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This is a bad text summary because it includes irrelevant information." speech="" keys="." threshold="" test="" play="A200" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, What does this summary include that it should not include?" speech="" keys="." threshold="" test="" play="_user_,A201" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer!" speech="" keys="." threshold="" test="" play="A202" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why is this a bad text summary?" speech="" keys="." threshold="" test="" play="A203" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the second answer." speech="" keys="." threshold="" test="" play="B77" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the first answer." speech="" keys="." threshold="" test="" play="B78" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEd">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Click on the sentence that does not belong in the text summary." speech="" media="" play="_user_,A204">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the sentence, you want to make sure the patients are not waiting forever." speech="" keys="." threshold="" test="" play="A205" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ one of these sentences is not important information. Can you pick out which one?" speech="" keys="." threshold="" test="" play="_user_,A206" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer!" speech="" keys="." threshold="" test="" play="A207" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these sentences does not belong." speech="" keys="." threshold="" test="" play="A208" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the one about talking to the receptionist." speech="" keys="." threshold="" test="" play="B79" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the sentence talking about patients not waiting forever." speech="" keys="." threshold="" test="" play="B80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, if you are having a problem with general conduct, what is the first thing you do?" speech="" media="" play="_user_,A209">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The first thing you do under general conduct is address the situation with the parties involved." speech="" keys="." threshold="" test="" play="A210" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, look at the general conduct section. What is the first thing that you do?" speech="" keys="." threshold="" test="" play="_user_,A211" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" test="" play="A212" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the first thing you do under general misconduct?" speech="" keys="." threshold="" test="" play="A213" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I'm betting you talk to your supervisor." speech="" keys="." threshold="" test="" play="B81" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm betting you talk to the parties involved." speech="" keys="." threshold="" test="" play="B82" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Under the sexual harassment section, who do you report the problem to if your supervisor is involved?" speech="" media="" play="_user_,A214">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If your supervisor is involved, you should talk to human resources about it." speech="" keys="." threshold="" test="" play="A215" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ let's look at the chart. In the sexual harassment section, you are first told to report the situation to your supervisor. However, if your supervisor is involved, what do you do next?" speech="" keys="." threshold="" test="" play="_user_,A216" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click an answer!" speech="" keys="." threshold="" test="" play="A217" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you do if your supervisor is involved in a sexual harassment case?" speech="" keys="." threshold="" test="" play="A218" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="You talk to him or her about it." speech="" keys="." threshold="" test="" play="B83" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think you should talk to human resources." speech="" keys="." threshold="" test="" play="B84" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, in the case of conflict of interest, what is the order in which Jordan should report the incident?" speech="" media="" play="_user_,A219">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, your department head, and then human resources." speech="" keys="." threshold="" test="" play="A220" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, let's take a closer look at the chart in the conflict of interest section." speech="" keys="." threshold="" test="" play="_user_,A221" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please don't forget to click an answer!" speech="" keys="." threshold="" test="" play="A222" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the order in which you should report the incident?" speech="" keys="." threshold="" test="" play="A223" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I should report to my supervisor then my department head." speech="" keys="." threshold="" test="" play="B85" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I should report them to my department head then human resources." speech="" keys="." threshold="" test="" play="B86" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, What is the first thing you do if you suspect your supervisor has committed fraud and you are uncomfortable talking to the audit department?" speech="" media="" play="_user_,A224">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is talk to your department head." speech="" keys="." threshold="" test="" play="A225" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ this is another tough one. Who should you talk to if you suspect your supervisor is committing fraud?" speech="" keys="." threshold="" test="" play="_user_,A226" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember, if you don't click an answer, I don't know what your answer is!" speech="" keys="." threshold="" test="" play="A227" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you do?" speech="" keys="." threshold="" test="" play="A228" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think you talk to your supervisor about it." speech="" keys="." threshold="" test="" play="B87" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think you talk to your department head." speech="" keys="." threshold="" test="" play="B88" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, in which of the following situations should you first go to your department head?" speech="" media="" play="_user_,A229">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, conflict of interest." speech="" keys="." threshold="" test="" play="A230" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, let's take a look through all of the areas of conduct. Which one lists the department head as the first person to contact?" speech="" keys="." threshold="" test="" play="_user_,A231" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer, even if you're not sure." speech="" keys="." threshold="" test="" play="A232" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, in which of these situations do you first go to your department head?" speech="" keys="." threshold="" test="" play="A233" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the first one." speech="" keys="." threshold="" test="" play="B89" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the third one." speech="" keys="." threshold="" test="" play="B90" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Frank has told Pat three times to stop stealing lunches. What should Frank do if Pat does it again?" speech="" media="" play="_user_,A234">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Frank should talk to his supervisor." speech="" keys="." threshold="" test="" play="A235" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, Frank has already tried to talk to his co-worker. What is the next step he should take?" speech="" keys="." threshold="" test="" play="_user_,A236" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click an answer." speech="" keys="." threshold="" test="" play="A237" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what should frank do?" speech="" keys="." threshold="" test="" play="A238" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think he should talk to Pat. Talking about lunch is making me hungry." speech="" keys="." threshold="" test="" play="B91" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think he should talk to his supervisor." speech="" keys="." threshold="" test="" play="B92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, What do I do if I think my supervisor is stealing money?" speech="" media="" play="_user_,B93">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You should talk to your company audit department." speech="" keys="." threshold="" test="" play="A239" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ this is a tough situation. What should Jordan do if he thinks his supervisor is stealing money?" speech="" keys="." threshold="" test="" play="_user_,A240" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Click an answer, even if you're not sure." speech="" keys="." threshold="" test="" play="A241" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, read the text, what does the text say you should do?" speech="" keys="." threshold="" test="" play="A242" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I should talk to my department head." speech="" keys="." threshold="" test="" play="B94" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, What should Maxine do now?" speech="" media="" play="_user_,A243">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Maxine should report the situation to the police." speech="" keys="." threshold="" test="" play="A244" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, let's think about Maxine's options. She has already talked to Human Resources and feels like they did not help. What should she do now?" speech="" keys="." threshold="" test="" play="_user_,A245" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ Please click an answer." speech="" keys="." threshold="" test="" play="_user_,A246" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think Maxine should do?" speech="" keys="." threshold="" test="" play="A247" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="She should punch him!" speech="" keys="." threshold="" test="" play="B95" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="She should report the situation to the police." speech="" keys="." threshold="" test="" play="B96" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ is the order of importance the same for every situation?" speech="" media="" play="_user_,B97">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The order of importance is based on circumstance." speech="" keys="." threshold="" play="A248" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, please try again. In every area of conduct, do you have the same order of importance for how to report it?" speech="" keys="." threshold="" play="_user_,A249" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" play="A250" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, is the order of importance always the same." speech="" keys="." threshold="" play="A251" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I bet its always the same." speech="" keys="." threshold="" play="B98" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="No. I think it's based on the circumstance." speech="" keys="." threshold="" play="B99" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="Opening. To LoadPage">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson24Easy.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson24Hard.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="Wait for reading. To DoneReading">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="Stop1" hasItem="" priority="1" frequency="" description="First passage finished. Opening1. Next page. To PageLoaded ">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="5" />
+      <Action agent="System" act="Wait" data="5" id="6" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="Stop2" hasItem="" priority="1" frequency="" description="Second passage finished. To PageLoadedEasyorHard">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoadedEasyorHard" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPageMedium" status="LoadPage" response="" event="MediumPageLoaded" hasItem="" priority="" frequency="" description="Medium page is loaded. To Read">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadPageEasy" status="LoadPage" response="" event="EasyPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadPageDifficult" status="LoadPage" response="" event="DifficultPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="Get difficulty level. To GetTutoringPack">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Easy-E0" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="Get medium tutoring pack. To HasTutoringPack">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Hard-H0" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPH" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="Get media item. To GetItem">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="Show item. Check agent. To AskQ">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="WaitForEvent" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="Jordan asks main question (not implemented in media and tutoring packs). To UserAnswer">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="Cristina asks main question. to UserAnswer">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LastPageFinal" status="PageLoaded" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="PageLoadedE" status="PageLoadedEasyorHard" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoadedD" status="PageLoadedEasyorHard" response="" event="MediaLoadedHard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoadedM" status="PageLoaded" response="" event="MediaLoadedMedium" hasItem="" priority="" frequency="" description="Medium page loaded. To GetDifficulty">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="CorrectJordanAgrees" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. JordanAgree. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbacktoBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CorrectJordanDisagrees" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. Jordan incorrect. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbacktoUser" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="System" act="WaitForEvent" data="30" id="4" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2JordanAgrees" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. JordanAgree. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbacktoBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Correct2JordanDisagrees" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. Jordan incorrect. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbacktoUser" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Incorrect2JordanAgree" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbacktoBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Incorrect2JordanCorrect" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbacktoUser" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="Blank2JordanCorrect" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Blank2JordanIncorrect" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="MediaLoadedMedium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition" response="" event="MediaLoadedHard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="5" id="3" />
+    </Rule>
+    <Rule name="ChangeLevel" status="Transition" response="" event="MainPageLoaded2" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="ChangeLevelHard" status="Transition" response="" event="MainPageLoaded3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="ChangeLevelEnd" status="Transition" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

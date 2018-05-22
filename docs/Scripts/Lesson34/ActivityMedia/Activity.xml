@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text=" _user_ I don't think that's it." speech="" play="_user_,B3" />
+        <Item text=" _user_ I don't think that was the right answer. " speech="" play="_user_,B4" />
+        <Item text="Oops looks like wasn't quite right. " speech="" play="B5" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B6" />
+        <Item text="_user_ Super! You got it!" speech="" play="_user_,B7" />
+        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B8" />
+        <Item text="_user_ You answered correctly! Awesome job!" speech="" play="_user_,B9" />
+        <Item text="_user_ Amazing, you're doing great!" speech="" play="_user_,B10" />
+        <Item text="_user_ Magnificent!" speech="" play="_user_,B11" />
+        <Item text="_user_ Exactly, you nailed it!" speech="" play="_user_,B12" />
+        <Item text="_user_ , Wow, that's it! " speech="" play="_user_,B13" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="NegativeFeedbacktoJordan">
+        <Item text="Jordan, sorry! that wasn't what I was looking for." speech="" play="A1" />
+        <Item text="Jordan, Well, not quite, That wasn't the right choice." speech="" play="A2" />
+        <Item text="Jordan, Whoops! Looks like you picked the wrong answer." speech="" play="A3" />
+        <Item text="Jordan Better luck next time! That wasn't the best answer." speech="" play="A4" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoUser">
+        <Item text="_user_, sorry! that wasn't what I was looking for." speech="" play="_user_,A5" />
+        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A6" />
+        <Item text="_user_, Whoops! Looks like you picked the wrong answer." speech="" play="_user_,A7" />
+        <Item text="_user_ Better luck next time! That wasn't the best answer." speech="" play="_user_,A8" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Great job you two! You both got that one right!" speech="" play="A9" />
+        <Item text="Excellent! You both got the correct answer!" speech="" play="A10" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoUser">
+        <Item text="_user_ Great job!" speech="" play="_user_,A11" />
+        <Item text="_user_, Good! That is right." speech="" play="_user_,A12" />
+        <Item text=" _user_  You are correct!" speech="" play="_user_,A13" />
+        <Item text="_user_, Perfect! You got it right!" speech="" play="_user_,A14" />
+        <Item text="_user_ great! You answered correctly." speech="" play="_user_,A15" />
+        <Item text=" _user_. You got it right!" speech=" " play="_user_,A16" />
+        <Item text="_user_, Perfect! Good work." speech="" play="_user_,A17" />
+        <Item text="_user_, Well done! " speech="" play="_user_,A18" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A19" />
+        <Item text="_user_, Whoops! you are not correct." speech="" play="_user_,A20" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,A21" />
+        <Item text="_user_, Not exactly, good try" speech="" play="_user_,A22" />
+        <Item text="_user_, Well, that wasn't what I was thinking. Here is the best choice in green" speech="" play="_user_,A23" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry, you both are incorrect. That wasn't what I was looking for." speech="" play="A24" />
+        <Item text="Well, not quite you two, you both picked the wrong answer." speech="" play="A25" />
+        <Item text="Whoops! Looks like you both picked the wrong answer." speech="" play="A26" />
+        <Item text="You both are incorrect. Better luck next time! " speech="" play="A27" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="_user_ here is the answer." speech="" play="_user_,A28" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A29" />
+      </SpeechCan>
+      <SpeechCan name="JordanPositiveFeedback">
+        <Item text="Jordan, Wonderful! You answered the question correctly." speech="" play="A30" />
+        <Item text="Jordan, That's right!" speech="" play="A31" />
+        <Item text="Jordan, That's right!" speech="" play="A32" />
+        <Item text="Jordan, great work! You got it right!" speech="" play="A33" />
+        <Item text="Jordan, That's it!" speech="" play="A34" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A35" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A36" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="Jordan" text="I think I get it. So, the at symbol can help us connect between posts. What if I want to connect between people?" speech="" play="B14" />
+      <Item id="2" agent="Cristina" text="Great question Jordan. In order to connect people, you need to do something called tagging them in a comment or post." speech="" play="A37" />
+    </RigidPack>
+    <RigidPack name="Transition9" usedIn="">
+      <Item id="1" agent="Jordan" text="Symbols on social media can be confusing." speech="" play="B15" />
+      <Item id="2" agent="Cristina" text="Yes they can, let's move on.." speech="" play="A38" />
+    </RigidPack>
+    <RigidPack name="Transition92" usedIn="">
+      <Item id="1" agent="Cristina" text="Alright" speech="" play="A39" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Jordan" text="Alright, my password is typed in." speech="" play="B16" />
+      <Item id="2" agent="Cristina" text="_user_, please press the button that says, login, and we'll jump right in!" speech="" play="_user_,A40" />
+    </RigidPack>
+    <RigidPack name="Transition94" usedIn="">
+      <Item id="1" agent="Jordan" text="That was so cute! But, what would I do if I wanted to find a new video that has nothing to do with the one we just watched? I think it would be cool to post one on my page sometime." speech="" play="B17" />
+      <Item id="2" agent="Cristina" text="Great question. Let's all work together to figure this issue out." speech="" play="A41" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Jordan" text="I learned so much on how to use social media today. " speech="" media="media\Lesson34Close.html" play="B18" />
+      <Item id="2" agent="Cristina" text="Jordan, wonderful! I hope today's lesson on social media was fun and informative! Social media is a great way to keep in touch with friends, family, colleagues, and people who enjoy the same things as you! Remember, keep your passwords private so that you're the only person with access to your personal pages and try to make sure that you don't share personal information that people could use." speech="" play="A42" />
+      <Item id="3" agent="Jordan" text="I will definitely remember that! I am looking forward to watching more funny cat videos!" speech="" play="B19" />
+      <Item id="4" agent="Cristina" text="Oh Jordan, there are many more where that came from! I'm so glad you both were here to learn about social media. Well, that concludes today's lesson. You both did so great today! See you next time!" speech="" play="A43" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Jordan" text="But why does it matter if someone posts something that is inappropriate?" speech="" play="B20" />
+      <Item id="2" agent="Cristina" text="Let's think about it." speech="" play="A44" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Jordan" text="So I need to be sure that I only post information about myself that I am comfortable with everyone i'm connected to knowing, right?" speech="" play="B21" />
+      <Item id="2" agent="Cristina" text="That's right, Jordan! Let's move on to navigating through social media websites. Remember, there are many platforms and they are all different, but we can go through some basics." speech="" play="A45" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Jordan" text="That makes sense to me. But, what if I don't need to send a private message? What if I want people to see what I wrote?" speech="" play="B22" />
+      <Item id="2" agent="Cristina" text="Well, then you would need to write a comment on that person's page." speech="" play="A46" />
+      <Item id="3" agent="Jordan" text="If we're on someone's page, how do we view the comments in the first place?" speech="" play="B23" />
+      <Item id="4" agent="Cristina" text="Great question! Let's take a look." speech="" play="A47" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="Jordan" text="I think I'm starting to get it." speech="" play="B24" />
+      <Item id="2" agent="Cristina" text="That's great, Jordan! Why don't we look at one more common symbol and then move on to something new." speech="" play="A48" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Cristina" text="Great! Now, the first thing we are going to do is talk about safety and security on social media." speech="" play="A49" />
+      <Item id="2" agent="Jordan" text="Safety and security? What do you mean?" speech="" play="B25" />
+      <Item id="3" agent="Cristina" text="Well, almost anything you put on the internet can be found by other people. It is important to make sure that you do not share personal information that other people could use." speech="" play="A50" />
+      <Item id="4" agent="Jordan" text="Oh, I see. Maybe, I have already put too much information on my social media profile!" speech="" play="B26" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_, hello! I'm Cristina and this is Jordan. Today we are going to be talking about social media." speech="" media="media\Lesson34-IntroTitle.html" play="_user_,A51" />
+      <Item id="2" agent="Jordan" text="_user_ and Cristina, hi. I actually just got a social media account that we can look at if you want!" speech="" play="_user_,B27" />
+      <Item id="3" agent="Cristina" text="Great idea, Jordan! First, let's talk a little bit about social media. Social media platforms come in many forms, including content based and social networking. Social media is a great way to connect with friends, colleagues, and people who have similar interests." speech="" play="A52" />
+      <Item id="4" agent="Jordan" text="Okay, Can we look at how to use it?" speech="" play="B28" />
+      <Item id="5" agent="Cristina" text="Sure, Jordan. First things first, if you could type in your password please." speech="" play="A53" />
+      <Item id="6" agent="Jordan" text="Sure!" speech="" media="media\Lesson34-0-0.html" play="B29" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Now, sometimes people post things on public social media websites that are  ." speech="" play="A54" />
+      <Item id="2" agent="Jordan" text="Yeah, I heard something about this on the news recently." speech="" play="B30" />
+      <Item id="3" agent="Cristina" text="I'm sure you did, Jordan. It seems to be happening frequently.Let's look into this." speech="" play="A55" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Jordan" text="I have a question, Cristina. What is a hash tag and what does it do? I hear about hash tags all the time, but I don't know what they mean." speech="" play="B31" />
+      <Item id="2" agent="Cristina" text="That's a great question, Jordan! Let's check it out!" speech="" play="A56" />
+    </RigidPack>
+    <RigidPack name="Transition91" usedIn="">
+      <Item id="1" agent="Jordan" text="Yes! I really like to watch videos on the internet. I have a few friends who post funny cat videos all the time." speech="" play="B32" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="2" agent="Cristina" text="Exactly, let's take a closer look at Jordan's profile." speech="" media="" play="A57">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Personal information such as your home address and phone number may not be safe to post on your page depending on who you are connected to." speech="" keys="any" threshold="" test="" play="A58" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on an answer, even if you're not sure. press on the content that Jordan should not include in his profile." speech="" keys="any" threshold="" test="" play="A59" />
+            <Answer name="IncorrectPrommpt" agent="Cristina" type="IncorrectPrompt" text="_user_, think about information that you might not want everyone to know." speech="" keys="any" threshold="" test="" play="_user_,A60" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which content should not be included in your profile." speech="" keys="any" threshold="" test="" play="A61" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, press on the content that could be dangerous or irresponsible for Jordan to put on his social media profile page," speech="" keys="any" threshold="" test="" play="_user_,A62" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I probably should not include my phone number and home address." speech="" keys="any" threshold="" test="" play="B33" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think maybe I should not have posted a selfie." speech="" keys="any" threshold="" test="" play="B34" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think you are correct." speech="" keys="any" threshold="" test="" play="_user_,B35" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="8" agent="Cristina" text="Let's take a look at my profile page!" speech="" media="" itemDif="0.1" play="A63">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The envelope is the button that will allow you to send me a message directly." speech="" keys="any" threshold="" play="A64" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to press on the button that will allow you to send me a message directly." speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about a symbol that signifies messaging. Please give it another try," speech="" keys="any" threshold="" test="" play="A66" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which button will allow you to send me a message directly?" speech="" keys="any" threshold="" test="" play="A67" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which button will allow you to send me a message directly?" speech="" keys="any" threshold="" play="_user_,A68" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going to bet it's the envelope button." speech="" keys="any" threshold="" test="" play="B36" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am going to bet you have to press on Cristina's name." speech="" keys="any" threshold="" play="B37" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ we are in agreement." speech="" keys="any" threshold="" test="" play="_user_,B38" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="3" agent="Cristina" text="Look at this page." speech="" media="" itemDif="0.1" play="A69">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="By pressing on, view comments, you are able to see what people say about a specific post." speech="" keys="any" threshold="" play="A70" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on the content that will allow you to view comments on my post." speech="" keys="any" threshold="" test="" play="A71" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Why don't you give it another try. Where would you press to see the comments on my post?" speech="" keys="any" threshold="" test="" play="A72" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, where would you press to see the comments on my post?" speech="" keys="any" threshold="" test="" play="A73" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, where would you press to see the comments on my post?" speech="" keys="any" threshold="" play="_user_,A74" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going to guess you press on, view comments." speech="" keys="any" threshold="" test="" play="B39" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think you press on the, about me, section." speech="" keys="any" threshold="" play="B40" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you're right about this one." speech="" keys="any" threshold="" test="" play="_user_,B41" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="9" agent="Cristina" text="Read the comments on this page." speech="" media="" play="A75">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The inappropriate comment says, your idea is terrible and so is your face. laugh out loud. idiot. is the inappropriate comment." speech="" keys="any" threshold="" test="" play="A76" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on the inappropriate comment." speech="" keys="any" threshold="" test="" play="A77" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about which comment could be offensive to the person receiving it. Give it another try." speech="" keys="any" threshold="" test="" play="A78" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of the comments on this page is inappropriate?" speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of the comments on this page is inappropriate?" speech="" keys="any" threshold="" test="" play="_user_,A80" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think Ralph's comment is the inappropriate one." speech="" keys="any" threshold="" test="" play="B42" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think cindy's comment is the inappropriate one." speech="" keys="any" threshold="" test="" play="B43" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think your answer is right." speech="" keys="any" threshold="" test="" play="_user_,B44" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="10" agent="Cristina" text="Alright." speech="" media="" play="A81">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, all of the above. Each of these can be a reason to be careful about what is appropriate on specific social media platforms." speech="" keys="any" threshold="" test="" play="A82" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on an answer, even if you're not sure!" speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Not quite, give it another try. Remember to read each answer option." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, why is it important to be aware of unacceptable behavior on social media sites?" speech="" keys="any" threshold="" test="" play="_user_,A86" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going to go with, all of the above." speech="" keys="any" threshold="" test="" play="B45" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am going to go with, your actions can be disrespectful to others." speech="" keys="any" threshold="" test="" play="B46" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, we are in agreement!" speech="" keys="any" threshold="" test="" play="_user_,B47" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="4" agent="Cristina" text="Take a look at these comments to help you understand." speech="" media="" play="A87">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Hashtags are used to connect all other posts that use the same phrase." speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to press on an answer! How is the hash tag symbol used on social media websites?" speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="That's not right, why don't you give it another try?" speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how is the hashtag symbol used on social media websites?" speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell us how the hash tag is used on social media websites?" speech="" keys="any" threshold="" test="" play="_user_,A92" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the hashtag symbol is used to connect other posts that use the same phrase." speech="" keys="any" threshold="" test="" play="B48" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think hash tags are used to connect a specific person with a specific post." speech="" keys="any" threshold="" test="" play="B49" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think you are correct." speech="" keys="any" threshold="" test="" play="_user_,B50" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="41" agent="Cristina" text="Let's look at another symbol." speech="" media="" play="A93">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The, at, symbol is used to reply to a specific person's post." speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on an answer." speech="" keys="any" threshold="" test="" play="A95" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The ,at, symbol helps to directly link a user's message to another user's message. Which of the answers below describes a similar concept?" speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how is the, at, symbol used on social media websites?" speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how is the, at, symbol used on social media websites?" speech="" keys="any" threshold="" test="" play="_user_,A98" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the, at, symbol is used to reply to a specific person's post." speech="" keys="any" threshold="" test="" play="B51" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I really don't think I know. Maybe the third one." speech="" keys="any" threshold="" test="" play="B52" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ we are in agreement." speech="" keys="any" threshold="" test="" play="_user_,B53" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="42" agent="Cristina" text="Take a look at the comments on this social media page and look for the instances where a person's name sticks out." speech="" media="" play="A99">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="A bolded name, or a tag, is used to connect specific people to specific posts." speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to press on an answer." speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="In the post below, Cindy Doe's name is in bold letters. What purpose is there for a bolded name on this social media site?" speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what does a bolded name, or a tag,mean on social media websites?" speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what does a bolded name, or a tag, mean on social media websites?" speech="" keys="any" threshold="" test="" play="_user_,A104" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it means that that person is connected to that specific post." speech="" keys="any" threshold="" test="" play="B54" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it connects to all other posts using the same phrase." speech="" keys="any" threshold="" test="" play="B55" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I believe you are right." speech="" keys="any" threshold="" test="" play="_user_,B56" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA91">
+      <Questions>
+        <Question id="6" agent="Cristina" text="Look at this page." speech="" media="" play="A105">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you press on the hyperlink under the video, it will take you to the page the video is on. Hyperlinks take us to a different webpage." speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on the button that will allow us to watch the video." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, That's not the correct button, why don't you give it another try!" speech="" keys="any" threshold="" test="" play="_user_,A108" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please press on the button that will allow us to watch the video on a different webpage." speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, please press on the button that will allow us to watch the video on a different webpage." speech="" keys="any" threshold="" test="" play="_user_,A110" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="My guess is that you press on the hyperlink underneath the video." speech="" keys="any" threshold="" test="" play="B57" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="My guess is that you press on the planet explorer hyperlink." speech="" keys="any" threshold="" test="" play="B58" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ we are in agreement." speech="" keys="any" threshold="" test="" play="_user_,B59" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA92">
+      <Questions>
+        <Question id="6" agent="Cristina" text="Let us look at this page" speech="" media="" play="A111">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you press on the play button in the center of the video, the video will play automatically. " speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on the button that will allow us to watch the video." speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, That's not the correct button, why don't you give it another try!" speech="" keys="any" threshold="" test="" play="_user_,A114" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which button do you think would play the video?" speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, if you would like to watch the video, which button would you press? " speech="" keys="any" threshold="" test="" play="_user_,A116" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the play button, in the center of the video." speech="" keys="any" threshold="" test="" play="B60" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Is it the about me one?" speech="" keys="any" threshold="" test="" play="B61" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B62" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA93">
+      <Questions>
+        <Question id="72" agent="Cristina" text="Sometimes, you may want to share something that you find with someone else online." speech="" media="" play="A117">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="That symbol is used on multiple social media platforms to signal sharing." speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ Please give it a try." speech="" keys="any" threshold="" test="" play="_user_,A119" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="This is a tough one, give it a try." speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which button would you press if you wanted to send this video to your friend?" speech="" keys="any" threshold="" test="" play="_user_,A121" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which button would you choose to send this video to a friend?" speech="" keys="any" threshold="" test="" play="A122" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the blue button underneath the video on the left, with the triangular connecting dots." speech="" keys="any" threshold="" test="" play="B63" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that you would press on, subscribe." speech="" keys="any" threshold="" test="" play="B64" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think you are right." speech="" keys="any" threshold="" test="" play="_user_,B65" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA94">
+      <Questions>
+        <Question id="71" agent="Cristina" text="Okay." speech="" media="" play="A123">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you wanted to look for completely new videos, you would press on, search videos here." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to press on an answer, even if you're not sure." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember, you want to search for videos that are not related to the one we just watched. Please try again." speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, if you wanted to find a completely new video, where would you press?" speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, if you wanted to find a completely new video, where would you press?" speech="" keys="any" threshold="" test="" play="_user_,A128" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think that you would press on, search videos here." speech="" keys="any" threshold="" test="" play="B66" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that you would press on, related videos." speech="" keys="any" threshold="" test="" play="B67" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think you are right." speech="" keys="any" threshold="" test="" play="_user_,B68" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="Start. To LoadPage">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="Show a login. To pressLogin">
+      <Action agent="System" act="GetMediaEvent" data="Anim1" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="SetStatus" data="pressLogin" id="3" />
+      <Action agent="System" act="WaitForEvent" data="9000" id="4" />
+    </Rule>
+    <Rule name="pressLogin" status="pressLogin" response="" event="Login" hasItem="" priority="" frequency="" description="Next page. To PageLoaded">
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="Main page loaded. To GetTutoringPack">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="Get tutoring pack. To HasTutoringPack (2)">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="Get media item. To GetItem (2)">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="No more tutoring pack. To Close">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="Closing. To End">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="End">
+      <Action agent="System" act="End" data="" id="1" />
+      <Action agent="System" act="Wait" data="9999" id="2" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="Show item. Check agent. To AskQ (3)">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="CristinaAskTyping" status="AskQ" response="" event="CristinaT" hasItem="" priority="" frequency="" description="Cristina ask main question. To UserAnswerT (2)">
+      <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
+      <Action agent="System" act="WaitForMediaInput" data="100" id="4" />
+    </Rule>
+    <Rule name="UserTypeBypass1" status="UserAnswerT" response="" event="" hasItem="" priority="1" frequency="" description="User type in. Jordan correct feedback To GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="JordanPositiveFeedback" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="UserTypeBypass2" status="UserAnswerT" response="" event="" hasItem="" priority="1" frequency="" description="User type in. Jordan incorrect. Feedback. To GoBack.">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="80" description="Cristina asks user. To UserAnswer (3)">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. To QAsked (3)">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CristinaAskedJC" status="QAsked" response="" event="Cristina" hasItem="" priority="1" frequency="50" description="User correct, Jordan correct. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="CristinaAskedJI" status="QAsked" response="" event="Cristina" hasItem="" priority="1" frequency="50" description="User correct, Jordan incorrect. Feedback. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+    </Rule>
+    <Rule name="IncorrectJordanIncorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="50" description="Both incorrect. Feedback. To GoBack.">
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+    </Rule>
+    <Rule name="IncorrectJordanCorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="50" description="Both incorrect. Feedback. To GoBack.">
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="JordanPositiveFeedback" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="No answer. Blank prompt. To UserAnswer2">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct. To QAsked2">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="User correct. Feedback. To GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="User incorrect. Feedback. To GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="again no answer. Jordan answer. To GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="Next page. To Transition0">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="Last page. To Close">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedEasy" status="Transition0" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="Page loaded. To GetTutoringPack">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

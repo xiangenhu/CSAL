@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain='ace.autotutor.org'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Spicy+Rice' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<script type="text/javascript" id="sourcecode">
+		
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var correctAnswerArray = ["b3"];
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			
+			$(document).ready(function()
+			{
+				$("#fadeBody").fadeIn(1500);
+	
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoaded");
+				
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+			});
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+			
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							parent.PlaySound('success0.wav');
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$(questionBoxArray[0] + " #buttonBox #" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					var selectedID = $(this).attr("id");			
+					userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");
+					//play appropriate sound
+					if (userAnswer == "Correct"){ parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);;
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#afc4ff"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #afc4ff;", color: "#212121"}, 500);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					$("#buttonBox").fadeOut(1000);
+					$("#questionText").fadeOut(1000);
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+			}
+		</script>
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('BankBkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'News Cycle', Verdana, 'Times New Roman';
+				font-weight:normal;
+				cursor: default;
+			}
+			#fadeBody {display: none;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#bankTextHead
+			{
+				font-size: 46px;
+				margin-bottom: 6px;
+				text-align: center;
+				font-family: 'Spicy Rice', Verdana, 'Times New Roman';
+			}
+			#bankTextAuthor
+			{
+				font-size: 26px;
+			}
+			#bankTextMain
+			{
+				overflow: auto;
+				font-size: 24px;
+				width: 710px;
+				margin: 0px 0px 0px 0px;
+				padding: 20px 40px 30px 40px;
+				background-image: url('ClearBkgd0.png');
+				display: inline-block;
+				border: none;
+			}
+			#benefits
+			{
+				font-size: 34px;
+				color: white;
+				position: relative;
+				display: inline-block;
+				width: 220px;
+				background-image: url('ClearBkgd1.png');
+				padding: 20px;
+				margin-left: 3%;
+			}
+			.para
+			{
+				margin-top: 24px;
+				text-indent: 40px;
+			}
+			#para2, #para3
+			{
+				margin-top: 10px;
+			}
+			#para2 img
+			{
+				height: 250px;
+				display: relative;
+				float: right;
+				margin: 10px 10px 0px 0px;
+				padding-left: 10px;
+			}
+			#scrollBtn
+			{
+				font-family: 'Goudy Bookletter 1911', Verdana, 'Times New Roman';
+				width: 80px;
+				height: 32px;
+				background-color: white;
+				overflow: hidden;
+				position: fixed;
+				top: 450px;
+				left: 340px;
+				font-size: 20px;
+				border-radius: 6px;
+				text-align: center;
+				z-index: 2;
+				margin: auto;
+				outline: none;
+			}
+			#scrollBtn img
+			{	
+				padding-top: 3px;
+				height: 20px;
+				vertical-align: top;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-image: url('ClearBkgd2.png');
+				margin: 0px  0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 30px;
+				padding: 20px 10px 10px 0px;
+				color: white;
+				margin: auto;
+				width: 680px;
+			}
+			#buttonBox
+			{
+				margin: 5px 0px 0px 25px;
+				width: 780px;
+				display: none;
+			}
+			.mybutton
+			{
+				font-size: 22px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 240px;
+				height: 48px;
+				line-height: 48px;
+				margin: 4px;
+				color: #212121;
+				background-color: #afc4ff;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fadeBody">
+		<div id="textbox" class="scroll-pane">				
+			<div id="bankTextMain">
+				<div id="bankTextHead">
+					More Bills More Problems
+					<div id="bankTextAuthor">
+						By: L. Johnson	
+					</div>
+				</div>
+				<div id="para1" class="para">
+					My name is Anne and I'm a waitress at a local restaurant. Normally I have to pay my utility bill with cash because I do not have a checking account. On Thursday afternoon I go to the bank and cash the check I received from work. I then have to take the cash and go to my local grocery store. Luckily I can pay my utility bill at the grocery store.
+				</div>
+				<div id="para2" class="para">
+					<img src="Waitress.png">
+					You have to be careful where you cash your checks. One time I went to a large retail store in my town to try to cash my check. I wasn't sure where to go so I walked up to a young man working one of the cash registers. The young worker hesitated when I asked him where to pay my bill. After a moment, he told me I could pay him for my utility bill. I then paid the worker and felt relief at finally having my bills paid off.
+				</div>
+				<div id="para3" class="para">
+					About a week later I got an angry letter from the utility company saying my bill was unpaid. It turns out that the brat stole my money and my utility bill went unpaid! I called my utility company and explained what happened. They allowed me to pay my bill and didn't charge a late fee. Now I know to look for a sign that tells me whether a store will accept payment for my bills. Be sure to not make the same mistake I did and pay your bills at a location or store you trust!
+				</div>
+			</div>
+			<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					Do you think this text is <span style="text-decoration: underline;">informational</span>, <span style="text-decoration: underline;">persuasive</span>, or <span style="text-decoration: underline;">narrative</span>?
+				</div>
+				<div id="buttonBox">
+					<a class='mybutton' id="b1" value="Incorrect"; href='javascript:void(null)' >Informational</a>
+				
+					<a class='mybutton' id="b2" value="Incorrect"; href='javascript:void(null)' >Persuasive</a>
+				
+					<a class='mybutton' id="b3" value="Correct"; href='javascript:void(null)' >Narrative</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

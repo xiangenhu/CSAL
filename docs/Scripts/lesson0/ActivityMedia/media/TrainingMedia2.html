@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 14 Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			.spacer1{height: 16px;}
+			body
+			{
+				overflow: hidden;
+				background-image: url('TrainingBkgd1.png');
+				cursor: default;
+			}
+			#instruct
+			{
+				font-style: italic;
+				font-size: 24px;
+				width: 400px;
+				margin: 10px auto 0px auto;
+			}
+			#text
+			{
+				margin: 14px auto;
+				font-size: 26px;
+				line-height: 50px;
+				font-family: Andika, Verdana, 'Times New Roman';
+				overflow: auto;
+				padding: 0px 15px 15px 25px;
+			}
+			#textTitle
+			{
+				font-family: Ribeye, Verdana, 'Times New Roman';
+				text-align: center;
+				font-weight: bold;
+				font-size: 42px;
+				margin: 20px auto;
+			}
+			#author
+			{
+				font-weight: bold;
+				text-align: center;
+				font-size: 20px;
+			}
+			.indent{text-indent: 40px;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 790px;
+				margin-top: -7px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#scrollBtn
+			{
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 800px;
+				height: 26px;
+				line-height: 26px;
+				background-color: #eaeaea; /*#e9ff55;*/
+				color: gray;
+				text-decoration: none;
+				overflow: hidden;
+				position: fixed;
+				top: 454px;
+				left: 0px;
+				font-size: 18px;
+				text-align: center;
+				z-index: 2;
+				outline: none;
+				border-top: 1px dashed gray;
+				padding: 3px 0px 0px 0px;
+				margin: 0px 0px 0px 0px;
+				cursor: pointer;
+			}
+			#scrollBtn img
+			{
+				padding-top: 4px;
+				height: 18px;
+				vertical-align: top;
+				margin: 0px 10px 0px 10px;
+				border: none;
+			}
+			#scrollBtn:hover
+			{
+				color: white;
+				background-color: #5cc451;
+			}
+			.mybutton
+			{
+				font-size: 30px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 640px;
+				height: 60px;
+				margin: 20px auto;
+				line-height: 60px;
+				color: #111111;
+				background-color: #7db6cd;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				border-radius: 12px;
+				cursor: pointer;
+				outline: none;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			var $scrollElement;
+			
+			function Start()
+			{
+				//scrollMove("para1")
+				//scrollMove(600);
+				parent.GetWorldEvent("MediaLoaded");
+				
+				Lock();
+				
+				$scrollElement = $(".scroll-pane").jScrollPane({animateScroll: true, animateDuration: 1200});
+				
+				$("#scrollBtn").click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(180);
+				});
+			}
+
+			function ShowItem()
+			{
+				//$("#questionBox").css("display", "block");
+				//scrollMove(580);
+			}
+			
+			//SET "animateScroll" TO FALSE TO REMOVE THE SCROLLING ANIMATION
+			function scrollMove(scrollMovePosition)
+			{			
+				var ImgStart = scrollMovePosition-400;
+				
+				var api = scrollElement.data('jsp');
+				api.scrollToY(ImgStart);
+			}
+
+			function Lock()
+			{
+				//unbinds click function
+				$( ".mybutton" ).unbind("click");
+				
+				//unbinds hover
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function LockSimple()
+			{
+				//unbinds click function
+				$( ".mybutton" ).unbind("click");
+				
+				//unbinds hover
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITHOUT animation
+				$( ".mybutton" ).css( 'backgroundColor', '#474747' );
+				$( ".mybutton" ).css( 'color', 'gray' );
+			}
+			
+			//NOTE! THIS IS NOT THE UNLOCK FUNCTION FOR QUESTIONS WITH A CORRECT OR INCORRECT ANSWER! THIS IS ONLY TO BE USED FOR SOMETHING LIKE A CONTINUE BUTTON.
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//play clicked sound
+					parent.PlaySound('clicked0.wav');
+					
+					//animate the font size of clicked option
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//lock button and sent Stop call to ASAT
+					Lock();					
+					
+					return parent.GetWorldEvent("Stop");
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#7db6cd"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #7db6cd;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+
+			function GetMediaEvent(data)
+			{
+				if (data=="UserAnswer")
+				{
+					return UserAnswer;
+				}
+			}
+			
+			$(document).ready(function()
+			{
+				$(".mybutton").click(function()
+					{
+						parent.GetWorldEvent(isCorrect);
+					}
+				);
+			});
+
+		</script>
+	</head>
+	<body onload="Start()"> <!--onload="scrollIt()">-->
+		<div class="scroll-pane">
+			<div id="text">
+				<div id="textTitle">
+					Scrolling Through Text
+				<div id="textSubtitle"></div>
+				</div>
+				<div id="author">
+				</div>			
+				
+				<div class="spacer0"></div>
+				
+				<div class="indent" id="para1">
+					We are glad you have taken the time to use our reading comprehension tool! You will interact with this tool in a number of different ways. Sometimes you will need to click on buttons to select answers. Other times you will need to read passages such as this one. When reading a longer passage, you may have to scroll through the text. To scroll, you can either drag the scroll bar on the right, or click the scroll bar at the bottom of the page. When you finish reading a text you can click the <span style="background-color: #7db6cd; border-radius: 8px;">"Click HERE to continue..."</span> button at the bottom of the page. You have now reached the end of this passage and can now click continue below!
+				</div>
+				
+				<div id="continueButton" class='mybutton' onclick='$("#continueButton").click(function();'>Click HERE to continue. . .</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,441 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lesson3TA</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<style>
+		body
+		{
+			background-image:url('L3Bkgd1.png');
+			background-size: cover;
+			background-repeat:no-repeat;
+			overflow: hidden;
+			width: 790px;
+			height: 472px;
+			cursor: default;
+		}
+		.textBox
+		{
+			z-index:0;
+			border: 3px dashed black;
+			font-family: Oxygen, Verdana, 'Times New Roman';
+			width: 300px;
+			height: 372px;
+			left: 297px;
+			top: 30px;
+			text-align: left;
+			display: block;
+			position: fixed;
+			font-size: 24px;
+			display:none;
+			padding: 18px 8px;
+			border-radius: 12px;
+			font-style: italic;
+		}
+		.textBoxTitle
+		{
+			display: none;
+		}
+		.book
+		{
+			z-index:1;
+			position: fixed;
+			width: 265px;
+			top: 30px;
+			left: 10px;
+			border: 5px solid #525252;
+			display:none;
+			border-radius: 2px;
+		}
+		.cart
+		{
+			z-index:2;
+			position: fixed;
+			border: 5px solid #212121;
+			height: 130px;
+			border-radius: 10px;
+			padding: 5px;
+			background-color: white;
+		}
+		#cInform
+		{
+			top:10px;
+			left:630px;
+			display: none;
+		}
+		#cPersuade
+		{
+			top:166px;
+			left:630px;
+			display: none;
+		}
+		#cEntertain
+		{
+			top:323px;
+			left:630px;
+			display: none;
+		}
+	</style>
+  
+  <script>
+	/*
+		--------------------------------NAMESPACE------------------------------
+		Namespace for all the variables used globally in the program.
+		Should prevent unwanted interactions between local and global variables 
+		Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media =
+	{
+		pageIdentifier: "TAMediaLoaded",
+		
+		currentItem: -1,
+		numItems: 0,
+		book: 	{	
+						bookName: "Lesson3ActivityImages\\one hundred years of solitude.jpg",
+						bookDescription: "The story of the rise and fall, birth and death of the mythical town of Macondo through the history of the Buenduea family. Inventive, amusing, magnetic, sad, and alive with unforgettable men and women.",
+						bookType: "Entertain"
+				},
+				
+		isSelected: false,
+		selectedCart: null,
+		
+		//variables for switching between pages
+		answerString: null,
+		answerList: null,
+		
+		nextPageStay: "Lesson3TA_10.html",	//location of the next page in the current series of pages
+		nextPageJump: "Lesson3TB_Instruction.html",	//location of the starting page for the new series that is to be "jumped" to
+		
+		jumpThreshold: 5,
+		answerListMaxSize: 6,
+		
+		//variables for selecting agent's answer
+		//correctness for selecting a user answer is determined book.bookType
+		//make sure correctCart and bookType correspond to the same type ex. cInform should correspond to Inform book type
+		correctCart: "cEntertain",
+		incorrectCart1: "cInform",
+		incorrectCart2: "cPersuade"
+		
+	};
+	
+	
+	
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	$(document).ready(function()
+	{
+		parent.GetWorldEvent(Media.pageIdentifier);		//reports the identifying name for the media page to ASAT
+		
+		$(".book").attr("src", Media.book.bookName);
+		$(".textBox").text(Media.book.bookDescription);
+		
+		//fade in animation for each element needed for the current item
+		$(".textBox").show("fade", 1000);
+		$(".textBoxTitle").show("fade", 1000);
+		$(".book").show("fade", 1000);
+		$(".cart").show("fade", 1000);
+		
+		Lock();
+		
+		//Takes a concatenated string of the most recent user answers from the query string of the html page and parses it into a list of characters
+		Media.answerString = window.location.search.slice(1);
+		Media.answerList = Media.answerString.split("");
+	});
+	/*
+		--------------------------------Helper Functions------------------------------
+	*/
+	/*
+		Animates a book image to move to a predefined area on the media page depending on a bookType.
+		bookType is a string that can be given as "Inform","Persuade", or "Entertain".
+		In each predefined area is a 'book cart' image that corresponds to each bookType.
+		If any size changes are made, the animation parameters will need to be adjusted manually
+	*/
+	function animateBook(bookType)
+	{
+		if(bookType == "Inform")
+		{
+			$(".book").animate({width: "50px", height:"80px", top: "170px", left: "120px"},1000).animate({top: "-=160", left: "+=550", opacity:0.0},1000);
+		}
+		else if(bookType == "Persuade")
+		{
+			$(".book").animate({width: "50px", height:"80px", top: "170px", left: "120px"},1000).animate({top: "+=35", left: "+=550", opacity:0.0},1000);
+		}
+		else if(bookType == "Entertain")
+		{
+			$(".book").animate({width: "50px", height:"80px", top: "170px", left: "120px"},1000).animate({top: "+=180", left: "+=550", opacity:0.0},1000);
+		}
+	}
+	
+	/*
+		Iterates through the current answerList and counts the number of correct answer characters represented by 1's
+		Returns True if the number of correct answers is greater or equal to the threshold needed to jump to the next set of media pages 
+	*/
+	function canAdvance()
+	{
+		var count = 0;
+		
+		for(i=0; i < Media.answerList.length; i++)
+		{
+			if(Media.answerList[i] == "1")
+			{
+				++count;
+			}
+		}
+		return count >= Media.jumpThreshold;
+	}
+	
+	/*
+		Enables all events for designated elements after the visual cue is finished in the Unlock function
+	*/
+	function bindEvents()
+	{
+		//enables the functionality of the cart elements 
+		$(".cart").on("click", CartClick);
+		$(".cart").on("mouseenter", CartMouseEnter);
+		$(".cart").on("mouseleave", CartMouseLeave);
+	}
+	
+	
+	
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/
+	
+	
+	/*
+		Event triggered by clicking on an html element of the ".cart" class
+	*/
+	function CartClick()
+	{
+		Lock();
+		
+		$(this).animate({opacity: 1});
+		
+		//Stores the currently selected cart globally, changes the border around the cart element to the designated selection color, and raises the isSelected flag 
+		Media.selectedCart = $(this);
+		Media.selectedCart.animate({borderColor: "#edff73"},200);
+		Media.isSelected = true;
+		
+		//Each cart element is assigned a value of "Inform", "Persuade", and "Entertain" respectively
+		//If the bookType matches the cart value, assign a value of correct to the answerState, otherwise the answerState is incorrect
+		var answerState = "Incorrect";
+		var userSelectedValue=$(this).attr("value");
+		
+		if(Media.book.bookType == Media.selectedCart.attr("value"))
+		{
+			answerState = "Correct";
+		}	
+		
+		//If the answerList is currently full, remove the first element and shift the remaining elements to the front of the list
+		if(Media.answerList.length >= Media.answerListMaxSize)
+		{
+			Media.answerList.shift();
+		}
+		
+		//If the answer is correct, add a "1" to the end of the answerList, otherwise add "0" for incorrect and play a sound indicator
+		if(answerState == "Correct")
+		{
+			Media.answerList.push("1");
+			parent.PlaySound('clicked0.wav');
+		}
+		else
+		{
+			Media.answerList.push("0");
+			parent.PlaySound('incorrect0.wav');
+		}
+		
+		//sends the answerState to ASAT and locks the elements so additional clicks won't be registered
+		parent.GetWorldEvent("userAnswer_"+answerState+"_"+userSelectedValue);
+		//parent.GetWorldEvent(Media.answerList.toString());	//sends a String representation of answerList to ASAT after inputting a new answer for testing purposes
+	}
+	/*
+		Animates ".cart" class html elements when the mouse pointer enters and leaves each element
+		The stop function limits how many animations can be spammed to enter the animation queue.
+	*/
+	function CartMouseEnter()
+	{
+		$(this).stop().animate({width: "135px", height:"135px", borderColor: "#edff73"},400);
+	}
+	function CartMouseLeave()
+	{
+		$(this).stop().animate({width: "130px", height:"130px", borderColor: "#525252"},300);
+	}
+	
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	7. Sound Functions
+	*/
+	
+	
+	
+	/*
+		This function tries to select an item. If an item is found, this function remembers 
+		the found item and calls the function parent.GetWorldEvent("Continue") 
+		to inform the parent program that there is an item to continue the exercise. 
+		Otherwise, it calls parent.GetWorldEvent("Stop") and any closing code should be added at that point.
+		
+	*/
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop");
+		}
+	}
+	
+	/*
+		Initializes the media page to display all relevant html elements associated with the current item
+		Ex. displaying buttons, adding/changing text, resizing elements, playing animations, inserting pictures
+	*/
+	function ShowItem()
+	{
+		if(Media.currentItem == 0){}
+	}
+	/*
+		After the user makes a selection, this function provides visual feedback 
+		which is usually coupled with ASAT agent dialogue to indicate whether or not that selection was correct
+	*/
+	function ShowMediaAnswer()
+	{
+		if(Media.isSelected == true)	//checks to make sure a selection has been made in order to check correctness
+		{
+			if(Media.book.bookType == Media.selectedCart.attr("value"))
+			{
+				//fade in the selection and change the border to green to indicate correctness
+				//an animation is played as if the book is being put into the correct cart while a sound queue plays
+				Media.selectedCart.animate({borderColor: "green", opacity: 1.0},1000);
+				$(".book").animate({borderColor: "green"},400);
+				animateBook(Media.selectedCart.attr("value"));
+				parent.PlaySound('success0.wav');
+			}
+			else
+			{
+				//fade in the selection and change the border to red to indicate in-correctness
+				//an animation is played as if the book is being put into the correct cart while a sound queue plays
+				Media.selectedCart.animate({borderColor: "red", opacity: 1.0},500);
+				$("#" + Media.correctCart).delay(1000).animate({borderColor: "green", opacity: 1.0},500);
+				animateBook(Media.book.bookType);
+				parent.PlaySound('incorrect0.wav');
+			}
+		}
+	}
+	
+	/*
+		Preforms different actions based on a data string sent by ASAT
+	*/
+	function GetMediaEvent(data)
+	{
+		if (data == "MainQ")
+		{
+			parent.GetWorldEvent("Jordan");
+		}
+		
+		
+		
+		//Animates a cart element based on a randomization done by ASAT rules to simulate an agent selecting an answer
+		//correctCart, incorrectCart1, and incorrectCart2 correspond with JordanGood, JordanBad1, and JordanBad2
+		//which cart is correct and which are incorrect is manually determined in the global namespace
+		else if (data == "JordanGood")
+		{
+			$("#" + Media.correctCart).animate({width: "135px", height:"135px", opacity: 1.0},500).animate({width: "130px", height:"130px"},300).animate({width: "135px", height:"135px"},500).animate({width: "130px", height:"130px", opacity: 0.5},300);
+		}
+		else if(data == "JordanBad1")
+		{
+			$("#" + Media.incorrectCart1).animate({width: "135px", height:"135px", opacity: 1.0},500).animate({width: "130px", height:"130px"},300).animate({width: "135px", height:"135px"},500).animate({width: "130px", height:"130px", opacity: 0.5},300);
+		}
+		else if(data == "JordanBad2")
+		{
+			$("#" + Media.incorrectCart2).animate({width: "135px", height:"135px",opacity: 1.0},500).animate({width: "130px", height:"130px"},300).animate({width: "135px", height:"135px"},500).animate({width: "130px", height:"130px", opacity: 0.5},300);
+		}
+		
+		
+		//Switches the page location to either the next one in the current series or "jumps" to the starting page of a new series
+		else if(data == "NextPage")
+		{
+			//if the user has answered enough questions, determine if they can "jump"
+			if(Media.answerList.length >= Media.answerListMaxSize)
+			{
+				//Jump
+				if(canAdvance())
+				{
+					parent.nextPage("media/"+ Media.nextPageJump + "?" + Media.answerList.join(""));
+				}
+				//Stay
+				else
+				{
+					parent.nextPage("media/"+ Media.nextPageStay + "?" + Media.answerList.join(""));
+				}
+			}
+			//not enough questioned have been answered so stay at the current series of pages
+			else
+			{
+				parent.nextPage("media/"+ Media.nextPageStay + "?" + Media.answerList.join(""));
+			}
+		}
+	}
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	function Lock()
+	{
+		//creates a visual cue that the cart elements are disabled
+		$(".cart").animate({opacity: 0.5});
+		$(".cart").css("cursor", "not-allowed");
+		$(".cart").animate({width: "130px", height:"130px"},500);
+		
+		//disables the functionality of the cart elements 
+		$(".cart").off("click", CartClick);
+		$(".cart").off("mouseenter", CartMouseEnter);
+		$(".cart").off("mouseleave", CartMouseLeave);
+		
+	}
+	
+	/*
+		Enables functionality of any elements that were disabled by the Lock function
+	*/	
+	function Unlock()
+	{
+		//creates a visual cue that the cart elements are enabled
+		//the functionality of the elements is enabled in the function bindEvents when all the visual cue animations are resolved
+		$(".cart").css( 'cursor', 'pointer');
+		$(".cart").css("border", "5px solid #525252");
+		$(".cart").animate({opacity: 1.0}, 500).promise().done(bindEvents);	//some events can cause the visual cue animation to stop so they are enabled after the animation is finished
+		
+	}
+  </script>
+</head>
+	<body>		
+		<img class="book"/>
+		<div class="textBox"></div>
+		<img id="cInform" class="cart" src="CartInform.png" value="Inform"/>
+		<img id="cPersuade" class="cart" src="CartPersuade.png" value="Persuade"/>
+		<img id="cEntertain" class="cart" src="CartEntertain.png" value="Entertain"/>
+	</body>
+</html>

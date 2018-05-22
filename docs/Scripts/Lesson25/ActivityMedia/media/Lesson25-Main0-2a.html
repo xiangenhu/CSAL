@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			/** {border: 1px solid red;}*/
+			body
+			{
+				background-image:url('L25Bkgd0.1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 247px;
+				width: 798px;
+				margin-top: 1px;
+				display: inline-block;
+				border-bottom: 3px solid #424242;
+				
+				background-image:url('L25Bkgd0.2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#instructBox
+			{
+				background-color: white;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 800px;
+				font-size: 26px;
+				text-align: center;
+				padding: 10px 0px;
+				border-bottom: 5px dashed #a58870;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#bottomPane
+			{
+				vertical-align: top;
+			}
+			#ingredients
+			{
+				display: inline-block;
+				width: 550px;
+				height: 220px;
+				margin: 4px 0px 0px 10px;
+			}
+			.hidden{
+			opacity:0;
+			}
+			.ingredient
+			{	z-index:2;
+				margin: 0px 4px;
+				position:relative;
+			}
+			#cookingPot
+			{
+				display: inline-block;
+				width: 200px;
+				height: 200px;
+				
+			}
+			#cookingPot img
+			{
+				height: 200px;
+				display: block;
+				margin: 0px auto;
+				z-index:0;
+			}
+			#mainText
+			{
+				font-size: 26px;
+				padding: 15px 20px 0px 20px;
+				line-height: 38px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Special Elite', Verdana, 'Times New Roman';
+				font-size: 42px;
+				margin: 5px 0px 10px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.mybutton
+			{
+				font-weight: normal;
+				line-height: 50px;
+				margin: 10px auto 20px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px 6px;
+				outline: none;
+				border-radius: 10px;
+				font-weight: bold;
+				z-index:2;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			.highlight
+			{
+				font-size: 36px;
+				line-height: 56px;
+				background-color: #ffee63;
+				border-radius: 10px;
+				padding: 4px 6px;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+					var $scrollElement;
+					var currentItem = -1;
+					var numItems = 0;
+					var isSelected = false;
+					var tryCount=0;
+					var score=0;
+					var userSelecteditem="";
+					var count=1;
+			$(document).ready(function()
+			{		/*$("#oil").animate({left: "630px", top: "-50px",color:"green"});	
+					$("#oil").animate({opacity:0});	
+					$("#onion").animate({left: "260px", top: "-30px",color:"green"});
+					$("#onion").animate({left: "275px", top: "0px",color:"green",opacity:0});
+					$("#bellpepper").animate({left: "300px", top: "-100px",color:"green"});
+					$("#bellpepper").animate({left: "+=330px", top: "30px",color:"green"});
+					$("#bellpepper").animate({opacity:0});
+					$("#tomato").animate({left: "430px", top: "30px",color:"green"});
+					$("#tomato").animate({opacity:0});
+					$("#pepper").animate({left: "530px", top: "30px",color:"green"});
+					$("#pepper").animate({opacity:0});
+					$("#salt").animate({left: "470px", top: "-50px",color:"green"});
+					$("#salt").animate({opacity:0});
+					$("#chili").animate({left: "560px", top: "-60px",color:"green"});
+					$("#chili").animate({opacity:0});
+					$("#stock").animate({left: "340px", top: "20px",color:"green"});
+					$("#stock").animate({opacity:0});
+					$("#beans").animate({left: "170px", top: "10px",color:"green"});
+					$("#beans").animate({opacity:0});
+					$("#spinach").animate({left: "370px", top: "-50px",color:"green"});
+					$("#spinach").animate({opacity:0});*/
+			
+				parent.GetWorldEvent("MediaLoaded");
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000, contentWidth: '0px'});
+				
+				ScrollToId($scrollElement, "mainTextHead");
+			});
+            function GetRequest()
+			{ 
+			 var url = location.search; 
+             var idName = new Array();
+               if (url.indexOf("?") != -1) 
+                { 
+                 str = url.substr(1); 
+                 strs = str.split("=");
+                 score = strs[1];
+				}
+            }
+GetRequest();
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-100);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".ingredient" ).unbind("click");
+				$( ".ingredient" ).unbind("mouseover");
+				$( ".ingredient" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".ingredient" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".ingredient" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".ingredient" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelected= $(this).attr("id");
+					var offsetVal=1;
+					var answer;
+					//play appropriate sound
+					if (userAnswer == count+count+"")// first condition, checks the position of the answer chosen vs the current correct answer
+					{ parent.PlaySound('clicked0.wav');
+							if(count==1){$("#onion").animate({left: "260px", top: "-30px",color:"green"});
+										$("#onion").animate({left: "275px", top: "0px",color:"green",opacity:0});
+							count++;
+							
+							answer="Correct";
+							
+							}else{answer="Incorrect1";}/*else if(count==2)
+							{$("#tomato").animate({left: "430px", top: "30px",color:"green"});
+									$("#tomato").animate({opacity:0});
+									count++;
+									
+									
+									answer="Correct";}
+							else if(count==3){$("#salt").animate({left: "470px", top: "-50px",color:"green"});
+					$("#salt").animate({opacity:0});
+					count++;
+					answer="Correct";}
+						else if(count==4){$("#stock").animate({left: "340px", top: "20px",color:"green"});
+					$("#stock").animate({opacity:0});
+					count++;
+					answer="Correct";}
+					else{$("#spinach").animate({left: "370px", top: "-50px",color:"green"});
+					$("#spinach").animate({opacity:0});
+						answer="Correct";}*/
+					
+					}
+					else 
+						{ 
+						parent.PlaySound('incorrect0.wav'); 
+						answer="Incorrect1";
+						}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "white", color: "#212121"}, 600);
+					//parent.GetWorldEvent(answer);
+					parent.GetWorldEvent("userAnswer_"+answer+"_"+userSelected);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".ingredient" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".ingredient" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a58870"}, 300); });
+				$( ".ingredient" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".ingredient").animate({backgroundColor: "#a58870", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".ingredient"
+				$(".ingredient").bind( "click", clickFunc );
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				/*	isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect1" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+				*/	
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if(count==1){$("#onion").animate({left: "260px", top: "-30px",color:"green"});
+					$("#onion").animate({left: "275px", top: "0px",color:"green",opacity:0});count++;
+						
+							}
+							
+							
+						/*	else if(count==2){$("#tomato").animate({left: "430px", top: "30px",color:"green"});
+					$("#tomato").animate({opacity:0});
+					count++;}
+					
+					
+							else if(count==3){$("#salt").animate({left: "470px", top: "-50px",color:"green"});
+					$("#salt").animate({opacity:0});count++;}
+					
+					
+					else if(count==4){$("#stock").animate({left: "340px", top: "20px",color:"green"});
+					$("#stock").animate({opacity:0});count++}
+						else{$("#spinach").animate({left: "370px", top: "-50px",color:"green"});
+					$("#spinach").animate({opacity:0});}*/
+					
+			}			
+             function GetMediaEvent(data)
+			     {	if(data=="NextPage")
+					{
+					parent.nextPage("media/"+"Lesson25-Main0-2b.html?score="+(score));
+					//window.location="Lesson25-Main0-2b.html?score="+(score);
+					}
+					if (data=="JordanGoodFirst")
+					{$("#oil").animate({left: "630px", top: "-50px",color:"green"});
+						$("#oil").animate({opacity:0});
+							//parent.GetWorldEvent("JordanGoodFirst");
+							}else if(data=="JordanBad1First"){$("#oil").animate({left: "630px", top: "-50px",color:"green"});
+						$("#oil").animate({opacity:0});
+						//parent.GetWorldEvent("JordanBad1First"); 
+						}
+						else if(data=="JordanBad2First"){$("#oil").animate({left: "630px", top: "-50px",color:"green"});
+						$("#oil").animate({opacity:0});
+							//parent.GetWorldEvent("JordanBad2First");
+							}
+							
+							
+						else if (data == "Difficulty")
+						{
+						parent.GetWorldEvent("Easy");
+						}		
+					} 
+					 
+				
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Hot and Spicy Chili Recipe
+				</div>
+				<div id="para1" class="para">
+				First, heat a large Dutch oven over medium-high heat. Then, add oil to pan; swirl to coat. Then, add onion and 1 cup chopped red bell pepper. Next saut&eacute; 4 minutes. Now, add tomato and 2 teaspoons freshly ground black pepper, 1 teaspoon salt, 1 teaspoon crushed red chilli pepper. After, bring to a boil; cook until liquid is reduced by half (about 1 minute). Next, stir in stock. Also add 1 can kidney beans in a medium bowl. Now, mash. Afterwards, add bean mixture and remaining beans to pan. Then, bring to a simmer. Cook 5 minutes. Finally, add the spinach.
+				</div>
+			</div>
+		</div>
+		<div id="bottomPane">
+			<div id="ingredients">
+				
+				<img src="redbellpepper.png" id="bellpepper" class="ingredient" value="3">
+				<img src="pepper.png" id="pepper" class="ingredient" value="5">
+				<img src="tomato.png" id="tomato" class="ingredient" value="4">
+				<img src="chickenstock.png" id="stock" class="ingredient" value="8">
+				<img src="onion.png" id="onion" class="ingredient" value="2">
+				<img src="beans.png" id="beans" class="ingredient" value="9">
+				<img src="canolaoil.png" id="oil" class="ingredient" value="1">
+				<img src="chilipepper.png" id="chili" class="ingredient" value="7">
+				<img src="salt.png" id="salt" class="ingredient" value="6">
+				<img src="spinach.png" id="spinach" class="ingredient" value="10">
+			</div>
+			<div id="cookingPot">
+				<img src="cookingpot.png">
+			</div>
+		</div>
+	</body>
+</html>

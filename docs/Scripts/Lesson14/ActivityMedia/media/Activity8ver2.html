@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 14 Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+		
+		
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
+		<style>
+			body
+			{
+				height: 482px;
+				width: 790px;
+				background-color: #dff0ff;
+				overflow: hidden;
+			}
+			.scroll-pane
+			{
+				height: 400px;
+				width: 600px;
+				overflow: auto;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#text
+			{
+				font-family: Andika, Verdana, 'Times New Roman';
+				font-size: 40px;
+			}
+			#wrapper
+			{
+				height: 400px;
+				width: 600px;
+		</style>
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<script type="text/javascript" id="sourcecode">
+		
+		$(document).ready(function()
+		{
+			$('.scroll-pane').jScrollPane();
+			$('#wrapper').animate({height: "100px"}, 1000);
+		});
+		
+		
+		
+		
+		</script>
+	</head>
+	
+	<body onload="Start()">
+		<div id="wrapper">
+			<div class="scroll-pane">
+				<div id="text">
+					Rose was not one to talk to strangers. She was always aware of her surroundings when she walked down the street and cautious about every possible wolf that crossed her path.  Now,  as a police officer, she had a sixth sense about who was telling the truth and who was lying.  It was the same sixth sense that brought her into the caf¨¦ to keep an eye on Joseph, a regular customer whom the owner, Diana, suspected of pickpocketing. Seated comfortably sipping coffee, she watched him quite carefully while pretending to read the newspaper.  Her eyes followed him to the washroom, but he didn't have contact with anyone.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

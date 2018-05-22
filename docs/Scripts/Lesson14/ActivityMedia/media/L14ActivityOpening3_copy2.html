@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 14 Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<script type="text/javascript" id="sourcecode">
+		var HightlightColor="#96D9FF";
+		var UserAnswerColor="#6060FF";
+		var CorrectAnswerColor="#7FFFD4";
+		
+		
+		var questionNum=0;
+		var flag=1;
+		var divid;
+		var UserAnswer="";
+		var CorrectAnswer="Continue";
+		
+				
+		function Start()
+		{	
+		
+	
+		//scrollMove("para1")
+		scrollMove(600)
+		//parent.GetWorldEvent("MediaLoaded");
+		}
+		
+		function GetItem()
+		{
+			questionNum++;
+			
+			 if(questionNum<2)
+			 {
+				
+				//parent.GetWorldEvent("Continue");
+				//scrollMove("para1")
+			 
+			 }
+			else
+			{
+				//parent.GetWorldEvent("Stop");
+			}
+			
+		}
+		function ShowItem()
+		{
+		$("#questionBox").css("display", "block");
+		$(".mybutton").attr("disabled", true);
+				
+		scrollMove(580)
+		
+		}	
+		//SET "animateScroll" TO FALSE TO REMOVE THE SCROLLING ANIMATION
+		function scrollMove(scrollMovePosition)
+		{
+			var scrollElement = $('.scroll-pane');scrollElement.jScrollPane({
+				animateScroll: true, animateDuration: 500
+			});
+			
+			var ImgStart = scrollMovePosition-400;
+			
+			var api = scrollElement.data('jsp');
+			api.scrollToY(ImgStart);
+		
+		}
+
+		function Lock()
+		{
+		$(".mybutton").attr("disabled", true);
+										
+		}
+		function Unlock()
+		{
+		$(".mybutton").attr("disabled", false);
+		$(".mybutton").css({"background-color": "white"});
+	
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				return UserAnswer;
+			
+			}
+		
+		}
+		
+		function ShowMediaAnswer()
+		{
+			
+			if (CorrectAnswer=="A")
+			{
+			
+			$("#A").css({"background-color": CorrectAnswerColor});
+			
+			}
+			else if(CorrectAnswer=="B")
+			{
+			$("#B").css({"background-color": CorrectAnswerColor});
+			
+			}
+			else if(CorrectAnswer=="C")
+			{
+			$("#C").css({"background-color": CorrectAnswerColor});
+			
+			}
+			else if(CorrectAnswer=="D")
+			{
+			$("#D").css({"background-color": CorrectAnswerColor});
+			
+			}
+		}
+		
+		 $(document).ready(function()//$(function scrollIt()
+			{
+				 $(".mybutton").click(function() {  
+			
+						UserAnswer=$(this).attr("id"); 
+						var isCorrect=$(this).attr("isCorrect");
+						$(this).css({"background-color":UserAnswerColor});
+						$('.mybutton').unbind("mouseenter mouseleave");
+						$(".mybutton").attr("disabled", true);
+				
+						parent.GetWorldEvent(isCorrect);
+			 
+			}); 
+
+
+			});
+
+		</script>
+		<style type="text/css" id="page-css">
+			.spacer1{height: 16px;}
+			body
+			{
+				overflow: hidden;
+				background-color: #dff0ff;
+			}
+			#questionBox
+			{
+				position: fixed;
+				top: 413px;
+				z-index:1;
+				height: 49px;
+				width: 690px;
+				background-image: url('ClearBkgd2.png');
+				margin: 0px 0px 0px 24px;
+				padding: 10px 10px 20px 10px;
+				border: none;
+				font-family: Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 22px;
+				padding: 5px;
+				color: white;
+			}
+			#instruct
+			{
+				font-style: italic;
+				font-size: 24px;
+				width: 400px;
+				margin: 10px auto 0px auto;
+			}
+			
+			a img{border: none;}
+			a:link {text-decoration:none;}
+			a:visited {text-decoration:none;}
+			a:hover {text-decoration:none;}
+			a:active {text-decoration:none;}
+			#text
+			{
+				margin: 14px auto;
+				font-size: 22px;
+				font-family: Andika, Verdana, 'Times New Roman';
+				overflow: auto;
+				padding: 220px 25px 15px 25px;
+			}
+			#textTitle
+			{
+				font-family: Ribeye, Verdana, 'Times New Roman';
+				text-align: center;
+				font-weight: bold;
+				font-size: 42px;
+			}
+			#author
+			{
+				font-weight: bold;
+				text-align: center;
+				font-size: 20px;
+			}
+			.indent{text-indent: 40px;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 790px;
+				margin-top: -7px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 340px;
+				height: 40px;
+				
+				margin: 3px auto;
+				
+				color: #111111;
+				background-color: white; /*ACTUAL BUTTON COLOR*/
+				text-decoration: none;
+				border: none;//3px solid gray;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				
+				-webkit-border-radius: 12px;
+				-moz-border-radius: 12px;
+				border-radius: 12px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+				background-color: #fff369;
+				color: black;
+				border: 3px solid white;
+			}
+		</style>
+	</head>
+	<body onload="Start()"> <!--onload="scrollIt()">-->
+		<div class="scroll-pane">
+			<!--<button type="submit" src="IconChar0.png" id="button1"  onclick=""></button>-->
+			
+			<div id="questionBox">
+					<div id="buttonArea">
+						<div style="height: 4px;"></div>
+						<button class='mybutton' id="A" isCorrect="Continue" >Click to continue</button>
+						<div style="height: 4px;"></div>
+					</div>
+			</div>
+			
+			
+			<div id="text">
+				<div id="textTitle">
+					Rose the Cop
+				</div>
+				<div id="author">
+					By Sue Butler
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para1">
+					On Tuesday night, there was a terrible thunderstorm. John had been driving home from work when his car was hit from behind. John is a very careful driver and had never been in an accident before the storm. The other driver was very sorry and it seemed as if there was no damage that could be seen.  A couple of days later, John's car began making strange noises. He knew that he should have it looked at soon, but he had no idea where to go. He wanted to make sure he found someone who would care about his car as much as he did. 
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para2">
+					At lunch, he asked his coworkers, Lori, Mel, and Sam, if they could recommend a good mechanic. Everyone told him to go to Frank's Auto Clinic! Frank was supposed to be smart and fair.
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para3">
+					When John got to the repair shop, Frank was not there. A mechanic named Al walked over to John's car and offered to help. 
+				</div>
+				<div class="spacer1"></div>
+				
+				<div class="indent"id="para4">
+					"Everyone recommends this shop," said John. "Can you tell me how you price your work?"
+				</div>
+				<div class="indent" id="para5">
+					"We do good work here. You'll get a fair price." Al replied.
+				</div>
+				
+				<div class="indent" id="para6">
+					"I believe it. I also know that some shops charge a flat rate for labor on auto repairs. Others charge on the basis of the actual time the mechanic works on the repairs. What do you do here?" John asked.
+				</div>
+				
+				<div class="indent" id="para7">
+					"We do good work here." Al said again.
+				</div>
+				
+				<div class="spacer1"></div>
+				
+				<div class="indent" id="para8">
+					 "I understand. However, if you are going to charge me by the hour, I would like to know the rate. Also, can you tell me if this charge includes diagnostic time?" John questioned Al. He thought it was time to find a different shop and began to get back in his car.
+
+				</div>
+				
+				<div class="indent" id="para9">
+					 She leapt to her feet, and on her way out decided to throw 20 dollars onto the lunch counter.  As she reached for her wallet, she realized it was not there.  She looked back at the table, and <span id="highlight6">there was no sign of her wallet AND no sign of Agnes either. </span> She shook her head and laughed quietly to herself.  "Never trust strangers," her mother's voice echoed in her head. 
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

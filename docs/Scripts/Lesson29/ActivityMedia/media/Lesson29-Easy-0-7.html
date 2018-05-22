@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L29Bkgd2.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 20px;
+				padding: 15px 30px 0px 30px;
+				line-height: 32px;
+				color: #212121;
+			}
+			#mainTextHead
+			{
+				font-family: 'Kreon', Verdana, 'Times New Roman';
+				font-size: 50px;
+				line-height: 55px;
+				margin: 15px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+				letter-spacing: 3px;
+				z-index: 10;
+			}
+			.subHead1
+			{
+				font-family: 'Kreon', Verdana, 'Times New Roman';
+				font-size: 30px;
+				font-weight: bold;
+				margin: 15px 0px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				left: 0;
+				z-index:1;
+				width: 800px;
+				height: 180px;
+				background-color: #212121;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 28px;
+				padding: 10px 10px 0px 10px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 780px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 760px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 15px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+		            var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;			
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
+			var correctAnswer = "#b1";
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "para6");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+			
+			function ShowItem(){
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+				function Start()
+			{
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+				function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+						
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						parent.PlaySound('clicked0.wav'); 
+						//parent.GetWorldEvent(strId.length);
+					}
+					else {
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function ShowMediaAnswer()
+			{
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				
+				//$(".hideAnswer").animate({backgroundColor: "transparent"}, 300);
+			}
+			
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+				parent.GetWorldEvent("Cristina");
+				}
+				else if(data == "NextPage")
+				{
+					
+						parent.nextPage("media/"+"Lesson29-Easy-0-8.html?id="+strId);
+					
+					//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data == "Page")
+				{
+					parent.GetWorldEvent("Start1");
+				}
+				else if (data == "Difficulty") 
+				{
+					parent.GetWorldEvent("Easy");
+				}
+			}
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Sensationalism in Journalism
+				</div>
+				
+				<div class="subHead1">What is Sensationalism?</div>
+				<div id="para1" class="para">
+				Crime reporting is especially susceptible to sensationalism. But is it ever appropriate? Competition for readers and consumers of news has never been more intense. Because the public can get information from so many sources-newspapers to TV to the Internet-journalists may be tempted to resort to sensationalism in order to attract an audience and get an edge.
+				</div>
+				
+				<div id="para2" class="para">
+				The word "sensationalism" was first used in the nineteenth century to criticize the so-called "yellow journalism" of newspapers such as the New York World and New York Journal. The term has since been applied to media coverage that's controversial, shocking, attention-grabbing, graphic, appealing to the lowest instincts or focused on superficial details. But no matter how you define it, all sensationalist journalism is essentially designed to arouse strong emotional reactions in readers.
+				</div>
+				
+				<div class="subHead1">Has Sensationalism Changed?</div>
+				<div id="para3" class="para">
+				Journalism has come a long way since the nineteenth century, but some things haven't changed. Journalists still sometimes resort to sensationalist techniques to get a leg up on the competition. Exhibit A: The modern saying often attributed to the broadcast media that "if it bleeds, it leads." So are reporters more guilty of sensationalism now than they were in the past?
+				</div>
+				
+				<div id="para4" class="para">
+				A study recently published in the Journal of Media Psychology attempted to answer that question. The researchers looked at the use of 10 specific sensationalizing descriptors over the past 100 years in headlines from the New York Times and Washington Post. The function of a good headline is to attract readers, so it's a logical place to find evidence of sensationalism. The researchers classified the descriptors as either strong (such as "massacre" and "slaughter") or weak (such as "unfavorable" and "misfortune"). Their analysis of how often these terms appeared in 100 years' worth of headlines revealed that the use of strong and weak sensationalist descriptors declined in both newspapers. And when such descriptors were used, weak ones were used significantly more often than strong ones.
+				</div>
+				
+				
+				<div class="subHead1">Not in Decline</div>
+				<div id="para5" class="para">
+				But don't assume that these results mean that sensationalism overall is in decline. For example, look at the coverage of the January 8 shootings at a Tucson strip mall.  An informal survey of various news reports on this incident shows that the initial coverage seemed to have had two focuses. The first was on Arizona Congresswoman Gabrielle Gifford. Because she was the apparent target of Jared Laughner, the alleged shooter, this focus is certainly appropriate.
+				</div>
+				
+				<div id="para6" class="para">
+				However, a secondary focus of the coverage was the death of nine-year-old Christina Taylor Green, the youngest of the six people who died in the incident. Why? The tender age of this victim made her death, in a sense, more tragic than the deaths of the other victims. People are usually shocked and outraged by crimes against children. By focusing on Green's death, reporters could appeal to and play on the emotions of readers-hence, they were resorting to sensationalism.
+				</div>
+				<div id="para7" class="para">
+				Some would argue that sensationalism is simply giving readers what they want and what's wrong with that? The problem is that it distorts the news. Let's return to the Loughner shootings. Ask yourself-besides Christina Taylor Green, can you name any of the other people who died? I couldn't. That's partly because the skewed coverage that emphasized her death to play on people's emotions downplayed the deaths of the other victims. And these victims were as much a part of this tragedy as Taylor Green.
+				</div>
+				<div id="para8" class="para">
+				Sensationalism isn't just about word choice, either. As the saying goes, a picture is worth a thousand words. The use of excessively graphic photos is a form of sensationalism. On the Internet-the only source of news for many people-journalists can also use video to tell a story. And video can be very manipulative.
+				</div>
+				
+				<div class="subHead1">Avoiding Sensationalism</div>
+				<div id="para9" class="para">
+				If sensationalism is bad, how do journalists avoid it while still writing interesting, descriptive and emotional pieces that attract readers? Dr. Mustafa K. Anuar, a Malaysian journalist and journalism professor at Universiti Sains Malaysia in Penang, has written about the line between crime reporting and sensationalism.
+				</div>
+				<div id="para10" class="para">
+				To ethically report crime stories, Anuar advises journalists to ask themselves three questions:
+				1) Was the coverage of the story responsible, balanced and fair?
+				2) Did the media respect the rights and interests of the people who are victims of crimes, as well as their families and friends, or was the coverage too intrusive?
+				3) Why did the media devote so much space to the story and why did it choose this angle over others?
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				What is the writer suggesting in this section of text?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Correct">
+					Media uses coverage focus to sensationalize
+				</div>
+				<div class='mybutton' id="b2" value="Incorrect">
+					Media purposely leaves out information to sensationalize
+				</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect">
+					Media gives only the facts to avoid sensationalizing
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

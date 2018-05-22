@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="MCQuizSAAgree">
+        <Item text="_user_ I agree with your answer." speech="_user_ I agree with your answer." play="_user_,B1" />
+        <Item text="_user_ I think that is the correct answer too." speech="_user_ I think that is the correct answer too." play="_user_,B2" />
+        <Item text="_user_ this is what I think too." speech="_user_ this is what I think too." play="_user_,B3" />
+        <Item text="_user_ I agree with you." speech="_user_ I agree with you." play="_user_,B4" />
+        <Item text="_user_ we are in agreement! That is what I would choose." speech="_user_ we are in agreement! That is what I would choose." play="_user_,B5" />
+      </SpeechCan>
+      <SpeechCan name="SADenial">
+        <Item text="_user_ actually, I don't think that's right." speech="_user_ I don't think that's right." play="_user_,B6" />
+        <Item text="_user_ I would have to disagree." speech="_user_ I would have to disagree." play="_user_,B7" />
+        <Item text="_user_ I don't think this answer is right." speech="_user_ I don't think this answer is right." play="_user_,B8" />
+        <Item text="_user_ I don't think that is correct." speech="_user_ I don't think that is correct." play="_user_,B9" />
+        <Item text="_user_ I was thinking that it might be something else." speech="_user_ I was thinking that it might be something else." play="_user_,B10" />
+        <Item text="_user_ The answer you chose doesn't seem right to me." speech="_user_ The answer you chose doesn't seem right to me." play="_user_,B11" />
+        <Item text="_user_ I don't think that's quite right, but I could be wrong." speech="_user_ I don't think that's quite right, but I could be wrong." play="_user_,B12" />
+        <Item text="_user_ actually, I would disagree." speech="_user_ actually, I would disagree." play="_user_,B13" />
+        <Item text="_user_. Maybe the correct answer is something different." speech="_user_. Maybe the correct answer is something different." play="_user_,B14" />
+      </SpeechCan>
+      <SpeechCan name="StartSpeech">
+        <Item text="I choose the answer" speech="" play="B15" />
+        <Item text="maybe the right answer is" speech="" play="B16" />
+        <Item text="I think the correct answer is" speech="" play="B17" />
+        <Item text="I pick the answer" speech="" play="B18" />
+        <Item text="my guess is" speech="" play="B19" />
+        <Item text="I pick the answer" speech="" play="B20" />
+        <Item text="I am going to choose the answer" speech="" play="B21" />
+        <Item text="it sounds like the correct answer is" speech="" play="B22" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="MCQuizPositiveToAgent">
+        <Item text="Jordan, you are absolutely correct, good job." speech="Jordan, you are absolutely correct, good job." play="A1" />
+        <Item text="Jordan, you got it right, excellent!" speech="Jordan, you got it right, excellent!" play="A2" />
+        <Item text="Jordan, you are right, that's great!" speech="Jordan, you are right, that's great!" play="A3" />
+        <Item text="Jordan, that is correct, well done!" speech="Jordan, that is correct, well done!" play="A4" />
+        <Item text="Jordan, that's right, great job!" speech="Jordan, that's right, great job!" play="A5" />
+        <Item text="Jordan, That is correct!" speech="Jordan, That is correct!" play="A6" />
+        <Item text="Jordan, that's it! Nice job!" speech="Jordan, that's it! Nice job!" play="A7" />
+        <Item text="Yes, Jordan! That's right!" speech="Yes, Jordan! That's right!" play="A8" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizPump">
+        <Item text="_user_ have a try. Please click on the correct meaning of the underlined word in this sentence." speech="_user_ have a try. Please click on the correct meaning of the underlined word in this sentence." play="_user_,A9" />
+        <Item text="_user_ I know you can do it. What would you choose as your answer? Click on the correct meaning of the underlined word." speech="_user_ I know you can do it. What would you choose as your answer? Click on the correct meaning of the underlined word." play="_user_,A10" />
+        <Item text="_user_ come on. Give it a try. Click on your answer, please!" speech="_user_ come on. Give it a try. Click on your answer, please!" play="_user_,A11" />
+        <Item text="_user_ go ahead and respond. What does the underlined word mean? Click on the correct answer." speech="_user_ go ahead and respond. What does the underlined word mean? Click on the correct answer." play="_user_,A12" />
+        <Item text="_user_ now it's your turn to try. Click the correct meaning." speech="_user_ now it's your turn to try. Click the correct meaning." play="_user_,A13" />
+        <Item text="_user_ please have a try. Click the correct meaning." speech="_user_ please have a try. Click the correct meaning." play="_user_,A14" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizExplanation">
+        <Item text="_user_ and Jordan, please remember we can always replace each definition of the word and check which one makes sense." speech="_user_ and Jordan, please remember we can always replace each definition of the word and check which one makes sense." play="_user_,A15" />
+        <Item text="_user_ and Jordan, We replace the multiple meaning word with both definitions and check which one makes sense." speech="_user_ and Jordan, We replace the multiple meaning word with both definitions and check which one makes sense." play="_user_,A16" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizToUserBlank">
+        <Item text="_user_ I am sorry. Since you didn't give any answer, Jordan will go. Jordan, What is your answer?" speech="_user_ I am sorry. Since you didn't give any answer, Jordan will go. Jordan, What is your answer?" play="_user_,A17" />
+        <Item text="_user_ it seems you didn't click an option. So now Jordan will try. Jordan, what is your answer?" speech="_user_ it seems you didn't click an option. So now Jordan will try. Jordan, what is your answer?" play="_user_,A18" />
+        <Item text="_user_ Well, you didn't click on a stamp. So Jordan, what would you pick as your answer?" speech="_user_ Well, you didn't click on a stamp. So Jordan, what would you pick as your answer?" play="_user_,A19" />
+        <Item text="_user_ I'm sorry, I didn't receive your answer. So Jordan, your turn, please. " speech="_user_ I'm sorry, I didn't receive your answer. So Jordan, your turn, please." play="_user_,A20" />
+      </SpeechCan>
+      <SpeechCan name="AskJordan">
+        <Item text="Jordan, which answer do you think is correct?" speech="Jordan, which answer do you think is correct?" play="A21" />
+        <Item text="Jordan, what is your answer?" speech="Jordan, what is your answer?" play="A22" />
+        <Item text="Jordan, your answer, please." speech="Jordan, your answer, please." play="A23" />
+        <Item text="Jordan, it is your turn. What is your answer?" speech="Jordan, it is your turn. What is your answer?" play="A24" />
+        <Item text="Jordan, what about you? What do you think?" speech="Jordan, what about you? What do you think?" play="A25" />
+        <Item text="Jordan, do you have an answer?" speech="Jordan, do you have an answer?" play="A26" />
+        <Item text="Jordan, could you please tell us your answer?" speech="Jordan, could you please tell us your answer?" play="A27" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizPositiveCI">
+        <Item text=" Jordan, I'm sorry, you didn't get that one right. _user_ good job! You are correct." speech="Jordan, I'm sorry, you didn't get that one right. _user_ good job! You are correct." play="A28,_user_,A29" />
+        <Item text="Jordan, you are wrong! _user_ you are correct. Nicely done!" speech="Jordan, you are wrong! _user_ you are correct. Nicely done!" play="A30,_user_,A31" />
+        <Item text=" Jordan, you are wrong. _user_ great! You're right!" speech="Jordan, you are wrong. _user_ great! You're right!" play="A32,_user_,A33" />
+        <Item text="Jordan, you need more practice, you didn't get it right. _user_ nice job! That is correct!" speech="Jordan, you need more practice, you didn't get it right. _user_ nice job! That is correct!" play="A34,_user_,A35" />
+        <Item text=" Jordan, that is incorrect! _user_ wonderful! That is absolutely correct!" speech="Jordan, that is incorrect! _user_ wonderful! That is absolutely correct!" play="A36,_user_,A37" />
+        <Item text=" Jordan, sorry, you were incorrect. _user_ Perfect! You got it!" speech="Jordan, sorry, you were incorrect. _user_ Perfect! You got it!" play="A38,_user_,A39" />
+        <Item text=" Jordan, I hate to say this, but you are wrong! _user_ that's it! Nice job!" speech="Jordan, I hate to say this, but you are wrong! _user_ that's it! Nice job!" play="A40,_user_,A41" />
+        <Item text=" Jordan, you are wrong. _user_ great job! You're doing really well!" speech="Jordan, you are wrong. _user_ great job! You're doing really well!" play="A42,_user_,A43" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizNegativeToAgent">
+        <Item text="Jordan I am sorry, but you are incorrect." speech="Jordan I am sorry, but you are incorrect." play="A44" />
+        <Item text="Jordan you are wrong." speech="Jordan you are wrong." play="A45" />
+        <Item text="Jordan sorry! you are incorrect." speech="Jordan sorry! you are incorrect." play="A46" />
+        <Item text="Well, Jordan, you answered this question incorrectly." speech="Well, Jordan, you answered this question incorrectly." play="A47" />
+        <Item text="Unfortunately, Jordan, you are incorrect this time." speech="Unfortunately, Jordan, you are incorrect this time." play="A48" />
+        <Item text="Sorry, Jordan, unfortunately, you are incorrect." speech="Sorry, Jordan, unfortunately, you are incorrect." play="A49" />
+        <Item text="Jordan, this time you are incorrect" speech="Jordan, this time you are incorrect" play="A50" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizPositiveToBoth">
+        <Item text="Jordan and _user_, you both got that one correct! Good job!" speech="Jordan and _user_, you both got that one correct! Good job!" play="A51,_user_,A52" />
+        <Item text="Jordan and _user_, you are both right! " speech="Jordan and _user_, you are both right! Great job!" play="A53,_user_,A54" />
+        <Item text="Jordan and _user_, both of you are right! That's fantastic!" speech="Jordan and _user_, both of you are right! That's fantastic!" play="A55,_user_,A56" />
+        <Item text="Jordan and _user_, both of you are correct! Nice job!" speech="Jordan and _user_, both of you are correct! Nice job!" play="A57,_user_,A58" />
+        <Item text="Jordan and _user_, nice work! You are both right!" speech="Jordan and _user_, nice work! You are both right!" play="A59,_user_,A60" />
+        <Item text="Jordan and _user_, awesome! Both of you are correct!" speech="Jordan and _user_, awesome! Both of you are correct!" play="A61,_user_,A62" />
+        <Item text="Jordan and _user_, very good! You both got it!" speech="Jordan and _user_, very good! You both got it!" play="A63,_user_,A64" />
+        <Item text="Jordan and _user_, Nice job! You are both right!" speech="Jordan and _user_, Nice job! You are both right!" play="A65,_user_,A66" />
+      </SpeechCan>
+      <SpeechCan name="MCQuizNegativeToBoth">
+        <Item text="Jordan and _user_, I am sorry, but both of you are incorrect." speech="Jordan and _user_, I am sorry, but both of you are incorrect." play="A67,_user_,A68" />
+        <Item text="Jordan and _user_, you are both wrong." speech="Jordan and _user_, you are both wrong." play="A69,_user_,A70" />
+        <Item text="Jordan and _user_, sorry! you are both incorrect." speech="Jordan and _user_, sorry! you are both incorrect." play="A71,_user_,A72" />
+        <Item text="Jordan and _user_, Well, you both answered this question incorrectly." speech="Jordan and _user_, Well, you both answered this question incorrectly." play="A73,_user_,A74" />
+        <Item text="Jordan and _user_, Unfortunately, you are both incorrect this time." speech="Jordan and _user_, Unfortunately, you are both incorrect this time." play="A75,_user_,A76" />
+        <Item text="Jordan and _user_, unfortunately, you are both incorrect." speech="Jordan and _user_, unfortunately, you are both incorrect." play="A77,_user_,A78" />
+        <Item text="Jordan and _user_, this time you are both incorrect." speech="Jordan and _user_, this time you are both incorrect." play="A79,_user_,A80" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <RigidPacks>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan Hello" speech="" media="media\IntroTitle.html" play="_user_,A81" />
+      <Item id="2" agent="Jordan" text="Hello again Cristina." speech="" play="B23" />
+      <Item id="3" agent="Cristina" text="Two day we are going to practice identifying the correct definition for multiple meaning words." speech="" play="A82" />
+      <Item id="4" agent="Jordan" text="Oh ok. Let me think. This would be an example of a multiple meaning word. Right? Because ring can mean different things in different sentences." speech="" media="media\Lesson8MMWexample.html" play="B24" />
+      <Item id="5" agent="Cristina" text="Jordan That's right. In the first sentence, it is a verb that means to sound in a reverberating way and in the second sentence it means a circular object. So, how do you think we identify the correct definition of the word if it was used in a sentence?" speech="" play="A83" />
+      <Item id="6" agent="Jordan" text="I remember this. First we will stop and label the word that is confusing us because it has more than one meaning." speech="" media="media\Lesson8-Opening.html" play="B25" />
+      <Item id="7" agent="Cristina" text="Jordan Great! Next, we reread and define the word by asking ourselves what the word means in that specific sentence. Finally, we replace the multiple meaning word with different definitions and check which one makes the most sense." speech="" play="A84" />
+      <Item id="8" agent="Jordan" text="Cool. So how will we use this strategy in this lesson?" speech="" play="B26" />
+      <Item id="9" agent="Cristina" text="_user_, A sentence will appear at the top of the screen. A multiple meaning word will be underlined in the sentence. You will need to pick the correct definition for the multiple meaning word." speech="" media="media\L9ActivityPreview.html" play="_user_,A85" />
+      <Item id="10" agent="Jordan" text="And we just click one of the buttons to select an option right?" speech="" play="B27" />
+      <Item id="11" agent="Cristina" text="Yep, exactly. _user_, Jordan will take a turn after you and we will keep track of how both of you do with a scoreboard at the bottom of the screen." speech="" play="A86,_user_,A87" />
+      <Item id="12" agent="Jordan" text="Great, let's get started then!" speech="" play="B28" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Jordan" text="Wow, multiple meaning words can be confusing when reading!" speech="" media="media\L8Close.html" play="B29" />
+      <Item id="2" agent="Cristina" text="Agreed Jordan! When you are confused, you need to stop and clarify what is confusing to you." speech="" play="A88" />
+      <Item id="3" agent="Jordan" text="Then I can ask myself clarifying questions like what are the different definitions for the words that confuse me?" speech="" play="B30" />
+      <Item id="4" agent="Cristina" text="_user_ and Jordan Exactly. You want to use the clarifying questions to reread and clarify what confuses you. Last you will need to replace the confusing words with the different definitions and check which one makes the most sense in the sentence. Thanks for working on this together !" speech="" play="_user_,A89" />
+      <Item id="5" agent="Jordan" text="_user_ See you next time." speech="" play="_user_,B31" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="Great Jordan! Next, we reread the word and try to clarify what the word means in that specific sentence." speech="" play="A90" />
+      <Item id="2" agent="Jordan" text="Reread and clarify, right. What next?" speech="" play="B32" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPE3">
+      <Questions />
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaItem" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="MCQuiz1" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="LoadQuiz" status="LoadMCQuiz" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="StartItem" id="1" />
+      <Action agent="System" act="ShowScore" data="" id="2" />
+      <Action agent="System" act="SetValue" data="JordanScore:0" id="3" />
+      <Action agent="System" act="SetValue" data="UserScore:0" id="4" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="5" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="HideScore" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="2" />
+      <Action agent="System" act="SetStatus" data="End" id="3" />
+    </Rule>
+    <Rule name="QuizCHH" status="MCQuiz1" response="" event="MCQuizCHH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCHL" status="MCQuiz1" response="" event="MCQuizCHL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCHM" status="MCQuiz1" response="" event="MCQuizCHM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCLH" status="MCQuiz1" response="" event="MCQuizCLH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCLL" status="MCQuiz1" response="" event="MCQuizCLL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCLM" status="MCQuiz1" response="" event="MCQuizCLM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCMH" status="MCQuiz1" response="" event="MCQuizCMH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCML" status="MCQuiz1" response="" event="MCQuizCML" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizCMM" status="MCQuiz1" response="" event="MCQuizCMM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpAnyB" status="MCQuiz1Pump" response="" event="Any" hasItem="" priority="3" frequency="1" description="">
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizToUserBlank" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="3" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToAgent" id="5" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="6" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="8" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="9" />
+      <Action agent="System" act="GetMediaItem" data="" id="10" />
+      <Action agent="System" act="Wait" data="5" id="11" />
+    </Rule>
+    <Rule name="QuizPumpAnyG" status="MCQuiz1Pump" response="" event="Any" hasItem="" priority="3" frequency="1" description="">
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizToUserBlank" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="3" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="AddAgentScore" data="1" id="7" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="8" />
+      <Action agent="System" act="ShowScore" data="" id="9" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="10" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="11" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="12" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="13" />
+      <Action agent="System" act="GetMediaItem" data="" id="14" />
+      <Action agent="System" act="Wait" data="5" id="15" />
+    </Rule>
+    <Rule name="QuizPumpCHH" status="MCQuiz1Pump" response="" event="MCQuizCHH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddAgentScore" data="1" id="7" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="8" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="9" />
+      <Action agent="System" act="ShowScore" data="" id="10" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="11" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="12" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="13" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="14" />
+      <Action agent="System" act="GetMediaItem" data="" id="15" />
+      <Action agent="System" act="Wait" data="5" id="16" />
+    </Rule>
+    <Rule name="QuizPumpCHL" status="MCQuiz1Pump" response="" event="MCQuizCHL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCHM" status="MCQuiz1Pump" response="" event="MCQuizCHM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCLH" status="MCQuiz1Pump" response="" event="MCQuizCLH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPostiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCLL" status="MCQuiz1Pump" response="" event="MCQuizCLL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCLM" status="MCQuiz1Pump" response="" event="MCQuizCLM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCMH" status="MCQuiz1Pump" response="" event="MCQuizCMH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCML" status="MCQuiz1Pump" response="" event="MCQuizCML" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="MCQuizSAAgree" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="AddUserScore" data="1" id="4" />
+      <Action agent="System" act="AddAgentScore" data="1" id="5" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpCMM" status="MCQuiz1Pump" response="" event="MCQuizCMM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveCI" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddUserScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="UserScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpWHH" status="MCQuiz1Pump" response="" event="MCQuizWHH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpWHL" status="MCQuiz1Pump" response="" event="MCQuizWHL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpWHM" status="MCQuiz1Pump" response="" event="MCQuizWHM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpWLH" status="MCQuiz1Pump" response="" event="MCQuizWLH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizPumpWLL" status="MCQuiz1Pump" response="" event="MCQuizWLL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizPumpWLM" status="MCQuiz1Pump" response="" event="MCQuizWLM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizPumpWMH" status="MCQuiz1Pump" response="" event="MCQuizWMH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizPumpWML" status="MCQuiz1Pump" response="" event="MCQuizWML" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="3" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="AddAgentScore" data="1" id="7" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="8" />
+      <Action agent="System" act="ShowScore" data="" id="9" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="10" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="11" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="12" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="13" />
+      <Action agent="System" act="GetMediaItem" data="" id="14" />
+      <Action agent="System" act="Wait" data="5" id="15" />
+    </Rule>
+    <Rule name="QuizPumpWMM" status="MCQuiz1Pump" response="" event="MCQuizWMM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWHH" status="MCQuiz1" response="" event="MCQuizWHH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWHL" status="MCQuiz1" response="" event="MCQuizWHL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizWHM" status="MCQuiz1" response="" event="MCQuizWHM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="AddAgentScore" data="1" id="6" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="7" />
+      <Action agent="System" act="ShowScore" data="" id="8" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="9" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="10" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="11" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="12" />
+      <Action agent="System" act="GetMediaItem" data="" id="13" />
+      <Action agent="System" act="Wait" data="5" id="14" />
+    </Rule>
+    <Rule name="QuizWLH" status="MCQuiz1" response="" event="MCQuizWLH" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWLL" status="MCQuiz1" response="" event="MCQuizWLL" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWLM" status="MCQuiz1" response="" event="MCQuizWLM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWMH" status="MCQuiz1" response="" event="MCQuizWMM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="QuizWML" status="MCQuiz1" response="" event="MCQuizWML" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="SADenial" id="2" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="3" />
+      <Action agent="System" act="GetMediaFeedback" data="SAGoodAnswer" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizPositiveToAgent" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="AddAgentScore" data="1" id="7" />
+      <Action agent="System" act="AddValue" data="JordanScore:1" id="8" />
+      <Action agent="System" act="ShowScore" data="" id="9" />
+      <Action agent="System" act="ShowValue" data="UserScore" id="10" />
+      <Action agent="System" act="ShowValue" data="JordanScore" id="11" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="12" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="13" />
+      <Action agent="System" act="GetMediaItem" data="" id="14" />
+      <Action agent="System" act="Wait" data="5" id="15" />
+    </Rule>
+    <Rule name="QuizWMM" status="MCQuiz1" response="" event="MCQuizWMM" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizNegativeToBoth" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="MCQuizExplanation" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="GetMediaFeedback" data="TAGoodAnswer" id="7" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="8" />
+      <Action agent="System" act="GetMediaItem" data="" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadMCQuiz" id="2" />
+      <Action agent="System" act="ShowMedia" data="media\L9Activity.html" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="StartItem" status="StartItem" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaItem" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="MCQuiz1" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

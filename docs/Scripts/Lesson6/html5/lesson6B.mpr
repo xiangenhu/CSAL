@@ -1,0 +1,2178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,100" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="PhotoFitMan" position="-3,-13" size="132,108" animationlibrary="Library/Characters/PhotoFitManHead/PhotoFitManHead.xml" addons="Library/Addons/RM2HeadClothesPack1/RM2HeadClothesPack1.xml,Library/Addons/RM2HeadClothesPack2/RM2HeadClothesPack2.xml,Library/Addons/RM2HeadHairPack1/RM2HeadHairPack1.xml,Library/Addons/RM2HeadHairPack2/RM2HeadHairPack2.xml,Library/Addons/RM2HeadHairPack3/RM2HeadHairPack3.xml,Library/Addons/RM2HeadIndustryPack/RM2HeadIndustryPack.xml,Library/Addons/RM2HeadPolicePack/RM2HeadPolicePack.xml,Library/Addons/RM2HeadPropPack1/RM2HeadPropPack1.xml,Library/Addons/RM2HeadSoldierPack/RM2HeadSoldierPack.xml" defaultvoice="Neo James" defaultidle="eyetracker" top="shortsleeve1" hair="basiccut" detailtextureref="Library/Models/Detail/Male Young 01.jpg" detailstrength="0.75"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+	 
+   <message id="B1" name="B1">
+    <say>Awesome</say>
+  </message>
+  <message id="B2" name="B2">
+    <say>! You got it right!</say>
+  </message>
+  <message id="B3" name="B3">
+    <say>Super</say>
+  </message>
+  <message id="B4" name="B4">
+    <say>! You got the question right!</say>
+  </message>
+  <message id="B5" name="B5">
+    <say>Great job</say>
+  </message>
+  <message id="B6" name="B6">
+    <say>! You answered right! Thanks for helping me so much!</say>
+  </message>
+  <message id="B7" name="B7">
+    <say>You answered right</say>
+  </message>
+  <message id="B8" name="B8">
+    <say>!Awesome job!</say>
+  </message>
+  <message id="B9" name="B9">
+    <say>Amazing</say>
+  </message>
+  <message id="B10" name="B10">
+    <say>! You're good at this! You picked the right answer.</say>
+  </message>
+  <message id="B11" name="B11">
+    <say>Great job</say>
+  </message>
+  <message id="B12" name="B12">
+    <say>! We answered the question right! Great job!</say>
+  </message>
+  <message id="B13" name="B13">
+    <say>We did it</say>
+  </message>
+  <message id="B14" name="B14">
+    <say>! We answered the question correctly.</say>
+  </message>
+  <message id="B15" name="B15">
+    <say>Great</say>
+  </message>
+  <message id="B16" name="B16">
+    <say>! We answered the question correctly!</say>
+  </message>
+  <message id="B17" name="B17">
+    <say>we both picked the correct answer!</say>
+  </message>
+  <message id="B18" name="B18">
+    <say>we both picked the right answer!</say>
+  </message>
+  <message id="B19" name="B19">
+    <say>Awesome</say>
+  </message>
+  <message id="B20" name="B20">
+    <say>we picked the same answer! And it was right!</say>
+  </message>
+  <message id="B21" name="B21">
+    <say>Awesome</say>
+  </message>
+  <message id="B22" name="B22">
+    <say>we picked the same answer! And it was correct!</say>
+  </message>
+  <message id="B23" name="B23">
+    <say>Amazing</say>
+  </message>
+  <message id="B24" name="B24">
+    <say>! We both answered correctly!</say>
+  </message>
+  <message id="B25" name="B25">
+    <say>Sweet</say>
+  </message>
+  <message id="B26" name="B26">
+    <say>! We answered correctly! Great job!</say>
+  </message>
+  <message id="B27" name="B27">
+    <say>This is great! We both answered the question correctly</say>
+  </message>
+  <message id="B28" name="B28">
+    <say>, if you are having trouble with the passage, feel free to read along with the audio.</say>
+  </message>
+  <message id="B29" name="B29">
+    <say>try to answer the question.</say>
+  </message>
+  <message id="B30" name="B30">
+    <say>Um...</say>
+  </message>
+  <message id="B31" name="B31">
+    <say>I don't think that's the right answer.</say>
+  </message>
+  <message id="B32" name="B32">
+    <say>Um...</say>
+  </message>
+  <message id="B33" name="B33">
+    <say>I don't think that was the right answer.</say>
+  </message>
+  <message id="B34" name="B34">
+    <say>Try again</say>
+  </message>
+  <message id="B35" name="B35">
+    <say>I don't think that was the right answer.</say>
+  </message>
+  <message id="B36" name="B36">
+    <say>I don't think that was right!</say>
+  </message>
+  <message id="B37" name="B37">
+    <say>you answered correctly! good job!</say>
+  </message>
+  <message id="B38" name="B38">
+    <say>you got the right definition.</say>
+  </message>
+  <message id="B39" name="B39">
+    <say>you answered correctly awesome job!</say>
+  </message>
+  <message id="B40" name="B40">
+    <say>Great</say>
+  </message>
+  <message id="B41" name="B41">
+    <say>! You answered correctly!</say>
+  </message>
+  <message id="B42" name="B42">
+    <say>Great</say>
+  </message>
+  <message id="B43" name="B43">
+    <say>! you picked the right definition for the word I didn't understand.</say>
+  </message>
+  <message id="B44" name="B44">
+    <say>Awesome</say>
+  </message>
+  <message id="B45" name="B45">
+    <say>Amazing job</say>
+  </message>
+  <message id="B46" name="B46">
+    <say>! You picked the right definition!</say>
+  </message>
+  <message id="B47" name="B47">
+    <say>good job! You picked the right definition.</say>
+  </message>
+  <message id="B48" name="B48">
+    <say>Wow</say>
+  </message>
+  <message id="B49" name="B49">
+    <say>you picked the right definition.</say>
+  </message>
+  <message id="B50" name="B50">
+    <say>Let's keep going I have another word. </say>
+  </message>
+  <message id="B51" name="B51">
+    <say>Yeah</say>
+  </message>
+  <message id="B52" name="B52">
+    <say>! Thanks so much! This is helping a lot!</say>
+  </message>
+  <message id="B53" name="B53">
+    <say>I have another word to define.</say>
+  </message>
+  <message id="B54" name="B54">
+    <say>after this next word, I have one more word that I'd like defined for this article!</say>
+  </message>
+  <message id="B55" name="B55">
+    <say>So context clues are kind of like little hints that guide us to the possible definition of a word! Got it!</say>
+  </message>
+  <message id="B56" name="B56">
+    <say>Got it!</say>
+  </message>
+  <message id="B57" name="B57">
+    <say>I will show you in one second... let me find it.</say>
+  </message>
+  <message id="B58" name="B58">
+    <say>Right! This is helping a lot. thanks! I have another word I need help with.</say>
+  </message>
+  <message id="B59" name="B59">
+    <say>Hey Cristina! We are doing great! Recently, I have been really interested in space. I found a few articles, but I am having trouble understanding some of the words. Can you two help me with the ones I don't know?</say>
+  </message>
+  <message id="B60" name="B60">
+    <say>Can you explain Cristina?</say>
+  </message>
+  <message id="B61" name="B61">
+    <say>Yes, Thank you</say>
+  </message>
+  <message id="B62" name="B62">
+    <say>! You are a huge help! Here is another word.</say>
+  </message>
+  <message id="B63" name="B63">
+    <say>I think so Cristina but it's too soon to tell. I'd like to show you guys more words.</say>
+  </message>
+  <message id="B64" name="B64">
+    <say>Oh! Here it is! I'll show you guys in one second.</say>
+  </message>
+  <message id="B65" name="B65">
+    <say>I have a second word I need defined</say>
+  </message>
+  <message id="B66" name="B66">
+    <say>This article is about Earth! I'm having trouble with a few words in this article too. I hope you don't mind helping me again</say>
+  </message>
+  <message id="B67" name="B67">
+    <say>Hey Cristina! What does the word untidy mean anyway?</say>
+  </message>
+  <message id="B68" name="B68">
+    <say>Got it! so my room and closet are untidy because I've been trying to figure out these definitions all day! maybe I should clean those up!</say>
+  </message>
+  <message id="B69" name="B69">
+    <say>I have another word highlighted</say>
+  </message>
+  <message id="B70" name="B70">
+    <say>That's the last word for the Galaxies article you guys!</say>
+  </message>
+  <message id="B71" name="B71">
+    <say>This next article is about Black Holes! I hope you can still help me with the hard words</say>
+  </message>
+  <message id="B72" name="B72">
+    <say>What are Black Holes Cristina?</say>
+  </message>
+  <message id="B73" name="B73">
+    <say>Wow! I think the idea of them is a little scary, but I want to know more.</say>
+  </message>
+  <message id="B74" name="B74">
+    <say>let's read the article. can you click to continue at the bottom of the page when you are done reading?</say>
+  </message>
+  <message id="B75" name="B75">
+    <say>I have another word I need help with, I have it highlighted, let me show you!</say>
+  </message>
+  <message id="B76" name="B76">
+    <say>We did Cristina! We learned how to identify context clues and how to define words we don't know with the help of context clues.</say>
+  </message>
+  <message id="B77" name="B77">
+    <say>This lesson has really helped me learn how to define words I'm having trouble with. I will try to remember these steps. </say>
+  </message>
+  <message id="B78" name="B78">
+    <say>We will Cristina! We enjoyed this lesson! See you later!</say>
+  </message>
+  <message id="B79" name="B79">
+    <say>That's really cool! I'm happy you told me that rotating means spinning.It's exciting to hear so many new words! Thanks you guys!</say>
+  </message>
+  <message id="B80" name="B80">
+    <say>Yes! I'll show you in a second but it's the last word for this article on galaxies.</say>
+  </message>
+  <message id="B81" name="B81">
+    <say>Got it! I'd like some practice with these steps! Let's get started!</say>
+  </message>
+  <message id="B82" name="B82">
+    <say>I have only a few more words that I need help with! We are close to the bottom of the article!</say>
+  </message>
+  <message id="B83" name="B83">
+    <say>Guess what!? Here is the last word I need help with! </say>
+  </message>
+  <message id="B84" name="B84">
+    <say>can you help me define the highlighted word? The word is sprawling.</say>
+  </message>
+  <message id="B85" name="B85">
+    <say>did you need more time picking a definition? Try again now!</say>
+  </message>
+  <message id="B86" name="B86">
+    <say>I don't think</say>
+  </message>
+  <message id="B87" name="B87">
+    <say>picked the right definition. I thought sprawling meant to injure your body.</say>
+  </message>
+  <message id="B88" name="B88">
+    <say>I agree with</say>
+  </message>
+  <message id="B89" name="B89">
+    <say>'s definition.</say>
+  </message>
+  <message id="B90" name="B90">
+    <say>Yeah! I knew</say>
+  </message>
+  <message id="B91" name="B91">
+    <say>picked the right answer!  Like a forest, A forest is sprawling because it covers a large area!</say>
+  </message>
+  <message id="B92" name="B92">
+    <say>I get it now! So a forest is sprawling because it covers a large area just like a galaxy!</say>
+  </message>
+  <message id="B93" name="B93">
+    <say>I see I was wrong! I thought sprawling meant injure yourself because sprawl rhymes with fall.</say>
+  </message>
+  <message id="B94" name="B94">
+    <say>here is another word I'm having trouble with! The word is consist, can you pick the best definition below?</say>
+  </message>
+  <message id="B95" name="B95">
+    <say>did you need more time picking a definition for consist. Try again</say>
+  </message>
+  <message id="B96" name="B96">
+    <say>I think</say>
+  </message>
+  <message id="B97" name="B97">
+    <say>didn't pick the right definition, but then again, I don't know.</say>
+  </message>
+  <message id="B98" name="B98">
+    <say>I think</say>
+  </message>
+  <message id="B99" name="B99">
+    <say>picked the right definition of consist.</say>
+  </message>
+  <message id="B100" name="B100">
+    <say>Yeah! I knew you picked right definition</say>
+  </message>
+  <message id="B101" name="B101">
+    <say>! So that's what that means when people ask what did your day consist of! They are asking what was my day made up of, like what things I did that day.</say>
+  </message>
+  <message id="B102" name="B102">
+    <say>I understand now</say>
+  </message>
+  <message id="B103" name="B103">
+    <say>! SO to consist means to be made up of something... so a pizza consists of cheese and dough. That means  a pizza is made up of cheese and dough!</say>
+  </message>
+  <message id="B104" name="B104">
+    <say>I get it now! so consist is to be made of something, Like a car, it is made of an engine and tires.</say>
+  </message>
+  <message id="B105" name="B105">
+    <say>this word is bulging. Can you help me ?</say>
+  </message>
+  <message id="B106" name="B106">
+    <say>user_ did you need more time picking a definition? Try again by clicking on an option below.</say>
+  </message>
+  <message id="B107" name="B107">
+    <say>Cristina I think</say>
+  </message>
+  <message id="B108" name="B108">
+    <say>got the right definition!</say>
+  </message>
+  <message id="B109" name="B109">
+    <say>Great</say>
+  </message>
+  <message id="B110" name="B110">
+    <say>! You picked the right definition! So like my backpack or my mom's purse bulges when it is too full or large.</say>
+  </message>
+  <message id="B111" name="B111">
+    <say>Cristina I don't think</say>
+  </message>
+  <message id="B112" name="B112">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B113" name="B113">
+    <say>I get it now</say>
+  </message>
+  <message id="B114" name="B114">
+    <say>! So something bulges when it is too full or large, like my backpack when I pack too many articles about space in it.</say>
+  </message>
+  <message id="B115" name="B115">
+    <say>I see! so</say>
+  </message>
+  <message id="B116" name="B116">
+    <say>was right! Something bulges, like my backpack, when it is fuller than normal.</say>
+  </message>
+  <message id="B117" name="B117">
+    <say>here is another word I’m having trouble defining. The word is galactic.</say>
+  </message>
+  <message id="B118" name="B118">
+    <say>did you need more time picking the definition of galactic. Can you try?</say>
+  </message>
+  <message id="B119" name="B119">
+    <say>I agree with</say>
+  </message>
+  <message id="B120" name="B120">
+    <say>'s definition of galactic.</say>
+  </message>
+  <message id="B121" name="B121">
+    <say>I'd have to disagree with</say>
+  </message>
+  <message id="B122" name="B122">
+    <say>'s definition Cristina. I don't think it's right.</say>
+  </message>
+  <message id="B123" name="B123">
+    <say>I knew you picked the right definition! A galactic book means that the book is enormous! I think I'm understanding it now!</say>
+  </message>
+  <message id="B124" name="B124">
+    <say>So when my mother says there is a galactic sale at the mall, she means there is an enormous sale! I get it now!</say>
+  </message>
+  <message id="B125" name="B125">
+    <say>Oh I see!</say>
+  </message>
+  <message id="B126" name="B126">
+    <say>picked the right definition! I want to see if I understand the word. So if something is galactic it is enormous. A galactic building is an enormous building.</say>
+  </message>
+  <message id="B127" name="B127">
+    <say>here is another word I'm struggling with! The word is distinctive. Can you define it for me?</say>
+  </message>
+  <message id="B128" name="B128">
+    <say>did you need more time picking the definition for the word distinctive? I really need your help! Can you help me now?</say>
+  </message>
+  <message id="B129" name="B129">
+    <say>I agree with</say>
+  </message>
+  <message id="B130" name="B130">
+    <say>'s answer.</say>
+  </message>
+  <message id="B131" name="B131">
+    <say>I don't agree with</say>
+  </message>
+  <message id="B132" name="B132">
+    <say>'s answer.</say>
+  </message>
+  <message id="B133" name="B133">
+    <say>I see now! So something is distinctive when it looks different.Like An 18 wheeler. 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing</say>
+  </message>
+  <message id="B134" name="B134">
+    <say>I knew</say>
+  </message>
+  <message id="B135" name="B135">
+    <say>picked the right definition! So something is distinctive if it stands out or is different, Like An 18 wheeler. 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing</say>
+  </message>
+  <message id="B136" name="B136">
+    <say>I see so</say>
+  </message>
+  <message id="B137" name="B137">
+    <say>was right! So something is distinctive if it stands out or is different,So something is distinctive when it looks different. Like An 18 wheeler. 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing</say>
+  </message>
+  <message id="B138" name="B138">
+    <say>here’s the word! It's elongated! I don’t know what this word means! Can you help me ?”</say>
+  </message>
+  <message id="B139" name="B139">
+    <say>did you need more time picking out the definition? Can you try please?</say>
+  </message>
+  <message id="B140" name="B140">
+    <say>I think this is the right definition for the word elongate. The word long is in it  so I would think it would mean longer or thinner.</say>
+  </message>
+  <message id="B141" name="B141">
+    <say>I think this isn't the right definition!</say>
+  </message>
+  <message id="B142" name="B142">
+    <say>I knew that</say>
+  </message>
+  <message id="B143" name="B143">
+    <say>picked the right definition. So a stretching your muscles can make them elongated or longer and soon you will be flexible.</say>
+  </message>
+  <message id="B144" name="B144">
+    <say>So if someone stretches their muscles, this will elongates them or makes them longer. I think I understand the definition now. </say>
+  </message>
+  <message id="B145" name="B145">
+    <say>Whoops! I guess I was wrong!</say>
+  </message>
+  <message id="B146" name="B146">
+    <say>you did pick the right answer! To elongate a muscle means to stretch it out or make it longer. I think I understand the word'd definition now.</say>
+  </message>
+  <message id="B147" name="B147">
+    <say>here is another word I don't understand! The word is interstellar.</say>
+  </message>
+  <message id="B148" name="B148">
+    <say>did you need more time trying to find the definition of interstellar? Can you try by clicking on a definition below?</say>
+  </message>
+  <message id="B149" name="B149">
+    <say>I think</say>
+  </message>
+  <message id="B150" name="B150">
+    <say>picked the right definition.</say>
+  </message>
+  <message id="B151" name="B151">
+    <say>you did pick the right answer! I knew it! So a space ship would be interstellar because it would be in the space with the stars and planets.</say>
+  </message>
+  <message id="B152" name="B152">
+    <say>I can't say if</say>
+  </message>
+  <message id="B153" name="B153">
+    <say>picked the right definition I don't know it.</say>
+  </message>
+  <message id="B154" name="B154">
+    <say>So something is interstellar if it is between stars, like a space ship!</say>
+  </message>
+  <message id="B155" name="B155">
+    <say>I see now! So something is interstellar if it is between stars, like a space ship!</say>
+  </message>
+  <message id="B156" name="B156">
+    <say>The word associations is giving me a hard time! Can you define it for me?</say>
+  </message>
+  <message id="B157" name="B157">
+    <say>did you need more time selecting the definition of associations. Me too. Let's try now.</say>
+  </message>
+  <message id="B158" name="B158">
+    <say>I think</say>
+  </message>
+  <message id="B159" name="B159">
+    <say>did a good job picking what I think is the right definition.</say>
+  </message>
+  <message id="B160" name="B160">
+    <say>I had a feeling that</say>
+  </message>
+  <message id="B161" name="B161">
+    <say>picked the right definition! So an organization of objects, like a collection of stars.</say>
+  </message>
+  <message id="B162" name="B162">
+    <say>I think</say>
+  </message>
+  <message id="B163" name="B163">
+    <say>didn't pick the right answer.</say>
+  </message>
+  <message id="B164" name="B164">
+    <say>I see now! A collection or organization of cars would be considered an association of cars.</say>
+  </message>
+  <message id="B165" name="B165">
+    <say>Whoops! so you were right</say>
+  </message>
+  <message id="B166" name="B166">
+    <say>! So an organization of stars as well as galaxies can be found in space.</say>
+  </message>
+  <message id="B167" name="B167">
+    <say>this word I highlighted is interact. Can you pick the definition of the word?</say>
+  </message>
+  <message id="B168" name="B168">
+    <say>did you need more time selecting the definition for the word interact. Will you help me now?</say>
+  </message>
+  <message id="B169" name="B169">
+    <say>I think</say>
+  </message>
+  <message id="B170" name="B170">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B171" name="B171">
+    <say>I think</say>
+  </message>
+  <message id="B172" name="B172">
+    <say>picked the wrong answer. When I hear interact I think of acting but there's no answer option for acting below.</say>
+  </message>
+  <message id="B173" name="B173">
+    <say>I knew that we picked the right answer</say>
+  </message>
+  <message id="B174" name="B174">
+    <say>! Two things that interact with each other would be the moon and the earth! They rotate around each other!</say>
+  </message>
+  <message id="B175" name="B175">
+    <say>So things interact when they effect each other, like the moon effecting the earth and the earth effecting the moon.</say>
+  </message>
+  <message id="B176" name="B176">
+    <say>I was wrong! Interact doesn't mean to act or acting. It just sounds like it.</say>
+  </message>
+  <message id="B177" name="B177">
+    <say>here is the last word I highlighted for this article! The word is merge. Can you help me?</say>
+  </message>
+  <message id="B178" name="B178">
+    <say>did you need more time selecting the definition of the word merge. Me too. Let's try now!”</say>
+  </message>
+  <message id="B179" name="B179">
+    <say>I got it now! So the word merge means two or more things coming together.</say>
+  </message>
+  <message id="B180" name="B180">
+    <say>I agree with</say>
+  </message>
+  <message id="B181" name="B181">
+    <say>'s answer.</say>
+  </message>
+  <message id="B182" name="B182">
+    <say>I don't agree with</say>
+  </message>
+  <message id="B183" name="B183">
+    <say>'s answer!</say>
+  </message>
+  <message id="B184" name="B184">
+    <say>I see so when things merge they come together, like when lanes merge while you are driving.</say>
+  </message>
+  <message id="B185" name="B185">
+    <say>When things merge they come together, like when lanes merge on the expressway, they are coming together to form one lane.</say>
+  </message>
+  <message id="B186" name="B186">
+    <say>I knew that</say>
+  </message>
+  <message id="B187" name="B187">
+    <say>picked the right definition for merge. An example of something that merges together would be a driving lane on the expressway. Like galaxies, these lanes combine together to make one lane.</say>
+  </message>
+  <message id="B188" name="B188">
+    <say>here is the first word I had trouble with! The word is collapsing .</say>
+  </message>
+  <message id="B189" name="B189">
+    <say>did you need more time defining collapsing? Give it a shot!</say>
+  </message>
+  <message id="B190" name="B190">
+    <say>I think</say>
+  </message>
+  <message id="B191" name="B191">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B192" name="B192">
+    <say>I honestly don't know if</say>
+  </message>
+  <message id="B193" name="B193">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B194" name="B194">
+    <say>I see now when you collapse over something that means the same thing as you falling over something.</say>
+  </message>
+  <message id="B195" name="B195">
+    <say>Great job</say>
+  </message>
+  <message id="B196" name="B196">
+    <say>! So the definition of collapsing you picked was right, it means to fall down. Like when I collapse or fall down by accident.</say>
+  </message>
+  <message id="B197" name="B197">
+    <say>Oh I think I understand now. So when something collapses, like when I collapse, That just means that I've fallen down. All of this is starting to make sense!</say>
+  </message>
+  <message id="B198" name="B198">
+    <say>here's the second word</say>
+  </message>
+  <message id="B199" name="B199">
+    <say>! The word is relatively. Can you define it for me ?”</say>
+  </message>
+  <message id="B200" name="B200">
+    <say>did you need more time defining relatively? Give it another shot!</say>
+  </message>
+  <message id="B201" name="B201">
+    <say>I think I get it now! So you use relatively when you want to compare one thing to another. Flowers smell relatively better than dirt, that means that overall flowers smell better when compared to dirt.</say>
+  </message>
+  <message id="B202" name="B202">
+    <say>I think</say>
+  </message>
+  <message id="B203" name="B203">
+    <say>picked the correct definition.</say>
+  </message>
+  <message id="B204" name="B204">
+    <say>I think</say>
+  </message>
+  <message id="B205" name="B205">
+    <say>didn't select the right definition.</say>
+  </message>
+  <message id="B206" name="B206">
+    <say>I knew</say>
+  </message>
+  <message id="B207" name="B207">
+    <say>had it! Awesome! So relatively is used to compare things. Like how Flowers smell relatively better than dirt. All that means is overall flowers smell better when compared to dirt.</say>
+  </message>
+  <message id="B208" name="B208">
+    <say>Oops I guess I was wrong about</say>
+  </message>
+  <message id="B209" name="B209">
+    <say>'s answer. Relatively is used when you compare things, so like comparing flowers to dirt, flowers smell relatively than dirt, meaning flowers smell better overall when compared to dirt.</say>
+  </message>
+  <message id="B210" name="B210">
+    <say>I highlighted the word dense! Can you define it?</say>
+  </message>
+  <message id="B211" name="B211">
+    <say>did you need more time picking the definition for the word dense. Please pick the definition below.</say>
+  </message>
+  <message id="B212" name="B212">
+    <say>I think</say>
+  </message>
+  <message id="B213" name="B213">
+    <say>picked the wrong option.</say>
+  </message>
+  <message id="B214" name="B214">
+    <say>I think</say>
+  </message>
+  <message id="B215" name="B215">
+    <say>picked the right definition.</say>
+  </message>
+  <message id="B216" name="B216">
+    <say>Yes! Awesome so you did pick the right answer</say>
+  </message>
+  <message id="B217" name="B217">
+    <say>. So when people say they have a dense book, that means that there is a lot of pages in the book.</say>
+  </message>
+  <message id="B218" name="B218">
+    <say>Whoops! I thought you picked the wrong definition</say>
+  </message>
+  <message id="B219" name="B219">
+    <say>! So for stars to be dense, that means they have a lot of material that is close together.</say>
+  </message>
+  <message id="B220" name="B220">
+    <say>I understand so for stars to be dense that means they have alot of materials like gas and dust that are really close together.</say>
+  </message>
+  <message id="B221" name="B221">
+    <say>I found it</say>
+  </message>
+  <message id="B222" name="B222">
+    <say>, it's consume!  I need your help!”</say>
+  </message>
+  <message id="B223" name="B223">
+    <say>did you need more time picking the definition for the word consume. Let's try one of the definitions.</say>
+  </message>
+  <message id="B224" name="B224">
+    <say>So black holes consume or use up dust from the galaxy like us when we consume or use up food for energy.</say>
+  </message>
+  <message id="B225" name="B225">
+    <say>I think</say>
+  </message>
+  <message id="B226" name="B226">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B227" name="B227">
+    <say>I'd have to disagree with</say>
+  </message>
+  <message id="B228" name="B228">
+    <say>'s answer option.</say>
+  </message>
+  <message id="B229" name="B229">
+    <say>I see now! so I was wrong about your answer option</say>
+  </message>
+  <message id="B230" name="B230">
+    <say>.  So black holes consume or use up dust from the galaxy like us when we consume or use up food for energy.</say>
+  </message>
+  <message id="B231" name="B231">
+    <say>I knew</say>
+  </message>
+  <message id="B232" name="B232">
+    <say>picked the right choice. So black holes consume or use up dust from the galaxy like us when we consume or use up food for energy.</say>
+  </message>
+  <message id="B233" name="B233">
+    <say>populate is the word! Can you try to define populate for me?</say>
+  </message>
+  <message id="B234" name="B234">
+    <say>did you need more time defining the word populate? Let's just try one of these definitions!”</say>
+  </message>
+  <message id="B235" name="B235">
+    <say>I think that</say>
+  </message>
+  <message id="B236" name="B236">
+    <say>didn't pick the right definition for populate,</say>
+  </message>
+  <message id="B237" name="B237">
+    <say>I actually think</say>
+  </message>
+  <message id="B238" name="B238">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B239" name="B239">
+    <say>I see now! So black holes populate the universe just like people when they populate a city, they live there.</say>
+  </message>
+  <message id="B240" name="B240">
+    <say>So black holes populate the universe just like people when they populate a city.</say>
+  </message>
+  <message id="B241" name="B241">
+    <say>Great job</say>
+  </message>
+  <message id="B242" name="B242">
+    <say>! I knew you picked the right definition. So black holes populate the universe just like people when they populate a city.</say>
+  </message>
+  <message id="B243" name="B243">
+    <say>This word is spawn. Can you define it for me? This would help a lot!</say>
+  </message>
+  <message id="B244" name="B244">
+    <say>did you need more time to define the word spawn. I'm not sure of the answer, can you try one?</say>
+  </message>
+  <message id="B245" name="B245">
+    <say>I see now! so when a group of tomatoes are spawned that means they were produced.</say>
+  </message>
+  <message id="B246" name="B246">
+    <say>I think</say>
+  </message>
+  <message id="B247" name="B247">
+    <say>picked the right answer.</say>
+  </message>
+  <message id="B248" name="B248">
+    <say>I think</say>
+  </message>
+  <message id="B249" name="B249">
+    <say>didn't pick the right answer.</say>
+  </message>
+  <message id="B250" name="B250">
+    <say>your option was correct! great! So to spawn means to produce, so when a group of tomatoes are spawned that means they were produced.</say>
+  </message>
+  <message id="B251" name="B251">
+    <say>Whoops, looks like you did have the right answer</say>
+  </message>
+  <message id="B252" name="B252">
+    <say>! So spawn means to produce. so when a group of tomatoes are spawned that means they were produced.</say>
+  </message>
+  <message id="B253" name="B253">
+    <say>here is a word that I’m having trouble understanding. The word is plentiful. Can you define it for me ?”</say>
+  </message>
+  <message id="B254" name="B254">
+    <say>did you need more time picking the definition? I really need your help, can you try please?</say>
+  </message>
+  <message id="B255" name="B255">
+    <say>I don't think</say>
+  </message>
+  <message id="B256" name="B256">
+    <say>got this definition right.</say>
+  </message>
+  <message id="B257" name="B257">
+    <say>I think</say>
+  </message>
+  <message id="B258" name="B258">
+    <say>got this definition right. The plentiful kind of looks like the word plenty.</say>
+  </message>
+  <message id="B259" name="B259">
+    <say>Great job</say>
+  </message>
+  <message id="B260" name="B260">
+    <say>! When dust is plentiful I sneeze, this means that when there is alot of available dust I sneeze. I get it!</say>
+  </message>
+  <message id="B261" name="B261">
+    <say>I understand now</say>
+  </message>
+  <message id="B262" name="B262">
+    <say>. So plentiful means to have alot. When dust is plentiful I sneeze, this means that when there is alot of available dust I sneeze. I get it!</say>
+  </message>
+  <message id="B263" name="B263">
+    <say>Dang! Sorry</say>
+  </message>
+  <message id="B264" name="B264">
+    <say>! I guess you did pick the right answer!  Something is plentiful when there is alot of it. Like When dust is plentiful I sneeze, this means that when there is alot of available dust I sneeze. I get it!</say>
+  </message>
+  <message id="B265" name="B265">
+    <say>can you help me define the word enormous This might be the toughest word for me!.”</say>
+  </message>
+  <message id="B266" name="B266">
+    <say>did you need more time defining enormous? Give it a shot!</say>
+  </message>
+  <message id="B267" name="B267">
+    <say>I can't say yes or no because I don't know the definition, this is a really tough word for me.</say>
+  </message>
+  <message id="B268" name="B268">
+    <say>I think</say>
+  </message>
+  <message id="B269" name="B269">
+    <say>picked the right definition for enormous.</say>
+  </message>
+  <message id="B270" name="B270">
+    <say>Great job</say>
+  </message>
+  <message id="B271" name="B271">
+    <say>! So enormous means to be extremely large, like the sun, the sun is enormous or extremely large.</say>
+  </message>
+  <message id="B272" name="B272">
+    <say>I think I get it now. So enormous means to be extremely large. So the sun is enormous, it is extremely large!</say>
+  </message>
+  <message id="B273" name="B273">
+    <say>Okay so</say>
+  </message>
+  <message id="B274" name="B274">
+    <say>you were right! great job! So enormous means really extremely large, so the sun is enormous because it is really large.</say>
+  </message>
+  <message id="B275" name="B275">
+    <say>I need help defining the word observational. Can you help me!</say>
+  </message>
+  <message id="B276" name="B276">
+    <say>did you need more time picking definition of observational? I'm not sure either. Let's just give one of the answers a try?</say>
+  </message>
+  <message id="B277" name="B277">
+    <say>I think</say>
+  </message>
+  <message id="B278" name="B278">
+    <say>tried but the answer is wrong.</say>
+  </message>
+  <message id="B279" name="B279">
+    <say>I think</say>
+  </message>
+  <message id="B280" name="B280">
+    <say>got the right answer!</say>
+  </message>
+  <message id="B281" name="B281">
+    <say>Okay! So If you cannot see how someone plays an instrument you cannot learn how to play yourself. I get the idea now! </say>
+  </message>
+  <message id="B282" name="B282">
+    <say>I knew you had it</say>
+  </message>
+  <message id="B283" name="B283">
+    <say>! So observational means to watch and learn from something. If you cannot see how someone plays an instrument you cannot learn how to play yourself. I get the idea now!</say>
+  </message>
+  <message id="B284" name="B284">
+    <say>I guess I was wrong.</say>
+  </message>
+  <message id="B285" name="B285">
+    <say>picked the right definition. I guess the word observational can go along with anything you watch and learn from. So If you cannot see how someone plays an instrument you cannot learn how to play yourself. I get the idea now!</say>
+  </message>
+  <message id="B286" name="B286">
+    <say>here is the last word I'm having trouble with. it’s the word emitted.</say>
+  </message>
+  <message id="B287" name="B287">
+    <say>did you need more time to pick the definition for the word emit? I really need your help! Can you give it another shot!</say>
+  </message>
+  <message id="B288" name="B288">
+    <say>I think</say>
+  </message>
+  <message id="B289" name="B289">
+    <say>did.</say>
+  </message>
+  <message id="B290" name="B290">
+    <say>I don't think</say>
+  </message>
+  <message id="B291" name="B291">
+    <say>did.</say>
+  </message>
+  <message id="B292" name="B292">
+    <say>I see so to emit something it so release it. So a blow dryer emits heat  and a light blub emits light.</say>
+  </message>
+  <message id="B293" name="B293">
+    <say>I knew that</say>
+  </message>
+  <message id="B294" name="B294">
+    <say>picked the right answer. Sweet! so emit means to release. So a blow dryer emits heat  and a light blub emits light.</say>
+  </message>
+  <message id="B295" name="B295">
+    <say>I guess you were right</say>
+  </message>
+  <message id="B296" name="B296">
+    <say>. So emit means to release. So a blow dryer emits heat  and a light blub emits light.</say>
+  </message>
+  <message id="B297" name="B297">
+    <say>here is the first word I need help with! The word is orbits ?</say>
+  </message>
+  <message id="B298" name="B298">
+    <say>did you need more time defining the word orbit! I'm not sure either. Let's just give one of the answers a try?</say>
+  </message>
+  <message id="B299" name="B299">
+    <say>I don't think</say>
+  </message>
+  <message id="B300" name="B300">
+    <say>picked the right answer option. I think orbits is a type of gum.</say>
+  </message>
+  <message id="B301" name="B301">
+    <say>I think</say>
+  </message>
+  <message id="B302" name="B302">
+    <say>picked the right definition?</say>
+  </message>
+  <message id="B303" name="B303">
+    <say>I see now! So orbits means to go around something, Like how the moon goes around the earth, it orbits the earth.</say>
+  </message>
+  <message id="B304" name="B304">
+    <say>I get it now! so when the moon orbits the earth it goes around it.Got it!</say>
+  </message>
+  <message id="B305" name="B305">
+    <say>Great job</say>
+  </message>
+  <message id="B306" name="B306">
+    <say>! So your answer option was right, So orbits means to go around something, Like how the moon goes around the earth, it orbits the earth.</say>
+  </message>
+  <message id="B307" name="B307">
+    <say>here is the word convenient. I need help defining it.</say>
+  </message>
+  <message id="B308" name="B308">
+    <say>did you need more time to pick the definition of the word convenient. Go ahead and give it a shot! I really need your help with this one.</say>
+  </message>
+  <message id="B309" name="B309">
+    <say>I think</say>
+  </message>
+  <message id="B310" name="B310">
+    <say>picked the wrong definition.</say>
+  </message>
+  <message id="B311" name="B311">
+    <say>I think</say>
+  </message>
+  <message id="B312" name="B312">
+    <say>picked the right definition.</say>
+  </message>
+  <message id="B313" name="B313">
+    <say>I knew you had it</say>
+  </message>
+  <message id="B314" name="B314">
+    <say>! So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of.</say>
+  </message>
+  <message id="B315" name="B315">
+    <say>I understand now. So convenient means something is easy to use. So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of.</say>
+  </message>
+  <message id="B316" name="B316">
+    <say>Oh I thought</say>
+  </message>
+  <message id="B317" name="B317">
+    <say>picked the wrong definition. So being easy to use is what convenient means. So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of.</say>
+  </message>
+  <message id="B318" name="B318">
+    <say>the word normally, Can you help me define it?</say>
+  </message>
+  <message id="B319" name="B319">
+    <say>did you need more time to pick the definition of the word normally. I need your help with this one!</say>
+  </message>
+  <message id="B320" name="B320">
+    <say>I honestly don't know so I can't say.</say>
+  </message>
+  <message id="B321" name="B321">
+    <say>I think</say>
+  </message>
+  <message id="B322" name="B322">
+    <say>picked the right definition for the word.</say>
+  </message>
+  <message id="B323" name="B323">
+    <say>I knew that</say>
+  </message>
+  <message id="B324" name="B324">
+    <say>picked the right answer. So saying I normally say hello to others means I usually say hello people.</say>
+  </message>
+  <message id="B325" name="B325">
+    <say>I understand now, so normally can mean usually, So saying I normally say hello to others means I usually say hello people. </say>
+  </message>
+  <message id="B326" name="B326">
+    <say>Gotcha, so</say>
+  </message>
+  <message id="B327" name="B327">
+    <say>did pick the right definition for the word normally. So saying I normally say hello to others means I usually say hello people.</say>
+  </message>
+  <message id="B328" name="B328">
+    <say>Here's the word</say>
+  </message>
+  <message id="B329" name="B329">
+    <say>! It's terrestrial. Can you define it for me?</say>
+  </message>
+  <message id="B330" name="B330">
+    <say>did you need more time to answer the question? I'm sure we can figure it out!</say>
+  </message>
+  <message id="B331" name="B331">
+    <say>Got it! So it means something that is related to Earth.</say>
+  </message>
+  <message id="B332" name="B332">
+    <say>I agree with</say>
+  </message>
+  <message id="B333" name="B333">
+    <say>'s answer.</say>
+  </message>
+  <message id="B334" name="B334">
+    <say>I don't agree with</say>
+  </message>
+  <message id="B335" name="B335">
+    <say>'s answer.</say>
+  </message>
+  <message id="B336" name="B336">
+    <say>Great job</say>
+  </message>
+  <message id="B337" name="B337">
+    <say>! So terrestrial is something from earth, so we are terrestials because we live on earth.</say>
+  </message>
+  <message id="B338" name="B338">
+    <say>Oops I was wrong</say>
+  </message>
+  <message id="B339" name="B339">
+    <say>! sorry. So terrestrial is something from earth, so we are terrestials because we live on earth.</say>
+  </message>
+  <message id="B340" name="B340">
+    <say>The word is organisms. Can you help me define it?</say>
+  </message>
+  <message id="B341" name="B341">
+    <say>did you need more time to define organisms? Try your best! I really need your help with this!</say>
+  </message>
+  <message id="B342" name="B342">
+    <say>I think</say>
+  </message>
+  <message id="B343" name="B343">
+    <say>didn't select the right  definition for organisms.</say>
+  </message>
+  <message id="B344" name="B344">
+    <say>I guess</say>
+  </message>
+  <message id="B345" name="B345">
+    <say>picked the right definition. I was totally wrong. so people are organisms because we are living things.</say>
+  </message>
+  <message id="B346" name="B346">
+    <say>I think</say>
+  </message>
+  <message id="B347" name="B347">
+    <say>picked the right definition for organisms.</say>
+  </message>
+  <message id="B348" name="B348">
+    <say>I had a feeling that</say>
+  </message>
+  <message id="B349" name="B349">
+    <say>picked the right definition. Awesome! so people are organisms because we are living things.</say>
+  </message>
+  <message id="B350" name="B350">
+    <say>I get it so organisms are living things, so people are organisms because we are living things.</say>
+  </message>
+  <message id="B351" name="B351">
+    <say>This word  is flourish. Can you define it? Pick a definition below.</say>
+  </message>
+  <message id="B352" name="B352">
+    <say>did you need more time defining flourish? give it a try.</say>
+  </message>
+  <message id="B353" name="B353">
+    <say>did pick the right definition of Flourish might mean grow or develop. Like flowers they flourish,</say>
+  </message>
+  <message id="B354" name="B354">
+    <say>I'm not what this word means so I can't say</say>
+  </message>
+  <message id="B355" name="B355">
+    <say>'s answer is right or wrong.</say>
+  </message>
+  <message id="B356" name="B356">
+    <say>So flourish means to grow or develop. Like flowers! They grow!</say>
+  </message>
+  <message id="B357" name="B357">
+    <say>Awesome</say>
+  </message>
+  <message id="B358" name="B358">
+    <say>you did pick the right definition for flourish. So flourish means to grow or develop. Like flowers! They grow!</say>
+  </message>
+  <message id="B359" name="B359">
+    <say>I understand now! So flourish means to grow or develop. Like flowers! They grow!</say>
+  </message>
+  <message id="B360" name="B360">
+    <say>Here is the word barren I'm having trouble defining! Can you define it for me?”</say>
+  </message>
+  <message id="B361" name="B361">
+    <say>did you need more time picking a definition for barren? Can you try for me please?</say>
+  </message>
+  <message id="B362" name="B362">
+    <say>Great I see! So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there</say>
+  </message>
+  <message id="B363" name="B363">
+    <say>I think the definition is correct!</say>
+  </message>
+  <message id="B364" name="B364">
+    <say>I think</say>
+  </message>
+  <message id="B365" name="B365">
+    <say>didn't get the right definition.</say>
+  </message>
+  <message id="B366" name="B366">
+    <say>I understand now. So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there</say>
+  </message>
+  <message id="B367" name="B367">
+    <say>I knew you got the right answer</say>
+  </message>
+  <message id="B368" name="B368">
+    <say>! So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there</say>
+  </message>
+  <message id="B369" name="B369">
+    <say>this word is abundance. I am having a hard time understanding this word.</say>
+  </message>
+  <message id="B370" name="B370">
+    <say>did you need more time to define the word abundance? I'm not sure either. Let's just give one of the answers a try?”</say>
+  </message>
+  <message id="B371" name="B371">
+    <say>I don't agree Cristina.</say>
+  </message>
+  <message id="B372" name="B372">
+    <say>I agree Cristina.</say>
+  </message>
+  <message id="B373" name="B373">
+    <say>So when something is abundant there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes.</say>
+  </message>
+  <message id="B374" name="B374">
+    <say>I understand now! So when something is abundant there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes.</say>
+  </message>
+  <message id="B375" name="B375">
+    <say>I had a feeling that your definition was correct</say>
+  </message>
+  <message id="B376" name="B376">
+    <say>. So when something is abundant there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes.</say>
+  </message>
+  <message id="B377" name="B377">
+    <say>I need help defining The word essential.”</say>
+  </message>
+  <message id="B378" name="B378">
+    <say>did you need more time to define essential? I'm not sure either. Let's just give one of the answers a try?</say>
+  </message>
+  <message id="B379" name="B379">
+    <say>I understand now! When something is essential it is very important and necessary. So water is very essential or important for people to drink.</say>
+  </message>
+  <message id="B380" name="B380">
+    <say>I  think</say>
+  </message>
+  <message id="B381" name="B381">
+    <say>'s answer is right Cristina.</say>
+  </message>
+  <message id="B382" name="B382">
+    <say>I don't think</say>
+  </message>
+  <message id="B383" name="B383">
+    <say>'s answer is correct Cristina.</say>
+  </message>
+  <message id="B384" name="B384">
+    <say>Awesome</say>
+  </message>
+  <message id="B385" name="B385">
+    <say>! so When something is essential it is very important and necessary. So water is very essential or important for people to drink.</say>
+  </message>
+  <message id="B386" name="B386">
+    <say>Oops! I see now! So When something is essential it is very important and necessary. So water is very essential or important for people to drink..</say>
+  </message>
+  <message id="B387" name="B387">
+    <say>this is the last word! Can you define the word partially for me please!</say>
+  </message>
+  <message id="B388" name="B388">
+    <say>did you need more time to pick the definition for the word partially? Could you give it a shot?</say>
+  </message>
+  <message id="B389" name="B389">
+    <say>I understand now! So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely.</say>
+  </message>
+  <message id="B390" name="B390">
+    <say>I think the definition</say>
+  </message>
+  <message id="B391" name="B391">
+    <say>selected is correct.</say>
+  </message>
+  <message id="B392" name="B392">
+    <say>I think the definition</say>
+  </message>
+  <message id="B393" name="B393">
+    <say>selected is wrong.</say>
+  </message>
+  <message id="B394" name="B394">
+    <say>Whoops I was totally wrong! Sorry</say>
+  </message>
+  <message id="B395" name="B395">
+    <say>! So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely.</say>
+  </message>
+  <message id="B396" name="B396">
+    <say>I knew you got it</say>
+  </message>
+  <message id="B397" name="B397">
+    <say>! So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely.</say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+  <message id="D1" name="D1">
+<say>Amelia</say>
+</message>
+<message id="D2" name="D2">
+<say>Olivia</say>
+</message>
+<message id="D3" name="D3">
+<say>Emily</say>
+</message>
+<message id="D4" name="D4">
+<say>Ava</say>
+</message>
+<message id="D5" name="D5">
+<say>Isla</say>
+</message>
+<message id="D6" name="D6">
+<say>Jessica</say>
+</message>
+<message id="D7" name="D7">
+<say>Poppy</say>
+</message>
+<message id="D8" name="D8">
+<say>Isabella</say>
+</message>
+<message id="D9" name="D9">
+<say>Sophie</say>
+</message>
+<message id="D10" name="D10">
+<say>Mia</say>
+</message>
+<message id="D11" name="D11">
+<say>Ruby</say>
+</message>
+<message id="D12" name="D12">
+<say>Lily</say>
+</message>
+<message id="D13" name="D13">
+<say>Grace</say>
+</message>
+<message id="D14" name="D14">
+<say>Evie</say>
+</message>
+<message id="D15" name="D15">
+<say>Sophia</say>
+</message>
+<message id="D16" name="D16">
+<say>Ella</say>
+</message>
+<message id="D17" name="D17">
+<say>Scarlett</say>
+</message>
+<message id="D18" name="D18">
+<say>Chloe</say>
+</message>
+<message id="D19" name="D19">
+<say>Isabelle</say>
+</message>
+<message id="D20" name="D20">
+<say>Freya</say>
+</message>
+<message id="D21" name="D21">
+<say>Charlotte</say>
+</message>
+<message id="D22" name="D22">
+<say>Sienna</say>
+</message>
+<message id="D23" name="D23">
+<say>Daisy</say>
+</message>
+<message id="D24" name="D24">
+<say>Phoebe</say>
+</message>
+<message id="D25" name="D25">
+<say>Millie</say>
+</message>
+<message id="D26" name="D26">
+<say>Eva</say>
+</message>
+<message id="D27" name="D27">
+<say>Alice</say>
+</message>
+<message id="D28" name="D28">
+<say>Lucy</say>
+</message>
+<message id="D29" name="D29">
+<say>Florence</say>
+</message>
+<message id="D30" name="D30">
+<say>Sofia</say>
+</message>
+<message id="D31" name="D31">
+<say>Layla</say>
+</message>
+<message id="D32" name="D32">
+<say>Lola</say>
+</message>
+<message id="D33" name="D33">
+<say>Holly</say>
+</message>
+<message id="D34" name="D34">
+<say>Imogen</say>
+</message>
+<message id="D35" name="D35">
+<say>Molly</say>
+</message>
+<message id="D36" name="D36">
+<say>Matilda</say>
+</message>
+<message id="D37" name="D37">
+<say>Lilly</say>
+</message>
+<message id="D38" name="D38">
+<say>Rosie</say>
+</message>
+<message id="D39" name="D39">
+<say>Elizabeth</say>
+</message>
+<message id="D40" name="D40">
+<say>Erin</say>
+</message>
+<message id="D41" name="D41">
+<say>Maisie</say>
+</message>
+<message id="D42" name="D42">
+<say>Lexi</say>
+</message>
+<message id="D43" name="D43">
+<say>Ellie</say>
+</message>
+<message id="D44" name="D44">
+<say>Hannah</say>
+</message>
+<message id="D45" name="D45">
+<say>Evelyn</say>
+</message>
+<message id="D46" name="D46">
+<say>Abigail</say>
+</message>
+<message id="D47" name="D47">
+<say>Elsie</say>
+</message>
+<message id="D48" name="D48">
+<say>Summer</say>
+</message>
+<message id="D49" name="D49">
+<say>Megan</say>
+</message>
+<message id="D50" name="D50">
+<say>Jasmine</say>
+</message>
+<message id="D51" name="D51">
+<say>Maya</say>
+</message>
+<message id="D52" name="D52">
+<say>Amelie</say>
+</message>
+<message id="D53" name="D53">
+<say>Lacey</say>
+</message>
+<message id="D54" name="D54">
+<say>Willow</say>
+</message>
+<message id="D55" name="D55">
+<say>Emma</say>
+</message>
+<message id="D56" name="D56">
+<say>Bella</say>
+</message>
+<message id="D57" name="D57">
+<say>Eleanor</say>
+</message>
+<message id="D58" name="D58">
+<say>Esme</say>
+</message>
+<message id="D59" name="D59">
+<say>Eliza</say>
+</message>
+<message id="D60" name="D60">
+<say>Georgia</say>
+</message>
+<message id="D61" name="D61">
+<say>Harriet</say>
+</message>
+<message id="D62" name="D62">
+<say>Gracie</say>
+</message>
+<message id="D63" name="D63">
+<say>Annabelle</say>
+</message>
+<message id="D64" name="D64">
+<say>Emilia</say>
+</message>
+<message id="D65" name="D65">
+<say>Amber</say>
+</message>
+<message id="D66" name="D66">
+<say>Ivy</say>
+</message>
+<message id="D67" name="D67">
+<say>Brooke</say>
+</message>
+<message id="D68" name="D68">
+<say>Rose</say>
+</message>
+<message id="D69" name="D69">
+<say>Anna</say>
+</message>
+<message id="D70" name="D70">
+<say>Zara</say>
+</message>
+<message id="D71" name="D71">
+<say>Leah</say>
+</message>
+<message id="D72" name="D72">
+<say>Mollie</say>
+</message>
+<message id="D73" name="D73">
+<say>Martha</say>
+</message>
+<message id="D74" name="D74">
+<say>Faith</say>
+</message>
+<message id="D75" name="D75">
+<say>Hollie</say>
+</message>
+<message id="D76" name="D76">
+<say>Amy</say>
+</message>
+<message id="D77" name="D77">
+<say>Bethany</say>
+</message>
+<message id="D78" name="D78">
+<say>Violet</say>
+</message>
+<message id="D79" name="D79">
+<say>Katie</say>
+</message>
+<message id="D80" name="D80">
+<say>Maryam</say>
+</message>
+<message id="D81" name="D81">
+<say>Francesca</say>
+</message>
+<message id="D82" name="D82">
+<say>Julia</say>
+</message>
+<message id="D83" name="D83">
+<say>Maria</say>
+</message>
+<message id="D84" name="D84">
+<say>Darcey</say>
+</message>
+<message id="D85" name="D85">
+<say>Isabel</say>
+</message>
+<message id="D86" name="D86">
+<say>Tilly</say>
+</message>
+<message id="D87" name="D87">
+<say>Maddison</say>
+</message>
+<message id="D88" name="D88">
+<say>Victoria</say>
+</message>
+<message id="D89" name="D89">
+<say>Isobel</say>
+</message>
+<message id="D90" name="D90">
+<say>Niamh</say>
+</message>
+<message id="D91" name="D91">
+<say>Skye</say>
+</message>
+<message id="D92" name="D92">
+<say>Madison</say>
+</message>
+<message id="D93" name="D93">
+<say>Darcy</say>
+</message>
+<message id="D94" name="D94">
+<say>Aisha</say>
+</message>
+<message id="D95" name="D95">
+<say>Beatrice</say>
+</message>
+<message id="D96" name="D96">
+<say>Sarah</say>
+</message>
+<message id="D97" name="D97">
+<say>Zoe</say>
+</message>
+<message id="D98" name="D98">
+<say>Paige</say>
+</message>
+<message id="D99" name="D99">
+<say>Heidi</say>
+</message>
+<message id="D100" name="D100">
+<say>Lydia</say>
+</message>
+<message id="D101" name="D101">
+<say>Oliver</say>
+</message>
+<message id="D102" name="D102">
+<say>Jack</say>
+</message>
+<message id="D103" name="D103">
+<say>Harry</say>
+</message>
+<message id="D104" name="D104">
+<say>Jacob</say>
+</message>
+<message id="D105" name="D105">
+<say>Charlie</say>
+</message>
+<message id="D106" name="D106">
+<say>Thomas</say>
+</message>
+<message id="D107" name="D107">
+<say>Oscar</say>
+</message>
+<message id="D108" name="D108">
+<say>William</say>
+</message>
+<message id="D109" name="D109">
+<say>James</say>
+</message>
+<message id="D110" name="D110">
+<say>George</say>
+</message>
+<message id="D111" name="D111">
+<say>Alfie</say>
+</message>
+<message id="D112" name="D112">
+<say>Joshua</say>
+</message>
+<message id="D113" name="D113">
+<say>Noah</say>
+</message>
+<message id="D114" name="D114">
+<say>Ethan</say>
+</message>
+<message id="D115" name="D115">
+<say>Muhammad</say>
+</message>
+<message id="D116" name="D116">
+<say>Archie</say>
+</message>
+<message id="D117" name="D117">
+<say>Leo</say>
+</message>
+<message id="D118" name="D118">
+<say>Henry</say>
+</message>
+<message id="D119" name="D119">
+<say>Joseph</say>
+</message>
+<message id="D120" name="D120">
+<say>Samuel</say>
+</message>
+<message id="D121" name="D121">
+<say>Riley</say>
+</message>
+<message id="D122" name="D122">
+<say>Daniel</say>
+</message>
+<message id="D123" name="D123">
+<say>Mohammed</say>
+</message>
+<message id="D124" name="D124">
+<say>Alexander</say>
+</message>
+<message id="D125" name="D125">
+<say>Max</say>
+</message>
+<message id="D126" name="D126">
+<say>Lucas</say>
+</message>
+<message id="D127" name="D127">
+<say>Mason</say>
+</message>
+<message id="D128" name="D128">
+<say>Logan</say>
+</message>
+<message id="D129" name="D129">
+<say>Isaac</say>
+</message>
+<message id="D130" name="D130">
+<say>Benjamin</say>
+</message>
+<message id="D131" name="D131">
+<say>Dylan</say>
+</message>
+<message id="D132" name="D132">
+<say>Jake</say>
+</message>
+<message id="D133" name="D133">
+<say>Edward</say>
+</message>
+<message id="D134" name="D134">
+<say>Finley</say>
+</message>
+<message id="D135" name="D135">
+<say>Freddie</say>
+</message>
+<message id="D136" name="D136">
+<say>Harrison</say>
+</message>
+<message id="D137" name="D137">
+<say>Tyler</say>
+</message>
+<message id="D138" name="D138">
+<say>Sebastian</say>
+</message>
+<message id="D139" name="D139">
+<say>Zachary</say>
+</message>
+<message id="D140" name="D140">
+<say>Adam</say>
+</message>
+<message id="D141" name="D141">
+<say>Theo</say>
+</message>
+<message id="D142" name="D142">
+<say>Jayden</say>
+</message>
+<message id="D143" name="D143">
+<say>Arthur</say>
+</message>
+<message id="D144" name="D144">
+<say>Toby</say>
+</message>
+<message id="D145" name="D145">
+<say>Luke</say>
+</message>
+<message id="D146" name="D146">
+<say>Lewis</say>
+</message>
+<message id="D147" name="D147">
+<say>Matthew</say>
+</message>
+<message id="D148" name="D148">
+<say>Harvey</say>
+</message>
+<message id="D149" name="D149">
+<say>Harley</say>
+</message>
+<message id="D150" name="D150">
+<say>David</say>
+</message>
+<message id="D151" name="D151">
+<say>Ryan</say>
+</message>
+<message id="D152" name="D152">
+<say>Tommy</say>
+</message>
+<message id="D153" name="D153">
+<say>Michael</say>
+</message>
+<message id="D154" name="D154">
+<say>Reuben</say>
+</message>
+<message id="D155" name="D155">
+<say>Nathan</say>
+</message>
+<message id="D156" name="D156">
+<say>Blake</say>
+</message>
+<message id="D157" name="D157">
+<say>Mohammad</say>
+</message>
+<message id="D158" name="D158">
+<say>Jenson</say>
+</message>
+<message id="D159" name="D159">
+<say>Bobby</say>
+</message>
+<message id="D160" name="D160">
+<say>Luca</say>
+</message>
+<message id="D161" name="D161">
+<say>Charles</say>
+</message>
+<message id="D162" name="D162">
+<say>Frankie</say>
+</message>
+<message id="D163" name="D163">
+<say>Dexter</say>
+</message>
+<message id="D164" name="D164">
+<say>Kai</say>
+</message>
+<message id="D165" name="D165">
+<say>Alex</say>
+</message>
+<message id="D166" name="D166">
+<say>Connor</say>
+</message>
+<message id="D167" name="D167">
+<say>Liam</say>
+</message>
+<message id="D168" name="D168">
+<say>Jamie</say>
+</message>
+<message id="D169" name="D169">
+<say>Elijah</say>
+</message>
+<message id="D170" name="D170">
+<say>Stanley</say>
+</message>
+<message id="D171" name="D171">
+<say>Louie</say>
+</message>
+<message id="D172" name="D172">
+<say>Jude</say>
+</message>
+<message id="D173" name="D173">
+<say>Callum</say>
+</message>
+<message id="D174" name="D174">
+<say>Hugo</say>
+</message>
+<message id="D175" name="D175">
+<say>Leon</say>
+</message>
+<message id="D176" name="D176">
+<say>Elliot</say>
+</message>
+<message id="D177" name="D177">
+<say>Louis</say>
+</message>
+<message id="D178" name="D178">
+<say>Theodore</say>
+</message>
+<message id="D179" name="D179">
+<say>Gabriel</say>
+</message>
+<message id="D180" name="D180">
+<say>Ollie</say>
+</message>
+<message id="D181" name="D181">
+<say>Aaron</say>
+</message>
+<message id="D182" name="D182">
+<say>Frederick</say>
+</message>
+<message id="D183" name="D183">
+<say>Evan</say>
+</message>
+<message id="D184" name="D184">
+<say>Elliott</say>
+</message>
+<message id="D185" name="D185">
+<say>Owen</say>
+</message>
+<message id="D186" name="D186">
+<say>Teddy</say>
+</message>
+<message id="D187" name="D187">
+<say>Finlay</say>
+</message>
+<message id="D188" name="D188">
+<say>Caleb</say>
+</message>
+<message id="D189" name="D189">
+<say>Ibrahim</say>
+</message>
+<message id="D190" name="D190">
+<say>Ronnie</say>
+</message>
+<message id="D191" name="D191">
+<say>Felix</say>
+</message>
+<message id="D192" name="D192">
+<say>Aiden</say>
+</message>
+<message id="D193" name="D193">
+<say>Cameron</say>
+</message>
+<message id="D194" name="D194">
+<say>Austin</say>
+</message>
+<message id="D195" name="D195">
+<say>Kian</say>
+</message>
+<message id="D196" name="D196">
+<say>Rory</say>
+</message>
+<message id="D197" name="D197">
+<say>Seth</say>
+</message>
+<message id="D198" name="D198">
+<say>Robert</say>
+</message>
+<message id="D199" name="D199">
+<say>Albert</say>
+</message>
+<message id="D200" name="D200">
+<say>Sonny</say>
+</message>
+<message id="D201" name="D201">
+<say>Jack</say>
+</message>
+<message id="D202" name="D202">
+<say>Rose</say>
+</message>
+<message id="D203" name="D203">
+<say>Tyler</say>
+</message>
+<message id="D204" name="D204">
+<say>Oscar</say>
+</message>
+<message id="D205" name="D205">
+<say>Kim</say>
+</message>
+<message id="D206" name="D206">
+<say>Cam</say>
+</message>
+
+<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+
+
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>
+
+
+<message id="CSU00491" name="CSU00491">
+<say>Tarico</say>
+</message>
+<message id="CSU00504" name="CSU00504">
+<say>Tammy</say>
+</message>
+<message id="CSU00509" name="CSU00509">
+<say>Sadio</say>
+</message>
+<message id="CSU00490" name="CSU00490">
+<say>Sandra</say>
+</message>
+<message id="CSU00465" name="CSU00465">
+<say>Alma</say>
+</message>
+<message id="CSU00492" name="CSU00492">
+<say>Elizabeth</say>
+</message>
+<message id="CSU00508" name="CSU00508">
+<say>Samira</say>
+</message>
+<message id="CSU00515" name="CSU00515">
+<say>Edgar</say>
+</message>
+<message id="CSU00516" name="CSU00516">
+<say>Omega</say>
+</message>
+<message id="CSU00517" name="CSU00517">
+<say>Gilda</say>
+</message>
+<message id="CSU00519" name="CSU00519">
+<say>Farida</say>
+</message>
+<message id="CSU00520" name="CSU00520">
+<say>Miran</say>
+</message>
+<message id="CSU00521" name="CSU00521">
+<say>Azza</say>
+</message>
+<message id="CSU00522" name="CSU00522">
+<say>Nao</say>
+</message>
+<message id="CSU00523" name="CSU00523">
+<say>Oliva</say>
+</message>
+		
+<message id="HSC122301615" name="HSC122301615">
+<say>Janna</say>
+</message>
+<message id="HSC122301616" name="HSC122301616">
+<say>Jennifer</say>
+</message>
+<message id="HSC122301618" name="HSC122301618">
+<say>Muhiadin</say>
+</message>
+<message id="HSC122301623" name="HSC122301623">
+<say>Angel</say>
+</message>
+<message id="HSC122301625" name="HSC122301625">
+<say>Dowell</say>
+</message>
+<message id="HSC122301627" name="HSC122301627">
+<say>Offa</say>
+</message>
+<message id="HSC122301628" name="HSC122301628">
+<say>Annemarie</say>
+</message>
+<message id="HSC122301630" name="HSC122301630">
+<say>Arnaldo</say>
+</message>
+<message id="HSC122301631" name="HSC122301631">
+<say>Sheelah</say>
+</message>
+<message id="HSC122301635" name="HSC122301635">
+<say>shwa-wah-beck</say>
+</message>
+<message id="HSC122301620" name="HSC122301620">
+<say>Haja</say>
+</message>
+<message id="HSC1223016" name="HSC1223016">
+<say>Learner</say>
+</message>
+		
+<message id="HSC122301617" name="HSC122301617">
+<say>Sheena</say>
+</message>
+<message id="HSC122301619" name="HSC122301619">
+<say>Darlene</say>
+</message>
+<message id="HSC122301621" name="HSC122301621">
+<say>Destiny</say>
+</message>
+<message id="HSC122301624" name="HSC122301624">
+<say>Kenisha</say>
+</message>
+<message id="HSC122301626" name="HSC122301626">
+<say>Tamara</say>
+</message>
+<message id="HSC122301629" name="HSC122301629">
+<say>Yanenah</say>
+</message>
+<message id="HSC122301632" name="HSC122301632">
+<say>Victoria</say>
+</message>
+<message id="HSC122301527" name="HSC122301527">
+<say>Carleen</say>
+</message>
+<message id="HSC122301634" name="HSC122301634">
+<say>Leila</say>
+</message>
+<message id="HSC122301636" name="HSC122301636">
+<say>Luna</say>
+</message>
+<message id="HSC122301637" name="HSC122301637">
+<say>Lucy</say>
+</message>
+<message id="HSC122301638" name="HSC122301638">
+<say>Rahmelle</say>
+</message>
+
+<message id="HSC010301601" name="HSC010301601">
+<say>Rupinder</say>
+</message>
+<message id="HSC010301602" name="HSC010301602">
+<say>Elizabeth</say>
+</message>
+<message id="HSC010301604" name="HSC010301604">
+<say>Lorette</say>
+</message>
+<message id="HSC010301605" name="HSC010301605">
+<say>Mohinder</say>
+</message>
+<message id="HSC010301606" name="HSC010301606">
+<say>Buchi</say>
+</message>
+<message id="HSC010301607" name="HSC010301607">
+<say>Cynthia</say>
+</message>
+<message id="HSC010301600" name="HSC010301600">
+<say>Brinda</say>
+</message>
+<message id="HSC010301608" name="HSC010301608">
+<say>Sharoz</say>
+</message>
+<message id="HSC010301614" name="HSC010301614">
+<say>Tanya</say>
+</message>
+<message id="HSC010301609" name="HSC010301609">
+<say>Jessica</say>
+</message>
+<message id="HSC010301611" name="HSC010301611">
+<say>Abigail</say>
+</message>
+<message id="HSC010301612" name="HSC010301612">
+<say>Patrick</say>
+</message>
+<message id="HSC010301613" name="HSC010301613">
+<say>Patsy</say>
+</message>
+<message id="HSC010301655" name="HSC010301655">
+<say>Paul</say>
+</message>
+<message id="HSC010301648" name="HSC010301648">
+<say>Angel</say>
+</message>
+<message id="HSC010301649" name="HSC010301649">
+<say>Zeeva</say>
+</message>
+<message id="HSC010301650" name="HSC010301650">
+<say>Melissa</say>
+</message>	
+	
+		</scene>
+	</stage>
+</project>

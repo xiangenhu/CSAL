@@ -1,0 +1,370 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			.border { border: 5px double gray; }
+			.indent { padding-left: 20px; }
+			.underline { text-decoration: underline; }
+			.bold { font-weight: bold; }
+			.notBold {font-weight: normal;}
+			.italic { font-style: italic; }
+			.vertSpace { margin-top: 5px; margin-bottom: 5px; }
+			.vertSpace1 { margin-top: 10px; margin-bottom: 10px; }
+			.center {text-align: center;}
+			
+			/*
+			*{border: 1px solid red;}
+			*/
+			
+			body
+			{
+				/*background-image:url('wiki0.png');
+				background-repeat: no-repeat;
+				background-size: cover;*/
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				cursor: default;
+				width: 796px;
+				height: 500px;
+			}
+			
+			#search
+			{
+				z-index: 1000;
+				
+				top: 0;
+				left: 20%;
+				margin: 0px 0px 0px 40px;
+				width: 80%;
+			}
+			#searchInput
+			{
+				font-size: 20px;
+				width: 65%;
+				display: inline-block;
+				margin: 5px auto;
+				text-align: left;
+				height: 1.5em;
+				border-radius: 12px 0px 0px 12px;
+				border: 2px solid #ddd;
+				padding: 1px 5px;
+			}
+			.searchButton
+			{
+				background-color: #ddd;
+				font-size: 15px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 20%;
+				height: 1.2em;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 15px 10px;
+				display: inline-block;
+				margin: 5px auto;
+				margin-left: 60px;
+				outline: none;
+				border-radius: 12px;
+			}
+			.useButton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 785px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: solid;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 443px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#urlBar
+			{
+				width: 800px;
+				height: 45px;
+				background-color: #888;
+			}
+			.nav
+			{
+				font-size: 30px;
+				font-weight: bold;
+				background-color: white;
+				border-radius: 10px;
+				width: 35px;
+				height: 35px;
+				line-height: 30px;
+				text-align: center;
+				display: inline-block;
+				margin: 4px 0px 0px 5px;
+				font-weight: bold;
+			}
+			#urlInput
+			{
+				width: 80%;
+				display: inline-block;
+				border-radius: 6px;
+				font-size: 20px;
+				padding: 0px 0px 0px 5px;
+			}
+			.webImg
+			{
+				width: 100%;
+				display: block;
+			}
+			#questionBox
+			{
+				
+				background-color: #444;
+				color: white;
+				font-size: 28px;
+				position: fixed;
+				text-align: center;
+				display: table;
+				border-radius: 0px 0px 10px 10px;
+				cursor: help;
+				top: 0;
+				width: 100%;
+				height: 80px;
+				max-height: 80px;
+				z-index: 99;
+			}
+			#questionBoxText
+			{
+				display: table-cell;
+				vertical-align: middle;	
+				padding: 0px 10px;
+				height: 100%;
+			}
+			
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var userAnswer = "";
+			$(document).ready(function()
+			{
+				//lock the buttons
+				Lock();
+				$('#questionBox').hide();
+				//parent.GetWorldEvent("Page1");
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+			});
+			function Start(){
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+			}
+			function GetItem()
+			{
+				
+					return parent.GetWorldEvent("Continue");
+			}
+			
+			function ShowMediaAnswer()
+			{
+			//(2)trun green
+			$("#submitSearchButton1").animate({backgroundColor: "green"}, 300);
+			if (userAnswer == "Correct"){ 
+					sound_correct();
+					}
+				
+			}
+			
+			function ShowItem()
+			{
+				$('#questionBox').toggle('slide', 'left', 1000);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".searchButton" ).unbind("click");
+				$( ".searchButton" ).unbind("mouseover");
+				$( ".searchButton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".searchButton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				//$( ".searchButton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".searchButton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{	
+				//(2)get the value based on user answer
+					userAnswer = $(this).attr("value");
+					//get user answer's text
+					selectedID=$(this).attr("id");
+					userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					
+				//play sound
+					if (userAnswer == "Correct"){ 
+					sound_clicked(); 
+					}
+					else { 
+					sound_incorrect(); 
+					}
+					
+					
+				//userAnswer =$("#searchButton").val();
+					
+				
+					
+					//Here need to add a function to get user input content, 
+					//then return to Mainpage by using "parent.GetWorldEvent(userAnswer)"; see line 220
+					//userAnswer =$("#searchButton").val();
+					//After user submit input, you cannot direly go nextpage, sometime the aces server will return action for talking head based rule.
+					//jump to next page please use	"GetMediaEvent(data)",  data is "NextPage"
+					//parent.nextPage("media/"+"Lesson32-0-1.html");
+					
+					//animate the font size of clicked option
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//this function is to return user input to mianpage.
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+					//lock button and sent Stop call to ASAT
+					Lock();
+				};
+					$('#textInput').keydown(function(e) {
+					if(e.keyCode == 13) {
+						parent.PlaySound('clicked0.wav'); 
+					
+						//animate button click
+						$(".searchButton").animate({fontSize: butAnimSize}, 75);
+						$(".searchButton").animate({fontSize: butFontSize}, 600);
+						
+						Lock();
+					
+						userAnswer = "userInputString: " + $("#searchInput").val();
+						$('textarea').attr('readonly', true);
+						
+						
+						parent.GetWorldEvent(userAnswer);
+					}
+				});
+				
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".searchButton" ).mouseover(function()
+				{ $(this).stop().animate({backgroundColor: "#fdffe7"}, 300); });
+				$( ".searchButton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "#1a75ff"}, 300); });
+				$( ".searchButton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".searchButton").animate({backgroundColor: "#1a75ff"}, 1000);
+				
+				//bind the clickFunc above to any ".searchButton"
+				$(".searchButton").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+				if (data == "NextPage")
+				{	
+				//*********
+					//parent.nextPage("media/"+"Lesson32-0-2.html");
+					parent.nextPage("media/"+ "Lesson32-0-1second.html");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+			}
+		</script>
+	</head>
+	<body onload="Start();">
+		<div id="urlBar">
+			<div id="backButton" class="nav mybutton" >
+				<
+			</div>
+			<div id="forwardButton" class="nav " >
+				>
+			</div>
+			<input type="text" id="urlInput" value="http://www.imdb.com/title/tt0058331/" readonly>
+		</div>
+		
+		<div id="search">
+			<!--input type="text" id="searchInput" (1)show tree button with id and value-->
+			<div id="submitSearchButton1" class="searchButton" value="Correct">Julie Andrews</div>
+			<div id="submitSearchButton2" class="searchButton" value="Incorrect">Dick Van Dyke</div>
+			<div id="submitSearchButton3" class="searchButton" value="Incorrect">David Tomlinson</div>
+		</div>
+					
+		<div id="textbox" class="scroll-pane">
+			<img src="mp-imdb0.png" class="webImg">
+			<img src="mp-imdb1.png" class="webImg">
+			<img src="mp-imdb2.png" class="webImg">
+		</div>
+	</body>
+</html>

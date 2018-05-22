@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L25Bkgd1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 294px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 27px;
+				padding: 15px 30px 0px 30px;
+				line-height: 40px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Special Elite', Verdana, 'Times New Roman';
+				font-size: 62px;
+				margin: 10px 0px 20px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 200px;
+				background-color: white;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				border-top: 5px solid #a58870;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 22px;
+				padding: 0px 20px;
+				color: #212121;
+				margin: 10px 0px 0px 5px;
+				width: 740px;
+			}
+			#buttonBox
+			{
+				margin: 6px 10px;
+				width: 700px;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 330px;
+				height: 34px;
+				line-height: 34px;
+				margin: 1px 0px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+				padding: 1px 2px;
+				outline: none;
+				border-radius: 12px;
+				position: relative;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var $scrollElement;
+			var currentItem = -1;
+			var numItems = 0;
+			var isSelected = false;
+			var itemsArray=["b1","b2","b3","b4"];
+			var score=0;
+			var userSelecteditem="";
+			var correctAnswerArray = ["b3","b4"];
+			var userAnswerId="";
+			var JordanAnswerID="";
+			$(document).ready(function()
+			{	
+			GetRequest();
+			parent.GetWorldEvent("MediumLoaded");
+			
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000, contentWidth: '0px'});
+				ScrollToId($scrollElement, "step4");
+			});
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-0);
+			}
+			
+				function GetRequest()
+				{ 
+				 var url = location.search; 
+				 var idName = new Array();
+				   if (url.indexOf("?") != -1) 
+					{ 
+					 str = url.substr(1); 
+					 strs = str.split("=");
+					 score = strs[1];
+					}
+				}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=._`~()\"]/g,"");	
+					userAnswerid = $(this).attr("id");
+					
+					//play appropriate sound
+					
+					if (userAnswer == "Correct")
+					{ 
+						if(userAnswerid=="b1")
+						{$("#"+userAnswerid).animate({left: "430px", top: "35px"});}
+						else if(userAnswerid=="b2")
+						{$("#"+userAnswerid).animate({left: "430px", top: "0px"});}
+						else if(userAnswerid=="b3")
+						{$("#"+userAnswerid).animate({left: "430px", top: "-35px"});}
+						else if(userAnswerid=="b4")
+						{$("#"+userAnswerid).animate({left: "430px", top: "-75px"});}
+						parent.PlaySound('clicked0.wav');
+						score++;					
+					}
+					else 
+					{ 
+					parent.PlaySound('incorrect0.wav'); 
+					
+					}
+					//lock buttons
+					Lock();
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+					
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a58870"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#a58870", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+				$( "#"+JordanAnswerID ).unbind("click");
+				$( "#"+JordanAnswerID ).unbind("mouseover");
+				$( "#"+JordanAnswerID ).unbind("mouseout");
+				$( "#"+JordanAnswerID ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( "#"+JordanAnswerID ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+							
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect1" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							parent.PlaySound('success0.wav');
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					
+					
+					
+					} 
+					
+					$("#b3").animate({left: "430px", top: "-75px"});
+					$("#b4").animate({left: "430px", top: "-75px"});
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 600);
+					$("#" + correctAnswerArray[1]).animate({backgroundColor: "green", color: "white"}, 600);
+					// parent.PlaySound('success0.wav');
+				}
+               function GetMediaEvent(data)
+			    {
+					
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("JordanGoodFirst");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+					else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}	
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else if (data=="NextPage")
+				{
+				parent.nextPage("media/"+"Lesson25-Main1-5b.html?score="+(score))
+				//window.location="Lesson25-Main1-5b.html?score="+(score);
+				}
+				else if (data=="JordanGoodFirst")
+				{
+				/*
+					var value = parseInt(Math.random() * (itemsArray.length - 1 + 1) + 1);
+					var JordanAnswerID=itemsArray[value-1];
+					var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+					if(JordanAnswerID=="b1")
+					{$("#"+JordanAnswerID).animate({left: "430px", top: "0px"});}
+					else if(JordanAnswerID=="b2")
+					{$("#"+JordanAnswerID).animate({left: "430px", top: "-35px"});}
+					else if(JordanAnswerID=="b3")
+					{$("#"+JordanAnswerID).animate({left: "430px", top: "-75px"});}
+					else if(JordanAnswerID=="b4")
+					{$("#"+JordanAnswerID).animate({left: "430px", top: "-110px"});}
+				*/
+					JordanAnswerID="b3";
+					var JordanAnswer = "Correct";
+					$("#"+JordanAnswerID).animate({left: "430px", top: "-75px"});
+					//parent.GetWorldEvent(JordanAnswer);
+				
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					<img src="tireicon.png"> Changing a Tire <img src="tireicon.png">
+				</div>
+				
+				<div id="step1" class="para">
+					1. Before stopping your car, first find a safe spot to pull over. If you're on the freeway, taking the next exit is the safest bet, even if you have to drive on a blown tire. Otherwise, pull as far onto the shoulder as possible.
+				</div>
+				
+				<div id="step2" class="para">
+					2. Turn on your hazard lights.
+				</div>
+				<div id="step3" class="para">
+					3. Get the jack, wrench, and spare tire from the trunk of the car.
+				</div>
+				<div id="step4" class="para">
+					4. To change the tire, use the wrench to loosen the lug nuts. Don't remove the lug nuts at this point; simply loosen them by turning the wrench to the left (counter-clockwise).
+				</div>
+				<div id="step5" class="para">
+					5. Next, use the jack to lift the vehicle off the ground. Now, once the jack is securely in the correct spot, jack up the car until the tire is about 6 inches off the ground.
+				</div>
+				<div id="step6" class="para">
+					6. Then, remove the lug nuts and pull the tire off the car.
+				</div>
+				<div id="step7" class="para">
+					7. Place the spare on the car.
+				</div>
+				<div id="step8" class="para">
+					8. Also, push the spare all the way onto the wheel base until it can't go any farther.
+				</div>
+				<div id="step9" class="para">
+					9. Put on the lug nuts. Don't put them on tightly.
+				</div>
+				<div id="step10" class="para">
+					10. Use the jack to bring the car back down to ground level. Remove the jack from underneath the car.
+				</div>
+				<div id="step11" class="para">
+					11. Now, with the car back on the ground, you can now tighten the lug nuts. Rather than tightening them one by one in order, start with one lug nut, tighten it about 50%, move to the opposite nut (across the circle) and tighten that one about the same amount. Remember to keep tightening opposite lug nuts gradually in turn until each lug nut is as tight as it can be.
+				</div>
+				<div id="step12" class="para">
+					12. Finally, put your flat tire and tools back in your trunk. Remember, don't leave anything on the side of the road.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">
+			<div id="questionText">
+				What should you do next to change the tire?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Incorrect1">Put the spare tire on.</div>
+				<div class='mybutton' id="b2" value="Incorrect1">Remove the lug nuts and the tire.</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect1">Loosen the lug nuts.</div>
+				<div class='mybutton' id="b4" value="Correct">Use the jack to lift the car.</div>
+			</div>
+		</div>
+	</body>
+</html>

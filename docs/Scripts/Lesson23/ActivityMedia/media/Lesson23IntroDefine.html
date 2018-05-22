@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<style>
+			.bold{font-weight: bold;}
+			body
+			{
+				background-image:url('L23Bkgd.jpg');
+				background-size: contain;
+				background-repeat:no-repeat;
+				overflow: hidden;
+				width: 790px;
+				height: 450px;
+				position: relative;
+				text-align: center;
+				font-family: Lora, Verdana, 'Times New Roman';
+			}
+			#cc
+			{
+				background-color:rgba(241,88,88,0.8);
+				font-size: 34px;
+				border-radius: 10px;
+				display: block;
+				width: 90%;
+				padding: 10px;
+				vertical-align: top;
+				margin: 60px auto 5% auto;
+				line-height: 1.5;
+				display: none;
+			}
+			#ccTitle
+			{
+				font-size: 52px;
+				text-decoration: underline;
+			}
+			#definition
+			{
+				width: 92%;
+				height: 32%;
+				background-color:rgba(255,150,26,0.8);
+				border-radius: 10px;
+				margin: 5px auto 5px auto;
+				padding: 15px 0px 0px 0px;
+				font-size: 40px;
+				text-align: center;
+				display: inline-block;
+				line-height: 1.6;
+				display: none;
+			}
+			
+		</style>
+		<script>
+			$(document).ready(function()
+			{
+				$("#cc").fadeIn(2400);
+				setTimeout(function() {
+					$("#definition").fadeIn(2400);
+				}, 4000);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="cc">
+			<div id="ccTitle">Compare and Contrast</div>
+			<div>What does it mean to compare and contrast?</div>
+		</div>
+		<div id="definition">
+			
+			To find the similarities and differences between two things.
+			
+		</div>
+	</body>
+</html>

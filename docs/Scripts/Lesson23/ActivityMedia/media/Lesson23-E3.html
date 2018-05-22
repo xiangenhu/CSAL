@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L23Background0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 228px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainTableHead
+			{
+				font-family: 'Audiowide', Verdana, 'Times New Roman';
+				font-size: 24px;
+				margin: 15px auto;
+				text-align: center;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			.mainTable
+			{
+				font-size: 20px;
+				text-align: left;
+				margin: 5px 0px 15px 0px;
+				border-collapse: collapse;
+			}
+			tr:nth-child(even) {background: #CCC}
+			tr:nth-child(odd) {background:;}
+			TH
+			{
+				font-family: 'Audiowide', Verdana, 'Times New Roman';
+				font-size: 22px;
+				text-align: center;
+			}
+			.rowHead
+			{
+				background-color: none;
+			}
+			.model
+			{
+				border: 1px solid black;
+				border-top: none;
+				font-size: 28px;
+				width: 200px;
+			}
+			.topRow
+			{
+				height: 42px;
+				width: 590px;
+				margin: 1px 0px 0px 180px;
+			}
+			TD
+			{
+				padding: 8px 6px;
+				width: 200px;
+				border-top: 1px solid black;
+			}
+			.price
+			{
+				text-align: center;
+				font-size: 24px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-color: #BF3D30;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 27px;
+				padding: 12px 20px 10px 20px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 260px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 12px 0px 0px 5px;
+				width: 450px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 26px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 450px;
+				height: 44px;
+				line-height: 44px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+		
+			var currentItem = -1;
+			var numItems = 0;
+			var isSelected = false;
+			var itemsArray=["b1","b2","b3"];
+			var userSelecteditem="";
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b2"];
+			
+			$(document).ready(function()
+			{		
+				parent.GetWorldEvent("MediaLoadedEasy");
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				ScrollToId($scrollElement, "highlight");
+			});
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-100);
+			}
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+						$("#highlight").animate({backgroundColor: "green", color: "white"}, 1000);
+					
+				}
+			}
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					selectedID=$(this).attr("id");
+					userSelecteditem = $(this).attr("item");
+					var userSelected=document.getElementById(selectedID).innerHTML;
+					userSelected=userSelected.replace(/[\r\n]/g,"");
+					userSelected=userSelected.replace(/[\/#$%\^;&\*{}=_`~()\"']/g,"");
+					userSelected=userSelected.replace(/nbsp/g,'');
+					userSelected=userSelected.replace(/<[^>].*?>/g,"");	
+					//play appropriate sound
+					if (userAnswer == "Correct"){
+						parent.PlaySound('clicked0.wav'); 
+					}
+					else 
+					{ 
+						parent.PlaySound('incorrect0.wav'); 
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelected);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#faa49b"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#faa49b"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #faa49b;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Jordan");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				//go to next page
+				else if (data == "NextPage")
+				{	
+				
+					parent.nextPage("media/"+"Lesson23-E4.html");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table class="mainTable topRow">
+			<tr id="header-Row">
+				<th></th>
+				<th class="model">Comet 300</th>
+				<th class="model">Fireball 850s</th>
+				<th class="model">Pulsar 5200</th>
+			</tr>
+		</table>
+		<div id="textbox" class="scroll-pane">
+			<table class="mainTable">
+				<tr>
+					<th>Price</th>
+					<td class="price">$189.99</td>
+					<td class="price">$249.99</td>
+					<td class="price">$324.99</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Financing</th>
+					<td>Full payment at time of purchase.</td>
+					<td>6-month Financing:  $41.67 each month.</td>
+					<td>6-month Financing: $54.17 each month.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Battery Life</th>
+					<td>Talk time is up to 7 hours. Standby time is up to 10 days.</td>
+					<td><span id="highlight">Talk time is up to 13 hours. Standby time is up to 20 days.</span></td>
+					<td>Talk time is up to 10 hours. Standby time is up to 10 days.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Vibrate Mode</th>
+					<td>Has Silent and Ring mode. Does not have vibrate mode.</td>
+					<td>Can be set to silent, vibrate, or ring mode.</td>
+					<td>Can be set to silent, vibrate, or ring mode.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Camera</th>
+					<td>Built-in digital camera with video capability.</td>
+					<td>Built-in digital camera with video capability.</td>
+					<td>Built-in  digital  camera with good resolution even in poor lighting. No video capability.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Caller ID</th>
+					<td>Displays phone numbers and names of callers.</td>
+					<td>Displays phone numbers and names of callers.</td>
+					<td>Displays location of calling number, phone number, and names  of callers.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Downloadable Games</th>
+					<td>Can store and play ~5 games.</td>
+					<td>Can store and play ~10 games.</td>
+					<td>Can store and play ~5 games.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Ringtones</th>
+					<td>Can download up to 10 free ringtones. No option to customize.</td>
+					<td>Can download up to 10 free ringtones and can store up to 100 ringtones. No option to customize.</td>
+					<td>Can download up to 10 free ringtones and can store up to 100 ringtones. Option to customize with sounds you record.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Internet</th>
+					<td>Internet and Email capable.</td>
+					<td>Internet and Email capable.</td>
+					<td>Internet and Email capable.</td>
+				</tr>
+				<tr>
+					<th class="rowHead">Alarm Clock</th>
+					<td>Schedule up to 5 alarms with different sounds or music.</td>
+					<td>Schedule up to 5 alarms with different sounds or music. Will not work if device is muted.</td>
+					<td>Schedule multiple alarms and Sleeper Time lets you listen to music for a set time as you fall asleep.</td>
+				</tr>
+			</table>
+		</div>
+		<div id="questionBox0" class="questionBox">
+			<div id="questionText">
+				Jordan has many calls each day. Which phone allows him to talk the longest?
+
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" item="A" value="Incorrect">Comet 300</div>
+				
+				<div class='mybutton' id="b2" item="B" value="Correct">Fireball 850s</div>
+
+			
+				<div class='mybutton' id="b3" item="C" value="Incorrect">Pulsar 5200</div>
+			</div>
+		</div>
+	</body>
+</html>

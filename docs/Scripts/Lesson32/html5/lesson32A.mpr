@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="150,120" htmlextctl="true" htmlextevt="true" htmltransparent="true" htmlrss="true" htmlpersist="true" initialpresenting="false" flashversion="9" loader="standard">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+	 <message id="C1" name="C1">
+        <say>Art!</say>
+      </message>
+      <message id="C2" name="C2">
+        <say>Whitney!</say>
+      </message>
+      <message id="C3" name="C3">
+        <say>Carl!</say>
+      </message>
+      <message id="C4" name="C4">
+        <say>Qinyu!</say>
+      </message>
+      <message id="C5" name="C5">
+        <say>Tiffany!</say>
+      </message>
+      <message id="C6" name="C6">
+        <say>Amy!</say>
+      </message>
+      <message id="C7" name="C7">
+        <say>Andrew!</say>
+      </message>
+      <message id="C8" name="C8">
+        <say>Breya!</say>
+      </message>
+      <message id="C9" name="C9">
+        <say>Cadarrius!</say>
+      </message>
+      <message id="C10" name="C10">
+        <say>Craig!</say>
+      </message>
+      <message id="C11" name="C11">
+        <say>Danielle!</say>
+      </message>
+      <message id="C12" name="C12">
+        <say>Patrick!</say>
+      </message>
+      <message id="C13" name="C13">
+        <say>Habibah!</say>
+      </message>
+      <message id="C14" name="C14">
+        <say>Haiying!</say>
+      </message>
+      <message id="C15" name="C15">
+        <say>Janay!</say>
+      </message>
+      <message id="C16" name="C16">
+        <say>Jordan!</say>
+      </message>
+      <message id="C17" name="C17">
+        <say>Lijia!</say>
+      </message>
+      <message id="C18" name="C18">
+        <say>Logan!</say>
+      </message>
+      <message id="C19" name="C19">
+        <say>Mark!</say>
+      </message>
+      <message id="C20" name="C20">
+        <say>Megan!</say>
+      </message>
+      <message id="C21" name="C21">
+        <say>Morgan!</say>
+      </message>
+      <message id="C22" name="C22">
+        <say>Parya!</say>
+      </message>
+      <message id="C23" name="C23">
+        <say>Paul!</say>
+      </message>
+      <message id="C24" name="C24">
+        <say>Qiong!</say>
+      </message>
+      <message id="C25" name="C25">
+        <say>Qiping!</say>
+      </message>
+      <message id="C26" name="C26">
+        <say>Shi!</say>
+      </message>
+      <message id="C27" name="C27">
+        <say>Xiangen!</say>
+      </message>
+      <message id="C28" name="C28">
+        <say>Stephanie!</say>
+      </message>
+      <message id="C29" name="C29">
+        <say>Devi!</say>
+      </message>
+      <message id="C30" name="C30">
+        <say>Anthony!</say>
+      </message>
+      <message id="C31" name="C31">
+        <say>Yehui!</say>
+      </message>
+    <message id="A1" name="A1">
+    <say>, I would not choose this third link, as shown in this webpage, it has nothing to do with the actual Mary Poppins film. But let us go on.</say>
+  </message>
+  <message id="A2" name="A2">
+    <say>Good</say>
+  </message>
+  <message id="A3" name="A3">
+    <say>Great!</say>
+  </message>
+  <message id="A4" name="A4">
+    <say>All right. Let's move on.</say>
+  </message>
+  <message id="A5" name="A5">
+    <say>Let's move on to the next item.</say>
+  </message>
+  <message id="A6" name="A6">
+    <say>, I would not choose this website, as once again it is somebody's opinion from a news source instead of reliable medical sources. But go ahead, take a look at what's in it. Use the left arrow button to go back to the previous page.</say>
+  </message>
+  <message id="A7" name="A7">
+    <say>, I would not choose this website, as it is a news story instead of reliable medical sources. But you can go ahead and take a look at what's in it. Use the left arrow button to go back to the previous page.</say>
+  </message>
+  <message id="A8" name="A8">
+    <say>, please try to click on one of the two links again</say>
+  </message>
+  <message id="A9" name="A9">
+    <say>Please try it.</say>
+  </message>
+  <message id="A10" name="A10">
+    <say>sorry, something is wrong</say>
+  </message>
+  <message id="A11" name="A11">
+    <say>Unfortunately that's not right.</say>
+  </message>
+  <message id="A12" name="A12">
+    <say>Here in the wikipedia article you can find information on what allergies are and even the signs of symptoms. It is important to check the accuracy of the information as it is not always correct. You can check the sources of the information for its reliability, by looking at the little numbers right next to the text. Click on them and it will take you to the bibliography below.</say>
+  </message>
+  <message id="A13" name="A13">
+    <say>, Here you can see the results of our search for information on Mary Poppins. From here, you can click on any of the links to see if any of the websites seem like good sources for the information you want.</say>
+  </message>
+  <message id="A14" name="A14">
+    <say>If you click on a link, but do not think it was the best one for your search, just click the back button on your browser. The back button is usually close to the search bar and has an arrow pointing to the left. On our pages, you will see that it is highlighted in blue.</say>
+  </message>
+  <message id="A15" name="A15">
+    <say>Yes</say>
+  </message>
+  <message id="A16" name="A16">
+    <say>, thanks so much for helping Jordan out!</say>
+  </message>
+  <message id="A17" name="A17">
+    <say>I’ll see you soon</say>
+  </message>
+  <message id="A18" name="A18">
+    <say>, thanks again! Good bye!</say>
+  </message>
+  <message id="A19" name="A19">
+    <say>right Jordan! On the internet anyone can post on any topic! That is why looking at where the article comes from is very important!</say>
+  </message>
+  <message id="A20" name="A20">
+    <say>Yes Jordan, now you can do some shopping!</say>
+  </message>
+  <message id="A21" name="A21">
+    <say>that’s right Jordan, you are learning!!</say>
+  </message>
+  <message id="A22" name="A22">
+    <say>wikipedia is a very commonly used site for general information.</say>
+  </message>
+  <message id="A23" name="A23">
+    <say>That’s right Jordan. Pollen allergies are very common, especially in the summer.</say>
+  </message>
+  <message id="A24" name="A24">
+    <say>Let’s go back to the previous search page.</say>
+  </message>
+  <message id="A25" name="A25">
+    <say>Jordan, are you seeing links to the information that you need?</say>
+  </message>
+  <message id="A26" name="A26">
+    <say>well Jordan, usually the top few links that show up after a search are the links with the most relevant information to what you are trying to find. If you are looking for general information on allergies, I think the best source is: Wikipedia!</say>
+  </message>
+  <message id="A27" name="A27">
+    <say>Yes Jordan, you can find quite a lot of information on a variety of topics using the search engines on the web.</say>
+  </message>
+  <message id="A28" name="A28">
+    <say>That is a good topic for us to research next. Let us go back to the search engine.</say>
+  </message>
+  <message id="A29" name="A29">
+    <say>Jordan, I think what you need are some allergy i drops.</say>
+  </message>
+  <message id="A30" name="A30">
+    <say>okay, let’s go back to the search engine.</say>
+  </message>
+  <message id="A31" name="A31">
+    <say>Yes</say>
+  </message>
+  <message id="A32" name="A32">
+    <say>, this can be a useful skill to have.</say>
+  </message>
+  <message id="A33" name="A33">
+    <say>Well, then a good place for us to start learning about internet research would be to look up information about the movie online.</say>
+  </message>
+  <message id="A34" name="A34">
+    <say>Yes, that would be a good place to start.</say>
+  </message>
+  <message id="A35" name="A35">
+    <say>well, this site has some of that information at the bottom. But you can always search for it again.</say>
+  </message>
+  <message id="A36" name="A36">
+    <say>Yes</say>
+  </message>
+  <message id="A37" name="A37">
+    <say>, let us go back to the previous search page</say>
+  </message>
+  <message id="A38" name="A38">
+    <say>, let’s try this out. Typically, to start a search, you need to type in some key terms or words that might help you search for the information you need. Let's practice here by selecting the best key words from the box below the search bar for Voogle. Remember, we are trying to help Jordan find information about the movie, Mary Poppins. Once you pick the best key words, click on the blue search button with the magnifying glass on it.</say>
+  </message>
+  <message id="A39" name="A39">
+    <say>Those are the right keywords to use</say>
+  </message>
+  <message id="A40" name="A40">
+    <say>Mary and Poppins would be good keywords to use</say>
+  </message>
+  <message id="A41" name="A41">
+    <say>Okay, let's try this. What is name of the movie that Jordan saw? That would be a good keyword to type in. Please Be careful about spelling.</say>
+  </message>
+  <message id="A42" name="A42">
+    <say>Mary and Poppins would be good keywords to use</say>
+  </message>
+  <message id="A43" name="A43">
+    <say>Please click on the links and explore each of the sites.</say>
+  </message>
+  <message id="A44" name="A44">
+    <say>, When you have found the site that you think is the best, click on the Use This Website button at the top of the page.</say>
+  </message>
+  <message id="A45" name="A45">
+    <say>, I think the IMDB website is the best one, since it is a site dedicated to movies. But the wikipedia website is also a good source for finding information. The Bishop McDevitt website in the third link would not be good because it is about a high school play and not actually about the film.</say>
+  </message>
+  <message id="A46" name="A46">
+    <say>The IMDB and wikipedia pages are good pages for information on the film</say>
+  </message>
+  <message id="A47" name="A47">
+    <say>, I would not choose this third link, as shown in this webpage, it has nothing to do with the film. But please click continue to go on.</say>
+  </message>
+  <message id="A48" name="A48">
+    <say>The IMDB and wikipedia pages are good pages for information on the film</say>
+  </message>
+  <message id="A49" name="A49">
+    <say>, let's try to find this information for Jordan. Scroll through the IMDB site to find the information and then click on the button with the name of the actress who played Mary Poppins.</say>
+  </message>
+  <message id="A50" name="A50">
+    <say>Yes</say>
+  </message>
+  <message id="A51" name="A51">
+    <say>, Julie Andrews is the actress who played Mary Poppins.</say>
+  </message>
+  <message id="A52" name="A52">
+    <say>Julie Andrews is the actress who played Mary Poppins.</say>
+  </message>
+  <message id="A53" name="A53">
+    <say>, please click on the name of the actress who played Mary Poppins from the three choices shown in the buttons. Thank you.</say>
+  </message>
+  <message id="A54" name="A54">
+    <say>Julie Andrews is the actress who played Mary Poppins.</say>
+  </message>
+  <message id="A55" name="A55">
+    <say>, please select a keyword from the list of keywords in the box under the search bar. Remember, Jordan is looking for information on his allergies. Once you select some key words, the keyword will appear in the search bar. Next, please click the blue search button with the magnifying glass.</say>
+  </message>
+  <message id="A56" name="A56">
+    <say>Great job</say>
+  </message>
+  <message id="A57" name="A57">
+    <say>By typing the keyword allergy you could find the correct webpage</say>
+  </message>
+  <message id="A58" name="A58">
+    <say>, please type a keyword in the search box that would be what Jordan is trying to find, please try again.</say>
+  </message>
+  <message id="A59" name="A59">
+    <say>By typing the keyword allergy you could find the correct webpage</say>
+  </message>
+  <message id="A60" name="A60">
+    <say>, please click on the continue button to continue.</say>
+  </message>
+  <message id="A61" name="A61">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A62" name="A62">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A63" name="A63">
+    <say>, please click on the continue button to continue.</say>
+  </message>
+  <message id="A64" name="A64">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A65" name="A65">
+    <say>, please click on the continue button for more information.</say>
+  </message>
+  <message id="A66" name="A66">
+    <say>Let's see what is next.</say>
+  </message>
+  <message id="A67" name="A67">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A68" name="A68">
+    <say>, please click on the continue button to continue.</say>
+  </message>
+  <message id="A69" name="A69">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A70" name="A70">
+    <say>, when you have finished reading this wikipedia article on allergies, please click the continue button to go on.</say>
+  </message>
+  <message id="A71" name="A71">
+    <say>There is a lot of information here.</say>
+  </message>
+  <message id="A72" name="A72">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A73" name="A73">
+    <say>, when you have finished reading this wikipedia article on allergies, please click the continue button to go on.</say>
+  </message>
+  <message id="A74" name="A74">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A75" name="A75">
+    <say>, Please scroll up to read the rest of the wikipedia article. When you have finished, please click the continue button to go on.</say>
+  </message>
+  <message id="A76" name="A76">
+    <say>We are almost to the end of this page.</say>
+  </message>
+  <message id="A77" name="A77">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A78" name="A78">
+    <say>, when you have finished reading this wikipedia article on allergies, please click the continue button to go on.</say>
+  </message>
+  <message id="A79" name="A79">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A80" name="A80">
+    <say>Let's see if we can find more information on pollen based allergies.</say>
+  </message>
+  <message id="A81" name="A81">
+    <say>, please select a keyword from the list in the box. The key words that you selected should appear in the search bar. Next, click on the blue button with the magnifying glass to start your search.</say>
+  </message>
+  <message id="A82" name="A82">
+    <say>Typing the keywords pollen and allergy will get you a list of good links.</say>
+  </message>
+  <message id="A83" name="A83">
+    <say>typing the keywords pollen and allergy would get you to the correct webpage</say>
+  </message>
+  <message id="A84" name="A84">
+    <say>, please remember that sometimes you would need to type in more than one word for keywords for the search engine to give accurate results. Please try again.</say>
+  </message>
+  <message id="A85" name="A85">
+    <say>typing the keywords pollen and allergy would get you to the correct webpage</say>
+  </message>
+  <message id="A86" name="A86">
+    <say>, what do you think? Which link is the most reliable for information on allergic reactions to pollen? Please click on one of the two.</say>
+  </message>
+  <message id="A87" name="A87">
+    <say>This website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source. </say>
+  </message>
+  <message id="A88" name="A88">
+    <say>I would choose the other website,</say>
+  </message>
+  <message id="A89" name="A89">
+    <say>. As it is a  website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source.</say>
+  </message>
+  <message id="A90" name="A90">
+    <say>Okay.</say>
+  </message>
+  <message id="A91" name="A91">
+    <say>, what do you think? Which link do you think is the most reliable link for information on allergic reactions to pollen? Please click on one of the two.</say>
+  </message>
+  <message id="A92" name="A92">
+    <say>Actually</say>
+  </message>
+  <message id="A93" name="A93">
+    <say>and Jordan, I would not pick this page. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The second website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source.</say>
+  </message>
+  <message id="A94" name="A94">
+    <say>I would not pick this the second link. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The first website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source.</say>
+  </message>
+  <message id="A95" name="A95">
+    <say>, what do you think? Which link is the most reliable for information on allergic reactions to pollen? Please click on one of the two.</say>
+  </message>
+  <message id="A96" name="A96">
+    <say>I would not pick this the second link. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The first website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source.</say>
+  </message>
+  <message id="A97" name="A97">
+    <say>, if you would like, please feel free to look over this web page. When you are ready to go on, please click on the continue button.</say>
+  </message>
+  <message id="A98" name="A98">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A99" name="A99">
+    <say>, please click continue to go on.</say>
+  </message>
+  <message id="A100" name="A100">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A101" name="A101">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A102" name="A102">
+    <say>, please click continue to go on.</say>
+  </message>
+  <message id="A103" name="A103">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A104" name="A104">
+    <say>, now we are looking for treatments for a pollen allergy. Can you select a keyword from the list and then click the blue button with the magnifying glass to start your search?</say>
+  </message>
+  <message id="A105" name="A105">
+    <say>typing in the keywords allergy and treatment would work</say>
+  </message>
+  <message id="A106" name="A106">
+    <say>typing in the keywords allergy and treatment would work</say>
+  </message>
+  <message id="A107" name="A107">
+    <say>, don't overthink this. Sometimes succinct keywords are enough. Please try again.</say>
+  </message>
+  <message id="A108" name="A108">
+    <say>typing in the keywords allergy and treatment would work</say>
+  </message>
+  <message id="A109" name="A109">
+    <say>, which of these two pages should Jordan use, please click one?</say>
+  </message>
+  <message id="A110" name="A110">
+    <say>I would agree with you,</say>
+  </message>
+  <message id="A111" name="A111">
+    <say>, this link is a website made specifically for everything deals with pollen and its source.</say>
+  </message>
+  <message id="A112" name="A112">
+    <say>This second link is some non-mainstream news source with individual opinions once again.The first link is the one that you should choose, as it is a website made specifically for everything deals with pollen and its source. </say>
+  </message>
+  <message id="A113" name="A113">
+    <say>The first link is a website made specifically for everything deals with pollen and its source. Whereas the second link is some non-mainstream news source with individual opinions once againWhereas the other link is some non-mainstream news source with individual opinions once again</say>
+  </message>
+  <message id="A114" name="A114">
+    <say>, don't overthink this. Sometimes succinct keywords are enough. Please try again.</say>
+  </message>
+  <message id="A115" name="A115">
+    <say>I would agree with you,</say>
+  </message>
+  <message id="A116" name="A116">
+    <say>, this link is a website made specifically for everything deals with pollen and its source.</say>
+  </message>
+  <message id="A117" name="A117">
+    <say>This second link is some non-mainstream news source with individual opinions once again.The first link is the one that you should choose, as it is a website made specifically for everything deals with pollen and its source. </say>
+  </message>
+  <message id="A118" name="A118">
+    <say>, please feel free to review this web page. When you are ready to go on, please click on the continue button.</say>
+  </message>
+  <message id="A119" name="A119">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A120" name="A120">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A121" name="A121">
+    <say>, please click on the continue button to continue.</say>
+  </message>
+  <message id="A122" name="A122">
+    <say>Let's keep going.</say>
+  </message>
+  <message id="A123" name="A123">
+    <say>, let's try to find some i drops for Jordan. Can you click on a good set of key words? Don't forget to click on the blue search button for the search.</say>
+  </message>
+  <message id="A124" name="A124">
+    <say>To be safe, typing in three keywords like allergy, eye, and drops, would be the best way to get to the right links.</say>
+  </message>
+  <message id="A125" name="A125">
+    <say>To be safe, typing in three keywords, which are allergy, eye, and drops, would be the best way to get to the right webpages.</say>
+  </message>
+  <message id="A126" name="A126">
+    <say>, Jordan would like to find medications for eye drops that relieves allergies, please try to type in the three main keywords.</say>
+  </message>
+  <message id="A127" name="A127">
+    <say>To be safe, typing in three keywords, which are allergy, eye, and drops, would be the best way to get to the right webpages.</say>
+  </message>
+  <message id="A128" name="A128">
+    <say>, can you please click on the first link for Jordan?</say>
+  </message>
+  <message id="A129" name="A129">
+    <say>Let's see what eye drops we can get for Jordan.</say>
+  </message>
+  <message id="A130" name="A130">
+    <say>The first link will do in this case</say>
+  </message>
+  <message id="A131" name="A131">
+    <say>, can you please click on the first link for Jordan?</say>
+  </message>
+  <message id="A132" name="A132">
+    <say>The first link will do in this case</say>
+  </message>
+  <message id="A133" name="A133">
+    <say>, which one of these should Jordan get? He would like the cheapest i drop. Please click on the name for the i drop in the box below.</say>
+  </message>
+  <message id="A134" name="A134">
+    <say>The eye drop called alcon naphcon would be good for Jordan.</say>
+  </message>
+  <message id="A135" name="A135">
+    <say>The eye drop called alcon naphcon would be good for Jordan.</say>
+  </message>
+  <message id="A136" name="A136">
+    <say>, many of these items will have similar descriptions, it is important to identify the unique name for the product. Please try again to click on the name of the eye drop for Jordan that is the cheapest one.</say>
+  </message>
+  <message id="A137" name="A137">
+    <say>The eye drop called alcon naphcon would be good for Jordan.</say>
+  </message>
+	
+<message id="D20160204" name="D20160204">
+	<say>User</say>
+</message>	
+
+<message id="D1" name="D1">
+	<say>AMELIA</say>
+</message>
+<message id="D2" name="D2">
+	<say>OLIVIA</say>
+</message>
+<message id="D3" name="D3">
+	<say>EMILY</say>
+</message>
+<message id="D4" name="D4">
+	<say>AVA</say>
+</message>
+<message id="D5" name="D5">
+	<say>ISLA</say>
+</message>
+<message id="D6" name="D6">
+	<say>JESSICA</say>
+</message>
+<message id="D7" name="D7">
+	<say>POPPY</say>
+</message>
+<message id="D8" name="D8">
+	<say>ISABELLA</say>
+</message>
+<message id="D9" name="D9">
+	<say>SOPHIE</say>
+</message>
+<message id="D10" name="D10">
+	<say>MIA</say>
+</message>
+<message id="D11" name="D11">
+	<say>RUBY</say>
+</message>
+<message id="D12" name="D12">
+	<say>LILY</say>
+</message>
+<message id="D13" name="D13">
+	<say>GRACE</say>
+</message>
+<message id="D14" name="D14">
+	<say>EVIE</say>
+</message>
+<message id="D15" name="D15">
+	<say>SOPHIA</say>
+</message>
+<message id="D16" name="D16">
+	<say>ELLA</say>
+</message>
+<message id="D17" name="D17">
+	<say>SCARLETT</say>
+</message>
+<message id="D18" name="D18">
+	<say>CHLOE</say>
+</message>
+<message id="D19" name="D19">
+	<say>ISABELLE</say>
+</message>
+<message id="D20" name="D20">
+	<say>FREYA</say>
+</message>
+<message id="D21" name="D21">
+	<say>CHARLOTTE</say>
+</message>
+<message id="D22" name="D22">
+	<say>SIENNA</say>
+</message>
+<message id="D23" name="D23">
+	<say>DAISY</say>
+</message>
+<message id="D24" name="D24">
+	<say>PHOEBE</say>
+</message>
+<message id="D25" name="D25">
+	<say>MILLIE</say>
+</message>
+<message id="D26" name="D26">
+	<say>EVA</say>
+</message>
+<message id="D27" name="D27">
+	<say>ALICE</say>
+</message>
+<message id="D28" name="D28">
+	<say>LUCY</say>
+</message>
+<message id="D29" name="D29">
+	<say>FLORENCE</say>
+</message>
+<message id="D30" name="D30">
+	<say>SOFIA</say>
+</message>
+<message id="D31" name="D31">
+	<say>LAYLA</say>
+</message>
+<message id="D32" name="D32">
+	<say>LOLA</say>
+</message>
+<message id="D33" name="D33">
+	<say>HOLLY</say>
+</message>
+<message id="D34" name="D34">
+	<say>IMOGEN</say>
+</message>
+<message id="D35" name="D35">
+	<say>MOLLY</say>
+</message>
+<message id="D36" name="D36">
+	<say>MATILDA</say>
+</message>
+<message id="D37" name="D37">
+	<say>LILLY</say>
+</message>
+<message id="D38" name="D38">
+	<say>ROSIE</say>
+</message>
+<message id="D39" name="D39">
+	<say>ELIZABETH</say>
+</message>
+<message id="D40" name="D40">
+	<say>ERIN</say>
+</message>
+<message id="D41" name="D41">
+	<say>MAISIE</say>
+</message>
+<message id="D42" name="D42">
+	<say>LEXI</say>
+</message>
+<message id="D43" name="D43">
+	<say>ELLIE</say>
+</message>
+<message id="D44" name="D44">
+	<say>HANNAH</say>
+</message>
+<message id="D45" name="D45">
+	<say>EVELYN</say>
+</message>
+<message id="D46" name="D46">
+	<say>ABIGAIL</say>
+</message>
+<message id="D47" name="D47">
+	<say>ELSIE</say>
+</message>
+<message id="D48" name="D48">
+	<say>SUMMER</say>
+</message>
+<message id="D49" name="D49">
+	<say>MEGAN</say>
+</message>
+<message id="D50" name="D50">
+	<say>JASMINE</say>
+</message>
+<message id="D51" name="D51">
+	<say>MAYA</say>
+</message>
+<message id="D52" name="D52">
+	<say>AMELIE</say>
+</message>
+<message id="D53" name="D53">
+	<say>LACEY</say>
+</message>
+<message id="D54" name="D54">
+	<say>WILLOW</say>
+</message>
+<message id="D55" name="D55">
+	<say>EMMA</say>
+</message>
+<message id="D56" name="D56">
+	<say>BELLA</say>
+</message>
+<message id="D57" name="D57">
+	<say>ELEANOR</say>
+</message>
+<message id="D58" name="D58">
+	<say>ESME</say>
+</message>
+<message id="D59" name="D59">
+	<say>ELIZA</say>
+</message>
+<message id="D60" name="D60">
+	<say>GEORGIA</say>
+</message>
+<message id="D61" name="D61">
+	<say>HARRIET</say>
+</message>
+<message id="D62" name="D62">
+	<say>GRACIE</say>
+</message>
+<message id="D63" name="D63">
+	<say>ANNABELLE</say>
+</message>
+<message id="D64" name="D64">
+	<say>EMILIA</say>
+</message>
+<message id="D65" name="D65">
+	<say>AMBER</say>
+</message>
+<message id="D66" name="D66">
+	<say>IVY</say>
+</message>
+<message id="D67" name="D67">
+	<say>BROOKE</say>
+</message>
+<message id="D68" name="D68">
+	<say>ROSE</say>
+</message>
+<message id="D69" name="D69">
+	<say>ANNA</say>
+</message>
+<message id="D70" name="D70">
+	<say>ZARA</say>
+</message>
+<message id="D71" name="D71">
+	<say>LEAH</say>
+</message>
+<message id="D72" name="D72">
+	<say>MOLLIE</say>
+</message>
+<message id="D73" name="D73">
+	<say>MARTHA</say>
+</message>
+<message id="D74" name="D74">
+	<say>FAITH</say>
+</message>
+<message id="D75" name="D75">
+	<say>HOLLIE</say>
+</message>
+<message id="D76" name="D76">
+	<say>AMY</say>
+</message>
+<message id="D77" name="D77">
+	<say>BETHANY</say>
+</message>
+<message id="D78" name="D78">
+	<say>VIOLET</say>
+</message>
+<message id="D79" name="D79">
+	<say>KATIE</say>
+</message>
+<message id="D80" name="D80">
+	<say>MARYAM</say>
+</message>
+<message id="D81" name="D81">
+	<say>FRANCESCA</say>
+</message>
+<message id="D82" name="D82">
+	<say>JULIA</say>
+</message>
+<message id="D83" name="D83">
+	<say>MARIA</say>
+</message>
+<message id="D84" name="D84">
+	<say>DARCEY</say>
+</message>
+<message id="D85" name="D85">
+	<say>ISABEL</say>
+</message>
+<message id="D86" name="D86">
+	<say>TILLY</say>
+</message>
+<message id="D87" name="D87">
+	<say>MADDISON</say>
+</message>
+<message id="D88" name="D88">
+	<say>VICTORIA</say>
+</message>
+<message id="D89" name="D89">
+	<say>ISOBEL</say>
+</message>
+<message id="D90" name="D90">
+	<say>NIAMH</say>
+</message>
+<message id="D91" name="D91">
+	<say>SKYE</say>
+</message>
+<message id="D92" name="D92">
+	<say>MADISON</say>
+</message>
+<message id="D93" name="D93">
+	<say>DARCY</say>
+</message>
+<message id="D94" name="D94">
+	<say>AISHA</say>
+</message>
+<message id="D95" name="D95">
+	<say>BEATRICE</say>
+</message>
+<message id="D96" name="D96">
+	<say>SARAH</say>
+</message>
+<message id="D97" name="D97">
+	<say>ZOE</say>
+</message>
+<message id="D98" name="D98">
+	<say>PAIGE</say>
+</message>
+<message id="D99" name="D99">
+	<say>HEIDI</say>
+</message>
+<message id="D100" name="D100">
+	<say>LYDIA</say>
+</message>
+<message id="D101" name="D101">
+	<say>OLIVER</say>
+</message>
+<message id="D102" name="D102">
+	<say>JACK</say>
+</message>
+<message id="D103" name="D103">
+	<say>HARRY</say>
+</message>
+<message id="D104" name="D104">
+	<say>JACOB</say>
+</message>
+<message id="D105" name="D105">
+	<say>CHARLIE</say>
+</message>
+<message id="D106" name="D106">
+	<say>THOMAS</say>
+</message>
+<message id="D107" name="D107">
+	<say>OSCAR</say>
+</message>
+<message id="D108" name="D108">
+	<say>WILLIAM</say>
+</message>
+<message id="D109" name="D109">
+	<say>JAMES</say>
+</message>
+<message id="D110" name="D110">
+	<say>GEORGE</say>
+</message>
+<message id="D111" name="D111">
+	<say>ALFIE</say>
+</message>
+<message id="D112" name="D112">
+	<say>JOSHUA</say>
+</message>
+<message id="D113" name="D113">
+	<say>NOAH</say>
+</message>
+<message id="D114" name="D114">
+	<say>ETHAN</say>
+</message>
+<message id="D115" name="D115">
+	<say>MUHAMMAD</say>
+</message>
+<message id="D116" name="D116">
+	<say>ARCHIE</say>
+</message>
+<message id="D117" name="D117">
+	<say>LEO</say>
+</message>
+<message id="D118" name="D118">
+	<say>HENRY</say>
+</message>
+<message id="D119" name="D119">
+	<say>JOSEPH</say>
+</message>
+<message id="D120" name="D120">
+	<say>SAMUEL</say>
+</message>
+<message id="D121" name="D121">
+	<say>RILEY</say>
+</message>
+<message id="D122" name="D122">
+	<say>DANIEL</say>
+</message>
+<message id="D123" name="D123">
+	<say>MOHAMMED</say>
+</message>
+<message id="D124" name="D124">
+	<say>ALEXANDER</say>
+</message>
+<message id="D125" name="D125">
+	<say>MAX</say>
+</message>
+<message id="D126" name="D126">
+	<say>LUCAS</say>
+</message>
+<message id="D127" name="D127">
+	<say>MASON</say>
+</message>
+<message id="D128" name="D128">
+	<say>LOGAN</say>
+</message>
+<message id="D129" name="D129">
+	<say>ISAAC</say>
+</message>
+<message id="D130" name="D130">
+	<say>BENJAMIN</say>
+</message>
+<message id="D131" name="D131">
+	<say>DYLAN</say>
+</message>
+<message id="D132" name="D132">
+	<say>JAKE</say>
+</message>
+<message id="D133" name="D133">
+	<say>EDWARD</say>
+</message>
+<message id="D134" name="D134">
+	<say>FINLEY</say>
+</message>
+<message id="D135" name="D135">
+	<say>FREDDIE</say>
+</message>
+<message id="D136" name="D136">
+	<say>HARRISON</say>
+</message>
+<message id="D137" name="D137">
+	<say>TYLER</say>
+</message>
+<message id="D138" name="D138">
+	<say>SEBASTIAN</say>
+</message>
+<message id="D139" name="D139">
+	<say>ZACHARY</say>
+</message>
+<message id="D140" name="D140">
+	<say>ADAM</say>
+</message>
+<message id="D141" name="D141">
+	<say>THEO</say>
+</message>
+<message id="D142" name="D142">
+	<say>JAYDEN</say>
+</message>
+<message id="D143" name="D143">
+	<say>ARTHUR</say>
+</message>
+<message id="D144" name="D144">
+	<say>TOBY</say>
+</message>
+<message id="D145" name="D145">
+	<say>LUKE</say>
+</message>
+<message id="D146" name="D146">
+	<say>LEWIS</say>
+</message>
+<message id="D147" name="D147">
+	<say>MATTHEW</say>
+</message>
+<message id="D148" name="D148">
+	<say>HARVEY</say>
+</message>
+<message id="D149" name="D149">
+	<say>HARLEY</say>
+</message>
+<message id="D150" name="D150">
+	<say>DAVID</say>
+</message>
+<message id="D151" name="D151">
+	<say>RYAN</say>
+</message>
+<message id="D152" name="D152">
+	<say>TOMMY</say>
+</message>
+<message id="D153" name="D153">
+	<say>MICHAEL</say>
+</message>
+<message id="D154" name="D154">
+	<say>REUBEN</say>
+</message>
+<message id="D155" name="D155">
+	<say>NATHAN</say>
+</message>
+<message id="D156" name="D156">
+	<say>BLAKE</say>
+</message>
+<message id="D157" name="D157">
+	<say>MOHAMMAD</say>
+</message>
+<message id="D158" name="D158">
+	<say>JENSON</say>
+</message>
+<message id="D159" name="D159">
+	<say>BOBBY</say>
+</message>
+<message id="D160" name="D160">
+	<say>LUCA</say>
+</message>
+<message id="D161" name="D161">
+	<say>CHARLES</say>
+</message>
+<message id="D162" name="D162">
+	<say>FRANKIE</say>
+</message>
+<message id="D163" name="D163">
+	<say>DEXTER</say>
+</message>
+<message id="D164" name="D164">
+	<say>KAI</say>
+</message>
+<message id="D165" name="D165">
+	<say>ALEX</say>
+</message>
+<message id="D166" name="D166">
+	<say>CONNOR</say>
+</message>
+<message id="D167" name="D167">
+	<say>LIAM</say>
+</message>
+<message id="D168" name="D168">
+	<say>JAMIE</say>
+</message>
+<message id="D169" name="D169">
+	<say>ELIJAH</say>
+</message>
+<message id="D170" name="D170">
+	<say>STANLEY</say>
+</message>
+<message id="D171" name="D171">
+	<say>LOUIE</say>
+</message>
+<message id="D172" name="D172">
+	<say>JUDE</say>
+</message>
+<message id="D173" name="D173">
+	<say>CALLUM</say>
+</message>
+<message id="D174" name="D174">
+	<say>HUGO</say>
+</message>
+<message id="D175" name="D175">
+	<say>LEON</say>
+</message>
+<message id="D176" name="D176">
+	<say>ELLIOT</say>
+</message>
+<message id="D177" name="D177">
+	<say>LOUIS</say>
+</message>
+<message id="D178" name="D178">
+	<say>THEODORE</say>
+</message>
+<message id="D179" name="D179">
+	<say>GABRIEL</say>
+</message>
+<message id="D180" name="D180">
+	<say>OLLIE</say>
+</message>
+<message id="D181" name="D181">
+	<say>AARON</say>
+</message>
+<message id="D182" name="D182">
+	<say>FREDERICK</say>
+</message>
+<message id="D183" name="D183">
+	<say>EVAN</say>
+</message>
+<message id="D184" name="D184">
+	<say>ELLIOTT</say>
+</message>
+<message id="D185" name="D185">
+	<say>OWEN</say>
+</message>
+<message id="D186" name="D186">
+	<say>TEDDY</say>
+</message>
+<message id="D187" name="D187">
+	<say>FINLAY</say>
+</message>
+<message id="D188" name="D188">
+	<say>CALEB</say>
+</message>
+<message id="D189" name="D189">
+	<say>IBRAHIM</say>
+</message>
+<message id="D190" name="D190">
+	<say>RONNIE</say>
+</message>
+<message id="D191" name="D191">
+	<say>FELIX</say>
+</message>
+<message id="D192" name="D192">
+	<say>AIDEN</say>
+</message>
+<message id="D193" name="D193">
+	<say>CAMERON</say>
+</message>
+<message id="D194" name="D194">
+	<say>AUSTIN</say>
+</message>
+<message id="D195" name="D195">
+	<say>KIAN</say>
+</message>
+<message id="D196" name="D196">
+	<say>RORY</say>
+</message>
+<message id="D197" name="D197">
+	<say>SETH</say>
+</message>
+<message id="D198" name="D198">
+	<say>ROBERT</say>
+</message>
+<message id="D199" name="D199">
+	<say>ALBERT</say>
+</message>
+<message id="D200" name="D200">
+	<say>SONNY</say>
+</message>
+
+
+<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+
+
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>
+
+
+<message id="CSU00491" name="CSU00491">
+<say>Tarico</say>
+</message>
+<message id="CSU00504" name="CSU00504">
+<say>Tammy</say>
+</message>
+<message id="CSU00509" name="CSU00509">
+<say>Sadio</say>
+</message>
+<message id="CSU00490" name="CSU00490">
+<say>Sandra</say>
+</message>
+<message id="CSU00465" name="CSU00465">
+<say>Alma</say>
+</message>
+<message id="CSU00492" name="CSU00492">
+<say>Elizabeth</say>
+</message>
+<message id="CSU00508" name="CSU00508">
+<say>Samira</say>
+</message>
+<message id="CSU00515" name="CSU00515">
+<say>Edgar</say>
+</message>
+<message id="CSU00516" name="CSU00516">
+<say>Omega</say>
+</message>
+<message id="CSU00517" name="CSU00517">
+<say>Gilda</say>
+</message>
+<message id="CSU00519" name="CSU00519">
+<say>Farida</say>
+</message>
+<message id="CSU00520" name="CSU00520">
+<say>Miran</say>
+</message>
+<message id="CSU00521" name="CSU00521">
+<say>Azza</say>
+</message>
+<message id="CSU00522" name="CSU00522">
+<say>Nao</say>
+</message>
+<message id="CSU00523" name="CSU00523">
+<say>Oliva</say>
+</message>
+		
+<message id="HSC122301615" name="HSC122301615">
+<say>Janna</say>
+</message>
+<message id="HSC122301616" name="HSC122301616">
+<say>Jennifer</say>
+</message>
+<message id="HSC122301618" name="HSC122301618">
+<say>Muhiadin</say>
+</message>
+<message id="HSC122301623" name="HSC122301623">
+<say>Angel</say>
+</message>
+<message id="HSC122301625" name="HSC122301625">
+<say>Dowell</say>
+</message>
+<message id="HSC122301627" name="HSC122301627">
+<say>Offa</say>
+</message>
+<message id="HSC122301628" name="HSC122301628">
+<say>Annemarie</say>
+</message>
+<message id="HSC122301630" name="HSC122301630">
+<say>Arnaldo</say>
+</message>
+<message id="HSC122301631" name="HSC122301631">
+<say>Sheelah</say>
+</message>
+<message id="HSC122301635" name="HSC122301635">
+<say>shwa-wah-beck</say>
+</message>
+<message id="HSC122301620" name="HSC122301620">
+<say>Haja</say>
+</message>
+<message id="HSC1223016" name="HSC1223016">
+<say>Learner</say>
+</message>
+		
+<message id="HSC122301617" name="HSC122301617">
+<say>Sheena</say>
+</message>
+<message id="HSC122301619" name="HSC122301619">
+<say>Darlene</say>
+</message>
+<message id="HSC122301621" name="HSC122301621">
+<say>Destiny</say>
+</message>
+<message id="HSC122301624" name="HSC122301624">
+<say>Kenisha</say>
+</message>
+<message id="HSC122301626" name="HSC122301626">
+<say>Tamara</say>
+</message>
+<message id="HSC122301629" name="HSC122301629">
+<say>Yanenah</say>
+</message>
+<message id="HSC122301632" name="HSC122301632">
+<say>Victoria</say>
+</message>
+<message id="HSC122301527" name="HSC122301527">
+<say>Carleen</say>
+</message>
+<message id="HSC122301634" name="HSC122301634">
+<say>Leila</say>
+</message>
+<message id="HSC122301636" name="HSC122301636">
+<say>Luna</say>
+</message>
+<message id="HSC122301637" name="HSC122301637">
+<say>Lucy</say>
+</message>
+<message id="HSC122301638" name="HSC122301638">
+<say>Rahmelle</say>
+</message>
+
+<message id="HSC010301601" name="HSC010301601">
+<say>Rupinder</say>
+</message>
+<message id="HSC010301602" name="HSC010301602">
+<say>Elizabeth</say>
+</message>
+<message id="HSC010301604" name="HSC010301604">
+<say>Lorette</say>
+</message>
+<message id="HSC010301605" name="HSC010301605">
+<say>Mohinder</say>
+</message>
+<message id="HSC010301606" name="HSC010301606">
+<say>Buchi</say>
+</message>
+<message id="HSC010301607" name="HSC010301607">
+<say>Cynthia</say>
+</message>
+<message id="HSC010301600" name="HSC010301600">
+<say>Brinda</say>
+</message>
+<message id="HSC010301608" name="HSC010301608">
+<say>Sharoz</say>
+</message>
+<message id="HSC010301614" name="HSC010301614">
+<say>Tanya</say>
+</message>
+<message id="HSC010301609" name="HSC010301609">
+<say>Jessica</say>
+</message>
+<message id="HSC010301611" name="HSC010301611">
+<say>Abigail</say>
+</message>
+<message id="HSC010301612" name="HSC010301612">
+<say>Patrick</say>
+</message>
+<message id="HSC010301613" name="HSC010301613">
+<say>Patsy</say>
+</message>
+<message id="HSC010301655" name="HSC010301655">
+<say>Paul</say>
+</message>
+    </scene>
+	</stage>
+</project>

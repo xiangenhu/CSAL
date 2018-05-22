@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project html5="true" useflash="never" singlefile="true" size="140,115" initialpresenting="false" flashversion="8" loader="standard" template="AIChatProgramD">
+	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
+	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
+	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
+	<variable id="Text" value="0"/>
+	<stage id="Stage1">
+		<scene id="Scene1" name="Scene 1">
+			<character id="Char1" name="Angela" position="-12,-15" animationlibrary="Library/Characters/AngelaHead/AngelaHead.xml" defaultvoice="Neo Julie" defaultidle="eyetracker" top="classictop" hair="combeddark" size="145,116" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml"/>
+			<message id="Msg1" name="Respond" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfileaiengine="programd" externalfileaimldatabase="SampleBot" externalfileaimluser="true" externalfileaimlsession="true" externalfileaimltimezone="true" externalfilevariables="Text" character="Char1">
+			</message>
+			
+			<message id="Msg2" name="Speak" externalfile="http://localhost/cs/cs.exe" externalfiletemplate="Library/Templates/Server/Speech.xml" externalfilecharacter="true" externalfilevoice="true" externalfilesize="true" externalfileautoactionlevel="true" externalfilesharedlibpath="http://localhost/Projects/SKOChar2/Output" externalfilecustom="true" externalfilevoiceparams="true" externalfileaddons="true" externalfileversion="true" externalfilevariables="Text" character="Char1">
+			</message>
+			<message id="Msg3" name="Eyenormal">				
+				<eyesnormal/> 
+			</message>
+ <message id="A1" name="A1">
+    <say>Great job</say>
+  </message>
+  <message id="A2" name="A2">
+    <say>you are correct! Nicely done!</say>
+  </message>
+  <message id="A3" name="A3">
+    <say>Yes! that was the corrrect answer</say>
+  </message>
+  <message id="A4" name="A4">
+    <say>Correct</say>
+  </message>
+  <message id="A5" name="A5">
+    <say>Awesome! you are correct!</say>
+  </message>
+  <message id="A6" name="A6">
+    <say>Exactly right</say>
+  </message>
+  <message id="A7" name="A7">
+    <say>Nice work. That was right!</say>
+  </message>
+  <message id="A8" name="A8">
+    <say>that was right! Way to go! </say>
+  </message>
+  <message id="A9" name="A9">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A10" name="A10">
+    <say>Nope I'm sorry. that wasn't what I was looking for. </say>
+  </message>
+  <message id="A11" name="A11">
+    <say>Well, not quite.</say>
+  </message>
+  <message id="A12" name="A12">
+    <say>Jordan was incorrect</say>
+  </message>
+  <message id="A13" name="A13">
+    <say>no Jordan was incorrect</say>
+  </message>
+  <message id="A14" name="A14">
+    <say>Jordan is incorrect</say>
+  </message>
+  <message id="A15" name="A15">
+    <say>no that was not what I was looking for. Here is what I was looking for.</say>
+  </message>
+  <message id="A16" name="A16">
+    <say>Sorry you choice was not correct. Here is the correct answer.</say>
+  </message>
+  <message id="A17" name="A17">
+    <say>almost, but that wasn't it</say>
+  </message>
+  <message id="A18" name="A18">
+    <say>no, thats not what I was looking for</say>
+  </message>
+  <message id="A19" name="A19">
+    <say>Nope, that was not it</say>
+  </message>
+  <message id="A20" name="A20">
+    <say>Jordan, what is the last step?</say>
+  </message>
+  <message id="A21" name="A21">
+    <say>Well, not exactly</say>
+  </message>
+  <message id="A22" name="A22">
+    <say>, what comes next? Click on a button.</say>
+  </message>
+  <message id="A23" name="A23">
+    <say>Jordan was wrong</say>
+  </message>
+  <message id="A24" name="A24">
+    <say>Good Jordan</say>
+  </message>
+  <message id="A25" name="A25">
+    <say>yes that was right Jordan</say>
+  </message>
+  <message id="A26" name="A26">
+    <say>Hey Jordan and welcome back</say>
+  </message>
+  <message id="A27" name="A27">
+    <say>Today we are going to read procedural texts like the one you see here.</say>
+  </message>
+  <message id="A28" name="A28">
+    <say>Procedural, texts teach us how to complete a task or activity.</say>
+  </message>
+  <message id="A29" name="A29">
+    <say>Exactly. Let's try to read another example.</say>
+  </message>
+  <message id="A30" name="A30">
+    <say>Great job,</say>
+  </message>
+  <message id="A31" name="A31">
+    <say>and</say>
+  </message>
+  <message id="A32" name="A32">
+    <say>Jordan</say>
+  </message>
+  <message id="A33" name="A33">
+    <say>! I am so glad that you did this lesson on procedural texts. Procedural text are very important because they can teach us many things.</say>
+  </message>
+  <message id="A34" name="A34">
+    <say>I bet you can also see why it is important that you follow steps in order in a procedural text.</say>
+  </message>
+  <message id="A35" name="A35">
+    <say>Yes signal words are very important! </say>
+  </message>
+  <message id="A36" name="A36">
+    <say>Well I think that it is time to say goodbye. See you next lesson!</say>
+  </message>
+  <message id="A37" name="A37">
+    <say>Now we are going to read a recipe and directions on how to make Hot and Spicy Chili. Read this procedural text and when you are done, click the click here to continue button. Let's make some chili!</say>
+  </message>
+  <message id="A38" name="A38">
+    <say>, you did a great job and I hope you now know how to change a tire. Now lets read another procedural text. Read the text and when you are done click on the click to continue button. Let's get started!</say>
+  </message>
+  <message id="A39" name="A39">
+    <say>Let's answer some questions about the text. Click on the sentence that tells us what we should do before we form a committee?</say>
+  </message>
+  <message id="A40" name="A40">
+    <say>Jordan was not right this time</say>
+  </message>
+  <message id="A41" name="A41">
+    <say>Jordan was incorrect</say>
+  </message>
+  <message id="A42" name="A42">
+    <say>Jordan was correct</say>
+  </message>
+  <message id="A43" name="A43">
+    <say>, you didn't get it. The sentence A garden committee is a way of formally organizing your garden members and assigning duties to each member tells us what a garden committee is but not what we do before forming a committee</say>
+  </message>
+  <message id="A44" name="A44">
+    <say>you were not right. The sentence then you can form a garden committee does not tell us what we do before we form a garden committee</say>
+  </message>
+  <message id="A45" name="A45">
+    <say>you were right! Nice work. The text says Before starting a committee you should ask your neighbors to see if they are interested in participating in starting a community garden</say>
+  </message>
+  <message id="A46" name="A46">
+    <say>The text says Before starting a committee you should ask your neighbors to see if they are interested in participating in starting a community garden</say>
+  </message>
+  <message id="A47" name="A47">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A48" name="A48">
+    <say>Click on the sentence that tells us what we should do before we contact the landowner about using the property</say>
+  </message>
+  <message id="A49" name="A49">
+    <say>your answer was not right. The sentence Next, be sure to contact the landowner about their willingness to use the property as a community garden  does not tell us what we should do before we contact the land owner</say>
+  </message>
+  <message id="A50" name="A50">
+    <say>the sentence you chose was not correct. The sentence remember to get permission to use the land for the community garden does not tell us what we should do before we contact the land owner</say>
+  </message>
+  <message id="A51" name="A51">
+    <say>Jordan was right this time</say>
+  </message>
+  <message id="A52" name="A52">
+    <say>Jordan did not pick the correct sentence</say>
+  </message>
+  <message id="A53" name="A53">
+    <say>Jordan did not choose correctly</say>
+  </message>
+  <message id="A54" name="A54">
+    <say>The second sentence says the county or city tax assessor's office will tell us who owns the property so that we know who to contact about using the land for a community garden. Because you must know who owns the land before you can contact the landowner the second sentence tells us what to do before we contact the landowner</say>
+  </message>
+  <message id="A55" name="A55">
+    <say>you got it! The second sentence says the county or city tax assessor's office will tell us who owns the property so that we know who to contact about using the land for a community garden. Because you must know who owns the land before you can contact the landowner the second sentence tells us what we must do do before we contact the landowner</say>
+  </message>
+  <message id="A56" name="A56">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A57" name="A57">
+    <say>Put the steps in order. Jordan, you go first and then</say>
+  </message>
+  <message id="A58" name="A58">
+    <say>will have a turn</say>
+  </message>
+  <message id="A59" name="A59">
+    <say>Jordan, you were right the first step is to ask the landowner permission to use the property</say>
+  </message>
+  <message id="A60" name="A60">
+    <say>that is right you make sure the plot is fee and clean from debris</say>
+  </message>
+  <message id="A61" name="A61">
+    <say>sorry, that was not the next step according to the procedure, try again</say>
+  </message>
+  <message id="A62" name="A62">
+    <say>You are on a roll</say>
+  </message>
+  <message id="A63" name="A63">
+    <say>, You must make sure the plot is clean and free from debris next</say>
+  </message>
+  <message id="A64" name="A64">
+    <say>you were incorrect. try again. what do you do after you ask permission to use the property?</say>
+  </message>
+  <message id="A65" name="A65">
+    <say>Absolutely right</say>
+  </message>
+  <message id="A66" name="A66">
+    <say>! you make sure the plot is clean and free from debris</say>
+  </message>
+  <message id="A67" name="A67">
+    <say>Actually</say>
+  </message>
+  <message id="A68" name="A68">
+    <say>that was not the next step</say>
+  </message>
+  <message id="A69" name="A69">
+    <say>The next step after you ask the land owner if they are willing to allow you to use the property is to make sure the plot is clean and free from debris</say>
+  </message>
+  <message id="A70" name="A70">
+    <say>Absolutely right</say>
+  </message>
+  <message id="A71" name="A71">
+    <say>! you make sure the plot is clean and free from debris</say>
+  </message>
+  <message id="A72" name="A72">
+    <say>it is your turn again. What is the next step? Click on a button.</say>
+  </message>
+  <message id="A73" name="A73">
+    <say>Ok</say>
+  </message>
+  <message id="A74" name="A74">
+    <say>that was not the next step according to the procedure, try again</say>
+  </message>
+  <message id="A75" name="A75">
+    <say>Jordan once again you got the easy one</say>
+  </message>
+  <message id="A76" name="A76">
+    <say>Jordan once again you got the easy one</say>
+  </message>
+  <message id="A77" name="A77">
+    <say>Jordan once again you got the easy one</say>
+  </message>
+  <message id="A78" name="A78">
+    <say>that is right, you make plans for an irrigation system next</say>
+  </message>
+  <message id="A79" name="A79">
+    <say>what comes after you make sure the plot is clean and free from debris?</say>
+  </message>
+  <message id="A80" name="A80">
+    <say>ok</say>
+  </message>
+  <message id="A81" name="A81">
+    <say>No that was not the next step</say>
+  </message>
+  <message id="A82" name="A82">
+    <say>According to the procedure the next step is to plan and install an irrigation system. Now Jordan gets the last one.</say>
+  </message>
+  <message id="A83" name="A83">
+    <say>Jordan got it.</say>
+  </message>
+  <message id="A84" name="A84">
+    <say>Jordan got it.</say>
+  </message>
+  <message id="A85" name="A85">
+    <say>Jordan got it.</say>
+  </message>
+  <message id="A86" name="A86">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A87" name="A87">
+    <say>that is right you make plans for an irrigation system next</say>
+  </message>
+  <message id="A88" name="A88">
+    <say>Which of these choices is the better summary of the text?</say>
+  </message>
+  <message id="A89" name="A89">
+    <say>Excellent</say>
+  </message>
+  <message id="A90" name="A90">
+    <say>! You're correct. The second summary is better because The sentences in the second summary are simple and to the point. They do not have many specific details like the first summary does.</say>
+  </message>
+  <message id="A91" name="A91">
+    <say>The summary you chose was not the better summary. </say>
+  </message>
+  <message id="A92" name="A92">
+    <say>The second summary is better because The sentences in the second summary are simple and to the point. They do not have many specific details like the first summary does.</say>
+  </message>
+  <message id="A93" name="A93">
+    <say>What is the purpose of this text?</say>
+  </message>
+  <message id="A94" name="A94">
+    <say>you are right on target. The purpose of the text is to show us how to start a community garden.</say>
+  </message>
+  <message id="A95" name="A95">
+    <say>No,</say>
+  </message>
+  <message id="A96" name="A96">
+    <say>that wasn't it. The exact purpose of the text is not just to teach us how to grow a garden</say>
+  </message>
+  <message id="A97" name="A97">
+    <say>No,</say>
+  </message>
+  <message id="A98" name="A98">
+    <say>that wasn't it. The actual purpose of the text is not to explain what a community garden is.</say>
+  </message>
+  <message id="A99" name="A99">
+    <say>Jordan, you got the answer right.</say>
+  </message>
+  <message id="A100" name="A100">
+    <say>Jordan got it wrong!</say>
+  </message>
+  <message id="A101" name="A101">
+    <say>No, Jordan is wrong </say>
+  </message>
+  <message id="A102" name="A102">
+    <say>The purpose of the text is to show us how to start a community garden.</say>
+  </message>
+  <message id="A103" name="A103">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A104" name="A104">
+    <say>What is the purpose for having the soil tested?</say>
+  </message>
+  <message id="A105" name="A105">
+    <say>Right</say>
+  </message>
+  <message id="A106" name="A106">
+    <say>. The purpose of having the soil tested is to make sure the soil is safe. If your soil has led in it, it may not be safe to grow plants that you will eat because the led in the soil gets into your food.</say>
+  </message>
+  <message id="A107" name="A107">
+    <say>Actually,</say>
+  </message>
+  <message id="A108" name="A108">
+    <say>that was not the right answer. the reason you test the soil it not to make sure it has the right amount of moisture</say>
+  </message>
+  <message id="A109" name="A109">
+    <say>that wasn't it. The reason you test the soil is not to ensure that it has no pests</say>
+  </message>
+  <message id="A110" name="A110">
+    <say>Jordan got this one right</say>
+  </message>
+  <message id="A111" name="A111">
+    <say>Jordan picked the wrong answer.</say>
+  </message>
+  <message id="A112" name="A112">
+    <say>Jordan was incorrect. Sorry Jordan</say>
+  </message>
+  <message id="A113" name="A113">
+    <say>The purpose of having the soil tested is to make sure the soil is safe. If your soil has led in it, it may not be safe to grow plants that you will eat because the led in the soil gets into your food.</say>
+  </message>
+  <message id="A114" name="A114">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A115" name="A115">
+    <say>Why would you need to contact the tax assessor's office?</say>
+  </message>
+  <message id="A116" name="A116">
+    <say>Right on!</say>
+  </message>
+  <message id="A117" name="A117">
+    <say>nailed it! To check who owns the land is why you need to contact the tax assessor's office.</say>
+  </message>
+  <message id="A118" name="A118">
+    <say>Well,</say>
+  </message>
+  <message id="A119" name="A119">
+    <say>didn't get it right. The reason you contact the tax assessor's office in this passage has nothing to do with following the tax code.</say>
+  </message>
+  <message id="A120" name="A120">
+    <say>didn't get this one correct this time. In this text we are not concerned with how much it would be to purchase the lot.</say>
+  </message>
+  <message id="A121" name="A121">
+    <say>Jordan, you got this one right.</say>
+  </message>
+  <message id="A122" name="A122">
+    <say>Jordan your answer was wrong this time</say>
+  </message>
+  <message id="A123" name="A123">
+    <say>Jordan, didn't get it right.</say>
+  </message>
+  <message id="A124" name="A124">
+    <say>you need to contact the tax assessor's office To check and see who owns the land.</say>
+  </message>
+  <message id="A125" name="A125">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A126" name="A126">
+    <say>Why do you need to check the seed packet?</say>
+  </message>
+  <message id="A127" name="A127">
+    <say>Yes</say>
+  </message>
+  <message id="A128" name="A128">
+    <say>! You Rock! The text says Depending on the climate and plant variety, planting times may vary and then it says chack the seed packet for details</say>
+  </message>
+  <message id="A129" name="A129">
+    <say>No, your answer wasn't correct. though it may say on the seed packet how much sunlight the plant needs, the text did not say that was the reason why you check the seed  packet.</say>
+  </message>
+  <message id="A130" name="A130">
+    <say>your answer this time was wrong. This is because even though the seed packet may say how often the plant should be watered, that is not why it says you check the seed packet in the text.</say>
+  </message>
+  <message id="A131" name="A131">
+    <say>Jordan was right.</say>
+  </message>
+  <message id="A132" name="A132">
+    <say>Jordan was incorrect</say>
+  </message>
+  <message id="A133" name="A133">
+    <say>Jordan was wrong.</say>
+  </message>
+  <message id="A134" name="A134">
+    <say>The text says that you must check the seed packet to know when to plant the seeds.</say>
+  </message>
+  <message id="A135" name="A135">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A136" name="A136">
+    <say>We are going to make the hot and spicy chili following the recipe. It is very important that we follow the recipe and put the ingredients in the pot in the order that the recipe says. Jordan will go first. Then</say>
+  </message>
+  <message id="A137" name="A137">
+    <say>will have a turn.</say>
+  </message>
+  <message id="A138" name="A138">
+    <say>, all you need to do is click on the ingredients to put them in the pot.</say>
+  </message>
+  <message id="A139" name="A139">
+    <say>Jordan, you are right. The first item on the list of ingredients to add is the oil</say>
+  </message>
+  <message id="A140" name="A140">
+    <say>Jordan, you are right. The first item on the list of ingredients to add is the oil</say>
+  </message>
+  <message id="A141" name="A141">
+    <say>Jordan, you are right. The first item on the list of ingredients to add is the oil. Good Job Jordan.</say>
+  </message>
+  <message id="A142" name="A142">
+    <say>Awesome!</say>
+  </message>
+  <message id="A143" name="A143">
+    <say>The onion is the next ingredient.</say>
+  </message>
+  <message id="A144" name="A144">
+    <say>Oh no!</say>
+  </message>
+  <message id="A145" name="A145">
+    <say>That wasn't what the recipe said, please try again</say>
+  </message>
+  <message id="A146" name="A146">
+    <say>according to the recipe, which ingredient goes after the oil?</say>
+  </message>
+  <message id="A147" name="A147">
+    <say>Yes!</say>
+  </message>
+  <message id="A148" name="A148">
+    <say>, the next ingredient is the onion. Nicely done!</say>
+  </message>
+  <message id="A149" name="A149">
+    <say>Oh, sorry that wasn't the next ingredient according to the recipe</say>
+  </message>
+  <message id="A150" name="A150">
+    <say>The next ingredient the recipe calls for is the onion.</say>
+  </message>
+  <message id="A151" name="A151">
+    <say>Jordan what ingredient does the recipe say goes after the onion?</say>
+  </message>
+  <message id="A152" name="A152">
+    <say>Great job</say>
+  </message>
+  <message id="A153" name="A153">
+    <say>you were correct the next ingredient is the tomato</say>
+  </message>
+  <message id="A154" name="A154">
+    <say>Sorry,</say>
+  </message>
+  <message id="A155" name="A155">
+    <say>that isn't the ingredient that comes after the bell pepper. Try again please.</say>
+  </message>
+  <message id="A156" name="A156">
+    <say>Jordan, that is right, the next ingredient is the bell pepper</say>
+  </message>
+  <message id="A157" name="A157">
+    <say>Jordan, that is right, the next ingredient is the bell pepper</say>
+  </message>
+  <message id="A158" name="A158">
+    <say>Jordan, that is right, the next ingredient is the bell pepper</say>
+  </message>
+  <message id="A159" name="A159">
+    <say>have another try, what ingredient comes after the bell pepper according to the recipe?</say>
+  </message>
+  <message id="A160" name="A160">
+    <say>You got it</say>
+  </message>
+  <message id="A161" name="A161">
+    <say>! Great job! the next ingredient is the tomato</say>
+  </message>
+  <message id="A162" name="A162">
+    <say>oops, that wasn't the next ingredient in the recipe.</say>
+  </message>
+  <message id="A163" name="A163">
+    <say>The next ingredient after the bell pepper is the tomato</say>
+  </message>
+  <message id="A164" name="A164">
+    <say>Jordan, it's your turn, what ingredient comes next according to the recipe?</say>
+  </message>
+  <message id="A165" name="A165">
+    <say>Yes, Jordan was right, the recipe says the next ingredient is the black pepper</say>
+  </message>
+  <message id="A166" name="A166">
+    <say>Yes, Jordan was right, the recipe says the next ingredient is the black pepper</say>
+  </message>
+  <message id="A167" name="A167">
+    <say>Yes, Jordan was right, the recipe says the next ingredient is the black pepper</say>
+  </message>
+  <message id="A168" name="A168">
+    <say>That is right</say>
+  </message>
+  <message id="A169" name="A169">
+    <say>the next ingredient is the salt. I always put too much salt on my food, anyway, moving on</say>
+  </message>
+  <message id="A170" name="A170">
+    <say>Actually,</say>
+  </message>
+  <message id="A171" name="A171">
+    <say>that is not the next ingredient according to the recipe, try again.</say>
+  </message>
+  <message id="A172" name="A172">
+    <say>try again please, which ingredient comes after the black pepper?</say>
+  </message>
+  <message id="A173" name="A173">
+    <say>Yes! Exactly! the ingredient after the pepper is the salt.</say>
+  </message>
+  <message id="A174" name="A174">
+    <say>oh no</say>
+  </message>
+  <message id="A175" name="A175">
+    <say>, the ingredient you chose is not the next ingredient in the recipe</say>
+  </message>
+  <message id="A176" name="A176">
+    <say>The ingredient that comes after the black pepper is the salt.</say>
+  </message>
+  <message id="A177" name="A177">
+    <say>Okay, it's Jordan's turn. What comes next Jordan?</say>
+  </message>
+  <message id="A178" name="A178">
+    <say>Yes Jordan the red chili pepper is the next ingredient and I bet this chili will be very spicy</say>
+  </message>
+  <message id="A179" name="A179">
+    <say>Yes Jordan the red chili pepper is the next ingredient and I bet this chili will be very spicy</say>
+  </message>
+  <message id="A180" name="A180">
+    <say>Yes Jordan the red chili pepper is the next ingredient and I bet this chili will be very spicy</say>
+  </message>
+  <message id="A181" name="A181">
+    <say>Yes!</say>
+  </message>
+  <message id="A182" name="A182">
+    <say>that is right the next ingredient is chicken stock</say>
+  </message>
+  <message id="A183" name="A183">
+    <say>No</say>
+  </message>
+  <message id="A184" name="A184">
+    <say>that is not the ingredient that the recipe says goes next</say>
+  </message>
+  <message id="A185" name="A185">
+    <say>give it another try, what ingredient comes after the red chili pepper?</say>
+  </message>
+  <message id="A186" name="A186">
+    <say>Right!</say>
+  </message>
+  <message id="A187" name="A187">
+    <say>the next ingredient is the chicken stock</say>
+  </message>
+  <message id="A188" name="A188">
+    <say>Sorry,</say>
+  </message>
+  <message id="A189" name="A189">
+    <say>that isn't the next ingredient</say>
+  </message>
+  <message id="A190" name="A190">
+    <say>The next ingredient is the chicken stock</say>
+  </message>
+  <message id="A191" name="A191">
+    <say>Okay, Jordan it is your last turn, what ingredient comes after the chicken stock?</say>
+  </message>
+  <message id="A192" name="A192">
+    <say>Jordan was correct, the next ingredient is the beans</say>
+  </message>
+  <message id="A193" name="A193">
+    <say>Jordan was correct, the next ingredient is the beans</say>
+  </message>
+  <message id="A194" name="A194">
+    <say>Jordan was correct, the next ingredient is the beans</say>
+  </message>
+  <message id="A195" name="A195">
+    <say>Yes!</say>
+  </message>
+  <message id="A196" name="A196">
+    <say>that is right the next ingredient is chicken stock</say>
+  </message>
+  <message id="A197" name="A197">
+    <say>No</say>
+  </message>
+  <message id="A198" name="A198">
+    <say>that is not the ingredient that the recipe says goes next</say>
+  </message>
+  <message id="A199" name="A199">
+    <say>give it another try, what ingredient comes after the red chili pepper?</say>
+  </message>
+  <message id="A200" name="A200">
+    <say>Right!</say>
+  </message>
+  <message id="A201" name="A201">
+    <say>the next ingredient is the chicken stock</say>
+  </message>
+  <message id="A202" name="A202">
+    <say>Sorry,</say>
+  </message>
+  <message id="A203" name="A203">
+    <say>that isn't the next ingredient</say>
+  </message>
+  <message id="A204" name="A204">
+    <say>The next ingredient is the chicken stock</say>
+  </message>
+  <message id="A205" name="A205">
+    <say>It is important to recognize signal words in procedural texts because they signal to us the order of a procedure. Click on the word that is a signal word in the sentence that is highlighted in yellow.</say>
+  </message>
+  <message id="A206" name="A206">
+    <say>you are correct! the word that signal word in this sentnece is first.</say>
+  </message>
+  <message id="A207" name="A207">
+    <say>sorry! the word large is not a signal word.</say>
+  </message>
+  <message id="A208" name="A208">
+    <say>sorry! the word over is not a signal word.</say>
+  </message>
+  <message id="A209" name="A209">
+    <say>The signal word in this sentence is first. </say>
+  </message>
+  <message id="A210" name="A210">
+    <say>Click on the word that is a signal word in the sentence below.</say>
+  </message>
+  <message id="A211" name="A211">
+    <say>you got it! the word that signal word in this sentence is next.</say>
+  </message>
+  <message id="A212" name="A212">
+    <say>oops!</say>
+  </message>
+  <message id="A213" name="A213">
+    <say>, the word bring is not a signal word.</say>
+  </message>
+  <message id="A214" name="A214">
+    <say>oops!</say>
+  </message>
+  <message id="A215" name="A215">
+    <say>, the word is, is not a signal word.</say>
+  </message>
+  <message id="A216" name="A216">
+    <say>The signal word in this sentence is next. </say>
+  </message>
+  <message id="A217" name="A217">
+    <say>Which of the following utensils would you not need to make the chilli?</say>
+  </message>
+  <message id="A218" name="A218">
+    <say>you are right! the utensil that you do not need to make the chilli is the tablespoon.</say>
+  </message>
+  <message id="A219" name="A219">
+    <say>Not exactly</say>
+  </message>
+  <message id="A220" name="A220">
+    <say>, the text says that you do use the pan.</say>
+  </message>
+  <message id="A221" name="A221">
+    <say>No, that is not it. According to the text you do use a Dutch Oven </say>
+  </message>
+  <message id="A222" name="A222">
+    <say>The utensil that you would not use to make the chilli is the tablespoon </say>
+  </message>
+  <message id="A223" name="A223">
+    <say>Jordan was correct</say>
+  </message>
+  <message id="A224" name="A224">
+    <say>Jordan was wrong</say>
+  </message>
+  <message id="A225" name="A225">
+    <say>Jordan is not right</say>
+  </message>
+  <message id="A226" name="A226">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A227" name="A227">
+    <say>What utensil would you need to measure the black pepper?</say>
+  </message>
+  <message id="A228" name="A228">
+    <say>Good Job!</say>
+  </message>
+  <message id="A229" name="A229">
+    <say>you are right! the utensil that you would use to measure the black pepper is the teaspoon.</say>
+  </message>
+  <message id="A230" name="A230">
+    <say>Sorry</say>
+  </message>
+  <message id="A231" name="A231">
+    <say>, the text does not say to use a tablespoon.</say>
+  </message>
+  <message id="A232" name="A232">
+    <say>Not really</say>
+  </message>
+  <message id="A233" name="A233">
+    <say>, the text did not say to use a measuring cup to measure the black pepper</say>
+  </message>
+  <message id="A234" name="A234">
+    <say>The utensil that you use to measure the black pepper is the teaspoon </say>
+  </message>
+  <message id="A235" name="A235">
+    <say>Jordan was correct</say>
+  </message>
+  <message id="A236" name="A236">
+    <say>Sorry, Jordan, you did not get this one correct</say>
+  </message>
+  <message id="A237" name="A237">
+    <say>Jordan didn't get it right</say>
+  </message>
+  <message id="A238" name="A238">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A239" name="A239">
+    <say>when do you add the red bell pepper?</say>
+  </message>
+  <message id="A240" name="A240">
+    <say>Great! That is it! The recipe says to add the red bell pepper before you add the salt</say>
+  </message>
+  <message id="A241" name="A241">
+    <say>Not exactly</say>
+  </message>
+  <message id="A242" name="A242">
+    <say>the recipe says to add the red bell pepper after you add the oil and not before you add the oil.</say>
+  </message>
+  <message id="A243" name="A243">
+    <say>Not really</say>
+  </message>
+  <message id="A244" name="A244">
+    <say>, the recipe says to add the red bell pepper before the crushed red chilli pepper not after it</say>
+  </message>
+  <message id="A245" name="A245">
+    <say>The only right answer is to add the red bell pepper before the salt</say>
+  </message>
+  <message id="A246" name="A246">
+    <say>Jordan was correct</say>
+  </message>
+  <message id="A247" name="A247">
+    <say>Jordan, No, you did not get this one correct</say>
+  </message>
+  <message id="A248" name="A248">
+    <say>Jordan didn't get it right</say>
+  </message>
+  <message id="A249" name="A249">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A250" name="A250">
+    <say>click on the words that signal to us the order in which a procedure is done.</say>
+  </message>
+  <message id="A251" name="A251">
+    <say>Yeah! That is right! Before and first  are signal words. These words signal to us that we must do something prior to doing something else</say>
+  </message>
+  <message id="A252" name="A252">
+    <say>Oops,</say>
+  </message>
+  <message id="A253" name="A253">
+    <say>,That is not a signal word because it does not signal to us to do something in an order.</say>
+  </message>
+  <message id="A254" name="A254">
+    <say>Before and first  are signal words. These words signal to us that we must do something prior to doing something else</say>
+  </message>
+  <message id="A255" name="A255">
+    <say>click on the signal words.</say>
+  </message>
+  <message id="A256" name="A256">
+    <say>You got it! Next and then are examples of signal words. Signal words can signal to us  the order in which a procedure is supposed to be done</say>
+  </message>
+  <message id="A257" name="A257">
+    <say>Oh,</say>
+  </message>
+  <message id="A258" name="A258">
+    <say>that was not what I was thinking. The word that you chose is not a signal word</say>
+  </message>
+  <message id="A259" name="A259">
+    <say>Next and then are examples of signal words. Signal words can signal to us  the order in which a procedure is supposed to be done</say>
+  </message>
+  <message id="A260" name="A260">
+    <say>Lets Put the steps for changing the lug nuts in order. Jordan, you go first and then</say>
+  </message>
+  <message id="A261" name="A261">
+    <say>will have a turn</say>
+  </message>
+  <message id="A262" name="A262">
+    <say>Jordan, you were correct! The first step to changing the tire is to loosen the lug nuts.</say>
+  </message>
+  <message id="A263" name="A263">
+    <say>Absolutely correct</say>
+  </message>
+  <message id="A264" name="A264">
+    <say>! The step after loosen the lug nuts is remove the lug nuts and remove the tire</say>
+  </message>
+  <message id="A265" name="A265">
+    <say>oops, sorry, that was not the next step according to the procedure, try again</say>
+  </message>
+  <message id="A266" name="A266">
+    <say>, please try again. Your answer was not correct. What step goes after you loosen the lug nuts?</say>
+  </message>
+  <message id="A267" name="A267">
+    <say>Yes!</say>
+  </message>
+  <message id="A268" name="A268">
+    <say>that is right! the next step is to remove the lug nuts and remove the tire.</say>
+  </message>
+  <message id="A269" name="A269">
+    <say>No</say>
+  </message>
+  <message id="A270" name="A270">
+    <say>that was not the next step, sorry</say>
+  </message>
+  <message id="A271" name="A271">
+    <say>The next step after you loosen the lug nuts is to remove the lug nuts and remove the tire</say>
+  </message>
+  <message id="A272" name="A272">
+    <say>it is your turn again. What is the next step? Click on a button.</say>
+  </message>
+  <message id="A273" name="A273">
+    <say>ok</say>
+  </message>
+  <message id="A274" name="A274">
+    <say>that was not the next step according to the procedure, try again</say>
+  </message>
+  <message id="A275" name="A275">
+    <say>Jordan that was an easy one, of course you got it</say>
+  </message>
+  <message id="A276" name="A276">
+    <say>Jordan that was an easy one, of course you got it</say>
+  </message>
+  <message id="A277" name="A277">
+    <say>Jordan that was an easy one, of course you got it</say>
+  </message>
+  <message id="A278" name="A278">
+    <say>Good Job</say>
+  </message>
+  <message id="A279" name="A279">
+    <say>try again, what comes after remove the lug nuts and remove the tire?</say>
+  </message>
+  <message id="A280" name="A280">
+    <say>You got it</say>
+  </message>
+  <message id="A281" name="A281">
+    <say>the next step is to put on the lug nuts</say>
+  </message>
+  <message id="A282" name="A282">
+    <say>No that was not the next step</say>
+  </message>
+  <message id="A283" name="A283">
+    <say>its your turn Jordan</say>
+  </message>
+  <message id="A284" name="A284">
+    <say>That was an easy one Jordan, of course you got it.</say>
+  </message>
+  <message id="A285" name="A285">
+    <say>That was an easy one Jordan, of course you got it.</say>
+  </message>
+  <message id="A286" name="A286">
+    <say>That was an easy one Jordan, of course you got it.</say>
+  </message>
+  <message id="A287" name="A287">
+    <say>ok</say>
+  </message>
+  <message id="A288" name="A288">
+    <say>You must put on the lug nuts before tightening them</say>
+  </message>
+  <message id="A289" name="A289">
+    <say>Click on the sentence that tells us where to pull over if we are not on the freeway.</say>
+  </message>
+  <message id="A290" name="A290">
+    <say>Right!</say>
+  </message>
+  <message id="A291" name="A291">
+    <say>The text says that you should pull as far onto the the shoulder as possible if we are not on the freeway</say>
+  </message>
+  <message id="A292" name="A292">
+    <say>Nope, that wasn't it</say>
+  </message>
+  <message id="A293" name="A293">
+    <say>. The sentence before stopping  your car, first find a safe spot to pull over tells us to find a safe spot but does not tell us where to pull over if we are not on the freeway</say>
+  </message>
+  <message id="A294" name="A294">
+    <say>your answer is not correct. The sentence If you're on the freeway, taking the next exit is your best bet, even if you have to drive on a blown tire, tells us what to do if we are on the freeway, but not what to do if you are not on the freeway</say>
+  </message>
+  <message id="A295" name="A295">
+    <say>Jordan was  correct</say>
+  </message>
+  <message id="A296" name="A296">
+    <say>I'm sorry Jordan, your answer was incorrect</say>
+  </message>
+  <message id="A297" name="A297">
+    <say>Jordan was wrong!</say>
+  </message>
+  <message id="A298" name="A298">
+    <say>The text says that you should pull as far onto the the shoulder as possible if we are not on the freeway</say>
+  </message>
+  <message id="A299" name="A299">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A300" name="A300">
+    <say>Click on the sentence that tells us how high we should raise the car?</say>
+  </message>
+  <message id="A301" name="A301">
+    <say>you were right! The sentence, Now once the jack is securely in the correct spot, jack up the car until the tire is six inches off the ground tells us that we should raise the car six inches.</say>
+  </message>
+  <message id="A302" name="A302">
+    <say>Sorry</say>
+  </message>
+  <message id="A303" name="A303">
+    <say>your answer was incorrect. The sentence don't remove the lug nuts at this point simply loosen them by turning the wrench to the left counter clock wise does not tell us about how high we should raise the car</say>
+  </message>
+  <message id="A304" name="A304">
+    <say>Sorry</say>
+  </message>
+  <message id="A305" name="A305">
+    <say>your answer was incorrect. The sentence Next use the jack to lift the vehicle off the ground tells us to lift the car but does not tell us exactly how much we should raise the car</say>
+  </message>
+  <message id="A306" name="A306">
+    <say>Jordan, you were right</say>
+  </message>
+  <message id="A307" name="A307">
+    <say>Jordan I am so sorry, you were not right </say>
+  </message>
+  <message id="A308" name="A308">
+    <say>Jordan, you did not answer correctly</say>
+  </message>
+  <message id="A309" name="A309">
+    <say>The sentence, Now once the jack is securely in the correct spot, jack up the car until the tire is six inches off the ground tells us that we should raise the car six inches. </say>
+  </message>
+  <message id="A310" name="A310">
+    <say>Jordan it is your turn.</say>
+  </message>
+  <message id="A311" name="A311">
+    <say>summarization is an important strategy to use when reading procedural texts.</say>
+  </message>
+  <message id="A312" name="A312">
+    <say>Click on the button that is one characteristic of a good summary?</say>
+  </message>
+  <message id="A313" name="A313">
+    <say>GreatJob</say>
+  </message>
+  <message id="A314" name="A314">
+    <say>. Summaries simplify the most important information in a text. Summarizing is a good way to test your understanding of a text. If you can remember the most important information from a text and explain this information in a simple way you know you have comprehended  what you have read</say>
+  </message>
+  <message id="A315" name="A315">
+    <say>Sorry</say>
+  </message>
+  <message id="A316" name="A316">
+    <say>, you were incorrect. A good summary contains only certain information from the steps</say>
+  </message>
+  <message id="A317" name="A317">
+    <say>Oops! that wasn't it. Having lots of details is not a characteristic of a good summary actually, A summary contains only a certain type of information from the steps</say>
+  </message>
+  <message id="A318" name="A318">
+    <say>Summaries simplify the most important information in a text. Summarizing is a good way to test your understanding of a text. If you can remember the most important information from a text and explain this information in a simple way you know you have comprehended  what you have read</say>
+  </message>
+  <message id="A319" name="A319">
+    <say>Reed both of these summaries and click on which one you think is a better summary</say>
+  </message>
+  <message id="A320" name="A320">
+    <say>The second summary is a better example of a good summary because it contains the most important information and does not contain too many details. The first summary is not a good summary because it has lots of details and leaves out some important information such as to loosen the lug nuts, and how far to lift the car off the ground.
+	</say>
+  </message>
+  <message id="A321" name="A321">
+    <say>Yes! you got it! The second summary is a better example of a good summary because it contains the most important information and does not contain too many details. The first summary is not a good summary because it has lots of details and leaves out some important information such as how far to lift the car off the ground.</say>
+  </message>
+  <message id="A322" name="A322">
+    <say>That wasn't what I was thinking because The summary you chose does not have all of the most important information. It also contains some details that are very specific and not very important to the steps. </say>
+  </message>
+   <message id="C1" name="C1">
+    <say>Art!</say>
+  </message>
+  <message id="C2" name="C2">
+    <say>Whitney!</say>
+  </message>
+  <message id="C3" name="C3">
+    <say>Carl!</say>
+  </message>
+  <message id="C4" name="C4">
+    <say>Qinyu!</say>
+  </message>
+  <message id="C5" name="C5">
+    <say>Tiffany!</say>
+  </message>
+  <message id="C6" name="C6">
+    <say>Amy!</say>
+  </message>
+  <message id="C7" name="C7">
+    <say>Andrew!</say>
+  </message>
+  <message id="C8" name="C8">
+    <say>Breya!</say>
+  </message>
+  <message id="C9" name="C9">
+    <say>Cadarrius!</say>
+  </message>
+  <message id="C10" name="C10">
+    <say>Craig!</say>
+  </message>
+  <message id="C11" name="C11">
+    <say>Danielle!</say>
+  </message>
+  <message id="C12" name="C12">
+    <say>Patrick!</say>
+  </message>
+  <message id="C13" name="C13">
+    <say>Habibah!</say>
+  </message>
+  <message id="C14" name="C14">
+    <say>Haiying!</say>
+  </message>
+  <message id="C15" name="C15">
+    <say>Janay!</say>
+  </message>
+  <message id="C16" name="C16">
+    <say>Jordan!</say>
+  </message>
+  <message id="C17" name="C17">
+    <say>Lijia!</say>
+  </message>
+  <message id="C18" name="C18">
+    <say>Logan!</say>
+  </message>
+  <message id="C19" name="C19">
+    <say>Mark!</say>
+  </message>
+  <message id="C20" name="C20">
+    <say>Megan!</say>
+  </message>
+  <message id="C21" name="C21">
+    <say>Morgan!</say>
+  </message>
+  <message id="C22" name="C22">
+    <say>Parya!</say>
+  </message>
+  <message id="C23" name="C23">
+    <say>Paul!</say>
+  </message>
+  <message id="C24" name="C24">
+    <say>Qiong!</say>
+  </message>
+  <message id="C25" name="C25">
+    <say>Qiping!</say>
+  </message>
+  <message id="C26" name="C26">
+    <say>Shi!</say>
+  </message>
+  <message id="C27" name="C27">
+    <say>Xiangen!</say>
+  </message>
+  <message id="C28" name="C28">
+    <say>Stephanie!</say>
+  </message>
+  <message id="C29" name="C29">
+    <say>Devi!</say>
+  </message>
+  <message id="C30" name="C30">
+    <say>Anthony!</say>
+  </message>
+    <message id="C31" name="C31">
+    <say>Yehui!</say>
+  </message>
+ <message id="D20160204" name="D20160204">
+<say>User</say>
+</message>	
+
+<message id="D1" name="D1">
+	<say>AMELIA</say>
+</message>
+<message id="D2" name="D2">
+	<say>OLIVIA</say>
+</message>
+<message id="D3" name="D3">
+	<say>EMILY</say>
+</message>
+<message id="D4" name="D4">
+	<say>AVA</say>
+</message>
+<message id="D5" name="D5">
+	<say>ISLA</say>
+</message>
+<message id="D6" name="D6">
+	<say>JESSICA</say>
+</message>
+<message id="D7" name="D7">
+	<say>POPPY</say>
+</message>
+<message id="D8" name="D8">
+	<say>ISABELLA</say>
+</message>
+<message id="D9" name="D9">
+	<say>SOPHIE</say>
+</message>
+<message id="D10" name="D10">
+	<say>MIA</say>
+</message>
+<message id="D11" name="D11">
+	<say>RUBY</say>
+</message>
+<message id="D12" name="D12">
+	<say>LILY</say>
+</message>
+<message id="D13" name="D13">
+	<say>GRACE</say>
+</message>
+<message id="D14" name="D14">
+	<say>EVIE</say>
+</message>
+<message id="D15" name="D15">
+	<say>SOPHIA</say>
+</message>
+<message id="D16" name="D16">
+	<say>ELLA</say>
+</message>
+<message id="D17" name="D17">
+	<say>SCARLETT</say>
+</message>
+<message id="D18" name="D18">
+	<say>CHLOE</say>
+</message>
+<message id="D19" name="D19">
+	<say>ISABELLE</say>
+</message>
+<message id="D20" name="D20">
+	<say>FREYA</say>
+</message>
+<message id="D21" name="D21">
+	<say>CHARLOTTE</say>
+</message>
+<message id="D22" name="D22">
+	<say>SIENNA</say>
+</message>
+<message id="D23" name="D23">
+	<say>DAISY</say>
+</message>
+<message id="D24" name="D24">
+	<say>PHOEBE</say>
+</message>
+<message id="D25" name="D25">
+	<say>MILLIE</say>
+</message>
+<message id="D26" name="D26">
+	<say>EVA</say>
+</message>
+<message id="D27" name="D27">
+	<say>ALICE</say>
+</message>
+<message id="D28" name="D28">
+	<say>LUCY</say>
+</message>
+<message id="D29" name="D29">
+	<say>FLORENCE</say>
+</message>
+<message id="D30" name="D30">
+	<say>SOFIA</say>
+</message>
+<message id="D31" name="D31">
+	<say>LAYLA</say>
+</message>
+<message id="D32" name="D32">
+	<say>LOLA</say>
+</message>
+<message id="D33" name="D33">
+	<say>HOLLY</say>
+</message>
+<message id="D34" name="D34">
+	<say>IMOGEN</say>
+</message>
+<message id="D35" name="D35">
+	<say>MOLLY</say>
+</message>
+<message id="D36" name="D36">
+	<say>MATILDA</say>
+</message>
+<message id="D37" name="D37">
+	<say>LILLY</say>
+</message>
+<message id="D38" name="D38">
+	<say>ROSIE</say>
+</message>
+<message id="D39" name="D39">
+	<say>ELIZABETH</say>
+</message>
+<message id="D40" name="D40">
+	<say>ERIN</say>
+</message>
+<message id="D41" name="D41">
+	<say>MAISIE</say>
+</message>
+<message id="D42" name="D42">
+	<say>LEXI</say>
+</message>
+<message id="D43" name="D43">
+	<say>ELLIE</say>
+</message>
+<message id="D44" name="D44">
+	<say>HANNAH</say>
+</message>
+<message id="D45" name="D45">
+	<say>EVELYN</say>
+</message>
+<message id="D46" name="D46">
+	<say>ABIGAIL</say>
+</message>
+<message id="D47" name="D47">
+	<say>ELSIE</say>
+</message>
+<message id="D48" name="D48">
+	<say>SUMMER</say>
+</message>
+<message id="D49" name="D49">
+	<say>MEGAN</say>
+</message>
+<message id="D50" name="D50">
+	<say>JASMINE</say>
+</message>
+<message id="D51" name="D51">
+	<say>MAYA</say>
+</message>
+<message id="D52" name="D52">
+	<say>AMELIE</say>
+</message>
+<message id="D53" name="D53">
+	<say>LACEY</say>
+</message>
+<message id="D54" name="D54">
+	<say>WILLOW</say>
+</message>
+<message id="D55" name="D55">
+	<say>EMMA</say>
+</message>
+<message id="D56" name="D56">
+	<say>BELLA</say>
+</message>
+<message id="D57" name="D57">
+	<say>ELEANOR</say>
+</message>
+<message id="D58" name="D58">
+	<say>ESME</say>
+</message>
+<message id="D59" name="D59">
+	<say>ELIZA</say>
+</message>
+<message id="D60" name="D60">
+	<say>GEORGIA</say>
+</message>
+<message id="D61" name="D61">
+	<say>HARRIET</say>
+</message>
+<message id="D62" name="D62">
+	<say>GRACIE</say>
+</message>
+<message id="D63" name="D63">
+	<say>ANNABELLE</say>
+</message>
+<message id="D64" name="D64">
+	<say>EMILIA</say>
+</message>
+<message id="D65" name="D65">
+	<say>AMBER</say>
+</message>
+<message id="D66" name="D66">
+	<say>IVY</say>
+</message>
+<message id="D67" name="D67">
+	<say>BROOKE</say>
+</message>
+<message id="D68" name="D68">
+	<say>ROSE</say>
+</message>
+<message id="D69" name="D69">
+	<say>ANNA</say>
+</message>
+<message id="D70" name="D70">
+	<say>ZARA</say>
+</message>
+<message id="D71" name="D71">
+	<say>LEAH</say>
+</message>
+<message id="D72" name="D72">
+	<say>MOLLIE</say>
+</message>
+<message id="D73" name="D73">
+	<say>MARTHA</say>
+</message>
+<message id="D74" name="D74">
+	<say>FAITH</say>
+</message>
+<message id="D75" name="D75">
+	<say>HOLLIE</say>
+</message>
+<message id="D76" name="D76">
+	<say>AMY</say>
+</message>
+<message id="D77" name="D77">
+	<say>BETHANY</say>
+</message>
+<message id="D78" name="D78">
+	<say>VIOLET</say>
+</message>
+<message id="D79" name="D79">
+	<say>KATIE</say>
+</message>
+<message id="D80" name="D80">
+	<say>MARYAM</say>
+</message>
+<message id="D81" name="D81">
+	<say>FRANCESCA</say>
+</message>
+<message id="D82" name="D82">
+	<say>JULIA</say>
+</message>
+<message id="D83" name="D83">
+	<say>MARIA</say>
+</message>
+<message id="D84" name="D84">
+	<say>DARCEY</say>
+</message>
+<message id="D85" name="D85">
+	<say>ISABEL</say>
+</message>
+<message id="D86" name="D86">
+	<say>TILLY</say>
+</message>
+<message id="D87" name="D87">
+	<say>MADDISON</say>
+</message>
+<message id="D88" name="D88">
+	<say>VICTORIA</say>
+</message>
+<message id="D89" name="D89">
+	<say>ISOBEL</say>
+</message>
+<message id="D90" name="D90">
+	<say>NIAMH</say>
+</message>
+<message id="D91" name="D91">
+	<say>SKYE</say>
+</message>
+<message id="D92" name="D92">
+	<say>MADISON</say>
+</message>
+<message id="D93" name="D93">
+	<say>DARCY</say>
+</message>
+<message id="D94" name="D94">
+	<say>AISHA</say>
+</message>
+<message id="D95" name="D95">
+	<say>BEATRICE</say>
+</message>
+<message id="D96" name="D96">
+	<say>SARAH</say>
+</message>
+<message id="D97" name="D97">
+	<say>ZOE</say>
+</message>
+<message id="D98" name="D98">
+	<say>PAIGE</say>
+</message>
+<message id="D99" name="D99">
+	<say>HEIDI</say>
+</message>
+<message id="D100" name="D100">
+	<say>LYDIA</say>
+</message>
+<message id="D101" name="D101">
+	<say>OLIVER</say>
+</message>
+<message id="D102" name="D102">
+	<say>JACK</say>
+</message>
+<message id="D103" name="D103">
+	<say>HARRY</say>
+</message>
+<message id="D104" name="D104">
+	<say>JACOB</say>
+</message>
+<message id="D105" name="D105">
+	<say>CHARLIE</say>
+</message>
+<message id="D106" name="D106">
+	<say>THOMAS</say>
+</message>
+<message id="D107" name="D107">
+	<say>OSCAR</say>
+</message>
+<message id="D108" name="D108">
+	<say>WILLIAM</say>
+</message>
+<message id="D109" name="D109">
+	<say>JAMES</say>
+</message>
+<message id="D110" name="D110">
+	<say>GEORGE</say>
+</message>
+<message id="D111" name="D111">
+	<say>ALFIE</say>
+</message>
+<message id="D112" name="D112">
+	<say>JOSHUA</say>
+</message>
+<message id="D113" name="D113">
+	<say>NOAH</say>
+</message>
+<message id="D114" name="D114">
+	<say>ETHAN</say>
+</message>
+<message id="D115" name="D115">
+	<say>MUHAMMAD</say>
+</message>
+<message id="D116" name="D116">
+	<say>ARCHIE</say>
+</message>
+<message id="D117" name="D117">
+	<say>LEO</say>
+</message>
+<message id="D118" name="D118">
+	<say>HENRY</say>
+</message>
+<message id="D119" name="D119">
+	<say>JOSEPH</say>
+</message>
+<message id="D120" name="D120">
+	<say>SAMUEL</say>
+</message>
+<message id="D121" name="D121">
+	<say>RILEY</say>
+</message>
+<message id="D122" name="D122">
+	<say>DANIEL</say>
+</message>
+<message id="D123" name="D123">
+	<say>MOHAMMED</say>
+</message>
+<message id="D124" name="D124">
+	<say>ALEXANDER</say>
+</message>
+<message id="D125" name="D125">
+	<say>MAX</say>
+</message>
+<message id="D126" name="D126">
+	<say>LUCAS</say>
+</message>
+<message id="D127" name="D127">
+	<say>MASON</say>
+</message>
+<message id="D128" name="D128">
+	<say>LOGAN</say>
+</message>
+<message id="D129" name="D129">
+	<say>ISAAC</say>
+</message>
+<message id="D130" name="D130">
+	<say>BENJAMIN</say>
+</message>
+<message id="D131" name="D131">
+	<say>DYLAN</say>
+</message>
+<message id="D132" name="D132">
+	<say>JAKE</say>
+</message>
+<message id="D133" name="D133">
+	<say>EDWARD</say>
+</message>
+<message id="D134" name="D134">
+	<say>FINLEY</say>
+</message>
+<message id="D135" name="D135">
+	<say>FREDDIE</say>
+</message>
+<message id="D136" name="D136">
+	<say>HARRISON</say>
+</message>
+<message id="D137" name="D137">
+	<say>TYLER</say>
+</message>
+<message id="D138" name="D138">
+	<say>SEBASTIAN</say>
+</message>
+<message id="D139" name="D139">
+	<say>ZACHARY</say>
+</message>
+<message id="D140" name="D140">
+	<say>ADAM</say>
+</message>
+<message id="D141" name="D141">
+	<say>THEO</say>
+</message>
+<message id="D142" name="D142">
+	<say>JAYDEN</say>
+</message>
+<message id="D143" name="D143">
+	<say>ARTHUR</say>
+</message>
+<message id="D144" name="D144">
+	<say>TOBY</say>
+</message>
+<message id="D145" name="D145">
+	<say>LUKE</say>
+</message>
+<message id="D146" name="D146">
+	<say>LEWIS</say>
+</message>
+<message id="D147" name="D147">
+	<say>MATTHEW</say>
+</message>
+<message id="D148" name="D148">
+	<say>HARVEY</say>
+</message>
+<message id="D149" name="D149">
+	<say>HARLEY</say>
+</message>
+<message id="D150" name="D150">
+	<say>DAVID</say>
+</message>
+<message id="D151" name="D151">
+	<say>RYAN</say>
+</message>
+<message id="D152" name="D152">
+	<say>TOMMY</say>
+</message>
+<message id="D153" name="D153">
+	<say>MICHAEL</say>
+</message>
+<message id="D154" name="D154">
+	<say>REUBEN</say>
+</message>
+<message id="D155" name="D155">
+	<say>NATHAN</say>
+</message>
+<message id="D156" name="D156">
+	<say>BLAKE</say>
+</message>
+<message id="D157" name="D157">
+	<say>MOHAMMAD</say>
+</message>
+<message id="D158" name="D158">
+	<say>JENSON</say>
+</message>
+<message id="D159" name="D159">
+	<say>BOBBY</say>
+</message>
+<message id="D160" name="D160">
+	<say>LUCA</say>
+</message>
+<message id="D161" name="D161">
+	<say>CHARLES</say>
+</message>
+<message id="D162" name="D162">
+	<say>FRANKIE</say>
+</message>
+<message id="D163" name="D163">
+	<say>DEXTER</say>
+</message>
+<message id="D164" name="D164">
+	<say>KAI</say>
+</message>
+<message id="D165" name="D165">
+	<say>ALEX</say>
+</message>
+<message id="D166" name="D166">
+	<say>CONNOR</say>
+</message>
+<message id="D167" name="D167">
+	<say>LIAM</say>
+</message>
+<message id="D168" name="D168">
+	<say>JAMIE</say>
+</message>
+<message id="D169" name="D169">
+	<say>ELIJAH</say>
+</message>
+<message id="D170" name="D170">
+	<say>STANLEY</say>
+</message>
+<message id="D171" name="D171">
+	<say>LOUIE</say>
+</message>
+<message id="D172" name="D172">
+	<say>JUDE</say>
+</message>
+<message id="D173" name="D173">
+	<say>CALLUM</say>
+</message>
+<message id="D174" name="D174">
+	<say>HUGO</say>
+</message>
+<message id="D175" name="D175">
+	<say>LEON</say>
+</message>
+<message id="D176" name="D176">
+	<say>ELLIOT</say>
+</message>
+<message id="D177" name="D177">
+	<say>LOUIS</say>
+</message>
+<message id="D178" name="D178">
+	<say>THEODORE</say>
+</message>
+<message id="D179" name="D179">
+	<say>GABRIEL</say>
+</message>
+<message id="D180" name="D180">
+	<say>OLLIE</say>
+</message>
+<message id="D181" name="D181">
+	<say>AARON</say>
+</message>
+<message id="D182" name="D182">
+	<say>FREDERICK</say>
+</message>
+<message id="D183" name="D183">
+	<say>EVAN</say>
+</message>
+<message id="D184" name="D184">
+	<say>ELLIOTT</say>
+</message>
+<message id="D185" name="D185">
+	<say>OWEN</say>
+</message>
+<message id="D186" name="D186">
+	<say>TEDDY</say>
+</message>
+<message id="D187" name="D187">
+	<say>FINLAY</say>
+</message>
+<message id="D188" name="D188">
+	<say>CALEB</say>
+</message>
+<message id="D189" name="D189">
+	<say>IBRAHIM</say>
+</message>
+<message id="D190" name="D190">
+	<say>RONNIE</say>
+</message>
+<message id="D191" name="D191">
+	<say>FELIX</say>
+</message>
+<message id="D192" name="D192">
+	<say>AIDEN</say>
+</message>
+<message id="D193" name="D193">
+	<say>CAMERON</say>
+</message>
+<message id="D194" name="D194">
+	<say>AUSTIN</say>
+</message>
+<message id="D195" name="D195">
+	<say>KIAN</say>
+</message>
+<message id="D196" name="D196">
+	<say>RORY</say>
+</message>
+<message id="D197" name="D197">
+	<say>SETH</say>
+</message>
+<message id="D198" name="D198">
+	<say>ROBERT</say>
+</message>
+<message id="D199" name="D199">
+	<say>ALBERT</say>
+</message>
+<message id="D200" name="D200">
+	<say>SONNY</say>
+</message>
+<message id="D201" name="D201">
+	<say>Jack</say>
+</message>
+<message id="D202" name="D202">
+	<say>Rose</say>
+</message>
+<message id="D203" name="D203">
+	<say>Tyler</say>
+</message>
+<message id="D204" name="D204">
+	<say>Oscar</say>
+</message>
+<message id="D205" name="D205">
+	<say>Kim</say>
+</message>
+<message id="D206" name="D206">
+	<say>Cam</say>
+</message>
+
+<message id="CSU00452" name="CSU00452">
+<say>Alma</say>
+</message>				
+<message id="CSU00468" name="CSU00468">
+<say>Silvia</say>
+</message>
+<message id="CSU00469" name="CSU00469">
+<say>Esther</say>
+</message>
+<message id="CSU00470" name="CSU00470">
+<say>Christina</say>
+</message>
+<message id="CSU00471" name="CSU00471">
+<say>Micha</say>
+</message>
+<message id="CSU00472" name="CSU00472">
+<say>Mario</say>
+</message>
+<message id="CSU00474" name="CSU00474">
+<say>Abrehet</say>
+</message>
+<message id="CSU00482" name="CSU00482">
+<say>Bashair</say>
+</message>
+<message id="CSU00478" name="CSU00478">
+<say>Binty</say>
+</message>
+<message id="CSU00480" name="CSU00480">
+<say>Maria</say>
+</message>
+<message id="CSU00481" name="CSU00481">
+<say>Justin</say>
+</message>
+<message id="CSU00475" name="CSU00475">
+<say>Tzion</say>
+</message>
+<message id="CSU00476" name="CSU00476">
+<say>Duong</say>
+</message>
+<message id="CSU00489" name="CSU00489">
+<say>Lihong</say>
+</message>
+<message id="CSU00486" name="CSU00486">
+<say>Philip</say>
+</message>
+
+
+<message id="CSU00483" name="CSU00483">
+<say>Wilhemina</say>
+</message>
+<message id="CSU00484" name="CSU00484">
+<say>Linda</say>
+</message>
+<message id="CSU00485" name="CSU00485">
+<say>Naseer</say>
+</message>
+<message id="CSU00488" name="CSU00488">
+<say>Pamela</say>
+</message>
+<message id="CSU00495" name="CSU00495">
+<say>Marcus</say>
+</message>
+<message id="CSU00497" name="CSU00497">
+<say>Vicky</say>
+</message>
+<message id="CSU00498" name="CSU00498">
+<say>Matthew</say>
+</message>
+<message id="CSU00502" name="CSU00502">
+<say>Patricia</say>
+</message>
+<message id="CSU00499" name="CSU00499">
+<say>Brinkley</say>
+</message>
+<message id="CSU00496" name="CSU00496">
+<say>Rashawanda</say>
+</message>
+<message id="CSU00500" name="CSU00500">
+<say>Mary</say>
+</message>
+
+
+<message id="CSU00491" name="CSU00491">
+<say>Tarico</say>
+</message>
+<message id="CSU00504" name="CSU00504">
+<say>Tammy</say>
+</message>
+<message id="CSU00509" name="CSU00509">
+<say>Sadio</say>
+</message>
+<message id="CSU00490" name="CSU00490">
+<say>Sandra</say>
+</message>
+<message id="CSU00465" name="CSU00465">
+<say>Alma</say>
+</message>
+<message id="CSU00492" name="CSU00492">
+<say>Elizabeth</say>
+</message>
+<message id="CSU00508" name="CSU00508">
+<say>Samira</say>
+</message>
+<message id="CSU00515" name="CSU00515">
+<say>Edgar</say>
+</message>
+<message id="CSU00516" name="CSU00516">
+<say>Omega</say>
+</message>
+<message id="CSU00517" name="CSU00517">
+<say>Gilda</say>
+</message>
+<message id="CSU00519" name="CSU00519">
+<say>Farida</say>
+</message>
+<message id="CSU00520" name="CSU00520">
+<say>Miran</say>
+</message>
+<message id="CSU00521" name="CSU00521">
+<say>Azza</say>
+</message>
+<message id="CSU00522" name="CSU00522">
+<say>Nao</say>
+</message>
+<message id="CSU00523" name="CSU00523">
+<say>Oliva</say>
+</message>
+		
+<message id="HSC122301615" name="HSC122301615">
+<say>Janna</say>
+</message>
+<message id="HSC122301616" name="HSC122301616">
+<say>Jennifer</say>
+</message>
+<message id="HSC122301618" name="HSC122301618">
+<say>Muhiadin</say>
+</message>
+<message id="HSC122301623" name="HSC122301623">
+<say>Angel</say>
+</message>
+<message id="HSC122301625" name="HSC122301625">
+<say>Dowell</say>
+</message>
+<message id="HSC122301627" name="HSC122301627">
+<say>Offa</say>
+</message>
+<message id="HSC122301628" name="HSC122301628">
+<say>Annemarie</say>
+</message>
+<message id="HSC122301630" name="HSC122301630">
+<say>Arnaldo</say>
+</message>
+<message id="HSC122301631" name="HSC122301631">
+<say>Sheelah</say>
+</message>
+<message id="HSC122301635" name="HSC122301635">
+<say>shwa-wah-beck</say>
+</message>
+<message id="HSC122301620" name="HSC122301620">
+<say>Haja</say>
+</message>
+<message id="HSC1223016" name="HSC1223016">
+<say>Learner</say>
+</message>
+		
+<message id="HSC122301617" name="HSC122301617">
+<say>Sheena</say>
+</message>
+<message id="HSC122301619" name="HSC122301619">
+<say>Darlene</say>
+</message>
+<message id="HSC122301621" name="HSC122301621">
+<say>Destiny</say>
+</message>
+<message id="HSC122301624" name="HSC122301624">
+<say>Kenisha</say>
+</message>
+<message id="HSC122301626" name="HSC122301626">
+<say>Tamara</say>
+</message>
+<message id="HSC122301629" name="HSC122301629">
+<say>Yanenah</say>
+</message>
+<message id="HSC122301632" name="HSC122301632">
+<say>Victoria</say>
+</message>
+<message id="HSC122301527" name="HSC122301527">
+<say>Carleen</say>
+</message>
+<message id="HSC122301634" name="HSC122301634">
+<say>Leila</say>
+</message>
+<message id="HSC122301636" name="HSC122301636">
+<say>Luna</say>
+</message>
+<message id="HSC122301637" name="HSC122301637">
+<say>Lucy</say>
+</message>
+<message id="HSC122301638" name="HSC122301638">
+<say>Rahmelle</say>
+</message>
+
+<message id="HSC010301601" name="HSC010301601">
+<say>Rupinder</say>
+</message>
+<message id="HSC010301602" name="HSC010301602">
+<say>Elizabeth</say>
+</message>
+<message id="HSC010301604" name="HSC010301604">
+<say>Lorette</say>
+</message>
+<message id="HSC010301605" name="HSC010301605">
+<say>Mohinder</say>
+</message>
+<message id="HSC010301606" name="HSC010301606">
+<say>Buchi</say>
+</message>
+<message id="HSC010301607" name="HSC010301607">
+<say>Cynthia</say>
+</message>
+<message id="HSC010301600" name="HSC010301600">
+<say>Brinda</say>
+</message>
+<message id="HSC010301608" name="HSC010301608">
+<say>Sharoz</say>
+</message>
+<message id="HSC010301614" name="HSC010301614">
+<say>Tanya</say>
+</message>
+<message id="HSC010301609" name="HSC010301609">
+<say>Jessica</say>
+</message>
+<message id="HSC010301611" name="HSC010301611">
+<say>Abigail</say>
+</message>
+<message id="HSC010301612" name="HSC010301612">
+<say>Patrick</say>
+</message>
+<message id="HSC010301613" name="HSC010301613">
+<say>Patsy</say>
+</message>
+<message id="HSC010301655" name="HSC010301655">
+<say>Paul</say>
+</message>
+
+    </scene>
+	</stage>
+</project>

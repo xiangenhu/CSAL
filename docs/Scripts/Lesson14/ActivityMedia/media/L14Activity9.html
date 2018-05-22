@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 14 Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<script type="text/javascript" id="sourcecode">
+		var QuestionColor="#FFBB77";
+		var HightlightColor="#ffeb43";
+		var UserAnswerColor1="#FFA020";
+		var UserAnswerColor2="#ff5a8d";
+		var CorrectAnswerColor="#7FFFD4";
+		
+		
+		var questionNum=0;
+		var flag=1;
+		var divid;
+		var UserAnswer="";
+		var CorrectAnswer="A";
+		
+				
+		function Start()
+		{	
+		$("#questionBox").css("display", "none");
+	
+		//scrollMove("para1")
+		scrollMove(600)
+		//parent.GetWorldEvent("MediaLoaded");
+		}
+		
+		function GetItem()
+		{
+			questionNum++;
+			
+			 if(questionNum<2)
+			 {
+				
+				//parent.GetWorldEvent("Continue");
+				//scrollMove("para1")
+			 
+			 }
+			else
+			{
+				//parent.GetWorldEvent("Stop");
+			}
+			
+		}
+		function ShowItem()
+		{
+		$("#highlight1").css({"background-color": QuestionColor});
+		$("#highlight1").append('<img src="IconChar0-Small.png" id="AnswerImg" style="width:30px; height:30px;border: none;position: fix;" />');
+		
+		$("#questionBox").css("display", "block");
+		$("#highlight").css({"background-color": HightlightColor});
+		$("#highlight").attr("disabled", true);
+		scrollMove(488)
+		
+		}	
+		//SET "animateScroll" TO FALSE TO REMOVE THE SCROLLING ANIMATION
+		function scrollMove(scrollMovePosition)
+		{
+			var scrollElement = $('.scroll-pane');scrollElement.jScrollPane({
+				animateScroll: true, animateDuration: 500
+			});
+			
+			var ImgStart = scrollMovePosition-400;
+			
+			var api = scrollElement.data('jsp');
+			api.scrollToY(ImgStart);
+		
+		}
+
+		function Lock()
+		{
+		flag=1;
+										
+		}
+		function Unlock()
+		{
+		flag=0;
+		// true is disable, false show sentence 
+		$("#highlight").attr("disabled", false);	
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				return UserAnswer;
+			
+			}
+		
+		}
+		
+		function ShowMediaAnswer()
+		{
+			$("#highlight").css({"background-color":CorrectAnswerColor});
+			if (CorrectAnswer=="A")
+			{
+			
+			$("#AnswerImg").attr("src","IconChar0-Small.png");
+			
+			}
+			else
+			{
+			$("#AnswerImg").attr("src","IconEvent0-Small.png");
+			
+			}
+			
+			
+		}
+		
+		 $(document).ready(function()//$(function scrollIt()
+			{
+				
+			$("#main img").mouseover(function (e) {
+	
+			var oe=e||window.event;
+            divid = $(this).attr("id"); 
+			UserAnswer=divid;
+			
+            var odiv = document.getElementById(divid); 
+			//var imgID=
+            $(this).css("z-index", "100").siblings().css("z-index", "0"); 
+            moveDiv(odiv);
+			//alert(oe.clientY)
+        });
+		
+	        function moveDiv(obj) {
+			
+				obj.onmousedown = function (e) {
+			
+                var oe = e || window.event;
+                var $this = this;
+                var startX = oe.clientX - $this.offsetLeft;
+                var startY = oe.clientY - $this.offsetTop;
+				
+				var rangeLeft;
+				var rangeTop;
+				
+				
+                obj.className = "on"; 
+			if (flag==0)
+			{
+			
+				document.onmousemove = function (e) {
+                    var oe = e || window.event;
+					
+                    $this.style.left = oe.clientX - startX + "px";
+					
+                    $this.style.top = oe.clientY - startY + "px";
+					rangeLeft=oe.clientX - startX  
+					rangeTop=oe.clientY - startY 
+					
+					$this.className='pointer';
+					
+		         }
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                    obj.className = "off"; 
+					
+					var spanX = $("#highlight").offset().left ; 
+					var spanY = $("#highlight").offset().top;
+					//alert("rangeLeft"+rangeLeft+" "+"spanX"+spanX)
+					//alert("rangeTop"+rangeTop+" "+"spanY"+spanY)
+									
+					if ( rangeLeft>spanX-200 && rangeLeft<spanX+600 && rangeTop <spanY+400 && rangeTop>spanY-150)
+					{
+					
+						if (divid=="A")
+						{
+							$("#AnswerImg").attr("src","IconChar0-Small.png");
+							//$("#highlight").append('<img src="IconChar0-Small.png" id="AnswerImg" style="width:30px; height:30px;border: none;position: fix;" />');
+							$("#highlight").css({"background-color": UserAnswerColor1});
+							
+								
+							//$("#222").remove();
+							$this.style.left =70+ "px";				
+							$this.style.top = 120+ "px";
+							var isCorrect=$("#A").attr("isCorrect"); 
+							//parent.GetWorldEvent(isCorrect);
+							parent.GetWorldEvent("userAnswer_"+isCorrect+"_"+"Character");						
+						}
+						else if(divid=="B")
+						{
+							$("#AnswerImg").attr("src","IconEvent0-Small.png");
+							//$("#highlight").append('<img src="IconEvent0-Small.png" id="AnswerImg" style="width:30px; height:30px;border: none;position: fix;" />');
+							$("#highlight").css({"background-color": UserAnswerColor2});
+								
+							//$("#222").remove();
+							$this.style.left =550+ "px";				
+							$this.style.top = 120+ "px";
+							var isCorrect=$("#B").attr("isCorrect"); 
+							parent.GetWorldEvent(isCorrect);
+							parent.GetWorldEvent("userAnswer_"+isCorrect+"_"+"Event");
+							}
+						
+						flag=1;
+
+						}
+					else
+					{
+					
+						if (divid=="A")
+						{
+						$this.style.left =70+ "px";
+						$this.style.top = 120+ "px";
+						
+						}
+						if (divid=="B")
+						{
+						$this.style.left =550+ "px";
+						$this.style.top = 120+ "px";
+						
+						}
+						
+					
+					}
+					
+
+                    if ($this.releaseCapture) {
+					
+                        $this.releaseCapture();
+                    }
+                }
+                if ($this.setCapture) {
+                    $this.setCapture();
+
+                }
+                return false;
+				}
+			
+			}
+            
+        }
+
+});
+
+
+		
+
+
+
+	
+		</script>
+		<style type="text/css" id="page-css">
+			.spacer1{height: 16px;}
+			body
+			{
+				overflow: hidden;
+				background-color: #dff0ff;
+			}
+			#questionBox
+			{
+				position: fixed;
+				top:0;
+				z-index:1;
+				height: 200px;
+				width: 690px;
+				background-image: url('ClearBkgd2.png');
+				margin: 0px 0px 0px 24px;
+				padding: 10px 10px 20px 10px;
+				border: none;
+				font-family: 'Montserrat Alternates', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 36px;
+				padding: 5px;
+				color: white;
+			}
+			#instruct
+			{
+				font-style: italic;
+				font-size: 24px;
+				width: 400px;
+				margin: 10px auto 0px auto;
+			}
+			
+			a img{border: none;}
+			a:link {text-decoration:none;}
+			a:visited {text-decoration:none;}
+			a:hover {text-decoration:none;}
+			a:active {text-decoration:none;}
+			#text
+			{
+				margin: 14px auto;
+				font-size: 22px;
+				font-family: Andika, Verdana, 'Times New Roman';
+				overflow: auto;
+				padding: 220px 25px 15px 25px;
+			}
+			#textTitle
+			{
+				font-family: Ribeye, Verdana, 'Times New Roman';
+				text-align: center;
+				font-weight: bold;
+				font-size: 42px;
+			}
+			#author
+			{
+				font-weight: bold;
+				text-align: center;
+				font-size: 20px;
+			}
+			.indent{text-indent: 40px;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 790px;
+				margin-top: -7px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			
+		</style>
+	</head>
+	<body onload="Start()"> <!--onload="scrollIt()">-->
+		<div class="scroll-pane">
+			<!--<button type="submit" src="IconChar0.png" id="button1"  onclick=""></button>-->
+			
+			<div id="questionBox">
+				<div id="questionText">
+					Is this a character description or an event?
+					<div id="instruct">
+						Drag and drop either the <span style="color: #f19218;">description </span> icon or the <span style="color: #ff5a8d;">event </span>icon on the sentence below.
+					</div>
+				</div>
+				
+				 <div style="width: 100%; height: 100%; margin: 0 auto;" id="main">
+          		 <img src="IconChar0.png" id="A1" style="width:90px; height:90px;border:none;position: absolute;top: 120px;left: 70px;outline: none;"/>
+				 <img src="IconChar0.png" id="A" isCorrect="Correct" style="width:90px; height:90px;border:none;position: absolute;top: 120px;left: 70px;outline: none;"/>
+				 <img src="IconEvent0.png" id="B1" style="width:90px; height:90px;border:none;position: absolute;top: 120px;left: 550px;outline: none;"/>
+				 <img src="IconEvent0.png"id="B" isCorrect="Incorrect" style="width:90px; height:90px;border:none;position: absolute;top: 120px;left: 550px;outline: none;"/>
+
+				</div>
+			</div>
+			
+			
+			<div id="text">
+				<div id="textTitle">
+					Rose the Cop
+				</div>
+				<div id="author">
+					By Sue Butler
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para1">
+				    Rose was not one to talk to strangers.<span id="highlight">She was always aware of her surroundings when she walked down the street and cautious about every possible wolf that crossed her path.<img src="" id="AnswerImg" style="width:30px; height:30px;border: none;position: fix;" /></span> Now,  as a police officer, she had a sixth sense about who was telling the truth and who was lying.  It was the same sixth sense that brought her into the caf¨¦ to keep an eye on Joseph, a regular customer whom the owner, Diana, suspected of pickpocketing.    
+
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para2">
+					Seated comfortably sipping coffee, she watched him quite carefully while pretending to read the newspaper.  Her eyes followed him to the washroom, but he didn't have contact with anyone.
+
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para3">
+					"Mind if I sit here, dear?  The tables are all full, and I hate sitting at the counter."  Rose looked up.  Agnes, an elderly woman stood in front of her carrying two dirty bags full of clothes and offering a sweet grin. Rose paused for a minute and considered the potential risk. Before Rose could object, the woman was sliding into the booth opposite her.  "You remind me of my granddaughter," the older woman smiled.
+
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent"id="para4">
+					Rose nodded. She allowed the woman to chat but kept her eyes on the young man returning to his table.  She was waiting for him to purposely brush up against someone, and then she would take him down.
+				</div>
+				<div class="indent" id="para5">
+					"My granddaughter works in business. Do you have a job?" Agnes asked.
+				</div>
+				<div class="indent" id="para6">
+					"I'm a police officer," Rose confided in a whisper.  
+				</div>
+				<div class="indent" id="para7">
+					"Really, how fascinating, but it must be dangerous work" Agnes was impressed.
+				</div>
+				<div class="spacer1"></div>
+				<div class="indent" id="para8">
+					"I'm trailing a guy right now who's been stealing from customers."  Rose nodded toward the twenty-year-old man whom she believed was faking some sort of foot injury to allow him to seem unsteady.  "Listen, I would love to stay and chat, Agnes, but I need to follow him."  Rose saw the suspect bump into a customer standing at the cashier before he walked out into the street. 
+				</div>
+				
+				<div class="indent" id="para9">
+					She leapt to her feet, and on her way out decided to throw 20 dollars onto the lunch counter.  As she reached for her wallet, she realized it was not there.  She looked back at the table, and there was no sign of her wallet AND no sign of Agnes either.  She shook her head and laughed quietly to herself.  "Never trust strangers," her mother's voice echoed in her head.
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

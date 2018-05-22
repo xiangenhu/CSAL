@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L24Bkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 337px;
+				width: 798px;
+				margin-top: 116px;
+			}
+			#mainText
+			{
+				font-size: 26px;
+				padding: 15px 30px 0px 30px;
+				line-height: 38px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 38px;
+				margin: 0px 0px 20px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				top:0;
+				z-index:1;
+				width: 810px;
+				height: 110px;
+				background-color: #f4fff2;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				border-bottom: 5px dashed #a5f096;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 32px;
+				padding: 20px 20px 10px 20px;
+				color: #212121;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 26px;
+				font-weight: normal;
+				line-height: 45px;
+				margin: 10px auto 20px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px 6px;
+				outline: none;
+				border-radius: 6px;
+			}
+			.num
+			{
+				height: 24px;
+				font-size: 22px;
+				border-radius: 10px;
+				background-color: #d8d8d8;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;
+			var questionBoxArray = [];
+			var selectedAnswer = "";
+			var isSelected = false;
+			var userAnswer = "";
+			var score = 0;
+			var itemsArray = ["b1", "b2"];
+			var correctAnswerArray = ["b1"];
+
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+
+			function GetItem()
+			{
+				if (currentItem < numItems) {
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else {
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+
+			function ShowItem(){
+				if (currentItem == 0)
+				{
+					//
+				}
+			}
+
+			function ShowMediaAnswer(){
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function GetRequest(){
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+			   }
+			}
+
+			$(document).ready(function()
+			{				
+				GetRequest();
+
+				parent.GetWorldEvent("MediaLoadedEasy");
+
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "b1");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-120);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					//get user answer's text
+					selectedID=$(this).attr("id");
+					userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/&nbsp;/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");  
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");      
+					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						score++;
+						parent.PlaySound('clicked0.wav');
+						}
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a5f096"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#a5f096;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+								if (data == "MainQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("Cristina");
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Easy");
+				}
+				else if (data == "NextPage")
+				{
+					parent.nextPage("media/"+"Lesson24-Easy-7.html?socre="+score);
+				}
+				else if (data == "getScore")
+				{
+					parent.GetWorldEvent(score);
+				}
+				
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					Click on the third most important thing you do when looking for a doctor.
+				</div>
+			</div>
+			<div id="mainText">
+				<div id="mainTextHead">
+					Choosing a Doctor
+				</div>
+				<div id="para1" class="para">
+				<span class="indent"></span><span>Choosing a doctor is an important decision. Here are some things you can do to make the best choice. The single most important thing is to interview the doctors you are considering. Ask questions about the practice, office hours, and how quickly he or she responds to phone calls. Pay attention to the doctor's communication skills and how comfortable you are with him or her. Another thing you should do is check the doctor's credentials. One way to do this is to ask your health insurance company how they checked the doctor's credentials before accepting him or her into their network. </span> 
+				<span class="mybutton" id="b1" value="Correct"><span class="num">&nbsp;1&nbsp;</span> Another thing you can do is to look at the environment of the doctor's office. </span>
+				<span class="mybutton" id="b2" value="Incorrect"><span class="num">&nbsp;2&nbsp;</span> Be sure patients aren't waiting too long and that the office is clean and professional. </span>
+				<span>Finally, spend some time talking with the receptionist. <span class="mybutton" id="b3" value="Incorrect"><span class="num">&nbsp;3&nbsp;</span>Keep in mind that this is the person you'll come into contact with every time you call or come into the office.</span> If he or she is pleasant and efficient, it will certainly make your overall experience better.</span>
+			</div>
+		</div>
+	</body>
+</html>

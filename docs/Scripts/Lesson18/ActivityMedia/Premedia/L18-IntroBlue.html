@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = 'prod.x-in-y.com'</script>
+		<style type="text/css">
+			body
+			{
+				
+				
+				/*-----CHANGE FONT SIZE HERE-----*/
+				font-size: 38px;
+				
+				/*----CHANGE 'NONE' TO 'BOLD' IF YOU WANT BOLD TEXT----*/
+				font-weight: none;
+				
+				font-family: 'Eagle Lake', Tahoma, 'Lucida Sans', Serif; background-image:url('TabletBkgd.png'); background-repeat:no-repeat; background-position:top-center; overflow: hidden; position: relative; display:block;
+				width: 780px;
+				height: 520px;
+			}
+			.mybutton
+			{
+				/*-----CHANGE BUTTON FONT SIZE HERE-----*/
+				font-size: 30px;
+				/*----CHANGES WIDTH OF BUTTONS----*/
+				width: 200px;
+				/*----CHANGES TOP MARGIN FOR BUTTONS----*/
+				margin-top: 12px;
+				/*----CHANGES MARGIN FOR BUTTONS----*/
+				margin-right:auto; margin-left:auto;
+				
+				color: #111111;	background-color: #d7d7d7; text-decoration: none; border: 3px solid gray; position: relative; text-align: center; padding: 4px;	display:block; outline-style: none; font-weight: bold;
+			}
+			.mybutton:hover {cursor: pointer; color: white;
+			border: 3px solid #d9d9d9; background-color: #7b7b7b;}
+			.mybutton:active {color: #3c3c3c; background-color: white;}
+			
+			.spacer	{font-size:5px;}
+			
+			img
+			{
+				/*  ADJUST IMAGE SIZE HERE */
+				height: 340px;
+			}
+			.main
+			{
+				/*  ADJUST IMAGE POSITION HERE */
+				/*margin: (TOP) (RIGHT) (BOTTOM) (LEFT);*/
+				
+				margin: 0px -13px 0px 0px; 
+				padding: 120px 0px 0px 0px; 
+				float:right;
+				
+			}
+			.text
+			{
+				width:460px;
+				text-align:center;
+				margin: 20px 0px 0px 160px; /*TOP RIGHT BOTTOM LEFT MARGINS*/
+				padding: 0px 0px 0px 0px;
+			}
+		</style>
+		<script>
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
+				
+				return parent.GetWorldEvent(results);
+			}
+		</script>
+	</head>
+	<body>
+		<link href='http://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
+			
+			<div class="text">
+			
+				<!-- EDIT THE MAIN TEXT HERE  -->
+			</div>
+			
+			<div class="main">
+				<!-- CHANGE IMAGE HERE  -->
+				<img src="TriviaBkgd0.png">
+			</div>
+	</body>
+</html>
