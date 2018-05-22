@@ -1,0 +1,122 @@
+body
+{
+	background-image: url("mainmenubkgd1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Source Sans Pro', 'Verdana', 'Times New Roman';
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	text-align: center;
+	width: 800px;
+}
+
+#menuBkgd
+{
+	background-color: #303030;
+	background: rgba(48, 48, 48, .9);
+	color: white;
+	width: 80%;
+	height: 100%;
+	margin: -1px auto 0px auto;
+	padding: 1px;
+}
+
+.backBtn
+{
+	position: absolute;
+	top: 10px;
+	left: 90px;
+	width: 12%;
+	padding: 5px;
+	font-size: 20px;
+	background-color: #eee;
+	color: #303030;
+	text-align: center;
+	text-indent: 0px;
+	font-weight: normal;
+	border-radius: 10px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.topicHead
+{
+	font-size: 40px;
+	margin: 10px auto;
+}
+
+.instruct
+{
+	padding: 10px 40px;
+	font-size: 22px;
+	font-style: italic;
+}
+
+.barHead
+{
+	background-color: #c4c4c4;
+	width: 100%;
+	color: #303030;
+	margin: 10px 0px;
+	font-size: 20px;
+}
+
+.letter
+{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	font-size: 20px;
+	margin: 5px;
+	padding: 3px;
+	background-color: #eee;
+	color: #303030;
+	text-align: center;
+	text-indent: 0px;
+	font-weight: normal;
+	focus: none;
+	outline: 0;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.letterDisable
+{
+	background-color: #303030;
+	color: gray;
+	cursor: not-allowed;	
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	font-size: 20px;
+	margin: 5px;
+	padding: 3px;
+	text-align: center;
+	text-indent: 0px;
+	font-weight: normal;
+	focus: none;
+	outline: 0;
+	border: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#mainTable
+{
+	width: 100%;
+	margin: 0px 0px 50px 0px;
+}
+#mainTable a
+{
+	color: white;
+	padding: 2px 8px;
+	border-radius: 6px;
+	font-size: 19px;
+	margin: 5px 0px;
+}

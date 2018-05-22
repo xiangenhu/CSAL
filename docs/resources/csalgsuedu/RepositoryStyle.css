@@ -1,0 +1,162 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	font-family: 'Source Sans Pro', 'Verdana', 'Times New Roman';
+	margin: 0px;
+	overflow: hidden;
+}
+#fadeBody
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0px;
+	width: 800px;
+	height: 490px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -100;
+}
+
+#fadeBodyAlt
+{
+	background-image:url('mainmenubkgd1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0px;
+	width: 800px;
+	height: 490px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -100;
+}
+
+#menuBkgd
+{
+	background-color: #303030;
+	background: rgba(48, 48, 48, .9);
+	color: white;
+	width: 85%;
+	height: 500px;
+	margin: -1px auto 0px auto;
+	display: none;
+	padding: 0px;
+}
+
+#menuBkgdAlt
+{
+	background-color: #303030;
+	background: rgba(48, 48, 48, .9);
+	color: white;
+	width: 80%;
+	height: 500px;
+	margin: -1px auto 0px auto;
+	padding: 0px;
+}
+
+.backBtn
+{
+	position: absolute;
+	top: 10px;
+	left: 90px;
+	width: 12%;
+	padding: 5px;
+	font-size: 20px;
+	background-color: #eee;
+	color: #303030;
+	text-align: center;
+	text-indent: 0px;
+	font-weight: normal;
+	border-radius: 10px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#mainHead
+{
+	font-size: 44px;
+	text-align: center;
+	margin: 0px auto;
+	padding: 10px;
+}
+
+#mainHeadAlt
+{
+	font-size: 54px;
+	text-align: center;
+	margin: 0px auto;
+	padding: 30px;
+}
+
+#mainBody
+{
+	background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, .9);
+	width: 90%;
+	height: 480px;
+	margin: 0px auto;
+	border-radius: 15px;
+}
+
+.instruct
+{
+	margin: 5px auto;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 10px 60px;
+	text-align: center;
+}
+
+.targetURL
+{
+	background-color: #eee;
+	color: #303030;
+	text-align: center;
+	text-indent: 0px;
+	font-weight: normal;
+	border-radius: 10px;
+	focus: none;
+	outline: 0;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#difficultySection
+{
+	text-align: center;
+}
+
+.difficulty
+{
+	width: 20%;
+	font-size: 28px;
+	margin: 5px;
+	padding: 12px 30px;
+}
+#topicContainer
+{
+	text-align: center;
+	padding: 0px;
+}
+
+.topic
+{
+	padding: 8px 10px;
+	margin: 5px;
+	text-decoration: none;
+}
+

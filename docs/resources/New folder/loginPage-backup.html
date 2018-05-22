@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>
+		
+		<meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin">
+		<script>document.domain = 'ace.autotutor.org'</script>
+		
+		<title>CSAL Name Entry</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+		var UID = [
+				"Memphis-Test-Art:Art Graesser C1",
+				"Memphis-Test-Whitney:Whitney Baer C2",
+				"Memphis-Test-Carl:Carl Cai C3",
+				"Memphis-Test-Qinyu:Qinyu Cheng C4",
+				"Memphis-Test-Tiffany:Tiffany Hunter C5",
+				"Memphis-Test-Amy:Amy Adcock C6",
+				"Memphis-Test-Andrew:Andrew Olney C7",
+				"Memphis-Test-Breya:Breya Walker C8",
+				"Memphis-Test-Cadarrius:Cadarrius McGlown C9",
+				"Memphis-Test-Craig:Craig Kelly C10",
+				"Memphis-Test-Danielle:Danielle Clewley C11",
+				"Memphis-Test-Patrick:Patrick Hays C12",
+				"Memphis-Test-Habibah:Habibah Khan C13",
+				"Memphis-Test-Haiying:Haiying Li C14",
+				"Memphis-Test-Janay:Janay Stewart C15",
+				"Memphis-Test-Jordan:Jordan Delong C16",
+				"Memphis-Test-Lijia:Lijia Wang C17",
+				"Memphis-Test-Logan:Logan Garrison C18",
+				"Memphis-Test-Mark:Mark Conley C19",
+				"Memphis-Test-Megan:Megan Reed C20",
+				"Memphis-Test-Morgan:Morgan Douglass C21",
+				"Memphis-Test-Parya:Parya Zareie C22",
+				"Memphis-Test-Paul:Paul Edwards C23",
+				"Memphis-Test-Qiong:Qiong Yu C24",
+				"Memphis-Test-Qiping:Qiping Bao C25",
+				"Memphis-Test-Shi:Shi Feng C26",
+				"Memphis-Test-Xiangen:Xiangen Hu C27"
+				];
+		var availableTags = [
+				 "Art Graesser",
+				"Whitney Baer",
+				"Carl Cai",
+				"Qinyu Cheng",
+				"Tiffany Hunter",
+				"Amy Adcock",
+				"Andrew Olney",
+				"Breya Walker",
+				"Cadarrius McGlown",
+				"Craig Kelly",
+				"Danielle Clewley",
+				"Patrick Hays",
+				"Habibah Khan",
+				"Haiying Li",
+				"Janay Stewart",
+				"Jordan Delong",
+				"Lijia Wang",
+				"Logan Garrison",
+				"Mark Conley",
+				"Megan Reed",
+				"Morgan Douglass",
+				"Parya Zareie",
+				"Paul Edwards",
+				"Qiong Yu",
+				"Qiping Bao",
+				"Shi Feng",
+				"Xiangen Hu"
+				 
+				];
+			$(document).ready(function()
+			{
+				$("#fadeBody").fadeIn(1000);
+				
+				$("#firstName").focus();
+				
+				$("#firstName").keyup(function(event){
+					if(event.keyCode == 13){ $("#submit").click(); }
+				});
+				
+				$("#submit").click(function(){					
+					if( $("#firstName").val().length == 0 )
+					{
+						parent.PlaySound('incorrect0.wav');
+						$("#firstName").focus();
+					}
+					else
+					{
+					var getName=$("#firstName").val();
+					var isExisit=$.inArray(getName, availableTags);
+						
+							if(isExisit!=-1)
+							{
+								parent.PlaySound('clicked0.wav');
+						
+								$("#fadeBody").fadeOut(800, function()
+								{
+									submitName(isExisit);
+								});
+							
+							}
+							else 
+							{
+							parent.PlaySound('incorrect0.wav');
+							$("#firstName").focus();
+							
+							}
+							
+							
+						
+					}
+					
+					$("#firstName").keyup(function(event){
+						if(event.keyCode == 13){ $("#submit").click(); }
+					});
+				});
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 350); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+			});
+
+			function submitName(index)
+			{			
+				//make results into a string//
+				
+				var name = document.getElementById("firstName").value;
+				var fristName = name.split(" ");
+				sessionStorage.setItem("uname",fristName[0]);
+				//var isExisit=$.inArray(getName, availableTags);
+				var getUID = UID[index].split(":");
+				sessionStorage.setItem("UID",getUID[0]);
+				var strs=getUID[1].split(" ");
+				sessionStorage.setItem("SID",strs[2]);
+				
+				//alert(sessionStorage.getItem("uname"));
+				
+				parent.sayHi(sessionStorage.getItem("uname"));
+				
+				//var id = document.getElementById("id").value;
+				//window.external.GetName(name);
+				//window.external.GetId(name);
+				window.location = "CSALscreenPage.html";
+			}
+			
+			function isNumber(evt) {
+				evt = (evt) ? evt : window.event;
+				var charCode = (evt.which) ? evt.which : evt.keyCode;
+				if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+					alert("Phone number consists of only numbers");
+					return false;
+				}
+				return true;
+			}
+			
+			$(function() {
+				
+				$( "#firstName" ).autocomplete({
+				  source: availableTags
+				});
+			  });
+		</script>
+		<style>
+			body
+			{
+				background-repeat: no-repeat;
+				background-position: top;
+				background-image: url('images/TabletBkgd.png');
+				background-color: black;
+				font-family: 'Average Sans', 'Times New Roman', Verdana;
+				cursor: default;
+			}
+			#fadeBody {display: none;}
+			input
+			{
+				text-align: center;
+				text-transform: capitalize;
+			}
+			#instruct
+			{
+				text-align: center;
+				vertical-align: middle;
+				font-size: 40px;
+				width: 700px;
+				background-color: white;
+				margin: auto;
+				border: 3px dashed gray;
+				padding: 10px 20px 20px 20px;
+			}
+			#firstName
+			{
+				margin-left: 220px;
+				width: 340px;
+				height: 60px;
+				font-size: 40px;
+			}
+			.mybutton
+			{
+				background-color: #f1f1f1;
+				color: #121212;
+				width: 400px;
+				text-align: center;
+				font-size: 56px;
+				text-indent: 0px;
+				margin: 20px auto;
+				font-family: 'McLaren', Verdana, 'Times New Roman';
+				font-weight: bold;
+				border-radius: 10px;
+				padding: 20px 4px;
+				padding-top: 14px;
+				focus: none;
+				outline: 0;
+				border: none;/*3px solid #999;*/
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fadeBody">
+			<div style="height:20px;"></div>
+			
+			<div id="instruct">
+				Please enter your 
+				<span style="text-decoration: underline; color: red;">first name</span>
+				in the box below and press 
+				<span style="font-weight: bold;">ENTER</span>.
+			</div>
+			
+			<div style="height:60px;"></div>
+			
+			<input type="text" id="firstName" name="firstName" autofocus="autofocus">
+			
+			<div style="height:20px;"></div>
+			
+			<div class="mybutton" id="submit" name="submit" value="Enter">
+				Enter
+			</div>
+		</div>
+	</body>
+</html>
