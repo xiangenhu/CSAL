@@ -9,31 +9,31 @@
         <Item text="If you are having trouble with the passage, feel free to read along with the audio." speech="If you are having trouble with the passage, feel free to read along with the audio." play="B2" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="I don't think that's the right answer." speech="I don't think that's the right answer." play="B3" />
-        <Item text="I don't think that was the right answer. " speech="I don't think that was the right answer. " play="B4" />
+        <Item text="I don't think that's the right answer." speech="" play="B3" />
+        <Item text="I don't think that was the right answer. " speech="" play="B4" />
         <Item text="That wasn't the right answer." speech="I don't think that was the right answer." play="B5" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
-        <Item text="Good job! You got it right!" speech="Good job! You got it right!" play="B6" />
-        <Item text="Excellent! You got it!" speech="Excellent! You got the question right!" play="B7" />
-        <Item text="Great job _user_! You answered right!" speech="Great job! You answered right! Thanks for helping me so much!" play="B8" />
-        <Item text="Awesome! You got it right!" speech="Awesome! You got it right!" play="B9" />
-        <Item text="Wow! What a great job!" speech="Wow! What a great job!" play="B10" />
-        <Item text="Magnificent!" speech="Great job!" play="B11" />
+        <Item text="_user_ Good job! You got it right!" speech="Good job! You got it right!" play="B6" />
+        <Item text="_user_ Excellent! You got it!" speech="Excellent! You got the question right!" play="B7" />
+        <Item text="_user_ great job! You answered right!" speech="" play="_user_,B8" />
+        <Item text="_user_ Awesome! You got it right!" speech="" play="_user_,B9" />
+        <Item text="_user_ Wow! What a great job!" speech="" play="_user_,B10" />
+        <Item text="_user_ Magnificent!" speech="Great job!" play="B11" />
         <Item text="_user_ well done!" speech="Well done!" play="B12" />
       </SpeechCan>
     </Agent>
     <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
       <SpeechCan name="PositiveFeedback">
-        <Item text="Great job _user_!" speech="Great job!" play="A1" />
-        <Item text="Good! That is right _user_." speech="Good! That is right." play="A2" />
-        <Item text="_user_ you are on a roll! You answered the question correctly." speech="You are on a roll! You answered the question correctly." play="A3" />
-        <Item text="Wonderful _user_! You answered the question correctly." speech="Wonderful! You answered the question correctly." play="A4" />
-        <Item text="Yes! _user_  You are correct!" speech="Yes! You are correct!" play="A5" />
-        <Item text="Perfect! You got it right _user_!" speech="Perfect! You got it right!" play="A6" />
-        <Item text="_user_ great! You answered correctly." speech="Great! You answered correctly." play="A7" />
-        <Item text="Yes! _user_ . You got it right!" speech="Yes! You got it right!" play="A8" />
-        <Item text="Exactly! You are right!" speech="Exactly! You are right!" play="A9" />
+        <Item text="_user_ Great job!" speech="Great job!" play="A1" />
+        <Item text="Good! That is right." speech="" play="A2" />
+        <Item text="_user_ you are on a roll! You answered the question correctly." speech="" play="_user_,A3" />
+        <Item text="_user_ Wonderful! You answered the question correctly." speech="" play="_user_,A4" />
+        <Item text="_user_  You are correct!" speech="" play="_user_,A5" />
+        <Item text="_user_ Perfect! You got it right!" speech="" play="_user_,A6" />
+        <Item text="_user_ great! You answered correctly." speech="" play="_user_,A7" />
+        <Item text="_user_ You got it right!" speech="" play="_user_,A8" />
+        <Item text="_user_ Exactly! You are right!" speech="" play="_user_,A9" />
       </SpeechCan>
       <SpeechCan name="NegaitveFeedbackToJordan">
         <Item text="Jordan you gave an incorrect answer." speech="Jordan you gave an incorrect answer!" play="A10" />
@@ -47,39 +47,39 @@
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackFinal">
         <Item text="Well, actually, that is not what I was looking for." speech="" play="A16" />
-        <Item text="Unofrtunately you are not correct. " speech="" play="A17" />
+        <Item text="You are not correct. " speech="" play="A17" />
         <Item text="Oh sorry, that isn't what I was looking for" speech="Oh sorry, that isn't what I was looking for" play="A18" />
         <Item text="Not exactly, good try" speech="Not exactly, good try" play="A19" />
         <Item text="Well, that wasn't what I was thinking. Here is the right choice in green" speech="Well,  that wasn't what I was thinking, here is the right choice" play="A20" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbacktoBoth">
-        <Item text="Sorry, that isn't what I was looking for." speech="" play="A21" />
-        <Item text="Oops, neither of you chose the best answer." speech="" play="A22" />
+        <Item text="Sorry you two, that isn't what I was looking for." speech="" play="A21" />
+        <Item text="Oops you two, neither of you chose the best answer." speech="" play="A22" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
         <Item text="sorry! that wasn't what I was looking for." speech=" sorry! that wasn't what I was looking for." play="A23" />
         <Item text="Well, not quite, That wasn't the right choice." speech="Well, not quite, That wasn't the right choice." play="A24" />
-        <Item text="Whoops! Looks like you picked the wrong answer _user_. " speech="Whoops! Looks like you picked the wrong answer _user_. " play="A25,_user_" />
+        <Item text="_user_ Whoops! Looks like you picked the wrong answer. " speech="" play="_user_,A25" />
         <Item text="_user_ please try again! Your answer was not correct." speech="_user_ please try again! Your answer was not correct." play="_user_,A26" />
       </SpeechCan>
       <SpeechCan name="NeutralFeedback">
-        <Item text="Ok _user_ here is the answer." speech="Here is the answer." play="A27" />
+        <Item text="_user_ here is the answer." speech="Here is the answer." play="A27" />
       </SpeechCan>
       <SpeechCan name="Pump">
         <Item text="_user_ try your best and answer the question." speech="Try your best and answer the question." play="A28" />
-        <Item text="why don't you give the question your best shot! Pick a answer." speech="why don't you give the question your best shot! Pick an answer!" play="A29" />
+        <Item text="_user_ why don't you give the question your best shot! Pick a answer." speech="" play="_user_,A29" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoBoth">
         <Item text="That's right you guys! Awesome job!" speech="" play="A30" />
         <Item text="Great job you both got it right!" speech="" play="A31" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="If you are having trouble with the passage, feel free to read along with the audio." play="A32" />
-        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="A33" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,A32" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="" play="_user_,A33" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToUserNegativeFeedbackToJordan">
-        <Item text="_user_ great job! Sorry Jordan, not quite right." speech="Great job! Sorry Jordan, not quite right." play="A34" />
-        <Item text="_user_ that's it! Jordan, that was not the correct answer. " speech="That's it! Jordan, that was not the correct answer. " play="A35" />
+        <Item text="_user_ great job! Sorry Jordan, not quite right." speech="" play="_user_,A34" />
+        <Item text="_user_ that's it! Jordan, that was not the correct answer. " speech="" play="_user_,A35" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -182,12 +182,13 @@
       <Item id="1" agent="Cristina" text="Now, here is the last question for this text." speech="" play="A53" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ Hello again! My name is Cristina and this is Jordan." speech="Hello again! My name is Cristina and this is Jordan." media="media\Lesson16-IntroTitle.html" play="A54" />
-      <Item id="2" agent="Jordan" text="Hi Cristina and _user_ !! What are we learning today?" speech="Hi Cristina! What are we learning today?" play="B26" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, hello, welcome back!" speech="" media="media\Lesson16-IntroTitle.html" play="_user_,A54" />
+      <Item id="2" agent="Jordan" text="_user_ and Cristina hi! What are we learning today?" speech="" play="_user_,B26" />
       <Item id="3" agent="Cristina" text="Well Jordan, today we are going to read and learn about informative texts." speech="Well Jordan, today we are going to read and learn about informative texts." play="A55" />
       <Item id="4" agent="Cristina" text="Informative texts teach us something new and increase our knowledge on a particular topic. In this lesson we will examine informative texts and identify the topic, main idea, and supporting information, in these informative texts." speech="Informative texts teach us something new and increase our knowledge on a particular topic. In this lesson we will examine informative texts and identify the topic, main idea, and supporting information, in these informative texts." media="media\Lesson16-MainOpening.html" play="A56" />
-      <Item id="5" agent="Jordan" text="Ok Cristina I think that I may need some help. _user_ I think you can help." speech="Ok Cristina, I think that I may need some help." play="B27" />
-      <Item id="7" agent="Cristina" text="Read the text. When you are finished reading, click the button that says click to continue. If you are having trouble with the passage, click the Read Text button to have it read to you." speech="Read the text. When you are finished reading, click the button that says click to continue. If you are having trouble with the passage, click the Read Text button to have it red to you." media="media\Lesson16-M0.html" play="A57" />
+      <Item id="5" agent="Jordan" text="Ok Cristina I think that I may need some help." speech="" play="B27" />
+      <Item id="6" agent="Cristina" text="_user_ please help Jordan." speech="" play="_user_,A57" />
+      <Item id="7" agent="Cristina" text="Read the text. When you are finished reading, click the button that says click to continue. If you are having trouble with the passage, click the Read Text button to have it read to you." speech="Read the text. When you are finished reading, click the button that says click to continue. If you are having trouble with the passage, click the Read Text button to have it red to you." media="media\Lesson16-M0.html" play="A58" />
     </RigidPack>
     <RigidPack name="Transition3" usedIn="">
       <Item id="1" agent="Jordan" text="Now that we know the topic and main idea, what should we look for next?" speech="" play="B28" />
@@ -196,19 +197,19 @@
       <Item id="1" agent="Jordan" text="On to the next question" speech="" play="B29" />
     </RigidPack>
     <RigidPack name="Transition5" usedIn="">
-      <Item id="1" agent="Cristina" text="On to the next question." speech="" play="A58" />
+      <Item id="1" agent="Cristina" text="On to the next question." speech="" play="A59" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="Cristina" text="First, let's find the subject matter of this text. Think about what, in general, the text is about." speech="_user_ let's first find the subject matter of this text. Think about what, in general, the text is about." media="" itemDif="0.1" play="_user_,A59">
+        <Question id="1" agent="Cristina" text="_user_ let's find the subject matter of this text. Think about what, in general, the text is about." speech="" media="" play="_user_,A60">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is job interviews. The topic is the general subject of the passage. It is not to be confused with the main idea which is the point the author is making about the subject matter. " speech="" keys="any" threshold="" test="" play="A60" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the topic is the subject that the writer is writing about. Try again" speech="" keys="any" threshold="" test="" play="A61" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Please click on one of the topic buttons" speech="" keys="any" threshold="" test="" play="B30" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you give it a try. What do you think the topic of this text is?" speech="" keys="any" threshold="" test="" play="A62" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what is the topic of this text?" speech="" keys="any" threshold="" test="" play="_user_,A63" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is job interviews. The topic is the general subject of the passage. It is not to be confused with the main idea which is the point the author is making about the subject matter. " speech="" keys="any" threshold="" test="" play="A61" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the topic is the subject that the writer is writing about. Try again" speech="" keys="any" threshold="" test="" play="A62" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ Please click on one of the topic buttons" speech="" keys="any" threshold="" test="" play="_user_,B30" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you give it a try. What do you think the topic of this text is?" speech="" keys="any" threshold="" test="" play="A63" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what is the topic of this text?" speech="" keys="any" threshold="" test="" play="_user_,A64" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Cristina, I think this text is about job interviews." speech="" keys="any" threshold="" test="" play="B31" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the topic is punctuality" speech="" keys="any" threshold="" test="" play="B32" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ got it right!" speech="I think that's right" keys="any" threshold="" test="" play="B33" />
@@ -222,11 +223,11 @@
       <Questions>
         <Question id="1" agent="Jordan" text="Now we know what the subject matter of the text is. Now we need to look for a more specific purpose. For this question, we should think about what the author is trying to get across about job interviews." speech="Now we know what the subject matter of the text is. Now we need to look for a more specific purpose. For this question, we should think about what the author is trying to get across about job interviews." media="" itemDif="0.1" play="B34">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence 'Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text. The author's purpose is to teach us about how our attitude and manners affect job interviews." speech="" keys="any" threshold="" test="" play="A64" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the main idea is what the writer is trying to teach us about the topic. Go ahead and try again by clicking on the sentence that best shows the main idea. " speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence 'Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text. The author's purpose is to teach us about how our attitude and manners affect job interviews." speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the main idea is what the writer is trying to teach us about the topic. Go ahead and try again by clicking on the sentence that best shows the main idea. " speech="" keys="any" threshold="" test="" play="A66" />
             <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ please click on a sentence in the text that you think best describes what the writer is trying to teach us about the topic of Job interviews." speech="" keys="any" threshold="" test="" play="_user_,B35" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why don't you try. Which of the sentences do you think describes the main idea of the text?" speech="" keys="any" threshold="" test="" play="A66" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ which sentence do you think best reflects the main idea?" speech="" keys="any" threshold="" test="" play="_user_,A67" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why don't you try. Which of the sentences do you think describes the main idea of the text?" speech="" keys="any" threshold="" test="" play="A67" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ which sentence do you think best reflects the main idea?" speech="" keys="any" threshold="" test="" play="_user_,A68" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the writer is teaching us about good attitude and good manners. " speech="" keys="any" threshold="" test="" play="B36" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the second highlighted sentence. " speech="" keys="any" threshold="" test="" play="B37" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I would pick the same answer." speech="" keys="any" threshold="" test="" play="_user_,B38" />
@@ -238,24 +239,24 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that we know the main idea is 'having a good attitude and good manners are important both at an interview and on the job.' Let's think about what evidence supports this main idea and how these details help us to better understand the author's purpose." speech="Now that we know the main idea is 'having a good attitude and good manners are important both at an interview and on the job.' _user_ let's think about what evidence supports this main idea and how these details help us to better understand the author's purpose." media="" itemDif="0.1" play="A68,_user_,A69">
+        <Question id="1" agent="Cristina" text="Now that we know the main idea is 'having a good attitude and good manners are important both at an interview and on the job.' Let's think about what evidence supports this main idea and how these details help us to better understand the author's purpose." speech="Now that we know the main idea is 'having a good attitude and good manners are important both at an interview and on the job.' _user_ let's think about what evidence supports this main idea and how these details help us to better understand the author's purpose." media="" itemDif="0.1" play="A69,_user_,A70">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Your choice is a supporting statement because it provides evidence that the main idea is 'Having a good attitude and good manners are important both at an interview and on the job'. The sentences in green are all supporting evidence because they offer details that help us to better understand what the author is trying to get across. " speech="" keys="any" threshold="" test="" play="A70" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Choose another sentence that you think supports the main idea of having a good attitude and good manners at an interview and on the job." speech="" keys="any" threshold="" test="" play="A71" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Your choice is a supporting statement because it provides evidence that the main idea is 'Having a good attitude and good manners are important both at an interview and on the job'. The sentences in green are all supporting evidence because they offer details that help us to better understand what the author is trying to get across. " speech="" keys="any" threshold="" test="" play="A71" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Choose another sentence that you think supports the main idea of having a good attitude and good manners at an interview and on the job." speech="" keys="any" threshold="" test="" play="A72" />
             <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ , please choose a sentence that supports the main idea of having a good attitude and good manners in a job interview" speech="" keys="any" threshold="" test="" play="_user_,B39" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why don't you give it a shot. What evidence does the author provide us to support this main idea?" speech="" keys="any" threshold="" test="" play="A72" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what evidence can you find to support the main idea? Click on one the numbered sentences highlighted below. " speech="" keys="any" threshold="" test="" play="_user_,A73" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan why don't you give it a shot. What evidence does the author provide us to support this main idea?" speech="" keys="any" threshold="" test="" play="A73" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what evidence can you find to support the main idea? Click on one the numbered sentences highlighted below. " speech="" keys="any" threshold="" test="" play="_user_,A74" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Cristina, I think something like 'Managers agree that a person’s attitude can be more important than their work experience' could be support." speech="" keys="any" threshold="" test="" play="B40" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that the supporting statement could be, A traffic Jam is no excuse. Yeah that could be it, maybe." speech="" keys="any" threshold="" test="" play="B41" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I agree with your choice. " speech="" keys="any" threshold="" test="" play="_user_,B42" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="Help Jordan pick out some other supporting information, click on a sentence in the text that is a supporting statement." speech="Help Jordan pick out some other supporting information, click on a sentence in the text that is a supporting statement." media="media\Lesson16-M3.html" play="A74">
+        <Question id="2" agent="Cristina" text="Help Jordan pick out some other supporting information, click on a sentence in the text that is a supporting statement." speech="Help Jordan pick out some other supporting information, click on a sentence in the text that is a supporting statement." media="media\Lesson16-M3.html" play="A75">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it supports the main idea which is 'Having a good attitude and good manners are important both at an interview and on the job'" speech="" keys="any" threshold="" play="A75" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="That's not right try again" speech="" keys="any" threshold="" play="A76" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose another supporting statement that supports the main idea of having a good attitude and good manners in a job interview." speech="" keys="any" threshold="" play="_user_,A77" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you have a try. Choose another supporting statement that supports the main idea." speech="" keys="any" threshold="" play="A78" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it supports the main idea which is 'Having a good attitude and good manners are important both at an interview and on the job'" speech="" keys="any" threshold="" play="A76" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="That's not right try again" speech="" keys="any" threshold="" play="A77" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose another supporting statement that supports the main idea of having a good attitude and good manners in a job interview." speech="" keys="any" threshold="" play="_user_,A78" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you have a try. Choose another supporting statement that supports the main idea." speech="" keys="any" threshold="" play="A79" />
             <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I am not sure about this one." speech="" keys="any" threshold="" play="B43" />
           </Answers>
         </Question>
@@ -265,13 +266,13 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="1" agent="Cristina" text="We have seen all of the sentences  in this text that provide evidence,Now, I want us look more closely. We found our evidence, let's see if you can prove it! Here we are investigating why the sentence in green is a supporting statement." speech="We have seen all of the sentences  in this text that provide evidence, Now, I want us to look more closely. We found our evidence, _user_ let's see if you can prove it! Here we are investigating why the sentence in green is a supporting statement." media="" itemDif="0.1" play="A79,_user_,A80">
+        <Question id="1" agent="Cristina" text="We have seen all of the sentences  in this text that provide evidence,Now, I want us look more closely. We found our evidence, let's see if you can prove it! Here we are investigating why the sentence in green is a supporting statement." speech="We have seen all of the sentences  in this text that provide evidence, Now, I want us to look more closely. We found our evidence, _user_ let's see if you can prove it! Here we are investigating why the sentence in green is a supporting statement." media="" itemDif="0.1" play="A80,_user_,A81">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="'Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text.The sentence Employers will expect that you will be punctual, is a supporting statement because being on time is an example of respectful behavior. And being respectful is a display of good manners." speech="Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text.The sentence Employers will expect that you will be punctual, is a supporting statement because being on time is an example of respectful behavior. And being respectful is a display of good manners." keys="any" threshold="" test="" play="A81" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that a supporting statement provides evidence or support of the main idea. Pick another answer please." speech="" keys="any" threshold="" test="" play="A82" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please answer the question by clicking on a button. " speech="" keys="any" threshold="" test="" play="A83" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you try. why is the sentence in green supporting evidence?" speech="" keys="any" threshold="" test="" play="A84" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ how does this statement in green prove that a good attitude and good manners are important?" speech="" keys="any" threshold="" test="" play="_user_,A85" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="'Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text.The sentence Employers will expect that you will be punctual, is a supporting statement because being on time is an example of respectful behavior. And being respectful is a display of good manners." speech="Having a good attitude and good manners are important both at an interview and on the job' is the main idea of this text.The sentence Employers will expect that you will be punctual, is a supporting statement because being on time is an example of respectful behavior. And being respectful is a display of good manners." keys="any" threshold="" test="" play="A82" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that a supporting statement provides evidence or support of the main idea. Pick another answer please." speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please answer the question by clicking on a button. " speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you try. why is the sentence in green supporting evidence?" speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ how does this statement in green prove that a good attitude and good manners are important?" speech="" keys="any" threshold="" test="" play="_user_,A86" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Being on time is an example of good manners. I think that's that right answer!" speech="" keys="any" threshold="" test="" play="B44" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text=" I think the answer could be that punctuality means you care. " speech="" keys="any" threshold="" test="" play="B45" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="That's that answer I would pick too." speech="" keys="any" threshold="" test="" play="B46" />
@@ -283,12 +284,12 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here, we are doing the opposite of the last question. All of the statements in this text do not support the main idea. The sentence in red is an example of a statement that did not provide evidence for our main idea. Let's see if you can find the best reason why this statement isn't support!" speech="Here we are doing the opposite of the last question. All of the statements in this text do not support the main idea. The sentence in red is an example of a statement that did not provide evidence for our main idea. Let's see if you can find the best reason why this statement isn't support!" media="" itemDif="0.1" play="A86">
+        <Question id="1" agent="Cristina" text="Here, we are doing the opposite of the last question. All of the statements in this text do not support the main idea. The sentence in red is an example of a statement that did not provide evidence for our main idea. Let's see if you can find the best reason why this statement isn't support!" speech="Here we are doing the opposite of the last question. All of the statements in this text do not support the main idea. The sentence in red is an example of a statement that did not provide evidence for our main idea. Let's see if you can find the best reason why this statement isn't support!" media="" itemDif="0.1" play="A87">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="That sentence is not a supporting statement because it does not relate to the main idea of good manners and attitude. None of the other statements support the main idea. The company's mission statement is rellevant and researching the company ahead of time can provide important details about the organization. Both of those are supporting details for having good manners and attitude at a job interview." speech="" keys="na" threshold="" test="" play="A87" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try again." speech="" keys="any" threshold="" test="" play="A88" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer" speech="" keys="any" threshold="" test="" play="A89" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why doesn't this statement provide support?" speech="" keys="any" threshold="" test="" play="_user_,A90" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="That sentence is not a supporting statement because it does not relate to the main idea of good manners and attitude. None of the other statements support the main idea. The company's mission statement is rellevant and researching the company ahead of time can provide important details about the organization. Both of those are supporting details for having good manners and attitude at a job interview." speech="" keys="na" threshold="" test="" play="A88" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try again." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer" speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why doesn't this statement provide support?" speech="" keys="any" threshold="" test="" play="_user_,A91" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the company's mission statement is irrelevant." speech="" keys="any" threshold="" test="" play="B47" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="Yep, _user_ I think you're right." speech="" keys="any" threshold="" test="" play="B48,_user_,B49" />
           </Answers>
@@ -299,13 +300,13 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's imagine that we know what the author might do." speech="Let's imagine that we know what the author might do." media="" itemDif="0.1" play="A91">
+        <Question id="1" agent="Cristina" text="Let's imagine that we know what the author might do." speech="Let's imagine that we know what the author might do." media="" itemDif="0.1" play="A92">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is to make positive small talk. You will need to talk with the person interviewing you. But you don't want to chat up a storm. The interviewer is not a buddy and using their first name may not be appropriate either. He or she is someone you want to know how professional you are. Talking at the right times is key.  And talking about previous bad work experiences is not appropriate during an interview." speech="The best answer is to make positive small talk. You will need to talk with the person interviewing you. But you don't want to chat up a storm. The interviewer is not a buddy and using their first name may not be appropriate either. He or she is someone you want to know how professional you are. Talking at the right times is key.  And talking about previous bad work experiences is not appropriate during an interview." keys="any" threshold="" test="" play="A92" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The author is suggesting things we should do to maintain good manners and attitude at a job interview. Think about which of these is the most polite thing to do. Choose another answer please." speech="" keys="any" threshold="" test="" play="A93" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ please pick one of the answer choices. Remember that the answer would be related to the main idea of having a good attitude and good manners in a job interview and on the job." speech="" keys="any" threshold="" test="" play="_user_,A94" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you try. Which do you think that the author might also suggest that the reader do?" speech="" keys="any" threshold="" test="" play="A95" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Which do you think is the best answer for what the author might add to this text?" speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is to make positive small talk. You will need to talk with the person interviewing you. But you don't want to chat up a storm. The interviewer is not a buddy and using their first name may not be appropriate either. He or she is someone you want to know how professional you are. Talking at the right times is key.  And talking about previous bad work experiences is not appropriate during an interview." speech="The best answer is to make positive small talk. You will need to talk with the person interviewing you. But you don't want to chat up a storm. The interviewer is not a buddy and using their first name may not be appropriate either. He or she is someone you want to know how professional you are. Talking at the right times is key.  And talking about previous bad work experiences is not appropriate during an interview." keys="any" threshold="" test="" play="A93" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The author is suggesting things we should do to maintain good manners and attitude at a job interview. Think about which of these is the most polite thing to do. Choose another answer please." speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ please pick one of the answer choices. Remember that the answer would be related to the main idea of having a good attitude and good manners in a job interview and on the job." speech="" keys="any" threshold="" test="" play="_user_,A95" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you try. Which do you think that the author might also suggest that the reader do?" speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Which do you think is the best answer for what the author might add to this text?" speech="" keys="any" threshold="" test="" play="A97" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Making positive small talk seems like the right thing to do. It could support the main idea. " speech="" keys="any" threshold="" test="" play="B50" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Discussing previous work experiences seems important. " speech="" keys="any" threshold="" test="" play="B51" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="Looks like _user_ chose the best answer." speech="" keys="any" threshold="" test="" play="B52,_user_,B53" />
@@ -317,13 +318,13 @@
     </TutoringPack>
     <TutoringPack name="TPD1">
       <Questions>
-        <Question id="1" agent="Cristina" text="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." speech="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." media="" itemDif="0.1" play="A97">
+        <Question id="1" agent="Cristina" text="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." speech="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." media="" itemDif="0.1" play="A98">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic is safe driving. The title of this text helps us to find the topic. The author wants us to know the rules of the road that can keep people safe. " speech="The topic is safe driving. The title of this text helps us to find the topic. The author wants us to know the rules of the road that can keep people safe." keys="any" threshold="" test="" play="A98" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="Correct" text="Remember that the topic is the subject that the writer is writing about. Choose another option. " speech="" keys="any" threshold="" test="" play="A99" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose one of the options that best describes the topic of this text." speech="" keys="any" threshold="" test="" play="_user_,A100" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you can have a shot at it. What do you think the topic of this text is?" speech="Jordan, you can have a shot at it. What do you think the topic of this text is?" keys="any" threshold="" test="" play="A101" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ which of the answers is the topic of this text?" speech="" keys="any" threshold="" test="" play="_user_,A102" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic is safe driving. The title of this text helps us to find the topic. The author wants us to know the rules of the road that can keep people safe. " speech="The topic is safe driving. The title of this text helps us to find the topic. The author wants us to know the rules of the road that can keep people safe." keys="any" threshold="" test="" play="A99" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="Correct" text="Remember that the topic is the subject that the writer is writing about. Choose another option. " speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose one of the options that best describes the topic of this text." speech="" keys="any" threshold="" test="" play="_user_,A101" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you can have a shot at it. What do you think the topic of this text is?" speech="Jordan, you can have a shot at it. What do you think the topic of this text is?" keys="any" threshold="" test="" play="A102" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ which of the answers is the topic of this text?" speech="" keys="any" threshold="" test="" play="_user_,A103" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The topic of this text is safe driving. " speech="" keys="any" threshold="" test="" play="B54" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The topic of this text is pedestrians. " speech="" keys="any" threshold="" test="" play="B55" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think that is right. " speech="" keys="any" threshold="" test="" play="_user_,B56" />
@@ -335,13 +336,13 @@
     </TutoringPack>
     <TutoringPack name="TPD2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Alright you two, we need to figure of the main idea. The author is trying to teach us about safe driving." speech="Alright you two, we need to figure of the main idea. The author is trying to teach us about safe driving." media="" itemDif="0.1" play="A103">
+        <Question id="1" agent="Cristina" text="Alright you two, we need to figure of the main idea. The author is trying to teach us about safe driving." speech="Alright you two, we need to figure of the main idea. The author is trying to teach us about safe driving." media="" itemDif="0.1" play="A104">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The answer is 'As a driver you must recognize the special safety needs of pedestrians'. This is the main idea because the text is about safe driving. In particular, the safety needs of pedestrians when driving a vehicle." speech="" keys="any" threshold="" test="" play="A104" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The main idea is what the writer is trying to teach us about the topic of safe driving. Try again" speech="" keys="any" threshold="" test="" play="A105" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please choose an answer." speech="" keys="any" threshold="" test="" play="A106" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell me what the main idea is?" speech="" keys="any" threshold="" test="" play="A107" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ do you know what the main idea is?" speech="" keys="any" threshold="" test="" play="_user_,A108" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The answer is 'As a driver you must recognize the special safety needs of pedestrians'. This is the main idea because the text is about safe driving. In particular, the safety needs of pedestrians when driving a vehicle." speech="" keys="any" threshold="" test="" play="A105" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The main idea is what the writer is trying to teach us about the topic of safe driving. Try again" speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please choose an answer." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell me what the main idea is?" speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ do you know what the main idea is?" speech="" keys="any" threshold="" test="" play="_user_,A109" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The author is trying to get us to know more about the special safety needs of pedestrians." speech="" keys="any" threshold="" test="" play="B57" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that it is there is a crosswalk at every intersection even if painted lines and boundaries do not mark the crossing." speech="" keys="any" threshold="" test="" play="B58" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with _user_" speech="" keys="any" threshold="" test="" play="B59,_user_" />
@@ -353,13 +354,13 @@
     </TutoringPack>
     <TutoringPack name="TPD3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Supporting details are important to any informational text. _user_ remember to think about how these sentences help to make the author's point." speech="Supporting details are important to any informational text. Remember to think about how these sentences help to make the author's point." media="" itemDif="0.1" play="A109">
+        <Question id="1" agent="Cristina" text="Supporting details are important to any informational text. _user_ remember to think about how these sentences help to make the author's point." speech="Supporting details are important to any informational text. Remember to think about how these sentences help to make the author's point." media="" itemDif="0.1" play="A110">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it provides evidence to support the main idea." speech="" keys="any" threshold="" test="" play="A110" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that supporting information supports the main idea.Try again." speech="" keys="any" threshold="" test="" play="A111" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick a supporting statement that supports the main idea of this text." speech="" keys="any" threshold="" test="" play="_user_,A112" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, have a turn. Choose a supporting statement that supports the main idea of this text." speech="" keys="any" threshold="" test="" play="A113" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Which highlighted sentence would you choose to support the main idea?" speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it provides evidence to support the main idea." speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that supporting information supports the main idea.Try again." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick a supporting statement that supports the main idea of this text." speech="" keys="any" threshold="" test="" play="_user_,A113" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, have a turn. Choose a supporting statement that supports the main idea of this text." speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Which highlighted sentence would you choose to support the main idea?" speech="" keys="any" threshold="" test="" play="A115" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The third sentence is a supporting statement. " speech="" keys="any" threshold="" test="" play="B60" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that this sentence is the supporting statement more crashes happen at intersections than in any other place." speech="" keys="any" threshold="" test="" play="B61" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think that's was correct" speech="" keys="any" threshold="" test="" play="B62" />
@@ -371,13 +372,13 @@
     </TutoringPack>
     <TutoringPack name="TPD4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here we are going to ask ourselves how the statement. Any person afoot or using a motorized wheelchair is considered a pedestrian by state law. Is a supporting detail for the main idea." speech="Here we are going to ask ourselves why the statement. Any person afoot or using a motorized wheelchair is considered a pedestrian by state law. Is a supporting detail for the main idea. _user_ identify why this is a supporting detail for the main idea" media="" itemDif="0.1" play="A115,_user_,A116">
+        <Question id="1" agent="Cristina" text="Here we are going to ask ourselves how the statement. Any person afoot or using a motorized wheelchair is considered a pedestrian by state law. Is a supporting detail for the main idea." speech="Here we are going to ask ourselves why the statement. Any person afoot or using a motorized wheelchair is considered a pedestrian by state law. Is a supporting detail for the main idea. _user_ identify why this is a supporting detail for the main idea" media="" itemDif="0.1" play="A116,_user_,A117">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence in green is supporting information because it tells us, as the driver, about the pedestrians whose safety we should be concerned with. " speech="" keys="any" threshold="" test="" play="A117" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember in this text the writer is teaching us about the safety needs of pedestrians. Give it another try.." speech="" keys="any" threshold="" test="" play="A118" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick a supporting statement" speech="" keys="any" threshold="" test="" play="_user_,A119" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, give this one a try. Why do you think the sentence in green is supporting information?" speech="" keys="any" threshold="" test="" play="A120" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why is this highlighted sentence a supporting detail that provides evidence?" speech="" keys="any" threshold="" test="" play="_user_,A121" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence in green is supporting information because it tells us, as the driver, about the pedestrians whose safety we should be concerned with. " speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember in this text the writer is teaching us about the safety needs of pedestrians. Give it another try.." speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick a supporting statement" speech="" keys="any" threshold="" test="" play="_user_,A120" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, give this one a try. Why do you think the sentence in green is supporting information?" speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why is this highlighted sentence a supporting detail that provides evidence?" speech="" keys="any" threshold="" test="" play="_user_,A122" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="This statement tells us who the pedestrains are. " speech="" keys="any" threshold="" test="" play="B63" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="This statement clarifies the safety rules. " speech="" keys="any" threshold="" test="" play="B64" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think that you picked the right one." speech="" keys="any" threshold="" test="" play="_user_,B65" />
@@ -389,13 +390,13 @@
     </TutoringPack>
     <TutoringPack name="TPD5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." speech="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." media="" itemDif="0.1" play="A122">
+        <Question id="1" agent="Cristina" text="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." speech="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." media="" itemDif="0.1" play="A123">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is that it does not concern pedestrians. This statement does support the topic of safe driving but it does not add details to the safety of pedestrians. Details explain, illustrate, elaborate upon the main idea." speech="" keys="any" threshold="" test="" play="A123" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Try it again" speech="" keys="any" threshold="" test="" play="A124" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick an answer please" speech="" keys="any" threshold="" test="" play="_user_,A125" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why do you think this sentence isn't support?" speech="" keys="any" threshold="" test="" play="A126" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why do you think this sentence isn't supporting?" speech="" keys="any" threshold="" test="" play="_user_,A127" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is that it does not concern pedestrians. This statement does support the topic of safe driving but it does not add details to the safety of pedestrians. Details explain, illustrate, elaborate upon the main idea." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Try it again" speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ pick an answer please" speech="" keys="any" threshold="" test="" play="_user_,A126" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why do you think this sentence isn't support?" speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why do you think this sentence isn't supporting?" speech="" keys="any" threshold="" test="" play="_user_,A128" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think this statement is not a supporting detail because it does not concern pedestrians. " speech="" keys="any" threshold="" test="" play="B66" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think because intersections are dangerous." speech="" keys="any" threshold="" test="" play="B67" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B68" />
@@ -407,13 +408,13 @@
     </TutoringPack>
     <TutoringPack name="TPD6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's see if you can put yourself in the author's shoes." speech="Let's see if you can put yourself in the author's shoes." media="" itemDif="0.1" play="A128">
+        <Question id="1" agent="Cristina" text="Let's see if you can put yourself in the author's shoes." speech="Let's see if you can put yourself in the author's shoes." media="" itemDif="0.1" play="A129">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Stop until they clear the crosswalk is the correct answer because that is what it says in the text." speech="" keys="any" threshold="" test="" play="A129" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The author is concerned with pedestrian safety. Think about how a pedestrian can best be kept safe by the driver of a vehicle. " speech="" keys="any" threshold="" test="" play="A130" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A131" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the author would have us do?" speech="" keys="any" threshold="" test="" play="A132" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what action do you think the author might suggest?" speech="" keys="any" threshold="" test="" play="_user_,A133" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Stop until they clear the crosswalk is the correct answer because that is what it says in the text." speech="" keys="any" threshold="" test="" play="A130" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The author is concerned with pedestrian safety. Think about how a pedestrian can best be kept safe by the driver of a vehicle. " speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the author would have us do?" speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what action do you think the author might suggest?" speech="" keys="any" threshold="" test="" play="_user_,A134" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="You should stop and wait for the person to get through the crosswalk. " speech="" keys="any" threshold="" test="" play="B69" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="You should probably yield and honk. Why would someone just step in the street?" speech="" keys="any" threshold="" test="" play="B70" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think that was right." speech="" keys="any" threshold="" test="" play="B71" />
@@ -425,12 +426,12 @@
     </TutoringPack>
     <TutoringPack name="TPE1">
       <Questions>
-        <Question id="1" agent="Cristina" text="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." speech="_user_ and Jordan, we need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." media="" itemDif="0.1" play="_user_,A134">
+        <Question id="1" agent="Cristina" text="We need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." speech="_user_ and Jordan, we need to decide on the topic of this text. Remember a topic is the general idea the author is writing about." media="" itemDif="0.1" play="_user_,A135">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is germs. That is what the author is writing about in general. " speech="" keys="any" threshold="" test="" play="A135" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember, a topic is a subject that the writer is writing about. Try again." speech="" keys="any" threshold="" test="" play="A136" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ please pick one of the answers that is the topic of this text." speech="" keys="any" threshold="" test="" play="_user_,A137" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the topic of this text is?" speech="" keys="any" threshold="" test="" play="A138" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is germs. That is what the author is writing about in general. " speech="" keys="any" threshold="" test="" play="A136" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember, a topic is a subject that the writer is writing about. Try again." speech="" keys="any" threshold="" test="" play="A137" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ please pick one of the answers that is the topic of this text." speech="" keys="any" threshold="" test="" play="_user_,A138" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the topic of this text is?" speech="" keys="any" threshold="" test="" play="A139" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Cristina, I want to say the topic of this one is germs. " speech="" keys="any" threshold="" test="" play="B72" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think this text is about sleep. " speech="" keys="any" threshold="" test="" play="B73" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think you nailed this one!" speech="" keys="any" threshold="" test="" play="B74" />
@@ -444,11 +445,11 @@
       <Questions>
         <Question id="1" agent="Jordan" text="Alright you two, we need to figure of the main idea. The author is trying to teach us about germs." speech="Alright you two, we need to figure of the main idea. The author is trying to teach us about germs." media="" itemDif="0.1" play="B75">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence 'Colds are caused by cold germs' is the main idea of this text. The author is trying to teach us about germs and more specifically. The author wants to teach us about cold germs. " speech="" keys="any" threshold="" test="" play="A139" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="We are looking for the sentence that best describes what the writer is trying to teach us about  the topic. Try again" speech="" keys="any" threshold="" test="" play="A140" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose a sentence in the text that you think best describes what the writer is trying to teach us about the topic." speech="" keys="any" threshold="" test="" play="_user_,A141" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Okay Jordan, you can have a turn. What do you think the sentence that best describes the topic is?" speech="" keys="any" threshold="" test="" play="A142" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what is the author trying to teach us about germs?" speech="" keys="any" threshold="" test="" play="_user_,A143" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence 'Colds are caused by cold germs' is the main idea of this text. The author is trying to teach us about germs and more specifically. The author wants to teach us about cold germs. " speech="" keys="any" threshold="" test="" play="A140" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="We are looking for the sentence that best describes what the writer is trying to teach us about  the topic. Try again" speech="" keys="any" threshold="" test="" play="A141" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose a sentence in the text that you think best describes what the writer is trying to teach us about the topic." speech="" keys="any" threshold="" test="" play="_user_,A142" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Okay Jordan, you can have a turn. What do you think the sentence that best describes the topic is?" speech="" keys="any" threshold="" test="" play="A143" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what is the author trying to teach us about germs?" speech="" keys="any" threshold="" test="" play="_user_,A144" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Well, this is tricky. I am going to guess that the correct sentence is 'colds' are caused by cold germs. Maybe that is it." speech="" keys="any" threshold="" test="" play="B76" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am going to say the sentence many colds can be prevented is the right answer. " speech="" keys="any" threshold="" test="" play="B77" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="Cristina, I agree with _user_." speech="" keys="any" threshold="" test="" play="B78,_user_" />
@@ -462,11 +463,11 @@
       <Questions>
         <Question id="1" agent="Jordan" text="Supporting details are important to any informational text. _user_ remember to think about how these sentences help to make the author's point." speech="Supporting details are important to any informational text. _user_ remember to think about how these sentences help to make the author's point." media="" itemDif="0.1" play="B79,_user_,B80">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is supporting because it provides the support we need to support the main idea. It offers details to help make the author's point. " speech="" keys="any" threshold="" test="" play="A144" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the supporting information supports the main idea which is colds are caused by  cold germs. Please select another answer." speech="" keys="any" threshold="" test="" play="A145" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ try and click a sentence that you think supports the main idea that colds are caused by cold germs." speech="" keys="any" threshold="" test="" play="_user_,A146" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you can try. Which is the supporting statement?" speech="" keys="any" threshold="" test="" play="A147" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ click on a sentence that provides supporting information." speech="" keys="any" threshold="" test="" play="_user_,A148" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is supporting because it provides the support we need to support the main idea. It offers details to help make the author's point. " speech="" keys="any" threshold="" test="" play="A145" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that the supporting information supports the main idea which is colds are caused by  cold germs. Please select another answer." speech="" keys="any" threshold="" test="" play="A146" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ try and click a sentence that you think supports the main idea that colds are caused by cold germs." speech="" keys="any" threshold="" test="" play="_user_,A147" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, you can try. Which is the supporting statement?" speech="" keys="any" threshold="" test="" play="A148" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ click on a sentence that provides supporting information." speech="" keys="any" threshold="" test="" play="_user_,A149" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think that it might possibly be that when people sneeze and cough they spread cold germs. " speech="" keys="any" threshold="" test="" play="B81" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I pick however, many colds can be prevented. " speech="" keys="any" threshold="" test="" play="B82" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I am going to follow your lead. I think that's right. " speech="" keys="any" threshold="" test="" play="_user_,B83" />
@@ -478,13 +479,13 @@
     </TutoringPack>
     <TutoringPack name="TPE4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here we are going to ask ourselves how the statement. Colds are caused by cold germs. Is a supporting statement for the main idea." speech="Here we are going to ask ourselves how the statement. Colds are caused by cold germs. Is a supporting statement for the main idea." media="" itemDif="0.1" play="A149">
+        <Question id="1" agent="Cristina" text="Here we are going to ask ourselves how the statement. Colds are caused by cold germs. Is a supporting statement for the main idea." speech="Here we are going to ask ourselves how the statement. Colds are caused by cold germs. Is a supporting statement for the main idea." media="" itemDif="0.1" play="A150">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it provides information about cold germs." speech="" keys="any" threshold="" test="" play="A150" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that a supporting statement must  support the the sentence in blue which is the main idea. Give it another try. " speech="" keys="any" threshold="" test="" play="A151" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose another sentence that supports the main idea that colds are caused by cold germs." speech="" keys="any" threshold="" test="" play="_user_,A152" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why is this sentence supporting?" speech="" keys="any" threshold="" test="" play="A153" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why is the sentence in green a supporting statement?" speech="" keys="any" threshold="" test="" play="_user_,A154" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence is a supporting statement because it provides information about cold germs." speech="" keys="any" threshold="" test="" play="A151" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that a supporting statement must  support the the sentence in blue which is the main idea. Give it another try. " speech="" keys="any" threshold="" test="" play="A152" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ choose another sentence that supports the main idea that colds are caused by cold germs." speech="" keys="any" threshold="" test="" play="_user_,A153" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why is this sentence supporting?" speech="" keys="any" threshold="" test="" play="A154" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why is the sentence in green a supporting statement?" speech="" keys="any" threshold="" test="" play="_user_,A155" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Could it be because this text is informing us about cold germs. " speech="" keys="any" threshold="" test="" play="B84" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The text talks about science is a good answer. " speech="" keys="any" threshold="" test="" play="B85" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think that is right. " speech="" keys="any" threshold="" test="" play="B86" />
@@ -496,13 +497,13 @@
     </TutoringPack>
     <TutoringPack name="TPE5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." speech="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." media="" itemDif="0.1" play="A155">
+        <Question id="1" agent="Cristina" text="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." speech="Every sentence is a given text will not provide details that directly support the main idea. Details should add more to what the author is trying to tell." media="" itemDif="0.1" play="A156">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The text is about cold germs. The statement that, on average people have about three colds a year is not relevant to the main idea so it is not a supporting statement" speech="" keys="any" threshold="" test="" play="A156" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="not exactly, remember that a supporting statement supports the main idea." speech="" keys="any" threshold="" test="" play="A157" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ give it a try, what else do you think the author might suggest? " speech="" keys="any" threshold="" test="" play="_user_,A158" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you give it a try. Why is the sentence in red not a supporting statement" speech="" keys="any" threshold="" test="" play="A159" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why do you think this statement is not supporting?" speech="" keys="any" threshold="" test="" play="_user_,A160" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The text is about cold germs. The statement that, on average people have about three colds a year is not relevant to the main idea so it is not a supporting statement" speech="" keys="any" threshold="" test="" play="A157" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="not exactly, remember that a supporting statement supports the main idea." speech="" keys="any" threshold="" test="" play="A158" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ give it a try, what else do you think the author might suggest? " speech="" keys="any" threshold="" test="" play="_user_,A159" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you give it a try. Why is the sentence in red not a supporting statement" speech="" keys="any" threshold="" test="" play="A160" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ why do you think this statement is not supporting?" speech="" keys="any" threshold="" test="" play="_user_,A161" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the best answer is that this statement does not add to the main idea. " speech="" keys="any" threshold="" test="" play="B87" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think many colds can be prevented is correct. " speech="" keys="any" threshold="" test="" play="B88" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ I think that's it." speech="" keys="any" threshold="" test="" play="_user_,B89" />
@@ -516,11 +517,11 @@
       <Questions>
         <Question id="1" agent="Jordan" text="Let's see if you can put yourself in the author's shoes." speech="Let's see if you can put yourself in the author's shoes." media="" itemDif="0.1" play="B90">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Cover your mouth when you cough is the correct answer because the writer is trying to teach us about how Colds are caused by cold germs. A way that cold germs can spread is if we don't cover our mouth when we cough, so the author would probably suggest that we cover our mouths when we cough" speech="" keys="any" threshold="" test="" play="A161" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about the topic of Colds are caused by cold germs. and try again please." speech="" keys="any" threshold="" test="" play="A162" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ give it a try, what else do you think the author might suggest? " speech="" keys="any" threshold="" test="" play="_user_,A163" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you give it a try. What would the author suggest?" speech="" keys="any" threshold="" test="" play="A164" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what do you think the author might suggest?" speech="" keys="any" threshold="" test="" play="_user_,A165" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Cover your mouth when you cough is the correct answer because the writer is trying to teach us about how Colds are caused by cold germs. A way that cold germs can spread is if we don't cover our mouth when we cough, so the author would probably suggest that we cover our mouths when we cough" speech="" keys="any" threshold="" test="" play="A162" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about the topic of Colds are caused by cold germs. and try again please." speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ give it a try, what else do you think the author might suggest? " speech="" keys="any" threshold="" test="" play="_user_,A164" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why don't you give it a try. What would the author suggest?" speech="" keys="any" threshold="" test="" play="A165" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ what do you think the author might suggest?" speech="" keys="any" threshold="" test="" play="_user_,A166" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the author would say to cover your mouth when you cough. " speech="" keys="any" threshold="" test="" play="B91" />
             <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Well, I think that the author may suggest that we exercise and eat healthy food." speech="" keys="any" threshold="" test="" play="B92" />
             <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ that is what I was going to choose too. " speech="" keys="any" threshold="" test="" play="_user_,B93" />
@@ -750,7 +751,7 @@
       <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
       <Action agent="System" act="ShowMediaEvent" data="JordanIncorrect" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegaitveFeedbackToJordan" id="5" />
       <Action agent="Cristina" act="Answer" data="Correct" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />

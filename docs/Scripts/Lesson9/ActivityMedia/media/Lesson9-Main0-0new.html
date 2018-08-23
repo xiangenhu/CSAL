@@ -5,12 +5,12 @@
 <script>document.domain='ace.autotutor.org'</script>
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -483,8 +483,8 @@
 				{
 					$("#buttonBox").fadeOut(1000);
 					$("#questionText").fadeOut(1000);
-				
-					if (strId.length >= 7)
+				var len=strId.length
+					if (len >= 8)
 					{
 					parent.nextPage("media/"+"Lesson9-Main2-0new.html?id="+strId);
 					}

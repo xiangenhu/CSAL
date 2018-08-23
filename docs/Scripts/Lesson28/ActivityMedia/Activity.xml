@@ -3,96 +3,104 @@
   <Agents>
     <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
       <SpeechCan name="PositiveFeedback">
-        <Item text="Great job! That's right!" speech="" play="B1" />
-        <Item text="Brilliant! That's right!" speech="" play="B2" />
-        <Item text="Awesome job!" speech="" play="B3" />
-        <Item text="You're on a roll! That's right!" speech="" play="B4" />
-        <Item text="That's right!" speech="" play="B5" />
-        <Item text="Stupendous job!" speech="" play="B6" />
-        <Item text="Wonderful job!" speech="" play="B7" />
-        <Item text="That is correct!" speech="" play="B8" />
+        <Item text="Great job! That's right!" speech="" />
+        <Item text="Brilliant! That's right!" speech="" />
+        <Item text="Awesome job!" speech="" />
+        <Item text="You're on a roll! That's right!" speech="" />
+        <Item text="That's right!" speech="" />
+        <Item text="Stupendous job!" speech="" />
+        <Item text="Wonderful job!" speech="" />
+        <Item text="That is correct!" speech="" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="That is incorrect." speech="" play="B9" />
-        <Item text="That's not quite right." speech="" play="B10" />
-        <Item text="That is not quite what i'm looking for." speech="" play="B11" />
-        <Item text="Not really." speech="" play="B12" />
-        <Item text="Not exactly." speech="" play="B13" />
+        <Item text="That is incorrect." speech="" />
+        <Item text="That's not quite right." speech="" />
+        <Item text="That is not quite what i'm looking for." speech="" />
+        <Item text="Not really." speech="" />
+        <Item text="Not exactly." speech="" />
       </SpeechCan>
       <SpeechCan name="IWasRight">
-        <Item text="Yay, I got it right!" speech="" play="B14" />
-        <Item text="I was lucky to get this one right." speech="" play="B15" />
-        <Item text="Yay, I was right on this one!" speech="" play="B16" />
+        <Item text="Yay, I got it right!" speech="" />
+        <Item text="I was lucky to get this one right." speech="" />
+        <Item text="Yay, I was right on this one!" speech="" />
       </SpeechCan>
       <SpeechCan name="JordanAlsoNotCorrect">
-        <Item text="Why wasn't my answer right?" speech="" play="B17" />
-        <Item text="Why was my answer wrong?" speech="" play="B18" />
-        <Item text="Why didn't I get the correct answer?" speech="" play="B19" />
+        <Item text="Why wasn't my answer right?" speech="" />
+        <Item text="Why was my answer wrong?" speech="" />
+        <Item text="Why didn't I get the correct answer?" speech="" />
       </SpeechCan>
       <SpeechCan name="IAgree">
-        <Item text="I agree with _user_." speech="" play="B20,_user_" />
-        <Item text="I would choose the same answer _user_ chose." speech="" play="B21,_user_,B22" />
-        <Item text="I agree with _user_'s choice." speech="" play="B23,_user_,B24" />
+        <Item text="I agree with _user_." speech="" />
+        <Item text="I would choose the same answer _user_ chose." speech="" />
+        <Item text="I agree with _user_'s choice." speech="" />
       </SpeechCan>
     </Agent>
     <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
       <SpeechCan name="MoreTime">
-        <Item text="_user_, it seems that you might need a little bit more time. Go ahead and keep reading." speech="" play="_user_,A1" />
+        <Item text="_user_, it seems that you might need a little bit more time. Go ahead and keep reading." speech="" />
       </SpeechCan>
       <SpeechCan name="BothIncorrect">
-        <Item text="Unfortunately, neither of you got it correct. " speech="" play="A2" />
+        <Item text="Unfortunately, neither of you got it correct. " speech="" />
       </SpeechCan>
       <SpeechCan name="AskJordan">
-        <Item text="Jordan, now it's your turn to answer" speech="" play="A3" />
-        <Item text="What is your answer, Jordan?" speech="" play="A4" />
-        <Item text="Jordan, it's your turn." speech="" play="A5" />
-        <Item text="Jordan, what is your answer choice?" speech="" play="A6" />
+        <Item text="Jordan, now it's your turn to answer" speech="" />
+        <Item text="What is your answer, Jordan?" speech="" />
+        <Item text="Jordan, it's your turn." speech="" />
+        <Item text="Jordan, what is your answer choice?" speech="" />
       </SpeechCan>
       <SpeechCan name="UserIncorrect">
-        <Item text="Sorry _user_, you did not get it right this time." speech="" play="A7,_user_,A8" />
-        <Item text="Unfortunately _user_, your answer was not correct. " speech="" play="A9,_user_,A10" />
-      </SpeechCan>
-      <SpeechCan name="NegativeFeedback">
-        <Item text="That is incorect." speech="" play="A11" />
-        <Item text="That's not quite right." speech="" play="A12" />
-        <Item text="That is not quite what i'm looking for." speech="" play="A13" />
-        <Item text="Not really." speech="" play="A14" />
-        <Item text="Not exactly." speech="" play="A15" />
+        <Item text="Sorry _user_, you did not get it right this time." speech="" />
+        <Item text="Unfortunately _user_, your answer was not correct. " speech="" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
-        <Item text="Great job! That's right!" speech="" play="A16" />
-        <Item text="Brilliant! That's right!" speech="" play="A17" />
-        <Item text="Awesome job!" speech="" play="A18" />
-        <Item text="You're on a roll! That's right!" speech="" play="A19" />
-        <Item text="That's right!" speech="" play="A20" />
-        <Item text="Stupendous job!" speech="" play="A21" />
-        <Item text="Wonderful job!" speech="" play="A22" />
-        <Item text="That is correct!" speech="" play="A23" />
+        <Item text="Great job! That's right!" speech="" />
+        <Item text="Brilliant! That's right!" speech="" />
+        <Item text="Awesome job!" speech="" />
+        <Item text="You're on a roll! That's right!" speech="" />
+        <Item text="That's right!" speech="" />
+        <Item text="Stupendous job!" speech="" />
+        <Item text="Wonderful job!" speech="" />
+        <Item text="That is correct!" speech="" />
       </SpeechCan>
       <SpeechCan name="JordanAnswerSecond">
-        <Item text="Ok. Jordan, it is your turn." speech="" play="A24" />
-        <Item text="Jordan, what is your answer for this question?" speech="" play="A25" />
+        <Item text="Ok. Jordan, it is your turn." speech="" />
+        <Item text="Jordan, what is your answer for this question?" speech="" />
       </SpeechCan>
       <SpeechCan name="UserCorrect">
-        <Item text="_user_, you are right. Good Job! Yes." speech="" play="_user_,A26" />
-        <Item text="You are correct _user_, excellent! Yes." speech="" play="A27,_user_,A28" />
-        <Item text="_user_, you are right! Nice going! Yes." speech="" play="_user_,A29" />
+        <Item text="_user_, you are right. Good Job! Yes." speech="" />
+        <Item text="You are correct _user_, excellent! Yes." speech="" />
+        <Item text="_user_, you are right! Nice going! Yes." speech="" />
       </SpeechCan>
-      <SpeechCan name="JordanCorrect">
-        <Item text="Jordan, you are right. Good job!" speech="" play="A30" />
-        <Item text="Jordan, you got it correct this time. Great job!" speech="" play="A31" />
-      </SpeechCan>
-      <SpeechCan name="User">
-        <Item text="_user_, for your answer," speech="" play="_user_,A32" />
-      </SpeechCan>
-      <SpeechCan name="AnsweringJordan">
-        <Item text="Well Jordan," speech="" play="A33" />
-      </SpeechCan>
-      <SpeechCan name="BothCorrect">
-        <Item text="_user_ and Jordan, you both got it correct! Great job!" speech="" play="_user_,A34" />
+      <SpeechCan name="PositiveToJordan">
+        <Item text="Jordan, that is correct!" speech="" />
+        <Item text="Jordan, you got it right!" speech="" />
       </SpeechCan>
       <SpeechCan name="UserAnswerSecond">
-        <Item text="Okay. _user_, it's your turn now. Please click on one of the answers that you think is the correct answer. " speech="" play="A35,_user_,A36" />
+        <Item text="Okay. _user_, it's your turn now. Please click on one of the answers that you think is the correct answer. " speech="" />
+      </SpeechCan>
+      <SpeechCan name="JordanCorrect">
+        <Item text="Jordan, you are right. Good job!" speech="" />
+        <Item text="Jordan, you got it correct this time. Great job!" speech="" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToJordan">
+        <Item text="Jordan, sorry, no." speech="" />
+        <Item text="Jordan, you didn't get that one right." speech="" />
+      </SpeechCan>
+      <SpeechCan name="User">
+        <Item text="_user_, for your answer," speech="" />
+      </SpeechCan>
+      <SpeechCan name="AnsweringJordan">
+        <Item text="Well Jordan," speech="" />
+      </SpeechCan>
+      <SpeechCan name="BothCorrect">
+        <Item text="You both got it correct! Great job!" speech="" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="That is incorect." speech="" />
+        <Item text="That's not quite right." speech="" />
+        <Item text="That is not quite what i'm looking for." speech="" />
+        <Item text="Not really." speech="" />
+        <Item text="Not exactly." speech="" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -149,9 +157,6 @@
       <Item id="8" agent="Jordan" text="That sounds like important news." speech="" play="B33" />
       <Item id="9" agent="Cristina" text="_user_, please use the scrollbar at the right hand side to continue reading the rest of the text not shown. Then click, click to continue when you feel like you have finished, But take your time." speech="_user_, please use the scroll bar at the right hand side to continue reading the rest of the text not shown. Then click, click to continue when you feel like you have finished, But take your time." play="_user_,A60" />
     </RigidPack>
-    <RigidPack name="E6" usedIn="E6">
-      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A61" />
-    </RigidPack>
     <RigidPack name="M2" usedIn="M2">
       <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A62" />
     </RigidPack>
@@ -174,15 +179,18 @@
       <Item id="4" agent="Jordan" text="Yes I definitely will. _user_, this has been informative. I hope you would also read another article with me." speech="" play="B35,_user_,B36" />
       <Item id="5" agent="Cristina" text="The title of the second article will be How social media is reshaping news. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scrollbar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." speech="The title of the second article will be How social media is reshaping news. _user_ and Jordan, please take some time to read through the article. Again it is no rush. _user_, please use the scroll bar on the right hand side to read the rest of the text not shown. Then click, click to continue when you are done reading." media="media\Lesson28(H)-Article.html" play="A70,_user_,A71,_user_,A72" />
     </RigidPack>
+    <RigidPack name="M7" usedIn="M7">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A85" />
+    </RigidPack>
     <RigidPack name="M6" usedIn="M6">
       <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A73" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ and Jordan, you both worked hard in getting through these two texts, they are not so easy!" speech="" media="media\Lesson28-Close.html" play="_user_,A74" />
-      <Item id="2" agent="Jordan" text="Yes but now I feel like I learned a lot about what is going on in the world, as well as how to read informational texts." speech="" play="B37" />
-      <Item id="3" agent="Cristina" text="Good. That is the purpose of this lesson. I hope that you and _user_ will practice using the elaborating through questioning reading strategy for future articles that you might encounter." speech="" play="A75,_user_,A76" />
-      <Item id="4" agent="Jordan" text="I definitely will, thanks again Cristina, and you too _user_. I will see you next time. " speech="" play="B38,_user_,B39" />
-      <Item id="5" agent="Cristina" text="Goodbye." speech="" play="A77" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, you both worked hard in getting through these two texts, they are not so easy!" speech="" media="media\Lesson28-Close.html" />
+      <Item id="2" agent="Jordan" text="Yes but now I feel like I learned a lot about what is going on in the world, as well as how to read informational texts." speech="" />
+      <Item id="3" agent="Cristina" text="Good. That is the purpose of this lesson. I hope that you and _user_ will practice using the elaborating through questioning reading strategy for future articles that you might encounter." speech="" />
+      <Item id="4" agent="Jordan" text="I definitely will, thanks again Cristina, and you too _user_. I will see you next time. " speech="" />
+      <Item id="5" agent="Cristina" text="Goodbye." speech="" />
     </RigidPack>
     <RigidPack name="M3" usedIn="M3">
       <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A78" />
@@ -205,8 +213,8 @@
     <RigidPack name="D6" usedIn="D6">
       <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A84" />
     </RigidPack>
-    <RigidPack name="M7" usedIn="M7">
-      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A85" />
+    <RigidPack name="E6" usedIn="E6">
+      <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A61" />
     </RigidPack>
     <RigidPack name="M5" usedIn="M5">
       <Item id="1" agent="Cristina" text="Let us go to the next question." speech="" play="A86" />
@@ -215,16 +223,16 @@
   <TutoringPacks>
     <TutoringPack name="D1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Okay, let us start from the beginning of the story again. Jordan and _user_, based on the title and image, what is the topic? Jordan, why don't you start this round?" speech="" media="" itemDif="0.1" play="A87,_user_,A88">
+        <Question id="1" agent="Cristina" text="Okay, let us start from the beginning of the story again. Jordan and _user_, based on the title and image, what is the topic? Jordan, why don't you start this round?" speech="" media="">
           <Answers>
-            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A89" />
-            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A90" />
-            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="asdf" threshold="" test="" play="A91" />
-            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the topic is Social media sites" speech="" keys="sdf" threshold="" test="" play="B40" />
-            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the topic is Facebook." speech="I think the topic is Face book." keys="asdf" threshold="" test="" play="B41" />
-            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the topic is U.S. Adults" speech="" keys="asdf" threshold="" test="" play="B42" />
-            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered Face book. Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" play="A92" />
-            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered U.S. adults. U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="sdf" threshold="" test="" play="A93" />
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="asdf" threshold="" test="" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the topic is Social media sites" speech="" keys="sdf" threshold="" test="" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the topic is Facebook." speech="I think the topic is Face book." keys="asdf" threshold="" test="" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the topic is U.S. Adults" speech="" keys="asdf" threshold="" test="" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you answered Face book. Facebook is suggested to be a piece of supporting information. Social media sites is the correct answer" speech="" keys="asdf" threshold="" test="" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you answered U.S. adults. U.S. adults is an only mentioned population for using Social media sites. So Social media sites is the correct answer." speech="" keys="sdf" threshold="" test="" />
           </Answers>
         </Question>
       </Questions>
@@ -754,7 +762,7 @@
       <Misconceptions />
     </TutoringPack>
   </TutoringPacks>
-    <Rules>
+  <Rules>
     <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
       <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
@@ -769,13 +777,13 @@
       <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
       <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="4" />
-	  <Action agent="System" act="Wait" data="60" id="5" />
+      <Action agent="System" act="Wait" data="60" id="5" />
     </Rule>
     <Rule name="DoneReading2" status="DoneReading" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="HideAudioButton" data="" id="1" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
       <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
-	  <Action agent="System" act="Wait" data="60" id="4" />
+      <Action agent="System" act="Wait" data="60" id="4" />
     </Rule>
     <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
@@ -786,13 +794,13 @@
       <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
       <Action agent="System" act="HideAudioButton" data="" id="2" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
-	    <Action agent="System" act="Wait" data="60" id="4" />
+      <Action agent="System" act="Wait" data="60" id="4" />
     </Rule>
     <Rule name="UserMoveOn2" status="MoveOn" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
       <Action agent="System" act="HideAudioButton" data="" id="2" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
-	    <Action agent="System" act="Wait" data="60" id="4" />
+      <Action agent="System" act="Wait" data="60" id="4" />
     </Rule>
     <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
@@ -816,7 +824,7 @@
     <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
       <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
-	   <Action agent="System" act="Wait" data="60" id="4" />
+      <Action agent="System" act="Wait" data="60" id="3" />
     </Rule>
     <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
@@ -852,12 +860,12 @@
     <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
       <Action agent="Cristina" act="AskMainQuestion" data="1" id="1" />
       <Action agent="System" act="SetStatus" data="CheckJordanAnswerFirst" id="2" />
-	   <Action agent="System" act="GetRule" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="LoadPage" id="1" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
-	  <Action agent="System" act="Wait" data="5" id="3" />
+      <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
     <Rule name="JordanAnswerFirstGood" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstGood" id="1" />
@@ -920,7 +928,7 @@
       <Action agent="System" act="SetStatus" data="Start2" id="1" />
       <Action agent="System" act="ShowAudioButton" data="" id="2" />
       <Action agent="System" act="GetMediaEvent" data="Difficulty" id="3" />
-	        <Action agent="System" act="Wait" data="60" id="4" />
+      <Action agent="System" act="Wait" data="60" id="4" />
     </Rule>
     <Rule name="PageLoadedE" status="PageLoaded" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
@@ -944,33 +952,36 @@
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="Jordan" act="Answer" data="JordanBad1Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
-      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="8" />
-      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="8" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="9" />
+      <Action agent="System" act="SetStatus" data="Transition" id="10" />
     </Rule>
     <Rule name="UserFirstCorrectJordanIC2" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="Jordan" act="Answer" data="JordanBad2Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
-      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="8" />
-      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="8" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="9" />
+      <Action agent="System" act="SetStatus" data="Transition" id="10" />
     </Rule>
     <Rule name="UserFirstIC1JordanCorrect" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
-      <Action agent="Cristina" act="Answer" data="IC1" id="5" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
-      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
-      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="6" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
     </Rule>
     <Rule name="UserFirstIC1JordanIC1" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
@@ -997,11 +1008,12 @@
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
-      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
-      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
-      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveToJordan" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="6" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
     </Rule>
     <Rule name="UserFirstIC2JordanIC1" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />

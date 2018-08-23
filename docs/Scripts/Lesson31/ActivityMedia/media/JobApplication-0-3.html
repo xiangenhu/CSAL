@@ -2,17 +2,17 @@
 <html>
 	<head>
 		<title>CSAL Media</title>
-<script>document.domain = 'xiangenhu.github.io'</script>
+<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -292,11 +292,11 @@
 					//document.getElementById("ShowAnswer").innerHTML = userAnswer;
 					//$("#ShowAnswer").css({"background-color": "yellow"});
 					$("#jobAppInput").val('');
-				    parent.GetWorldEvent(userAnswer);
+				   	return parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
 				};
 				
 				$('#jobAppInput').keydown(function(e) {
-					if(e.keyCode == 13) {
+					if(e.keyCode == 13) { // when click enter key
 						parent.PlaySound('clicked0.wav'); 
 					
 						//animate button click
@@ -308,9 +308,11 @@
 						userAnswer =$("#jobAppInput").val().toLowerCase();
 						userAnswer2=userAnswer.toLowerCase();
 						$('textarea').attr('readonly', true);
-						if(userAnswer2=="server"||userAnswer2=="waiter"||userAnswer2=="wait person")
+						//if(userAnswer2=="server"||userAnswer2=="waiter"||userAnswer2=="wait person")
+						if(userAnswer2=="communication skill"||userAnswer2=="communication skills")
 						{
 						score++;
+						userAnswerCorrect=true;
 						parent.PlaySound('clicked0.wav'); 
 						
 						}
@@ -320,7 +322,7 @@
 						//document.getElementById("ShowAnswer").innerHTML = userAnswer;
 						//$("#ShowAnswer").css({"background-color": "yellow"});
 						$("#jobAppInput").val('');
-						return parent.GetWorldEvent(userAnswer);
+						return parent.GetWorldEvent("userInput_"+userAnswer2+"_"+userAnswer2);
 					}
 				});
 				

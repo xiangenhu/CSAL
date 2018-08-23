@@ -1,5 +1,5 @@
 //var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
-var aceurl = "https://ace.x-in-y.com/ACEAPI2017/api/aceaction";
+var aceurl = "http://ace.autotutor.org/ACEAPI2017/api/aceaction";
 var actions;
 var PutStatus=false;
 
@@ -35,7 +35,6 @@ function Put(acePutjson) {
 
    
     var content = acePutjson;
-	console.log(acePutjson);
     var method = "PUT";
     webAPImethod = method;
     var getUrl = $.ajax({
@@ -54,11 +53,7 @@ function Put(acePutjson) {
     }).done(function(data) {
         var errorInfo = GetRuleError(data);
         var actionsError = GetActions(data);
-		
 		console.log(actions);
-		console.log(errorInfo);
-		console.log(actionsError);
-		
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {
            
@@ -92,9 +87,8 @@ function GetRuleError(obj) {
 }
 
 function GetActions(obj) {
-	console.log(obj);
     for (var key in obj) {
-		console.log(key);
+
         if (key == "ACEActions") {
             var getActions = obj[key];
             if (getActions == null) {

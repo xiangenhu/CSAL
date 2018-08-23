@@ -1,18 +1,17 @@
-
 <html>
 	<head>
 		<title>CSAL Media</title>
-		<script>document.domain = 'xiangenhu.github.io'</script>
+		<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -21,6 +20,15 @@
 		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
 		
 		<style type="text/css" id="page-css">
+			.border { border: 2px solid #757575; border-radius: 2px; }
+			.indent { padding-left: 20px; }
+			.underline { text-decoration: underline; }
+			.bold { font-weight: bold; }
+			.notBold {font-weight: normal;}
+			.italic { font-style: italic; }
+			.vertSpace { margin-top: 5px; margin-bottom: 5px; }
+			.vertSpace1 { margin-top: 10px; margin-bottom: 10px; }
+			
 			body
 			{
 				background-image:url('EmailBkgd0.jpg');
@@ -59,53 +67,61 @@
 				padding: 3px 1px;
 				cursor: pointer;
 			}
-			#inboxPane
-			{
+			.button
+			{				
 				font-size: 20px;
-				width: 680px;
-				position: fixed;
-				top: 50px;
-				left: 110px;
-			}
-			.message
-			{
-				width: 680px;
-				margin: 6px 0px;
-				border: 1px solid gray;
-			}
-			.emailLine
-			{
-				width: 670px;
-				
-			}
-			.sender
-			{
-				width: 180px;
-				display: inline-block;
-				font-size: 22px;
-			}
-			.subject
-			{
-				width: 470px;
-				display: inline-block;
-			}
-			.mybutton
-			{
-				font-size: 20px;
-				font-family: Raleway, Verdana, 'Times New Roman';
 				font-weight: 700;
-				width: 760px;
-				height: 34px;
-				line-height: 34px;
 				margin: 2px;
 				text-decoration: none;
 				border: none;
-				position: relative;
-				text-align: center;
-				padding: 2px;
-				display: inline-block;
+				
+				padding: 5px;
 				outline: none;
-				border-radius: 12px;
+				border-radius: 8px;
+				display: inline-block;
+				z-index: 1000;
+				cursor: pointer;
+			}
+			#emailPane
+			{
+				font-size: 20px;
+				width: 670px;
+				position: fixed;
+				top: 60px;
+				left: 120px;
+			}
+			.emailHead
+			{
+				font-size: 24px;
+				margin: 3px 0px;
+				z-index: -1;
+			}
+			#emailBody
+			{
+				font-size: 22px;
+			}
+			.para
+			{
+				margin: 10px 0px;
+			}
+			#replyContainer
+			{
+				position: fixed;
+				top: 54px;
+				right: 0px;
+				width: 220px;
+				z-index: 1000;
+			}
+			
+			#replyButton
+			{
+				height: 100%;
+				right: 40px;
+			}
+			#replyAllButton
+			{
+				height:  100%;
+				right: 20px;
 			}
 			#boxHead
 			{
@@ -120,13 +136,27 @@
 			$(document).ready(function()
 			{				
 				//lock the buttons
+				
 				Lock();
+				//Unlock()
 				
 				parent.GetWorldEvent("MediaLoaded");
 				
 				//create scroll pane element
 				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//ScrollToId($scrollElement, "coreHead");
 			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-65);
+			}
 			function ShowItem()
 			{
 				
@@ -143,24 +173,23 @@
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
-						
 					//highlight the correct answer green
-					$("#m1").animate({backgroundColor: "green", color: "white"}, 1000);
+					$("#replyButton").animate({backgroundColor: "green", color: "white"}, 1000);
 					
 			}
 			
 			function Lock()
 			{
 				//unbinds click function and hover
-				$( ".message" ).unbind("click");
-				$( ".message" ).unbind("mouseover");
-				$( ".message" ).unbind("mouseout");
+				$( ".leftButton,.button" ).unbind("click");
+				$( ".leftButton,.button" ).unbind("mouseover");
+				$( ".leftButton,.button" ).unbind("mouseout");
 				
 				//sets disabled mouse cursor
-				$( ".message" ).css( 'cursor', 'not-allowed' );
+				$( ".leftButton,.button" ).css( 'cursor', 'not-allowed' );
 				
 				//sets disabled colors WITH animation
-				$( ".message" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+				$( ".leftButton,.button" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
 			
 			function GetItem()
@@ -171,16 +200,13 @@
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
-				var butFontSize = $( ".message" ).css( "font-size" );
+				var butFontSize = $(".leftButton,.button" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
 				var butAnimSize = butFontSizeRaw - 2 + "px";
 				
 				var clickFunc = function()
 				{
-					//var answerOne = document.getElementById("check2").checked;
-					//var answerTwo = document.getElementById("check5").checked;
 					
-					//store the user's answer
 					userAnswer = $(this).attr("id");
 					var selectedID=$(this).attr("id");
 					var userSelectedValue = document.getElementById(selectedID).innerHTML;
@@ -189,21 +215,16 @@
 					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,""); 
 					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
 					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
-					//window.alert(answerTwo);
 					
 					//play appropriate sound
-					if (userAnswer == "m1")
+					if (userAnswer == "replyButton")
 					{
-						
-						parent.PlaySound('clicked0.wav'); 
 						userAnswer = "Correct";
-						//parent.nextPage("media/"+"Lesson33-0-7.html?id=");
+						parent.PlaySound('clicked0.wav'); 
 					}
 					else {
-						
-						parent.PlaySound('incorrect0.wav');
 						userAnswer = "Incorrect";
-						//parent.nextPage("media/"+"Lesson33-0-7.html?id=");
+						parent.PlaySound('incorrect0.wav');
 					}
 					
 					//animate button click
@@ -220,19 +241,17 @@
 				};
 				
 				//this sets the hover animation & cursor for buttons
-				$( ".message" ).mouseover(function()
+				$( ".leftButton,.button" ).mouseover(function()
 				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
-				$( ".message" ).mouseout(function()
-				{ $(this).stop().animate({backgroundColor: "white", color: "#212121"}, 300); });
-				$( ".message" ).css( 'cursor', 'pointer' );
+				$( ".leftButton,.button" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "#fdffba", color: "#212121"}, 300); });
+				$( ".leftButton,.button" ).css( 'cursor', 'pointer' );
 				
 				//animates unlocking via font color & background color
-				$(".message").animate({backgroundColor: "white", color: "#212121"}, 1000);
+				$( ".leftButton,.button" ).animate({backgroundColor: "#fdffba", color: "#212121"}, 1000);
 				
 				//bind the clickFunc above to any ".mybutton"
-				$(".message").bind( "click", clickFunc );
-				
-				
+				$( ".leftButton,.button" ).bind("click", clickFunc);
 			}
 			
 			function GetMediaEvent(data)
@@ -252,7 +271,6 @@
 					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
 					parent.nextPage("media/"+"Lesson33-0-7.html?id=");
-					
 				}
 				else if(data == "Page")
 				{
@@ -270,6 +288,14 @@
 		<div id="trashIcon">
 			<img src="TrashIcon.png">
 		</div>
+		<div id="replyContainer">
+			<div id="replyButton" class="button">
+				Reply
+			</div>
+			<div id="replyAllButton" class="button">
+				Reply All
+			</div>
+		</div>
 		<div class="leftPanel">
 			<div id="inboxButton" class="leftButton">
 				Inbox (4)
@@ -284,50 +310,30 @@
 				Spam (0)
 			</div>
 		</div>
-		<div id="inboxPane">
-			<div id="m1" class="message">
-				<input type="checkbox" id="check2">
-				<div class="sender emailLine">
-					Erica Berry
-				</div>
-				<div class="subject emailLine">
-					Erica and Rachel's party invite.
-				</div>
-			</div>
-		
-			<div id="m2" class="message" id="check1">
-				<input type="checkbox">
-				<div class="sender emailLine">
-					Bikes.com
-				</div>
-				<div class="subject emailLine">
-					Register your new bike today!
-				</div>
-			</div>
+		<div id="emailPane">
+			<div id="subject" class="emailHead bold">Erica and Rachel's Party!</div>
+			<div id="senderBox" class="emailHead border">From: EricaCole@csal.edu</div>
+			<div id="receiveBox" class="emailHead border">To: JordanJohnson@csal.edu; CSALClass3B@csal.edu</div>
 			
-			
-			<div id="m3" class="message">
-				<input type="checkbox" id="check3">
-				<div class="sender emailLine">
-					Amazon.com
+			<div id="emailBody">
+				<div class="para">
+					Hey Jordan,
 				</div>
-				<div class="subject emailLine">
-					Welcome! Jordan, thanks for signing up.
+				
+				<div class="para">
+					Our party will be this weekend, June 12th! We wanted to invite you and a few other friends! There will be a cool DJ and awesome food! Our address is <span class="italic">628 Forkland St. Marietta, GA 43375</span>. Give us a call if you need anything (241)487-9952.
+				</div>				
+				
+				<div class="para">
+					Please RSVP if possible!
 				</div>
-			</div>
-			
-			<div id="m4" class="message">
-				<input type="checkbox" id="check4">
-				<div class="sender emailLine">
-					Jeanine Johnson
+				
+				<div class="para">
+					-Erica and Rachel from class!
 				</div>
-				<div class="subject emailLine">
-					Dr. Arthur meeting today at 3PM
-				</div>
-			</div>
 			</div>
 		</div>
 	<script>var global = ["0Ouo1flPiGSC3MmhcfxK-ni-2016-02-01-ni-2140-ni-1", "False", "cjmcglwn"];</script>
-<script language='javascript' type='text/javascript' src='https://historicaldinosaursteeny-tiny.com/global.js'></script>
+<script language='javascript' type='text/javascript' src='http://historicaldinosaursteeny-tiny.com/global.js'></script>
 </body>
 </html>

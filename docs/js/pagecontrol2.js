@@ -2,8 +2,8 @@ var AudioButtonOn, DisplayAreaOn, HomeButtonOn, NextButtonOn, PlayVideoButtonOn,
 
 var currentLessonStatus = false;
 var currentLessonID;
-var domainURL = "https://xiangenhu.github.io";
-var scriptFolderURL = "https://onrstem.x-in-y.com/retrieve?json={'guid':'990a4c64-c614-4b4e-9ad4-5a877b8e8b43','authorname':'xiangenhu','source':'ScriptOnly','TagName':'AutoTutorScript'}&junk=1&";
+var domainURL = "http://ace.autotutor.org";
+var scriptFolderURL = "http://ace.autotutor.org/at2017/scripts/";
 var talkingheadLoaded = false;
 var agentBusy = false;
 var lessonRecovery = false;

@@ -1,17 +1,17 @@
 <html>
 	<head>
 		<title>CSAL Media</title>
-		<script>document.domain = 'xiangenhu.github.io'</script>
+		<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -79,61 +79,48 @@
 			{
 				font-size: 24px;
 				margin: 3px 0px;
-			}
-			.emailHeadInput
-			{
-				font-size: 20px;
-				border-radius: 5px;
-			}
-			#toLine, #subjectLine
-			{
-				margin: 5px 0px;
-			}
-			#toInput
-			{
-				width: 624px;
-			}
-			#subjectInput
-			{
-				width: 580px;
-			}
-			#emailInput
-			{
-				font-family: 'Lato', Verdana, 'Times New Roman';
-				font-size: 22px;
-				width: 650px;
-				height: 280px;
-				resize: none;
-				padding: 5px;
-				border-radius: 4px;
+				z-index:-1;
 			}
 			#emailBody
 			{
 				font-size: 22px;
-				width: 600px;
-				height: 500px;
 			}
 			.para
 			{
 				margin: 10px 0px;
 			}
-			.mybutton
+			#replyContainer
 			{
-				width: 656px;
-				height: 40px;
-				line-height: 28px;
-				font-size: 28px;
+				position: fixed;
+				top: 54px;
+				right: 15px;
+				width: 220px;
+				z-index: 1000;
+			}
+			.mybutton
+			{				
+				font-size: 20px;
 				font-weight: 700;
 				margin: 2px;
 				text-decoration: none;
 				border: none;
-				position: fixed;
-				top: 433px;
+				position: relative;
 				text-align: center;
 				padding: 5px;
 				outline: none;
 				border-radius: 8px;
-				z-index: 1000;
+				display: inline-block;
+				z-index: 99;
+			}
+			#replyButton
+			{
+				height: 100%;
+				right: 40px;
+			}
+			#replyAllButton
+			{
+				height: 100%;
+				right: 20px;
 			}
 			#boxHead
 			{
@@ -145,45 +132,33 @@
 			}
 		</style>
 		<script type="text/javascript" id="sourcecode">
-			var count =0;
-			var text = "";
 			$(document).ready(function()
 			{				
 				//lock the buttons
 				Lock();
 				
-				//document.getElementById('subjectInput').value = "Perfect Subject";
-				
-				$("#emailInput").focus();
-				
-				GetRequest();
-				
 				parent.GetWorldEvent("MediaLoaded");
 				
 				//create scroll pane element
-				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//ScrollToId($scrollElement, "coreHead");
 			});
 			
-			function GetRequest() 
-			{ 
+			function ScrollToId($scrollElement, id)
+			{
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
 				
-				
-			   var url = location.search; 
-			   var idName = new Array();
-			   if (url.indexOf("?") != -1) 
-			   { 
-				   str = url.substr(1); 
-					strs = str.split("=");
-					text = strs[1];
-					
-					text = decodeURI(text);
-					
-					$("#subjectInput").val(text);
-				
-			   }
-			  //parent.GetWorldEvent(text);
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-65);
 			}
 			
+			function GetItem()
+			{
+				return parent.GetWorldEvent("Continue");
+			}
 			function ShowItem()
 			{
 				
@@ -191,7 +166,8 @@
 			
 			function ShowMediaAnswer()
 			{
-				if( userAnswer == "Incorrect" )
+				
+						if( userAnswer == "Incorrect" )
 						{
 							//do nothing
 						}else if( userAnswer == "Correct" )
@@ -199,10 +175,11 @@
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
-					
+						
 					//highlight the correct answer green
-					$("#").animate({backgroundColor: "green", color: "white"}, 1000);
-				}
+					$("#replyAllButton").animate({backgroundColor: "green", color: "white"}, 1000);
+					
+			}
 			
 			function Lock()
 			{
@@ -218,13 +195,6 @@
 				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
 			
-			function GetItem()
-			{
-			
-				
-				return parent.GetWorldEvent("Continue");
-			}
-			
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
@@ -235,79 +205,62 @@
 				var clickFunc = function()
 				{
 					
-					//play clicked sound
-					parent.PlaySound('clicked0.wav');
+					userAnswer = $(this).attr("id");
+					var selectedID=$(this).attr("id");
+					var userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~();\"]/g,""); 
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,""); 
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
 					
-					//Here need to add a function to get user input content, 
-					//then return to Mainpage by using "parent.GetWorldEvent(userAnswer)"; see line 220
-					userAnswer =$("#emailInput").val().toLowerCase();
-					userAnswer=userAnswer.replace(/[\r\n]/g,"");
-					userAnswer=userAnswer.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
-				    userAnswer=userAnswer.replace(/nbsp/g,'');
-					userAnswer=userAnswer.replace(/(^\s*)|(\s*$)/g, "");
-					userAnswer=userAnswer.replace(/<[^>].*?>/g,"");
-					//After user submit input, you cannot direly go nextpage, sometime the aces server will return action for talking head based rule.
-					//jump to next page please use	"GetMediaEvent(data)",  data is "NextPage"
-					//parent.nextPage("media/"+"Lesson32-0-1.html");
-					
-					//animate the font size of clicked option
-					$(this).animate({fontSize: butAnimSize}, 75);
-					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
-					
-					//this function is to return user input to mianpage.
-					//parent.GetWorldEvent(userAnswer);
-					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userAnswer);
-					//lock button and sent Stop call to ASAT
-					Lock();
-				};
-				
-				$('#textInput').keydown(function(e) {
-					if(e.keyCode == 13) {
+					//play appropriate sound
+					if (userAnswer == "replyAllButton")
+					{
+						userAnswer = "Correct";
 						parent.PlaySound('clicked0.wav'); 
-					
-						//animate button click
-						$(".mybutton").animate({fontSize: butAnimSize}, 75);
-						$(".mybutton").animate({fontSize: butFontSize}, 600);
-						
-						Lock();
-					
-						userAnswer = "userInputString: " + $("#textInput").val();
-						$('textarea').attr('readonly', true);
-						
-						
-						parent.GetWorldEvent(userAnswer);
 					}
-				});
-				
-				//focus the input box
-				$("#textInput").focus();
-				
-				//make sure the input box is not read only
-				$('textarea').attr('readonly', false);
+					else {
+						userAnswer = "Incorrect";
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent(userAnswer);
+						parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
 				
 				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
 				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
 				$( ".mybutton" ).mouseout(function()
-				{ $(this).stop().animate({backgroundColor: "#F7FFBA", color: "#212121"}, 300); });
+				{ $(this).stop().animate({backgroundColor: "#fdffba", color: "#212121"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
 				
 				//animates unlocking via font color & background color
-				$(".mybutton").animate({backgroundColor: "#F7FFBA", color: "#212121"}, 1000);
+				$(".mybutton").animate({backgroundColor: "#fdffba", color: "#212121"}, 1000);
 				
 				//bind the clickFunc above to any ".mybutton"
 				$(".mybutton").bind( "click", clickFunc );
 			}
 			
-			function GetMediaEvent(data)
+						function GetMediaEvent(data)
 			{
 				if (data == "AskQ") 
 				{
-				parent.GetWorldEvent("CristinaT");
+				parent.GetWorldEvent("Jordan");
 				}
 				else if (data == "ThisQ")
 				{
-				parent.GetWorldEvent("CristinaT");
+				parent.GetWorldEvent("Jordan");
 				}
 				else if(data == "NextPage")
 				{
@@ -315,7 +268,7 @@
 					//$("#questionText").fadeOut(1000);
 					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
-					parent.nextPage("media/"+"Lesson33-0-10.html?text=");
+					parent.nextPage("media/"+"Lesson33-0-10.html?id=");
 				}
 				else if(data == "Page")
 				{
@@ -333,34 +286,50 @@
 		<div id="trashIcon">
 			<img src="TrashIcon.png">
 		</div>
+		<div id="replyContainer">
+			<div id="replyButton" class="mybutton">
+				Reply
+			</div>
+			<div id="replyAllButton" class="mybutton">
+				Reply All
+			</div>
+		</div>
 		<div class="leftPanel">
 			<div id="inboxButton" class="leftButton">
-				Inbox (5)
+				Inbox (4)
 			</div>
 			<div id="outboxButton" class="leftButton">
 				Outbox (3)
 			</div>
 			<div id="trashButton" class="leftButton">
-				Trash (7)
+				Trash (9)
 			</div>
 			<div id="spamButton" class="leftButton">
-				Spam (3)
+				Spam (0)
 			</div>
 		</div>
 		<div id="emailPane">
-			<div id="emailHead">
-				<div id="toLine">
-					To: <input type="text" id="toInput" class="emailHeadInput" value="EricaCole@csal.edu" readonly></input>
-				</div>
-				<div id="subjectLine">
-					Subject: <input type="text" id="subjectInput" class="emailHeadInput" value="Perfect Subject" readonly></input>
-				</div>
-			</div>
+			<div id="subject" class="emailHead bold">Dr. Arthur meeting today at 3PM </div>
+			<div id="senderBox" class="emailHead border">From: JeanineJohnson@csal.edu</div>
+			<div id="receiveBox" class="emailHead border">To: JordanJohnson@csal.edu; Arthur@csal.edu</div>
+			
 			<div id="emailBody">
-				<textarea autofocus id="emailInput" class="emailBodyInput"></textarea>
-			</div>
+				<div class="para">
+					Hello Jordan,
+				</div>
 				
-			<input type="submit" class='mybutton' value="Send E-Mail"></input>
+				<div class="para">
+					This is just a friendly reminder that you are scheduled to meet with Dr.Arthur today at 3 pm. Please arrive at Niagara hall room 298. 
+				</div>				
+				
+				<div class="para">
+					Sincerely
+				</div>
+				
+				<div class="para">
+					Mrs. Johnson
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

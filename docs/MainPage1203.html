@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin">
 <title>CSAL Web Application</title>
-<script>document.domain = 'xiangenhu.github.io'</script>
+<script>document.domain = 'ace.autotutor.org'</script>
 
 <link rel="stylesheet" type="text/css" href="css/mainPage.css">
 <style>
@@ -153,9 +153,9 @@ margin-left: -350px;
 float: left;
 }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
-<!--script src="https://www.youtube.com/player_api"></script-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+<!--script src="http://www.youtube.com/player_api"></script-->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/callYoutubePlayer.js"></script>
 <script src="js/processbar.js"></script>
@@ -316,7 +316,7 @@ $(document).ready(function() {
 		});
 		
 		$('#iframeAgent').click(function() {
-			$("#agents").attr("src", "https://ace.x-in-y.com/pilot3/logpage.html");
+			$("#agents").attr("src", "http://ace.autotutor.org/pilot3/logpage.html");
 		});
 		
 		$('#iframeDummy').click(function() {
@@ -350,8 +350,8 @@ function clearCache()
 {
 	$.ajax({
      //url:'www.haorooms.com',
-     //url:'https://x-in-y.com/csalwebtest1002/',
-	 url:'https://ace.x-in-y.com',
+     //url:'http://x-in-y.com/csalwebtest1002/',
+	 url:'http://ace.autotutor.org',
      dataType:'json',
      data:{},
      beforeSend :function(xmlHttp){ 
@@ -607,7 +607,7 @@ function clearCache()
 	}
 
 	function sayBye() {
-		//https://x-in-y.com/Fakewww/CristinaAndJordanNewV1-webVersion/CristinaAndJordanNewV1.html
+		//http://x-in-y.com/Fakewww/CristinaAndJordanNewV1-webVersion/CristinaAndJordanNewV1.html
 		//dummyAgentPage.html
 		var speech = "1:See you later";
 		document.getElementById('agents').contentWindow.callBoth(speech,"Speak");
@@ -756,12 +756,12 @@ function FileExist(url)
 			};
 		if (str.contains("_") == true) {
 		
-			var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
-			//var aceurl = "https://141.225.42.101/aceapicorslog/api/aceaction";
-			//var aceurl = "https://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
-			//var scriptfolderurl = "https://x-in-y.com/csalwebtest1002/scripts/";
+			var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+			//var aceurl = "http://141.225.42.101/aceapicorslog/api/aceaction";
+			//var aceurl = "http://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
+			//var scriptfolderurl = "http://x-in-y.com/csalwebtest1002/scripts/";
 			//var scriptfolderpath = "C:\\Inetpub\\wwwroot\\csalwebtest1002\\Scripts\\";
-			var scriptfolderurl = "https://ace.x-in-y.com/pilot3/scripts/"
+			var scriptfolderurl = "http://ace.autotutor.org/pilot3/scripts/"
 			var scriptfolderpath = "Z:\\pilot3\\Scripts\\";
 			var a = str.split("_");
 			var folder = a[0];
@@ -786,7 +786,7 @@ function FileExist(url)
 			} else if (folder == "Lesson12") {*/
 				$("#mainFrame").attr("src", "resources/interactionPage.html");
 				var scripturl = scriptfolderurl + folder + "/" + script + "Media/" + script + ".xml";
-				//var scripturl = "https://141.225.42.101/atsamplepacket.xml";
+				//var scripturl = "http://141.225.42.101/atsamplepacket.xml";
 				scriptbaseURL = scriptfolderurl + folder + "/" + script + "Media/";
 				scriptbasepath = "Scripts\\" + folder + "\\" + script + "Media\\";
 				//inpjson = "{\"ID\":\"" + sessionStorage.getItem("uname") + "\",\"ScriptURL\":\"" + scripturl + "\",\"User\":\"" + sessionStorage.getItem("uname") + "\"}";
@@ -841,10 +841,10 @@ function FileExist(url)
 	// The function that calls the web API using PUT method to start and carry forward the conversation
 	function Run(inpjson) {
 	
-		//var aceurl = "https://ace.x-in-y.com/ACEAPICORS3/api/aceaction";
-		var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
-		//var aceurl = "https://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
-		//var aceurl = "https://141.225.42.101/aceapicorslog/api/aceaction";
+		//var aceurl = "http://ace.autotutor.org/ACEAPICORS3/api/aceaction";
+		var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+		//var aceurl = "http://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
+		//var aceurl = "http://141.225.42.101/aceapicorslog/api/aceaction";
 		var content = JSON.parse(inpjson);
 		var method = "PUT";
 		webAPImethod = method;
@@ -1577,9 +1577,9 @@ function FileExist(url)
 							//inpjson = "{\"ID\":\"" + sessionStorage.getItem("uname") + "\",\"Text\":\"" + input + "\",\"Event\":\"" + useraction + "\"}";
 							userAnswerSpendTime=0;
 							//clearTimeout(time);
-							var aceurl = "https://ace.x-in-y.com/aceapi2017/api/aceaction";
-							//var aceurl = "https://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
-							//var aceurl = "https://141.225.42.101/aceapicorslog/api/aceaction";
+							var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+							//var aceurl = "http://autotutor.x-in-y.com/aceapicorsv2/api/aceaction";
+							//var aceurl = "http://141.225.42.101/aceapicorslog/api/aceaction";
 							var content = JSON.parse(inpjson);
 							var method = "PUT";
 							webAPImethod = method;
@@ -1675,7 +1675,7 @@ function stopCountForUserSpend()
 		</div>
 		
 		<div id="agentFrame">
-			<iframe id="agents" src="https://ace.x-in-y.com/pilot3/logpage.html"></iframe>
+			<iframe id="agents" src="http://ace.autotutor.org/pilot3/logpage.html"></iframe>
 		</div>
 
 		<div id="mainBody">

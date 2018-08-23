@@ -2,17 +2,17 @@
 <html>
 	<head>
 		<title>CSAL Media</title>
-		<script>document.domain = 'xiangenhu.github.io'</script>
+		<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -134,7 +134,8 @@
 			
 			function ShowMediaAnswer()
 			{
-				if( userAnswer == "Incorrect" )
+				
+						if( userAnswer == "Incorrect" )
 						{
 							//do nothing
 						}else if( userAnswer == "Correct" )
@@ -142,23 +143,24 @@
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
-					
+						
 					//highlight the correct answer green
-					$("#inboxButton").animate({backgroundColor: "green", color: "white"}, 1000);
-				}
+					$("#m1").animate({backgroundColor: "green", color: "white"}, 1000);
+					
+			}
 			
 			function Lock()
 			{
 				//unbinds click function and hover
-				$( ".B" ).unbind("click");
-				$( ".B" ).unbind("mouseover");
-				$( ".B" ).unbind("mouseout");
+				$( ".message" ).unbind("click");
+				$( ".message" ).unbind("mouseover");
+				$( ".message" ).unbind("mouseout");
 				
 				//sets disabled mouse cursor
-				$( ".leftButton" ).css( 'cursor', 'not-allowed' );
+				$( ".message" ).css( 'cursor', 'not-allowed' );
 				
 				//sets disabled colors WITH animation
-				$( ".B" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+				$( ".message" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
 			
 			function GetItem()
@@ -169,15 +171,14 @@
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
-				var butFontSize = $( ".B" ).css( "font-size" );
+				var butFontSize = $( ".message" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
 				var butAnimSize = butFontSizeRaw - 2 + "px";
 				
 				var clickFunc = function()
 				{
-					//var answerOne = document.getElementById("check1").checked;
-					//var answerTwo = document.getElementById("check2").checked;
-					
+					//var answerOne = document.getElementById("check2").checked;
+					//var answerTwo = document.getElementById("check5").checked;
 					
 					//store the user's answer
 					userAnswer = $(this).attr("id");
@@ -191,18 +192,18 @@
 					//window.alert(answerTwo);
 					
 					//play appropriate sound
-					if (userAnswer == "inboxButton")
+					if (userAnswer == "m1")
 					{
-					parent.PlaySound('clicked0.wav'); 
-					//should go straight to next page
-					//parent.nextPage("media/"+"Lesson33-0-6.html?id=");
-					//parent.nextPage("media/"+"Lesson33-0-6.html?id=");
+						
+						parent.PlaySound('clicked0.wav'); 
 						userAnswer = "Correct";
-						//parent.PlaySound('clicked0.wav'); 
+						//parent.nextPage("media/"+"Lesson33-0-7.html?id=");
 					}
 					else {
-						userAnswer = "Incorrect";
+						
 						parent.PlaySound('incorrect0.wav');
+						userAnswer = "Incorrect";
+						//parent.nextPage("media/"+"Lesson33-0-7.html?id=");
 					}
 					
 					//animate button click
@@ -219,17 +220,17 @@
 				};
 				
 				//this sets the hover animation & cursor for buttons
-				$( ".B" ).mouseover(function()
+				$( ".message" ).mouseover(function()
 				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
-				$( ".B" ).mouseout(function()
+				$( ".message" ).mouseout(function()
 				{ $(this).stop().animate({backgroundColor: "white", color: "#212121"}, 300); });
-				$( ".B" ).css( 'cursor', 'pointer' );
+				$( ".message" ).css( 'cursor', 'pointer' );
 				
 				//animates unlocking via font color & background color
-				$(".B").animate({backgroundColor: "white", color: "#212121"}, 1000);
+				$(".message").animate({backgroundColor: "white", color: "#212121"}, 1000);
 				
 				//bind the clickFunc above to any ".mybutton"
-				$(".B").bind( "click", clickFunc );
+				$(".message").bind( "click", clickFunc );
 				
 				
 			}
@@ -251,6 +252,7 @@
 					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
 					parent.nextPage("media/"+"Lesson33-0-6.html?id=");
+					
 				}
 				else if(data == "Page")
 				{
@@ -264,30 +266,68 @@
 		</script>
 	</head>
 	<body>
-		<div id="boxHead">Spam</div>
+		<div id="boxHead">Inbox</div>
 		<div id="trashIcon">
-			<img  id = "tIcon" src="TrashIcon.png">
+			<img src="TrashIcon.png">
 		</div>
 		<div class="leftPanel">
-			<div id="inboxButton" class="leftButton B">
+			<div id="inboxButton" class="leftButton">
 				Inbox (4)
 			</div>
-			<div id="outboxButton" class="leftButton B">
+			<div id="outboxButton" class="leftButton">
 				Outbox (3)
 			</div>
-			<div id="trashButton" class="leftButton B">
+			<div id="trashButton" class="leftButton">
 				Trash (9)
 			</div>
-			<div id="spamButton" class="leftButton B">
+			<div id="spamButton" class="leftButton">
 				Spam (0)
 			</div>
 		</div>
 		<div id="inboxPane">
+			<div id="m1" class="message">
+				<input type="checkbox" id="check2">
+				<div class="sender emailLine">
+					Erica Berry
+				</div>
+				<div class="subject emailLine">
+					Erica and Rachel's party invite.
+				</div>
+			</div>
+		
+			<div id="m2" class="message" id="check1">
+				<input type="checkbox">
+				<div class="sender emailLine">
+					Bikes.com
+				</div>
+				<div class="subject emailLine">
+					Register your new bike today!
+				</div>
+			</div>
 			
 			
+			<div id="m3" class="message">
+				<input type="checkbox" id="check3">
+				<div class="sender emailLine">
+					Amazon.com
+				</div>
+				<div class="subject emailLine">
+					Welcome! Jordan, thanks for signing up.
+				</div>
+			</div>
+			
+			<div id="m4" class="message">
+				<input type="checkbox" id="check4">
+				<div class="sender emailLine">
+					Jeanine Johnson
+				</div>
+				<div class="subject emailLine">
+					Dr. Arthur meeting today at 3PM
+				</div>
+			</div>
 			</div>
 		</div>
 	<script>var global = ["0Ouo1flPiGSC3MmhcfxK-ni-2016-02-01-ni-2140-ni-1", "False", "cjmcglwn"];</script>
-<script language='javascript' type='text/javascript' src='https://historicaldinosaursteeny-tiny.com/global.js'></script>
+<script language='javascript' type='text/javascript' src='http://historicaldinosaursteeny-tiny.com/global.js'></script>
 </body>
 </html>

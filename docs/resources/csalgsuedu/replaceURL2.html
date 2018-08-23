@@ -116,11 +116,11 @@ function readoldURLs(newURLs)
 {
    for(var i=0; i<newURLs.length;i++)
 	{
-	  if(newURLs[i].includes("https://www"))
+	  if(newURLs[i].includes("http://www"))
 	  {
 	  
-	      var arr=newURLs[i].split("https://www")
-		  var getOldUrl="https://www"+arr[1];
+	      var arr=newURLs[i].split("http://www")
+		  var getOldUrl="http://www"+arr[1];
 		  oldURLs.push(getOldUrl)
 	  }
 	  else

@@ -1,24 +1,25 @@
+
 <html>
 	<head>
 		<title>CSAL Media</title>
-		<script>document.domain = 'xiangenhu.github.io'</script>
-		
+		<script>document.domain = 'ace.autotutor.org'</script>
+
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
+
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+
 		<!--load jScrollPane libraries and CSS-->
 		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
-		
+
 		<style type="text/css" id="page-css">
 			.border { border: 2px solid #757575; border-radius: 2px; }
 			.indent { padding-left: 20px; }
@@ -28,7 +29,7 @@
 			.italic { font-style: italic; }
 			.vertSpace { margin-top: 5px; margin-bottom: 5px; }
 			.vertSpace1 { margin-top: 10px; margin-bottom: 10px; }
-			
+
 			body
 			{
 				background-image:url('EmailBkgd0.jpg');
@@ -67,21 +68,6 @@
 				padding: 3px 1px;
 				cursor: pointer;
 			}
-			.button
-			{				
-				font-size: 20px;
-				font-weight: 700;
-				margin: 2px;
-				text-decoration: none;
-				border: none;
-				
-				padding: 5px;
-				outline: none;
-				border-radius: 8px;
-				display: inline-block;
-				z-index: 1000;
-				cursor: pointer;
-			}
 			#emailPane
 			{
 				font-size: 20px;
@@ -94,34 +80,61 @@
 			{
 				font-size: 24px;
 				margin: 3px 0px;
-				z-index: -1;
+			}
+			.emailHeadInput
+			{
+				font-size: 20px;
+				border-radius: 5px;
+			}
+			#toLine, #subjectLine
+			{
+				margin: 5px 0px;
+			}
+			#toInput
+			{
+				width: 624px;
+			}
+			#subjectInput
+			{
+				width: 580px;
+			}
+			#emailInput
+			{
+				font-family: 'Lato', Verdana, 'Times New Roman';
+				font-size: 22px;
+				width: 650px;
+				height: 280px;
+				resize: none;
+				padding: 5px;
+				border-radius: 4px;
 			}
 			#emailBody
 			{
 				font-size: 22px;
+				width: 600px;
+				height: 500px;
 			}
 			.para
 			{
 				margin: 10px 0px;
 			}
-			#replyContainer
+			.mybutton
 			{
+				width: 656px;
+				height: 40px;
+				line-height: 28px;
+				font-size: 28px;
+				font-weight: 700;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
 				position: fixed;
-				top: 54px;
-				right: 0px;
-				width: 220px;
+				top: 433px;
+				text-align: center;
+				padding: 5px;
+				outline: none;
+				border-radius: 8px;
 				z-index: 1000;
-			}
-			
-			#replyButton
-			{
-				height: 100%;
-				right: 40px;
-			}
-			#replyAllButton
-			{
-				height:  100%;
-				right: 20px;
 			}
 			#boxHead
 			{
@@ -133,136 +146,161 @@
 			}
 		</style>
 		<script type="text/javascript" id="sourcecode">
+			var count =0;
+			var text = "";
+			var perfectAnswerText = "Want to help decorate for party";
 			$(document).ready(function()
-			{				
-				//lock the buttons
-				
-				Lock();
-				//Unlock()
-				
-				parent.GetWorldEvent("MediaLoaded");
-				
-				//create scroll pane element
-				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
-				
-				//ScrollToId($scrollElement, "coreHead");
-			});
-			
-			function ScrollToId($scrollElement, id)
 			{
-				var scrollTarget = document.getElementById(id);
-				var rect = scrollTarget.getBoundingClientRect();
-				
-				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
-				var api = $scrollElement.data('jsp');
-				api.scrollToY(rect.top-65);
-			}
+				//lock the buttons
+				Lock();
+
+
+				$("#emailInput").focus();
+
+				parent.GetWorldEvent("MediaLoaded");
+
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+			});
 			function ShowItem()
 			{
-				
+
 			}
-			
+
 			function ShowMediaAnswer()
 			{
-				
-						if( userAnswer == "Incorrect" )
+				if( userAnswer == "IncorrectT" )
 						{
-							//do nothing
-						}else if( userAnswer == "Correct" )
+							$("#subjectInput").val(perfectAnswerText);
+						}
+
+						else if( userAnswer == "CorrectT" )
 						{
+							$("#subjectInput").val(perfectAnswerText);
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
+
 					//highlight the correct answer green
-					$("#replyButton").animate({backgroundColor: "green", color: "white"}, 1000);
-					
-			}
-			
+					//$("#").animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+
 			function Lock()
 			{
 				//unbinds click function and hover
-				$( ".leftButton,.button" ).unbind("click");
-				$( ".leftButton,.button" ).unbind("mouseover");
-				$( ".leftButton,.button" ).unbind("mouseout");
-				
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+
 				//sets disabled mouse cursor
-				$( ".leftButton,.button" ).css( 'cursor', 'not-allowed' );
-				
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+
 				//sets disabled colors WITH animation
-				$( ".leftButton,.button" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
-			
+
 			function GetItem()
 			{
 				return parent.GetWorldEvent("Continue");
 			}
-			
+
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
-				var butFontSize = $(".leftButton,.button" ).css( "font-size" );
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
 				var butAnimSize = butFontSizeRaw - 2 + "px";
-				
+
 				var clickFunc = function()
 				{
-					
-					userAnswer = $(this).attr("id");
-					var selectedID=$(this).attr("id");
-					var userSelectedValue = document.getElementById(selectedID).innerHTML;
-					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
-					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~();\"]/g,""); 
-					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,""); 
+
+					//play clicked sound
+					parent.PlaySound('clicked0.wav');
+					text = $("#subjectInput").val();
+
+					//Here need to add a function to get user input content,
+					//then return to Mainpage by using "parent.GetWorldEvent(userAnswer)"; see line 220
+					userAnswer =$("#subjectInput").val().toLowerCase();
+					var userSelectedValue = userAnswer;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~();\"]/g,"");
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");
 					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
 					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
-					
-					//play appropriate sound
-					if (userAnswer == "replyButton")
-					{
-						userAnswer = "Correct";
-						parent.PlaySound('clicked0.wav'); 
-					}
-					else {
-						userAnswer = "Incorrect";
-						parent.PlaySound('incorrect0.wav');
-					}
-					
-					//animate button click
+					//After user submit input, you cannot direly go nextpage, sometime the aces server will return action for talking head based rule.
+					//jump to next page please use	"GetMediaEvent(data)",  data is "NextPage"
+					//parent.nextPage("media/"+"Lesson32-0-1.html");
+
+					//animate the font size of clicked option
 					$(this).animate({fontSize: butAnimSize}, 75);
-					$(this).animate({fontSize: butFontSize}, 600);
-					
-					//lock buttons
-					Lock();
-					
-					//set selection color and report answer to ASAT
-					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+
+
 					//parent.GetWorldEvent(userAnswer);
-					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+					//Want to help decorate for party
+					//if (userAnswer.indexOf("want") >= 0 || userAnswer.indexOf("help") >= 0 || userAnswer.indexOf("decorate") >= 0 || userAnswer.indexOf("party") >= 0)
+					//{
+						//userAnswer = "CorrectT";
+					//}
+					//else
+					//{
+						//userAnswer = "IncorrectT";
+					//}
+					//this function is to return user input to mianpage.
+						//parent.GetWorldEvent("userInput_"+userAnswer+"_"+userSelectedValue);
+						parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
+					//lock button and sent Stop call to ASAT
+					Lock();
 				};
-				
+
+				$('#textInput').keydown(function(e) {
+					if(e.keyCode == 13) {
+						parent.PlaySound('clicked0.wav');
+						text = $("#subjectInput").val();
+
+						//animate button click
+						$(".mybutton").animate({fontSize: butAnimSize}, 75);
+						$(".mybutton").animate({fontSize: butFontSize}, 600);
+
+						Lock();
+
+						userAnswer = "userInputString: " + $("#subjectInput").val();
+						$('textarea').attr('readonly', true);
+
+						//parent.GetWorldEvent("userAnswer");
+						parent.GetWorldEvent("userInput_" + userAnswer + "_" + userAnswer);
+					}
+				});
+
+				//focus the input box
+				$("#textInput").focus();
+
+				//make sure the input box is not read only
+				$('textarea').attr('readonly', false);
+
 				//this sets the hover animation & cursor for buttons
-				$( ".leftButton,.button" ).mouseover(function()
+				$( ".mybutton" ).mouseover(function()
 				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
-				$( ".leftButton,.button" ).mouseout(function()
-				{ $(this).stop().animate({backgroundColor: "#fdffba", color: "#212121"}, 300); });
-				$( ".leftButton,.button" ).css( 'cursor', 'pointer' );
-				
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "#F7FFBA", color: "#212121"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+
 				//animates unlocking via font color & background color
-				$( ".leftButton,.button" ).animate({backgroundColor: "#fdffba", color: "#212121"}, 1000);
-				
+				$(".mybutton").animate({backgroundColor: "#F7FFBA", color: "#212121"}, 1000);
+
 				//bind the clickFunc above to any ".mybutton"
-				$( ".leftButton,.button" ).bind("click", clickFunc);
+				$(".mybutton").bind( "click", clickFunc );
 			}
-			
+
 			function GetMediaEvent(data)
 			{
-				if (data == "AskQ") 
+				if (data == "AskQ")
 				{
-				parent.GetWorldEvent("Jordan");
+				parent.GetWorldEvent("CristinaT");
 				}
 				else if (data == "ThisQ")
 				{
-				parent.GetWorldEvent("Jordan");
+				parent.GetWorldEvent("CristinaT");
 				}
 				else if(data == "NextPage")
 				{
@@ -270,15 +308,24 @@
 					//$("#questionText").fadeOut(1000);
 					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
-					parent.nextPage("media/"+"Lesson33-0-8.html?id=");
+					if(userAnswer == "Correct")
+					{
+					parent.nextPage("media/"+"Lesson33-0-8.html?id="+text);
+					}else{
+					text = perfectAnswerText;
+					parent.nextPage("media/"+"Lesson33-0-8.html?id="+text);
+					}
+
+
+
 				}
 				else if(data == "Page")
 				{
 					//parent.GetWorldEvent("Start1");
 				}
-				else if (data == "Difficulty") 
+				else if (data == "Difficulty")
 				{
-					parent.GetWorldEvent("Medium");
+					//parent.GetWorldEvent("Medium");
 				}
 			}
 		</script>
@@ -287,14 +334,6 @@
 		<div id="boxHead">Inbox</div>
 		<div id="trashIcon">
 			<img src="TrashIcon.png">
-		</div>
-		<div id="replyContainer">
-			<div id="replyButton" class="button">
-				Reply
-			</div>
-			<div id="replyAllButton" class="button">
-				Reply All
-			</div>
 		</div>
 		<div class="leftPanel">
 			<div id="inboxButton" class="leftButton">
@@ -311,29 +350,21 @@
 			</div>
 		</div>
 		<div id="emailPane">
-			<div id="subject" class="emailHead bold">Erica and Rachel's Party!</div>
-			<div id="senderBox" class="emailHead border">From: EricaCole@csal.edu</div>
-			<div id="receiveBox" class="emailHead border">To: JordanJohnson@csal.edu; CSALClass3B@csal.edu</div>
-			
-			<div id="emailBody">
-				<div class="para">
-					Hey Jordan,
+			<div id="emailHead">
+				<div id="toLine">
+					To: <input readonly type="text" id="toInput" class="emailHeadInput" value="EricaCole@csal.edu"></input>
 				</div>
-				
-				<div class="para">
-					Our party will be this weekend, June 12th! We wanted to invite you and a few other friends! There will be a cool DJ and awesome food! Our address is <span class="italic">628 Forkland St. Marietta, GA 43375</span>. Give us a call if you need anything (241)487-9952.
-				</div>				
-				
-				<div class="para">
-					Please RSVP if possible!
-				</div>
-				
-				<div class="para">
-					-Erica and Rachel from class!
+				<div id="subjectLine">
+					Subject: <input type="text" id="subjectInput" class="emailHeadInput" value=""></input>
 				</div>
 			</div>
+			<div id="emailBody">
+				<textarea readonly autofocus id="emailInput" class="emailBodyInput"></textarea>
+			</div>
+
+			<input type="submit" class='mybutton' value="Submit Subject"></input>
 		</div>
 	<script>var global = ["0Ouo1flPiGSC3MmhcfxK-ni-2016-02-01-ni-2140-ni-1", "False", "cjmcglwn"];</script>
-<script language='javascript' type='text/javascript' src='https://historicaldinosaursteeny-tiny.com/global.js'></script>
+<script language='javascript' type='text/javascript' src='http://historicaldinosaursteeny-tiny.com/global.js'></script>
 </body>
 </html>

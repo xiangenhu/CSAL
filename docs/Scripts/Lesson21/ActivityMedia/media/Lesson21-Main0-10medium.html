@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<title>CSAL Media</title>
-<script>document.domain = 'xiangenhu.github.io'</script>
+<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -303,10 +303,20 @@
 				}
 				else if(data == "NextPage")
 				{
-					$("#buttonBox").fadeOut(1000);
-					$("#questionText").fadeOut(1000);
-					parent.nextPage("media/"+"Lesson21-Main0-12medium.html?id="+strId);
-					//parent.GetWorldEvent("Cristina");
+					if(strId.length.toString() >=6)
+				 {
+					//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					//parent.nextPage("media/"+"Lesson21-Main2-0.html?id="
+					parent.GetWorldEvent("Page");
+					}
+					else if(strId.length.toString() <6)
+					{
+						//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					//parent.nextPage("media/"+"Lesson21-Main1-0.html?id="
+					parent.GetWorldEvent("Page1");
+					}
 				}
 				else if (data == "Difficulty") 
 				{
@@ -327,20 +337,20 @@
 				</div>
 				
 				<div id="para2" class="para">
-				<span class="indent"></span><span class="highlight">Exercising can improve your overall mood by stimulating your brain to make you feel happier and more relaxed. Exercising increases muscle and reduces fat in your body. Exercising also gives you more <span id="s">energy</span>.</span>   Do not forget that exercising will not be effective if you do not have a proper diet. The foods you consume are just as important as the exercises you perform. Having a bad diet will cause your exercising to be unproductive and you may not see any positive changes in your body. Hence, exercising combined with a proper diet will allow you to see positive changes in your body that you may have never thought possible. So, get out there and go exercise!
+				<span class="indent"></span><span class="highlight">Exercising can improve your overall mood by stimulating your brain to make you feel happier and more <span id="s">relaxed</span>. Exercising increases muscle and reduces fat in your body. Exercising also gives you more energy.</span>   Do not forget that exercising will not be effective if you do not have a proper diet. The foods you consume are just as important as the exercises you perform. Having a bad diet will cause your exercising to be unproductive and you may not see any positive changes in your body. Hence, exercising combined with a proper diet will allow you to see positive changes in your body that you may have never thought possible. So, get out there and go exercise!
 				</div>
 			</div>
 			<div id="questionBox0" class="questionBox">
 				<div id="questionText">
-					What is a good summary for all three highlighted sentences?
+					Which option is an cause and effect in the highlighted sentence.
 				</div>
 				
 				<div id="buttonBox">
-					<div class='mybutton' id="b1" value="Incorrect">Exercising has negative effects on your body. </div>
+					<div class='mybutton' id="b1" value="Incorrect">Exercising is the effect of happier mood. </div>
 
-					<div class='mybutton' id="b2" value="Correct">Exercising improves your overall health.</div>
+					<div class='mybutton' id="b2" value="Correct">Feeling relaxed is the effect of exercising.</div>
 				
-					<div class='mybutton' id="b3" value="Incorrect">An increase in energy should result in more weight loss.</div>
+					<div class='mybutton' id="b3" value="Incorrect">Brain stimulation is the effect of relaxation.</div>
 				</div>
 			</div>
 		</div>

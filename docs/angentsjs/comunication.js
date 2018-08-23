@@ -1,4 +1,4 @@
-   var domainURL = "https://xiangenhu.github.io/CSAL/";
+   var domainURL = "http://ace.autotutor.org";
         window.addEventListener('message', receiveMessage, false);
 	var lessonName;
         function receiveMessage(evt) {

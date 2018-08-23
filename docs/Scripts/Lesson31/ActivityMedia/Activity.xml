@@ -11,7 +11,7 @@
       <SpeechCan name="NegativeFeedback">
         <Item text=" _user_ I don't think that's it." speech="" play="_user_,B3" />
         <Item text=" _user_ I don't think that was the right answer. " speech="" play="_user_,B4" />
-        <Item text="Oops looks like wasn't quite right. " speech="" play="B5" />
+        <Item text="_user_ Oops looks like wasn't quite right. " speech="" play="_user_,B5" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_ Good! You got it right!" speech="" play="_user_,B6" />
@@ -57,22 +57,22 @@
       </SpeechCan>
       <SpeechCan name="Pump">
         <Item text="_user_ try your best and answer the question." speech="" play="_user_,A25" />
-        <Item text="Please try it." speech="" play="A26" />
-        <Item text="Please try to give me an answer" speech="" play="A27" />
+        <Item text="_user_ Please try to answer the question." speech="" play="_user_,A26" />
+        <Item text="_user_ Please try to give me an answer" speech="" play="_user_,A27" />
       </SpeechCan>
       <SpeechCan name="NeutralFeedback">
-        <Item text="Ok _user_ here is the answer." speech="" play="A28,_user_,A29" />
+        <Item text="_user_ here is the answer." speech="" play="_user_,A28" />
       </SpeechCan>
       <SpeechCan name="JordanPositiveFeedback">
-        <Item text="Jordan, Wonderful! You answered the question correctly." speech="" play="A30" />
-        <Item text="Jordan, You rock! That's right!" speech="" play="A31" />
-        <Item text="Jordan, That's right!" speech="" play="A32" />
-        <Item text="Jordan, great work! You got it right!" speech="" play="A33" />
-        <Item text="Jordan, Awesome work! That's it!" speech="" play="A34" />
+        <Item text="Jordan, Wonderful! You answered the question correctly." speech="" play="A29" />
+        <Item text="Jordan, You rock! That's right!" speech="" play="A30" />
+        <Item text="Jordan, That's right!" speech="" play="A31" />
+        <Item text="Jordan, great work! You got it right!" speech="" play="A32" />
+        <Item text="Jordan, Awesome work! That's it!" speech="" play="A33" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A35" />
-        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A36" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A34" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A35" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -123,26 +123,27 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="I hope you two learned some things about online applications today. " speech="" play="A37" />
-      <Item id="2" agent="Jordan" text="_user_ you really helped me today! Thank you so much! I hope I can get the job!" speech="" play="_user_,B14" />
-      <Item id="3" agent="Cristina" text="Good luck Jordan! Goodbye _user_." speech="" play="A38,_user_" />
+      <Item id="1" agent="Cristina" text="I hope you two learned some things about online applications today. For example, it is important to tell an employer information about yourself that is related to the job. Also, you want to be honest on your application and list references that can talk about your skills as an employee." speech="" play="A36" />
+      <Item id="2" agent="Jordan" text="Yeah. And you also want to be sure to select the correct buttons for questions about yourself, like whether or not you graduated from high school." speech="" play="B14" />
+      <Item id="3" agent="Cristina" text="Jordan, yes. Let's hope you do not make that mistake again. Again, great job both of you. Jordan, good look on your job search. See everyone soon." speech="" play="A37" />
+      <Item id="4" agent="Jordan" text="user_, you really helped me today! Thank you so much! I hope I can get the job! See you two next time." speech="" play="B15" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="Welcome back _user_ and Jordan! Hope everyone is doing well. " speech="" media="media\Lesson31-IntroTitle.html" play="A39,_user_,A40" />
-      <Item id="2" agent="Jordan" text="Hi Cristina! I'm great. Now that I have a new place to live and a new credit card. I think I am ready to look for a new job!" speech="" play="B15" />
-      <Item id="3" agent="Jordan" text="I just think I need some help filling out the application online. I'm not so good with computers." speech="" play="B16" />
-      <Item id="4" agent="Cristina" text="Jordan, that's great! Well, you already have a resume. So maybe _user_ and I can help!" speech="" play="A41,_user_,A42" />
-      <Item id="5" agent="Cristina" text="_user_ let's see if we can help Jordan fill out his application today! Please help Jordan with some of his questions. I will be here along the way to help. " speech="" media="media\JobApplication-0-0.html" play="_user_,A43" />
-      <Item id="6" agent="Jordan" text="That sounds perfect Cristina! _user_  can you help with a few problem areas?" speech="" play="B17,_user_,B18" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, hello. Hope everyone is doing well. " speech="" media="media\Lesson31-IntroTitle.html" play="_user_,A38" />
+      <Item id="2" agent="Jordan" text="Hi Cristina! I'm great. Now that I have moved to a new place. I am ready to look for a new job." speech="" play="B16" />
+      <Item id="3" agent="Jordan" text="I just think I need some help filling out the application online. I'm not so good with computers." speech="" play="B17" />
+      <Item id="4" agent="Cristina" text="Jordan, that's great. Well, you already have a resume. _user_ and I can help you fill out applications." speech="" play="A39,_user_,A40" />
+      <Item id="5" agent="Cristina" text="_user_, it would be great if you can help Jordan with some of his questions. I will be here along the way as well." speech="" media="media\JobApplication-0-0.html" play="_user_,A41" />
+      <Item id="6" agent="Jordan" text="Cristina, that sounds perfect. _user_, I have a few problem areas I think you can help me with." speech="" play="B18,_user_,B19" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="Jordan" text="Let's see if we can figure this out together _user_. When filling out an application, what information should you be prepared to give an employer? I think all of this information is important. Which do you think is best?" speech="" media="" itemDif="0.1" play="B19,_user_,B20">
+        <Question id="1" agent="Jordan" text="_user_ Let's see if we can figure this out together. When filling out an application, what information should you be prepared to give an employer? I think all of this information is important. Which do you think is best?" speech="" media="" itemDif="0.1" play="_user_,B20">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Experience, education, and contact information is the best answer. Personal information such as religious affiliation should not be given. And credit history is often not a requirement by employers. " speech="" keys="any" threshold="" test="" play="A44" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A45" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is Experience, education, and contact information. " speech="" keys="any" threshold="" test="" play="A42" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A43" />
             <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Got it Cristina! This is really helping me to better understand." speech="" keys="any" threshold="" test="" play="B21" />
           </Answers>
         </Question>
@@ -152,11 +153,11 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="2" agent="Jordan" text="Here's the next question _user_. Why is important to be completely honest when filling out an application? I think it is important to always be honest but if I had to choose I think it just shows you have bad morals." speech="" media="" itemDif="0.1" play="B22,_user_,B23">
+        <Question id="2" agent="Jordan" text="_user_, Here's the next question. Why is important to be completely honest when filling out an application? I think it is important to always be honest, but if I had to choose I think it just shows you have bad morals." speech="" media="" itemDif="0.1" play="_user_,B22">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Dishonesty could result in not being hired. You should always provide correct and up to date information. Any mistakes could cost you the job." speech="" keys="any" threshold="" test="" play="A46" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer choice. " speech="" keys="any" threshold="" test="" play="A47" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh, that is important information to remember. " speech="" keys="any" threshold="" test="" play="B24" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Dishonesty could result in not being hired. You should always provide correct and up to date information. Any mistakes could cost you the job." speech="" keys="any" threshold="" test="" play="A44" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A45" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh, that is important information to remember. " speech="" keys="any" threshold="" test="" play="B23" />
           </Answers>
         </Question>
       </Questions>
@@ -165,11 +166,11 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="3" agent="Jordan" text="Which position do you think I should apply for? Check my resume if you need" speech="" media="" itemDif="0.1" play="B25">
+        <Question id="3" agent="Jordan" text="_user_, Which position do you think I should apply for? Check my resume if you need." speech="" media="" itemDif="0.1" play="_user_,B24">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Server is a good choice based on Jordan's information. However, he could always apply for any open position. " speech="" keys="any" threshold="" test="" play="A48" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A49" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="That is a great choice! I enjoy serving customers and have the experience. " speech="" keys="any" threshold="" test="" play="B26" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Server is a good choice based on Jordan's information. However, he could always apply for any open position. " speech="" keys="any" threshold="" test="" play="A46" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A47" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="That is a great choice! I enjoy serving customers and I have the experience. " speech="" keys="any" threshold="" test="" play="B25" />
           </Answers>
         </Question>
       </Questions>
@@ -178,27 +179,27 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="4" agent="Jordan" text="_user_ I'm not sure which skills best show that I can talk to customers. What would you choose? Just type your answer below. The choices are underlined in this job posting I found." speech="" media="" itemDif="0.1" play="_user_,B27">
+        <Question id="4" agent="Jordan" text="_user_ ,I'm not sure which skills best show that I can talk to customers. What would you choose? Just type your answer below. The choices are underlined in this job posting I found." speech="" media="" itemDif="0.1" play="_user_,B26">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Communication skills would be the best answer. Communication is the sharing of information. What better way to share that by talking. However, a positive attitude might help too!" speech="" keys="communi|skills" threshold="0.7" test="" play="A50" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="That's not quite what I was looking for. A better answer could be something like communication skills. " speech="" keys="well-organized" threshold="0.2" test="" play="A51" />
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer would be communication skills or even just having a positive attitude." speech="" keys="any" threshold="" test="" play="A52" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please type an answer." speech="" keys="any" threshold="" test="" play="A53" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="That is important to speaking with customers. I didn't even consider it. Awesome!" speech="" keys="any" threshold="" test="" play="B28" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Communication skills would be the best answer. Communication is the sharing of information. What better way to share that by talking. However, a positive attitude might help too." speech="" keys="communi|skills" threshold="0.7" test="" play="A48" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="That's not quite what I was looking for. A better answer could be something like communication skills. " speech="" keys="well-organized" threshold="0.2" test="" play="A49" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer would be communication skills or even just having a positive attitude." speech="" keys="any" threshold="" test="" play="A50" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please type an answer." speech="" keys="any" threshold="" test="" play="A51" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="That is important to speaking with customers. I didn't even consider it. Awesome!" speech="" keys="any" threshold="" test="" play="B27" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="communication" speech="" keys="\b(comm?\w*|pos?\w*|att?\w*|team\w*|players\w*)\b" threshold="0.6" test="communicatz skills | (RegEx=1, LSA=0.056)&#xD;&#xA;team player | (RegEx=1, LSA=0.016)&#xD;&#xA;comunication | (RegEx=1, LSA=0.419)&#xD;&#xA;atitood | (RegEx=1, LSA=0)" play="A54" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="well-organized" speech="" keys="well-organized" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A55" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="communication" speech="" keys="\b(comm?\w*|pos?\w*|att?\w*|team\w*|players\w*)\b" threshold="0.6" test="communicatz skills | (RegEx=1, LSA=0.056)&#xD;&#xA;team player | (RegEx=1, LSA=0.016)&#xD;&#xA;comunication | (RegEx=1, LSA=0.419)&#xD;&#xA;atitood | (RegEx=1, LSA=0)" play="A52" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="well-organized" speech="" keys="well-organized" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A53" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="Remember, we are look for the kind of job Jordan would like to get. Type the best answer below." speech="" media="" play="A56">
+            <Hint id="1" agent="Cristina" text="Remember, we are look for the kind of job Jordan would like to get. Type the best answer below." speech="" media="" play="A54">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="communi|attitude" threshold="0.7" test="" play="A57" />
-                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for. The best answer would be something like communication skills." speech="" keys="doctor" threshold="0.2" test="" play="A58" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="communi|attitude" threshold="0.7" test="" play="A55" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for. The best answer would be something like communication skills." speech="" keys="doctor" threshold="0.2" test="" play="A56" />
               </Answers>
             </Hint>
           </Hints>
@@ -209,11 +210,11 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="5" agent="Cristina" text="Let's get started on a few things Jordan had trouble with on his application. Here's the next question. Has Jordan ever been employed by Eastside Grill restaurants before? Jordan has selected the box for no. Let's refer to Jordan's resume to double check his answers for this section. Please click the button at the bottom for yes or no to respond." speech="" media="" itemDif="0.1" play="A59">
+        <Question id="5" agent="Cristina" text="Let's get started on a few things Jordan had trouble with on his application. Here's the next question. Has Jordan ever been employed by Eastside Grill restaurants before? Jordan has selected the box for no. Let's refer to Jordan's resume to double check his answers for this section. Please press the button at the bottom for yes or no to respond." speech="" media="" itemDif="0.1" play="A57">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is yes. We can find this information on Jordan's resume. He has worked for this company before in a different city. Always double check your selections because remember dishonesty can result in not getting the job. " speech="" keys="any" threshold="" test="" play="A60" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A61" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_ and Cristina I told you I was not good with computers! I can't believe I selected the wrong button. " speech="" keys="any" threshold="" test="" play="_user_,B29" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is yes. We can find this information on Jordan's resume. He has worked for this company before in a different city. Always double check your selections because remember dishonesty can result in not getting the job. " speech="" keys="any" threshold="" test="" play="A58" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A59" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="I told you I was not good with computers! I can't believe I selected the wrong button. " speech="" keys="any" threshold="" test="" play="B28" />
           </Answers>
         </Question>
       </Questions>
@@ -222,11 +223,11 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="6" agent="Cristina" text="Jordan has marked that he did not graduate from high school? According to his resume, is this information correct? Please select yes or no at the bottom to submit your answer." speech="" media="" itemDif="0.1" play="A62">
+        <Question id="6" agent="Cristina" text="Jordan has marked that he did not graduate from high school? According to his resume, is this information correct? Please select yes or no at the bottom to submit your answer." speech="" media="" itemDif="0.1" play="A60">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan did graduate from high school. The correct answer is yes. Again, it is important to make sure that you click the correct buttons when filling out a resume or you run the risk of not being hired. " speech="" keys="any" threshold="" test="" play="A63" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A64" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oops! I did graduate and what a silly mistake! I am glad we caught it before I turned in my application. " speech="" keys="any" threshold="" test="" play="B30" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is yes. Jordan did graduate from high school. Again, it is important to make sure that you press the correct buttons when filling out a resume or you run the risk of not being hired. " speech="" keys="any" threshold="" test="" play="A61" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A62" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh yeah! I did graduate. what a silly mistake! I am glad we caught it before I turned in my application. " speech="" keys="any" threshold="" test="" play="B29" />
           </Answers>
         </Question>
       </Questions>
@@ -235,11 +236,11 @@
     </TutoringPack>
     <TutoringPack name="TPA7">
       <Questions>
-        <Question id="7" agent="Cristina" text="Click the task that is the most related to the open serving position." speech="" media="" itemDif="0.1" play="A65">
+        <Question id="7" agent="Cristina" text="_user_, Press on the task that is the most related to the open serving position." speech="" media="" itemDif="0.1" play="_user_,A63">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Seated and obtained orders is the best answer. Because seating and taking orders is experience that can be used in many different settings. Every restaurant may not be the same and some of the tasks listed may not apply to serving anywhere rather than just on place.  " speech="" keys="any" threshold="" test="" play="A66" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A67" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Alright Cristina, I think I'm getting this!" speech="" keys="any" threshold="" test="" play="B31" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is Seated and obtained orders. Because seating and taking orders is experience that can be used in many different settings. Every restaurant may not be the same and some of the tasks listed may not apply to serving anywhere rather than just on place.  " speech="" keys="any" threshold="" test="" play="A64" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Alright Cristina, I think I'm getting this!" speech="" keys="any" threshold="" test="" play="B30" />
           </Answers>
         </Question>
       </Questions>
@@ -248,27 +249,27 @@
     </TutoringPack>
     <TutoringPack name="TPA8">
       <Questions>
-        <Question id="8" agent="Jordan" text="Which reference do you think is best for applying to Eastside Grill? You can type your answer into the boxes with the red star next to them." speech="" media="" itemDif="0.1" play="B32">
+        <Question id="8" agent="Jordan" text="_user_, Which reference do you think is best for applying to Eastside Grill? You can type your answer into the boxes with the red star next to them." speech="" media="" itemDif="0.1" play="_user_,B31">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer!" speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="" play="A68" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not quite what I was looking for. Though" speech="" keys="bob" threshold="0.2" test="" play="A69" />
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Well, we now know that Jordan has worked for Eastside Grill before. He may want to use his former manager from the restaurant as a reference. She may be able to offer information to his potential new employer that could be helpful for getting the job. " speech="" keys="any" threshold="" test="" play="A70" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A71" />
-            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Well, I am pretty good at washing cars. " speech="" keys="any" threshold="" test="" play="B33" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer!" speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="" play="A66" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not quite what I was looking for." speech="" keys="bob" threshold="0.2" test="" play="A67" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Well, we now know that Jordan has worked for Eastside Grill before. He may want to use his former manager from the restaurant as a reference. She may be able to offer information to his potential new employer that could be helpful for getting the job. " speech="" keys="any" threshold="" test="" play="A68" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A69" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh Yeah. Now I see that Chelsea Jones would be the best reference for my application to the Eastside Grill. " speech="" keys="any" threshold="" test="" play="B32" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. She also works for the same brand of restaurants as Jordan is applying for. " speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A72" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A73" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. She also works for the same brand of restaurants as Jordan is applying for. " speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A70" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A71" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="Think about what kind of washing Jordan could do in a restaurant. What do you think the best answer might be?" speech="" media="" play="A74">
+            <Hint id="1" agent="Cristina" text="Think about which person could talk about Jordan's skills working at the Eastside Grill? What do you think the best answer might be?" speech="" media="" play="A72">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. She also works for the same brand of restaurants as Jordan is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.5" test="" play="A75" />
-                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="" play="A76" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. She also works for the same brand of restaurants as Jordan is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.5" test="" play="A73" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="" play="A74" />
               </Answers>
             </Hint>
           </Hints>
@@ -522,6 +523,7 @@
       <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="AddScore" data="0" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+	  <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="Transition0" id="1" />

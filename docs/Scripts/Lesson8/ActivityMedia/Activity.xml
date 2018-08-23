@@ -144,13 +144,13 @@
     </TutoringPack>
   </TutoringPacks>
   <Rules>
-    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="ShowMediaItem" data="" id="1" />
-      <Action agent="System" act="SetStatus" data="MCQuiz1" id="2" />
-      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="3" />
-      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="Start rule. Load the media. To LoadMCQuiz(1)">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadMCQuiz" id="2" />
+      <Action agent="System" act="ShowMedia" data="media\L9Activity.html" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
     </Rule>
-    <Rule name="LoadQuiz" status="LoadMCQuiz" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+	 <Rule name="LoadQuiz" status="LoadMCQuiz" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="Initialize scores. To StartItem (1)">
       <Action agent="System" act="SetStatus" data="StartItem" id="1" />
       <Action agent="System" act="ShowScore" data="" id="2" />
       <Action agent="System" act="SetValue" data="JordanScore:0" id="3" />
@@ -159,12 +159,25 @@
       <Action agent="System" act="ShowValue" data="JordanScore" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
+    <Rule name="StartItem" status="StartItem" response="" event="" hasItem="" priority="" frequency="" description="Show media item. To MCQuiz1 (18)">
+      <Action agent="System" act="ShowMediaItem" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="MCQuiz1" id="2" />
+      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+		 <Action agent="System" act="ShowButtonAndWait" data="NextPage" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="MCQuiz1" id="3" />
+      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="4" />
+      <Action agent="System" act="WaitForEvent" data="60" id="5" />
+    </Rule>
     <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="HideScore" data="" id="1" />
       <Action agent="System" act="DeliverRigidPack" data="Closing" id="2" />
       <Action agent="System" act="SetStatus" data="End" id="3" />
     </Rule>
-    <Rule name="QuizCHH" status="MCQuiz1" response="" event="MCQuizCHH" hasItem="" priority="1" frequency="" description="">
+    <Rule name="QuizCHH" status="MCQuiz1" response="" event="MCQuizCHH" hasItem="" priority="1" frequency="" description="CHH. To GetItem (2)">
       <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="Jordan" act="CannedExpression" data="StartSpeech" id="2" />
       <Action agent="System" act="GetMediaFeedback" data="SABadAnswer" id="3" />
@@ -733,18 +746,6 @@
       <Action agent="System" act="SetStatus" data="GetItem" id="8" />
       <Action agent="System" act="GetMediaItem" data="" id="9" />
       <Action agent="System" act="Wait" data="5" id="10" />
-    </Rule>
-    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
-      <Action agent="System" act="SetStatus" data="LoadMCQuiz" id="2" />
-      <Action agent="System" act="ShowMedia" data="media\L9Activity.html" id="3" />
-      <Action agent="System" act="Wait" data="5" id="4" />
-    </Rule>
-    <Rule name="StartItem" status="StartItem" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="ShowMediaItem" data="" id="1" />
-      <Action agent="System" act="SetStatus" data="MCQuiz1" id="2" />
-      <Action agent="System" act="GetMediaFeedback" data="Instruction" id="3" />
-      <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
   </Rules>
 </AutoTutorScript>

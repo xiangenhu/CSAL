@@ -2,17 +2,17 @@
 <html>
 	<head>
 		<title>CSAL Media</title>
-		<script>document.domain = 'xiangenhu.github.io'</script>
+		<script>document.domain = 'ace.autotutor.org'</script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -147,8 +147,7 @@
 		</style>
 		<script type="text/javascript" id="sourcecode">
 			var text = "";
-			var perfectAnswerText = "Thank you for the remind email Ms. Johnson";
-			
+			var perfectAnswerText = "Hello Ms. Johnson, I'd like to thank you for sending me a reminder email. Dr. Arthur I will be at your office around 3 pm. Best, Jordan";
 			$(document).ready(function()
 			{				
 				//lock the buttons
@@ -156,11 +155,36 @@
 				
 				$("#emailInput").focus();
 				
+				GetRequest();
+				
 				parent.GetWorldEvent("MediaLoaded");
 				
 				//create scroll pane element
 				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
 			});
+			
+			function GetRequest() 
+			{ 
+				
+				
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					//text = strs[1];
+					
+					text = decodeURIComponent(strs[1]);
+					
+					//text = decodeURI(text);
+					
+					$("#subjectInput").val(text);
+				
+			   }
+			  //parent.GetWorldEvent(text);
+			}
+			
 			function ShowItem()
 			{
 				
@@ -168,18 +192,20 @@
 			
 			function ShowMediaAnswer()
 			{
-				if( userAnswer == "Incorrect" )
+				$("#emailInput").val(perfectAnswerText);
+				
+				if( userAnswer == "IncorrectT" )
 						{
-							$("#subjectInput").val(perfectAnswerText);
-						}else if( userAnswer == "Correct" )
+							$("#emailInput").val(perfectAnswerText);//show perfect email
+						}else if( userAnswer == "CorrectT" )
 						{
-							$("#subjectInput").val(perfectAnswerText);
+							$("#emailInput").val(perfectAnswerText);//show perfect email
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
 					
 					//highlight the correct answer green
-					//$("#").animate({backgroundColor: "green", color: "white"}, 1000);
+					$("#").animate({backgroundColor: "green", color: "white"}, 1000);
 			}
 			
 			function Lock()
@@ -215,11 +241,11 @@
 				{
 					//play clicked sound
 					parent.PlaySound('clicked0.wav');
-					text = $("#subjectInput").val();
 					
 					//Here need to add a function to get user input content, 
 					//then return to Mainpage by using "parent.GetWorldEvent(userAnswer)"; see line 220
 					userAnswer =$("#emailInput").val().toLowerCase();
+					//var selectedID=$(this).attr("id");
 					var userSelectedValue = userAnswer;
 					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
 					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~();\"]/g,""); 
@@ -234,19 +260,10 @@
 					$(this).animate({fontSize: butAnimSize}, 75);
 					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
 					
-					
-					//parent.GetWorldEvent(userAnswer);
-					//Thank you for the remind email Ms. Johnson
-					if (userAnswer.indexOf("thank") >= 0 || userAnswer.indexOf("you") >= 0 || userAnswer.indexOf("remind") >= 0 || userAnswer.indexOf("email") >= 0)
-					{
-						userAnswer = "Correct";
-					}
-					else
-					{
-						userAnswer = "Incorrect";
-					}
 					//this function is to return user input to mianpage.
-					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+					// parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+					parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
+					//parent.GetWorldEvent(userAnswer);
 					//lock button and sent Stop call to ASAT
 					Lock();
 					 $('#emailInput').val('').empty();
@@ -255,7 +272,6 @@
 				$('#textInput').keydown(function(e) {
 					if(e.keyCode == 13) {
 						parent.PlaySound('clicked0.wav'); 
-						text = $("#subjectInput").val();
 					
 						//animate button click
 						$(".mybutton").animate({fontSize: butAnimSize}, 75);
@@ -267,7 +283,8 @@
 						$('textarea').attr('readonly', true);
 						
 						
-						parent.GetWorldEvent(userAnswer);
+						// parent.GetWorldEvent(userAnswer);
+						parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userAnswer);
 					}
 				});
 				
@@ -305,17 +322,9 @@
 				{
 					//$("#buttonBox").fadeOut(1000);
 					//$("#questionText").fadeOut(1000);
-					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
-					//parent.GetWorldEvent("Cristina");
-					//play the correct answer sound
-					if(userAnswer == "Correct")
-					{
-						parent.nextPage("media/"+"Lesson33-0-12.html?id="+text);
-					}else{
-						text = perfectAnswerText;
-						parent.nextPage("media/"+"Lesson33-0-12.html?id="+text);
-					}
-				
+					//parent.nextPage("media/"+"Lesson33-Close.html?id="+strId);
+					parent.GetWorldEvent("StopFinal");
+					//parent.nextPage("media/"+"Lesson33-Close.html?id=");
 					//parent.nextPage("media/"+"Lesson33-0-3.html?id=");
 					
 				}
@@ -355,14 +364,14 @@
 					To: <input type="text" id="toInput" class="emailHeadInput" value="JeanineJohnson@csal.edu; Arthur@csal.edu " readonly></input>
 				</div>
 				<div id="subjectLine">
-					Subject: <input type="text" id="subjectInput" class="emailHeadInput" value="" ></input>
+					Subject: <input type="text" id="subjectInput" class="emailHeadInput" value="Perfect Subject 2" readonly></input>
 				</div>
 			</div>
 			<div id="emailBody">
-				<textarea autofocus id="emailInput" class="emailBodyInput"readonly></textarea>
+				<textarea autofocus id="emailInput" class="emailBodyInput"></textarea>
 			</div>
 				
-			<input type="submit" class='mybutton' value="Submit Subject"></input>
+			<input type="submit" class='mybutton' value="Send E-Mail"></input>
 		</div>
 	</body>
 </html>

@@ -65,10 +65,10 @@
         <Item text="Jordan, can you answer this question?" speech="" play="A5" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToJordan">
-        <Item text="Jordan, No. That's incorrect." speech=" " play="A6" />
-        <Item text="Jordan, that is wrong." speech="" play="A7" />
-        <Item text="Jordan, that's not right." speech="" play="A8" />
-        <Item text="Jordan, That's wrong." speech="" play="A9" />
+        <Item text="Jordan, you did not answer correctly." speech=" " play="A6" />
+        <Item text="Jordan, you didn't select the correct answer." speech="" play="A7" />
+        <Item text="Jordan, you chose the wrong answer." speech="" play="A8" />
+        <Item text="Jordan, you selected the wrong answer." speech="" play="A9" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToUser">
         <Item text="_user_, Yeah, that's right." speech=" " play="_user_,A10" />
@@ -88,7 +88,7 @@
         <Item text="_user_, nice, thats right. Great job." speech="" play="_user_,A24" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToBoth">
-        <Item text="Sorry you two, neither of you got it correct." speech=" " play="A25" />
+        <Item text="Sorry, neither of you were right." speech=" " play="A25" />
         <Item text="Sorry, neither of you got the correct answer." speech="" play="A26" />
       </SpeechCan>
       <SpeechCan name="TryAgain">
@@ -127,30 +127,30 @@
     </Agent>
   </Agents>
   <RigidPacks>
-    <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="Look at what an exciting story this is! You used your knowledge of how narrative texts are arranged to create your own story!  I hope you enjoyed this activity." speech="" play="A50" />
-      <Item id="2" agent="Jordan" text="I certainly did. _user_ thanks for all your help. I look forward to seeing you next time." speech="I certainly did. _user_ thanks for all your help. I look forward to seeing you next time." play="B30,_user_,B31" />
-    </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="Hello! It's Cristina once again to tell you about the activities." speech="" media="media\IntroTitle.html" play="A51" />
-      <Item id="2" agent="Jordan" text="Good to see you two again! Cristina, can you please tell us more about today's activity?" speech="" play="B32" />
-      <Item id="3" agent="Cristina" text="In this activity, you will answer questions about basic plot structure in narrative texts. For the purpose of the activity, we will be looking at simple stories instead of complex novels. After answering each question you will be given a piece of a story. You can fill in the blanks of the story to create your own version of the plot! " speech="" media="media\L13-Opening1.html" play="A52" />
-      <Item id="4" agent="Jordan" text="Wow, awesome! This sounds like fun." speech="" play="B33" />
-      <Item id="5" agent="Cristina" text="Jordan, glad you think so! In order to fill in the blanks, you will press on one of the button options and drag that option to a blank area in the sentence. When the line under the blank turns green,  you will know that your answer can be dropped into the sentence." speech="" play="A53" />
-      <Item id="6" agent="Jordan" text="_user_, I think we can do this. Let's get to the first question!" speech="" play="_user_,B34" />
+      <Item id="1" agent="Cristina" text="Hi there. It's Cristina once again to tell you about the activities." speech="" media="media\IntroTitle.html" play="A50" />
+      <Item id="2" agent="Jordan" text="Good to see everyone again! Cristina, can you please tell us more about today's activity?" speech="" play="B30" />
+      <Item id="3" agent="Cristina" text="In this activity, you will answer questions about basic plot structure in narrative texts. For the purpose of the activity, we will be looking at simple stories instead of complex novels. After answering each question you will be given a piece of a story. You can fill in the blanks of the story to create your own version of the plot. " speech="" media="media\L13-Opening1.html" play="A51" />
+      <Item id="4" agent="Jordan" text="Wow, awesome! This sounds like fun." speech="" play="B31" />
+      <Item id="5" agent="Cristina" text="Jordan, glad you think so. In order to fill in the blanks, you will press on one of the button options and drag that option to a blank area in the sentence. When the line under the blank turns green,  you will know that your answer can be dropped into the sentence." speech="" play="A52" />
+      <Item id="6" agent="Jordan" text="_user_, I think we can do this. Let's get to the first question!" speech="" play="_user_,B32" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is your finished story. You used your knowledge of how narrative texts are arranged to create your own story.  You both did a great job and I hope you enjoyed this activity." speech="" play="A53" />
+      <Item id="2" agent="Jordan" text="I certainly did. _user_ ,thanks for all your help. I look forward to seeing you next time." speech="I certainly did. _user_ thanks for all your help. I look forward to seeing you next time." play="B33,_user_,B34" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TP1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's start developing the beginning of your story. What is one element that needs to be introduced in the beginning of your story? Please press on either A, B, or C." speech="" media="" play="A54">
+        <Question id="1" agent="Cristina" text="Let's start developing the beginning of your story. What is one element that is usually introduced in the beginning of a story?" speech="" media="" itemDif="" play="A54">
           <Answers>
             <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="I think it is A. You need to introduce the characters." speech="I think it is eigh. You need to introduce the characters." keys="A" threshold="" test="" play="B35" />
             <Answer name="JordanAnswer2" agent="Jordan" type="Bad1First" text="I think it is B. You need to introduce the major event." speech="" keys="B" threshold="" test="" play="B36" />
             <Answer name="JordanAnswer3" agent="Jordan" type="Bad2First" text="I think it is C. You need to talk about the ending." speech="I think it is Sea. you need to talk about the ending." keys="C" threshold="" test="" play="B37" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. whenever you tell a story, you need to introduce the characters.  " speech="The correct answer is eigh. whenever you tell a story, you need to introduce the characters.  " keys="A" threshold="" test="" play="A55" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, why don't you start this first round?" speech="" keys="any" threshold="" test="" play="A56" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the correct element is for the beginning of the story? " speech="" keys="any" threshold="" test="" play="_user_,A57" />
+            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. Characters are typically introduced in the beginning of a story.  " speech="The correct answer is eigh. Characters are typically introduced in the beginning of a story.  " keys="A" threshold="" test="" play="A55" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, why don't you start this first round? Please press on either A, B, or C." speech="" keys="any" threshold="" test="" play="A56" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the correct element is for the beginning of the story? Choose either A, B, or C." speech="" keys="any" threshold="" test="" play="_user_,A57" />
           </Answers>
         </Question>
       </Questions>
@@ -164,7 +164,7 @@
             <Answer name="JordanAnswer" agent="Jordan" type="DD" text="Here is my selection. " speech="" keys="Any" threshold="" test="" play="B38" />
             <Answer name="CristinaDD" agent="Cristina" type="Review" text="Good selection you two, these two will be your story's main characters. Now let's continue building your story!" speech="" keys="main characters" threshold="" test="" play="A59" />
             <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_ I like your choice alot!" speech="_user_ I like your choice alot!" keys="Like" threshold="" test="" play="_user_,B39" />
-            <Answer name="Temp" agent="Cristina" type="Temp" text="_user_ choose an answer!" speech="_user_ choose an answer!" keys="any" threshold="" test="" play="_user_,A60" />
+            <Answer name="Temp" agent="Cristina" type="Temp" text="_user_ choose a character by dragging one of the choices to the blank." speech="_user_ choose an answer!" keys="any" threshold="" test="" play="_user_,A60" />
             <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what will you select for yours?" speech="" keys="any" threshold="" test="" play="A61" />
             <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, go ahead, choose one." speech="" keys="any" threshold="" test="" play="_user_,A62" />
           </Answers>
@@ -175,14 +175,14 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ and Jordan, what element describes when and where a story takes place? This element may change. Please press on either A, B, or C next to the correct answer choice. Please press on either A, B, or C." speech="_user_ and Jordan, what element describes when and where a story takes place? This element may change. Please press on either A, B, or C next to the correct answer choice. Please press on either A, B, or C." media="" play="_user_,A63">
+        <Question id="1" agent="Cristina" text="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." speech="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." media="" play="A63">
           <Answers>
             <Answer name="JordanAnswer2" agent="Jordan" type="GoodSecond" text="I'm going to go for B. I think the setting needs to be introduced in the beginning of the story." speech="I'm going to go for Bee. I think the setting needs to be introduced in the beginning of the story." keys="B" threshold="" test="" play="B40" />
             <Answer name="JordanAnswer4" agent="Jordan" type="Bad1Second" text="I'm going to go for A. I think It's the ending with the problem solved." speech="I'm going to go for, eigh. I think It's the ending with the problem solved." keys="A" threshold="" test="" play="B41" />
             <Answer name="JordanAnswer6" agent="Jordan" type="Bad2Second" text="I'm going to go for C. I think it's the events leading to the major event. " speech="I'm going to go for, sea, I think it's the events leading to the major event. " keys="C" threshold="" test="" play="B42" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story progresses. " speech="" keys="B" threshold="" test="" play="A64" />
+            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues. " speech="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues." keys="B" threshold="" test="" play="A64" />
             <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asd" threshold="" test="" play="A65" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn, please choose an answer option. " speech="" keys="asd" threshold="" test="" play="_user_,A66" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn, please choose either A, B, or C. " speech="" keys="asd" threshold="" test="" play="_user_,A66" />
           </Answers>
         </Question>
       </Questions>
@@ -194,7 +194,7 @@
         <Question id="1" agent="Cristina" text="Now that you know that you need to establish the setting we will select a time and place for the setting. _user_ please choose a place for the setting from the list below and drag them to the blanks. Jordan will select the time." speech="Now that you know that you need to establish the setting we will select a time and place for the setting._user_ please choose a place for the setting from the list below and drag them to the blanks. Jordan will select the time." media="" play="A67,_user_,A68">
           <Answers>
             <Answer name="JordanAnswer" agent="Jordan" type="DD" text="Here's what I'm going to choose." speech="" keys="Any" threshold="" test="" play="B43" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Nice settings you two, you two are being very creative!" speech="Nice settings you two, you two are being very creative!" keys="Any" threshold="" test="" play="A69" />
+            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Nice settings you two, you two are being very creative!" speech="Nice settings you two, you are being very creative!" keys="Any" threshold="" test="" play="A69" />
             <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, I think you chose very well!" speech="_user_ I think you chose very well!" keys="like" threshold="" test="" play="_user_,B44" />
             <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your choice?" speech="" keys="adsf" threshold="" test="" play="A70" />
             <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which will you select?" speech="" keys="asdf" threshold="" test="" play="_user_,A71" />
@@ -206,7 +206,7 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you two have chosen a setting, let's continue. This question is for the two of you. What is the element early in the story that creates conflict for the characters? Please press on either A, B, or C." speech="Now that you two have chosen a setting, let's continue. This question is for the two of you. What is the element early in the story that creates conflict for the characters? Please press on either A, B, or C." media="" play="A72">
+        <Question id="1" agent="Cristina" text="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates conflict for the characters?" speech="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates connflict for the characters?" media="" play="A72">
           <Answers>
             <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="I'm going to answer A. I think there needs to be a problem at the beginning of the story." speech="I'm going to answer, eigh. I think there needs to be a problem at the beginning of the story." keys="A" threshold="" test="" play="B45" />
             <Answer name="JordanAnswer3" agent="Jordan" type="Bad1First" text="I think I'm going to answer B. I think this time, the major event needs to be at the beginning of the story." speech="I think I'm going to answer, Bee. I think this time, the major event needs to be at the beginning of the story." keys="B" threshold="" test="" play="B46" />
@@ -224,8 +224,8 @@
       <Questions>
         <Question id="1" agent="Cristina" text="Now that you know that you must introduce a problem at the beginning of the story, _user_, please choose a problem from the list below and drag it to the blank." speech="" media="" play="A76,_user_,A77">
           <Answers>
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, great choice of a problem!" speech="_user_ Great choice of a problem!" keys="like" threshold="" test="" play="_user_,B48" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Interesting problem! Let's go on." speech="" keys="any" threshold="" test="" play="A78" />
+            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, great choice of a problem. I like how this story is coming together." speech="_user_ Great choice of a problem. I like how this story is coming together." keys="like" threshold="" test="" play="_user_,B48" />
+            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Yes, now we have an interesting problem. Let's go on." speech="" keys="any" threshold="" test="" play="A78" />
             <Answer name="AskUser" agent="Cristina" type="AskUser" text="Go ahead. " speech="" keys="asdf" threshold="" test="" play="A79" />
           </Answers>
         </Question>
@@ -235,14 +235,14 @@
     </TutoringPack>
     <TutoringPack name="TP7">
       <Questions>
-        <Question id="1" agent="Cristina" text="There has been a lot of events so far in the story! _user_ and Jordan, what happens at the most important point of the story? Please press on either A, B, or C." speech="There has been a lot of events so far in the story! _user_ and Jordan, what happens at the most important point of the story? Please press on either A, B, or C." media="" play="A80,_user_,A81">
+        <Question id="1" agent="Cristina" text="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" speech="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" media="" play="A80">
           <Answers>
             <Answer name="JordanAnswer2" agent="Jordan" type="GoodSecond" text="I think it leads up to the major event. So C is correct." speech="" keys="C" threshold="" test="" play="B49" />
             <Answer name="JordanAnswer4" agent="Jordan" type="Bad1Second" text="I think the answer is A. It would lead up to more problems." speech="I think the answer is eigh. It would lead up to more problems." keys="A" threshold="" test="" play="B50" />
             <Answer name="JordanAnswer6" agent="Jordan" type="Bad2Second" text="I think the answer is B. It leads up to the ending with the problem solved." speech="I think the answer is Bee. It leads up to the ending with the problem solved." keys="B" threshold="" test="" play="B51" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is C. When something happens that complicates the problem it leads up to a major event. " speech="The correct answer is Sea. When something happens that complicates the problem it leads up to a major event. " keys="C" threshold="" test="" play="A82" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A83" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn to answer." speech="" keys="asdf" threshold="" test="" play="_user_,A84" />
+            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is C. When something happens that complicates the problem it leads up to a major event. " speech="The correct answer is Sea. When something happens that complicates the problem it leads up to a major event. " keys="C" threshold="" test="" play="A81" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A82" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn to answer. Press either A, B, or C." speech="" keys="asdf" threshold="" test="" play="_user_,A83" />
           </Answers>
         </Question>
       </Questions>
@@ -251,10 +251,10 @@
     </TutoringPack>
     <TutoringPack name="TP8">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now, we know that you must have a major event follow the problem, let's read the middle of the story. _user_, please choose a major event from the list below and drag it to the blank." speech="Now, we know that you must have a major event follow the problem, let's read the middle of the story, _user_, please choose a major event from the list below and drag it to the blank." media="" play="A85,_user_,A86">
+        <Question id="1" agent="Cristina" text="Now we know that a major event must follow the problem. let's read the middle of the story. _user_, please choose a major event from the list below and drag it to the blank." speech="Now we know that a major event must follow the problem. let's read the middle of the story, _user_, please choose a major event from the list below and drag it to the blank." media="" play="A84,_user_,A85">
           <Answers>
             <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, your major event is brilliant!" speech="_user_, your major event is brilliant!" keys="any" threshold="" test="" play="_user_,B52" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="_user_, great choice of major event!  Let's move on to the ending of your story." speech="_user_ Great choice of major event!  Let's move on to the ending of your story." keys="any" threshold="" test="" play="_user_,A87" />
+            <Answer name="CristinaDD" agent="Cristina" type="Review" text="_user_, great choice of major event!  Let's move on to the ending of your story." speech="_user_ Great choice of major event!  Let's move on to the ending of your story." keys="any" threshold="" test="" play="_user_,A86" />
           </Answers>
         </Question>
       </Questions>
@@ -263,14 +263,14 @@
     </TutoringPack>
     <TutoringPack name="TP9">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you tell me what happens at the end of a story? Please press on either A, B, or C." speech="_user_ and Jordan, can you tell me what happens at the end of a story? Please press on either A, B, or C." media="" play="_user_,A88">
+        <Question id="1" agent="Cristina" text="can you tell me what happens at the end of a story?" speech="can you tell me what happens at the end of a story?" media="" play="A87">
           <Answers>
             <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="Oh I know, A. It's where the problem is solved!" speech="Oh I know! eigh! It's where the problem is solved!" keys="A" threshold="" test="" play="B53" />
             <Answer name="JordanAnswer3" agent="Jordan" type="Bad1First" text="Oh I know, B. It's where the major event occurs!" speech="Oh I know! Bee! it's where the major event occurs!" keys="B" threshold="" test="" play="B54" />
             <Answer name="JordanAnswer4" agent="Jordan" type="Bad2First" text="Oh I know, C. It's where the problem occurs!" speech="Oh I know! Sea! it's where the problem occurs!" keys="C" threshold="" test="" play="B55" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. The ending of the story is where the problem is finally solved." speech="The correct answer is, eigh. The ending of the story is where the problem is finally solved." keys="A" threshold="" test="" play="A89" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, it's your turn." speech="" keys="asdf" threshold="" test="" play="A90" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn." speech="" keys="adf" threshold="" test="" play="_user_,A91" />
+            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. The ending of the story is where the problem is finally solved." speech="The correct answer is, eigh. The ending of the story is where the problem is finally solved." keys="A" threshold="" test="" play="A88" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, it's your turn. Choose A, B, or C." speech="" keys="asdf" threshold="" test="" play="A89" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what about you? What do you think happens at the end of a story? Press on either A, B, or C." speech="" keys="adf" threshold="" test="" play="_user_,A90" />
           </Answers>
         </Question>
       </Questions>
@@ -279,11 +279,11 @@
     </TutoringPack>
     <TutoringPack name="TQ1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." speech="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." media="" play="A92,_user_,A93">
+        <Question id="1" agent="Cristina" text="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." speech="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." media="" play="A91,_user_,A92">
           <Answers>
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, your ending is fascinating!" speech="_user_ Your ending is fascinating!" keys="any" threshold="" test="" play="_user_,B56" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Great ending and a good way to resolve the story's problem!" speech="" keys="any" threshold="" test="" play="A94" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Go ahead." speech="" keys="asdf" threshold="" test="" play="A95" />
+            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, you picked a pretty good ending." speech="_user_ You picked a pretty good ending." keys="any" threshold="" test="" play="_user_,B56" />
+            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Great ending, and a good way to resolve the story's problem." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Go ahead." speech="" keys="asdf" threshold="" test="" play="A94" />
           </Answers>
         </Question>
       </Questions>
@@ -292,9 +292,9 @@
     </TutoringPack>
     <TutoringPack name="TQ2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Before we look at your finished story, let's come up with a title for it. I think this will complete the basic writing structure for your story! _user_, why don't you give the story a title?" speech="" media="" play="A96,_user_,A97">
+        <Question id="1" agent="Cristina" text="Before we look at your finished story, let's come up with a title for it. I think this will complete the basic writing structure for your story. _user_, why don't you give the story a title?" speech="" media="" play="A95,_user_,A96">
           <Answers>
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Please choose one from the options below." speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Please choose one from the options below." speech="" keys="any" threshold="" test="" play="A97" />
           </Answers>
         </Question>
       </Questions>
@@ -402,19 +402,16 @@
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCUserFirstJordanGood" status="GetNextItemMCJordanSecondGood" response="" event="" hasItem="" priority="" frequency="" description="User first. To GetNextItemMCUserAnswerJordanGood">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
-      <Action agent="System" act="SetStatus" data="MCUserFirstJordanGood" id="2" />
-      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+      <Action agent="System" act="SetStatus" data="MCUserFirstJordanGood" id="1" />
+      <Action agent="System" act="WaitForEvent" data="100" id="2" />
     </Rule>
     <Rule name="MCUserFirstJordanBad1" status="GetNextItemMCJordanSecondBad1" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
-      <Action agent="System" act="SetStatus" data="MCUserFirstJordanBad1" id="2" />
-      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+      <Action agent="System" act="SetStatus" data="MCUserFirstJordanBad1" id="1" />
+      <Action agent="System" act="WaitForEvent" data="100" id="2" />
     </Rule>
     <Rule name="MCUserFirstJordanBad2" status="GetNextItemMCJordanSecondBad2" response="" event="" hasItem="" priority="" frequency="" description="User first. To GetNextItemMCUserAnswerJordanBad">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
-      <Action agent="System" act="SetStatus" data="MCUserFirstJordanBad2" id="2" />
-      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+      <Action agent="System" act="SetStatus" data="MCUserFirstJordanBad2" id="1" />
+      <Action agent="System" act="WaitForEvent" data="100" id="2" />
     </Rule>
     <Rule name="JordanFirstMCGoodTrue" status="CheckJordanFirstMCGood" response="" event="" hasItem="true" priority="" frequency="" description="Jordan answer first. To GetNextItemMCJordanAnsweredGood">
       <Action agent="System" act="ShowMediaItem" data="" id="1" />

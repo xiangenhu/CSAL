@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Lesson 13 Media</title>
-<script>document.domain = 'xiangenhu.github.io'</script>
+<script>document.domain = 'ace.autotutor.org'</script>
 		
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 		
 		<style>
@@ -213,27 +213,61 @@
 					return returnTag;
 				}
 				else if (data=="JordanGood"){
-					$("#A").animate({fontSize:"22px"}, 75);
-					$("#A").animate({fontSize: "30px"}, 600);
+					//$("#A").animate({fontSize:"22px"}, 75);
+					//$("#A").animate({fontSize: "30px"}, 600);
 					parent.GetWorldEvent("JordanGood");
 					}
 				else if (data=="JordanBad1"){
-					$("#B").animate({fontSize:"22px"}, 75);
-					$("#B").animate({fontSize: "30px"}, 600);
+					//$("#B").animate({fontSize:"22px"}, 75);
+					//$("#B").animate({fontSize: "30px"}, 600);
 					parent.GetWorldEvent("JordanBad1");
 					}
 				else if (data=="JordanBad2"){
-					$("#C").animate({fontSize:"22px"}, 75);
-					$("#C").animate({fontSize: "30px"}, 600);
+					//$("#C").animate({fontSize:"22px"}, 75);
+					//$("#C").animate({fontSize: "30px"}, 600);
 					parent.GetWorldEvent("JordanBad2");
 					}
 			}
-			
 			function ShowMediaAnswer()
 			{
-				if (CorrectAnswer=="A"){}
-				else if (CorrectAnswer=="B"){}
-				else if (CorrectAnswer=="C"){}
+				
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 2000);
+				
+			}
+			function ShowMediaAnswer(){
+			
+				if (CorrectAnswer=="A"){
+				
+					$("#A").animate({backgroundColor: "green", color: "white"}, 2000);
+				}
+				
+				else if (CorrectAnswer=="B"){
+				
+					$("#B").animate({backgroundColor: "green", color: "white"}, 2000);
+				}
+				
+				else if (CorrectAnswer=="C"){
+				
+					$("#C").animate({backgroundColor: "green", color: "white"}, 2000);
+				}
 			}
 			
 			$(document).ready(function(){});
@@ -247,13 +281,13 @@
 		
 		<div id="questionBox">
 			<div id="questionText">
-				What is one element that needs to be introduced in the beginning of your story?
+				What is one element that is typically introduced in the beginning of a story?
 			</div>
 		</div>
 		<div id="buttonBox">
 			<div class="mybutton" id="A" returnTag="characters" isCorrect="Correct">A) the characters</div>
 			
-			<div class="mybutton" id="B" returnTag="event" isCorrect="Incorrect">B) the major event</div>
+			<div class="mybutton" id="B" returnTag="event" isCorrect="Incorrect">B) a major event</div>
 			
 			<div class="mybutton" id="C" returnTag="ending" isCorrect="Incorrect">C) the ending</div>
 		</div>

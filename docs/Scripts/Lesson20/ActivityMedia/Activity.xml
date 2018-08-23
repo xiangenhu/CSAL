@@ -3,9 +3,9 @@
   <Agents>
     <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
       <SpeechCan name="DisagreeWithUser">
-        <Item text="_user_, I don't know if that's right." speech="" play="_user_,B1" />
-        <Item text="_user_, I don't know. Doesn't sound right to me." speech="" play="_user_,B2" />
-        <Item text="_user_, I disagree. " speech="" play="_user_,B3" />
+        <Item text="I don't know if that's right." speech="" play="B1" />
+        <Item text="I don't know. Doesn't sound right to me." speech="" play="B2" />
+        <Item text="I disagree with the selected answer. " speech="" play="B3" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_,Awesome." speech="" play="_user_,B4" />
@@ -43,52 +43,51 @@
         <Item text="_user_,Yes. You got it right." speech="" play="_user_,A8" />
         <Item text="_user_, exactly. You are right." speech="" play="_user_,A9" />
         <Item text="_user_, yep. That's right." speech="" play="_user_,A10" />
-        <Item text="_user_,You're on fire. Oh, maybe I shouldn't say that during this lesson. Either way, you got it right." speech="" play="_user_,A11" />
       </SpeechCan>
       <SpeechCan name="MovetoHint">
-        <Item text="_user_, that is not correct. Let's ask ourselves another question about the material. " speech="" play="_user_,A12" />
-        <Item text="_user_, that's not right. Why don't think about this question. " speech="" play="_user_,A13" />
-        <Item text="_user_, that is not the right answer. Let's think about this question instead." speech="" play="_user_,A14" />
-        <Item text="_user_, that answer is wrong. Let's look at this question again." speech="" play="_user_,A15" />
+        <Item text="_user_, that is not correct. Let's ask ourselves another question about the material. " speech="" play="_user_,A11" />
+        <Item text="_user_, that's not right. Why don't think about this question. " speech="" play="_user_,A12" />
+        <Item text="_user_, that is not the right answer. Let's think about this question instead." speech="" play="_user_,A13" />
+        <Item text="_user_, that answer is wrong. Let's look at this question again." speech="" play="_user_,A14" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToBoth">
-        <Item text="Sorry you two, your answers are not right." speech="" play="A16" />
-        <Item text="Sorry, you both did not get it right this time." speech="" play="A17" />
-        <Item text="Unfortunately, you both did not get the right answer this time. " speech="" play="A18" />
+        <Item text="Sorry you two, your answers are not right." speech="" play="A15" />
+        <Item text="Sorry, you both did not get it right this time." speech="" play="A16" />
+        <Item text="Unfortunately, you both did not get the right answer this time. " speech="" play="A17" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackJordan">
-        <Item text="Jordan, sorry, you did not get it right this time." speech="" play="A19" />
-        <Item text="Jordan, no, that's not correct." speech="" play="A20" />
-        <Item text="Jordan, unfortunately your answer is not correct." speech="" play="A21" />
+        <Item text="Jordan, sorry, you did not get it right this time." speech="" play="A18" />
+        <Item text="Jordan, no, that's not correct." speech="" play="A19" />
+        <Item text="Jordan, unfortunately your answer is not correct." speech="" play="A20" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,A22" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,A21" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="_user_, sorry. It Looks like you picked the wrong answer." speech="" play="_user_,A23" />
-        <Item text="_user_, sorry, that answer is incorrect." speech="" play="_user_,A24" />
-        <Item text="_user_, sorry, that answer is not quite right." speech="" play="_user_,A25" />
+        <Item text="_user_, sorry. It Looks like you picked the wrong answer." speech="" play="_user_,A22" />
+        <Item text="_user_, sorry, that answer is incorrect." speech="" play="_user_,A23" />
+        <Item text="_user_, sorry, that answer is not quite right." speech="" play="_user_,A24" />
       </SpeechCan>
       <SpeechCan name="NeutralFeedback">
-        <Item text="_user_, here is the answer." speech="" play="_user_,A26" />
+        <Item text="_user_, here is the answer." speech="" play="_user_,A25" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToBoth">
-        <Item text="Good job, both of you." speech="" play="A27" />
-        <Item text="Wow, you both did great." speech="" play="A28" />
-        <Item text="You are both correct, great work." speech="" play="A29" />
+        <Item text="Good job, both of you." speech="" play="A26" />
+        <Item text="Wow, you both did great." speech="" play="A27" />
+        <Item text="You are both correct, great work." speech="" play="A28" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackJordan">
-        <Item text="Jordan, that's right. Great job." speech="" play="A30" />
-        <Item text="Jordan, you got it." speech="" play="A31" />
-        <Item text="Jordan, you are correct." speech="" play="A32" />
-        <Item text="Jordan, you are right. " speech="" play="A33" />
+        <Item text="Jordan, that's right. Great job." speech="" play="A29" />
+        <Item text="Jordan, you got it." speech="" play="A30" />
+        <Item text="Jordan, you are correct." speech="" play="A31" />
+        <Item text="Jordan, you are right. " speech="" play="A32" />
       </SpeechCan>
       <SpeechCan name="PumpBlankRemind">
-        <Item text="_user_, if you don't select an answer I won't know which one you think is correct." speech="" play="_user_,A34" />
-        <Item text="_user_, please press an answer." speech="" play="_user_,A35" />
-        <Item text="_user_, remember to press on an answer, please." speech="" play="_user_,A36" />
-        <Item text="I'm trying to read your mind, but its not working. I can't tell what your answer is. Please choose one." speech="" play="A37" />
-        <Item text="_user_, even if you're not sure, go ahead and press an answer. Maybe you'll get lucky." speech="" play="_user_,A38" />
+        <Item text="_user_, if you don't select an answer I won't know which one you think is correct." speech="" play="_user_,A33" />
+        <Item text="_user_, please press an answer." speech="" play="_user_,A34" />
+        <Item text="_user_, remember to press on an answer, please." speech="" play="_user_,A35" />
+        <Item text="I'm trying to read your mind, but its not working. I can't tell what your answer is. Please choose one." speech="" play="A36" />
+        <Item text="_user_, even if you're not sure, go ahead and press an answer. Maybe you'll get lucky." speech="" play="_user_,A37" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -139,128 +138,128 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Difficult3" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, why do we want to make sure that the victim is not near anything smoking or a heat source?" speech="" play="A39" />
+      <Item id="1" agent="Cristina" text="Jordan, why do we want to make sure that the victim is not near anything smoking or a heat source?" speech="" play="A38" />
       <Item id="2" agent="Jordan" text="Well, we don't want to burn them again." speech="" play="B17" />
-      <Item id="3" agent="Cristina" text="Jordan, that is true. However there is another reason mentioned in the text." speech="" play="A40" />
+      <Item id="3" agent="Cristina" text="Jordan, that is true. However there is another reason mentioned in the text." speech="" play="A39" />
     </RigidPack>
     <RigidPack name="Transition7" usedIn="">
       <Item id="1" agent="Jordan" text="Cristina, yes I see now. Good call." speech="" play="B18" />
-      <Item id="2" agent="Cristina" text="Let us move on. The last problem this text talks about is when the burn becomes infected. Jordan, do you know any of the signs of infection?" speech="" play="A41" />
+      <Item id="2" agent="Cristina" text="Let us move on. The last problem this text talks about is when the burn becomes infected. Jordan, do you know any of the signs of infection?" speech="" play="A40" />
       <Item id="3" agent="Jordan" text="I think sleepiness is a sign." speech="I think sleepyness is a sign" play="B19" />
-      <Item id="4" agent="Cristina" text="Jordan, that's incorrect. Let's read the sentence that talks about signs of infection." speech="" play="A42" />
+      <Item id="4" agent="Cristina" text="Jordan, that's incorrect. Let's read the sentence that talks about signs of infection." speech="" play="A41" />
       <Item id="5" agent="Jordan" text="Ok. You mean the sentence that i highlighted below? It tells us the signs of infection include increased pain, redness, fever, swelling, or oozing. oh man. I would not know what to do if my skin were swelling and oozing." speech="Ok. You mean the sentence that i highlighted below? It tells us the signs of infection include increased pain, redness, fever, swelling, or oozing... oh man. I would not know what to do if my skin were swelling and oozing." play="B20" />
-      <Item id="6" agent="Cristina" text="Jordan, yes, swelling and oozing are signs of infection and should be treated. Let's find a solution for the problem of infection." speech="Jordan, yes, swelling and oozine are signs of infection and should be treated. Let's find a solution for the problem of infection. " play="A43" />
+      <Item id="6" agent="Cristina" text="Jordan, yes, swelling and oozing are signs of infection and should be treated. Let's find a solution for the problem of infection." speech="Jordan, yes, swelling and oozine are signs of infection and should be treated. Let's find a solution for the problem of infection. " play="A42" />
     </RigidPack>
     <RigidPack name="Transition9" usedIn="">
-      <Item id="1" agent="Cristina" text="Alright, so now that we have gone over the problem and the solutions in this text, we are going to talk about summarizing the problem and solution text.  summarizing checks our overall understanding of the text." speech="Alright. So now that we have gone over the problem and the solutions in this text, we are going to talk about how to summorizing the problem and solution text. Summorizing checks our overall understanding of the text." play="A44" />
+      <Item id="1" agent="Cristina" text="Alright, so now that we have gone over the problem and the solutions in this text, we are going to talk about summarizing the problem and solution text.  summarizing checks our overall understanding of the text." speech="Alright. So now that we have gone over the problem and the solutions in this text, we are going to talk about how to summorizing the problem and solution text. Summorizing checks our overall understanding of the text." play="A43" />
     </RigidPack>
     <RigidPack name="Difficult6" usedIn="">
-      <Item id="1" agent="Cristina" text="Remember, writers can include sentences or information that gives us specific details about the problem or the solutions." speech="" play="A45" />
+      <Item id="1" agent="Cristina" text="Remember, writers can include sentences or information that gives us specific details about the problem or the solutions." speech="" play="A44" />
     </RigidPack>
     <RigidPack name="Difficult2" usedIn="">
-      <Item id="1" agent="Cristina" text="Now let us go over the steps to the solutions for this problem." speech="Now let us go over the steps too the solutions for this problem." play="A46" />
+      <Item id="1" agent="Cristina" text="Now let us go over the steps to the solutions for this problem." speech="Now let us go over the steps too the solutions for this problem." play="A45" />
     </RigidPack>
     <RigidPack name="NewPassage" usedIn="">
-      <Item id="1" agent="Cristina" text="You both are doing a great job. Let's practice some more with a new problem and solutions text." speech="" play="A47" />
+      <Item id="1" agent="Cristina" text="You both are doing a great job. Let's practice some more with a new problem and solutions text." speech="" play="A46" />
       <Item id="2" agent="Jordan" text="Oh no. I see this one is about Major Burns. This problem sounds worse than the last passage." speech="" play="B21" />
-      <Item id="3" agent="Cristina" text="Jordan, it will be OK. Let's start the reading and see what we can learn." speech="" play="A48" />
-      <Item id="4" agent="Cristina" text="_user_, when you have finished reading, please press on the Click Here to continue button to continue." speech="" play="_user_,A49" />
+      <Item id="3" agent="Cristina" text="Jordan, it will be OK. Let's start the reading and see what we can learn." speech="" play="A47" />
+      <Item id="4" agent="Cristina" text="_user_, when you have finished reading, please press on the Click Here to continue button to continue." speech="" play="_user_,A48" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="Both of you did a wonderful job today,. We covered a lot of material. We learned how to find the problem is problem solution texts, we identified the topic, picked out solutions, learned what a solution is, identified supporting information and how to spot it, learned what a good conclusion is, identified an appropriate conclusion, learned what information goes into problem solution text summaries, and identified good summaries. We had a busy day." speech="" media="media\Lesson20Close.html" play="A50" />
+      <Item id="1" agent="Cristina" text="Both of you did a wonderful job today,. We covered a lot of material. We learned how to find the problem is problem solution texts, we identified the topic, picked out solutions, learned what a solution is, identified supporting information and how to spot it, learned what a good conclusion is, identified an appropriate conclusion, learned what information goes into problem solution text summaries, and identified good summaries. We had a busy day." speech="" media="media\Lesson20Close.html" play="A49" />
       <Item id="2" agent="Jordan" text="Wow, I didn't realize we learned that much. That's pretty great." speech="" play="B22" />
-      <Item id="3" agent="Cristina" text="Yes it is. Really nice job today, both of you. I hope to see you soon. Bye until next time." speech="" play="A51" />
+      <Item id="3" agent="Cristina" text="Yes it is. Really nice job today, both of you. I hope to see you soon. Bye until next time." speech="" play="A50" />
       <Item id="4" agent="Jordan" text="_user_, I hope you join me next time. I think we make a pretty good team. See you soon." speech="" play="_user_,B23" />
     </RigidPack>
     <RigidPack name="Transition4" usedIn="">
-      <Item id="1" agent="Cristina" text="Let's consider other things we might want to do to treat minor burns. Jordan, what about using hot water as a treatment for minor burns?" speech="" play="A52" />
+      <Item id="1" agent="Cristina" text="Let's consider other things we might want to do to treat minor burns. Jordan, what about using hot water as a treatment for minor burns?" speech="" play="A51" />
       <Item id="2" agent="Jordan" text="Cristina, I think it might help to disinfect the wound. Is that correct?" speech="Cristina, I think it might help to dis-infect the wound. Is that correct?" play="B24" />
-      <Item id="3" agent="Cristina" text="Let's find out. _user_, what do you think? " speech="" play="A53,_user_,A54" />
+      <Item id="3" agent="Cristina" text="Let's find out. _user_, what do you think? " speech="" play="A52,_user_,A53" />
     </RigidPack>
     <RigidPack name="Difficult5" usedIn="">
-      <Item id="1" agent="Cristina" text="Now we are going to go over the last solution discussed in the text. Jordan, what is the last solution in this text?" speech="" play="A55" />
+      <Item id="1" agent="Cristina" text="Now we are going to go over the last solution discussed in the text. Jordan, what is the last solution in this text?" speech="" play="A54" />
       <Item id="2" agent="Jordan" text="I think it is to cover the burn. " speech="" play="B25" />
-      <Item id="3" agent="Cristina" text="Jordan, that's right. The last solution in this text is cover the burn with a moist sterile gauze bandage. However, sometimes, when we are trying to solve problems, things get in the way of doing it." speech="" play="A56" />
-      <Item id="4" agent="Cristina" text="But Jordan, when we are finding solutions to a problem, we have to think about all the possible obstacles that will get in our way. What might be one obstacle when you are trying to cover the burn?" speech="But Jordan, when we are finding solutions to a problem, we have to think about all the possible  obstacles that will get in our way. What might be one obstacle when you are trying to cover the burn?" play="A57" />
+      <Item id="3" agent="Cristina" text="Jordan, that's right. The last solution in this text is cover the burn with a moist sterile gauze bandage. However, sometimes, when we are trying to solve problems, things get in the way of doing it." speech="" play="A55" />
+      <Item id="4" agent="Cristina" text="But Jordan, when we are finding solutions to a problem, we have to think about all the possible obstacles that will get in our way. What might be one obstacle when you are trying to cover the burn?" speech="But Jordan, when we are finding solutions to a problem, we have to think about all the possible  obstacles that will get in our way. What might be one obstacle when you are trying to cover the burn?" play="A56" />
       <Item id="5" agent="Jordan" text="Cristina, that's a good question, I don't know and the text didn't say. _user_, can you help me out? " speech="Cristina, that's a good question. I don't know and the text didn't say. _user_, can you help me out? " play="B26,_user_,B27" />
     </RigidPack>
     <RigidPack name="Difficult1" usedIn="">
       <Item id="1" agent="Jordan" text="Cristina, This is serious. I don't think I'd know what to do." speech="" play="B28" />
-      <Item id="2" agent="Cristina" text="This text gives us one particularly important instruction." speech="" play="A58" />
+      <Item id="2" agent="Cristina" text="This text gives us one particularly important instruction." speech="" play="A57" />
       <Item id="3" agent="Jordan" text="What is it?" speech="" play="B29" />
     </RigidPack>
     <RigidPack name="Transition6" usedIn="">
-      <Item id="1" agent="Cristina" text="There is another important thing mentioned in the text to watch out for when you have minor burns. And that is blistered skin. Jordan, do you know what protects skin from being blistered? I'll give you a hint, it's something that we've just went over." speech="There is another important thing, mentioned in the text, to watch out for when you have minor burns. And that is blistered skenn. Jordan, do you know what protects skin from being blistered? I'll give you a hint, it's something that we've just went over." play="A59" />
+      <Item id="1" agent="Cristina" text="The text mentions another important thing to watch out for when you have minor burns. And that is blistered skin. Jordan, according to the text what protects skin from being blistered?" speech="The text mentions another important thing to watch out for when you have minor burns. And that is blistered skenn. Jordan, according to the text what protects skin from being blistered? " play="A58" />
       <Item id="2" agent="Jordan" text="I would think a cream would work. " speech="" play="B30" />
-      <Item id="3" agent="Cristina" text="Jordan, not quite what I had in mind." speech="" play="A60" />
+      <Item id="3" agent="Cristina" text="Jordan, not quite what I had in mind." speech="" play="A59" />
     </RigidPack>
     <RigidPack name="TransitionA" usedIn="">
-      <Item id="1" agent="Cristina" text="Nice job you two. Now since you guys are on a roll, I would like to ask you two to help me with something." speech="" play="A61" />
+      <Item id="1" agent="Cristina" text="Nice job you two. Now since you guys are doing so well, I would like to ask you two to help me with something." speech="" play="A60" />
       <Item id="2" agent="Jordan" text="Cristina, what can we help you with?" speech="" play="B31" />
-      <Item id="3" agent="Cristina" text="Here is a summary of the text that we've just read, and you let me know if something is missing from this summary. " speech="" play="A62" />
+      <Item id="3" agent="Cristina" text="Here is a summary of the text that we've just read, and you let me know if something is missing from this summary. " speech="" play="A61" />
       <Item id="4" agent="Jordan" text="This summary looks really short, I bet something is missing from it!" speech="" play="B32" />
-      <Item id="5" agent="Cristina" text="Jordan, you might be unto something. " speech="" play="A63" />
+      <Item id="5" agent="Cristina" text="Jordan, you might be on to something. " speech="" play="A62" />
     </RigidPack>
     <RigidPack name="Transition1" usedIn="">
-      <Item id="1" agent="Jordan" text="Oh, so the topic is kinda obvious in this one. I mean it is the title, right?" speech="" play="B33" />
-      <Item id="2" agent="Cristina" text="Yes. that's right. The topic is not always the title of a text, but in this case it is. " speech="" play="A64" />
+      <Item id="1" agent="Jordan" text="That wasn't too bad. what's next?" speech="" play="B33" />
+      <Item id="2" agent="Cristina" text="Next we are going to identify the problem in the text. " speech="" play="A63" />
     </RigidPack>
     <RigidPack name="Difficult4" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, the text talked about dealing with burned clothing. What should we do with burned clothing?" speech="" play="A65" />
+      <Item id="1" agent="Cristina" text="Jordan, the text talked about dealing with burned clothing. What should we do with burned clothing?" speech="" play="A64" />
       <Item id="2" agent="Jordan" text="I would leave the burned clothing in place. " speech="" play="B34" />
-      <Item id="3" agent="Cristina" text="Jordan, yes. That's right. Do you know why?" speech="" play="A66" />
+      <Item id="3" agent="Cristina" text="Jordan, yes. That's right. Do you know why?" speech="" play="A65" />
       <Item id="4" agent="Jordan" text="well...I would have to think about it." speech="" play="B35" />
-      <Item id="5" agent="Cristina" text="Ok, let's ask _user_. " speech="" play="A67,_user_" />
+      <Item id="5" agent="Cristina" text="Ok, let's ask _user_. " speech="" play="A66,_user_" />
     </RigidPack>
     <RigidPack name="Transition2" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, can you tell me one of the solutions in this text?" speech="" play="A68" />
+      <Item id="1" agent="Cristina" text="Jordan, can you tell me one of the solutions in this text?" speech="" play="A67" />
       <Item id="2" agent="Jordan" text="Um, I am not sure. I'm stuck between three. Can I show you?" speech="" play="B36" />
-      <Item id="3" agent="Cristina" text="Sure, highlight the sentences and we'll help." speech="" play="A69" />
+      <Item id="3" agent="Cristina" text="Sure, highlight the sentences and we'll help." speech="" play="A68" />
     </RigidPack>
     <RigidPack name="Transition8" usedIn="">
-      <Item id="1" agent="Cristina" text="Great job you two! Now, other than swelling or oozing, according to the text, what would be another sign in which you should immediately seek medical help? " speech="Great job you two! Now! other than swelling, or, oozing, according to the text, what would be another sign, in which you should immediately seek medical help? " play="A70" />
+      <Item id="1" agent="Cristina" text="Great job you two! Now, other than swelling or oozing, according to the text, what would be another sign in which you should immediately seek medical help? " speech="Great job you two! Now! other than swelling, or, oozing, according to the text, what would be another sign, in which you should immediately seek medical help? " play="A69" />
     </RigidPack>
     <RigidPack name="Transition3" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, now can you tell me another solution?" speech="" play="A71" />
+      <Item id="1" agent="Cristina" text="Jordan, now can you tell me another solution?" speech="" play="A70" />
       <Item id="2" agent="Jordan" text="I think the, cool the burn sentence is a solution. I highlighted it for us." speech="" play="B37" />
-      <Item id="3" agent="Cristina" text="Jordan, Great. That's right. Let's talk about why cooling the burn is important." speech="" play="A72" />
+      <Item id="3" agent="Cristina" text="Jordan, Great. That's right. Let's talk about why cooling the burn is important." speech="" play="A71" />
     </RigidPack>
     <RigidPack name="Transition5" usedIn="">
-      <Item id="1" agent="Cristina" text="Let's go back to the solution about bandaging the burn. Jordan, do you know why that's important?" speech="Let's go back to the solution about bandijing the burn. Jordan, do you know why that's important?" play="A73" />
+      <Item id="1" agent="Cristina" text="Let's talk about bandaging the burn. Jordan, do you know why that's important?" speech="" play="A72" />
       <Item id="2" agent="Jordan" text="That's a good question." speech="" play="B38" />
     </RigidPack>
     <RigidPack name="Difficult8" usedIn="">
       <Item id="1" agent="Jordan" text="I think I know the sentence that does not belong in this summary. " speech="" play="B39" />
     </RigidPack>
     <RigidPack name="TextMap" usedIn="">
-      <Item id="1" agent="Cristina" text="Take a look at the information that we filled into our text map." speech="" play="A74" />
+      <Item id="1" agent="Cristina" text="Take a look at the information that we filled into our text map." speech="" play="A73" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ and Jordan, nice to see you two." speech="" media="media\Lesson20-IntroTitle.html" play="_user_,A75" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, nice to see you two." speech="" media="media\Lesson20-IntroTitle.html" play="_user_,A74" />
       <Item id="2" agent="Jordan" text="_user_ and Cristina, hello. I'm ready for todays lesson. What are we doing today?" speech="" play="_user_,B40" />
-      <Item id="3" agent="Cristina" text="Today we are going to be looking at problem and solution texts. Problem solution texts can be difficult to work through. There can be multiple problems and solutions, or one problem and one solution. Some even have one problem and you have to decide the solution based on what is happening around you. Check out the example. See if you can figure out the problem." speech="Today, we are going to be looking at problem and solution texts. Problem solution texts can be difficult to work through. There can be multiple problems and solutions, or one problem and one solution. Some even have one problem and you have to decide the solution based on what is happening around you. Check out the example. See if you can figure out the problem." media="media\Lesson20ExamplePage.html" play="A76" />
+      <Item id="3" agent="Cristina" text="Today we are going to be looking at problem and solution texts. Problem solution texts can be difficult to work through. There can be multiple problems and solutions, or one problem and one solution. Some even have one problem and you have to decide the solution based on what is happening around you. Check out the example. See if you can figure out the problem." speech="Today, we are going to be looking at problem and solution texts. Problem solution texts can be difficult to work through. There can be multiple problems and solutions, or one problem and one solution. Some even have one problem and you have to decide the solution based on what is happening around you. Check out the example. See if you can figure out the problem." media="media\Lesson20ExamplePage.html" play="A75" />
       <Item id="4" agent="Jordan" text="OK, let me think about it. So the problem is that Jill thinks she is sick?" speech="OK, let me think about it, So the problem is that Jill thinks she is sick." play="B41" />
-      <Item id="5" agent="Cristina" text="That's right. Then we read the rest of the example and we can see that the solution is that Jill gets a prescription for medication." speech="That's right. Then, we read the rest of the example and we can see that the solution is that Jill gets a prescription for medication." play="A77" />
+      <Item id="5" agent="Cristina" text="That's right. Then we read the rest of the example and we can see that the solution is that Jill gets a prescription for medication." speech="That's right. Then, we read the rest of the example and we can see that the solution is that Jill gets a prescription for medication." play="A76" />
       <Item id="6" agent="Jordan" text="I think that makes sense. I'm sure we will get plenty of practice. Are there a lot of texts today?" speech="" play="B42" />
-      <Item id="7" agent="Cristina" text="Today we will look at two texts, but we encounter problem solution texts all the time. They could be blog posts, articles in the newspaper or in magazines, or pamphlet at the doctor. There are all kinds of them, even if we don't realize it." speech="Today, we will look at two texts, but we encounter problem solution texts all the time. They could be blog posts, articles in the newspaper or in magazines, or pamflets at the doctor. There are all kinds of them, even if we don't realize it." play="A78" />
+      <Item id="7" agent="Cristina" text="Today we will look at two texts, but we encounter problem solution texts all the time. They could be blog posts, articles in the newspaper or in magazines, or pamphlet at the doctor. There are all kinds of them, even if we don't realize it." speech="Today, we will look at two texts, but we encounter problem solution texts all the time. They could be blog posts, articles in the newspaper or in magazines, or pamflets at the doctor. There are all kinds of them, even if we don't realize it." play="A77" />
       <Item id="8" agent="Jordan" text="So then we should probably know how to read them. Alright, I'm feeling focused and ready. _user_, I hope you will help me along reading these texts. Cristina, bring it on." speech="So then, we should probably know how to read them. Alright, I'm feeling focused and ready. _user_, I hope you will help me along reading these texts. Cristina, Bring it on." play="B43,_user_,B44" />
-      <Item id="9" agent="Cristina" text="Okay, let's get started. Read the article below and then we will talk about it. Press the orange continue button when you are done reading. Remember you can use the read text button if you need help getting through the text." speech="Okay, lets get started. Read the article below and then we will talk about it. press the orange continue button when you are done reading. Remember, you can use the read text button if you need help getting through the text." media="media\Lesson20-Main0-0.html" play="A79" />
+      <Item id="9" agent="Cristina" text="Okay, let's get started. Read the article below and then we will talk about it. Press the orange continue button when you are done reading. Remember you can use the read text button if you need help getting through the text." speech="Okay, lets get started. Read the article below and then we will talk about it. press the orange continue button when you are done reading. Remember, you can use the read text button if you need help getting through the text." media="media\Lesson20-Main0-0.html" play="A78" />
     </RigidPack>
     <RigidPack name="Difficult7" usedIn="">
-      <Item id="1" agent="Cristina" text=" Now that we have went over this problem and solutions text, let us go over summarizing this text like we did with the previous text." speech="Now that we have went over this problem and solutions text, let us go over summorizing this text like we did with the previous text." play="A80" />
+      <Item id="1" agent="Cristina" text=" Now that we have gone over this problem and solutions text, let us go over summarizing this text like we did with the previous text." speech="" play="A79" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TP1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the topic of this text?" speech="" media="" play="_user_,A81">
+        <Question id="1" agent="Cristina" text="_user_, what is the topic of this text?" speech="" media="" play="_user_,A80">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is minor burns." speech="" keys="any" threshold="" test="" play="A82" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Actually, this text does not mention chemical  burns or sunburns. The topic of this text is minor burns." speech="" keys="any" threshold="" test="" play="A83" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you? What do you think the topic is?" speech="" keys="asdf" threshold="" test="" play="A84" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The topic of this text is minor burns." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Actually, this text does not mention chemical  burns or sunburns. The topic of this text is minor burns." speech="" keys="any" threshold="" test="" play="A82" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you? What do you think the topic is?" speech="" keys="asdf" threshold="" test="" play="A83" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think the topic is minor burns." speech="I think the topic is, minor burns" keys="asdf" threshold="" test="" play="B45" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="Is it chemical burns?" speech="I don't know, is it, chemical burns?" keys="adf" threshold="" test="" play="B46" />
-            <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="But I'm going to guess sunburns. " speech="I am not sure, but I'm going to guess sunburns. " keys="asdf" threshold="" test="" play="B47" />
+            <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I'm going to guess sunburns. " speech="" keys="asdf" threshold="" test="" play="B47" />
           </Answers>
         </Question>
       </Questions>
@@ -269,11 +268,11 @@
     </TutoringPack>
     <TutoringPack name="TP2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the problem in this text?" speech="" media="" play="_user_,A85">
+        <Question id="1" agent="Cristina" text="_user_, what is the problem in this text?" speech="" media="" play="_user_,A84">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The problem in this text is minor burns." speech="" keys="any" threshold="" test="" play="A86" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="This text mentions calling nine one one as something you should do if someone has a minor burn. Likewise, the writer only mentions infection when talking about a solution. So, the problem is how to deal with a minor burn." speech="" keys="any" threshold="" test="" play="A87" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you? What do you think the problem in this text is?" speech="" keys="asdf" threshold="" test="" play="A88" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The problem in this text is minor burns." speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="This text mentions calling nine one one as something you should do if someone has a minor burn. Likewise, the writer only mentions infection when talking about a solution. So, the problem is how to deal with a minor burn." speech="" keys="any" threshold="" test="" play="A86" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you? What do you think the problem in this text is?" speech="" keys="asdf" threshold="" test="" play="A87" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think the problem is dealing with a minor burn." speech="I think the problem is, dealing with a minor burn." keys="asdf" threshold="" test="" play="B48" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think the problem is fighting infections." speech="I think the problem is, fighting infections." keys="adf" threshold="" test="" play="B49" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think the problem is needing to call 911." speech="I think the problem is, needing to call 911" keys="asdf" threshold="" test="" play="B50" />
@@ -285,11 +284,11 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which of the  highlighted sentences helps solve the problem? press on the sentence." speech="" media="" play="_user_,A89">
+        <Question id="1" agent="Cristina" text="_user_, which of the  highlighted sentences helps solve the problem? press on the sentence." speech="" media="" play="_user_,A88">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Cover the burn with a sterile gauze bandage is a solution because it is an action that contributes to solving the problem." speech="" keys="any" threshold="" test="" play="A90" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence telling us what over the counter means is a definition, not a solution. The sentence, protecting the burn is important, does not actually tell us how to protect the burn, and so it cannot be a solution. The instruction, cover the burn with a sterile gauze bandage, tells us how to help heal the burn, and so it is a solution." speech="" keys="any" threshold="" test="" play="A91" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think of this answer?" speech="" keys="asdf" threshold="" test="" play="A92" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Cover the burn with a sterile gauze bandage is a solution because it is an action that contributes to solving the problem." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence telling us what over the counter means is a definition, not a solution. The sentence, protecting the burn is important, does not actually tell us how to protect the burn, and so it cannot be a solution. The instruction, cover the burn with a sterile gauze bandage, tells us how to help heal the burn, and so it is a solution." speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think of this answer?" speech="" keys="asdf" threshold="" test="" play="A91" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="Covering the burn with a sterile gauze would probably help." speech="" keys="asdf" threshold="" test="" play="B51" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I would get an over-the-counter medicine, because it doesn't need a prescription to buy." speech="" keys="adf" threshold="" test="" play="B52" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="Protecting the burn is important. " speech="" keys="asdf" threshold="" test="" play="B53" />
@@ -301,11 +300,11 @@
     </TutoringPack>
     <TutoringPack name="TP4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, why is it important to cool a minor burn?" speech="" media="" play="_user_,A93">
+        <Question id="1" agent="Cristina" text="_user_, why is it important to cool a minor burn?" speech="" media="" play="_user_,A92">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="You cool the burn in order to relieve pain. The cool water can help the burning sensation feel less painful." speech="" keys="any" threshold="" test="" play="A94" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The writer does not talk about how cooling the burn can prevent scarring or infections. The correct answer is, to relieve pain." speech="" keys="any" threshold="" test="" play="A95" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think about this explanation?" speech="" keys="asdf" threshold="" test="" play="A96" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You cool the burn in order to relieve pain. The cool water can help the burning sensation feel less painful." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The writer does not talk about how cooling the burn can prevent scarring or infections. The correct answer is, to relieve pain." speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think about this explanation?" speech="" keys="asdf" threshold="" test="" play="A95" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="It's to relieve pain." speech="" keys="asdf" threshold="" test="" play="B54" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="It's to prevent scarring." speech="" keys="adf" threshold="" test="" play="B55" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="It's to prevent infections. " speech="" keys="asdf" threshold="" test="" play="B56" />
@@ -317,11 +316,11 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Could hot water be used as a treatment?" speech="" media="" play="A97">
+        <Question id="1" agent="Cristina" text="Could hot water be used as a treatment?" speech="" media="" play="A96">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, no; cool, not hot water will help the pain." speech="The correct answer is, no. Cool, not hot water will help the pain." keys="any" threshold="" test="" play="A98" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="This text does not talk about disinfecting the wound. It only talks about the body getting too cold in relation to ice, not cool water. Also, the text never says anything about using hot water on the burn. The correct answer is, no, cool, not hot water will help the pain." speech="This text does not talk about disinfecting the wound. It only talks about the body getting too cold in relation to ice, not cool water. Also, the text never says anything about using hot water on the burn. The correct answer is, no. Cool, not hot water will help the pain." keys="any" threshold="" test="" play="A99" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think now?" speech="" keys="asdf" threshold="" test="" play="A100" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, no; cool, not hot water will help the pain." speech="The correct answer is, no. Cool, not hot water will help the pain." keys="any" threshold="" test="" play="A97" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="This text does not talk about disinfecting the wound. It only talks about the body getting too cold in relation to ice, not cool water. Also, the text never says anything about using hot water on the burn. The correct answer is, no, cool, not hot water will help the pain." speech="This text does not talk about disinfecting the wound. It only talks about the body getting too cold in relation to ice, not cool water. Also, the text never says anything about using hot water on the burn. The correct answer is, no. Cool, not hot water will help the pain." keys="any" threshold="" test="" play="A98" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think now?" speech="" keys="asdf" threshold="" test="" play="A99" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="It would increase the pain, so no, we shouldn't be using hot water as a treatment. " speech="" keys="asdf" threshold="" test="" play="B57" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I still think it's a good idea to use hot water for disinfecting purposes." speech="" keys="adf" threshold="" test="" play="B58" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="Maybe hot water can also be used to keep the body from becoming too cold. " speech="" keys="asdf" threshold="" test="" play="B59" />
@@ -335,9 +334,9 @@
       <Questions>
         <Question id="1" agent="Jordan" text="_user_, I would like to know what you think. Why do you think it's important to bandage the burn?" speech="_user_, I would like to know what you think. Why do you think it's important to bandage the burn?" media="" play="_user_,B60">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Putting a bandage on the burn will keep the air off and the air or wind can make the burn sting." speech="Putting a bandage on the burn will keep the air off, and the air, or wiend, can make the burn sting!" keys="any" threshold="" test="" play="A101" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="While you don't need a prescription to buy a bandage, this is not the reason you bandage a burn. The signs of infection are also not mentioned as reasons to bandage the burn. The correct answer is, it keeps air off the burn. The air or wind can make the burn sting, so you want to cover the burn to protect it." speech="While you don't need a prescription to buy a bandage, this is not the reason you bandage a burn. The signs of infection are also not mentioned as reasons to bandage the burn. The correct answer is, it keeps air off the burn. The air, or wiend, can make the burn sting! So you want to cover the burn to protect it." keys="any" threshold="" test="" play="A102" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, I would like to know your answer as well." speech="" keys="asdf" threshold="" test="" play="A103" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Putting a bandage on the burn will keep the air off and the air or wind can make the burn sting." speech="Putting a bandage on the burn will keep the air off, and the air, or wiend, can make the burn sting!" keys="any" threshold="" test="" play="A100" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="While you don't need a prescription to buy a bandage, this is not the reason you bandage a burn. The signs of infection are also not mentioned as reasons to bandage the burn. The correct answer is, it keeps air off the burn. The air or wind can make the burn sting, so you want to cover the burn to protect it." speech="While you don't need a prescription to buy a bandage, this is not the reason you bandage a burn. The signs of infection are also not mentioned as reasons to bandage the burn. The correct answer is, it keeps air off the burn. The air, or wiend, can make the burn sting! So you want to cover the burn to protect it." keys="any" threshold="" test="" play="A101" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, I would like to know your answer as well." speech="" keys="asdf" threshold="" test="" play="A102" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="It's to keep air off the burn." speech="It's to keep, air, off the burn." keys="asdf" threshold="" test="" play="B61" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="You don't need prescription to buy bandages, so it's good to have one with you." speech="" keys="adf" threshold="" test="" play="B62" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="You feel increased pain, that's a sign that you should have bandaged your burn." speech="" keys="asdf" threshold="" test="" play="B63" />
@@ -349,11 +348,11 @@
     </TutoringPack>
     <TutoringPack name="TP7">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what do you think? What protects blistered skin? press on the correct answer in the text below." speech="" media="" play="_user_,A104">
+        <Question id="1" agent="Cristina" text="_user_, what do you think? What protects blistered skin? press on the correct answer in the text below." speech="" media="" play="_user_,A103">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct choice is bandaging. Bandages keep the skin from blistering. Jordan, do you see now why bandages are so important? They stop blisters, keep air off the burn, and also reduce pain." speech="The correct choice is bandijing. Bandages keep the skin from blistering. Jordan, do you see now why bandages are so important? They stop blisters, keep air off the burn, and also reduce pain." keys="any" threshold="" test="" play="A105" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Pain reliever makes it hurt less and egg whites can cause infection. The correct answer is bandaging. So again, we see bandages are very important in treating burns. They help stop blistering, reduce pain and also keep air off the burn." speech="Pain reliever makes it hurt less and egg whites can cause infection. The correct answer is bandijing. So again, we see bandages are very important in treating burns. They help stop blistering, reduce pain and also keep air off the burn" keys="any" threshold="" test="" play="A106" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, why don't you try again too. " speech="" keys="asdf" threshold="" test="" play="A107" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct choice is bandaging. Bandages keep the skin from blistering. Jordan, do you see now why bandages are so important? They stop blisters, keep air off the burn, and also reduce pain." speech="The correct choice is bandijing. Bandages keep the skin from blistering. Jordan, do you see now why bandages are so important? They stop blisters, keep air off the burn, and also reduce pain." keys="any" threshold="" test="" play="A104" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Pain reliever makes it hurt less and egg whites can cause infection. The correct answer is bandaging. So again, we see bandages are very important in treating burns. They help stop blistering, reduce pain and also keep air off the burn." speech="Pain reliever makes it hurt less and egg whites can cause infection. The correct answer is bandijing. So again, we see bandages are very important in treating burns. They help stop blistering, reduce pain and also keep air off the burn" keys="any" threshold="" test="" play="A105" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, why don't you try again too. " speech="" keys="asdf" threshold="" test="" play="A106" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="Ah, I see I was wrong before. Bandages! How could I not think of that?" speech="Ah, I see I was wrong before. Bandages! How could I not think of that" keys="asdf" threshold="" test="" play="B64" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="Must be the pain reliever. But the pain reliever can be a cream, right?" speech="" keys="adf" threshold="" test="" play="B65" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="Egg whites! Didn't think of that one before!" speech="" keys="asdf" threshold="" test="" play="B66" />
@@ -365,11 +364,11 @@
     </TutoringPack>
     <TutoringPack name="TP8">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what does the text say to do if there is swelling or oozing at the burn site?" speech="_user_, what does the text say to do if there is swelling or oozing at the burn site?" media="" play="_user_,A108">
+        <Question id="1" agent="Cristina" text="_user_, what does the text say to do if there is swelling or oozing at the burn site?" speech="_user_, what does the text say to do if there is swelling or oozing at the burn site?" media="" play="_user_,A107">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="If there is swelling and oozing at the burn site, you should seek medical help. These are signs of an infection to the wound, and can be very serious." speech="" keys="any" threshold="" test="" play="A109" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Creams can make infection worse, and bandaging will not help treat infections. If there is swelling or oozing at the burn site, you should immediately seek medical help." speech="Creams can make infection worse, and bandijing will not help treat infections. If there is swelling or oozing at the burn site, you should immediately seek medical help" keys="any" threshold="" test="" play="A110" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think we should do?" speech="" keys="asdf" threshold="" test="" play="A111" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If there is swelling and oozing at the burn site, you should seek medical help. These are signs of an infection to the wound, and can be very serious." speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Creams can make infection worse, and bandaging will not help treat infections. If there is swelling or oozing at the burn site, you should immediately seek medical help." speech="Creams can make infection worse, and bandijing will not help treat infections. If there is swelling or oozing at the burn site, you should immediately seek medical help" keys="any" threshold="" test="" play="A109" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think we should do?" speech="" keys="asdf" threshold="" test="" play="A110" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I would go seek medical help immediately. " speech="" keys="asdf" threshold="" test="" play="B67" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="Don't we just use bandages again? I guess we would need to sterilize it this time. " speech="Don't we just use bandages again? I guess we would need to stairilize it this time. " keys="adf" threshold="" test="" play="B68" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think using egg whites, butter, or ointments is a good idea." speech="I think using egg whites, butter, or, ointments, is a good idea." keys="asdf" threshold="" test="" play="B69" />
@@ -381,11 +380,11 @@
     </TutoringPack>
     <TutoringPack name="TP9">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what do you think?" speech="" media="" play="_user_,A112">
+        <Question id="1" agent="Cristina" text="_user_, what do you think?" speech="" media="" play="_user_,A111">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important to seek medical help if you develop a fever. Fever is a sign of infection and that can be very serious if not treated." speech="" keys="any" threshold="" test="" play="A113" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="As we have already discussed, if you developed blisters, you can use bandages for that. And minor burns would not cause your body to become too cold. As the text mentions, when your wounds become infected, you may develop a fever, and it is important to seek medical help if you develop a fever." speech="" keys="any" threshold="" test="" play="A114" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you?" speech="" keys="asdf" threshold="" test="" play="A115" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important to seek medical help if you develop a fever. Fever is a sign of infection and that can be very serious if not treated." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="As we have already discussed, if you developed blisters, you can use bandages for that. And minor burns would not cause your body to become too cold. As the text mentions, when your wounds become infected, you may develop a fever, and it is important to seek medical help if you develop a fever." speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what about you?" speech="" keys="asdf" threshold="" test="" play="A114" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="When you develop a fever, that's when you should seek medical help. " speech="" keys="asdf" threshold="" test="" play="B70" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="When you have a blister, that's when you should seek medical help." speech="" keys="adf" threshold="" test="" play="B71" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="When your body becomes too cold, that's when you should seek medical help. " speech="" keys="asdf" threshold="" test="" play="B72" />
@@ -397,11 +396,11 @@
     </TutoringPack>
     <TutoringPack name="TPA">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, if we are summarizing a problem and solutions text, what must be included in our summary?" speech="_user_, If we are summorizing a problem and solutions text, what must be included in our summary?" media="" play="_user_,A116">
+        <Question id="1" agent="Cristina" text="_user_, if we are summarizing a problem and solutions text, what must be included in our summary?" speech="_user_, If we are summorizing a problem and solutions text, what must be included in our summary?" media="" play="_user_,A115">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This isn't a trick question! Of course, as this is a problem and solutions text, the problem and the solutions presented in the text would be critical in your summary." speech="" keys="any" threshold="" test="" play="A117" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Problem and solution text summaries do not need to include characters, jokes, a plot, or a setting, but they must always have the problem and the solutions as discussed in the text." speech="" keys="any" threshold="" test="" play="A118" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, if you were to write a summary for a problem and solutions text, what would you include?" speech="" keys="asdf" threshold="" test="" play="A119" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This isn't a trick question! Of course, as this is a problem and solutions text, the problem and the solutions presented in the text would be critical in your summary." speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Problem and solution text summaries do not need to include characters, jokes, a plot, or a setting, but they must always have the problem and the solutions as discussed in the text." speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, if you were to write a summary for a problem and solutions text, what would you include?" speech="" keys="asdf" threshold="" test="" play="A118" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I would include the problem and the solutions, obviously." speech="" keys="asdf" threshold="" test="" play="B73" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I want to include the plot and the setting." speech="" keys="adf" threshold="" test="" play="B74" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I want to include characters and jokes. That would make my summary more interesting to read." speech="" keys="asdf" threshold="" test="" play="B75" />
@@ -413,11 +412,11 @@
     </TutoringPack>
     <TutoringPack name="TPB">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what do you think? Is something missing from this text summary? If so, what is missing from this summary?" speech="" media="" play="_user_,A120">
+        <Question id="1" agent="Cristina" text="_user_, what do you think? Is something missing from this text summary? If so, what is missing from this summary?" speech="" media="" play="_user_,A119">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary is missing the solutions to the problem." speech="" keys="any" threshold="" test="" play="A121" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="We do not have a plot for this text as the purpose of this text is to inform us a problem and the solutions to solve the problem. It is not a narrative text which tend to have plots. The problem presented in the text is already mentioned in this summary, which is minor burns. What is missing is even one solution discussed in the text. " speech="We do not have a plot for this text, as the purpose of this text is to inform us a problem and the solutions to solve the problem. It is not a narrative text which tend to have plots. The problem presented in the text is already mentioned in this summary, which is minor burns. What is missing is even one solution discussed in the text. " keys="any" threshold="" test="" play="A122" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think is missing from this summary?" speech="" keys="asdf" threshold="" test="" play="A123" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary is missing the solutions to the problem." speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="We do not have a plot for this text as the purpose of this text is to inform us a problem and the solutions to solve the problem. It is not a narrative text which tend to have plots. The problem presented in the text is already mentioned in this summary, which is minor burns. What is missing is even one solution discussed in the text. " speech="We do not have a plot for this text, as the purpose of this text is to inform us a problem and the solutions to solve the problem. It is not a narrative text which tend to have plots. The problem presented in the text is already mentioned in this summary, which is minor burns. What is missing is even one solution discussed in the text. " keys="any" threshold="" test="" play="A121" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think is missing from this summary?" speech="" keys="asdf" threshold="" test="" play="A122" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I'm not seeing any solution to the problem. " speech="" keys="asdf" threshold="" test="" play="B76" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="The summary is missing the problem presented in the text, is that right?" speech="" keys="adf" threshold="" test="" play="B77" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I guess it doesn't have a plot." speech="I guess, it doesn't have a plot." keys="asdf" threshold="" test="" play="B78" />
@@ -429,21 +428,21 @@
     </TutoringPack>
     <TutoringPack name="TPH1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the problem in this text?" speech="" media="" play="_user_,A124">
+        <Question id="1" agent="Cristina" text="_user_, what is the problem in this text?" speech="" media="" play="_user_,A123">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The answer is treating major burns." speech="" keys="any" threshold="" test="" play="A125" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text=" Think about what the topic of the text is like what we went over for the first text, minor burns. The topic and the problem would be closely related in a problem and solutions text. Maybe this will help us understand what the problem is." speech="" keys="any" threshold="" test="" play="A126" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A127" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The answer is treating major burns." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text=" Think about what the topic of the text is like what we went over for the first text, minor burns. The topic and the problem would be closely related in a problem and solutions text. Maybe this will help us understand what the problem is." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A126" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="The problem in this text is got to be major burns." speech="" keys="asdf" threshold="" test="" play="B79" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think the problem is charred or blackened skin, as they are signs of a major burn." speech="" keys="adf" threshold="" test="" play="B80" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think the problem is calling 911 immediately when someone has a major burn." speech="I think the problem is calling nine one one immediately when someone has a major burn." keys="asdf" threshold="" test="" play="B81" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="_user_, so, based on the topic of the text, what do you think the problem of the text is?" speech="" media="" play="_user_,A128">
+        <Question id="2" agent="Cristina" text="_user_, so, based on the topic of the text, what do you think the problem of the text is?" speech="" media="" play="_user_,A127">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The problem is treating major burns. Major burns is also the topic of the text. " speech="" keys="any" threshold="" test="" play="A129" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Having charred or blackened skin, calling 911, are all details to the problem, but the problem of this text is treating major burn." speech="Having charred or blackened skin, calling nine one one, are all details to the problem, but the problem of this text is treating major burn." keys="any" threshold="" test="" play="A130" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A131" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The problem is treating major burns. Major burns is also the topic of the text. " speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Having charred or blackened skin, calling 911, are all details to the problem, but the problem of this text is treating major burn." speech="Having charred or blackened skin, calling nine one one, are all details to the problem, but the problem of this text is treating major burn." keys="any" threshold="" test="" play="A129" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A130" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="The problem in this text is got to be major burns." speech="" keys="asdf" threshold="" test="" play="B82" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think the problem is charred or blackened skin, as they are signs of a major burn." speech="" keys="adf" threshold="" test="" play="B83" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think the problem is calling 911 immediately when someone has a major burn." speech="I think the problem is calling nine one one immediately when someone has a major burn." keys="asdf" threshold="" test="" play="B84" />
@@ -455,11 +454,11 @@
     </TutoringPack>
     <TutoringPack name="TPH2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you help Jordan out on this? According to the text, what is the first thing to do when someone has a major burn?" speech="_user_, can you help Jordan aout on this? According to the text, what is the first thing to do when someone has a major burn?" media="" play="_user_,A132">
+        <Question id="1" agent="Cristina" text="_user_, can you help Jordan out on this? According to the text, what is the first thing to do when someone has a major burn?" speech="_user_, can you help Jordan aout on this? According to the text, what is the first thing to do when someone has a major burn?" media="" play="_user_,A131">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The text tells us to contact medical help or in other words, call 911." speech="The text tells us to contact medical help or in other words, call nine one one." keys="any" threshold="" test="" play="A133" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The text does not tell us to panic nor does it tell us to simply wait, as doing both can make the problem worse. The first thing you do is call 911, or in other words, call for medical help." speech="The text does not tell us to panic, nor does it tell us to simply wait, as doing both can make the problem worse. The first thing you do is call nine one one, or in other words, call for medical help." keys="any" threshold="" test="" play="A134" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think is the first thing to do?" speech="" keys="asdf" threshold="" test="" play="A135" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The text tells us to contact medical help or in other words, call 911." speech="The text tells us to contact medical help or in other words, call nine one one." keys="any" threshold="" test="" play="A132" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The text does not tell us to panic nor does it tell us to simply wait, as doing both can make the problem worse. The first thing you do is call 911, or in other words, call for medical help." speech="The text does not tell us to panic, nor does it tell us to simply wait, as doing both can make the problem worse. The first thing you do is call nine one one, or in other words, call for medical help." keys="any" threshold="" test="" play="A133" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think is the first thing to do?" speech="" keys="asdf" threshold="" test="" play="A134" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I would immediately call 911." speech="I would immediately call nine one one." keys="asdf" threshold="" test="" play="B85" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I would totally panic." speech="" keys="adf" threshold="" test="" play="B86" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I don't know. Maybe wait? So I can see if the problem will get worse?" speech="I don't know. Maybe wait? So I can see if the problem will get worse?" keys="asdf" threshold="" test="" play="B87" />
@@ -471,11 +470,11 @@
     </TutoringPack>
     <TutoringPack name="TPH3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which of these sentences is a step in the solutions presented in the text? Please press the correct highlighted sentence." speech="" media="" play="_user_,A136">
+        <Question id="1" agent="Cristina" text="_user_, which of these sentences is a step in the solutions presented in the text? Please press the correct highlighted sentence." speech="" media="" play="_user_,A135">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat is a step in the solution." speech="" keys="any" threshold="" test="" play="A137" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat is a step in the solution. The sentence before and the sentence after are describing what may happen when someone has a major burn, but not a solution to the problem. " speech="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat, is a step in the solution. The sentence before, and the sentence after, are describing what may happen, when someone has a major burn, but not a solution to the problem. " keys="any" threshold="" test="" play="A138" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, which of the sentences highlighted is a step in the solutions? " speech="" keys="asdf" threshold="" test="" play="A139" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat is a step in the solution." speech="" keys="any" threshold="" test="" play="A136" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat is a step in the solution. The sentence before and the sentence after are describing what may happen when someone has a major burn, but not a solution to the problem. " speech="The sentence, make sure the victim is no longer in contact with smoldering material or exposed to smoke or heat, is a step in the solution. The sentence before, and the sentence after, are describing what may happen, when someone has a major burn, but not a solution to the problem. " keys="any" threshold="" test="" play="A137" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, which of the sentences highlighted is a step in the solutions? " speech="" keys="asdf" threshold="" test="" play="A138" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think it's the second highlighted sentence, make sure the victim is no longer in contact with smoldering materials or exposed to smoke or heat." speech="I think it's the second hi lighted sentence, make sure the victim is no longer in contact with smoldering materials or exposed to smoke or heat." keys="asdf" threshold="" test="" play="B88" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think it's the first highlighted sentence, the most serious burns involve all layers of the skin and cause permanent tissue damage." speech="I think it's the first hi lighted sentence, the most serious burns involve all layers of the skin and cause permanent tissue damage." keys="adf" threshold="" test="" play="B89" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's the third highlighted sentence, difficulty inhaling and exhaling, carbon monoxide poisoning, or other toxic effects may occur if smoke inhalation accompanies the burn." speech="I think it's the third hi lighted sentence, difficulty inhaling and exhaling, carbon monoxide poisoning, or other toxic effects may occur if smoke inhalation accompanies the burn." keys="asdf" threshold="" test="" play="B90" />
@@ -487,21 +486,21 @@
     </TutoringPack>
     <TutoringPack name="TPH4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, according to the text, why is it important that the victim is no longer near smoldering material?" speech="" media="" play="_user_,A140">
+        <Question id="1" agent="Cristina" text="_user_, according to the text, why is it important that the victim is no longer near smoldering material?" speech="" media="" play="_user_,A139">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important because the smoke could cause difficulty breathing." speech="It is important because the smoke could cause difficulty breething." keys="any" threshold="" test="" play="A141" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Here's a hint: the text talked about a possible effect of smoke inhalation, which is carbon monoxide poisoning. Carbon monoxide is something that poisons the air we breathe. " speech="Here's a hint. The text talked about a possible effect of smoke inhalation, which is carbon monoxide poisoning. Carbon monoxide, is something that poisons the air we breethe. " keys="any" threshold="" test="" play="A142" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A143" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important because the smoke could cause difficulty breathing." speech="It is important because the smoke could cause difficulty breething." keys="any" threshold="" test="" play="A140" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Here's a hint: the text talked about a possible effect of smoke inhalation, which is carbon monoxide poisoning. Carbon monoxide is something that poisons the air we breathe. " speech="Here's a hint. The text talked about a possible effect of smoke inhalation, which is carbon monoxide poisoning. Carbon monoxide, is something that poisons the air we breethe. " keys="any" threshold="" test="" play="A141" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A142" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think the text says it could cause difficulty breathing." speech="I think the text says it could cause difficulty breething." keys="asdf" threshold="" test="" play="B91" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I guess it could confuse the victim." speech="" keys="adf" threshold="" test="" play="B92" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I guess it could scare the victim." speech="" keys="asdf" threshold="" test="" play="B93" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="So _user_, based on this hint, why do you think it is important that the victim is no longer near smoldering material?" speech="So _user_, based on this hint. Why, do you think it is important that the victim is no longer near smoldering material?" media="" play="A144,_user_,A145">
+        <Question id="2" agent="Cristina" text="So _user_, based on this hint, why do you think it is important that the victim is no longer near smoldering material?" speech="So _user_, based on this hint. Why, do you think it is important that the victim is no longer near smoldering material?" media="" play="A143,_user_,A144">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important because the smoke could cause difficulty breathing." speech="It is important because the smoke could cause difficulty breething." keys="any" threshold="" test="" play="A146" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="While the smoke can certainly confuse or scare the victim, the main reason is that smoke from smoldering material could make it difficult for the victim to breathe, as that's the most dangerous one. " speech="While the smoke can certainly confuse or scare the victim, the main reason is that, the smoke from smoldering material could make it difficult for the victim to breethe. As that's the most dangerous one. " keys="any" threshold="" test="" play="A147" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A148" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is important because the smoke could cause difficulty breathing." speech="It is important because the smoke could cause difficulty breething." keys="any" threshold="" test="" play="A145" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="While the smoke can certainly confuse or scare the victim, the main reason is that smoke from smoldering material could make it difficult for the victim to breathe, as that's the most dangerous one. " speech="While the smoke can certainly confuse or scare the victim, the main reason is that, the smoke from smoldering material could make it difficult for the victim to breethe. As that's the most dangerous one. " keys="any" threshold="" test="" play="A146" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asdf" threshold="" test="" play="A147" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think the text says it could cause difficulty breathing." speech="I think the text says it could cause difficulty breething." keys="asdf" threshold="" test="" play="B94" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I guess it could confuse the victim." speech="" keys="adf" threshold="" test="" play="B95" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I guess it could scare the victim." speech="" keys="asdf" threshold="" test="" play="B96" />
@@ -513,21 +512,21 @@
     </TutoringPack>
     <TutoringPack name="TPH5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, according to the text, why is it important to leave burned clothing in place?" speech="" media="" play="_user_,A149">
+        <Question id="1" agent="Cristina" text="_user_, according to the text, why is it important to leave burned clothing in place?" speech="" media="" play="_user_,A148">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="As the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="As the text mentions. Removing burned clothing on the victim can further damage the fat, muscle, and even bone. " keys="any" threshold="" test="" play="A150" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="How about this: according to the text what might be affected if burned clothing is removed?" speech="How about this. According to the text, what might be affected if burned clothing is removed?" keys="any" threshold="" test="" play="A151" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A152" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="As the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="As the text mentions. Removing burned clothing on the victim can further damage the fat, muscle, and even bone. " keys="any" threshold="" test="" play="A149" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="How about this: according to the text what might be affected if burned clothing is removed?" speech="How about this. According to the text, what might be affected if burned clothing is removed?" keys="any" threshold="" test="" play="A150" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A151" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think it's because it can cause further damage to the victim." speech="" keys="asdf" threshold="" test="" play="B97" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think it's because it's considered a smoldering material." speech="" keys="adf" threshold="" test="" play="B98" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's because you want to save the clothing." speech="" keys="asdf" threshold="" test="" play="B99" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="_user_, please try again with your answer." speech="" media="" play="_user_,A153">
+        <Question id="2" agent="Cristina" text="_user_, please try again with your answer." speech="" media="" play="_user_,A152">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="As the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="As the text mentions. Removing burned clothing on the victim can further damage the fat, muscle, and even bone. " keys="any" threshold="" test="" play="A154" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Burned clothing can be a smoldering material, and you would want to save the clothing, but removing the burned clothing from the victim would be too much a risk. Because, as the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="" keys="any" threshold="" test="" play="A155" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A156" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="As the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="As the text mentions. Removing burned clothing on the victim can further damage the fat, muscle, and even bone. " keys="any" threshold="" test="" play="A153" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Burned clothing can be a smoldering material, and you would want to save the clothing, but removing the burned clothing from the victim would be too much a risk. Because, as the text mentions, removing burned clothing on the victim can further damage the fat, muscle, and even bone. " speech="" keys="any" threshold="" test="" play="A154" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A155" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think it's because it can cause further damage to the victim." speech="" keys="asdf" threshold="" test="" play="B100" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think it's because it's considered a smoldering material." speech="" keys="adf" threshold="" test="" play="B101" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's because you want to save the clothing." speech="" keys="asdf" threshold="" test="" play="B102" />
@@ -539,11 +538,11 @@
     </TutoringPack>
     <TutoringPack name="TPH6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Yes _user_, what might be an obstacle when covering the burn?" speech="" media="" play="A157,_user_,A158">
+        <Question id="1" agent="Cristina" text="Yes _user_, what might be an obstacle when covering the burn?" speech="" media="" play="A156,_user_,A157">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="If you think about it, if you cannot find any bandages that might be an obstacle to your solution for cover the burn.  " speech="If you think about it, if you cannot find any bandages, that might be an obstacle to your solution to cover the burn. " keys="any" threshold="" test="" play="A159" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="We are now discussing the solution of covering the burn, inhaling and exhaling smoke, or calling 911, are not obstacles specific to covering the burn. As the text mentions and we have discussed, we would need bandages to cover the burn, so if you cannot find any bandages, that might be an obstacle to covering the burn." speech="We are now discussing the solution of covering the burn. Inhaling and exhaling smoke, or calling nine one one, are not obstacles specific to covering the burn. As the text mentions and we have discussed, we would need bandages to cover the burn, so if you cannot find any bandages, that might be an obstacle to covering the burn." keys="any" threshold="" test="" play="A160" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think? " speech="" keys="asdf" threshold="" test="" play="A161" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you think about it, if you cannot find any bandages that might be an obstacle to your solution for cover the burn.  " speech="If you think about it, if you cannot find any bandages, that might be an obstacle to your solution to cover the burn. " keys="any" threshold="" test="" play="A158" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="We are now discussing the solution of covering the burn, inhaling and exhaling smoke, or calling 911, are not obstacles specific to covering the burn. As the text mentions and we have discussed, we would need bandages to cover the burn, so if you cannot find any bandages, that might be an obstacle to covering the burn." speech="We are now discussing the solution of covering the burn. Inhaling and exhaling smoke, or calling nine one one, are not obstacles specific to covering the burn. As the text mentions and we have discussed, we would need bandages to cover the burn, so if you cannot find any bandages, that might be an obstacle to covering the burn." keys="any" threshold="" test="" play="A159" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think? " speech="" keys="asdf" threshold="" test="" play="A160" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think if you cannot find any bandages, that might be an obstacle." speech="" keys="asdf" threshold="" test="" play="B103" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think contacting 911 might be an obstacle." speech="I think contacting nine one one might be an obstacle." keys="adf" threshold="" test="" play="B104" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think inhaling and exhaling smoke would be an obstacle." speech="" keys="asdf" threshold="" test="" play="B105" />
@@ -555,11 +554,11 @@
     </TutoringPack>
     <TutoringPack name="TPH7">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is a highlighted sentence that gives us information about our solutions. _user_, what is the purpose of the highlighted sentence?" speech="" media="" play="A162,_user_,A163">
+        <Question id="1" agent="Cristina" text="Here is a highlighted sentence that gives us information about our solutions. _user_, what is the purpose of the highlighted sentence?" speech="" media="" play="A161,_user_,A162">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This sentence describes what materials to use when covering the burn." speech="" keys="any" threshold="" test="" play="A164" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Remember, we are talking about the purpose of the sentence. The purpose in this case is to inform us what materials to use when covering the burn. That is what the sentence is describing. The other two options are not getting at the purpose of that specific sentence. Even though, of course covering the burn would help keep the victim from furthering injury and all of this is about putting safety first. " speech="Remember, we are talking about the purpose of the sentence. The purpose in this case is to inform us, what materials to use when covering the burn. That is what the sentence is describing. The other two options are naut getting at the purpose of that specific sentence. Even though, of course covering the burn would help keep the victim from furthering injury, and all of this is about putting safety first. " keys="any" threshold="" test="" play="A165" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A166" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This sentence describes what materials to use when covering the burn." speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Remember, we are talking about the purpose of the sentence. The purpose in this case is to inform us what materials to use when covering the burn. That is what the sentence is describing. The other two options are not getting at the purpose of that specific sentence. Even though, of course covering the burn would help keep the victim from furthering injury and all of this is about putting safety first. " speech="Remember, we are talking about the purpose of the sentence. The purpose in this case is to inform us, what materials to use when covering the burn. That is what the sentence is describing. The other two options are naut getting at the purpose of that specific sentence. Even though, of course covering the burn would help keep the victim from furthering injury, and all of this is about putting safety first. " keys="any" threshold="" test="" play="A164" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A165" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think the sentence is describing what materials to use when covering the burn." speech="" keys="asdf" threshold="" test="" play="B106" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think it helps keep the victim from furthering injury." speech="" keys="adf" threshold="" test="" play="B107" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it puts safety first." speech="" keys="asdf" threshold="" test="" play="B108" />
@@ -571,21 +570,21 @@
     </TutoringPack>
     <TutoringPack name="TPH8">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is a summary that has some issues. _user_, can you tell me what is wrong with this text summary?" speech="Here is a summary that has some issues. _user_, can you tell me what is wrong with this text summary." media="" play="A167,_user_,A168">
+        <Question id="1" agent="Cristina" text="Here is a summary that has some issues. _user_, can you tell me what is wrong with this text summary?" speech="Here is a summary that has some issues. _user_, can you tell me what is wrong with this text summary." media="" play="A166,_user_,A167">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary includes unnecessary information." speech="" keys="any" threshold="" test="" play="A169" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Read the summary carefully and think about which sentence should not belong in there. Once you find the sentence that does not belong, think about why. I hope this helps." speech="Read the summary carefully, and think about which sentence should not belong in there. Once you find the sentence that does not belong, think about why. I hope this helps." keys="any" threshold="" test="" play="A170" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, can you tell me what is wrong with this text summary?" speech="" keys="asdf" threshold="" test="" play="A171" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary includes unnecessary information." speech="" keys="any" threshold="" test="" play="A168" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="Read the summary carefully and think about which sentence should not belong in there. Once you find the sentence that does not belong, think about why. I hope this helps." speech="Read the summary carefully, and think about which sentence should not belong in there. Once you find the sentence that does not belong, think about why. I hope this helps." keys="any" threshold="" test="" play="A169" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, can you tell me what is wrong with this text summary?" speech="" keys="asdf" threshold="" test="" play="A170" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think I found unncessary information in there." speech="" keys="asdf" threshold="" test="" play="B109" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="Maybe it's missing some key information, I don't know." speech="" keys="adf" threshold="" test="" play="B110" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's not actually covering the topic of the text." speech="" keys="asdf" threshold="" test="" play="B111" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="So _user_, please try again, what's actually wrong with this summary?" speech="" media="" play="A172,_user_,A173">
+        <Question id="2" agent="Cristina" text="So _user_, please try again, what's actually wrong with this summary?" speech="" media="" play="A171,_user_,A172">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary includes unnecessary information." speech="" keys="any" threshold="" test="" play="A174" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="One of the sentences in there is considered unnecessary information. This summary fortunately does have key information of the text, as well as having covered the topic." speech="One of the sentences in there is considered unnecessary information. This summary, fortunately, does have key information of the text, as well as having covered the topic." keys="any" threshold="" test="" play="A175" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, can you tell me what is wrong with this text summary?" speech="" keys="asdf" threshold="" test="" play="A176" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This text summary includes unnecessary information." speech="" keys="any" threshold="" test="" play="A173" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="One of the sentences in there is considered unnecessary information. This summary fortunately does have key information of the text, as well as having covered the topic." speech="One of the sentences in there is considered unnecessary information. This summary, fortunately, does have key information of the text, as well as having covered the topic." keys="any" threshold="" test="" play="A174" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, can you tell me what is wrong with this text summary?" speech="" keys="asdf" threshold="" test="" play="A175" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think I found unncessary information in there." speech="" keys="asdf" threshold="" test="" play="B112" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="Maybe it's missing some key information, I don't know." speech="" keys="adf" threshold="" test="" play="B113" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's not actually covering the topic of the text." speech="" keys="asdf" threshold="" test="" play="B114" />
@@ -599,9 +598,9 @@
       <Questions>
         <Question id="1" agent="Jordan" text="_user_, what about you? Are we thinking the same sentence? Could you press on one of the highlighted sentence that does not belong so I can know whether I got it right or not?" speech="" media="" play="_user_,B115">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence, burning materials can smell terrible, does not belong in this summary." speech="" keys="any" threshold="" test="" play="A177" />
-            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence, burning materials can smell terrible, does not belong in this summary. The other highlighted sentences are all key information regarding what to do when you have a major burn. So they should all be in this summary." speech="" keys="any" threshold="" test="" play="A178" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, which sentence did you have in mind that does not belong in this summary?" speech="" keys="asdf" threshold="" test="" play="A179" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sentence, burning materials can smell terrible, does not belong in this summary." speech="" keys="any" threshold="" test="" play="A176" />
+            <Answer name="Incorrect" agent="Cristina" type="Incorrect" text="The sentence, burning materials can smell terrible, does not belong in this summary. The other highlighted sentences are all key information regarding what to do when you have a major burn. So they should all be in this summary." speech="" keys="any" threshold="" test="" play="A177" />
+            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, which sentence did you have in mind that does not belong in this summary?" speech="" keys="asdf" threshold="" test="" play="A178" />
             <Answer name="JordanCorrect" agent="Jordan" type="JordanGood" text="I think it's the sentence, burning materials can smell terrible. " speech="" keys="asdf" threshold="" test="" play="B116" />
             <Answer name="JordanIncorrect1" agent="Jordan" type="JordanBad1" text="I think it's the sentence, call 911 or an emergency medical number immediately." speech="" keys="adf" threshold="" test="" play="B117" />
             <Answer name="JordanIncorrect2" agent="Jordan" type="JordanBad2" text="I think it's the sentence, cover the area of the burn." speech="" keys="asdf" threshold="" test="" play="B118" />

@@ -9,19 +9,19 @@
         <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="Um... _user_ I don't think that's the right answer." speech="" play="B3,_user_,B4" />
-        <Item text="Um... _user_ I don't think that was the right answer. " speech="" play="B5,_user_,B6" />
-        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B7" />
+        <Item text="_user_ I don't think that's the right answer." speech="" play="_user_,B3" />
+        <Item text=" _user_, I don't think your  answer was right. " speech="" play="_user_,B4" />
+        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B5" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
-        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B8" />
-        <Item text="_user_ Super! You got it!" speech="" play="_user_,B9" />
-        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B10" />
-        <Item text="_user_ You answered correctly! Awesome job!" speech="" play="_user_,B11" />
-        <Item text="_user_ Amazing, you're doing great!" speech="" play="_user_,B12" />
-        <Item text="_user_ Magnificent!" speech="" play="_user_,B13" />
-        <Item text="_user_ Exactly, you nailed it!" speech="" play="_user_,B14" />
-        <Item text="_user_ , Wow, that's it! " speech="" play="_user_,B15" />
+        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B6" />
+        <Item text="_user_ Super! You got it!" speech="" play="_user_,B7" />
+        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B8" />
+        <Item text="_user_ You answered correctly! Awesome job!" speech="" play="_user_,B9" />
+        <Item text="_user_ Amazing, you're doing great!" speech="" play="_user_,B10" />
+        <Item text="_user_ Magnificent!" speech="" play="_user_,B11" />
+        <Item text="_user_ Exactly, you nailed it!" speech="" play="_user_,B12" />
+        <Item text="_user_ , Wow, that's it! " speech="" play="_user_,B13" />
       </SpeechCan>
     </Agent>
     <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
@@ -29,10 +29,10 @@
         <Item text="Ok _user_ here is the answer." speech="" play="A1,_user_,A2" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbacktoUser">
-        <Item text="_user_, sorry! that wasn't what I was looking for." speech="" play="_user_,A3" />
+        <Item text="_user_, sorry. that wasn't what I was looking for." speech="" play="_user_,A3" />
         <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A4" />
-        <Item text="_user_, Whoops! Looks like you picked the wrong answer." speech="" play="_user_,A5" />
-        <Item text="_user_ Better luck next time! That wasn't the best answer." speech="" play="_user_,A6" />
+        <Item text="_user_, it looks like you picked the wrong answer." speech="" play="_user_,A5" />
+        <Item text="_user_, sorry but that wasn't the best answer." speech="" play="_user_,A6" />
       </SpeechCan>
       <SpeechCan name="JordanNegativeFeedback">
         <Item text="Jordan, you didn't pick the correct answer!" speech="" play="A7" />
@@ -40,66 +40,66 @@
         <Item text="Jordan, that's not right!" speech="" play="A9" />
         <Item text="Jordan, you gave an incorrect answer." speech="" play="A10" />
         <Item text="Jordan, you were wrong." speech="" play="A11" />
-        <Item text="Sorry, Jordan, that's not right." speech="" play="A12" />
+        <Item text="Jordan, sorry, that's not right." speech="" play="A12" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackFinal">
         <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A13" />
-        <Item text="_user_, Whoops! you are not correct." speech="" play="_user_,A14" />
+        <Item text="_user_, unfortunately your answer is not correct." speech="" play="_user_,A14" />
         <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,A15" />
         <Item text="_user_, Not exactly, good try" speech="" play="_user_,A16" />
         <Item text="_user_, Well, that wasn't what I was thinking. Here is the best choice in green" speech="W " play="A17" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoUser">
-        <Item text="_user_ Great job!" speech="" play="_user_,A18" />
-        <Item text="_user_, Good! That is right." speech="" play="_user_,A19" />
-        <Item text=" _user_  You are correct!" speech="" play="_user_,A20" />
-        <Item text="_user_, Perfect! You got it right!" speech="" play="_user_,A21" />
-        <Item text="_user_ great! You answered correctly." speech="" play="_user_,A22" />
-        <Item text=" _user_. You got it right!" speech=" " play="_user_,A23" />
-        <Item text="_user_, Exactly! You are right!" speech="" play="_user_,A24" />
-        <Item text="_user_, Amazing! " speech="" play="_user_,A25" />
-        <Item text="_user_, Awesome job! You answered correctly! " speech="" play="_user_,A26" />
-        <Item text="_user_, Just superb! You're incredible!" speech="" play="_user_,A27" />
-        <Item text="_user_, Brilliant job! You got it right!" speech="" play="_user_,A28" />
-        <Item text="_user_, Perfect! Good work." speech="" play="_user_,A29" />
-        <Item text="_user_, Well done! You're good!" speech="" play="_user_,A30" />
-        <Item text="_user_, That's correct! You're doing beautifully! " speech="" play="_user_,A31" />
-        <Item text="_user_, You rock my socks off! Awesome job getting that one right!" speech="" play="_user_,A32" />
+        <Item text="_user_ Great job." speech="" play="_user_,A18" />
+        <Item text="_user_, Good. That is right." speech="" play="_user_,A19" />
+        <Item text=" _user_  You are correct." speech="" play="_user_,A20" />
+        <Item text="_user_, Perfect. You got it right." speech="" play="_user_,A21" />
+        <Item text="_user_ great. You answered correctly." speech="" play="_user_,A22" />
+        <Item text=" _user_. You got it right." speech=" " play="_user_,A23" />
+        <Item text="_user_, Exactly. You are right." speech="" play="_user_,A24" />
+        <Item text="_user_, Amazing. You are correct." speech="" play="_user_,A25" />
+        <Item text="_user_, Awesome job. You answered correctly." speech="" play="_user_,A26" />
+        <Item text="_user_, excellent work. You are right." speech="" play="_user_,A27" />
+        <Item text="_user_, Brilliant job. You got it right." speech="" play="_user_,A28" />
+        <Item text="_user_, Perfect. Good work." speech="" play="_user_,A29" />
+        <Item text="_user_, Well done. You are correct." speech="" play="_user_,A30" />
+        <Item text="_user_, That's correct. You're doing beautifully." speech="" play="_user_,A31" />
+        <Item text="_user_, you got it. Keep up the good work." speech="" play="_user_,A32" />
       </SpeechCan>
       <SpeechCan name="PostiveFeedbacktoUserT">
-        <Item text="_user_ Thank you for typing! This contains everything that was asked in the question" speech="" play="_user_,A33" />
+        <Item text="_user_, great job typing. This contains everything that was asked in the question" speech="" play="_user_,A33" />
       </SpeechCan>
       <SpeechCan name="JordanPositiveFeedback">
-        <Item text="Jordan, Wonderful! You answered the question correctly." speech="" play="A34" />
-        <Item text="Jordan, You rock! That's right!" speech="" play="A35" />
-        <Item text="Jordan, That's right!" speech="" play="A36" />
-        <Item text="Jordan, great work! You got it right!" speech="" play="A37" />
-        <Item text="Jordan, Awesome work! That's it!" speech="" play="A38" />
+        <Item text="Jordan, Wonderful. You answered the question correctly." speech="" play="A34" />
+        <Item text="Jordan, Amazing. That's right." speech="" play="A35" />
+        <Item text="Jordan, That's right." speech="" play="A36" />
+        <Item text="Jordan, great work. You got it right." speech="" play="A37" />
+        <Item text="Jordan, Awesome work. That's it." speech="" play="A38" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbacktoBoth">
-        <Item text="Oh rats! Sorry you two that wasn't what I was looking for." speech="" play="A39" />
-        <Item text="Uh oh _user_ and Jordan! That wasn't the correct answer. " speech="" play="A40,_user_,A41" />
-        <Item text="Whoops! Neither of you gave me the answer that I was looking for." speech="" play="A42" />
-        <Item text="Sorry you two! That wasn't right. " speech="" play="A43" />
-        <Item text="Not quite _user_ and Jordan! You both got that one incorrect. " speech="" play="A44,_user_,A45" />
+        <Item text="Sorry you two that wasn't what I was looking for." speech="" play="A39" />
+        <Item text="Sorry but you both answered incorrectly." speech="" play="A40" />
+        <Item text="Unfortunately neither of you gave me the answer that I was looking for." speech="" play="A41" />
+        <Item text="Sorry you two. That wasn't right. " speech="" play="A42" />
+        <Item text="Not quite. You both got that one incorrect. " speech="" play="A43" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbacktoUserT">
-        <Item text="_user_ try typing something that contains everything that was asked in the question" speech="" play="_user_,A46" />
+        <Item text="_user_, try typing something that contains everything that was asked in the question" speech="" play="_user_,A44" />
       </SpeechCan>
       <SpeechCan name="Pump">
-        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A47" />
+        <Item text="_user_, try your best and answer the question." speech="" play="_user_,A45" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoBoth">
-        <Item text="Dynamite! _user_ and Jordan you are both correct!" speech="" play="A48,_user_,A49" />
-        <Item text="Phenomenal work you two! Way to go on getting it right!" speech="" play="A50" />
-        <Item text="Great answer you two! Outstanding work!" speech="" play="A51" />
-        <Item text="_user_ and Jordan that's correct! Smooth move you two!" speech="" play="_user_,A52" />
-        <Item text="You two rule! That's right!" speech="" play="A53" />
-        <Item text="Excellent work! You are both right!" speech="" play="A54" />
+        <Item text="Great work. you are both correct." speech="" play="A46" />
+        <Item text="Phenomenal work. You are both right." speech="" play="A47" />
+        <Item text="Great answers, both of you. Outstanding work." speech="" play="A48" />
+        <Item text="that's correct. Nice job you two." speech="" play="A49" />
+        <Item text="That's right. You two are doing great." speech="" play="A50" />
+        <Item text="Excellent work. You are both right." speech="" play="A51" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A55" />
-        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A56" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A52" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A53" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -150,67 +150,78 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Transition7" usedIn="">
-      <Item id="1" agent="Cristina" text="That is great! I'm excited for Jordan! Being invited to parties of your classmates can be so much fun! Remember that you can reply to a message by clicking on the reply button. This will allow you to respond directly to the sender of the message. The reply all button will send a message to Erica and everyone else in the class. Sometimes you may not want to respond to everyone in class, it depends on what you want to say" speech="" play="A57" />
+      <Item id="1" agent="Cristina" text="Ok, now let's help Jordan write the email. First we need a subject, or title for the email." speech="" play="A54" />
     </RigidPack>
     <RigidPack name="Transition9" usedIn="">
-      <Item id="1" agent="Cristina" text="Great! I'm happy you sent the message to Erica. Whenever you send a message, you will be directed back to your inbox! Or you can be directed back to another message, similar to what was just done. It looks like Jordan has a meeting at 3 o clock today! Let's reed it to see what it's about" speech="" play="A58" />
+      <Item id="1" agent="Cristina" text="Good job sending the message to Erica. Whenever you send a message, you will be directed back to your inbox. Or you can be directed back to another message, similar to what was just done. It looks like Jordan has a meeting today. Let's read it to see what it's about" speech="Good job sending the message to Erica. Whenever you send a message, you will be directed back to your inbox. Or you can be directed back to another message, similar to what was just done. It looks like Jordan has a meeting today. Let's reed it to see what it's about" play="A55" />
+      <Item id="2" agent="Jordan" text="The message is from Ms. Johnson and Dr. Arthur. It's reminding me i have a meeting with Dr. Arthur at 3 o clock today. " speech="" play="B14" />
+      <Item id="3" agent="Cristina" text="I think it is important to send a friendly message back to thank Jeanine Johnson for the reminder about your meeting with Dr. Arthur. And confirmation to Dr. Arthur telling him you will be at the meeting." speech="" play="A56" />
     </RigidPack>
     <RigidPack name="Opening1" usedIn="">
-      <Item id="1" agent="Cristina" text="Hi Jordan and _user_! Welcome back to Seesaw!" speech="Hi Jordan and _user_! Welcome back to Seesaw!" media="media\Lesson33-IntroTitle.html" play="A59,_user_,A60" />
-      <Item id="2" agent="Jordan" text="Cristina! I am having a dilemma! I have a new email account that I don't know how to use!" speech="" play="B16" />
-      <Item id="3" agent="Cristina" text="Well Jordan, we can help you with that! I think _user_ can help you answer whatever questions you may have!" speech="" play="A61,_user_,A62" />
-      <Item id="4" agent="Jordan" text="Oh _user_ would you!? That would be great! Okay here it is!" speech="" play="B17,_user_,B18" />
-      <Item id="5" agent="Cristina" text="Great let's get started!" speech="" media="media\Lesson33-0-0.html" play="A63" />
-      <Item id="6" agent="Jordan" text="Cool!" speech="" play="B19" />
-      <Item id="7" agent="Cristina" text="Let's take a look at Jordan's account now! Click login whenever you're ready!" speech="" play="A64" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, welcome back." speech="_user_ and Jordan, welcome back." media="media\Lesson33-IntroTitle.html" play="_user_,A57" />
+      <Item id="2" agent="Jordan" text="Cristina! I am having a dilemma! I have a new email account that I don't know how to use!" speech="" play="B15" />
+      <Item id="3" agent="Cristina" text="Well Jordan, we can help you with that. _user_, I bet you can help answer questions Jordan may have." speech="" play="A58,_user_,A59" />
+      <Item id="4" agent="Jordan" text="_user_, would you help me!? That would be great! Okay, i'm ready to learn!" speech="" play="_user_,B16" />
+      <Item id="5" agent="Cristina" text="Great let's get started!" speech="" media="media\Lesson33-0-0.html" play="A60" />
+      <Item id="6" agent="Jordan" text="Cool! Ok, here is the login page for my account. I guess this is how we get into my email?" speech="" play="B17" />
+      <Item id="7" agent="Cristina" text="Yes. To get into Jordan's account, we first need to log him in. Many email accounts will have different login styles but they all require you to do the same thing, which is put in your username and password. The username and password prevent people other than you from getting into your email. Remember, never share those with anyone." speech="" play="A61" />
+      <Item id="8" agent="Jordan" text="I already entered my username and password." speech="" play="B18" />
+      <Item id="9" agent="Cristina" text="Jordan, thanks. _user_, press the login button whenever you're ready to look at Jordan's account." speech="" play="A62,_user_,A63" />
     </RigidPack>
     <RigidPack name="Transition9111" usedIn="">
-      <Item id="1" agent="Cristina" text="Great message to Ms. Johnson and Dr. Arthur! It looks like we answered all of the urgent messages in Jordan's inbox. Let's go ahead and sign out! I think we're done for the day." speech="" play="A65" />
+      <Item id="1" agent="Cristina" text="Great message to Ms. Johnson and Dr. Arthur. It looks like we answered all of the urgent messages in Jordan's inbox. Let's go ahead and sign out. I think we're done for the day." speech="" play="A64" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="Thank you _user_ for helping Jordan type and send emails and navigate through his new account! Jordan has now been signed out of his email account. In order to log back in he must reenter his password in the password box below." speech="" media="media\Lesson33-Close.html" play="A66,_user_,A67" />
-      <Item id="2" agent="Jordan" text="You are such a big help! thank you! Cristina I think I will log back in later on to check my inbox for new emails." speech="" play="B20" />
-      <Item id="3" agent="Cristina" text="Great Jordan! You two have a wonderful day! " speech="" play="A68" />
-      <Item id="4" agent="Jordan" text="Thanks _user_ and Cristina for all of your help today! See you later." speech="" media="media\Lesson33-IntroTitle.html" play="B21,_user_,B22" />
+      <Item id="1" agent="Cristina" text="_user_, thank you for helping Jordan type and send emails and explore his new account. Jordan has now been signed out of his email account. In order to log back in he must reenter his password in the password box below." speech="" media="media\Lesson33-Close.html" play="_user_,A65" />
+      <Item id="2" agent="Jordan" text="_user_, you were such a big help! thank you! Cristina I think I will log back in later on to check my inbox for new emails." speech="" play="_user_,B19" />
+      <Item id="3" agent="Cristina" text="Great idea. You two have a wonderful day and see you soon." speech="" play="A66" />
+      <Item id="4" agent="Jordan" text="Thanks again everyone. See you both later." speech="" media="media\Lesson33-IntroTitle.html" play="B20" />
     </RigidPack>
     <RigidPack name="Transition4" usedIn="">
-      <Item id="1" agent="Cristina" text="Great! Now that we have the normal email out of the spam folder we can delete the spam emails! You will notice that your spam folder will constantly be full of messages. It is important that you always empty it out." speech="" play="A69" />
+      <Item id="1" agent="Cristina" text="Now that we have the normal email out of the spam folder we can delete the spam emails. You will notice that your spam folder will constantly be full of messages. It is important that you always empty it out." speech="" play="A67" />
+      <Item id="2" agent="Jordan" text="I'm confused about deleting email. For instance, there is the trash folder and the picture of the trash at the top of the screen. Whats the difference?" speech="" play="B21" />
+      <Item id="3" agent="Cristina" text="Jordan, Good question. Typically, if you place emails in the trash folder, you can open the folder to view the emails again. Also, you may choose to bring an email you thought you wanted in the trash back out to the inbox. On the other hand, when you put mail in the trash icon, or the picture of a trash can, you cannot get these messages again. They will be permanently deleted." speech="" play="A68" />
+      <Item id="4" agent="Jordan" text="Oh ok. So if i am sure i do not want emails in my account, i should move them to the trash bin. Well i definitely do not want the spam in my email account." speech="" play="B22" />
     </RigidPack>
     <RigidPack name="Transition911" usedIn="">
-      <Item id="1" agent="Cristina" text="Let's get started with the message to Jeanine and Dr. Arthur now!" speech="" play="A70" />
+      <Item id="1" agent="Cristina" text="Now that we have a good subject line, let's help Jordan write the message to Jeanine and Dr. Arthur." speech="" play="A69" />
     </RigidPack>
     <RigidPack name="Transition1" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ great work! You clicked on the login button, many email accounts will have different login styles but they all require you to do the same thing, which is put in your username and password but remember to never share those with anyone" speech="" play="_user_,A71" />
+      <Item id="1" agent="Cristina" text="_user_,  great work. Jordan is logged into his account." speech="" play="_user_,A70" />
     </RigidPack>
     <RigidPack name="Transition2" usedIn="">
-      <Item id="1" agent="Cristina" text="Great!_user_ and Jordan  there will be all types of emails inside of your inbox. some will be real and some will be spam! People will try to steal your information and take over your account. It is important to be able to tell the difference! It looks like there are 2 spam emails inside of Jordan's inbox already! wow!" speech="" play="A72,_user_,A73" />
+      <Item id="1" agent="Cristina" text="Ok, now lets talk about different types of email that can show up inside of an inbox. There will be two important kinds: real email and fake email." speech="" play="A71" />
+      <Item id="2" agent="Jordan" text="Cristina, what about spam email? People always are saying how bad spam mail is. Shouldn't we talk about spam email too?" speech="" play="B23" />
+      <Item id="3" agent="Cristina" text="Jordan, good point. You should know that a common name for fake email is spam. So when people talk about spam, they are talking about fake email. Spam is dangerous because people who send it may try to steal your information and take over your email account. It is important to be able to tell the difference between real email and spam." speech="" play="A72" />
     </RigidPack>
     <RigidPack name="Transition6" usedIn="">
-      <Item id="1" agent="Jordan" text="I'm excited to see what message my friend  sent to me!" speech="" play="B23" />
-      <Item id="2" agent="Cristina" text="we're about to find out Jordan! Let's take a look!" speech="" play="A74" />
+      <Item id="1" agent="Jordan" text="Wow. it looks like Erica and Rachel are having a party. I can make chili and bring it for everyone to eat." speech="" play="B24" />
+      <Item id="2" agent="Cristina" text="Jordan, before you put your apron on and start cooking, let's take a look and see what the message says, and make sure you are invited." speech="" play="A73" />
     </RigidPack>
     <RigidPack name="Transition8" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ displayed is what a good subject line would look like! Let's try typing an email for Jordan now!" speech="" play="_user_,A75" />
+      <Item id="1" agent="Cristina" text="Now that we have a good subject line for the email, let's try typing the message for Jordan." speech="" play="A74" />
     </RigidPack>
     <RigidPack name="Transition3" usedIn="">
-      <Item id="1" agent="Jordan" text="Thanks _user_! All of the spam emails are in the spam folder!" speech="" play="B24,_user_,B25" />
-      <Item id="2" agent="Cristina" text="Whoops!It looks like an email was sent to the spam folder by mistake! Sometimes this happens when your email account does not recognize the email address of the sender!" speech="" play="A76" />
+      <Item id="1" agent="Cristina" text="Let's look in the spam folder to see if all of the spam emails have been moved there." speech="" play="A75" />
+      <Item id="2" agent="Jordan" text="There they all are! Hey, wait a second... There is an email in the spam folder from my friend Erica. But it's not spam!" speech="" play="B25" />
+      <Item id="3" agent="Cristina" text="Jordan, it looks like this email was sent to the spam folder by mistake. Sometimes this happens when your email account does not recognize the email address of the sender. Don't worry, we can move it to the inbox. Moving it to the inbox tells Jordan's email account to place messages from Erica into the inbox folder. Future emails from Erica should no longer end up in the spam folder." speech="" play="A76" />
     </RigidPack>
     <RigidPack name="Transition5" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_ thanks for all of your help with emptying the spam folder!" speech="" play="_user_,B26" />
-      <Item id="2" agent="Cristina" text="Yes, great work!" speech="" play="A77" />
+      <Item id="1" agent="Jordan" text="_user_, thanks for all of your help with emptying the spam folder." speech="" play="_user_,B26" />
+      <Item id="2" agent="Cristina" text="Yes, great work. Now let's go back to the inbox again and find the email from Jordan's friend, Erica." speech="" play="A77" />
     </RigidPack>
     <RigidPack name="Transition91" usedIn="">
-      <Item id="1" agent="Cristina" text="I think it is important to send a friendly message back to thank Jeanine Johnson for sending you a reminder email about your meeting with Dr. Arthur. And confirmation to Dr. Arthur telling him Jordan will be at the meeting." speech="" play="A78" />
+      <Item id="1" agent="Cristina" text="Ok, let's begin writing the email." speech="" play="A78" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ I think it's important for Jordan to know the difference between the folders he has in his email account. Can you click on the inbox folder for me?" speech="" media="" itemDif="0.1" play="_user_,A79">
+        <Question id="1" agent="Cristina" text="It's important to know the difference between the folders in an email account. Let's look at the folders in Jordan's account. They are listed on the left side of the screen, at the top. There is the inbox folder, the outbox folder, the trash folder and the spam folder. _user_, can you select the inbox folder for me?" speech="" media="" itemDif="0.1" play="A79,_user_,A80">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This is the inbox, It is highlighted green. The inbox holds all of Jordan's current emails." speech="" keys="any" threshold="" test="" play="A80" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ please select the inbox?" speech="" keys="any" threshold="" test="" play="_user_,A81" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Here is the inbox, at the top of the folder list. It is highlighted green. The inbox holds all of Jordan's current emails." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select the inbox." speech="" keys="any" threshold="" test="" play="_user_,A82" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, Which folder is the inbox? Give it another go." speech="" keys="any" threshold="" test="" play="_user_,A83" />
           </Answers>
         </Question>
       </Questions>
@@ -219,10 +230,11 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="2" agent="Jordan" text="_user_ since Cristina is talking about spam mail,  I've clicked two emails that I believe to be spam. Do you think these two emails are spam? Yes or No?" speech="" media="" itemDif="0.1" play="_user_,B27">
+        <Question id="2" agent="Jordan" text="_user_, since Cristina is talking about spam mail,  I've selected two emails that I believe to be spam. Do you think these two emails are spam? Choose one of the answers below." speech="" media="" itemDif="0.1" play="_user_,B27">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Note that spam mail looks different from normal emails, they have funny characters and weird sayings, like &quot;click here to claim your new car!&quot;" speech="" keys="any" threshold="" test="" play="A82" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select all of the spam mail in the inbox." speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="These are both examples of spam emails. Note that spam mail looks different from normal emails, they have funny characters and weird sayings, like click here to claim cash. Since we identified the two selected emails as spam, I am going to move them to the spam folder." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please decide whether these emails are spam. Select an answer below." speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Try it again. Are these emails considered spam email? Select one of the answer options." speech="" keys="any" threshold="" test="" play="A86" />
           </Answers>
         </Question>
       </Questions>
@@ -231,14 +243,14 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="3" agent="Jordan" text="_user_ there is an email in the spam folder from one of my friends! I've already clicked the email and I need to move it back to the inbox folder. Can you move this email to the inbox folder by clicking on the folder for me?" speech="" media="" itemDif="0.1" play="_user_,B28">
+        <Question id="3" agent="Jordan" text="_user_, i've already selected the email from my friend Erica and I need to move back to the inbox folder. Can you help me move this email to the inbox folder by pressing on the correct folder for me?" speech="" media="" itemDif="0.1" play="_user_,B28">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The email entitled Erica and Rachel's party was sent to the spam folder! Jordan's email account did not recognize the email address from the sender and placed it inside of this folder. This sometimes happens." speech="" keys="any" threshold="" test="" play="A84" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please move the email back to the right folder" speech="" keys="any" threshold="" test="" play="A85" />
-            <Answer name="A" agent="Cristina" type="A" text="You selected the inbox folder. That was the correct folder." speech="" keys="any" threshold="" test="" play="A86" />
-            <Answer name="B" agent="Cristina" type="B" text="You selected the outbox folder, the correct folder is the inbox folder." speech="" keys="any" threshold="" test="" play="A87" />
-            <Answer name="D" agent="Cristina" type="D" text="You selected the spam folder, the right folder is the inbox folder" speech="" keys="any" threshold="" test="" play="A88" />
-            <Answer name="C" agent="Cristina" type="C" text="You selected the trash folder, the folder that should have been picked is the inbox folder" speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The email entitled Erica and Rachel's party was sent to the spam folder. Jordan's email account did not recognize the email address from the sender and placed it inside of this folder. This sometimes happens and you will want to move emails like this back to the inbox." speech="" keys="any" threshold="" test="" play="A87" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please move the email back to the right folder" speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="A" agent="Cristina" type="A" text="You selected the inbox folder. That was the correct folder. Erica's email has been moved there. Great work." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="B" agent="Cristina" type="B" text="You selected the outbox folder, the correct folder is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="D" agent="Cristina" type="D" text="You selected the spam folder, the right folder is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="C" agent="Cristina" type="C" text="You selected the trash folder, the folder that should have been picked is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A92" />
           </Answers>
         </Question>
       </Questions>
@@ -253,10 +265,10 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="4" agent="Jordan" text="_user_ which button do I press to get rid of the spam messages? The spam mail has been clicked, all you have to do is click on the correct button." speech="" media="" itemDif="0.1" play="_user_,B29">
+        <Question id="4" agent="Jordan" text="_user_, which button do I press to get rid of the spam messages? The spam mail has been selected, all you have to do is press on the correct button." speech="" media="" itemDif="0.1" play="_user_,B29">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="To delete messages you always click on the trash bin! The trash bin will delete the emails you selected. When you select emails to delete be sure that you really want to get rid of them because once you click on the trash bin the emails are deleted forever!" speech="" keys="any" threshold="" test="" play="A90" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on a button to delete the spam emails." speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="To delete messages you always press on the trash bin. You can tell which button is the trash bin because it will typically look like a picture of a garbage can. In Jordan's account, we see it at the top of the screen. The trash bin will delete the emails you selected. When you select emails to delete be sure that you really want to get rid of them because once you press on the trash bin the emails are deleted forever." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select a button to delete the spam emails." speech="" keys="any" threshold="" test="" play="A94" />
           </Answers>
         </Question>
       </Questions>
@@ -265,10 +277,10 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="5" agent="Cristina" text="_user_ Jordan's email that landed in the spam folder was not spam at all! Click on the inbox folder and then click on the email from Jordan's friends so he can read it." speech="" media="" itemDif="0.1" play="_user_,A92">
+        <Question id="5" agent="Cristina" text="Remember, we moved this email from the spam folder to the inbox folder. _user_, will you press on the email from Jordan's friend, Erica?" speech="" media="" itemDif="0.1" play="A95,_user_,A96">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="That is the message from Jordan's friend! Now let's read it!" speech="" keys="any" threshold="" test="" play="A93" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on the email from Jordan's friend." speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The top email is the message from Jordan's friend. The title, or subject, of the email is Erica and Rachel's party invite." speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on the email from Jordan's friend." speech="" keys="any" threshold="" test="" play="A98" />
           </Answers>
         </Question>
       </Questions>
@@ -277,10 +289,10 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="6" agent="Jordan" text="_user_ Look! this is cool! I got invited to a party! I'd like to help Erica set up her party this weekend! Can you send her a message for me and tell her that? Which button would I press to reply to her to begin typing?" speech="" media="" itemDif="0.1" play="_user_,B30">
+        <Question id="6" agent="Jordan" text="Cristina, it looks like the party is the twelveth and i am invited! I'd like to help Erica set up her party this weekend. _user_, can you send her a message for me and tell her that? Which button would I press to reply to her to begin typing?" speech="" media="" itemDif="0.1" play="B30,_user_,B31">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="You should click on the reply button! This will allow you to reply only to Erica in the message." speech="" keys="any" threshold="" test="" play="A95" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="You should press on the reply button. This will allow you to reply only to Erica in the message. The reply all button will send a message to Erica and everyone else in the class. Sometimes you may not want to respond to everyone in class, it depends on what you want to say." speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A100" />
           </Answers>
         </Question>
       </Questions>
@@ -289,22 +301,22 @@
     </TutoringPack>
     <TutoringPack name="TPA7">
       <Questions>
-        <Question id="7" agent="Cristina" text="_user_ before you send the message for Jordan! Can you type in an appropriate subject line? A subject line should tell the receiver the main reason why you're sending the email. Since this is an email from Jordan telling Erica that he wants to help the subject line should say this." speech="" media="" itemDif="0.1" play="_user_,A97">
+        <Question id="7" agent="Cristina" text="_user_, can you type in an appropriate subject line? A subject line should tell the receiver the main reason why you're sending the email. Since this is an email from Jordan telling Erica that he wants to help with the party, the subject line should say this." speech="" media="" itemDif="0.1" play="_user_,A101">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a very fitting subject line for our email to Jordan's classmate. Here is another example of a good subject line" speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold="0.5" test="" play="A98" />
-            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ thanks! displayed here is an example of an appropriate subjectline" speech="" keys="any" threshold="" test="" play="_user_,A99" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a very fitting subject line for our email to Jordan's classmate. Here is another example of a good subject line" speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold="0.5" test="" play="A102" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_, thanks. Displayed here is an example of an appropriate subject line" speech="" keys="any" threshold="" test="" play="_user_,A103" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
-        <Expectation id="1" text="_user_ when writing a subjectline, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subjectline “Running late to meeting.” Use this idea to create a subjectline for Erica and Rachel’s party." kc="">
+        <Expectation id="1" text="_user_ when writing a subject line, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subject line “Running late to meeting.” Use this idea to create a subject line for Erica and Rachel’s party." kc="">
           <Answers>
-            <Answer name="Good Answer" agent="Cristina" type="Good" text="That is a really good subject line! Thank you for typing!" speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A100" />
+            <Answer name="Good Answer" agent="Cristina" type="Good" text="That is a really good subject line. Great work typing it in." speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A104" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="_user_ when writing a subjectline, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subjectline “Running late to meeting.” Use this idea to create a subjectline for Erica and Rachel’s party." speech="" media="" play="_user_,A101">
+            <Hint id="1" agent="Cristina" text="_user_, when writing a subject line, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subject line “Running late to meeting.” Use this idea to create a subject line for Erica and Rachel’s party." speech="" media="" play="_user_,A105">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A102" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer. I think you are on the right track." speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A106" />
               </Answers>
             </Hint>
           </Hints>
@@ -315,24 +327,24 @@
     </TutoringPack>
     <TutoringPack name="TPA8">
       <Questions>
-        <Question id="8" agent="Cristina" text="_user_ can you send an email back to Erica telling her that Jordan would like to help her set up for the party this weekend? Please be sure to write a greeting such as hi Erica and Rachel and a signature such as from Jordan,or  thanks Jordan. It is always important to address the receiver when you first start a message and when you end a message by using a signature. When you are finished please click the send email button." speech="" media="" itemDif="0.1" play="_user_,A103">
+        <Question id="8" agent="Cristina" text="_user_, can you write a message to Erica telling her that Jordan would like to help her set up for the party this weekend? It is always important to address the receiver when you first start a message, so please be sure to write a greeting such as, hi Erica and Rachel. You should also let them know who the email is from by using a signature at the end of a message. Something such as, from Jordan, or, thanks, Jordan. When you are finished please press the send email button." speech="" media="" itemDif="0.1" play="_user_,A107">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_ here is an example of a good email to send" speech="" keys="any" threshold="" test="" play="_user_,A104" />
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That was a great message! Displayed here is another example of what a good email could be. It contains all of the appropriate information needed." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A105" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="_user_, here is an example of a good email to send" speech="" keys="any" threshold="" test="" play="_user_,A108" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That was a great message. Displayed here is another example of what a good email could be. It contains all of the appropriate information needed." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A109" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="Hi Erica and Rachel! Thank you for sending out the invitation to me. I really would like to help you decorate for the party before hand, if that’s okay. Please let me know!-Jordan" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is really good email! Thank you for typing!" speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A106" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="That is not quite the answer I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A107" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is really good email! Thank you for typing!" speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A110" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="That is not quite the answer I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A111" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="_user_ when writing an email, create a message that allows the receiver to know the exact purpose of your email. So in this case, telling the receivers that you can help for decorate for their party is a great message to relay." speech="" media="" play="_user_,A108">
+            <Hint id="1" agent="Cristina" text="_user_ when writing an email, create a message that allows the receiver to know the exact purpose of your email. So in this case, telling the receivers that you can help for decorate for their party is a great message to relay." speech="" media="" play="_user_,A112">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".7" test="" play="A109" />
-                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A110" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".7" test="" play="A113" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A114" />
               </Answers>
             </Hint>
           </Hints>
@@ -343,10 +355,10 @@
     </TutoringPack>
     <TutoringPack name="TPA9">
       <Questions>
-        <Question id="9" agent="Jordan" text="_user_ it looks like I got a message from Ms. Johnson and Dr. Arthur, how do I reply back to them?" speech="" media="" itemDif="0.1" play="_user_,B31">
+        <Question id="9" agent="Jordan" text="Cristina, good idea. But how do I reply back to both Dr. Arthur and Jeanine Johnson? _user_, can you help? Please press the correct button for me." speech="" media="" itemDif="0.1" play="B32,_user_,B33">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Selecting reply all is the best option. There are two people on this current email, Jeanine Johnson and Dr. Arthur." speech="" keys="any" threshold="" test="" play="A111" />
-            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Selecting reply all is the best option. There are two people on this current email, Jeanine Johnson and Dr. Arthur, and Jordan wants to respond to them both." speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A116" />
           </Answers>
         </Question>
       </Questions>
@@ -355,22 +367,22 @@
     </TutoringPack>
     <TutoringPack name="TPA91">
       <Questions>
-        <Question id="10" agent="Cristina" text="_user_ before you type your message remember to type in an appropriate subjectline. So go ahead and type in a subjectline that says Thank you for the reminder." speech="" media="" itemDif="0.1" play="_user_,A113">
+        <Question id="10" agent="Cristina" text="Before we type the message remember we need an appropriate subject line. _user_, can you please type in a subject for Jordan that says, Thank you for the reminder." speech="" media="" itemDif="0.1" play="A117,_user_,A118">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="_user_ I really think that is a great subjectline! Displayed is another example of a good subjectline." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold="0.5" test="" play="_user_,A114" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="_user_ can you please type a different subjectline in the subjectline bar." speech="" keys="any" threshold="" test="" play="_user_,A115" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="_user_, I really think that is a great subject line. Displayed is another example of a good subject line." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold="0.5" test="" play="_user_,A119" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="_user_, can you please type a different subject in the subject line bar." speech="" keys="any" threshold="" test="" play="_user_,A120" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="Thank you for the reminder" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is really good email! Thank you for typing!" speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A116" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is really good subject line. Great job typing it all in." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A121" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="_user_ when writing a subjectline, make sure it encompasses the overall message you’d like to receiver to know. This way, they will have a general idea of the purpose of your message." speech="" media="" play="_user_,A117">
+            <Hint id="1" agent="Cristina" text="_user_, when writing a subject line, make sure it encompasses the overall message you’d like to receiver to know. This way, they will have a general idea of the purpose of your message." speech="" media="" play="_user_,A122">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A118" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A123" />
               </Answers>
             </Hint>
           </Hints>
@@ -381,23 +393,23 @@
     </TutoringPack>
     <TutoringPack name="TPA911">
       <Questions>
-        <Question id="11" agent="Cristina" text="_user_  Can you please tell Ms. Jeanine that Jordan said thank you for reminding him about his meeting with Dr. Arthur! And can you tell Dr. Arthur that Jordan will be at his office at 3." speech="" media="" itemDif="0.1" play="_user_,A119">
+        <Question id="11" agent="Cristina" text="_user_,  Can you please tell Ms. Jeanine that Jordan said thank you for reminding him about his meeting with Dr. Arthur. And can you tell Dr. Arthur that Jordan will be at his office at 3." speech="" media="" itemDif="0.1" play="_user_,A124">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a nice email _user_! thank you for typing it. Displayed is yet another example of good email." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A120,_user_,A121" />
-            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="_user_ try typing a different email that is more fitting." speech="" keys="any" threshold="" test="" play="_user_,A122" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a nice email. Excellent work typing it all in. Displayed is yet another example of good email." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A125" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="_user_, try typing a different email that is more fitting." speech="" keys="any" threshold="" test="" play="_user_,A126" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="Hello Ms. Johnson, Thank you so much for the reminder email for my meeting today. Dr. Arthur, see you at 3 pm! I’m looking forward to it! Thank you, Jordan" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a really good email! Thank you for typing!" speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A123" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a really good email. Super job typing it all in." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A127" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="_user_ when writing an email to two people, it is important to address them both. Also, be sure to make the purpose of your email clear. Thank Jeanine Johnson for her reminder and let Dr. Arthur know that you will see him during your meeting. So a short and sweet email that says thank you will do just fine." speech="" media="" play="_user_,A124">
+            <Hint id="1" agent="Cristina" text="_user_, when writing an email to two people, it is important to address them both. Also, be sure to make the purpose of your email clear. Thank Jeanine Johnson for her reminder and let Dr. Arthur know that you will see him during your meeting. So a short and sweet email that says thank you will do just fine." speech="" media="" play="_user_,A128">
               <Answers>
-                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A125" />
-                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="any" threshold=".2" test="" play="A126" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="That is a great answer. I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A129" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="any" threshold=".2" test="" play="A130" />
               </Answers>
             </Hint>
           </Hints>
@@ -484,14 +496,17 @@
       <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
     <Rule name="TP3Correct" status="UserAnswerTP3" response="" event="CorrectTP3" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="SetStatus" data="QAskedTP3" id="1" />
-      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
-      <Action agent="System" act="Wait" data="5" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="Answer" data="A" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
-      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
-      <Action agent="System" act="Wait" data="5" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="TP3Correct1" status="QAskedTP3" response="" event="TP3" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
@@ -499,6 +514,7 @@
       <Action agent="Cristina" act="Answer" data="A" id="3" />
       <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="CAskedT" status="QAskedT" response="" event="CristinaT" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
@@ -506,18 +522,21 @@
       <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="CristinaAsked" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
       <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="JordanAsked" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
       <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="AnyT" status="UserAnswerT" response="Any" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="Cristina" act="CannedExpression" data="Pump" id="1" />
@@ -538,21 +557,26 @@
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="Answer" data="D" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="IncorrectTP31" status="UserAnswerTP3" response="" event="IncorrectTP3C" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="Answer" data="C" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="IncorrectTP32" status="UserAnswerTP3" response="" event="IncorrectTP3B" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="Answer" data="B" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="2" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
@@ -569,23 +593,27 @@
       <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
       <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
       <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
       <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
       <Action agent="Cristina" act="Answer" data="Correct" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="HasExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetHint" id="1" />
@@ -617,11 +645,13 @@
       <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="HintBlank" status="UserAnswerTH" response="Any" event="" hasItem="" priority="3" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
       <Action agent="Cristina" act="Answer" data="Correct" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="HintIncorrect" status="UserAnswerTH" response="Hint-Bad" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
@@ -629,6 +659,7 @@
       <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="AddScore" data="0" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
     </Rule>
     <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="Transition0" id="1" />
