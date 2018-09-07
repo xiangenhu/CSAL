@@ -8,12 +8,12 @@
         document.domain = 'ace.autotutor.org'
     </script>
     <link rel="stylesheet" type="text/css" href="css/mainPage.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <style>
     </style>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
     <script src="js/processbar.js"></script>
     <script src="js/pagecontrol.js"></script>
     <script src="js/actioncontrol.js"></script>
@@ -157,7 +157,7 @@
             $("#btNext").click(function() {
 				playList = [];
 				repeatList = [];
-			
+
 				 document.getElementById('agents').contentWindow.Stop();
                 nextButtonStatus = false;
                 HideRepeatButton();
@@ -174,7 +174,7 @@
                 {
 					ShowButtonAndWait=false;
                 }
-               
+
 				clearTimeout(askClickNext);
 
             });
@@ -428,7 +428,7 @@
 							talkingHeadSpeechEndTimestamp = d.getTime();
                         waitForUserResponse = true;
                         countingSpendTime = true;
-						
+
                         userSpendTimeCounting();
                         maxIdle = parseInt(data) * 10;
                         if (mediaActions != "") {
@@ -493,9 +493,9 @@
                             ShowNextButton();
                             nextButtonStatus = true;
                             ShowButtonAndWait=true;
-                        
+
                         }
-                       
+
                         break;
                     default:
                         break;
@@ -518,8 +518,8 @@
                 var PresentationHistoryObjStr = JSON.stringify(PresentationHistoryObj);
                 acePutjson.PresentationID = PresentationIDObjStr;
                 acePutjson.PresentationHistory = PresentationHistoryObjStr;
-				
-				
+
+
                 if (currentLessonID != "lesson0") {
 
 
@@ -648,7 +648,7 @@
          function showScriptNextButton(data) {
             var getMediaObj = currentLessonInfoObj.pages;
             var lessonID = sessionStorage.getItem("LessonID");
-            
+
             if (NextButtonOn == true && isHasNextButton == true) {
                 for (var i in getMediaObj) {
                     if (getMediaObj[i].Type == "QuestionPage") {
@@ -657,7 +657,7 @@
                         if(lessonID=="lesson8" ||  lessonID == "lesson9" || lessonID == "lesson10")
                             {
                                $("#mainFrame").attr("src", currentMediaUrl);
- 
+
 								var d = new Date();
 								pageStartTimestamp = d.getTime();
                             }
@@ -668,41 +668,41 @@
                                 setProgress(getMediaObj[i].progressBarValue);
                                 askClickNext = setTimeout(askClickNextButton, 30000);
                                 return;
-							
+
 							}
-							
+
                         } else if (i == (getMediaObj.length - 1)) {
                             $("#mainFrame").attr("src", currentMediaUrl);
- 
+
                             var d = new Date();
                             pageStartTimestamp = d.getTime();
- 
+
                         }
                     }
- 
+
                 }
             }
 			else
 			{
 			  $("#mainFrame").attr("src", currentMediaUrl);
- 
+
 								var d = new Date();
 								pageStartTimestamp = d.getTime();
-			
+
 			}
 
         }
- 
+
         function showMedia(data) {
             repeatList = [];
             HideRepeatButton();
             HidePlayVideoButton();
             currentMediaUrl = currentMediaPath + data;
             showScriptNextButton(data)
- 
- 
- 
-            
+
+
+
+
         }
 		var askClickNext;
        function nextPage(data) {
@@ -711,7 +711,7 @@
 			var currentMediaUrlList2=(currentMediaUrlList1[currentMediaUrlList1.length-1]).split('?');
             currentMediaUrl = currentMediaPath + data;
             if (NextButtonOn == true && isHasNextButton == true) {
-			
+
 			if(currentMediaUrlList2[0]=="L18-MainPage.html" || currentMediaUrlList2[0]=="L11Round1AMainPage.html")
 			{
 				nextButtonStatus = false;
@@ -724,7 +724,7 @@
 
                 //getPageName and display progress
                 setProgressValue(currentMediaUrl);
-			
+
 			}
 			else
 			{
@@ -732,9 +732,9 @@
                 nextButtonStatus = true;
 
                 askClickNext = setTimeout(askClickNextButton, 30000);
-			
+
 			}
-               
+
 
             } else {
                 nextButtonStatus = false;
@@ -760,7 +760,7 @@
 				var playList=setPlayList("0", "s1");
 				 AngentPlay(playList);
 				 askClickNext=setTimeout(askClickNextButton, 30000);
-			
+
 			}
 		}
 
@@ -785,7 +785,7 @@
                         if (userSelectedItem == "I'm not sure.") {
                             mediaActions = "unsure";
                         }
-                    } 
+                    }
 					else if(n2!=-1)
 					{
 						var getUserAnswer = msg.split("_");
@@ -794,8 +794,8 @@
 						userInput=mediaActions
                         userSelectedItem = getUserAnswer[2];
 						mediaActions="userInputTrue";
-                       
-					
+
+
 					}
 					else {
                         mediaActions = msg;
