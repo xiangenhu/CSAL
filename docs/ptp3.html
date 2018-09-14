@@ -5,7 +5,7 @@
 <title>CSAL Web Application</title>
 <script>document.domain = 'ace.autotutor.org'</script>
 <link rel="stylesheet" type="text/css" href="css/mainPage.css">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <style>
 	#home {
 		position: absolute;
@@ -136,9 +136,9 @@
 	}
 </style>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
-<!--script src="http://www.youtube.com/player_api"></script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+<!--script src="https://www.youtube.com/player_api"></script-->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/callYoutubePlayer.js"></script>
 <script src="js/processbar.js"></script>
@@ -202,7 +202,7 @@
 	var repeatSpeechCount = 0;
 	var repeatTime = 0;
 	var act = "";
-	var domainURL="http://ace.autotutor.org";
+	var domainURL="https://ace.autotutor.org";
 	var html5Version=true;
 	var BrowserName;
 	var WaitForEventInput=false;
@@ -321,7 +321,7 @@
 		});
 
 		$('#iframeAgent').click(function() {
-			$("#agents").attr("src", "http://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0");
+			$("#agents").attr("src", "https://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0");
 		});
 
 		$('#iframeDummy').click(function() {
@@ -361,8 +361,8 @@
 	function clearCache() {
 		$.ajax({
 			//url:'www.haorooms.com',
-			//url:'http://x-in-y.com/',
-			url: 'http://ace.autotutor.org',
+			//url:'https://x-in-y.com/',
+			url: 'https://ace.autotutor.org',
 			dataType: 'json',
 			data: {},
 			beforeSend: function(xmlHttp) {
@@ -615,7 +615,7 @@ function getBrowserName()
 	}
 
 	function sayBye() {
-		//http://x-in-y.com/Fakewww/CristinaAndJordanNewV1-webVersion/CristinaAndJordanNewV1.html
+		//https://x-in-y.com/Fakewww/CristinaAndJordanNewV1-webVersion/CristinaAndJordanNewV1.html
 		//dummyAgentPage.html
 		var speech = "1:See you later";
 		//document.getElementById('agents').contentWindow.callBoth(speech, "Speak");
@@ -739,7 +739,7 @@ function FileExist(url)
 
 		if (talkingheadLoaded == false && scriptFolder != "") {
 			var strs=scriptFolder.split('_');
-			var Url="http://ace.autotutor.org/pilot3/scripts/"+strs[0]+"/html5/index.html?lessonName="+strs[0];
+			var Url="https://ace.autotutor.org/pilot3/scripts/"+strs[0]+"/html5/index.html?lessonName="+strs[0];
 			getScriptFolder = scriptFolder;
 			var isExist=FileExist(Url);
 			/*
@@ -788,10 +788,10 @@ function FileExist(url)
 				};
 			if (str.contains("_") == true) {
 				
-				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
-				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
 				
-				var scriptfolderurl = "http://ace.autotutor.org/pilot3/scripts/"
+				var scriptfolderurl = "https://ace.autotutor.org/pilot3/scripts/"
 				var scriptfolderpath = "C:\\inetpub\\wwwroot\\pilot3\\";
 				var a = str.split("_");
 				var folder = a[0];
@@ -812,7 +812,7 @@ function FileExist(url)
 					} else if (folder == "Lesson12") {*/
 					$("#mainFrame").attr("src", "resources/interactionPage.html");
 					var scripturl = scriptfolderurl + folder + "/" + script + "Media/" + script + ".xml";
-					//var scripturl = "http://141.225.42.101/atsamplepacket.xml";
+					//var scripturl = "https://141.225.42.101/atsamplepacket.xml";
 					scriptbaseURL = scriptfolderurl + folder + "/" + script + "Media/";
 					scriptbasepath = "Scripts\\" + folder + "\\" + script + "Media\\";
 					//inpjson = "{\"ID\":\"" + sessionStorage.getItem("uname") + "\",\"ScriptURL\":\"" + scripturl + "\",\"User\":\"" + sessionStorage.getItem("uname") + "\"}";
@@ -857,7 +857,7 @@ function FileExist(url)
 	// The function that calls the web API using PUT method to start and carry forward the conversation
 	function Run(inpjson) {
 		
-		var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+		var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
 		
 		
 		var content = JSON.parse(inpjson);
@@ -1507,8 +1507,8 @@ function FileExist(url)
 				}
 				useraction = "";
 				userAnswerSpendTime=0;
-				var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
-				//var aceurl = "http://ace.autotutor.org/ACEAPICORS8/api/aceaction";
+				var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+				//var aceurl = "https://ace.autotutor.org/ACEAPICORS8/api/aceaction";
 				var content = JSON.parse(inpjson);
 				var method = "PUT";
 				webAPImethod = method;
@@ -1595,7 +1595,7 @@ function stopCountForUserSpend()
         </div>
 
         <div id="agentFrame">
-            <iframe id="agents" src="http://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
+            <iframe id="agents" src="https://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
         </div>
 
         <div id="mainBody">

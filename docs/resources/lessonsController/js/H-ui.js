@@ -1,13 +1,13 @@
 
 /* -----------H-ui前端框架-------------
 * H-ui.js v2.3.3
-* http://www.h-ui.net/
+* https://www.h-ui.net/
 * Created & Modified by guojunhui
 * Date modified 2015-12.15
 *
 * Copyright 2013-2015 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
-* http://opensource.org/licenses/MIT
+* https://opensource.org/licenses/MIT
 *
 */
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -22,7 +22,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 /*添加收藏
-<a title="收藏本站" href="javascript:;" onClick="addFavoritepage('H-ui前端框架','http://www.h-ui.net/');">收藏本站</a>
+<a title="收藏本站" href="javascript:;" onClick="addFavoritepage('H-ui前端框架','https://www.h-ui.net/');">收藏本站</a>
 */
 /*收藏主站*/
 function addFavorite(name,site){

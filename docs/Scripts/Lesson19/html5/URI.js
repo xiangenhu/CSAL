@@ -1,4 +1,4 @@
-/*! URI.js v1.15.1 http://medialize.github.io/URI.js/ */
+/*! URI.js v1.15.1 https://medialize.github.io/URI.js/ */
 /* build contains: URI.js */
 (function(p,v){"object"===typeof exports?module.exports=v(require("./punycode"),require("./IPv6"),require("./SecondLevelDomains")):"function"===typeof define&&define.amd?define(["./punycode","./IPv6","./SecondLevelDomains"],v):p.URI=v(p.punycode,p.IPv6,p.SecondLevelDomains,p)})(this,function(p,v,u,l){function d(a,b){var c=1<=arguments.length,f=2<=arguments.length;if(!(this instanceof d))return c?f?new d(a,b):new d(a):new d;if(void 0===a){if(c)throw new TypeError("undefined is not a valid argument for URI");
 a="undefined"!==typeof location?location.href+"":""}this.href(a);return void 0!==b?this.absoluteTo(b):this}function r(a){return a.replace(/([.*+?^=!:${}()|[\]\/\\])/g,"\\$1")}function w(a){return void 0===a?"Undefined":String(Object.prototype.toString.call(a)).slice(8,-1)}function h(a){return"Array"===w(a)}function C(a,b){var c={},d,g;if("RegExp"===w(b))c=null;else if(h(b))for(d=0,g=b.length;d<g;d++)c[b[d]]=!0;else c[b]=!0;d=0;for(g=a.length;d<g;d++)if(c&&void 0!==c[a[d]]||!c&&b.test(a[d]))a.splice(d,

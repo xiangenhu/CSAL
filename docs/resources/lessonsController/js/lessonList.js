@@ -5,8 +5,8 @@ var selectedID;
 var UID = "";
 var SID = "";
 var SName = "";
-var CSALURL = "http://ace.autotutor.org/csalpublicversion/mainpage.html";
-var CSALServerURL = "http://ace.autotutor.org/csalpublicversion";
+var CSALURL = "https://ace.autotutor.org/csalpublicversion/mainpage.html";
+var CSALServerURL = "https://ace.autotutor.org/csalpublicversion";
 var CSALScriptfolderurl = CSALServerURL + "/scripts/";
 var ETURL = "";
 var getIpAddress;
@@ -128,7 +128,7 @@ function startLesson() {
 
 
 function getUserIp() {
-    $.get("http://ipinfo.io", function (response) {
+    $.get("https://ipinfo.io", function (response) {
         getIpAddress = response.ip;
         setSession(getIpAddress);
     }, "jsonp");

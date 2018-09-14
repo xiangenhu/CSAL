@@ -1,1 +1,1 @@
-var document.domain = "http://ace.autotutor.org";
+var document.domain = "https://ace.autotutor.org";

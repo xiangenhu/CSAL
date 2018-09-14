@@ -2,7 +2,7 @@
 // frameTrace( -> //frameTrace(
 // function //debugTrace -> function debugTrace
 // function //frameTrace -> function frameTrace
-// then http://closure-compiler.appspot.com/home
+// then https://closure-compiler.appspot.com/home
 // ==ClosureCompiler==
 // @output_file_name MSHTML5.min.js
 // @compilation_level SIMPLE_OPTIMIZATIONS
@@ -409,7 +409,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         /*CH*/if (dirRoot.exceeded == "true" || (dirRoot.trial == "true" && (dirRoot.hostingresources && dirRoot.hostingresources != "") ) )
         /*CH*/{
         /*CH*/    var divstage = document.getElementById(idDiv+'Stage');
-        /*CH*/    divstage.innerHTML = '<div style="position:absolute; left:'+(widthEmbed-112)/2+'px; top:'+(heightEmbed-112)/2+'px; width:112px; height:87px;"/><a href="http://www.mediasemantics.com"><img src="http://www.characterhosting.com/images/MSLogo.gif" border="0"></a></div>'
+        /*CH*/    divstage.innerHTML = '<div style="position:absolute; left:'+(widthEmbed-112)/2+'px; top:'+(heightEmbed-112)/2+'px; width:112px; height:87px;"/><a href="https://www.mediasemantics.com"><img src="https://www.characterhosting.com/images/MSLogo.gif" border="0"></a></div>'
         /*CH*/    hideSpinner(); 
         /*CH*/    return;
         /*CH*/}  
@@ -496,7 +496,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         }
         /*CH*/if (ctl.Preview == "true")
         /*CH*/{
-        /*CH*/    s += '<div id="'+idDiv+'PreviewDiv" style="display:none; position:absolute; left:'+(widthEmbed-120)/2+'px; top:'+(heightEmbed-120)/2+'px; width:120px; height:120px;"/><img src="http://www.characterhosting.com/images/MSPreview.png" border="0"></div>'
+        /*CH*/    s += '<div id="'+idDiv+'PreviewDiv" style="display:none; position:absolute; left:'+(widthEmbed-120)/2+'px; top:'+(heightEmbed-120)/2+'px; width:120px; height:120px;"/><img src="https://www.characterhosting.com/images/MSPreview.png" border="0"></div>'
         /*CH*/}
         debugTrace(" -> "+s);
         var divstage = document.getElementById(idDiv+'Stage');
@@ -1454,11 +1454,11 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         var tdom = "";
         var t = qualifyURL(base);
         if (t.substr(0,8)=="https://") {t = t.substr(8); tdom = t.substr(0, t.indexOf("/"));}
-        else if (t.substr(0,7)=="http://") {t = t.substr(7); tdom = t.substr(0, t.indexOf("/"));}
+        else if (t.substr(0,7)=="https://") {t = t.substr(7); tdom = t.substr(0, t.indexOf("/"));}
         var sdom = "";
         var ssl = false;
         if (s.substr(0,8)=="https://") {var ss = s.substr(8); sdom = ss.substr(0, ss.indexOf("/")); ssl = true;}
-        else if (s.substr(0,7)=="http://") {var ss = s.substr(7); sdom = ss.substr(0, ss.indexOf("/"));}
+        else if (s.substr(0,7)=="https://") {var ss = s.substr(7); sdom = ss.substr(0, ss.indexOf("/"));}
         debugTrace("project js coming from domain "+tdom+" and is requesting a url from domain "+sdom);
         if (sdom != "" && tdom != "" && sdom != tdom)
         {
@@ -4923,7 +4923,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         // Similar for storyline web object
         dispatchStoryline();
                 
-        // REVIEW: Use requestAnimationFrame instead of setInterval/setTimeout - http://www.nczonline.net/blog/2011/05/03/better-javascript-animations-with-requestanimationframe/    
+        // REVIEW: Use requestAnimationFrame instead of setInterval/setTimeout - https://www.nczonline.net/blog/2011/05/03/better-javascript-animations-with-requestanimationframe/    
         setTimeout(function(){onFrame()}, 1000/dirRoot.fps);
     }
     

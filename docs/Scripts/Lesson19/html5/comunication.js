@@ -1,4 +1,4 @@
-    var domainURL = "http://ace.autotutor.org";
+    var domainURL = "https://ace.autotutor.org";
         window.addEventListener('message', receiveMessage, false);
 	var lessonName;
         function receiveMessage(evt) {

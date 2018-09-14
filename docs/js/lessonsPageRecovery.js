@@ -11,7 +11,7 @@ var webAPImethod="GET";
 			var inpjson = "{\"ID\":\"" + userID + "\",\"ScriptURL\":\"" + "" + "\",\"User\":\"" + "" + "\",\"UseDB\":\"" + "false" + "\"}";
 			
 			var content =JSON.parse(inpjson);
-			var url="http://ace.autotutor.org/ACEAPICORS6/api/aceaction/";
+			var url="https://ace.autotutor.org/ACEAPICORS6/api/aceaction/";
 			var method= "GET";
 			var getUrl=$.ajax({
 			type: method,

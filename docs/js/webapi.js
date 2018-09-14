@@ -1,4 +1,4 @@
-var aceurl = "http://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
 var actions;
 var PutStatus=false;
 

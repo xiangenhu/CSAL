@@ -54,7 +54,7 @@ function saveAction(TagetObj)
 	var method = "POST";
 
 	
-	var APIUrl="http://ace.autotutor.org/aceapicors12/api/StudentReading";
+	var APIUrl="https://ace.autotutor.org/aceapicors12/api/StudentReading";
 	var getUrl = $.ajax({
 		type : method,
 		url :  APIUrl,
