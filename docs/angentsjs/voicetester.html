@@ -1,0 +1,145 @@
+
+<html>
+<head>
+<script>document.domain = "ace.autotutor.org"</script>
+<script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-1.12.4.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>		
+	<script src="js/msapi.js"></script>		
+	<script src="https://xiangenhu.github.io/skoplayer/js/pixi.min.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/Interface.js"></script>
+	
+		<style type="text/css" id="page-css">
+canvas {
+    width: 130px;
+}
+#Lee {
+  float: right;
+}
+body {
+  overflow: hidden;
+}
+		</style>
+</head>
+<body onload="onLoad()">
+<audio id="audio"></audio> 
+<div id="TopDiv" style="position:relative; width:100%; height:200px;"> </div>	 
+
+</div>	
+
+<script>
+var thLoaded=false;
+var thBusy=false;
+function onLoad() {
+	
+	loadCharas()
+	
+}
+
+function TestSpeech(Words){
+	
+	msSpeakQueued("Lee",Words,"");
+	msSpeakQueued("Angela",Words,"");
+}
+function TestSpeech1(){
+	
+	var Words=document.getElementById("myText1").value
+	msSpeakQueued("Angela",Words,"");
+}
+function TestSpeech2(){
+	
+	var Words=document.getElementById("myText2").value
+	msSpeakQueued("Lee",Words,"");
+}
+
+var aud = document.getElementById("audio");
+	aud.onended = function() {
+	
+	if(loaded==2 && thLoaded==false)
+	{
+		thLoaded=true;
+		//alert("thLoaded"+thLoaded);
+		 window.parent.postMessage(0, '*');
+		
+	}
+	else if(loaded==2 && thLoaded==true)
+	{
+		var thBusy=false;
+		//alert("thBusy"+thBusy);
+		  window.parent.postMessage(0, '*');
+		
+		
+	}
+    
+};
+aud.onplaying = function() {
+
+if(loaded==2 && thLoaded==true)
+	{
+	var thBusy=true;
+		//alert("thBusy"+thBusy);
+		
+	}
+   
+};
+
+function stopQueue()
+{
+queue=[];
+	abort();
+	
+}
+function CristinaSpeak(word)
+{
+msSpeakQueued("Angela",Words,"");
+}
+function JordanSpeak(word)
+{
+msSpeakQueued("Lee",Words,"");
+}
+
+
+ function callBoth(str, status, talkingheadSwitch) {
+		if(talkingheadSwitch=="on")
+		{
+				 var strs = str.split(":");
+            var firstPart = strs[0];
+            var scoendPart = strs[1];
+
+            if (status == "Speak") {
+
+                if (firstPart == 0) {
+				msSpeakQueued("Angela",scoendPart,"");
+               
+                 
+                } else if (firstPart == 1) {
+            msSpeakQueued("Lee",scoendPart,"");
+                   
+                }
+
+            } 
+			
+		}
+			else if(talkingheadSwitch=="off")
+			{
+				 window.parent.postMessage(0, '*');
+				
+			}
+           
+        }
+
+</script>
+<div id="left" style="float: left;">
+<textarea rows="4" cols="50" id="myText1">
+ 
+</textarea><br>
+
+<button onclick="TestSpeech1()">Click here to Ask Me</button> </div>
+<div id="right" style="float: right;">
+<textarea rows="4" cols="50" id="myText2">
+ 
+</textarea><br>
+<button onclick="TestSpeech2()">Click here to Ask Me</button> </div>
+</body>
+</html>
