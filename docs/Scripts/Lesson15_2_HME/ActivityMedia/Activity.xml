@@ -1,0 +1,1223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
+      <SpeechCan name="IWasRight">
+        <Item text="Yay, I got it right!" speech="" play="B1" />
+        <Item text="I was lucky to get this one right." speech="" play="B2" />
+        <Item text="Yay, I was right on this one!" speech="" play="B3" />
+      </SpeechCan>
+      <SpeechCan name="JordanAlsoNotCorrect">
+        <Item text="Why wasn't my answer right?" speech="" play="B4" />
+        <Item text="Why was my answer wrong?" speech="" play="B5" />
+        <Item text="Why didn't I get the correct answer?" speech="" play="B6" />
+      </SpeechCan>
+      <SpeechCan name="IAgree">
+        <Item text="I agree with that answer." speech="" play="B7" />
+        <Item text="I would choose the same answer." speech="" play="B8" />
+        <Item text="I agree with that choice." speech="" play="B9" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
+      <SpeechCan name="UserIncorrect">
+        <Item text="_user_, you did not get it right this time." speech="" play="_user_,A1" />
+        <Item text="_user_, your answer was not correct. " speech="" play="_user_,A2" />
+      </SpeechCan>
+      <SpeechCan name="BothCorrect">
+        <Item text="_user_ and Jordan , you both got it correct! Great job!" speech="" play="_user_,A3" />
+      </SpeechCan>
+      <SpeechCan name="JordanCorrect">
+        <Item text="jordan, you are right. Good job!" speech="" play="A4" />
+        <Item text="jordan, you got it correct this time. Great job!" speech="" play="A5" />
+      </SpeechCan>
+      <SpeechCan name="UserCorrect">
+        <Item text="_user_, you are right. Good Job! Yes." speech="" play="_user_,A6" />
+        <Item text="You are correct, excellent! Yes." speech="" play="A7" />
+        <Item text="_user_, you are right! Nice going! Yes." speech="" play="_user_,A8" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, it seems that you might need a little bit more time. Go ahead and keep reading." speech="" play="_user_,A9" />
+      </SpeechCan>
+      <SpeechCan name="JordanAnswerSecond">
+        <Item text="jordan, Ok.  it is your turn." speech="" play="A10" />
+        <Item text="Jordan, what is your answer for this question?" speech="" play="A11" />
+      </SpeechCan>
+      <SpeechCan name="AnsweringJordan">
+        <Item text="jordan, Well " speech="" play="A12" />
+      </SpeechCan>
+      <SpeechCan name="UserAnswerSecond">
+        <Item text="_user_, it's your turn now. Please click on one of the answers that you think is the correct answer. " speech="" play="_user_,A13" />
+      </SpeechCan>
+      <SpeechCan name="AskJordan">
+        <Item text="jordan, now it's your turn to answer" speech="" play="A14" />
+        <Item text="Jordan, What is your answer?" speech="" play="A15" />
+        <Item text="jordan, it's your turn." speech="" play="A16" />
+        <Item text="Jordan, what is your answer choice?" speech="" play="A17" />
+      </SpeechCan>
+      <SpeechCan name="User">
+        <Item text="_user_, thank you for your answer" speech="" play="_user_,A18" />
+      </SpeechCan>
+      <SpeechCan name="BothIncorrect">
+        <Item text="Unfortunately, neither of you got it correct. " speech="" play="A19" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+   <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, hi, I was wondering if you guys like to read short stories?" speech="" media="media\Lesson15-IntroTitle.html" play="_user_,A76" />
+      <Item id="2" agent="Jordan" text="I love to read short stories! They tell most fascinating things." speech="" play="B59" />
+      <Item id="3" agent="Cristina" text="jordan, That is great . Because you are in luck! We are going to read three stories today!" speech="" play="A77" />
+      <Item id="4" agent="Jordan" text="Three? Oh boy I cannot wait. But I might have some trouble comprehending some parts." speech="" play="B60" />
+      <Item id="5" agent="Cristina" text="Jordan, That's not a problem . We will go through the stories together, then we will use summarization to check our understanding of the story." speech="" play="A78" />
+      <Item id="6" agent="Jordan" text="Oh I'm so excited." speech="" play="B61" />
+      <Item id="7" agent="Jordan" text=" _user_, I hope you will read them with me." speech="" play="_user_,B62" />
+      <Item id="8" agent="Cristina" text="_user_, I also hope you will also give these three stories a shot! Here is the first story." />
+	  </RigidPack>
+	<RigidPack name="Opening2" usedIn="">
+      <Item id="3" agent="Cristina" text=" Good job! You two got through the first story. " speech="" play="A22" />
+      <Item id="4" agent="Jordan" text="I really like that first story." speech="" play="B11" />
+      <Item id="5" agent="Cristina" text="Now we are finished with the first story, would you like to read another story?" speech="" play="A23" />
+      <Item id="6" agent="Jordan" text="Yes I definitely would. This has been fun." speech="" play="B12" />
+      <Item id="7" agent="Jordan" text=" _user_, I hope you would also read another story with me." speech="" play="_user_,B13" />
+    </RigidPack>
+	<RigidPack name="Opening3" usedIn="">
+      <Item id="3" agent="Cristina" text=" Good job! You two got through the two story. " speech="" play="A54" />
+      <Item id="4" agent="Jordan" text="I really like these stories." speech="" play="B40" />
+      <Item id="5" agent="Cristina" text="Now we are finished with the two stories, would you like to read the last story?" speech="" play="A55" />
+      <Item id="6" agent="Jordan" text="Yes I definitely would. This has been fun. " speech="" play="B41" />
+      <Item id="7" agent="Jordan" text="_user_, I hope you would also read the last story with me." speech="" play="_user_,B42" />
+    </RigidPack>
+	<RigidPack name="EOpening" usedIn="">
+      <Item id="8" agent="Cristina" text="The name of this story is Turandot. It is based on an opera of the same name by the famous Italian composer Puccini." speech="The name of this story is Turandot. It is based on an opera of the same name by the famous Italian composer Puchini" play="A24" />
+      <Item id="9" agent="Jordan" text="Interesting, I don't think I've heard of it. " speech="" play="B14" />
+      <Item id="10" agent="Cristina" text="_user_ and Jordan, please take some time to read through the story. Again it is no rush.  please press the button labeled click here to continue when you are done reading." speech="" media="media\Lesson15-Turandot_Easy.html" play="_user_,A25" />
+    </RigidPack>
+	<RigidPack name="MOpening" usedIn="">
+	  <Item id="8" agent="Cristina" text="The title of the story is The Twelfth Night. It is a story based on the play of the same name by the famous English playwright and poet William Shakespear. " speech="" play="_user_,A79" />
+      <Item id="9" agent="Jordan" text="I think I vaguely heard of it." speech="" play="B63" />
+      <Item id="10" agent="Cristina" text="_user_, please press the Next Page button to go on to the next page, or the Last page button to go on to the last page. Then press the button labeled click here to continue when you feel like you have finished, But please, take your time." speech="" media="media\Lesson15-TwelfthNight_Medium.html" play="_user_,A80" />
+    </RigidPack>
+	<RigidPack name="DOpening" usedIn="">
+      <Item id="8" agent="Cristina" text="The name of this story is The Legend of the Evening Star. It is based on a poem written by the famous Romanian writer Eminescu." speech="" play="A56" />
+      <Item id="9" agent="Jordan" text="Romanian? How exotic!" speech="" play="B43" />
+      <Item id="10" agent="Cristina" text="_user_ and Jordan, please take some time to read through the story. Again it is no rush.  please press the button labeled click here to continue when you are done reading." speech="" media="media\Lesson15-EveningStar_Difficult.html" play="_user_,A57" />
+    </RigidPack>
+    <RigidPack name="M1" usedIn="M1">
+      <Item id="1" agent="Cristina" text="Lets go to the next page." speech="" play="A20" />
+    </RigidPack>
+    <RigidPack name="M4" usedIn="M4">
+      <Item id="1" agent="Cristina" text="Lets go to the next question in the next page." speech="" play="A26" />
+    </RigidPack>
+    <RigidPack name="E1" usedIn="E1">
+      <Item id="1" agent="Jordan" text="Who would try to marry somebody by having to answer three riddles or die? " speech="" play="B15" />
+      <Item id="2" agent="Cristina" text="jordan, Again , this is a fictional device to make a fictional story more interesting. In reality, princes and princesses in those times usually have to marry whom their parents choose for them. " speech="" play="A27" />
+      <Item id="3" agent="Jordan" text="And would the parents ever ask the suitors to answer three riddles or kill them?" speech="" play="B16" />
+      <Item id="4" agent="Cristina" text="jordan, Not if they want to risk war. " speech="" play="A28" />
+      <Item id="5" agent="Jordan" text="That is a smart move!" speech="" play="B17" />
+      <Item id="6" agent="Cristina" text="Let us answer the next question in the next page." speech="" play="A29" />
+    </RigidPack>
+    <RigidPack name="M9" usedIn="M9">
+      <Item id="1" agent="Jordan" text="That was right on time! It would really be too awkward for Viola to tell the truth." speech="" play="B18" />
+      <Item id="2" agent="Cristina" text="jordan, I think so too . Now let us answer the last question, on the same page." speech="" play="A30" />
+    </RigidPack>
+    <RigidPack name="D4" usedIn="D4">
+      <Item id="1" agent="Jordan" text="So the princess chose to stay a human, it seems." speech="" play="B19" />
+      <Item id="2" agent="Cristina" text="jordan, Great insight ! What the evening star asked her may seem wonderful, but in order to go with him, she must cease being human and become something else. In effect, she must stop living a mortal life, but die and become something else entirely." speech="" play="A31" />
+      <Item id="3" agent="Jordan" text="And she doesn't seem to be comfortable with that." speech="" play="B20" />
+      <Item id="4" agent="Cristina" text="Jordan, well, would you be? " speech="" play="A32" />
+      <Item id="5" agent="Jordan" text="cristina, Yeah good point , I hadn't thought about that. I honestly don't know." speech="" play="B21" />
+      <Item id="6" agent="Cristina" text="That's exactly how the princess is. She doesn't know herself well enough to know what she wants at this point. " speech="" play="A33" />
+      <Item id="7" agent="Jordan" text="cristina, Ah I see . It's sort of like living life and you haven't matured enough to know exactly what you want in life." speech="" play="B22" />
+      <Item id="8" agent="Cristina" text="jordan, Exactly ! Now let us keep going and answer the next question in the next page. " speech="" play="A34" />
+    </RigidPack>
+    <RigidPack name="E4" usedIn="E4">
+      <Item id="1" agent="Cristina" text="Now let us take a look at the next question in the same page. " speech="" play="A35" />
+    </RigidPack>
+    <RigidPack name="D9" usedIn="D9">
+      <Item id="1" agent="Jordan" text="cristina, I noticed that the princess at the end did not tell the Evening Star to shine over her life, but over her good fortunes." speech="" play="B23" />
+      <Item id="2" agent="Cristina" text="jordan, Good eye ! This is on intention. It shows that the change the princess has undergone. She no longer has the same feelings regarding the Evening Star she had before finding Catalin." speech="" play="A36" />
+      <Item id="3" agent="Jordan" text="cristina, This is a sad story, ." speech="" play="B24" />
+      <Item id="4" agent="Cristina" text="jordan, Well , not all good stories have happy endings. Now let us answer the final question in the same page. " speech="" play="A37" />
+    </RigidPack>
+    <RigidPack name="E9" usedIn="E9">
+      <Item id="1" agent="Jordan" text="It kinda sucks how in this story the prince not only has to pursue her, but even at the very end where he won her fair and square, he still put his life in her hands." speech="" play="B25" />
+      <Item id="2" agent="Cristina" text="jordan, Yes . As with the last story we have read, we come back to the theme of pursuing unconditional love, even at the cost of life. " speech="" play="A38" />
+      <Item id="3" agent="Jordan" text="Sometimes I do wonder what the world would be like if everybody believed in unconditional love." speech="" play="B26" />
+      <Item id="4" agent="Cristina" text="jordan, Good ! That is the purpose of many fictional narrative stories. They want you to think on an ideal and imagine the possibility of achieving it." speech="" play="A39" />
+      <Item id="5" agent="Jordan" text="I'm glad that this story got a happy ending!" speech="" play="B27" />
+      <Item id="6" agent="Cristina" text="Well, before you celebrate, let us answer the last question in this same page." speech="" play="A40" />
+    </RigidPack>
+    <RigidPack name="D7" usedIn="D7">
+      <Item id="1" agent="Cristina" text="Now let us move on to the next question in the same page." speech="" play="A41" />
+    </RigidPack>
+    <RigidPack name="E7" usedIn="E7">
+      <Item id="1" agent="Jordan" text="These riddles that Turandot asks are ridiculous. I don't think I would ever be able to get the right answer." speech="" play="B28" />
+      <Item id="2" agent="Cristina" text="jordan, Yes . The description of the riddles are again mostly for literary and symbolic purposes. In reality probably no one would be able to answer them correctly since they are so vague." speech="" play="A42" />
+      <Item id="3" agent="Jordan" text="cristina, Thanks . I would have to think some more about it." speech="" play="B29" />
+      <Item id="4" agent="Cristina" text="jordan, Good . In the meanwhile, let's skip one page and move on to the next question in the following page." speech="" play="A43" />
+    </RigidPack>
+    <RigidPack name="D1" usedIn="D1">
+      <Item id="1" agent="Jordan" text="Ah I get it. Because fairy tales usually involve magic, which does not follow the law of nature." speech="" play="B30" />
+      <Item id="2" agent="Cristina" text="jordan, yes. you got it! Now let us go to the next question in the next page." speech="" play="A44" />
+    </RigidPack>
+    <RigidPack name="D91" usedIn="D91">
+      <Item id="1" agent="Jordan" text="Do we have another story? I'm really enjoying these!" speech="" play="B31" />
+    </RigidPack>
+    <RigidPack name="E91" usedIn="E91">
+      <Item id="1" agent="Jordan" text="Do we have another story? I'm really enjoying these!" speech="" play="B32" />
+    </RigidPack>
+    <RigidPack name="M2" usedIn="M2">
+      <Item id="1" agent="Cristina" text="Let's move on to the next question in the same page. " speech="" play="A45" />
+    </RigidPack>
+    <RigidPack name="D2" usedIn="D2">
+      <Item id="1" agent="Jordan" text="This is a really nice imagery. The princess asked for the star to fall for her and he did." speech="" play="B33" />
+      <Item id="2" agent="Cristina" text="jordan, yes, it is actually a very common metaphor in many narrative literatures. " speech="" play="A46" />
+      <Item id="3" agent="Jordan" text="cristina, I see, thanks, I'll keep a watch out for this metaphor when I read future stories." speech="" play="B34" />
+      <Item id="4" agent="Cristina" text="jordan, good. In the meantime, let's move on to the next question in the next page." speech="" play="A47" />
+    </RigidPack>
+    <RigidPack name="E2" usedIn="E2">
+      <Item id="1" agent="Cristina" text="Now let us answer the next question in the same page." speech="" play="A48" />
+    </RigidPack>
+    <RigidPack name="D5" usedIn="D5">
+      <Item id="1" agent="Jordan" text="The princess asked a pretty big thing of the Evening Star" speech="" play="B35" />
+      <Item id="2" agent="Cristina" text="jordan, Well , the Evening Star asked the princess to give up her life for him also." speech="" play="A49" />
+      <Item id="3" agent="Jordan" text="That is true." speech="" play="B36" />
+      <Item id="4" agent="Cristina" text="Now let us go to the next question on the next page" speech="" play="A50" />
+    </RigidPack>
+    <RigidPack name="E5" usedIn="E5">
+      <Item id="1" agent="Jordan" text="The Prince of Tartary is very brave." speech="" play="B37" />
+      <Item id="2" agent="Cristina" text="jordan, Yes . As you may read in many other romantic fictional stories, many times the main character would do anything for love." speech="" play="A51" />
+      <Item id="3" agent="Jordan" text="I guess this would be another literary device in order to represent an ideal or theme." speech="" play="B38" />
+      <Item id="4" agent="Cristina" text="jordan, That's right . Good job! Now let us get to the next question in the same page. " speech="" play="A52" />
+    </RigidPack>
+   
+    <RigidPack name="M7" usedIn="M7">
+      <Item id="1" agent="Jordan" text="Can twin brother and sister really look that much alike? What about their voice?" speech="" play="B44" />
+      <Item id="2" agent="Cristina" text="jordan, well . Actually, twins of different gender are always fraternal twins. So they would actually look different." speech="" play="A58" />
+      <Item id="3" agent="Jordan" text="Ah I see, it's another one of those unrealistic details in a fictional story." speech="" play="B45" />
+      <Item id="4" agent="Cristina" text="jordan, That's right , sometimes it is a literary device intended to create a funny situation. " speech="" play="A59" />
+      <Item id="5" agent="Jordan" text="Wow, it really got complicated in the story." speech="" play="B46" />
+      <Item id="6" agent="Cristina" text="_user_, Now let us answer the next question. We are going to skip two pages to the last page, where the question will be.  you can of course go back to re-read those two pages if you wish." speech="" play="_user_,A60" />
+    </RigidPack>
+    <RigidPack name="M6" usedIn="M6">
+      <Item id="1" agent="Jordan" text="I still feel like the duke should've at least suspected her true gender. I mean, Viola has been with him all this time, how could he not know?" speech="" play="B47" />
+      <Item id="2" agent="Cristina" text="jordan, Well , sometimes fictional stories are not always very realistic, but they can give us a sense of an overall ideal or theme that we think about how it would apply to real life." speech="" play="A61" />
+      <Item id="3" agent="Jordan" text="Cristina, Really? like what?" speech="" play="B48" />
+      <Item id="4" agent="Cristina" text="Well, for example, unconditional love. That you are willing to throw your identity away, hide and repress who you really are, in order to make the person you love happy." speech="" play="A62" />
+      <Item id="5" agent="Jordan" text="I see, that's kind of beautiful I guess." speech="" play="B49" />
+      <Item id="6" agent="Cristina" text="jordan, I'm glad you think so . Now let us move on to the next question in the next page." speech="" play="A63" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="Jordan, sorry. Maybe you should save this enthusiasm for next time." speech="" media="media\Lesson15Close.html" play="A64" />
+      <Item id="2" agent="Jordan" text="_user_, I really enjoyed reading these two stories with you. I hoped you enjoyed them also." speech="" play="_user_,B50" />
+      <Item id="3" agent="Cristina" text="Remember, you can always find more good stories in your local library!" speech="" play="A65" />
+      <Item id="4" agent="Jordan" text="I'm gonna go to the library right now! Thanks so much you two!" speech="" play="B51" />
+      <Item id="5" agent="Cristina" text="Goodbye and I hope to see you both next time!" speech="" play="A66" />
+    </RigidPack>
+    <RigidPack name="M3" usedIn="M3">
+      <Item id="1" agent="Cristina" text="Let's go on to the next question in the next page. " speech="" play="A67" />
+    </RigidPack>
+    <RigidPack name="D3" usedIn="D3">
+      <Item id="1" agent="Jordan" text="So describing the evening star as being dead isn't really that he is dead? Since technically the evening star really lives forever. I'm kind of confused here." speech="" play="B52" />
+      <Item id="2" agent="Cristina" text="jordan, Yes and no . The author uses this word to specifically mean not from the world of the living. Anything that is not from the world of the living in this metaphorical story would be considered dead. # And this is a common theme throughout this particular story. As we shall see more later." speech="" play="A68" />
+      <Item id="3" agent="Jordan" text="cristina, Thanks , I would need to think more about it." speech="" play="B53" />
+      <Item id="4" agent="Cristina" text="jordan, Good . Now let's move on to the next question in the next page." speech="" play="A69" />
+    </RigidPack>
+    <RigidPack name="E3" usedIn="E3">
+      <Item id="1" agent="Cristina" text="Now let us move on to the next question in the next page." speech="" play="A70" />
+    </RigidPack>
+    <RigidPack name="D8" usedIn="D8">
+      <Item id="1" agent="Jordan" text="I really like how the Creator said that each living thing only lives because it dies." speech="" play="B54" />
+      <Item id="2" agent="Cristina" text="jordan, Yes . Again, we come back to one of the central themes of this story. That life is only life because it ends, and anything that is not life is death. # Immortality would not be considered life since it has no ending. Since it is not life, then immortality must be death." speech="" play="A71" />
+      <Item id="3" agent="Jordan" text="It's a very interesting perspective." speech="" play="B55" />
+      <Item id="4" agent="Cristina" text="jordan, I'm glad you think so . Now let's skip the next page and answer the next question in the last section of the story." speech="" play="A72" />
+    </RigidPack>
+    <RigidPack name="E8" usedIn="E8">
+      <Item id="1" agent="Jordan" text="I like how the prince is giving Turandot a taste of her own medicine. He really is smart. " speech="" play="B56" />
+      <Item id="2" agent="Cristina" text="jordan, Yes indeed he is , by giving her a question that can only be found out from a source. So no matter how smart she is she cannot answer this on her own." speech="" play="A73" />
+      <Item id="3" agent="Jordan" text="Yes but now she's torturing an innocent person for it, I really don't like her." speech="" play="B57" />
+      <Item id="4" agent="Cristina" text="jordan, I know what you mean . Main characters are not always good or likeable. And that's okay too. Sometimes a flaw or defect of a main character gives possibility of change. So we can see how a character might evolve throughout a story." speech="" play="A74" />
+      <Item id="5" agent="Jordan" text="cristina, I see . Thanks" speech="" play="B58" />
+      <Item id="6" agent="Cristina" text="Now let us skip the next page and move on to the next question in the last page." speech="" play="A75" />
+    </RigidPack>
+   
+    <RigidPack name="E6" usedIn="E6">
+      <Item id="1" agent="Cristina" text="Now let's answer the next question in the next page. " speech="" play="A81" />
+    </RigidPack>
+    <RigidPack name="M5" usedIn="M5">
+      <Item id="1" agent="Jordan" text="Wow, it must be really awkward to love someone who doesn't love you. And at the same time be so involved right in the middle of the relationship of that person and his romantic interest!" speech="" play="B64" />
+      <Item id="2" agent="Cristina" text="jordan, It's a complicated situation indeed ! I think this is what makes this story so interesting. It is not just a simple love triangle story." speech="" play="A82" />
+      <Item id="3" agent="Jordan" text="I think so also." speech="" play="B65" />
+      <Item id="4" agent="Cristina" text="Okay, now let's move on to the next question in the same page." speech="" play="A83" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="D1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, why don't you start this round? let us start from the beginning of the story again. Instead of asking you about where the story will take place, I want to ask you what does the underlined phrase tell you about the setting of this story." speech="" media="" itemDif="0.1" play="A84">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="This story compares itself to a fairy tale, meaning that it is set in an imaginary world. Or an ideal place that can only exist in imagination. Such story can have elements that do not occur in nature." speech="" keys="asdf" threshold="" test="" play="A85" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually C. This story compares itself to a fairy tale, meaning that it is set in an imaginary world. Or an ideal place that can only exist in imagination. Such story can have elements that do not occur in nature." speech="The answer is actually Sea. This story compares itself to a fairy tale, meaning that it is set in an imaginary world. Or an ideal place that can only exist in imagination. Such story can have elements that do not occur in nature." keys="asdf" threshold="" test="" play="A86" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A87" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually C. This story compares itself to a fairy tale, meaning that it is set in an imaginary world. Or an ideal place that can only exist in imagination. Such story can have elements that do not occur in nature." speech="The answer is actually Sea. This story compares itself to a fairy tale, meaning that it is set in an imaginary world. Or an ideal place that can only exist in imagination. Such story can have elements that do not occur in nature." keys="asdf" threshold="" test="" play="A88" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think it means that it is set in an imaginary world." speech="" keys="sdf" threshold="" test="" play="B66" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think it means that it is set in the times when fairies existed. " speech="" keys="asdf" threshold="" test="" play="B67" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think it means that it is set in a very long time ago." speech="" keys="asdf" threshold="" test="" play="B68" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered A. Fairy tales does not exclusively involve magical fairies. Fairies actually do not appear in many fairy tales. C is the correct answer." speech="Jordan, you answered eigh. Fairy tales does not exclusively involve magical fairies. Fairies actually do not appear in many fairy tales. C is the correct answer." keys="asdf" threshold="" test="" play="A89" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered B. Fairy tales do not necessarily give you a time frame. It could be sat in any time imaginable. C is the correct answer." speech="Jordan, you answered Bee. Fairy tales do not necessarily give you a time frame. It could be sat in any time imaginable. C is the correct answer." keys="sdf" threshold="" test="" play="A90" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_,it's your turn to answer first. can you identify the main characters in this story?  Please click on one of the buttons for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A91">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The story so far tells of an interaction between the princess and the Evening Star. " speech="" keys="asdf" threshold="" test="" play="A92" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually A. The story so far tells of an interaction between the princess and the Evening Star.  " speech="The answer is actually eigh. The story so far tells of an interaction between the princess and the Evening Star.  " keys="asdf" threshold="" test="" play="A93" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A94" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually A. The story so far tells of an interaction between the princess and the Evening Star.  " speech="The answer is actually eigh. The story so far tells of an interaction between the princess and the Evening Star.  " keys="asdf" threshold="" test="" play="A95" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the main characters are the princess and the evening star." speech="" keys="sdf" threshold="" test="" play="B69" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the main characters are the princess and her attendant." speech="" keys="asdf" threshold="" test="" play="B70" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the main characters are the princess and the frog." speech="" keys="asdf" threshold="" test="" play="B71" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose B. The story does not mention an attendant to the princess. So A is correct." speech="Jordan, you chose Bee. The story does not mention an attendant to the princess. So A is correct." keys="asdf" threshold="" test="" play="A96" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. There is no mention of a frog in the story,  . You might be thinking of the Disney movie Princess and the Frog. A is correct. " speech="Jordan, you chose Sea. There is no mention of a frog in the story, Jordan. You might be thinking of the Disney movie Princess and the Frog. A is correct. " keys="asdf" threshold="" test="" play="A97" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn this time. now that we've established the main characters, how would you describe one of the main characters, the evening star?" speech="" media="" itemDif="0.1" play="A98">
+          <Answers>
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you chose B. You might find what the Evening Star said to the princess romantic and poetic, but the story does not mention that he writes romantic poetry. Correct answer is C." speech="Jordan, you chose Bee. You might find what the Evening Star said to the princess romantic and poetic, but the story does not mention that he writes romantic poetry. Correct answer is Sea." keys="adsf" threshold="" test="" play="A99" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A100" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The correct answer is actually C. As the text shows, the Evening star was born from the heaven and sea, which is not from the world of the living. Also, the phrase handsome but dead means that he is not a mortal living being." speech="The correct answer is actually Sea. As the text shows, the Evening star was born from the heaven and sea, which is not from the world of the living. Also, the phrase handsome but dead means that he is not a mortal living being." keys="asdf" threshold="" test="" play="A101" />
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text shows, the Evening star was born from the heaven and sea, which is not from the world of the living. Also, the phrase handsome but dead means that he is not a mortal living being." speech="" keys="asdf" threshold="" test="" play="A102" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The correct answer is actually C. As the text shows, the Evening star was born from the heaven and sea, which is not from the world of the living. Also, the phrase handsome but dead means that he is not a mortal living being." speech="The correct answer is actually Sea. As the text shows, the Evening star was born from the heaven and sea, which is not from the world of the living. Also, the phrase handsome but dead means that he is not a mortal living being." keys="asdf" threshold="" test="" play="A103" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think answer A is the best description of the Evening star" speech="" keys="asdf" threshold="" test="" play="B72" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think answer B is the best description of the Evening star" speech="" keys="asdf" threshold="" test="" play="B73" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you chose A. The Evening star in the story seems to only love the princess. Correct answer is C." speech="Jordan, you chose A. The Evening star in the story seems to only love the princess. Correct answer is Sea." keys="asdf" threshold="" test="" play="A104" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think answer C is the best description of the Evening star" speech="" keys="sdf" threshold="" test="" play="B74" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ its your turn. from what we have read so far, how would you best describe how the princess feels about the Evening star? Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A105">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From what the princess told the evening star in this page, her phrase in my dreams you are the angel for me shows that she does want him, but she then describes herself as alive and he as dead, which again describes a separation of worlds between them." speech="" keys="asdf" threshold="" test="" play="A106" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="From the previous page we did see that the princess wants the Evening star to shine over her life, but this page shows her conflicting feelings towards him. The correct answer is actually B. # From what the princess told the evening star in this page, her phrase in my dreams you are the angel for me shows that she does want him, but she then describes herself as alive and he as dead, which again describes a separation of worlds between them." speech="From the previous page we did see that the princess wants the Evening star to shine over her life, but this page shows her conflicting feelings towards him. The correct answer is actually Bee. # From what the princess told the evening star in this page, her phrase in my dreams you are the angel for me shows that she does want him, but she then describes herself as alive and he as dead, which again describes a separation of realms between them." keys="asdf" threshold="" test="" play="A107" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A108" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The correct answer is actually B. # From what the princess told the evening star in this page, her phrase in my dreams you are the angel for me shows that she does want him, but she then describes herself as alive and he as dead, which again describes a separation of worlds between them." speech="The correct answer is actually Bee. # From what the princess told the evening star in this page, her phrase in my dreams you are the angel for me shows that she does want him, but she then describes herself as alive and he as dead, which again describes a separation of realms between them." keys="asdf" threshold="" test="" play="A109" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is B." speech="" keys="sdf" threshold="" test="" play="B75" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is A." speech="" keys="asdf" threshold="" test="" play="B76" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is C." speech="" keys="asdf" threshold="" test="" play="B77" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. From the previous page we did see that the princess wants the Evening star to shine over her life, but this page shows her conflicting feelings towards him. The correct answer is B." speech="Jordan, you chose eigh. From the previous page we did see that the princess wants the Evening star to shine over her life, but this page shows her conflicting feelings towards him. The correct answer is B." keys="asdf" threshold="" test="" play="A110" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. From the story we don't know anything about how the princess feels about her own beauty. The correct answer is B." speech="Jordan, you chose Sea. From the story we don't know anything about how the princess feels about her own beauty. The correct answer is B." keys="asdf" threshold="" test="" play="A111" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Now we are going to identify a major problem or conflict in the story. Can you and Jordan identify a major problem in the story so far? Jordan, it's your turn." speech="Now we are going to identify a major problem or connflict in the story. Can you and Jordan identify a major problem in the story so far? Jordan, it's your turn." media="" itemDif="0.1" play="A112">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the princess said to the evening star, she prefers the Evening star as a human, and will have him as a mortal, nothing more." speech="" keys="asdf" threshold="" test="" play="A113" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The last two sentence showed that the Evening star is willing to give up his immortality for the princess. That definitely indicates that he loves her. # The correct answer is actually C. As the princess said to the evening star, she prefers the Evening star as a human, and will have him as a mortal, nothing more." speech="The last two sentence showed that the Evening star is willing to give up his immortality for the princess. That definitely indicates that he loves her. # The correct answer is actually Sea. As the princess said to the evening star, she prefers the Evening star as a human, and will have him as a mortal, nothing more." keys="asdf" threshold="" test="" play="A114" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A115" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The correct answer is actually C. As the princess said to the evening star, she prefers the Evening star as a human, and will have him as a mortal, nothing more. # This also indicates that she does at least care about how she can end up with the Evening star." speech="The correct answer is actually Sea. As the princess said to the evening star, she prefers the Evening star as a human, and will have him as a mortal, nothing more. # This also indicates that she does at least care about how she can end up with the Evening star." keys="asdf" threshold="" test="" play="A116" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for C." speech="" keys="sdf" threshold="" test="" play="B78" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B79" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for B. " speech="" keys="asdf" threshold="" test="" play="B80" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose A. The last two sentence showed that the Evening star is willing to give up his immortality for the princess. That definitely indicates that he loves her. Correct answer is C." speech="Jordan, you chose eigh. The last two sentence showed that the Evening star is willing to give up his immortality for the princess. That definitely indicates that he loves her. Correct answer is Sea." keys="asdf" threshold="" test="" play="A117" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="Jordan, you chose B. The princess wants the Evening star to become human so she could be with him, this means that she does at least care about how she can end up with him. Correct answer is C. " speech="Jordan, you chose Bee. The princess wants the Evening star to become human so she could be with him, this means that she does at least care about how she can end up with him. Correct answer is Sea. " keys="asdf" threshold="" test="" play="A118" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn. from what we have read so far, what answer did the Evening Star get about becoming a mortal for the princess?" speech="" media="" itemDif="0.1" play="A119">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From this page, we found out that the Creator of the Evening Star rejected his request." speech="" keys="asdf" threshold="" test="" play="A120" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The correct answer is actually A. From this page, we found out that the Creator of the Evening Star rejected his request." speech="The correct answer is actually eigh. From this page, we found out that the Creator of the Evening Star rejected his request." keys="asdf" threshold="" test="" play="A121" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A122" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The Creator mentioned that if the Evening Star asks him something else, he could give him dominion over all lands and sea. # But from this page, we found out that the Creator of the Evening Star rejected his request. So the correct answer is actually A." speech="" keys="asdf" threshold="" test="" play="A123" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the correct answer is choice A." speech="" keys="sdf" threshold="" test="" play="B81" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B82" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the correct answer is choice C." speech="" keys="asdf" threshold="" test="" play="B83" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="Jordan, you chose B. Where did you read that the request was granted Jordan? Correct answer is A." speech="Jordan, you chose Bee. Where did you read that the request was granted Jordan? Correct answer is A." keys="adsf" threshold="" test="" play="A124" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you chose C. The Creator mentioned that if the Evening Star asks him something else, he could give him dominion over all lands and sea. But his request was rejected regardless. Correct answer is A." speech="Jordan, you chose Sea. The Creator mentioned that if the Evening Star asks him something else, he could give him dominion over all lands and sea. But his request was rejected regardless. Correct answer is A." keys="asdf" threshold="" test="" play="A125" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ its your turn. based on the story, what is the reason that the Evening Star's Creator rejected his request to be human?  Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A126">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The Creator explained that the Evening Star is different from a living thing in that the Evening Star will not die, but instead will be the wonder of all time. " speech="" keys="asdf" threshold="" test="" play="A127" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually C. The Creator explained that the Evening Star is different from a living thing in that the Evening Star will not die, but instead will be the wonder of all time. " speech="The answer is actually Sea. The Creator explained that the Evening Star is different from a living thing in that the Evening Star will not die, but instead will be the wonder of all time. " keys="asdf" threshold="" test="" play="A128" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A129" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually C. The Creator explained that the Evening Star is different from a living thing in that the Evening Star will not die, but instead will be the wonder of all time. " speech="The answer is actually Sea. The Creator explained that the Evening Star is different from a living thing in that the Evening Star will not die, but instead will be the wonder of all time. " keys="asdf" threshold="" test="" play="A130" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I choose the answer C." speech="" keys="sdf" threshold="" test="" play="B84" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I choose the answer A." speech="" keys="asdf" threshold="" test="" play="B85" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I choose the answer B." speech="" keys="asdf" threshold="" test="" play="B86" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. Although it can be interpreted that the creator seems to hold mortals in less regard, he made no comparison between the princess and the Evening Star regarding ranks or beauty. The correct answer is C." speech="Jordan, you chose eigh. Although it can be interpreted that the creator seems to hold mortals in less regard, he made no comparison between the princess and the Evening Star regarding ranks or beauty. The correct answer is Sea." keys="asdf" threshold="" test="" play="A131" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose B. The Creator made no mention regarding the princess's personality. The correct answer is C. " speech="Jordan, you chose Bee. The Creator made no mention regarding the princess's personality. The correct answer is Sea. " keys="asf" threshold="" test="" play="A132" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn now to go first. can you tell me how the major problem was resolved in this story?" speech="" media="" itemDif="0.1" play="A133">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the end of the story shows. The Evening Star did not fall again for the princess. He has accepted the separation of realms between them. The princess also fell for Catalin, who is the incarnation of her earthly soulmate." speech="" keys="asdf" threshold="" test="" play="A134" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The princess did ask the Evening Star to fall for her again, but it's clear from the story that she still chose her mortal soulmate. The answer is actually C. # As the end of the story shows. The Evening Star did not fall again for the princess. He has accepted the separation of realms between them. The princess also fell for Catalin, who is the incarnation of her earthly soulmate." speech="The princess did ask the Evening Star to fall for her again, but it's clear from the story that she still chose her mortal soulmate. The answer is actually Sea. # As the end of the story shows. The Evening Star did not fall again for the princess. He has accepted the separation of realms between them. The princess also fell for Catalin, who is the incarnation of her earthly soulmate." keys="asdf" threshold="" test="" play="A135" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A136" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually C. Catalin did say to the Princess to forget about the Evening Star, but he made no mention about her keeping the Evening Star as a friend. # As the end of the story shows. The Evening Star did not fall again for the princess. He has accepted the separation of realms between them. The princess also fell for Catalin, who is the incarnation of her earthly soulmate." speech="The answer is actually Sea. Catalin did say to the Princess to forget about the Evening Star, but he made no mention about her keeping the Evening Star as a friend. # As the end of the story shows. The Evening Star did not fall again for the princess. He has accepted the separation of realms between them. The princess also fell for Catalin, who is the incarnation of her earthly soulmate." keys="asdf" threshold="" test="" play="A137" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the answer is C. " speech="" keys="sdf" threshold="" test="" play="B87" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B88" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the answer is B. " speech="" keys="asdf" threshold="" test="" play="B89" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you chose A. The princess did ask the Evening Star to fall for her again, but it's clear from the story that she still chose her mortal soulmate. Correct answer is C. " speech="Jordan, you chose eigh. The princess did ask the Evening Star to fall for her again, but it's clear from the story that she still chose her mortal soulmate. Correct answer is C. " keys="asdf" threshold="" test="" play="A138" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you chose B. Catalin did say to the Princess to forget about the Evening Star, but he made no mention about her keeping the Evening Star as a friend. Correct answer is C. " speech="Jordan, you chose Bee. Catalin did say to the Princess to forget about the Evening Star, but he made no mention about her keeping the Evening Star as a friend. Correct answer is C. " keys="asdf" threshold="" test="" play="A139" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="D91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, it's your turn for this last question.  The word fortunes occur twice in this passage. can you tell me What does the Evening Star mean by fortunes in this story?" speech="" media="" itemDif="0.1" play="_user_,A140">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From what the princes said, she has accepted her good luck in finding Catalin. The Evening Star also recognized that the mortals are different from him in that they can change quickly based on luck, whereas he is constant and eternal." speech="" keys="asdf" threshold="" test="" play="A141" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The Evening Star might think that the princess is ungrateful, but that's not what he meant by the princess being ruled by her fortunes. The answer is actually B.  # From what the princes said, she has accepted her good luck in finding Catalin. The Evening Star also recognized that the mortals are different from him in that they can change quickly based on luck, whereas he is constant and eternal." speech="The Evening Star might think that the princess is ungrateful, but that's not what he meant by the princess being ruled by her fortunes. The answer is actually Bee.  # From what the princes said, she has accepted her good luck in finding Catalin. The Evening Star also recognized that the mortals are different from him in that they can change quickly based on luck, whereas he is constant and eternal." keys="asdf" threshold="" test="" play="A142" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A143" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Although it is suggested that the princess did change her feelings regarding the Evening Star and sees him as her lucky star instead of a potential mate. The Evening Star certainly did not reciprocate this change. The answer is actually B. # From what the princes said, she has accepted her good luck in finding Catalin. The Evening Star also recognized that the mortals are different from him in that they can change quickly based on luck, whereas he is constant and eternal." speech="Although it is suggested that the princess did change her feelings regarding the Evening Star and sees him as her lucky star instead of a potential mate. The Evening Star certainly did not reciprocate this change. The answer is actually Bee. # From what the princes said, she has accepted her good luck in finding Catalin. The Evening Star also recognized that the mortals are different from him in that they can change quickly based on luck, whereas he is constant and eternal." keys="asdf" threshold="" test="" play="A144" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for B. " speech="" keys="sdf" threshold="" test="" play="B90" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B91" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B92" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. The Evening Star might think that the princess is ungrateful, but that's not what he meant by the princess being ruled by her fortunes. The Correct answer is B. " speech="Jordan, you chose eigh. The Evening Star might think that the princess is ungrateful, but that's not what he meant by the princess being ruled by her fortunes. The Correct answer is B. " keys="asdf" threshold="" test="" play="A145" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. Although it is suggested that the princess did change her feelings regarding the Evening Star and sees him as her lucky star instead of a potential mate. The Evening Star certainly did not reciprocate this change. The Correct answer is B." speech="Jordan, you chose Sea. Although it is suggested that the princess did change her feelings regarding the Evening Star and sees him as her lucky star instead of a potential mate. The Evening Star certainly did not reciprocate this change. The Correct answer is B." keys="asdf" threshold="" test="" play="A146" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, why don't you start this round? let's start from the beginning of the story again.  where do you think the story takes place?" speech="" media="" itemDif="0.1" play="A147">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="In this case, we did find the setting in the beginning of the story, and that is in imperial China." speech="" keys="asdf" threshold="" test="" play="A148" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually imperial China. Persia is where one of the mentioned character comes from, this would not be where the story would take place." speech="" keys="asdf" threshold="" test="" play="A149" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A150" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually imperial China. Moonrise would be a time, not a place, and it is only pertaining to a specific instance in the story. In this case when the Prince of Persia will be killed." speech="" keys="asdf" threshold="" test="" play="A151" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think it takes place in imperial China." speech="" keys="sdf" threshold="" test="" play="B93" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the story takes place in Persia." speech="" keys="asdf" threshold="" test="" play="B94" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the story takes place at moonrise." speech="" keys="asdf" threshold="" test="" play="B95" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered Persia.  Imperial China is the correct answer." speech="" keys="asdf" threshold="" test="" play="A152" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered moonrise. Moonrise would be a time, not a place, and it is only pertaining to a specific instance in the story. Imperial China is the correct answer" speech="" keys="sdf" threshold="" test="" play="A153" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ it's your turn to answer first. can you identify one of the main characters in this story?  Please click on one of the highlighted choices for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A154">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As we have also seen on the previous page, and also the title, Turandot is introduced as a main character. From these text signals, we know that the story is going to be about her." speech="" keys="asdf" threshold="" test="" play="A155" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As we found out at the end of this page. The prince of Persia was beheaded, so he is probably not going to show up anymore. The correct answer is actually Turandot. # Because as we have seen on the previous page, and also the title, Turandot is introduced as a main character. From these text signals, we know that the story is going to be about her." speech="" keys="asdf" threshold="" test="" play="A156" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A157" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The crowd indicates multiple people, not specific individuals, which main characters would be. The correct answer is actually Turandot. # Because as we have seen on the previous page, and also the title, Turandot is introduced as a main character. From these text signals, we know that the story is going to be about her." speech="" keys="asdf" threshold="" test="" play="A158" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think Turandot is one of the main characters." speech="" keys="sdf" threshold="" test="" play="B96" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the Prince of Persia is one of the main characters." speech="" keys="asdf" threshold="" test="" play="B97" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the crowd is one of the main characters." speech="" keys="asdf" threshold="" test="" play="B98" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you answered the prince of persia. The prince of Persia was beheaded, so he is probably not going to show up anymore. Turandot is the correct answer." speech="" keys="asdf" threshold="" test="" play="A159" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you answered the crowd. The crowd indicates multiple people, not specific individuals, which main characters would be. Turandot is the correct answer." speech="" keys="asdf" threshold="" test="" play="A160" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn this time. can you identify another one of the main characters in this story?" speech="" media="" itemDif="0.1" play="A161">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The Prince of Tartary is the most active character in this story so far. So we can guess from the text signals that he is most likely going to be one of the main characters." speech="" keys="asdf" threshold="" test="" play="A162" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The crowd indicates multiple people, not specific individuals, which main characters would be. The correct answer is actually the Prince of Tartary. # Because he  is the most active character in this story so far. So we can guess from the text signals that he is most likely going to be one of the main characters." speech="" keys="asdf" threshold="" test="" play="A163" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A164" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As we found out at the end of this page. The prince of Persia was beheaded, so he is probably not going to show up anymore. The correct answer is actually the Prince of Tartary. # Because he  is the most active character in this story so far. So we can guess from the text signals that he is most likely going to be one of the main characters." speech="" keys="asdf" threshold="" test="" play="A165" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the second main character is the Prince of Tartary." speech="" keys="sdf" threshold="" test="" play="B99" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the second main character is the crowd. " speech="" keys="asdf" threshold="" test="" play="B100" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the second main character is the Prince of Persia." speech="" keys="asdf" threshold="" test="" play="B101" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered the crowd. The crowd indicates multiple people, not specific individuals, which main characters would be. The Prince of Tartary is the correct answer." speech="" keys="asdf" threshold="" test="" play="A166" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered The prince of Persia.As we found out at the end of this page. The prince of Persia was beheaded, so he is probably not going to show up anymore. The Prince of Tartary is the correct answer." speech="" keys="sdf" threshold="" test="" play="A167" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, now that we've established the main characters, how would you describe Princess Turandot according to this page? Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A168">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the second to the last sentence in this section mentions, Princess Turandot is vengeful, which was where her absurd requirements for her suitors came from. " speech="" keys="asdf" threshold="" test="" play="A169" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="We saw in the previous pages that Turandot was willing to execute the Prince of Persia despite pleadings from the observers, so she is certainly not kind at this point. # The answer is actually C. As the second to the last sentence in this section mentions, Princess Turandot is vengeful, which was where her absurd requirements for her suitors came from. " speech="We saw in the previous pages that Turandot was willing to execute the Prince of Persia despite pleadings from the observers, so she is certainly not kind at this point. # The answer is actually Sea. As the second to the last sentence in this section mentions, Princess Turandot is vengeful, which was where her absurd requirements for her suitors came from. " keys="asdf" threshold="" test="" play="A170" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A171" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="One might argue that Turandot came up with really hard riddles, that might indicate her intelligence. But it is not known from the text where she got the riddles from. So we don't actually know much about her intelligence. # The answer is actually C. As the second to the last sentence in this section mentions, Princess Turandot is vengeful, which was where her absurd requirements for her suitors came from. " speech="One might argue that Turandot came up with really hard riddles, that might indicate her intelligence. But it is not known from the text where she got the riddles from. So we don't actually know much about her intelligence. # The answer is actually Sea. As the second to the last sentence in this section mentions, Princess Turandot is vengeful, which was where her absurd requirements for her suitors came from. " keys="asdf" threshold="" test="" play="A172" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is C. She is vengeful." speech="" keys="sdf" threshold="" test="" play="B102" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is A. She is kind." speech="" keys="asdf" threshold="" test="" play="B103" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is B. She is smart. " speech="" keys="asdf" threshold="" test="" play="B104" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. We saw in the previous pages that Turandot was willing to execute the Prince of Persia despite pleadings from the observers, so she is certainly not kind at this point. C is the correct answer." speech="Jordan, you chose eigh. We saw in the previous pages that Turandot was willing to execute the Prince of Persia despite pleadings from the observers, so she is certainly not kind at this point. C is the correct answer." keys="asdf" threshold="" test="" play="A173" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose B. One might argue that Turandot came up with really hard riddles, that might indicate her intelligence. # But it is not known from the text where she got the riddles from. So we don't actually know much about her intelligence. C is the correct answer." speech="Jordan, you chose Bee. One might argue that Turandot came up with really hard riddles, that might indicate her intelligence. # But it is not known from the text where she got the riddles from. So we don't actually know much about her intelligence. C is the correct answer." keys="asdf" threshold="" test="" play="A174" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn. Now we are going to identify a major problem or conflict in the story. Can you identify a major problem in the story so far?" speech="Jordan, it's your turn. Now we are going to identify a major problem or conflict in the story. Can you identify a major problem in the story so far?" media="" itemDif="0.1" play="A175">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As we have also read previously, the Prince of Tartary is in love with Princess Turandot, but in order to marry her, he must also attempt the riddles that her previous suitors have failed. # And in doing so, he is putting his own life in danger. " speech="" keys="asdf" threshold="" test="" play="A176" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="From the text we know that Turandot's ancestor has been invaded by a foreign prince, but the story does not tell us that the Prince of Tartary is invading her country now. The correct answer is actually B. # As we have also read previously, the Prince of Tartary is in love with Princess Turandot, but in order to marry her, he must also attempt the riddles that her previous suitors have failed. And in doing so, he is putting his own life in danger. " speech="From the text we know that Turandot's ancestor has been invaded by a foreign prince, but the story does not tell us that the Prince of Tartary is invading her country now. The correct answer is actually Bee. # As we have also read previously, the Prince of Tartary is in love with Princess Turandot, but in order to marry her, he must also attempt the riddles that her previous suitors have failed. And in doing so, he is putting his own life in danger. " keys="asdf" threshold="" test="" play="A177" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A178" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Turandot did warn the Prince of Tartary to change his mind withdraw, but that is a consequence of the actual major problem in the story, which is described in choice B. # As we have also read previously, the Prince of Tartary is in love with Princess Turandot, but in order to marry her, he must also attempt the riddles that her previous suitors have failed. # And in doing so, he is putting his own life in danger. " speech="Turandot did warn the Prince of Tartary to change his mind withdraw, but that is a consequence of the actual major problem in the story, which is described in choice Bee. # As we have also read previously, the Prince of Tartary is in love with Princess Turandot, but in order to marry her, he must also attempt the riddles that her previous suitors have failed. And in doing so, he is putting his own life in danger. " keys="asdf" threshold="" test="" play="A179" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for B." speech="" keys="sdf" threshold="" test="" play="B105" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B106" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B107" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered A.From the text we know that Turandot's ancestor has been invaded by a foreign prince, but the story does not tell us that the Prince of Tartary is invading her country now. B is the correct answer." speech="Jordan, you answered eigh. From the text we know that Turandot's ancestor has been invaded by a foreign prince, but the story does not tell us that the Prince of Tartary is invading her country now. B is the correct answer." keys="asdf" threshold="" test="" play="A180" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered C. Turandot did warn the Prince of Tartary to change his mind and withdraw, but that is a consequence of the actual major problem in the story, which is described in choice B. So B is the correct answer." speech="Jordan, you answered Sea. Turandot did warn the Prince of Tartary to change his mind and withdraw, but that is a consequence of the actual major problem in the story, which is described in choice B. So B is the correct answer." keys="sdf" threshold="" test="" play="A181" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, now that we know the major problem, can you identify the cause of this major problem? Please click on one of the buttons as the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A182">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text shows, Turandot wishes to avenge her ancestor, that was her motive for giving her suitors such absurd requirements that are nearly impossible to accomplish." speech="" keys="asdf" threshold="" test="" play="A183" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="From what we know about Turandot, she is making her suitors answer her riddles out of revenge, so it is indicated that she does not wish to marry anyone. Therefore the correct answer is C." speech="" keys="asdf" threshold="" test="" play="A184" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A185" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="There is no mention in the story so far that what Turandot is doing is lawful. As we've seen, she is making her suitors answer her riddles out of revenge, therefore the correct answer is C. " speech="" keys="asdf" threshold="" test="" play="A186" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the correct answer is choice C." speech="" keys="sdf" threshold="" test="" play="B108" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the correct answer is choice A." speech="" keys="asdf" threshold="" test="" play="B109" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B110" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. From what we know about Turandot, she is making her suitors answer her riddles out of revenge, so it is indicated that she does not wish to marry anyone. The correct answer is C." speech="Jordan, you chose eigh. From what we know about Turandot, she is making her suitors answer her riddles out of revenge, so it is indicated that she does not wish to marry anyone. The correct answer is C." keys="asdf" threshold="" test="" play="A187" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. There is no mention in the story so far that what Turandot is doing is lawful. The correct answer is C. " speech="Jordan, you chose Sea. There is no mention in the story so far that what Turandot is doing is lawful. The correct answer is C. " keys="asdf" threshold="" test="" play="A188" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn. from what we have read so far, how would you describe the Prince of Tartary?" speech="" media="" itemDif="0.1" play="A189">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From what we have seen on this page, the Prince of Tartary seemed to be able to do very well on Turandot's riddles. So it can be said that he is very wise. " speech="" keys="asdf" threshold="" test="" play="A190" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Although it was indicated in the story that the Prince of Tartary is stubborn to insist on attempting the riddles, from this page the main characteristic is that he seems to be good at the answering the riddles. # Therefore, the correct answer is A. " speech="" keys="asdf" threshold="" test="" play="A191" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A192" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Since as we have seen, the Prince of Tartary is willing to put his life on the line for love, that usually would not be a characteristic of a wicked person. # The correct answer is A. From what we have seen on this page, the Prince of Tartary seemed to be able to do very well on Turandot's riddles. So it can be said that he is very wise. " speech="" keys="asdf" threshold="" test="" play="A193" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the correct answer is choice A." speech="" keys="sdf" threshold="" test="" play="B111" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the correct answer is choice B." speech="" keys="asdf" threshold="" test="" play="B112" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the correct answer is choice C." speech="" keys="asdf" threshold="" test="" play="B113" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered B. Although it was indicated in the story that the Prince of Tartary is stubborn to insist on attempting the riddles, from this page the main characteristic is that he seems to be good at the answering the riddles. The correct answer is A." speech="Jordan, you answered Bee. Although it was indicated in the story that the Prince of Tartary is stubborn to insist on attempting the riddles, from this page the main characteristic is that he seems to be good at the answering the riddles. The correct answer is A." keys="asdf" threshold="" test="" play="A194" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered C. Since as we have seen, the Prince of Tartary is willing to put his life on the line for love, that usually would not be a characteristic of a wicked person. The correct answer is A. " speech="Jordan, you answered Sea. Since as we have seen, the Prince of Tartary is willing to put his life on the line for love, that usually would not be a characteristic of a wicked person. The correct answer is A. " keys="sdf" threshold="" test="" play="A195" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, it seems that the story is having a turning point, can you find another major problem of the story? Please click on one the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A196">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From the Prince's dialogue we found out that he has given Turandot another chance, by offering a riddle for her to answer. If she finds out his real name, she can not only not marry him, but kill him as she planned before." speech="" keys="asdf" threshold="" test="" play="A197" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The previous page showed us that the Emperor has made Turandot honor her marriage oath. Therefore no further permission would be needed. The correct answer is actually C. # From the Prince's dialogue we found out that he has given Turandot another chance, by offering a riddle for her to answer. If she finds out his real name, she can not only not marry him, but kill him as she planned before." speech="The previous page showed us that the Emperor has made Turandot honor her marriage oath. Therefore no further permission would be needed. The correct answer is actually Sea. # From the Prince's dialogue we found out that he has given Turandot another chance, by offering a riddle for her to answer. If she finds out his real name, she can not only not marry him, but kill him as she planned before." keys="asdf" threshold="" test="" play="A198" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A199" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="This page shows that the Prince's maid is in love with the prince, but there was no suggestion that the prince returns her love. The correct answer is actually C. # From the Prince's dialogue we found out that he has given Turandot another chance, by offering a riddle for her to answer. If she finds out his real name, she can not only not marry him, but kill him as she planned before." speech="This page shows that the Prince's maid is in love with the prince, but there was no suggestion that the prince returns her love. The correct answer is actually Sea. # From the Prince's dialogue we found out that he has given Turandot another chance, by offering a riddle for her to answer. If she finds out his real name, she can not only not marry him, but kill him as she planned before." keys="asdf" threshold="" test="" play="A200" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I choose the answer C." speech="" keys="sdf" threshold="" test="" play="B114" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I choose the answer A." speech="" keys="asdf" threshold="" test="" play="B115" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I choose the answer B." speech="" keys="asdf" threshold="" test="" play="B116" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. The previous page showed us that the Emperor has made Turandot honor her marriage oath. Therefore no further permission would be needed. The correct answer is C. " speech="Jordan, you chose eigh. The previous page showed us that the Emperor has made Turandot honor her marriage oath. Therefore no further permission would be needed. The correct answer is C. " keys="asdf" threshold="" test="" play="A201" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose B. This page shows that the Prince's maid is in love with the prince, but there was no suggestion that the prince returns her love. The correct answer is C." speech="Jordan, you chose Bee. This page shows that the Prince's maid is in love with the prince, but there was no suggestion that the prince returns her love. The correct answer is C." keys="asdf" threshold="" test="" play="A202" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn now. can you tell me how the problems were solved in this story?" speech="" media="" itemDif="0.1" play="A203">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text shows, the Prince of Tartary made Turandot fall in love with him also, and gave her his name as a testament of his devotion to her." speech="" keys="asdf" threshold="" test="" play="A204" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually C. As the text shows, the Prince of Tartary made Turandot fall in love with him also, and gave her his name as a testament of his devotion to her." speech="The answer is actually Sea. As the text shows, the Prince of Tartary made Turandot fall in love with him also, and gave her his name as a testament of his devotion to her." keys="asdf" threshold="" test="" play="A205" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A206" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually C. As the text shows, the Prince of Tartary made Turandot fall in love with him also, and gave her his name as a testament of his devotion to her." speech="The answer is actually Sea. As the text shows, the Prince of Tartary made Turandot fall in love with him also, and gave her his name as a testament of his devotion to her." keys="asdf" threshold="" test="" play="A207" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think the answer is C. " speech="" keys="sdf" threshold="" test="" play="B117" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B118" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think the answer is B. " speech="" keys="asdf" threshold="" test="" play="B119" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered A. The text showed that it was the prince who eventually gave his name to Turandot. The correct answer is C. " speech="Jordan, you answered eigh. The text showed that it was the prince who eventually gave his name to Turandot. The correct answer is C. " keys="asdf" threshold="" test="" play="A208" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered B. The prince ended up with Turandot, so he certainly did not choose exile. The correct answer is C. " speech="Jordan, you answered Bee. The prince ended up with Turandot, so he certainly did not choose exile. The correct answer is C. " keys="sdf" threshold="" test="" play="A209" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ it's your turn for this last question. can you tell me why was the solution we talked about previously the best solution for this story?" speech="" media="" itemDif="0.1" play="_user_,A210">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As with many romantic narrative stories, this story put unconditional love as the ultimate solution to cruelty and vengeance. As some people might say, love conquers all things." speech="" keys="asdf" threshold="" test="" play="A211" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually B. Yes, as with many romantic narrative stories, this story put unconditional love as the ultimate solution to cruelty and vengeance. As some people might say, love conquers all things." speech="The answer is actually Bee. Yes, as with many romantic narrative stories, this story put unconditional love as the ultimate solution to cruelty and vengence. As some people might say, love conquers all things." keys="asdf" threshold="" test="" play="A212" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A213" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually B. Yes, as with many romantic narrative stories, this story put unconditional love as the ultimate solution to cruelty and vengeance. As some people might say, love conquers all things." speech="The answer is actually Bee. Yes, as with many romantic narrative stories, this story put unconditional love as the ultimate solution to cruelty and vengeance. As some people might say, love conquers all things." keys="asdf" threshold="" test="" play="A214" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for B. " speech="" keys="sdf" threshold="" test="" play="B120" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B121" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B122" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. Turandot's revenge is killing the foreign princes. She won't gain anything by marrying one. The correct answer is B." speech="Jordan, you chose eigh. Turandot's revenge is killing the foreign princes. She won't gain anything by marrying one. The correct answer is B." keys="asdf" threshold="" test="" play="A215" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. Although it may be inferred that the Prince of Tartary will take the throne by marrying Turandot, he is not compared to China's previous rulers. The correct answer is B." speech="Jordan, you chose Sea. Although it may be inferred that the Prince of Tartary will take the throne by marrying Turandot, he is not compared to China's previous rulers. The correct answer is B." keys="asdf" threshold="" test="" play="A216" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, why don't you go first.  where do you think the story will take place?  Please click on one of the highlighted items that is the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A217">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From what we've seen so far, the main character has landed from the shipwreck to Illyria, and that's where the story will take place." speech="" keys="asdf" threshold="" test="" play="A218" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The distant seas was the setting in the beginning, but at the end of the section, we saw that the main character did not stay there, but ended up in a country called Illyria." speech="" keys="asdf" threshold="" test="" play="A219" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A220" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="As the story tells us, although the main character was swept onto the closest shore, it is suggested in a sentence later that she did not stay at the shore, but went into the country called Illyria." speech="" keys="asdf" threshold="" test="" play="A221" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="It is Illyria. Since the story says that it is where the main character ended up in." speech="" keys="sdf" threshold="" test="" play="B123" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think it is a distant sea, since you usually can find the setting in the beginning of the story." speech="" keys="asdf" threshold="" test="" play="B124" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think it's the closest shore, since that's where she was swept to." speech="" keys="asdf" threshold="" test="" play="B125" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose a distant sea. The distant seas was the setting in the beginning, but at the end of the section, we saw that the main character did not stay there. The correct answer is Illyria." speech="" keys="asdf" threshold="" test="" play="A222" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose the closest shore. As the story tells us, although the main character was swept onto the closest shore, it is suggested in a sentence later that she did not stay at the shore. Illyria is the correct answer." speech="" keys="asdf" threshold="" test="" play="A223" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, can you identify one of the main characters in this story? Jordan, why don't you answer first?" speech="" media="" itemDif="0.1" play="_user_,A224">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="Viola is one of the main characters. She is also the first character the story brought up." speech="" keys="asdf" threshold="" test="" play="A225" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The story suggested that Viola seemed to just by passed the sea captain. So the sea captain is probably not the main character. Viola would be in this case." speech="" keys="asdf" threshold="" test="" play="A226" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A227" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Household would be considered a group of people, not a main character. Viola would be the correct answer since she is playing the active role in this story. " speech="" keys="asdf" threshold="" test="" play="A228" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I'm not sure. I think it is Viola, since she clearly is playing the active role here." speech="" keys="sdf" threshold="" test="" play="B126" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I'm not sure. I think it is the friendly sea captain." speech="" keys="asdf" threshold="" test="" play="B127" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I'm not sure. I think it is the Duke's personal household." speech="" keys="asdf" threshold="" test="" play="B128" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered sea captain. The story suggested that Viola seemed to just by passed the sea captain. So the sea captain is probably not the main character. Viola is the correct answer." speech="" keys="asdf" threshold="" test="" play="A229" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered household. Household would be considered a group of people, not a main character. Viola is the correct answer." speech="" keys="sdf" threshold="" test="" play="A230" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ ,it's your turn this time. can you identify another one of the main characters in this story? Please click on one of the highlighted choices as the correct answer." speech="" media="" itemDif="0.1" play="_user_,A231">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="The Duke would be another main character in this story. Since Viola went to work for him so it is suggested that she will interact with the duke a lot. " speech="" keys="asdf" threshold="" test="" play="A232" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="Again, the story suggested that Viola seemed to just by passed the sea captain. So the sea captain is probably not the main character. # The Duke would be the correct answer. Since Viola went to work for him so it is suggested that she will interact with the duke a lot." speech="" keys="asdf" threshold="" test="" play="A233" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A234" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="In this case, the young man is referring to Viola, so it is not another main character in this story. The Duke would be the correct answer. Since Viola went to work for him so it is suggested that she will interact with the duke a lot." speech="" keys="asdf" threshold="" test="" play="A235" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think it is the duke. Since the story says that Viola went to work for him. " speech="" keys="sdf" threshold="" test="" play="B129" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think it is the friendly sea captain." speech="" keys="asdf" threshold="" test="" play="B130" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think it is the young man. " speech="" keys="asdf" threshold="" test="" play="B131" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you answered sea captain. Again, the story suggested that Viola seemed to just by passed the sea captain. So the sea captain is probably not the main character. The duke is the correct answer." speech="" keys="asdf" threshold="" test="" play="A236" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you answered young man. In this case, the young man is referring to Viola, so it is not another main character in this story. The duke is the correct answer." speech="" keys="asdf" threshold="" test="" play="A237" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan it's your turn. now that we've established Viola and the Duke as the main characters in the story, can you describe the relationship between them according to this page?" speech="" media="" itemDif="0.1" play="A238">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the second last sentence indicates, Viola is in love with the duke but she cannot tell him because she is dressed up as a young man in order to work for him. " speech="" keys="asdf" threshold="" test="" play="A239" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="There is no indication in the story so far that Viola would do anything dishonorable for the duke. The correct answer is C. As the second last sentence indicates, # Viola is in love with the duke but she cannot tell him because she is dressed up as a young man in order to work for him. " speech="There is no indication in the story so far that Viola would do anything dishonorable for the duke. The correct answer is Sea. As the second last sentence indicates, # Viola is in love with the duke but she cannot tell him because she is dressed up as a young man in order to work for him. " keys="asdf" threshold="" test="" play="A240" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A241" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="Although Viola is in love with the duke and is sad of her situation, as the story tells us that she is the one who chose to be in disguise. # Therefore the correct answer is C, As the second last sentence indicates, Viola is in love with the duke but she cannot tell him because she is dressed up as a young man in order to work for him. " speech="Although Viola is in love with the duke and is sad of her situation, as the story tells us that she is the one who chose to be in disguise. # Therefore the correct answer is Sea. As the second last sentence indicates, Viola is in love with the duke but she cannot tell him because she is dressed up as a young man in order to work for him. " keys="asdf" threshold="" test="" play="A242" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I think it is C. " speech="" keys="sdf" threshold="" test="" play="B132" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I think it is A. " speech="" keys="asdf" threshold="" test="" play="B133" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I think it is B. " speech="" keys="asdf" threshold="" test="" play="B134" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered A. There is no indication in the story so far that Viola would do anything dishonorable for the duke. C is the correct answer." speech="Jordan, you answered eigh. There is no indication in the story so far that Viola would do anything dishonorable for the duke. C is the correct answer." keys="asdf" threshold="" test="" play="A243" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered B. Although Viola is in love with the duke and is sad of her situation, as the story tells us that she is the one who chose to be in disguise.  C is the correct answer." speech="Jordan, you answered Bee. Although Viola is in love with the duke and is sad of her situation, as the story tells us that she is the one who chose to be in disguise.  C is the correct answer." keys="sdf" threshold="" test="" play="A244" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_,now we are going to identify a major problem or conflict in the story. Can you identify a major problem in the story so far? please click on one of the buttons to choose the correct answer." speech="_user_,now we are going to identify a major problem or conflict in the story. Can you identify a major problem in the story so far? please click on one of the buttons to choose the correct answer." media="" itemDif="0.1" play="_user_,A245">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="From what we have read so far, Viola is in love with the duke but the duke is currently in love with the Countess Olivia. Not only this, but the duke is making Viola do his courting for him. " speech="" keys="asdf" threshold="" test="" play="A246" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As we have read, the duke does not know that Viola is actually a woman, so the correct answer is actually A. # Viola is in love with the duke but the duke is currently in love with the Countess Olivia. Not only this, but the duke is making Viola do his courting for him. " speech="As we have read, the duke does not know that Viola is actually a woman, so the correct answer is actually eigh. # Viola is in love with the duke but the duke is currently in love with the Countess Olivia. Not only this, but the duke is making Viola do his courting for him. " keys="asdf" threshold="" test="" play="A247" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A248" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="From what we have read so far, we do not know how Viola feels about the countess Olivia. The correct answer is actually A. # Viola is in love with the duke but the duke is currently in love with the Countess Olivia. Not only this, but the duke is making Viola do his courting for him. " speech="From what we have read so far, we do not know how Viola feels about the countess Olivia. The correct answer is actually eigh. # Viola is in love with the duke but the duke is currently in love with the Countess Olivia. Not only this, but the duke is making Viola do his courting for him. " keys="asdf" threshold="" test="" play="A249" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I would go for A. " speech="" keys="sdf" threshold="" test="" play="B135" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I would go for B." speech="" keys="asdf" threshold="" test="" play="B136" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B137" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose B. As we have read, the duke does not know that Viola is actually a woman. A is the correct answer." speech="Jordan, you chose Bee. As we have read, the duke does not know that Viola is actually a woman. A is the correct answer." keys="asdf" threshold="" test="" play="A250" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. From what we have read so far, we do not know how Viola feels about the countess Olivia. A is the correct answer. " speech="Jordan, you chose Sea. From what we have read so far, we do not know how Viola feels about the countess Olivia. A is the correct answer. " keys="asdf" threshold="" test="" play="A251" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan, it's your turn to answer. now that we identified a major problem in the story, can you tell me what the cause of this problem is?" speech="" media="" itemDif="0.1" play="A252">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As we have discussed, Viola's disguise is the major reason for the misunderstanding." speech="" keys="asdf" threshold="" test="" play="A253" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="As the story tells us, Viola is willing to make the duke happy at the cost of her own feelings, that is not usually a trait of a jealous person. The answer is actually C. As we have discussed, Viola's disguise is the major reason for the misunderstanding." speech="As the story tells us, Viola is willing to make the duke happy at the cost of her own feelings, that is not usually a trait of a jealous person. The answer is actually Sea. As we have discussed, Viola's disguise is the major reason for the misunderstanding." keys="asdf" threshold="" test="" play="A254" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A255" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The duke could be more perceptive and see through Viola's disguise I suppose. But as we have discussed, Viola's disguise is the major reason for the misunderstanding. So the correct answer is actually C." speech="" keys="asdf" threshold="" test="" play="A256" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for C. " speech="" keys="sdf" threshold="" test="" play="B138" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for A." speech="" keys="asdf" threshold="" test="" play="B139" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for B. " speech="" keys="asdf" threshold="" test="" play="B140" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered A. As the story tells us, Viola is willing to make the duke happy at the cost of her own feelings, that is not usually a trait of a jealous person. C is the correct answer." speech="Jordan, you answered eigh. As the story tells us, Viola is willing to make the duke happy at the cost of her own feelings, that is not usually a trait of a jealous person. C is the correct answer." keys="asdf" threshold="" test="" play="A257" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered B. The duke could be more perceptive and see through Viola's disguise I suppose. But as we have discussed, Viola's disguise is the major reason for the misunderstanding. So C is the correct answer." speech="Jordan, you answered Bee. The duke could be more perceptive and see through Viola's disguise I suppose. But as we have discussed, Viola's disguise is the major reason for the misunderstanding. So C is the correct answer." keys="sdf" threshold="" test="" play="A258" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, it is your turn. can you identify another major problem or conflict in the story? please click on one of the buttons for the correct answer choice." speech="_user_, it is your turn. can you identify another major problem or conflict in the story? please click on one of the buttons for the correct answer choice." media="" itemDif="0.1" play="_user_,A259">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As shown in the text, Viola is in a bit of trouble since she's so good at wooing the countess for the duke that the countess fell in love with her instead, thinking she's a man. Then she married Viola's twin brother since they look exactly alike." speech="" keys="asdf" threshold="" test="" play="A260" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually B. As shown in the text, Viola is in a bit of trouble since she's so good at wooing the countess for the duke that the countess fell in love with her instead, thinking she's a man. # Then she married Viola's twin brother since they look exactly alike. " speech="The answer is actually Bee. As shown in the text, Viola is in a bit of trouble since she's so good at wooing the countess for the duke that the countess fell in love with her instead, thinking she's a man. # Then she married Viola's twin brother since they look exactly alike. " keys="asdf" threshold="" test="" play="A261" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A262" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually B. As shown in the text, Viola is in a bit of trouble since she's so good at wooing the countess for the duke that the countess fell in love with her instead, thinking she's a man. # Then she married Viola's twin brother since they look exactly alike. Sebastian just went along with it." speech="The answer is actually Bee. As shown in the text, Viola is in a bit of trouble since she's so good at wooing the countess for the duke that the countess fell in love with her instead, thinking she's a man. # Then she married Viola's twin brother since they look exactly alike. Sebastian just went along with it." keys="asdf" threshold="" test="" play="A263" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think the answer is B." speech="" keys="sdf" threshold="" test="" play="B141" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think the answer is A. " speech="" keys="asdf" threshold="" test="" play="B142" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think the answer is C. " speech="" keys="asdf" threshold="" test="" play="B143" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. No the countess was never in love with the duke in this story. B is the correct answer." speech="Jordan, you chose eigh. No the countess was never in love with the duke in this story. B is the correct answer." keys="asdf" threshold="" test="" play="A264" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="jordan, you chose C. Sebastian was offered the marriage and he was happy to marry the countess, but he did not play the active role in this marriage, the countess did. The correct answer is B." speech="Jordan, you chose Sea. Sebastian was offered the marriage and he was happy to marry the countess, but he did not play the active role in this marriage, the countess did. The correct answer is B." keys="asdf" threshold="" test="" play="A265" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ its your turn. can you tell me how the problems were solved in this story? please click on one of the buttons for the correct answer choice." speech="" media="" itemDif="0.1" play="_user_,A266">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="We found out that, luckily, Sebastian came to look for  Olivia, now his wife, and the truth came out after that." speech="" keys="asdf" threshold="" test="" play="A267" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually B. We found out that, luckily, Sebastian came to look for  Olivia, now his wife, and the truth came out after that. " speech="The answer is actually Bee. We found out that, luckily, Sebastian came to look for  Olivia, now his wife, and the truth came out after that. " keys="asdf" threshold="" test="" play="A268" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A269" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually B. We found out that, luckily, Sebastian came to look for  Olivia, now his wife, and the truth came out after that. " speech="The answer is actually Bee. We found out that, luckily, Sebastian came to look for  Olivia, now his wife, and the truth came out after that. " keys="asdf" threshold="" test="" play="A270" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodSecond" text="I think it's B. " speech="" keys="sdf" threshold="" test="" play="B144" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1Second" text="I think it's A. " speech="" keys="asdf" threshold="" test="" play="B145" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2Second" text="I think it's C. " speech="" keys="asdf" threshold="" test="" play="B146" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1Second" text="jordan, you chose A. The story made it clear that it is the truth that stopped the duke's anger. B is the correct answer." speech="Jordan, you chose eigh. The story made it clear that it is the truth that stopped the duke's anger. B is the correct answer." keys="asdf" threshold="" test="" play="A271" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2Second" text="Jordan, you chose C. Viola and Sebastian are actually happily married at the end. You must have misread,  . B is the correct answer. " speech="Jordan, you chose Sea. Viola and Sebastian are actually happily married at the end. You must have misread, Jordan. B is the correct answer. " keys="asdf" threshold="" test="" play="A272" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Jordan and _user_, can you tell me how did the main characters react to the conclusion? Jordan, why don't you go first for this last question?" speech="" media="" itemDif="0.1" play="A273,_user_,A274">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Correct" text="As the text shows, the duke understood Viola's unconditional love for him, and as a result, he fell in love with Viola and asked her to marry him." speech="" keys="asdf" threshold="" test="" play="A275" />
+            <Answer name="UserIncorrect1" agent="Cristina" type="IC1" text="The answer is actually A. As the text shows, the duke understood Viola's unconditional love for him, and as a result, he fell in love with Viola and asked her to marry him." speech="The answer is actually eigh. As the text shows, the duke understood Viola's unconditional love for him, and as a result, he fell in love with Viola and asked her to marry him." keys="asdf" threshold="" test="" play="A276" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_ do you need more time? Click show question to see the question again. " speech="" keys="any" threshold="" test="" play="_user_,A277" />
+            <Answer name="UserIncorrect2" agent="Cristina" type="IC2" text="The answer is actually A. As the text shows, the duke understood Viola's unconditional love for him, and as a result, he fell in love with Viola and asked her to marry him." speech="The answer is actually eigh. As the text shows, the duke understood Viola's unconditional love for him, and as a result, he fell in love with Viola and asked her to marry him." keys="asdf" threshold="" test="" play="A278" />
+            <Answer name="JordanGood" agent="Jordan" type="JordanGoodFirst" text="I would go for A. " speech="" keys="sdf" threshold="" test="" play="B147" />
+            <Answer name="JordanBad1" agent="Jordan" type="JordanBad1First" text="I would go for B." speech="" keys="asdf" threshold="" test="" play="B148" />
+            <Answer name="JordanBad2" agent="Jordan" type="JordanBad2First" text="I would go for C. " speech="" keys="asdf" threshold="" test="" play="B149" />
+            <Answer name="JordanIncorrect1" agent="Cristina" type="JordanIncorrect1First" text="jordan, you answered B. The duke was initially angry with Viola and did ask her to leave, but he changed his mind when he learned the truth. A is the correct answer." speech="Jordan, you answered Bee. The duke was initially angry with Viola and did ask her to leave, but he changed his mind when he learned the truth. A is the correct answer." keys="asdf" threshold="" test="" play="A279" />
+            <Answer name="JordanIncorrect2" agent="Cristina" type="JordanIncorrect2First" text="jordan, you answered C. As the text shows at the end, Olivia is content with marrying Sebastian. A is the correct answer." speech="Jordan, you answered Sea. As the text shows at the end, Olivia is content with marrying Sebastian. A is the correct answer." keys="sdf" threshold="" test="" play="A280" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="LoadPage">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+	   <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+	    <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+	<Rule name="LoadPageMedium" status="LoadPage" response="" event="MainPageLoadedMedium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start1" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+	<Rule name="LoadPageDif" status="LoadPage" response="" event="MainPageLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+	 <Rule name="LoadPageEasy" status="LoadPage" response="" event="MainPageLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="100" />
+    </Rule>
+	 <Rule name="StartMedium" status="Start1" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="MOpening" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson15Medium.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+	  <Action agent="System" act="GetRule" data="" id="100" />
+    </Rule>
+	 <Rule name="StartDifficult" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="DOpening" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson15Hard.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+	  <Action agent="System" act="GetRule" data="" id="100" />
+    </Rule>
+    <Rule name="StartEasy" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="EOpening" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson15Easy.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+	  <Action agent="System" act="GetRule" data="" id="100" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="MediumReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="4" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="MediumReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="SecondReadingStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="E" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="M" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="D" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasTutoringPack" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="NoMoreTutoringPack" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+	  <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+	 <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="End" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="End1" id="2" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="AskMainQuestion" data="1" id="1" />
+      <Action agent="System" act="SetStatus" data="CheckJordanAnswerFirst" id="2" />
+	    <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadPage" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+	   <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="JordanAnswerFirstGood" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstGood" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanGoodFirst" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="JordanAnswerFirstBad1" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstBad1" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanBad1First" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="JordanAnswerFirstBad2" status="CheckJordanAnswerFirst" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasJordanAnswerFirstBad2" id="1" />
+      <Action agent="Jordan" act="GetAnswer" data="JordanBad2First" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstGood" status="HasJordanAnswerFirstGood" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanGoodFirst" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanGood" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstBad1" status="HasJordanAnswerFirstBad1" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanBad1First" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanBad1" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="HasJordanAnswerFirstBad2" status="HasJordanAnswerFirstBad2" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanBad2First" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="UserAnswerSecond" id="3" />
+      <Action agent="System" act="ShowMediaItem" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="UserAnswerSecondJordanBad2" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstGood" status="HasJordanAnswerFirstGood" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstBad1" status="HasJordanAnswerFirstBad1" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+    </Rule>
+    <Rule name="NoJordanAnswerFirstBad2" status="HasJordanAnswerFirstBad2" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerFirst" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100" id="3" />
+    </Rule>
+    <Rule name="LastPageFinal" status="PageLoaded" response="" event="Stop3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+	  <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+	<Rule name="ChangeLevelMedium1" status="PageLoaded" response="" event="MainPageLoadedMedium" hasItem="" priority="" frequency="" description="">
+	 <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start1" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelHard1" status="PageLoaded" response="" event="MainPageLoadedDifficult" hasItem="" priority="" frequency="" description="">
+	  <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start2" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelEasy1" status="PageLoaded" response="" event="MainPageLoadedEasy" hasItem="" priority="" frequency="" description="">
+	 <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start3" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+	   <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="PageLoadedE" status="PageLoaded" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+	  <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="PageLoadedD" status="PageLoaded" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+	  <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="PageLoadedM" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+	  <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanCorrect" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+	  <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanIC1" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad1Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstCorrectJordanIC2" status="UserAnswerFirst" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad2Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanCorrect" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
+      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanIC1" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC1JordanIC2" status="UserAnswerFirst" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad2Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="5" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="6" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="8" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2Second" id="9" />
+      <Action agent="System" act="SetStatus" data="Transition" id="10" />
+	   <Action agent="System" act="GetRule" data="" id="11" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanCorrect" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanGoodSecond" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="7" />
+      <Action agent="System" act="SetStatus" data="Transition" id="8" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanIC1" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanBad1Second" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="7" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1Second" id="8" />
+      <Action agent="System" act="SetStatus" data="Transition" id="9" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserFirstIC2JordanIC2" status="UserAnswerFirst" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="CannedExpression" data="IAgree" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="5" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondC1JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondCorrectJordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1First" id="5" />
+      <Action agent="System" act="SetStatus" data="Transition" id="6" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondCorrectJordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserCorrect" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2First" id="5" />
+      <Action agent="System" act="SetStatus" data="Transition" id="6" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="4" />
+      <Action agent="System" act="SetStatus" data="Transition" id="5" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC1JordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Incorrect1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="2" />
+      <Action agent="Cristina" act="Answer" data="IC1" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect2First" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanCorrect" status="UserAnswerSecondJordanGood" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="UserIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Jordan" act="CannedExpression" data="IWasRight" id="4" />
+      <Action agent="System" act="SetStatus" data="Transition" id="5" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanIC1" status="UserAnswerSecondJordanBad1" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="User" id="2" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Jordan" act="CannedExpression" data="JordanAlsoNotCorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="JordanIncorrect1First" id="6" />
+      <Action agent="System" act="SetStatus" data="Transition" id="7" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="UserSecondIC2JordanIC2" status="UserAnswerSecondJordanBad2" response="" event="Incorrect2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="BothIncorrect" id="1" />
+      <Action agent="Cristina" act="Answer" data="IC2" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="Transition" id="4" />
+	   <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Transition" status="Transition" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="TransitionTo" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionToEasy" status="TransitionTo" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="E" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionToMedium" status="TransitionTo" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="M" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionToHard" status="TransitionTo" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="D" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+	<Rule name="ChangeLevelMedium" status="TransitionTo" response="" event="MainPageLoadedMedium" hasItem="" priority="" frequency="" description="">
+	 <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start1" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelHard" status="TransitionTo" response="" event="MainPageLoadedDifficult" hasItem="" priority="" frequency="" description="">
+	  <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start2" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelEasy" status="TransitionTo" response="" event="MainPageLoadedEasy" hasItem="" priority="" frequency="" description="">
+	 <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="Start3" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="ChangeLevelEnd" status="TransitionTo" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

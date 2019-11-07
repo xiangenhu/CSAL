@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+<script>document.domain = "ace.autotutor.org"</script>
+		
+		<!--CSS Reset-->
+		<script type="text/css" href="CSSReset.css" rel="stylesheet"></script>
+		
+		<!--load Google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L15Bkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 828px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 22px;
+				padding: 15px 30px 0px 30px;
+				line-height: 38px;
+				color: #212121;
+				width: 708px;
+				margin: 10px 0px 0px 10px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 56px;
+				line-height: 56px;
+				margin: 10px 0px 15px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.textImg
+			{
+				width: 300px;
+				border: 2px solid white;
+			}
+			#spiral
+			{
+				float: left;
+				margin: 10px 20px 0px 0px;
+			}
+			#elliptical
+			{
+				float: right;
+				margin: 10px 0px 0px 20px;
+			}
+			.mybutton
+			{
+				font-size: 28px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				color: white;
+				padding: 2px 5px;
+				text-decoration: none;
+				border: none;
+				outline: none;
+				border-radius: 8px;
+				box-shadow: 2px 2px 11px #888888;
+			}
+			.keyword1
+			{
+				font-size: 28px;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			.keyword2
+			{
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			#checkScroll
+			{
+				width: 40px;
+				height: 250px;
+				background-color: red;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			#nextPage
+			{
+				width: 55px;
+				height: 75px;
+				background-color: #424242;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				border-top-left-radius: 10px;
+				cursor: pointer;
+			}
+			#prevPage
+			{
+				width: 55px;
+				height: 75px;
+				background-color: #424242;
+				position: fixed;
+				top: 0px;
+				right: 0;
+				border-bottom-left-radius: 10px;
+				cursor: pointer;
+			}
+			#nextPage img { margin: 2px; }
+			#prevPage img { margin: 2px; }
+			.pageNbr
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				position: relative;
+				bottom: 5px;
+				left: 330px;
+				margin: 0px 0px 0px 0px;
+				width: 25px;
+				text-align: center;
+				font-weight: bold;
+			}
+			#questionToggle
+			{
+				width: 800px;
+				height: 100px;
+				background-color: #424242;
+				position: fixed;
+				top: 0px;
+				right: 0;
+				z-index: 2;
+				display: none;
+				cursor: pointer;
+			}
+			#questionText
+			{
+				color: white;
+				font-size: 32px;
+				padding: 10px 20px;
+				text-align: center;
+			}
+			#questionToggleBtn
+			{
+				width: 420px;
+				height: 30px;
+				font-size: 20px;
+				background-color: #424242;
+				color: white;
+				position: fixed;
+				top: 100px;
+				left: 180px;
+				padding: 5px 0px 0px 0px;
+				z-index: 1;
+				border-bottom-right-radius: 8px;
+				border-bottom-left-radius: 8px;
+				border: 3px solid #828282;
+				border-top: 3px dashed white;
+				text-align: center;
+				display: none;
+				cursor: pointer;
+			}
+			#questionToggleBtn2
+			{
+				width: 420px;
+				height: 26px;
+				font-size: 20px;
+				background-color: #424242;
+				color: white;
+				position: fixed;
+				top: 0px;
+				left: 180px;
+				padding: 3px 0px 0px 0px;
+				z-index: 1;
+				border: 3px solid #828282;
+				border-top: none;
+				border-bottom-right-radius: 8px;
+				border-bottom-left-radius: 8px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.pageBreak1
+			{
+				height: 35px;
+			}
+			.pageBreak2
+			{
+				height: 25px;
+			}
+			.pageNbr
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				position: relative;
+				bottom: 5px;
+				left: 330px;
+				margin: 0px 0px 0px 0px;
+				width: 25px;
+				text-align: center;
+				font-weight: bold;
+			}
+			#img1
+			{
+				float: right;
+				padding: 0px 0px 5px 10px;
+			}
+			#img2
+			{
+				float: left;
+				padding: 5px 10px 5px 0px;
+			}
+			#img3
+			{
+				float: left;
+				padding: 5px 10px 5px 0px;
+			}
+			#img4
+			{
+				float: right;
+				padding: 0px 0px 5px 10px;
+			}
+			#img5
+			{
+				margin: -8px 0px 0px 20px;
+				width: 660px;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var flag = 0;
+			var moveAmount = 0;
+			var newAmount = 0;
+			var calc;
+			var height;
+			var currentPos;
+			var toggleState = false;
+			var itemsArray=["b1","b2","b3"];
+			var score=0;
+			var userAnswerTimes=0;
+			//you can store multiple answers in this array if needed
+			//**************
+			var correctAnswerArray = ["b1"];
+			var currentItem = -1;
+			var numItems = 0;
+			var JordanAnswer;
+			var userAnswerCode;
+			var JordanAnswerCode;
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				GetRequest();
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "para1");
+				
+				//shows the questionToggle box on start
+				$( "#questionToggle" ).slideToggle( 2000, function()
+				{
+					$( "#questionToggleBtn" ).slideToggle( 400 );
+				});
+				
+				//sets opacity of questionToggle box
+				$( "#questionToggle" ).fadeTo( 0, .99 );
+				
+				//this animation will show the questionToggle if most places on the screen are clicked
+				$( ".scroll-pane" ).click(function(e)
+				{
+					//if a button is clicked, it will not trigger the questionToggle animation
+					if($(e.target).is( ".mybutton" ))
+					{
+						e.preventDefault();
+						return;
+					}
+					
+					//find out if the questionToggle is toggled
+					toggleState = $( '#questionToggle' ).is(":visible");
+					
+					if (toggleState == true)
+					{
+						$( "#questionToggleBtn" ).slideToggle( 200, function()
+						{
+							$( "#questionToggle" ).slideToggle( 1000 );
+						});
+					}
+					if (toggleState == false)
+					{
+						$( "#questionToggle" ).slideToggle( 1000, function()
+						{
+							$( "#questionToggleBtn" ).slideToggle( 200 );
+						});
+						ScrollToId($scrollElement);
+					}
+				});
+			});
+			
+			function ScrollToId($scrollElement)
+			{
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(500);
+				//Pg1 >> Pg2 >> Pg3 >> Pg 4 >> Pg5  >> Pg6  >> Pg7  >> Pg8
+				//0   >> 482 >> 964 >> 1446 >> 1928 >> 2410 >> 2892 >> 3374
+			}
+				function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				
+						
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+		
+				$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+		
+			function Unlock()
+			{
+				var api = $scrollElement.data('jsp');
+				var height = api.getContentHeight()-482;
+				
+				$( "#nextPage" ).click(function(f)
+				{
+					var isAnimating = $( this ).is(':animated');
+					
+					if (isAnimating == true)
+					{
+						f.preventDefault();
+						return;
+					}
+					
+					currentPos = api.getContentPositionY();
+					calc =  1 - (currentPos / height);
+					
+					if(currentPos != 0 && calc < .175 && calc != 0)
+					{
+						moveAmount = -(height-currentPos);
+						flag = 1;
+					}
+					else
+					{
+						flag = 0;
+					}
+					
+					$(this).animate({backgroundColor: "gray"}, 75);
+					$(this).animate({backgroundColor: "#424242"}, 1000);
+					parent.PlaySound('pageturn.wav');
+					api.scrollByY(482);
+				});
+				
+				$( "#prevPage" ).click(function(g)
+				{
+					var isAnimating = $( this ).is(':animated');
+					
+					if (isAnimating == true)
+					{
+						g.preventDefault();
+						return;
+					}
+					
+					currentPos = api.getContentPositionY();
+					calc =  1 - (currentPos / height);
+					
+					if (flag == 1)
+					{
+						newAmount = moveAmount;
+						flag = 0;
+					}
+					else
+					{
+						newAmount = -482;
+					}
+					
+					$(this).animate({backgroundColor: "gray"}, 75);
+					$(this).animate({backgroundColor: "#424242"}, 1000);
+					parent.PlaySound('pageturn.wav');
+					api.scrollByY(newAmount);
+				});
+			
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					userAnswerTimes++;
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");	
+					
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+						if (userAnswerTimes==1)
+						{
+						
+							score=2+score;
+						}
+						else if (userAnswerTimes==2)
+						{
+							score=1+score;
+						}
+						
+						parent.PlaySound('clicked0.wav');
+					}
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+				
+				
+				//go to next page
+				if (data == "NextPage")
+				{	
+				//*********
+					parent.nextPage("media/"+"Lesson15-M3.html?score="+score);
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad1")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad2")
+				{
+					JordanAnswer = $("#b3").attr("value");
+					$("#b3").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				
+				else if(data=="bothAnswer")
+				{
+				  if (userAnswer=="Correct")
+				  {
+					userAnswerCode="C";
+				  }
+				  else if(userAnswer=="Incorrect1")
+				  {
+				  userAnswerCode="I1";
+				  }
+				  else if(userAnswer=="Incorrect2")
+				  {
+				  userAnswerCode="I2";
+				  }
+				   if (JordanAnswer=="Correct")
+				  {
+					JordanAnswerCode="C";
+				  }
+				  else if(JordanAnswer=="Incorrect1")
+				  {
+				  JordanAnswerCode="I1";
+				  }
+				  else if(JordanAnswer=="Incorrect2")
+				  {
+				  JordanAnswerCode="I2";
+				  }
+				  var getScore=userAnswerCode+JordanAnswerCode;
+				  parent.GetWorldEvent(getScore);
+				}
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = parseInt(strs[1]);
+				
+			   }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		<div id="prevPage" style="display: none"><img src="last.png"></div>
+		<div id="nextPage" style="display: none"><img src="next.png"></div>
+		<div id="textbox" class="scroll-pane">
+			<div id="questionToggle">
+				<div id="questionText">
+					Click on the highlighted word that is a main character?
+				</div>
+			</div>
+			<div id="questionToggleBtn">CLICK TO HIDE THE QUESTION</div>
+			<div id="questionToggleBtn2">CLICK TO SHOW THE QUESTION</div>
+			<div id="mainText">
+				<div id="mainTextHead">
+					The Twelfth Night
+				</div>
+				<div id="para1" class="para">
+				<span class="indent"></span>In a distant sea, a terrible storm arose. <img src="ship.png" class="image" id="img1">
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>A ship was traveling on this sea and the gruesome storm caused a shipwreck. A young woman named Viola seemed to be the only survivor. Clinging to a piece of wood, she was swept onto the closest shore. The shore belonged to a country called Illyria.
+				</div>
+				
+				<div id="para3" class="para">
+				<span class="indent"></span>Viola had a twin brother named Sebastian who had been<div class="pageNbr">1</div><div class="pageBreak1"></div> travelling with her. She assumed that he drowned when their ship was destroyed. Finding herself alone in this strange land, Viola decided that she needed a plan to keep herself safe. She needed something to do,<img src="woman0.png" class="image" id="img2"> so that she would not be wandering unprotected in this new world. A friendly <span class="mybutton" id="b2" value="Incorrect1">sea captain</span> told her that there was a Duke who ruled over the realm. Since it would be hard for her to find work as a woman, <span class="mybutton" id="b1" value="Correct">Viola</span> disguised herself as a young man and was introduced to the duke. Luck was with her and she became the Duke's personal servant in his <span class="mybutton" id="b3" value="Incorrect2">household</span>.<div class="pageNbr">2</div><div class="pageBreak"></div>
+				</div>
+				
+				<div id="para4" class="para">
+				<span class="indent"></span>The Duke, Orsino, was in love with the Countess Olivia. Unfortunately, he could not marry her because the Countess was in mourning for her brother who had recently died. Her brother had been her guardian since the passing of her father. So, Olivia refused to accept a proposal of marriage from any man. 
+				</div>
+				
+				<div id="para5" class="para">
+				<span class="indent"></span>Viola quickly became a favorite of the Duke, Orsino. Viola found herself falling in love with the Duke, but she could not tell him of her love because of her disguise. One day, Orsino summoned Viola</span> to his side, and told Viola of his love for the Countess Olivia.
+				</div>
+				<div class="pageNbr">3</div><div class="pageBreak2"></div>
+				
+				<div id="para6" class="para">
+				<span class="indent"></span>"Will you, my most trusted friend and servant, deliver my message of love to the countess?"
+				</div>
+				
+				<div id="para7" class="para">
+				<span class="indent"></span>Viola was heart-stricken. She loved the Duke so much, that she<img src="welcome.png" class="image" id="img3"> obeyed him anyway. She wanted him to be happy.
+				</div>
+				
+				<div id="para8" class="para">
+				<span class="indent"></span>Viola went to woo the Countess Olivia in Duke Orsino's place. Since she was actually a woman, she understood how to say what Olivia wanted to hear. Olivia was immediately impressed with Viola's emotional pleas.  Not knowing that Viola was in disguise, Olivia fell in love with<div class="pageNbr">4</div><div class="pageBreak2"></div> Viola at once!
+				</div>
+				
+				<div id="para9" class="para">
+				<span class="indent"></span>In another part of Illyria, Viola's brother Sebastian has also washed ashore. He has also survived the storm and believes himself to be the only survivor. As fate would have it, he encountered Olivia almost at once. Olivia, thinking that Sebastian is Viola, declared her love for him and asked him to marry her. Sebastian was baffled, because he had never seen the Countess. However, noting that the Countess was wealthy and beautiful, Sebastian agreed to the marriage. He believed that good fortune must have smiled upon him at last. After the marriage between Olivia and Sebastian, Olivia received an invitation from Duke Orsino. The Duke was not<div class="pageNbr">5</div><div class="pageBreak2"></div> yet aware that Olivia was already married and was preparing to propose to her. Olivia went to visit Duke Orsino at his palace. Once there, she proudly declared that she was now married to the Duke's servant, Viola, who she had confused with her brother, Sebastian. The Duke reproached Viola:<img src="nope.png" class="image" id="img4">
+				</div>
+				
+				<div id="para10" class="para">
+				<span class="indent"></span>"I have loved and cherished you as my dearest friend. How can you betray me as thus? You know how much I have loved Olivia. Because you have done this to me, you must now leave my household."
+				</div>
+				
+				<div id="para11" class="para">
+				<div class="pageNbr">6</div><div class="pageBreak2"></div>
+				<span class="indent"></span>Viola was very confused. She was heartbroken when she heard these terrible words from her beloved Duke. She threw herself at the Duke's feet, but even then she could not find the courage to tell him the truth. Instead, she cried:
+				</div>
+				
+				<div id="para12" class="para">
+				<span class="indent"></span>"There is no place I can go to except to the one I truly love!"
+				</div>
+				
+				<div id="para13" class="para">
+				<span class="indent"></span>This only added fuel to the Duke's anger, since Orsino believed that Viola meant Olivia.
+				</div>
+				
+				<div id="para14" class="para">
+				<span class="indent"></span>At this moment, Sebastian arrived at the Duke's palace looking for his wife. When he revealed himself, Viola wept with joy. Her dear, twin brother was alive! Both the Countess Olivia and<div class="pageNbr">7</div><div class="pageBreak2"></div> Duke Orsino were now confused. Sebastian told his story and the Duke learned that Viola was actually a woman. When this was discovered, Orsino saw that everything that had Viola had done was out of love for him and consideration of his happiness. Orsino realized that he loved Viola in return. He immediately asked her to marry him and Viola joyfully accepted his proposal. When Olivia learned that Sebastian was not the man she meant to marry, she found that she did not mind being married to Sebastian after all.
+				</div>
+				
+				<div id="para15" class="para">
+				<span class="indent"></span>That night, the two couples celebrated their love at the Duke's palace.<div class="pageNbr">8</div><div class="pageBreak2"></div>
+				</div>
+				
+				<div id="para16" class="para">
+				<span class="indent"></span>And all was well in the end.
+				</div>
+					
+				<img src="end.png" class="image" id="img5">
+			</div>
+		</div>
+	</body>
+</html>
