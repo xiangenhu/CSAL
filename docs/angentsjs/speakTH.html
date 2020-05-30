@@ -1,6 +1,9 @@
 
 <html>
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <script>document.domain = "ace.autotutor.org"</script>
 <script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
@@ -9,7 +12,8 @@
 	<script src="js/msapi.js"></script>		
 	<script src="https://xiangenhu.github.io/skoplayer/js/pixi.min.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/Interface.js"></script>
-	
+	<link rel="stylesheet" href="../buttons/buttons.css" type="text/css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../css/mainPage.css">
 		<style type="text/css" id="page-css">
 canvas {
     width: 130px;
@@ -17,16 +21,60 @@ canvas {
 #Lee {
   float: right;
 }
+
 body {
   overflow: hidden;
 }
+.center3 {
+  margin: auto;
+  width: 95%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+.center1 {
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+}
+.block {
+    height:100px;
+    width:180;
+    text-align:left;
+}
+.center2 {
+    margin:auto;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 2px;
+  top: 99;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
+  display:none;
+}
 		</style>
+		
 </head>
-<body onload="onLoad()">
+<body onload="onLoad()" bgcolor="#99ffff">
 <audio id="audio"></audio> 
-<div id="TopDiv" style="position:relative; width:100%; height:200px;"> </div>	 
 
-</div>	
+<div id="TopDiv" style="position:relative; width:120%; height:200px;"></div>
+<!--div id="overlay" class="overlay"></div-->
+<div id="temp">
+<div class="center1">	
+ <button onclick="start()" class="center3"><h3>Please wait until you see the agents and then click on the Next button below to proceed.</h3></button> 
+ <!--button onclick="start()" class="center3"><h3>The site is currently under maintenance.</h3></button--> 
+</div>
+ <div class="block center2">
+	<button id="start" class="cupid-green" align="center" onclick="start()">Next</button>
+	 </div>
+	 </div>
+</div>
 
 <script>
 var thLoaded=false;
@@ -36,7 +84,14 @@ function onLoad() {
 	loadCharas()
 	
 }
-
+function start()
+{
+	var x = document.getElementById("temp");
+    x.style.display = "none";
+	document.getElementById("TopDiv").style.height="120px";
+	//document.getElementById("overlay").style.display="block";
+	parent.getAgentMessage("start");
+}
 function TestSpeech(Words){
 	
 	msSpeakQueued("Lee",Words,"");
@@ -95,19 +150,23 @@ msSpeakQueued("Lee",Words,"");
 		{
 				 var strs = str.split(":");
             var firstPart = strs[0];
-            var scoendPart = strs[1];
-
+           // var secondPart ='<Break time="10ms" />'+ strs[1];
+		   var secondPart = strs[1].trim();
+		   if(secondPart!=""&&secondPart.length>1)secondPart = '<Break time="100ms" />'+secondPart;
             if (status == "Speak") {
-
+		var segments = secondPart.split("#");
+				for(var i=0;i<segments.length;i++)
+				{
                 if (firstPart == 0) {
-				msSpeakQueued("Angela",scoendPart,"");
+				
+				msSpeakQueued("Angela",segments[i],"");
                
                  
                 } else if (firstPart == 1) {
-            msSpeakQueued("Lee",scoendPart,"");
+            msSpeakQueued("Lee",segments[i],"");
                    
                 }
-
+}
             } 
 			
 		}
@@ -121,6 +180,6 @@ msSpeakQueued("Lee",Words,"");
 
 </script>
 <p align="center">
-<button onclick="TestSpeech('I am not ready.... I am working very hard to get ready for the ITS 2018 tutorial!<bigsmile/>')">Click here to Ask Me</button> </p>
+<button onclick="TestSpeech('I am not ready.... I am working very hard to get ready for the ITS 2018 tutorial!<bigsmile/>')" style="display:none">Click here to Ask Me</button> </p>
 </body>
 </html>

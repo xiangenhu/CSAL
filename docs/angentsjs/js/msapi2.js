@@ -1,15 +1,15 @@
+var APILocation="";
 if (qs("LoC","0")=="0"){
-	var animateBase = "https://apiwest.x-in-y.com/app/animate.jpeg";
-	var rivescriptBase = "https://apiwest.x-in-y.com/app/rivescript";
-	var chatscriptBase = "https://apiwest.x-in-y.com/app/chatscript";
-	console.log("Server Location: API West: Virginia");
+	APILocation=qs("APILoc","https://apiwest.autotutor.org");
+	var animateBase = APILocation+"/app/animate.jpeg";
+	var rivescriptBase = APILocation+"/app/rivescript";
+	var chatscriptBase = APILocation+"/app/chatscript";
 }else {
-	var animateBase = "https://apieast.x-in-y.com/app/animate.jpeg";
-	var rivescriptBase = "https://apieast.x-in-y.com/app/rivescript";
-	var chatscriptBase = "https://apieast.x-in-y.com/app/chatscript";
-	console.log("Server Location: API West: Tokyo");
+	APILocation=qs("APILoc","https://apieast.autotutor.org");
+	var animateBase = APILocation+"/app/animate.jpeg";
+	var rivescriptBase = APILocation+"/app/rivescript";
+	var chatscriptBase = APILocation+"/app/chatscript";
 }
-
 
 var chars = {}; // indexed by id
 var o = {};	

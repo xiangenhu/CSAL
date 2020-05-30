@@ -1,23 +1,24 @@
+var APILocation="";
 if (qs("LoC","0")=="0"){
-	var animateBase = "https://apiwest.x-in-y.com/app/animate.jpeg";
-	var rivescriptBase = "https://apiwest.x-in-y.com/app/rivescript";
-	var chatscriptBase = "https://apiwest.x-in-y.com/app/chatscript";
-	console.log("Server Location: API West: Virginia");
+	APILocation=qs("APILoc","https://apiwest.x-in-y.com");
+	var animateBase = APILocation+"/app/animate.jpeg";
+	var rivescriptBase = APILocation+"/app/rivescript";
+	var chatscriptBase = APILocation+"/app/chatscript";
 }else {
-	var animateBase = "https://apieast.x-in-y.com/app/animate.jpeg";
-	var rivescriptBase = "https://apieast.x-in-y.com/app/rivescript";
-	var chatscriptBase = "https://apieast.x-in-y.com/app/chatscript";
-	console.log("Server Location: API West: Tokyo");
+	APILocation=qs("APILoc","https://apieast.x-in-y.com");
+	var animateBase = APILocation+"/app/animate.jpeg";
+	var rivescriptBase = APILocation+"/app/rivescript";
+	var chatscriptBase = APILocation+"/app/chatscript";
 }
-
-
+//amazon male voices: Matthew, Joey, James, Paul
+//amazon female voices: Salli, Kimberly, Kendra, Joanna, Ivy, Julie
 var chars = {}; // indexed by id
 var o = {};	
 
-var V1=qs("V1","Matthew");
+var V1=qs("V1","James");
 var V2=qs("V2","Salli");
-var V3=qs("V3","Salli");
-var V4=qs("V4","Justin");
+var V3=qs("V3","Julie");
+var V4=qs("V4","Matthew");
 
 
 var C1=qs("C1","Lee");
@@ -136,7 +137,6 @@ function playTTS(id, action,note) {
     var audioURL = animateBase + "?character=" + char.character + 
 								 "&format=" + char.format + 
 								 "&voice=" + char.voice + 
-								 "&backimage="+avatarBKIMG+
 								 "&action=" + encodeURIComponent(action) + 
 								 "&state=" + char.state + 
 								 "&audio=true"; 
@@ -166,7 +166,6 @@ function execute(id, action,note) {
 	savedURL = animateBase + "?character=" + char.character  + 
 							 "&format=" + char.format + 
 							 "&voice=" + char.voice + 
-							 "&backimage="+avatarBKIMG+
 							 "&action=" + encodeURIComponent(action) + 
 							 "&state=" + char.state;
     var xhr = new XMLHttpRequest();
@@ -435,6 +434,7 @@ function loadCharas(){
 		s +='</div>';
 		
 	}
+
 	/*
 	if (C2.length>1)	{
 		s += '<div id="'+C2+'" class="tr-agent"><div id="'+C2+'Renderer"></div>';

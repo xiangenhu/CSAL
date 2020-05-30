@@ -18,6 +18,8 @@
         URLParams = URI.parseQuery(window.location.search);
 			if (URLParams["lessonName"] != undefined) {
 				lessonName=URLParams["lessonName"].toLowerCase();
+				var lessonNameSplit = lessonName.split('_');
+				var lessonNameShort = lessonNameSplit[0];
 				 var s = '';
 				s += '<table border="0" padding="0" width="100%" height="30%" align="center"><tr>';
 				s += '<td width="100" align="center">';
@@ -31,8 +33,8 @@
 
 
 				document.getElementById('TopDiv').innerHTML = s;
-				msAttach('Movie1', lessonName+'A', 'output/'+lessonName+'A_Files', 140, 115);
-				msAttach('Movie2', lessonName+'B', 'output/'+lessonName+'B_Files', 140, 115);
+				msAttach('Movie1', lessonNameShort+'A', 'output/'+lessonNameShort+'A_Files', 140, 115);
+				msAttach('Movie2', lessonNameShort+'B', 'output/'+lessonNameShort+'B_Files', 140, 115);
 			}
         }
 
