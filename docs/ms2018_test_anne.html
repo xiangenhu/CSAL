@@ -18,7 +18,7 @@
     <script src="js/pagecontrol.js"></script>
     <script src="js/actioncontrol.js"></script>
     <script src="js/webapi.js"></script>
-    <script src="js/config_ms2018.js"></script>
+    <script src="js/config_4by6_test.js"></script>
     <script src="js/userPerformance.js"></script>
     <script src="js/URI.js"></script>
     <script type="text/javascript">
@@ -261,13 +261,10 @@
                 var pageNameList = List[0].split("/");
                 var pageName = pageNameList[pageNameList.length - 1];
                 for (var i in currentLessonInfoObj.pages) {
-					console.log(currentLessonInfoObj.pages[i].questionPath); 
 
                     if (currentLessonInfoObj.pages[i].questionPath == pageName) {
                         var progressBarValue = currentLessonInfoObj.pages[i].progressBarValue;
-						console.log("progress value: "+ progressBarValue); 
                         if (progressBarValue != "0") {
-							
                             setProgress(progressBarValue);
                         }
 

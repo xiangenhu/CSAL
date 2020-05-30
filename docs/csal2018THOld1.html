@@ -15,10 +15,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
     <script src="js/processbar.js"></script>
-    <script src="js/pagecontrol.js"></script>
+    <script src="js/pagecontrol3.js"></script>
     <script src="js/actioncontrol.js"></script>
-    <script src="js/webapi.js"></script>
-    <script src="js/config_ms2018.js"></script>
+    <script src="js/webapi2.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/userPerformance.js"></script>
     <script src="js/URI.js"></script>
     <script type="text/javascript">
@@ -55,15 +55,15 @@
         var videoId;
         var getQuestionName = "";
         var allLessonsInfoObj;
-        var talkingHeadSpeechEndTimestamp;
-		var ShowButtonAndWait=false;
-		var isQuestionPageAfterFirst=false;
+		var talkingHeadSpeechEndTimestamp;
+		var talkingheadUsing="Speak2";
+		var SpeakRepeatList = [];
+		
 
         function setCurrentLessonInfo(lessonID) {
-			if(lessonID=="lesson23_emh"||lessonID=="lesson23_hme"||lessonID=="lesson28_emh"||lessonID=="lesson28_hme")
-			RepeatButtonOn=false;
+
             for (var i in allLessonsInfoObj) {
-                var lessonStatus = false;
+                var lessonStatus = false
                 if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId) {
                     var LessonInfo = allLessonsInfoObj[i];
                     sessionStorage.setItem("LessonName", LessonInfo.lessonName);
@@ -84,32 +84,30 @@
             return false;
 
         }
-
+		function loadAgent()
+		{
+		document.getElementById('agentsLarge').src = "angentsjs/speakTH.html";
+					talkingheadLoaded = true;
+					
+		}
         function getLessonInfo() {
             var URLParams = URI.parseQuery(window.location.search);
-            if (URLParams.LessonName != undefined) {
-                getScriptFolder = URLParams.LessonName;
-                var lessonStatus = setCurrentLessonInfo(getScriptFolder)
-                if (lessonStatus == true) {
-                    GetScript(getScriptFolder);
-                } else {
-                    alert("SYSTEM CONFIG ERROR!")
-                    return;
-                }
-
-            }
-            if (URLParams.UID != undefined) {
+			/*if (URLParams.talkingheadOn != undefined) {
+                talkingheadOn=URLParams.talkingheadOn;
+				
+            }*/
+		talkingheadOn="true";
+			  if (URLParams.UID != undefined) {
                 sessionStorage.setItem("UID", URLParams.UID);
                 var getParaList = URLParams.UID.split("_")
                 var uname = getParaList[getParaList.length - 1];
                 sessionStorage.setItem("uname", uname);
 
-
             } else {
                 sessionStorage.setItem("UID", "autotutor_default_visitor");
                 sessionStorage.setItem("uname", "autotutor_default_visitor");
             }
-            if (URLParams.SID != undefined) {
+			if (URLParams.SID != undefined) {
                 sessionStorage.setItem("SID", URLParams.SID);
             } else {
                 sessionStorage.setItem("SID", "D1");
@@ -128,22 +126,47 @@
             } else {
                 sessionStorage.setItem("SName", "User");
             }
+			/*if (URLParams.talkingheadUsing != undefined) {
+                talkingheadUsing=URLParams.talkingheadUsing;
+				if(talkingheadUsing=="Speak2")
+				{
+					document.getElementById('agents').src = "angentsjs/speakTH.html";
+					talkingheadLoaded = true;
+				}
+
+            }*/
+            if (URLParams.LessonName != undefined) {
+                getScriptFolder = URLParams.LessonName;
+                var lessonStatus = setCurrentLessonInfo(getScriptFolder)
+                if (lessonStatus == true) {
+                    GetScript(getScriptFolder);
+                } else {
+                    alert("SYSTEM CONFIG ERROR!")
+                    return;
+                }
+
+            }
+             
+            
 
 
         }
         $(document).ready(function() {
-            var x2 = $(window).width();
+            /*var x2 = $(window).width();
             if (x2 < 1400) {
                 $("#container").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
             }
             var loadingPage = "resources/LoadingPage.html";
             $("#mainFrame").attr("src", loadingPage);
             $("#home").hide();
-            // $("#displayArea").hide();
-            allLessonsInfoObj = getLessonsConfig()
-            getLessonInfo();
+            $("#displayArea").hide();*/
+           // allLessonsInfoObj = getLessonsConfig()
+            //getLessonInfo();
+			loadAgent();
             $("#repeat").click(function() {
-                if (repeatList.length > 0) {
+			if(talkingheadUsing=="Play")
+			{
+				 if (repeatList.length > 0) {
                     repeatStatus = true;
                     repeatTimes++;
                     playList = playList.concat(repeatList);
@@ -154,8 +177,18 @@
                 } else {
                     alert("No agents speech can repeat at this page!")
                 }
+			
+			}
+			else if(talkingheadUsing=="Speak2")
+			{
+				repeatStatus = true;
+				 repeatSpeakList();
+					
+			}
+               
 
             });
+			
             $("#btNext").click(function() {
                 nextButtonStatus = false;
                 HideRepeatButton();
@@ -163,18 +196,9 @@
                 HideNextButton();
                 var d = new Date();
                 pageStartTimestamp = d.getTime();
-				if(ShowButtonAndWait!=true)
-				{
-				 $("#mainFrame").attr("src", currentMediaUrl);
-				  setProgressValue(currentMediaUrl);
-				}
-				else
-				{
-				ShowButtonAndWait=false;
-				}
-               
-               
-                clearTimeout(askClickNext);
+                $("#mainFrame").attr("src", currentMediaUrl);
+                setProgressValue(currentMediaUrl);
+				clearTimeout(askClickNext);
 
             });
             $("#btReplayVideo").click(function() {
@@ -211,7 +235,33 @@
             });
 
         });
-
+		function startLesson()
+		{
+		document.getElementById('mainscreen').style.display="block";
+		document.getElementById('containerNoImg').style.backgroundImage = "url(../images/TabletFrame2.png)";
+		document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
+		document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
+		document.getElementById('agentsLarge').style.height = "100px";
+		var x2 = $(window).width();
+            if (x2 < 1400) {
+                $("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
+            }
+		 var loadingPage = "resources/LoadingPage.html";
+            $("#mainFrame").attr("src", loadingPage);
+            $("#home").hide();
+            $("#displayArea").hide();
+            allLessonsInfoObj = getLessonsConfig()
+            getLessonInfo();
+		}
+		function repeatSpeakList()
+		{
+			agentBusy = true;
+			for(var i=0; i<SpeakRepeatList.length;i++)
+			{
+					Speak2(SpeakRepeatList[i]);
+			}
+			
+		}
         function LoadLesson(lessonID) {
             var loadingPage = "resources/LoadingPage.html";
             $("#mainFrame").attr("src", loadingPage);
@@ -261,13 +311,10 @@
                 var pageNameList = List[0].split("/");
                 var pageName = pageNameList[pageNameList.length - 1];
                 for (var i in currentLessonInfoObj.pages) {
-					console.log(currentLessonInfoObj.pages[i].questionPath); 
 
                     if (currentLessonInfoObj.pages[i].questionPath == pageName) {
                         var progressBarValue = currentLessonInfoObj.pages[i].progressBarValue;
-						console.log("progress value: "+ progressBarValue); 
                         if (progressBarValue != "0") {
-							
                             setProgress(progressBarValue);
                         }
 
@@ -325,7 +372,12 @@
 
                         break;
                     case "Display":
-                        if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data >= "60") {
+                        if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "60") {
+                            var getUserName = sessionStorage.getItem("uname");
+                            getQuestionName = data.replace(getUserName, "_user_");
+                            console.log(getQuestionName);
+                        }
+						else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
                             var getUserName = sessionStorage.getItem("uname");
                             getQuestionName = data.replace(getUserName, "_user_");
                             console.log(getQuestionName);
@@ -343,10 +395,29 @@
                         //AngentSpeak(data);
                         break;
                     case "Play":
-                        playList = setPlayList(agentNum, data);
+						if(talkingheadUsing=="Play")
+						{
+							 playList = setPlayList(agentNum, data);
 
-                        repeatList = repeatList.concat(playList);
-                        AngentPlay(playList);
+							repeatList = repeatList.concat(playList);
+							AngentPlay(playList);
+						}
+						   
+
+                        //console.log(agentNum,data, "Play");
+                        break;
+					case "Speak2":
+						if(talkingheadUsing=="Speak2")
+						{
+							agentBusy = true;
+							var SName = sessionStorage.getItem("SName");
+							data = data.replace("_user_", SName);
+							data = agentNum + ":" + data;
+							Speak2(data);
+							 SpeakRepeatList.push(data);
+							  
+						}
+						   
 
                         //console.log(agentNum,data, "Play");
                         break;
@@ -384,19 +455,13 @@
                             ShowPlayVideoButton();
                             document.getElementById('mainFrame').contentWindow.Unlock();
                             waitForUserResponse = true;
-                            var d = new Date();
-                            talkingHeadSpeechEndTimestamp = d.getTime();
-
+							  var d = new Date();
+							talkingHeadSpeechEndTimestamp = d.getTime();
+							
                             if (mediaActions != "") {
                                 mediaActions = "";
                             }
                             userSpendTimeCounting();
-							var List = currentMediaUrl.split("?");
-							var pageNameList = List[0].split("/");
-							if(pageNameList[pageNameList.length-1]=="L18-MainPage.html")
-							{
-							waitForUserResponse = false;
-							}
                         }
                         maxIdle = parseInt(data) * 10;
 
@@ -408,8 +473,8 @@
                         ShowPlayVideoButton();
                         ShowTextInputDialog();
                         waitForUserResponse = true;
-                        var d = new Date();
-                        talkingHeadSpeechEndTimestamp = d.getTime();
+						  var d = new Date();
+							talkingHeadSpeechEndTimestamp = d.getTime();
                         userSpendTimeCounting();
                         maxIdle = parseInt(data) * 10;
                         if (mediaActions != "") {
@@ -421,11 +486,11 @@
                         ShowRepeatButton();
                         ShowPlayVideoButton();
                         document.getElementById('mainFrame').contentWindow.Unlock();
-                        var d = new Date();
-                        talkingHeadSpeechEndTimestamp = d.getTime();
+						  var d = new Date();
+							talkingHeadSpeechEndTimestamp = d.getTime();
                         waitForUserResponse = true;
                         countingSpendTime = true;
-
+						
                         userSpendTimeCounting();
                         maxIdle = parseInt(data) * 10;
                         if (mediaActions != "") {
@@ -442,7 +507,7 @@
                         document.getElementById('mainFrame').contentWindow.Lock();
                         break;
                     case "Unlock":
-                        //document.getElementById('mainFrame').contentWindow.Unlock();
+                        document.getElementById('mainFrame').contentWindow.Unlock();
                         break;
                     case "GetMediaItem":
                         document.getElementById('mainFrame').contentWindow.GetItem();
@@ -462,7 +527,6 @@
 
                         break;
                     case "GetMediaEvent":
-					waitForMediaResponse = true;
                         InvokeScript(act, data);
 
                         break;
@@ -480,23 +544,9 @@
                         break;
 
                     case "End":
-					   if (currentLessonID == "lesson10") 
-					   {
-						setProgress(100);
-						}
                         showEndingPage();
                         mainpageInit2();
                         InitParameters();
-                        break; 
-					case "ShowButtonAndWait":
-						if(data=="NextPage")
-						{
-							ShowNextButton();
-                            nextButtonStatus = true;
-							ShowButtonAndWait=true;
-						
-						}
-                       
                         break;
                     default:
                         break;
@@ -519,13 +569,14 @@
                 var PresentationHistoryObjStr = JSON.stringify(PresentationHistoryObj);
                 acePutjson.PresentationID = PresentationIDObjStr;
                 acePutjson.PresentationHistory = PresentationHistoryObjStr;
-
+				if(PresentationHistoryObj.userSelectedItem=="I'm not sure.")
+				{
+					mediaActions="unsure";
+				}
+				
                 if (currentLessonID != "lesson0") {
 
-					if(mediaActions=="userInputTrue")
-					{
-					mediaActions="";
-					}
+
                     acePutjson.ID = sessionStorage.getItem("UID");
                     acePutjson.Text = userInput;
                     acePutjson.Event = mediaActions;
@@ -564,16 +615,29 @@
         function StopTimer() {
             clearInterval(timer);
         }
-
+		function Speak2(data)
+		{
+			if(talkingheadOn=="true")
+			{
+			document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
+			}
+			else
+			{
+			document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "off");
+			}
+		 
+		
+		
+		}
 
         function AngentSpeak(data) {
             if (talkingheadOn == true) {
                 agentBusy = true;
-                document.getElementById('agents').contentWindow.callBoth(data, "Speak", "on");
+                document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
             } else
             if (talkingheadOn == false) {
                 agentBusy = true;
-                document.getElementById('agents').contentWindow.callBoth(data, "Speak", "off");
+                document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "off");
             }
         }
         var playList;
@@ -582,7 +646,7 @@
         function AngentPlay(playList) {
             if (talkingheadOn == true) {
                 agentBusy = true;
-                document.getElementById('agents').contentWindow.callBoth(playList[0], "Play", "on");
+                document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "on");
                 playList.splice(0, 1);
 
                 if (playList.length == 0) {
@@ -594,7 +658,7 @@
             } else if (talkingheadOn == false) {
                 agentBusy = true;
 
-                document.getElementById('agents').contentWindow.callBoth(playList[0], "Play", "off");
+                document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "off");
                 playList.splice(0, 1);
 
                 if (playList.length == 0) {
@@ -644,126 +708,28 @@
 
         }
 
-         function showScriptNextButton(data) {
-            var getMediaObj = currentLessonInfoObj.pages;
-            var lessonID = sessionStorage.getItem("LessonID");
-             var dataURL = data.toLowerCase();
-			if(dataURL.indexOf("?")>0)
-			dataURL = dataURL.substring(0,dataURL.indexOf("?"));
-			dataURL = dataURL.replace("media/","media\\");
-            if (NextButtonOn == true && isHasNextButton == true) {
-                for (var i in getMediaObj) {
-				if (getMediaObj[i].Type == "ReadingPage")
-					{
-					 var	mediaPath = "media\\" + getMediaObj[i].MediaPath;                      
-						 if (mediaPath.toLowerCase() == dataURL) 
-						 {
-							isQuestionPageAfterFirst=false;
-						 }
-					}
-                    if (getMediaObj[i].Type == "QuestionPage") {
-                        var pagePath = "media\\" + getMediaObj[i].questionPath;
-                        //if (pagePath.toLowerCase() == data.toLowerCase()) 
-						 if (pagePath.toLowerCase() == dataURL) 
-						{
-                        if(lessonID=="lesson8" ||  lessonID == "lesson9" || lessonID == "lesson10")
-                            {
-                               $("#mainFrame").attr("src", currentMediaUrl);
- 
-								var d = new Date();
-								pageStartTimestamp = d.getTime();
-								 if(lessonID == "lesson10") // ***zc: added by z cai 11/30/2018
-								 {
-								  setProgress(getMediaObj[i].progressBarValue);
-								 }
-                            }
-							else
-							{
-							if(!isQuestionPageAfterFirst)
-							{
-							isQuestionPageAfterFirst=true;
-							skipNextButton();
-							}
-							else
-							{
-							 ShowNextButton();
-                                nextButtonStatus = true;
-                                setProgress(getMediaObj[i].progressBarValue);
-                                askClickNext = setTimeout(askClickNextButton, 30000);
-								}
-                                return;
-							
-							}
-							
-                        } else if (i == (getMediaObj.length - 1)) {
-                            $("#mainFrame").attr("src", currentMediaUrl);
- 
-                            var d = new Date();
-                            pageStartTimestamp = d.getTime();
- 
-                        }
-                    }
- 
-                }
-            }
-
-        }
-
         function showMedia(data) {
             repeatList = [];
+			SpeakRepeatList=[];
             HideRepeatButton();
             HidePlayVideoButton();
             currentMediaUrl = currentMediaPath + data;
-            showScriptNextButton(data)
-			
-        }
-		function skipNextButton()
-		{
-		 nextButtonStatus = false;
-                HideRepeatButton();
-                HidePlayVideoButton()
-                HideNextButton();
-                var d = new Date();
-                pageStartTimestamp = d.getTime();
-				ShowButtonAndWait=false;
-				
-				 $("#mainFrame").attr("src", currentMediaUrl);
-				  setProgressValue(currentMediaUrl);
-				
-		}
-        var askClickNext;
+            $("#mainFrame").attr("src", currentMediaUrl);
+          
+            var d = new Date();
+            pageStartTimestamp = d.getTime();
 
+        }
+		var askClickNext;
         function nextPage(data) {
             repeatList = [];
-			var currentMediaUrlList1=currentMediaUrl.split("/");
-			var currentMediaUrlList2=(currentMediaUrlList1[currentMediaUrlList1.length-1]).split('?');
+			SpeakRepeatList=[];
             currentMediaUrl = currentMediaPath + data;
             if (NextButtonOn == true && isHasNextButton == true) {
-			
-			if(currentMediaUrlList2[0]=="L18-MainPage.html" || currentMediaUrlList2[0]=="L11Round1AMainPage.html")
-			{
-				nextButtonStatus = false;
-                HideRepeatButton();
-                HidePlayVideoButton()
-                HideNextButton();
-                var d = new Date();
-                pageStartTimestamp = d.getTime();
-                $("#mainFrame").attr("src", currentMediaUrl);
-
-                //getPageName and display progress
-                setProgressValue(currentMediaUrl);
-			
-			}
-			else
-			{
-			showScriptNextButton(data); //modified by Cai, 10/24/2018
-			 /*ShowNextButton();
+                ShowNextButton();
                 nextButtonStatus = true;
-
-                askClickNext = setTimeout(askClickNextButton, 30000);*/
-			
-			}
-               
+				
+				askClickNext=setTimeout(askClickNextButton, 30000);
 
             } else {
                 nextButtonStatus = false;
@@ -773,24 +739,28 @@
                 var d = new Date();
                 pageStartTimestamp = d.getTime();
                 $("#mainFrame").attr("src", currentMediaUrl);
-
+              
                 //getPageName and display progress
                 setProgressValue(currentMediaUrl);
 
             }
 
         }
-
-        function askClickNextButton() {
-            var lessonID = sessionStorage.getItem("LessonID");
-            if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID == "lesson29") {
-                var playList = setPlayList("0", "s1");
-                AngentPlay(playList);
-                askClickNext = setTimeout(askClickNextButton, 30000);
-
-            }
-        }
-
+		function askClickNextButton()
+		{
+			var lessonID=sessionStorage.getItem("LessonID");
+			if(lessonID=="lesson1" ||lessonID=="lesson4" || lessonID=="lesson6"|| lessonID=="lesson7"|| lessonID=="lesson29"|| lessonID=="lesson25")
+			{
+				var playList=setPlayList("0", "s1");
+				 AngentPlay(playList);
+				 askClickNext=setTimeout(askClickNextButton, 30000);
+			
+			}
+		}
+		function getAgentMessage(msg)
+		{
+			startLesson();
+		}
 
         function GetWorldEvent(msg) {
             var msgType = typeof msg;
@@ -803,28 +773,12 @@
                 HidePlayVideoButton();
                 if (msgType == "string") {
                     var n = msg.indexOf("userAnswer_");
-					var n2 = msg.indexOf("userInput_");
                     if (n != -1) {
                         var getUserAnswer = msg.split("_");
                         mediaActions = getUserAnswer[1];
                         userAnswer = mediaActions;
                         userSelectedItem = getUserAnswer[2];
-                        if (userSelectedItem == "I'm not sure.") {
-                            mediaActions = "unsure";
-                        }
-                    } 
-					else if(n2!=-1)
-					{
-						var getUserAnswer = msg.split("_");
-                        mediaActions = getUserAnswer[1];
-                        userAnswer = mediaActions;
-						userInput=mediaActions
-                        userSelectedItem = getUserAnswer[2];
-						mediaActions="userInputTrue";
-                       
-					
-					}
-					else {
+                    } else {
                         mediaActions = msg;
                     }
 
@@ -832,25 +786,23 @@
                     userAnswer = msg.userAnswer;
                     userSelectedItem = msg.userSelectedItem;
                     mediaActions = msg.userAnswer;
-                    var lessonID = sessionStorage.getItem("LessonID");
-                    if (lessonID == "lesson8"||lessonID == "lesson10") {
-                        getQuestionName = msg.question;
-                    }
-
+					var lessonID=sessionStorage.getItem("LessonID");
+					if(lessonID=="lesson8")
+					{
+					getQuestionName=msg.question;
+					}
+					
 
                 }
 
 
             } else {
                 mediaActions = msg;
-                var lessonID = sessionStorage.getItem("LessonID");
-                if (mediaActions == mediaActions && lessonID == "lesson8") {
-                    repeatList = [];
-
-                }
-                if (lessonID == "lesson10" && msg == "Continue") {
-                    repeatList = [];
-                }
+				var lessonID=sessionStorage.getItem("LessonID");
+				if(mediaActions==mediaActions && lessonID=="lesson8"){
+				 repeatList = [];
+				
+				}
             }
             if (repeatStatus == true) {
                 repeatList = [];
@@ -943,8 +895,8 @@
                     if (getMediaObj[i].quesionName != undefined) {
 
                         var questionName1 = getMediaObj[i].quesionName.trim().toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+						console.log("111111-----------"+getQuestionName)
                         var questionName2 = getQuestionName.trim().toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
-
                         if (questionName1 == questionName2) {
                             if (getType == "QuestionPage") {
                                 PresentationHistoryObj.Type = "QuestionPage";
@@ -952,14 +904,13 @@
                                 PresentationHistoryObj.questionID = getMediaObj[i].questionID;
                                 PresentationHistoryObj.questionLevel = getMediaObj[i].questionLevel;
                                 PresentationHistoryObj.progressBarValue = getMediaObj[i].progressBarValue;
+								 if (getMediaObj[i].notCountedItem == false && userAnswer !== "" && waitForUserResponse == true) {
+								  var d = new Date();
+								var userAnswerTimestamp = d.getTime();
 
-                                if (getMediaObj[i].notCountedItem == false && userAnswer !== "" && waitForUserResponse == true) {
-                                    var d = new Date();
-                                    var userAnswerTimestamp = d.getTime();
-
-                                    CountTotalScore(questionName1, userAnswer, getMediaObj[i].questionLevel, PresentationHistoryObj.userSelectedItem, PresentationHistoryObj.questionID, PresentationHistoryObj.pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, PresentationHistoryObj.userAnswerSpendTime, PresentationHistoryObj.progressBarValue);
-                                }
-                                PresentationHistoryObj.newUserPerfomaceLog = TotalScoreArr;
+                                CountTotalScore(questionName1, userAnswer, getMediaObj[i].questionLevel,PresentationHistoryObj.userSelectedItem,PresentationHistoryObj.questionID,PresentationHistoryObj.pageStartTimestamp,talkingHeadSpeechEndTimestamp,userAnswerTimestamp,PresentationHistoryObj.userAnswerSpendTime);
+								}
+								PresentationHistoryObj.newUserPerfomaceLog = TotalScoreArr;
                                 console.log(getMediaObj[i].questionID);
                             } else if (getType == "ReadingPage") {
                                 PresentationHistoryObj.Type = "ReadingPage";
@@ -979,13 +930,13 @@
                             PresentationHistoryObj.progressBarValue = getMediaObj[i].progressBarValue;
                             PresentationHistoryObj.notCountedItem = getMediaObj[i].notCountedItem;
                             PresentationHistoryObj.questionLevel = getMediaObj[i].questionLevel;
-                            var d = new Date();
-                            var userAnswerTimestamp = d.getTime();
+							 var d = new Date();
+								var userAnswerTimestamp = d.getTime();
                             if (getMediaObj[i].notCountedItem == false && userAnswer !== "" && waitForUserResponse == true) {
 
-                                CountTotalScore(getMediaObj[i].questionPath, userAnswer, getMediaObj[i].questionLevel, PresentationHistoryObj.userSelectedItem, PresentationHistoryObj.questionID, PresentationHistoryObj.pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, PresentationHistoryObj.userAnswerSpendTime,PresentationHistoryObj.progressBarValue);
+                                CountTotalScore(getMediaObj[i].questionPath, userAnswer, getMediaObj[i].questionLevel,PresentationHistoryObj.userSelectedItem,PresentationHistoryObj.questionID,PresentationHistoryObj.pageStartTimestamp,talkingHeadSpeechEndTimestamp,userAnswerTimestamp,PresentationHistoryObj.userAnswerSpendTime);
                             }
-                            PresentationHistoryObj.newUserPerfomaceLog = TotalScoreArr;
+							PresentationHistoryObj.newUserPerfomaceLog = TotalScoreArr;
 
                         } else if (getType == "ReadingPage") {
                             PresentationHistoryObj.Type = "ReadingPage";
@@ -1054,16 +1005,17 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="controlButton">
+    <div id="containerNoImg">
+        <!--div id="controlButton">
             <div id="bttalkingheadSwitch" class="mybutton" onclick="talkingheadSwitchControl()">+</div>
             <div id="btDiaplayAreaSwitch" class="mybutton" onclick="diaplayAreahControl()">+</div>
-        </div>
+        </div-->
         <div id="agentFrame">
 
-            <iframe id="agents" src="https://ace.autotutor.org/pilot3/scripts/lesson0/html5/index.html?lessonName=Lesson0"></iframe>
+            <iframe id="agentsLarge" src="angentsjs/speakTH.html"></iframe>
 
         </div>
+		<div id="mainscreen" style="display:none;">
         <div id="PB">Progress Bar
 
             <div class="pscontainer">
@@ -1110,6 +1062,7 @@
             <textarea id="speechArea" name="textInput" autofocus rows="15" cols="111"></textarea>
         </div>
     </div>
+	</div>
 
 </body>
 

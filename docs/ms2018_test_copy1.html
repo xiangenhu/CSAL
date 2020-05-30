@@ -57,13 +57,11 @@
         var allLessonsInfoObj;
         var talkingHeadSpeechEndTimestamp;
 		var ShowButtonAndWait=false;
-		var isQuestionPageAfterFirst=false;
 
         function setCurrentLessonInfo(lessonID) {
-			if(lessonID=="lesson23_emh"||lessonID=="lesson23_hme"||lessonID=="lesson28_emh"||lessonID=="lesson28_hme")
-			RepeatButtonOn=false;
+
             for (var i in allLessonsInfoObj) {
-                var lessonStatus = false;
+                var lessonStatus = false
                 if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId) {
                     var LessonInfo = allLessonsInfoObj[i];
                     sessionStorage.setItem("LessonName", LessonInfo.lessonName);
@@ -261,13 +259,10 @@
                 var pageNameList = List[0].split("/");
                 var pageName = pageNameList[pageNameList.length - 1];
                 for (var i in currentLessonInfoObj.pages) {
-					console.log(currentLessonInfoObj.pages[i].questionPath); 
 
                     if (currentLessonInfoObj.pages[i].questionPath == pageName) {
                         var progressBarValue = currentLessonInfoObj.pages[i].progressBarValue;
-						console.log("progress value: "+ progressBarValue); 
                         if (progressBarValue != "0") {
-							
                             setProgress(progressBarValue);
                         }
 
@@ -480,10 +475,6 @@
                         break;
 
                     case "End":
-					   if (currentLessonID == "lesson10") 
-					   {
-						setProgress(100);
-						}
                         showEndingPage();
                         mainpageInit2();
                         InitParameters();
@@ -647,50 +638,25 @@
          function showScriptNextButton(data) {
             var getMediaObj = currentLessonInfoObj.pages;
             var lessonID = sessionStorage.getItem("LessonID");
-             var dataURL = data.toLowerCase();
-			if(dataURL.indexOf("?")>0)
-			dataURL = dataURL.substring(0,dataURL.indexOf("?"));
-			dataURL = dataURL.replace("media/","media\\");
+            
             if (NextButtonOn == true && isHasNextButton == true) {
                 for (var i in getMediaObj) {
-				if (getMediaObj[i].Type == "ReadingPage")
-					{
-					 var	mediaPath = "media\\" + getMediaObj[i].MediaPath;                      
-						 if (mediaPath.toLowerCase() == dataURL) 
-						 {
-							isQuestionPageAfterFirst=false;
-						 }
-					}
                     if (getMediaObj[i].Type == "QuestionPage") {
                         var pagePath = "media\\" + getMediaObj[i].questionPath;
-                        //if (pagePath.toLowerCase() == data.toLowerCase()) 
-						 if (pagePath.toLowerCase() == dataURL) 
-						{
+                        if (pagePath.toLowerCase() == data.toLowerCase()) {
                         if(lessonID=="lesson8" ||  lessonID == "lesson9" || lessonID == "lesson10")
                             {
                                $("#mainFrame").attr("src", currentMediaUrl);
  
 								var d = new Date();
 								pageStartTimestamp = d.getTime();
-								 if(lessonID == "lesson10") // ***zc: added by z cai 11/30/2018
-								 {
-								  setProgress(getMediaObj[i].progressBarValue);
-								 }
                             }
-							else
-							{
-							if(!isQuestionPageAfterFirst)
-							{
-							isQuestionPageAfterFirst=true;
-							skipNextButton();
-							}
 							else
 							{
 							 ShowNextButton();
                                 nextButtonStatus = true;
                                 setProgress(getMediaObj[i].progressBarValue);
                                 askClickNext = setTimeout(askClickNextButton, 30000);
-								}
                                 return;
 							
 							}
@@ -717,20 +683,6 @@
             showScriptNextButton(data)
 			
         }
-		function skipNextButton()
-		{
-		 nextButtonStatus = false;
-                HideRepeatButton();
-                HidePlayVideoButton()
-                HideNextButton();
-                var d = new Date();
-                pageStartTimestamp = d.getTime();
-				ShowButtonAndWait=false;
-				
-				 $("#mainFrame").attr("src", currentMediaUrl);
-				  setProgressValue(currentMediaUrl);
-				
-		}
         var askClickNext;
 
         function nextPage(data) {
@@ -756,11 +708,10 @@
 			}
 			else
 			{
-			showScriptNextButton(data); //modified by Cai, 10/24/2018
-			 /*ShowNextButton();
+			 ShowNextButton();
                 nextButtonStatus = true;
 
-                askClickNext = setTimeout(askClickNextButton, 30000);*/
+                askClickNext = setTimeout(askClickNextButton, 30000);
 			
 			}
                
@@ -833,7 +784,7 @@
                     userSelectedItem = msg.userSelectedItem;
                     mediaActions = msg.userAnswer;
                     var lessonID = sessionStorage.getItem("LessonID");
-                    if (lessonID == "lesson8"||lessonID == "lesson10") {
+                    if (lessonID == "lesson8") {
                         getQuestionName = msg.question;
                     }
 
