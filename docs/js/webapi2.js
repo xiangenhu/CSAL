@@ -12,10 +12,10 @@ function Post(acePostjson) {
         url: aceurl,
         data: content,
         success: function(data) {
-
-
+			xAPIPostStart(acePostjson,"start");
         }
     }).done(function(data) {
+		AceResponse(data,"response");
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
             Put(acePostjson);
@@ -32,8 +32,6 @@ function Post(acePostjson) {
 }
 
 function Put(acePutjson) {
-
-   
     var content = acePutjson;
     var method = "PUT";
     webAPImethod = method;
@@ -42,7 +40,12 @@ function Put(acePutjson) {
         url: aceurl,
         data: content,
         success: function(data) {
-			
+		// post xAPI User Action
+		if (acePutjson.PresentationHistory!=null){
+			console.log(JSON.stringify(acePutjson));
+			var xAPIdata=acePutjson;
+			xAPIPostOther(xAPIdata,"action");
+			}
         },
         error: function(xhr, textStatus, errorThrown) {
             errorMessage = xhr + "\n" + textStatus + "\n" + errorThrown;
@@ -54,6 +57,7 @@ function Put(acePutjson) {
         var errorInfo = GetRuleError(data);
         var actionsError = GetActions(data);
 		console.log(actions);
+		AceResponse(data,"response");
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {
            

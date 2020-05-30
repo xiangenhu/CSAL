@@ -4,7 +4,7 @@
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
-		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31") {
+		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson30") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -821,7 +821,135 @@
 		            userPerformancePage("Failed");
 
 		        } 
-			}
+			} else if (lessonID == "lesson33"){
+				var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+		        }
+		         var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+				console.log("Correct: " + countCrrectNum); 
+				 if (countCrrectNum >= 4) {
+		            userPerformancePage("pass");
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed");
+
+		        } 
+			} else if (lessonID == "lesson12"){
+				var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+		        }
+		         var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+				 if (countCrrectNum >= 9) {
+
+		            userPerformancePage("pass");
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed");
+
+		        } 
+			} 
+			else if (lessonID == "lesson17") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        if (getBranch == "Hard") {
+		            if (countCrrectNum >= 16) {
+
+		                userPerformancePage("pass");
+		            } else {
+		                //no pass
+		                userPerformancePage("Failed");
+
+		            }
+
+
+		        } else {
+		            if (countCrrectNum >= 12) {
+
+		                userPerformancePage("pass");
+		            } else {
+		                //no pass
+		                userPerformancePage("Failed");
+
+		            }
+
+
+		        }
+
+
+		    } 	else if (lessonID == "lesson30") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        if (getBranch == "Hard") {
+		            if (countCrrectNum >= 14) {
+
+		                userPerformancePage("pass");
+		            } else {
+		                //no pass
+		                userPerformancePage("Failed");
+
+		            }
+
+
+		        } else {
+		            if (countCrrectNum >= 12) {
+
+		                userPerformancePage("pass");
+		            } else {
+		                //no pass
+		                userPerformancePage("Failed");
+
+		            }
+
+
+		        }
+
+
+		    } 
+
 
 		}
 

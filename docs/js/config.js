@@ -15,7 +15,7 @@ var systemConfig={
   "lessonsConfig": [
     {
       "lessonId": "lesson0",
-      "lessonName": "First Lesson",
+      "lessonName": "Orientation",
       "lessonDes": "How to use AutoTutor on the computer",
       "isRecoverable": false,
       "isShow": false,
@@ -78,7 +78,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-1.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -86,7 +86,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -94,7 +94,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -110,7 +110,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-5.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -118,7 +118,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -126,7 +126,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-7.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -142,7 +142,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-9.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -150,7 +150,7 @@ var systemConfig={
           "questionPath": "Lesson1-Medium0-10.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -158,7 +158,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-0.html",
           "questionID": "11",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -166,7 +166,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-2.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -174,7 +174,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-3.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 50,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -182,7 +182,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-4.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -190,7 +190,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-5.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 70,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -206,7 +206,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-7.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -222,7 +222,7 @@ var systemConfig={
           "questionPath": "Lesson1-Hard0-10.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 90,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -238,7 +238,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-1.html",
           "questionID": "21",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -246,7 +246,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-2.html",
           "questionID": "22",
           "questionLevel": "Easy",
-          "progressBarValue": 50,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -254,7 +254,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-3.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 50,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -262,7 +262,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-4.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -270,7 +270,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-5.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -278,7 +278,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-6.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 70,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -286,7 +286,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-7.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -294,7 +294,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-8.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -302,7 +302,7 @@ var systemConfig={
           "questionPath": "Lesson1-Easy0-9.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 90,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -2444,7 +2444,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 2,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_, Here is another sentence.  Kim sees, her, every month for checkups.  Click on the noun that best replaces the pronoun, her.",
           "notCountedItem": false
         },
@@ -2453,7 +2453,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 5,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_,try this next one. Which of the highlighted nouns best replaces the pronoun, she, in this sentence? Then she takes Kim's blood pressure and gets a blood sample.",
           "notCountedItem": false
         },
@@ -2462,7 +2462,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 10,
+          "progressBarValue": 25,
           "quesionName": "Jordan:_user_, please help me. Which noun could replace the pronoun, she, in this sentence?: She also lets Kim and Ben listen.",
           "notCountedItem": false
         },
@@ -2471,7 +2471,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 15,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_, Here is the next sentence. It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. Which choice replaces the word, their, in this sentence?",
           "notCountedItem": false
         },
@@ -2480,7 +2480,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_, who does the pronoun, her, refer to in this sentence? The doctor reminds her to eat healthy food and drink lots of water.",
           "notCountedItem": false
         },
@@ -2498,7 +2498,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 30,
+          "progressBarValue": 25,
           "quesionName": "Jordan:_user_,can you help me with this one? Here is the sentence: They could harm the baby's health. Which word should we put in place of the pronoun, they?",
           "notCountedItem": false
         },
@@ -2507,7 +2507,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 35,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_ ,here is another sentence. The doctor also tells Kim and Ben what to expect as it grows. In that sentence the pronoun,It, can be best replaced by which noun.",
           "notCountedItem": false
         },
@@ -2516,7 +2516,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 25,
           "quesionName": "Jordan:_user_, alright. we just have a few more to knock out. How would you replace the pronoun, they, in the sentence: they are eager to visit?",
           "notCountedItem": false
         },
@@ -2525,7 +2525,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 45,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_, in this next sentence, how would you replace the pronoun, their. These classes are a good way to meet other parents and learn about their baby.",
           "notCountedItem": false
         },
@@ -2534,7 +2534,7 @@ var systemConfig={
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "11",
           "questionLevel": "Medium",
-          "progressBarValue": 50,
+          "progressBarValue": 25,
           "quesionName": "Jordan:_user_, What do you think about this sentence?  They will also discuss feeding, dressing, diapering, and bathing babies. What could we put in place of the pronoun, they?",
           "notCountedItem": false
         },
@@ -2543,7 +2543,7 @@ var systemConfig={
          "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 53,
+          "progressBarValue": 54,
           "quesionName": "Cristina:_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted.",
           "notCountedItem": false
         },
@@ -2794,7 +2794,7 @@ var systemConfig={
           "questionPath": "AdPerky.html",
           "questionID": "1",
           "questionLevel": "TP11",
-          "progressBarValue": 1,
+          "progressBarValue": 10,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
@@ -2803,7 +2803,7 @@ var systemConfig={
           "questionPath": "AdPerky.html",
           "questionID": "2",
           "questionLevel": "TP12",
-          "progressBarValue": 4,
+          "progressBarValue": 10,
           "quesionName": "Cristina:Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer.",
           "notCountedItem": false
         },
@@ -2812,7 +2812,7 @@ var systemConfig={
           "questionPath": "AdPerky.html",
           "questionID": "3",
           "questionLevel": "TP13",
-          "progressBarValue": 8,
+          "progressBarValue": 10,
           "quesionName": "Cristina:Why is the writer comparing the reader and a light. _user_, Please press the correct response.",
           "notCountedItem": false
         },
@@ -2821,7 +2821,7 @@ var systemConfig={
           "questionPath": "AdPerky.html",
           "questionID": "4",
           "questionLevel": "TP14",
-          "progressBarValue": 12,
+          "progressBarValue": 10,
           "quesionName": "Cristina:What is the intended meaning of the phrase, out like a light. press the correct response.",
           "notCountedItem": false
         },
@@ -2830,7 +2830,7 @@ var systemConfig={
           "questionPath": "AdPerky.html",
           "questionID": "5",
           "questionLevel": "TP15",
-          "progressBarValue": 16,
+          "progressBarValue": 10,
           "quesionName": "Cristina:Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response.",
           "notCountedItem": false
         },
@@ -2848,7 +2848,7 @@ var systemConfig={
           "questionPath": "AdGlasses.html",
           "questionID": "7",
           "questionLevel": "TP22",
-          "progressBarValue": 24,
+          "progressBarValue": 20,
           "quesionName": "Cristina:As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer.",
           "notCountedItem": false
         },
@@ -2857,7 +2857,7 @@ var systemConfig={
           "questionPath": "AdGlasses.html",
           "questionID": "8",
           "questionLevel": "TP23",
-          "progressBarValue": 28,
+          "progressBarValue": 20,
           "quesionName": "Cristina:_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response.",
           "notCountedItem": false
         },
@@ -2866,7 +2866,7 @@ var systemConfig={
           "questionPath": "AdGlasses.html",
           "questionID": "9",
           "questionLevel": "TP24",
-          "progressBarValue": 32,
+          "progressBarValue": 20,
           "quesionName": "Cristina:_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response.",
           "notCountedItem": false
         },
@@ -2875,7 +2875,7 @@ var systemConfig={
           "questionPath": "AdGlasses.html",
           "questionID": "10",
           "questionLevel": "TP25",
-          "progressBarValue": 36,
+          "progressBarValue": 20,
           "quesionName": "Cristina:If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response.",
           "notCountedItem": false
         },
@@ -2893,7 +2893,7 @@ var systemConfig={
           "questionPath": "AdOrganize.html",
           "questionID": "12",
           "questionLevel": "TP32",
-          "progressBarValue": 43,
+          "progressBarValue": 40,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer.",
           "notCountedItem": false
         },
@@ -2902,7 +2902,7 @@ var systemConfig={
           "questionPath": "AdOrganize.html",
           "questionID": "13",
           "questionLevel": "TP33",
-          "progressBarValue": 46,
+          "progressBarValue": 40,
           "quesionName": "Cristina:Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." ,
           "notCountedItem": false
         },
@@ -2911,7 +2911,7 @@ var systemConfig={
           "questionPath": "AdOrganize.html",
           "questionID": "14",
           "questionLevel": "TP34",
-          "progressBarValue": 49,
+          "progressBarValue": 40,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
@@ -2920,7 +2920,7 @@ var systemConfig={
           "questionPath": "AdOrganize.html",
           "questionID": "15",
           "questionLevel": "TP35",
-          "progressBarValue": 52,
+          "progressBarValue": 40,
           "quesionName": "Cristina:What is the intended meaning of this idiom? press the correct response.",
           "notCountedItem": false
         },{
@@ -2928,7 +2928,7 @@ var systemConfig={
           "questionPath": "AdOrganize.html",
           "questionID": "15",
           "questionLevel": "TP35",
-          "progressBarValue": 55,
+          "progressBarValue": 40,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
@@ -2937,7 +2937,7 @@ var systemConfig={
           "questionPath": "AdPotato.html",
           "questionID": "16",
           "questionLevel": "TP41",
-          "progressBarValue": 58,
+          "progressBarValue": 60,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
@@ -2946,7 +2946,7 @@ var systemConfig={
           "questionPath": "AdPotato.html",
           "questionID": "17",
           "questionLevel": "TP42",
-          "progressBarValue": 61,
+          "progressBarValue": 60,
           "quesionName": "Cristina:Is there a comparison being made in the phrase, couch potato? press the correct answer.",
           "notCountedItem": false
         },
@@ -2955,7 +2955,7 @@ var systemConfig={
           "questionPath": "AdPotato.html",
           "questionID": "18",
           "questionLevel": "TP43",
-          "progressBarValue": 64,
+          "progressBarValue": 60,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
@@ -2964,7 +2964,7 @@ var systemConfig={
           "questionPath": "AdPotato.html",
           "questionID": "19",
           "questionLevel": "TP44",
-          "progressBarValue": 67,
+          "progressBarValue": 60,
           "quesionName": "Cristina:What is the intended meaning of couch potato? Please press the correct answer below.",
           "notCountedItem": false
         },
@@ -2973,7 +2973,7 @@ var systemConfig={
           "questionPath": "AdPotato.html",
           "questionID": "20",
           "questionLevel": "TP45",
-          "progressBarValue": 70,
+          "progressBarValue": 60,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response.",
           "notCountedItem": false
         },
@@ -2982,7 +2982,7 @@ var systemConfig={
           "questionPath": "NewAdSpa.html",
           "questionID": "21",
           "questionLevel": "TP51",
-          "progressBarValue": 73,
+          "progressBarValue": 80,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer.",
           "notCountedItem": false
         },
@@ -2991,7 +2991,7 @@ var systemConfig={
           "questionPath": "NewAdSpa.html",
           "questionID": "22",
           "questionLevel": "TP52",
-          "progressBarValue": 76,
+          "progressBarValue": 80,
           "quesionName": "Cristina:Is a comparison being made in the phrase, on cloud nine? Please press yes or no.",
           "notCountedItem": false
         },
@@ -3000,7 +3000,7 @@ var systemConfig={
           "questionPath": "NewAdSpa.html",
           "questionID": "23",
           "questionLevel": "TP53",
-          "progressBarValue": 79,
+          "progressBarValue": 80,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response.",
           "notCountedItem": false
         },
@@ -3009,7 +3009,7 @@ var systemConfig={
           "questionPath": "NewAdSpa.html",
           "questionID": "24",
           "questionLevel": "TP54",
-          "progressBarValue": 82,
+          "progressBarValue": 80,
           "quesionName": "Cristina:What is the intended meaning of this nonliteral language, on cloud nine? press the correct response.",
           "notCountedItem": false
         },
@@ -3018,7 +3018,7 @@ var systemConfig={
           "questionPath": "NewAdSpa.html",
           "questionID": "25",
           "questionLevel": "TP55",
-          "progressBarValue": 85,
+          "progressBarValue": 80,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response.",
           "notCountedItem": false
         },
@@ -3027,7 +3027,7 @@ var systemConfig={
           "questionPath": "AdTea.html",
           "questionID": "26",
           "questionLevel": "TP61",
-          "progressBarValue": 88,
+          "progressBarValue": 90,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
@@ -3036,7 +3036,7 @@ var systemConfig={
           "questionPath": "AdTea.html",
           "questionID": "27",
           "questionLevel": "TP62",
-          "progressBarValue": 91,
+          "progressBarValue": 90,
           "quesionName": "Cristina:Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no.",
           "notCountedItem": false
         },
@@ -3045,7 +3045,7 @@ var systemConfig={
           "questionPath": "AdTea.html",
           "questionID": "28",
           "questionLevel": "TP63",
-          "progressBarValue": 94,
+          "progressBarValue": 91,
           "quesionName": "Cristina:Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response.",
           "notCountedItem": false
         },
@@ -3054,7 +3054,7 @@ var systemConfig={
           "questionPath": "AdTea.html",
           "questionID": "29",
           "questionLevel": "TP64",
-          "progressBarValue": 97,
+          "progressBarValue": 91,
           "quesionName": "Cristina:What is the intended meaning of, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
         },
@@ -3063,7 +3063,7 @@ var systemConfig={
           "questionPath": "AdTea.html",
           "questionID": "30",
           "questionLevel": "TP65",
-          "progressBarValue": 100,
+          "progressBarValue": 91,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
         }
@@ -3079,7 +3079,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "Lesson11intro3.mp4:2",
       "isHasProgressBar": false,
       "isHasNextButton": true,
@@ -3484,7 +3484,7 @@ var systemConfig={
           "questionPath": "L14Activity1.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -3500,7 +3500,7 @@ var systemConfig={
           "questionPath": "L14Activity3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -3516,7 +3516,7 @@ var systemConfig={
           "questionPath": "L14Activity8.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -3532,7 +3532,7 @@ var systemConfig={
           "questionPath": "L14ActivityB.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -3540,7 +3540,7 @@ var systemConfig={
           "questionPath": "L14ActivityC.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -3556,7 +3556,7 @@ var systemConfig={
     {
       "lessonId": "lesson15",
       "lessonName": "Complex Stories ",
-      "lessonDes": "Understandig complex stories ",
+      "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
       "isRecoverable": true,
       "isShow": true,
@@ -3611,7 +3611,7 @@ var systemConfig={
           "questionPath": "Lesson15-M2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -3619,7 +3619,7 @@ var systemConfig={
           "questionPath": "Lesson15-M3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -3627,7 +3627,7 @@ var systemConfig={
           "questionPath": "Lesson15-M4.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -3643,7 +3643,7 @@ var systemConfig={
           "questionPath": "Lesson15-M6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -3651,7 +3651,7 @@ var systemConfig={
           "questionPath": "Lesson15-M7.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -3659,7 +3659,7 @@ var systemConfig={
           "questionPath": "Lesson15-M8.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -3667,7 +3667,7 @@ var systemConfig={
           "questionPath": "Lesson15-M9.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -3675,7 +3675,7 @@ var systemConfig={
           "questionPath": "Lesson15-M10.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -3683,7 +3683,7 @@ var systemConfig={
           "questionPath": "Lesson15-M11.html",
           "questionID": "11",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -3691,7 +3691,7 @@ var systemConfig={
           "questionPath": "Lesson15-D1.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -3699,7 +3699,7 @@ var systemConfig={
           "questionPath": "Lesson15-D2.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -3707,7 +3707,7 @@ var systemConfig={
           "questionPath": "Lesson15-D3.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -3715,7 +3715,7 @@ var systemConfig={
           "questionPath": "Lesson15-D4.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -3723,7 +3723,7 @@ var systemConfig={
           "questionPath": "Lesson15-D5.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -3731,7 +3731,7 @@ var systemConfig={
           "questionPath": "Lesson15-D6.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -3739,7 +3739,7 @@ var systemConfig={
           "questionPath": "Lesson15-D7.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -3747,7 +3747,7 @@ var systemConfig={
           "questionPath": "Lesson15-D8.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -3755,7 +3755,7 @@ var systemConfig={
           "questionPath": "Lesson15-D9.html",
           "questionID": "20",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -3771,7 +3771,7 @@ var systemConfig={
           "questionPath": "Lesson15-E1.html",
           "questionID": "22",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -3779,7 +3779,7 @@ var systemConfig={
           "questionPath": "Lesson15-E2.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -3787,7 +3787,7 @@ var systemConfig={
           "questionPath": "Lesson15-E3.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -3795,7 +3795,7 @@ var systemConfig={
           "questionPath": "Lesson15-E4.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -3803,7 +3803,7 @@ var systemConfig={
           "questionPath": "Lesson15-E5.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -3811,7 +3811,7 @@ var systemConfig={
           "questionPath": "Lesson15-E6.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -3819,7 +3819,7 @@ var systemConfig={
           "questionPath": "Lesson15-E7.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -3827,7 +3827,7 @@ var systemConfig={
           "questionPath": "Lesson15-E8.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -3835,7 +3835,7 @@ var systemConfig={
           "questionPath": "Lesson15-E9.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -3898,7 +3898,7 @@ var systemConfig={
           "questionPath": "Lesson16-M1.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -3906,7 +3906,7 @@ var systemConfig={
           "questionPath": "Lesson16-M2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -3922,7 +3922,7 @@ var systemConfig={
           "questionPath": "Lesson16-M4.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -3938,7 +3938,7 @@ var systemConfig={
           "questionPath": "Lesson16-M6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -3946,7 +3946,7 @@ var systemConfig={
           "questionPath": "Lesson16-D1.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -3954,7 +3954,7 @@ var systemConfig={
           "questionPath": "Lesson16-D2.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -3970,7 +3970,7 @@ var systemConfig={
           "questionPath": "Lesson16-D4.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -3978,7 +3978,7 @@ var systemConfig={
           "questionPath": "Lesson16-D5.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -3986,7 +3986,7 @@ var systemConfig={
           "questionPath": "Lesson16-D6.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -3994,7 +3994,7 @@ var systemConfig={
           "questionPath": "Lesson16-D7.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -4002,7 +4002,7 @@ var systemConfig={
           "questionPath": "Lesson16-D8.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -4010,7 +4010,7 @@ var systemConfig={
           "questionPath": "Lesson16-D9.html",
           "questionID": "20",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -4018,7 +4018,7 @@ var systemConfig={
           "questionPath": "Lesson16-D10.html",
           "questionID": "21",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -4034,7 +4034,7 @@ var systemConfig={
           "questionPath": "Lesson16-E1.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -4042,7 +4042,7 @@ var systemConfig={
           "questionPath": "Lesson16-E2.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -4058,7 +4058,7 @@ var systemConfig={
           "questionPath": "Lesson16-E4.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -4066,7 +4066,7 @@ var systemConfig={
           "questionPath": "Lesson16-E5.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -4074,7 +4074,7 @@ var systemConfig={
           "questionPath": "Lesson16-E6.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -4090,7 +4090,7 @@ var systemConfig={
           "questionPath": "Lesson16-E8.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -4098,7 +4098,7 @@ var systemConfig={
           "questionPath": "Lesson16-E9.html",
           "questionID": "31",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -4106,7 +4106,7 @@ var systemConfig={
           "questionPath": "Lesson16-E10.html",
           "questionID": "32",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -4114,7 +4114,7 @@ var systemConfig={
           "questionPath": "Lesson16-E11.html",
           "questionID": "33",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -4129,7 +4129,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "Lesson17_11.17.15.mp4:2",
       "isHasProgressBar": true,
       "isHasNextButton": true,
@@ -4169,7 +4169,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-1medium.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -4177,7 +4177,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-2medium.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -4185,7 +4185,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-3medium.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -4193,7 +4193,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-4medium.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 20,
           "notCountedItem": false
         },
         {
@@ -4201,7 +4201,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-5medium.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -4209,7 +4209,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-6medium.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -4217,7 +4217,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-7medium.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -4225,7 +4225,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-8medium.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -4233,7 +4233,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-9medium.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -4241,7 +4241,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-10medium.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -4249,7 +4249,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-1hard.html",
           "questionID": "11",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 53,
           "notCountedItem": false
         },
         {
@@ -4257,7 +4257,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-2hard.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 57,
           "notCountedItem": false
         },
         {
@@ -4265,7 +4265,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-3hard.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -4273,7 +4273,15 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-4hard.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 63,
+          "notCountedItem": false
+        },
+		{
+          "Type": "QuestionPage",
+          "questionPath": "Lesson17-Main0-5hard-12022016.html",
+          "questionID": "32",
+          "questionLevel": "Hard",
+          "progressBarValue": 66,
           "notCountedItem": false
         },
         {
@@ -4281,7 +4289,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-6hard.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 69,
           "notCountedItem": false
         },
         {
@@ -4289,7 +4297,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-6hard.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 72,
           "notCountedItem": false
         },
         {
@@ -4297,7 +4305,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-7hard.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -4305,7 +4313,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-8hard.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 78,
           "notCountedItem": false
         },
         {
@@ -4313,7 +4321,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-9hard.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 81,
           "notCountedItem": false
         },
         {
@@ -4321,7 +4329,32 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-10hard.html",
           "questionID": "20",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 85,
+          "notCountedItem": false
+        },
+		 {
+          "Type": "QuestionPage",
+          "questionPath": "Lesson17-Main0-12hard.html",
+          "questionID": "33",
+          "questionLevel": "Hard",
+          "progressBarValue": 95,
+          "notCountedItem": false
+        },
+        
+        {
+          "Type": "QuestionPage",
+          "questionPath": "Lesson17-Main0-11hard.html",
+          "questionID": "35",
+          "questionLevel": "Hard",
+          "progressBarValue": 90,
+          "notCountedItem": false
+        },
+        {
+          "Type": "QuestionPage",
+          "questionPath": "Lesson17-Main0-FinalQuestion.html",
+          "questionID": "36",
+          "questionLevel": "Hard",
+          "progressBarValue": 100,
           "notCountedItem": false
         },
         {
@@ -4329,7 +4362,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-1easy.html",
           "questionID": "21",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -4345,7 +4378,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-3easy.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -4353,7 +4386,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-4easy.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -4361,7 +4394,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-5easy.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -4369,7 +4402,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-6easy.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 78,
           "notCountedItem": false
         },
         {
@@ -4377,7 +4410,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-7easy.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 60,
+          "progressBarValue": 81,
           "notCountedItem": false
         },
         {
@@ -4385,7 +4418,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-8easy.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 84,
           "notCountedItem": false
         },
         {
@@ -4393,7 +4426,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-9easy.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 87,
           "notCountedItem": false
         },
         {
@@ -4401,7 +4434,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-10easy.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -4409,47 +4442,15 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-12easy.html",
           "questionID": "31",
           "questionLevel": "Hard",
-          "progressBarValue": 100,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
-        {
-          "Type": "QuestionPage",
-          "questionPath": "Lesson17-Main0-5hard-12022016.html",
-          "questionID": "32",
-          "questionLevel": "Hard",
-          "progressBarValue": 100,
-          "notCountedItem": false
-        },
-        {
-          "Type": "QuestionPage",
-          "questionPath": "Lesson17-Main0-12hard.html",
-          "questionID": "33",
-          "questionLevel": "Hard",
-          "progressBarValue": 100,
-          "notCountedItem": false
-        },
-        {
+		{
           "Type": "QuestionPage",
           "questionPath": "Lesson17-Main0-11easy.html",
           "questionID": "34",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
-          "notCountedItem": false
-        },
-        {
-          "Type": "QuestionPage",
-          "questionPath": "Lesson17-Main0-11hard.html",
-          "questionID": "35",
-          "questionLevel": "Hard",
-          "progressBarValue": 100,
-          "notCountedItem": false
-        },
-        {
-          "Type": "QuestionPage",
-          "questionPath": "Lesson17-Main0-FinalQuestion.html",
-          "questionID": "36",
-          "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -4457,7 +4458,7 @@ var systemConfig={
           "questionPath": "Lesson17-Main0-FinalQuestionEasy.html",
           "questionID": "37",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -4690,7 +4691,7 @@ var systemConfig={
           "lessonTextType": "Text",
           "MediaPath": "Lesson20-Main0-0.html",
           "ReadingType": "Text",
-          "TextLevel": "MEH",
+          "TextLevel": "Medium",
           "ImagePath": "",
           "TextLength": 178,
           "notCountedItem": false
@@ -4708,7 +4709,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -4716,7 +4717,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -4724,7 +4725,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-4.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -4740,7 +4741,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -4748,7 +4749,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-7.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -4756,7 +4757,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-8.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -4772,7 +4773,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-A.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -4780,7 +4781,17 @@ var systemConfig={
           "questionPath": "Lesson20-Main0-B.html",
           "questionID": "11",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
+          "notCountedItem": false
+        },
+		{
+          "Type": "ReadingPage",
+          "lessonTextType": "Text",
+          "MediaPath": "Lesson20-Main1-0.html",
+          "ReadingType": "Text",
+          "TextLevel": "Hard",
+          "ImagePath": "",
+          "TextLength": 126,
           "notCountedItem": false
         },
         {
@@ -4788,7 +4799,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-1.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -4804,7 +4815,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-3.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -4812,7 +4823,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-4.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -4820,7 +4831,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-5.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -4836,7 +4847,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-7.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -4844,7 +4855,7 @@ var systemConfig={
           "questionPath": "Lesson20-Main1-8.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 92,
           "notCountedItem": false
         },
         {
@@ -4907,7 +4918,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-1medium.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -4915,7 +4926,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-2medium.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -4923,7 +4934,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-3medium.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -4931,7 +4942,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-4medium.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 20,
           "notCountedItem": false
         },
         {
@@ -4939,7 +4950,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-5medium.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -4947,7 +4958,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-6medium.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -4955,7 +4966,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-7medium.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -4963,7 +4974,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-8medium.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -4971,7 +4982,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-9medium.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -4979,7 +4990,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-10medium.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -4987,7 +4998,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-11medium.html",
           "questionID": "11",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -4995,7 +5006,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-12medium.html",
           "questionID": "12",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -5003,7 +5014,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-1hard.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -5011,7 +5022,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-2hard.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -5019,7 +5030,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-3hard.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -5027,7 +5038,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-4hard.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -5035,7 +5046,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-5hard.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -5043,7 +5054,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-6hard.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -5051,7 +5062,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-7hard.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -5059,7 +5070,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-8hard.html",
           "questionID": "20",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -5067,7 +5078,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-9hard.html",
           "questionID": "21",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -5075,7 +5086,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-10hard.html",
           "questionID": "22",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 100,
           "notCountedItem": false
         },
         {
@@ -5083,7 +5094,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-11hard.html",
           "questionID": "23",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 100,
           "notCountedItem": false
         },
         {
@@ -5099,7 +5110,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-1easy.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -5107,7 +5118,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-2easy.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -5115,7 +5126,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-3easy.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -5123,7 +5134,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-4easy.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -5131,7 +5142,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-5easy.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -5139,7 +5150,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-6easy.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -5147,7 +5158,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-7easy.html",
           "questionID": "31",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -5155,7 +5166,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-8easy.html",
           "questionID": "32",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -5163,7 +5174,7 @@ var systemConfig={
           "questionPath": "Lesson21-Main0-9easy.html",
           "questionID": "33",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -5425,7 +5436,7 @@ var systemConfig={
           "questionPath": "Lesson23-M1.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -5433,7 +5444,7 @@ var systemConfig={
           "questionPath": "Lesson23-M2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -5441,7 +5452,7 @@ var systemConfig={
           "questionPath": "Lesson23-M3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -5449,7 +5460,7 @@ var systemConfig={
           "questionPath": "Lesson23-M4.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 20,
           "notCountedItem": false
         },
         {
@@ -5457,7 +5468,7 @@ var systemConfig={
           "questionPath": "Lesson23-M5.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -5465,7 +5476,7 @@ var systemConfig={
           "questionPath": "Lesson23-M6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -5473,7 +5484,7 @@ var systemConfig={
           "questionPath": "Lesson23-M7.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -5481,7 +5492,7 @@ var systemConfig={
           "questionPath": "Lesson23-M8.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -5489,7 +5500,7 @@ var systemConfig={
           "questionPath": "Lesson23-M9.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -5497,7 +5508,7 @@ var systemConfig={
           "questionPath": "Lesson23-D1.html",
           "questionID": "10",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -5505,7 +5516,7 @@ var systemConfig={
           "questionPath": "Lesson23-D2.html",
           "questionID": "11",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -5521,7 +5532,7 @@ var systemConfig={
           "questionPath": "Lesson23-D4.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -5529,7 +5540,7 @@ var systemConfig={
           "questionPath": "Lesson23-D5.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -5537,7 +5548,7 @@ var systemConfig={
           "questionPath": "Lesson23-D6.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -5553,7 +5564,7 @@ var systemConfig={
           "questionPath": "Lesson23-D8.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -5569,7 +5580,7 @@ var systemConfig={
           "questionPath": "Lesson23-E1.html",
           "questionID": "19",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -5577,7 +5588,7 @@ var systemConfig={
           "questionPath": "Lesson23-E2.html",
           "questionID": "20",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -5585,7 +5596,7 @@ var systemConfig={
           "questionPath": "Lesson23-E3.html",
           "questionID": "21",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -5593,7 +5604,7 @@ var systemConfig={
           "questionPath": "Lesson23-E4.html",
           "questionID": "22",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -5601,7 +5612,7 @@ var systemConfig={
           "questionPath": "Lesson23-E5.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -5609,7 +5620,7 @@ var systemConfig={
           "questionPath": "Lesson23-E6.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -5617,7 +5628,7 @@ var systemConfig={
           "questionPath": "Lesson23-E7.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -5625,7 +5636,7 @@ var systemConfig={
           "questionPath": "Lesson23-E8.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -5633,7 +5644,7 @@ var systemConfig={
           "questionPath": "Lesson23-E9.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -5641,7 +5652,7 @@ var systemConfig={
           "questionPath": "Lesson23-EA.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -6015,7 +6026,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 7,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -6023,7 +6034,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 15,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -6031,7 +6042,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-4.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -6039,7 +6050,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-5a.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 25,
+          "progressBarValue": 20,
           "notCountedItem": false
         },
         {
@@ -6047,7 +6058,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-5b.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 30,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -6055,7 +6066,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-6.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 35,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -6063,7 +6074,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-7.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -6071,7 +6082,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-8.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 45,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -6079,7 +6090,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main1-9.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 50,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -6087,7 +6098,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main2-1.html",
           "questionID": "11",
           "questionLevel": "Hard",
-          "progressBarValue": 53,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -6095,7 +6106,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main2-2.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 58,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -6175,7 +6186,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-1.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 55,
+          "progressBarValue": 48,
           "notCountedItem": false
         },
         {
@@ -6183,7 +6194,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-2a.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 58,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -6191,7 +6202,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-2b.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 61,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -6199,7 +6210,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-2c.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 65,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -6207,7 +6218,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-2d.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 70,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -6215,7 +6226,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-2e.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 74,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -6223,7 +6234,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-3.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 78,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -6231,7 +6242,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-4.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 82,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -6239,7 +6250,7 @@ var systemConfig={
           "questionPath": "Lesson25-Main0-5.html",
           "questionID": "31",
           "questionLevel": "Easy",
-          "progressBarValue": 86,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -6314,7 +6325,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main1.html",
           "questionID": "1",
           "questionLevel": "",
-          "progressBarValue": 5,
+          "progressBarValue": 25,
           "quesionName": "Cristina:_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?",
           "notCountedItem": false
         },
@@ -6323,7 +6334,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main1.html",
           "questionID": "1",
           "questionLevel": "",
-          "progressBarValue": 5,
+          "progressBarValue": 20,
           "quesionName": "Cristina:The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below.",
           "notCountedItem": false
         },
@@ -6368,7 +6379,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main2.html",
           "questionID": "4",
           "questionLevel": "",
-          "progressBarValue": 60,
+          "progressBarValue": 40,
           "quesionName": "Cristina:_user_, press on the sentence above that supports the statement, the writer wants to go back to school.",
           "notCountedItem": false
         }, 
@@ -6377,7 +6388,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main2.html",
           "questionID": "4",
           "questionLevel": "",
-          "progressBarValue": 60,
+          "progressBarValue": 40,
           "quesionName": "Cristina:There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below.",
           "notCountedItem": false
         },
@@ -6386,7 +6397,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main3.html",
           "questionID": "5",
           "questionLevel": "",
-          "progressBarValue": 80,
+          "progressBarValue": 60,
           "quesionName": "Cristina:_user_, what do you think the main idea of this story is? press your answer below.",
           "notCountedItem": false
         },
@@ -6395,7 +6406,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main3.html",
           "questionID": "5",
           "questionLevel": "",
-          "progressBarValue": 80,
+          "progressBarValue": 60,
           "quesionName": "Cristina:In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below.",
           "notCountedItem": false
         },
@@ -6404,7 +6415,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main4.html",
           "questionID": "6",
           "questionLevel": "",
-          "progressBarValue": 100,
+          "progressBarValue": 80,
           "quesionName": "Cristina:_user_, which of these choices do you think is the best title of this text? press your answer at the top of the page.",
           "notCountedItem": false
         },
@@ -6413,7 +6424,7 @@ var systemConfig={
           "questionPath": "Lesson15-Activity-Main4.html",
           "questionID": "6",
           "questionLevel": "",
-          "progressBarValue": 100,
+          "progressBarValue": 80,
           "quesionName": "Cristina:The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below.",
           "notCountedItem": false
         }
@@ -6469,7 +6480,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-1.html",
           "questionID": "1",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -6477,7 +6488,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-2.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -6485,7 +6496,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-3.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -6501,7 +6512,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-5.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -6509,7 +6520,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-6.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -6517,7 +6528,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-7.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -6533,7 +6544,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-9.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -6541,7 +6552,7 @@ var systemConfig={
           "questionPath": "Lesson28(M)-10.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -6549,7 +6560,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-1.html",
           "questionID": "11",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -6565,7 +6576,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-3.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -6573,7 +6584,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-4.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -6581,7 +6592,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-5.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -6597,7 +6608,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-7.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -6605,7 +6616,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-8.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -6613,7 +6624,7 @@ var systemConfig={
           "questionPath": "Lesson28(H)-9.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -6629,7 +6640,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-1.html",
           "questionID": "21",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -6637,7 +6648,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-2.html",
           "questionID": "22",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -6645,7 +6656,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-3.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -6653,7 +6664,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-4.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -6661,7 +6672,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-5.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 100,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -6677,7 +6688,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-7.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -6685,7 +6696,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-8.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -6693,7 +6704,7 @@ var systemConfig={
           "questionPath": "Lesson28(E)-9.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 80,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -6756,7 +6767,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-1.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -6764,7 +6775,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-2.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -6772,7 +6783,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-3.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -6788,7 +6799,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-5.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -6796,7 +6807,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-6.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -6804,7 +6815,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-7.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 20,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -6820,7 +6831,7 @@ var systemConfig={
           "questionPath": "Lesson29-Medium-0-9.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 40,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -6828,7 +6839,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-1.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -6836,7 +6847,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-2.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 40,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -6852,7 +6863,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-4.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -6860,7 +6871,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-5.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -6868,7 +6879,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-6.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 60,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -6884,7 +6895,7 @@ var systemConfig={
           "questionPath": "Lesson29-Hard-0-8.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 80,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -6900,7 +6911,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-0.html",
           "questionID": "21",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -6908,7 +6919,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-1.html",
           "questionID": "22",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -6916,7 +6927,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-2.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -6924,7 +6935,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-3.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -6932,7 +6943,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-4.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -6940,7 +6951,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-5.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -6948,7 +6959,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-6.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -6956,7 +6967,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-7.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -6964,7 +6975,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-8.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -6972,7 +6983,7 @@ var systemConfig={
           "questionPath": "Lesson29-Easy-0-9.html",
           "questionID": "30",
           "questionLevel": "Easy",
-          "progressBarValue": 40,
+          "progressBarValue": 98,
           "notCountedItem": false
         },
         {
@@ -6997,8 +7008,8 @@ var systemConfig={
       "activity3": "Unlock",
       "isHasVideo": true,
       "videoId": "l30.mp4:2",
-      "isHasProgressBar": false,
-      "isHasNextButton": false,
+      "isHasProgressBar": true,
+      "isHasNextButton": true,
       "pages": [
         {
           "Type": "ReadingPage",
@@ -7043,7 +7054,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-1.html",
           "questionID": "2",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 5,
           "notCountedItem": false
         },
         {
@@ -7051,7 +7062,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-2.html",
           "questionID": "3",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -7059,7 +7070,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-3.html",
           "questionID": "4",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 15,
           "notCountedItem": false
         },
         {
@@ -7067,7 +7078,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-4.html",
           "questionID": "5",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 20,
           "notCountedItem": false
         },
         {
@@ -7075,7 +7086,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-5.html",
           "questionID": "6",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -7083,7 +7094,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-6.html",
           "questionID": "7",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 30,
           "notCountedItem": false
         },
         {
@@ -7091,7 +7102,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-7.html",
           "questionID": "8",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 35,
           "notCountedItem": false
         },
         {
@@ -7099,7 +7110,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-8.html",
           "questionID": "9",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -7107,7 +7118,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-9.html",
           "questionID": "10",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 45,
           "notCountedItem": false
         },
         {
@@ -7115,7 +7126,7 @@ var systemConfig={
           "questionPath": "Lesson30(M)-10.html",
           "questionID": "11",
           "questionLevel": "Medium",
-          "progressBarValue": 0,
+          "progressBarValue": 50,
           "notCountedItem": false
         },
         {
@@ -7123,7 +7134,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-1.html",
           "questionID": "12",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -7131,7 +7142,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-2.html",
           "questionID": "13",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 60,
           "notCountedItem": false
         },
         {
@@ -7139,7 +7150,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-3.html",
           "questionID": "14",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -7147,7 +7158,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-4.html",
           "questionID": "15",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -7155,7 +7166,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-5.html",
           "questionID": "16",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 75,
           "notCountedItem": false
         },
         {
@@ -7163,7 +7174,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-6.html",
           "questionID": "17",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -7171,7 +7182,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-7.html",
           "questionID": "18",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -7179,7 +7190,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-8.html",
           "questionID": "19",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -7187,7 +7198,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-9.html",
           "questionID": "20",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 93,
           "notCountedItem": false
         },
         {
@@ -7195,7 +7206,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-10.html",
           "questionID": "21",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 96,
           "notCountedItem": false
         },
         {
@@ -7203,7 +7214,7 @@ var systemConfig={
           "questionPath": "Lesson30-Hard-11.html",
           "questionID": "22",
           "questionLevel": "Hard",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         },
         {
@@ -7211,7 +7222,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-1.html",
           "questionID": "23",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -7219,7 +7230,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-2.html",
           "questionID": "24",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 65,
           "notCountedItem": false
         },
         {
@@ -7227,7 +7238,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-3.html",
           "questionID": "25",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -7235,7 +7246,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-4.html",
           "questionID": "26",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -7243,7 +7254,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-5.html",
           "questionID": "27",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -7251,7 +7262,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-6.html",
           "questionID": "28",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -7259,7 +7270,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-7.html",
           "questionID": "29",
           "questionLevel": "Easy",
-          "progressBarValue": 0,
+          "progressBarValue": 95,
           "notCountedItem": false
         },
         {
@@ -7267,7 +7278,7 @@ var systemConfig={
           "questionPath": "Lesson30-Easy-8.html",
           "questionID": "30",
           "questionLevel": "null",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -7284,7 +7295,7 @@ var systemConfig={
       "activity3": "Unlock",
       "isHasVideo": false,
       "videoId": 0,
-      "isHasProgressBar": false,
+      "isHasProgressBar": true,
       "isHasNextButton": true,
       "pages": [
         {
@@ -7300,7 +7311,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-1.html",
           "questionID": "2",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 10,
           "notCountedItem": false
         },
         {
@@ -7308,7 +7319,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-2.html",
           "questionID": "3",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 25,
           "notCountedItem": false
         },
         {
@@ -7316,7 +7327,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-3.html",
           "questionID": "4",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -7324,7 +7335,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-4.html",
           "questionID": "5",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 55,
           "notCountedItem": false
         },
         {
@@ -7332,7 +7343,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-5.html",
           "questionID": "6",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 70,
           "notCountedItem": false
         },
         {
@@ -7340,7 +7351,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-6.html",
           "questionID": "7",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 85,
           "notCountedItem": false
         },
         {
@@ -7348,7 +7359,7 @@ var systemConfig={
           "questionPath": "JobApplication-0-7.html",
           "questionID": "8",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -7476,8 +7487,8 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": false,
-      "videoId": 0,
+      "isHasVideo": true,
+      "videoId": "l33.mp4:2",
       "isHasProgressBar": false,
       "isHasNextButton": true,
       "pages": [
@@ -7486,7 +7497,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-1.html",
           "questionID": "1",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 8,
           "notCountedItem": false
         },
         {
@@ -7494,7 +7505,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-2.html",
           "questionID": "2",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 16,
           "notCountedItem": false
         },
         {
@@ -7502,7 +7513,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-3.html",
           "questionID": "3",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 24,
           "notCountedItem": false
         },
         {
@@ -7510,7 +7521,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-4.html",
           "questionID": "4",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 32,
           "notCountedItem": false
         },
         {
@@ -7518,7 +7529,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-5.html",
           "questionID": "5",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 40,
           "notCountedItem": false
         },
         {
@@ -7526,7 +7537,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-6.html",
           "questionID": "6",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 48,
           "notCountedItem": false
         },
         {
@@ -7534,7 +7545,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-7.html",
           "questionID": "7",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 56,
           "notCountedItem": false
         },
         {
@@ -7542,7 +7553,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-8.html",
           "questionID": "8",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 64,
           "notCountedItem": false
         },
         {
@@ -7550,7 +7561,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-9.html",
           "questionID": "9",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 72,
           "notCountedItem": false
         },
         {
@@ -7558,7 +7569,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-10.html",
           "questionID": "10",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 80,
           "notCountedItem": false
         },
         {
@@ -7566,7 +7577,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-11.html",
           "questionID": "11",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 90,
           "notCountedItem": false
         },
         {
@@ -7574,7 +7585,7 @@ var systemConfig={
           "questionPath": "Lesson33-0-12.html",
           "questionID": "12",
           "questionLevel": "",
-          "progressBarValue": 0,
+          "progressBarValue": 100,
           "notCountedItem": false
         }
       ]
@@ -9488,7 +9499,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "l23.mp4:2",
       "isHasProgressBar": true,
       "isHasNextButton": true,
@@ -9759,7 +9770,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "l23.mp4:2",
       "isHasProgressBar": true,
       "isHasNextButton": true,
@@ -10030,7 +10041,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "Lesson28_11.17.15.mp4:2",
       "isHasProgressBar": true,
       "isHasNextButton": true,
@@ -10317,7 +10328,7 @@ var systemConfig={
       "activity1": "Unlock",
       "activity2": "Unlock",
       "activity3": "Unlock",
-      "isHasVideo": true,
+      "isHasVideo": false,
       "videoId": "Lesson28_11.17.15.mp4:2",
       "isHasProgressBar": true,
       "isHasNextButton": true,
