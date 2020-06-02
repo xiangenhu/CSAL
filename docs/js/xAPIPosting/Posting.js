@@ -158,13 +158,15 @@ function AceResponse(Data,averb){
 				"https://app.skoonline.org/ITSProfile/CSAL/Data": data
 			}
 	}
-	
-	var statements=Compose(AnActor,
-							verbObj,
-							ResultObj,
-							activityObj,
-							Extdata);
-	ADL.XAPIWrapper.sendStatement(statements);
+	console.log("===");
+	console.log(JSON.stringify(data));
+		var statements=Compose(AnActor,
+								verbObj,
+								ResultObj,
+								activityObj,
+								Extdata);
+								
+		ADL.XAPIWrapper.sendStatement(statements);
 }
 
 
@@ -194,7 +196,6 @@ function xAPIPostOther(acePostjson,averb){
 	// Activity
 	var data=JSON.parse(acePostjson.PresentationHistory);
 	var ResultObj={};
-		
 	 /* "result": {
         "score": {
             "scaled": 0.95,
@@ -210,12 +211,26 @@ function xAPIPostOther(acePostjson,averb){
             "http://ext.com/key": "value"
         }
     }, */
-	var Extdata={
+	if ((data.userAnswer=="Incorrect")||(data.userAnswer=="Correct")){
+		if (data.userAnswer=="Incorrect"){
+			ResultObj={success:false,
+			response:data.userSelectedItem,
+			extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
+			}
+		}else{
+			ResultObj={success:true,
+			response:data.userSelectedItem,
+		     extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
+		}
+		var Extdata={}
+		}
+	}else{
+		var Extdata={
 			extensions: {
 				"https://app.skoonline.org/ITSProfile/CSAL/Data": data
 			}
-	}
-	
+		}
+	}	
 	var statements=Compose(AnActor,
 							verbObj,
 							ResultObj,
