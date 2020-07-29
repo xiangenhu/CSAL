@@ -259,7 +259,15 @@ function LoadLesson(lessonID) {
 	setPresentationIDObj(lessonID, currentScripturl)
 
 	var acePostjson = {};
-	acePostjson.ScriptURL = currentScripturl;
+	var retriveObj={
+		guid:qs("guid",""),
+		source:"ScriptOnly",
+		return:"scriptContent",
+		authorname:"xiangenhu",
+		TagName:"SKOSCRIPTS"}
+	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
+	acePostjson.ScriptURL = aurl;
+//	acePostjson.ScriptURL = currentScripturl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	if (lessonID == "lesson0" || lessonID == "lesson00") {
