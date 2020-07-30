@@ -126,7 +126,7 @@
 				//var id = document.getElementById("id").value;
 				//window.external.GetName(name);
 				//window.external.GetId(name);
-				window.location = "CSALscreenPage.html";
+				window.location = "CSALScreenPage.html";
 			}
 			
 			function isNumber(evt) {
