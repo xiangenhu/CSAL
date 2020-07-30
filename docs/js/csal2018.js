@@ -37,6 +37,8 @@ var isQuestionPageAfterFirst=false;
 var isFirstTimer=true;
 var talkingheadUsing="Speak2";
 var SpeakRepeatList = [];
+
+var TRANSSCRIPT_CTRL = "transcript";
 function setCurrentLessonInfo(lessonID) {
 
 	for (var i in allLessonsInfoObj) {
@@ -73,11 +75,8 @@ function addRepeatSpeech(agent_speech)
 	}
 	SpeakRepeatList.push(agent_speech);
 }
-function loadAgent()
-{
-document.getElementById('agentsLarge').src = "angentsjs/speakTH.html";
+function loadAgent() {
 			talkingheadLoaded = true;
-			
 }
 function getLessonInfo() {
 	var URLParams = URI.parseQuery(window.location.search);
@@ -167,7 +166,7 @@ $(document).ready(function() {
 	});
 	
 	$("#btNext").click(function() {
-	SpeakRepeatList=[];
+	elldeSpeakRepeatList=[];
 		nextButtonStatus = false;
 		HideRepeatButton();
 		HidePlayVideoButton()
@@ -221,17 +220,18 @@ $(document).ready(function() {
 	});
 
 });
-function startLesson()
-{
+function startLesson() {
 var x2 = $(window).width();
-	if (x2 < 1400) {
+	/* if (x2 < 1400) {
 		$("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
-	}
-document.getElementById('mainscreen').style.display="block";
+	} */
+document.getElementById('mainscreen').style.display="block"; 
+
 document.getElementById('containerNoImg').style.backgroundImage = "url(images/TabletFrame2.png)";
-document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
+document.getElementById('containerNoImg').style.backgroundPosition="center top";
 document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
-document.getElementById('agentsLarge').style.height = "97px";
+document.getElementById('containerNoImg').style.display="block";
+
  var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
 	$("#home").hide();
@@ -267,7 +267,6 @@ function LoadLesson(lessonID) {
 		TagName:"SKOSCRIPTS"}
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
 	acePostjson.ScriptURL = aurl;
-//	acePostjson.ScriptURL = currentScripturl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	if (lessonID == "lesson0" || lessonID == "lesson00") {
@@ -385,10 +384,15 @@ function runActions() {
 
 				break;
 			case "Speak":
-				var uname = sessionStorage.getItem("uname");
+//				var uname = sessionStorage.getItem("uname");
+				var uname = qs("SName","John");
 				data = data.replace("_user_",uname);
-				data = agentNum + ":" + data;
-
+				// data = agentNum + ":" + data;
+				if (agentNum=="0"){
+			    msSpeakQueued(C1,data)
+				} else{
+					msSpeakQueued(C2,data)
+				}
 				//AngentSpeak(data);
 				break;
 			case "Play":
@@ -404,6 +408,7 @@ function runActions() {
 				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
+//			    msSpeakQueued(C1,data);
 				if(talkingheadUsing=="Speak2")
 				{
 					agentBusy = true;
@@ -430,7 +435,7 @@ function runActions() {
 					 actions[0].Data=mergedSegments;
 					isSpeakingSegments = true;
 					}
-					Speak2(data);
+//					Speak2(data);
 					 //SpeakRepeatList.push(data);
 					 addRepeatSpeech(data);
 					 
@@ -670,22 +675,26 @@ function StartTimer() {
 function StopTimer() {
 	clearInterval(timer);
 }
-function Speak2(data)
-{
-	if(talkingheadOn=="true")
-	{
-	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
-	}
-	else
-	{
+function Speak2(data) {
+	if(talkingheadOn=="true"){
+		msSpeakQueued(C1,data);
+		/* var SpeechData=data.split(":");
+		if (SpeechData.length>1){
+			if (SpeechData[0]=="0"){
+				msSpeakQueued(C1,SpeechData[1]);
+			}else{
+				msSpeakQueued(C2,SpeechData[1]);
+			}
+		} else{
+			msSpeakQueued(C1,data);
+		} */
+//	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
+	}	else	{
 	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "off");
 	}
- 
-
 
 }
-	function isPunctuation(ch)
-	{
+function isPunctuation(ch)	{
 		return ch.toLowerCase() == ch.toUpperCase();
 	}
 function AngentSpeak(data) {
@@ -845,11 +854,6 @@ function showMedia(data) {
 	HidePlayVideoButton();
 	currentMediaUrl = currentMediaPath + data;
 	showScriptNextButton(data);
-  /*  $("#mainFrame").attr("src", currentMediaUrl);
-  
-	var d = new Date();
-	pageStartTimestamp = d.getTime();*/
-
 }
 function skipNextButton()
 {
@@ -1015,13 +1019,10 @@ function GetMediaFeedBackMsg(msg) {
 	var agentFeedBack = feedBackInfo[1];
 	if (agentFeedBack == "Instruction" || agentFeedBack == "TAGoodAnswer") {
 		Speak2("0:"+feedBackInfo[2]);
-		//SpeakRepeatList.push("0:"+feedBackInfo[2]);
 		addRepeatSpeech("0:"+feedBackInfo[2]);
 		}
 	else if (agentFeedBack == "SAGoodAnswer" || agentFeedBack == "SABadAnswer" || agentFeedBack == "SABadAnswer") {
-	   
 		   Speak2("1:"+feedBackInfo[2]);
-		   //SpeakRepeatList.push("1:"+feedBackInfo[2]);
 		   addRepeatSpeech("1:"+feedBackInfo[2]);
 		}
 	}

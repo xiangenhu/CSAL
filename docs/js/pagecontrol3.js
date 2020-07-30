@@ -113,6 +113,8 @@ function mainpageInit() {
     clearDisplayArea();
 
     var uname = sessionStorage.getItem("uname");
+	
+    uname = qs("SName","John");
     var GUID = sessionStorage.getItem("GUID");
     var UID = sessionStorage.getItem("UID");
 	if(GUID==UID)

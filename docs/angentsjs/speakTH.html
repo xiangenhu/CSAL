@@ -5,12 +5,15 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
-<script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-1.12.4.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>	
-	<script src="https://xiangenhu.github.io/skoplayer/js/pixi.min.js"></script>	
-	<script src="js/msapi.js"></script>		
+	
+	
+	
+		<script src="https://js.autotutor.org/ATcommonjs/TH/api1/pixi.min.js"></script>
+		<script src="https://js.autotutor.org/ATcommonjs/TH/api1/msapi.js"></script> 
+		
 	<link rel="stylesheet" href="../buttons/buttons.css" type="text/css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../css/mainPage.css">
 		<style type="text/css" id="page-css">
@@ -56,13 +59,14 @@ body {
   cursor: pointer;
   display:none;
 }
+
 		</style>
 		
 </head>
 <body onload="onLoad()" bgcolor="#99ffff">
 <audio id="audio"></audio> 
 
-<div id="TopDiv" style="position:relative; width:120%; height:200px;"></div>
+<div id="TopDiv" style="position:relative; width:100%; height:200px;"></div>
 <!--div id="overlay" class="overlay"></div-->
 <div id="temp">
 <div class="center1">	
@@ -76,6 +80,60 @@ body {
 </div>
 
 <script>
+
+var C1="Angela";
+var C3="Lee";
+var V3="Matthew";
+var V1="Kimberly";
+var F1="Head";
+var F3="Head";
+
+function LoadChara(id,character,format,voice){
+	var width;
+	var height;
+	if (id=="") return;
+	
+	if (format == "Head") {width = 250; height = 200;}
+	else if (format == "Bust") {width = 375; height = 300;}
+	else if (format == "Body") {width = 500; height = 400;}
+	else if (format == "Cartoon") {width = 307; height = 397;}
+	
+	document.getElementById(id).style.width = width+"px";
+	document.getElementById(id).style.height = height+"px";
+	document.getElementById(id+"Renderer").style.width = width+"px";
+	document.getElementById(id+"Renderer").style.height = height+"px";
+	o[id] = {character:character, format:format, width:width, height:height, voice:voice};
+	
+}
+
+function loadCharas(){
+	o={};
+	var Avatars = document.getElementById("TopDiv");
+	var s = '';
+	if (C1.length>1){
+		s += '<div id="'+C1+'" class="tl-agent">';
+		s += '<div id="'+C1+'Renderer"></div>';
+		s += '</div>';
+	}
+
+	if (C3.length>1)	{
+		s += '<div id="'+C3+'" class="bl-agent">';
+		s += '<div id="'+C3+'Renderer"></div>';
+		s += '</div>';
+		
+	}
+	Avatars.innerHTML = s; 
+	if (C1.length>1)
+	LoadChara(C1,C1,F1,V1);
+	if (C3.length>1)
+	LoadChara(C3,C3,F3,V3);
+	$("#"+C1).top=0;
+	$("#"+C3).top=0;
+	
+	msInit(o);	
+}
+
+
 var thLoaded=false;
 var thBusy=false;
 function onLoad() {
