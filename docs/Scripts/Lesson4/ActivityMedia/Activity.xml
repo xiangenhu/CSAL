@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
       <SpeechCan name="Pump">
         <Item text="_user_, can you try to answer the question now." speech="" play="_user_,B1" />
       </SpeechCan>
@@ -24,7 +24,7 @@
         <Item text="_user_,,wow that's it. " speech="" play="_user_,B13" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_,great job." speech="" play="_user_,A1" />
         <Item text="_user_, good. That's right." speech="" play="_user_,A2" />
@@ -45,15 +45,15 @@
         <Item text="_user_, That's correct. You're doing beautifully." speech="" play="_user_,A17" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoBothUserSecond">
-        <Item text="_user_, and Jordan, you are both correct! Great job!" speech="" play="_user_,A18" />
+        <Item text="_user_, and ComputerStudent1, you are both correct! Great job!" speech="" play="_user_,A18" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToJordan">
-        <Item text="Jordan, you didn't pick the correct answer." speech="" play="A19" />
-        <Item text="Jordan, you actually got that question wrong." speech="" play="A20" />
-        <Item text="Jordan, sorry, that's not right." speech="" play="A21" />
-        <Item text="Jordan, your answer is incorrect." speech="" play="A22" />
-        <Item text="Jordan, you were wrong." speech="" play="A23" />
-        <Item text="Jordan, sorry that's not correct." speech="" play="A24" />
+        <Item text="ComputerStudent1, you didn't pick the correct answer." speech="" play="A19" />
+        <Item text="ComputerStudent1, you actually got that question wrong." speech="" play="A20" />
+        <Item text="ComputerStudent1, sorry, that's not right." speech="" play="A21" />
+        <Item text="ComputerStudent1, your answer is incorrect." speech="" play="A22" />
+        <Item text="ComputerStudent1, you were wrong." speech="" play="A23" />
+        <Item text="ComputerStudent1, sorry that's not correct." speech="" play="A24" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackFinal">
         <Item text="Well, actually, that is not what I was looking for." speech="" play="A25" />
@@ -78,9 +78,9 @@
         <Item text="_user_, here is the correct answer." speech="" play="_user_,A38" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToUserSecondNegativeFeedbackToJordanFirst">
-        <Item text="_user_, you are right. Jordan, sorry, you were wrong this time." speech="" play="_user_,A39" />
-        <Item text="_user_, you were right. Jordan, sorry that's not it." speech="" play="_user_,A40" />
-        <Item text="_user_, great job on this question. You were right. Jordan, better luck next time." speech="" play="_user_,A41" />
+        <Item text="_user_, you are right. ComputerStudent1, sorry, you were wrong this time." speech="" play="_user_,A39" />
+        <Item text="_user_, you were right. ComputerStudent1, sorry that's not it." speech="" play="_user_,A40" />
+        <Item text="_user_, great job on this question. You were right. ComputerStudent1, better luck next time." speech="" play="_user_,A41" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoBoth">
         <Item text="You are both correct. Keep it up." speech="" play="A42" />
@@ -97,13 +97,13 @@
         <Item text="_user_, try your best and answer the question." speech="" play="_user_,A49" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackJordan">
-        <Item text="Jordan, you got it right, excellent." speech="" play="A50" />
-        <Item text="Jordan, you are right, that's great." speech="" play="A51" />
-        <Item text="Jordan, that is correct, well done." speech="" play="A52" />
-        <Item text="Jordan, that's right, great job." speech="" play="A53" />
-        <Item text="Jordan, right. That is correct." speech="" play="A54" />
-        <Item text="Jordan, that's it. Nice job." speech="" play="A55" />
-        <Item text="Jordan, yes. That's right." speech="" play="A56" />
+        <Item text="ComputerStudent1, you got it right, excellent." speech="" play="A50" />
+        <Item text="ComputerStudent1, you are right, that's great." speech="" play="A51" />
+        <Item text="ComputerStudent1, that is correct, well done." speech="" play="A52" />
+        <Item text="ComputerStudent1, that's right, great job." speech="" play="A53" />
+        <Item text="ComputerStudent1, right. That is correct." speech="" play="A54" />
+        <Item text="ComputerStudent1, that's it. Nice job." speech="" play="A55" />
+        <Item text="ComputerStudent1, yes. That's right." speech="" play="A56" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -154,124 +154,124 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="OpeningH" usedIn="">
-      <Item id="1" agent="Jordan" text="How about this? The class did not do well on the first test so they are retesting today" speech="" play="B14" />
-      <Item id="2" agent="Cristina" text="That sounds good. Let's practice some more with affixes." speech="That sounds good. Let's practice some more with aahfixes" media="media/Lesson4_Level1_Diagnostic_1.html" play="A57" />
+      <Item id="1" agent="ComputerStudent1" text="How about this? The class did not do well on the first test so they are retesting today" speech="" play="B14" />
+      <Item id="2" agent="ComputerTutor" text="That sounds good. Let's practice some more with affixes." speech="That sounds good. Let's practice some more with aahfixes" media="media/Lesson4_Level1_Diagnostic_1.html" play="A57" />
     </RigidPack>
     <RigidPack name="OpeningE" usedIn="">
-      <Item id="1" agent="Jordan" text="Can I try it? " speech="" play="B15" />
-      <Item id="2" agent="Cristina" text="Jordan, Sure you can. " speech="" play="A58" />
-      <Item id="3" agent="Jordan" text="I would like to use the root word, test." speech="" play="B16" />
-      <Item id="4" agent="Cristina" text="Ok, what affix could you add to the word test and how would that change the meaning of the root word." speech="Ok, what aahfix could you add to the word, test, and how would that change the meaning of the root word" play="A59" />
+      <Item id="1" agent="ComputerStudent1" text="Can I try it? " speech="" play="B15" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, Sure you can. " speech="" play="A58" />
+      <Item id="3" agent="ComputerStudent1" text="I would like to use the root word, test." speech="" play="B16" />
+      <Item id="4" agent="ComputerTutor" text="Ok, what affix could you add to the word test and how would that change the meaning of the root word." speech="Ok, what aahfix could you add to the word, test, and how would that change the meaning of the root word" play="A59" />
     </RigidPack>
     <RigidPack name="Transition" usedIn="">
-      <Item id="1" agent="Cristina" text="great job! You have a tie score. You are both good at this!" speech="" play="A60" />
+      <Item id="1" agent="ComputerTutor" text="great job! You have a tie score. You are both good at this!" speech="" play="A60" />
     </RigidPack>
     <RigidPack name="OpeningF" usedIn="">
-      <Item id="1" agent="Jordan" text="I could add the prefix, re-, to tell the reader that the test is being taken again." speech="I could add the prefix, ree, to tell the reader that the test is being taken again" play="B17" />
-      <Item id="2" agent="Cristina" text="Can you think of another type of affix to add to change the meaning again?" speech="Can you think of another type of aahfix to add to change the meaning one more time?" play="A61" />
+      <Item id="1" agent="ComputerStudent1" text="I could add the prefix, re-, to tell the reader that the test is being taken again." speech="I could add the prefix, ree, to tell the reader that the test is being taken again" play="B17" />
+      <Item id="2" agent="ComputerTutor" text="Can you think of another type of affix to add to change the meaning again?" speech="Can you think of another type of aahfix to add to change the meaning one more time?" play="A61" />
     </RigidPack>
     <RigidPack name="OpeningC" usedIn="">
-      <Item id="1" agent="Cristina" text="If we add the suffix, ed, it changes the meaning of the word to indicate something that has already happened." speech="" play="A62" />
+      <Item id="1" agent="ComputerTutor" text="If we add the suffix, ed, it changes the meaning of the word to indicate something that has already happened." speech="" play="A62" />
     </RigidPack>
     <RigidPack name="D9" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, For this example sentence, what do you think the correct answer might be?" speech="" play="A63" />
-      <Item id="2" agent="Jordan" text="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but i'm not sure." speech="" play="B18" />
-      <Item id="3" agent="Cristina" text="Jordan, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A64" />
-      <Item id="4" agent="Jordan" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B19" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, For this example sentence, what do you think the correct answer might be?" speech="" play="A63" />
+      <Item id="2" agent="ComputerStudent1" text="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but i'm not sure." speech="" play="B18" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A64" />
+      <Item id="4" agent="ComputerStudent1" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B19" />
     </RigidPack>
     <RigidPack name="D1" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, For this example sentence, what do you think the correct answer might be?" speech="" play="A65" />
-      <Item id="2" agent="Jordan" text="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but knowing the definition makes this one seem tricky!" speech="" play="B20" />
-      <Item id="3" agent="Cristina" text="Jordan, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck!" speech="" play="A66" />
-      <Item id="4" agent="Jordan" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B21" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, For this example sentence, what do you think the correct answer might be?" speech="" play="A65" />
+      <Item id="2" agent="ComputerStudent1" text="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but knowing the definition makes this one seem tricky!" speech="" play="B20" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck!" speech="" play="A66" />
+      <Item id="4" agent="ComputerStudent1" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B21" />
     </RigidPack>
     <RigidPack name="D2" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, For this example sentence, what do you think the correct answer might be?" speech="" play="A67" />
-      <Item id="2" agent="Jordan" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="" play="B22" />
-      <Item id="3" agent="Cristina" text="Jordan, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A68" />
-      <Item id="4" agent="Jordan" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B23" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, For this example sentence, what do you think the correct answer might be?" speech="" play="A67" />
+      <Item id="2" agent="ComputerStudent1" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="" play="B22" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A68" />
+      <Item id="4" agent="ComputerStudent1" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B23" />
     </RigidPack>
     <RigidPack name="Competition3" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, you are on the right track. The correct answer is becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="Jordan, you are on the right track. The correct answer is, Becoming, because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." play="A69" />
-      <Item id="2" agent="Jordan" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B24" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, you are on the right track. The correct answer is becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="ComputerStudent1, you are on the right track. The correct answer is, Becoming, because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." play="A69" />
+      <Item id="2" agent="ComputerStudent1" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B24" />
     </RigidPack>
     <RigidPack name="User" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_, great job. You won." speech="" play="_user_,A70" />
+      <Item id="1" agent="ComputerTutor" text="_user_, great job. You won." speech="" play="_user_,A70" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_, I feel like I learned a lot. I hope you did too." speech="" media="media/Lesson4_Close.html" play="_user_,B25" />
-      <Item id="2" agent="Cristina" text="Jordan, yes. you got some good practice in. Can you tell me something you learned" speech="" play="A71" />
-      <Item id="3" agent="Jordan" text="I learned that affixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." speech="I learned that aahfixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." play="B26" />
-      <Item id="4" agent="Cristina" text="Yes. That's right. Anything else?" speech="" play="A72" />
-      <Item id="5" agent="Jordan" text="I also learned how to read a sentence and to use the context to figure out how an affix could be added to a word to make it mean something that works in that sentence." speech="I also learned how to read a sentence and to use the context to figure out how an aahfix could be added to a word to make it mean something that works in that sentence." play="B27" />
-      <Item id="6" agent="Cristina" text="Good. Well in addition to learning about word parts, I hope you enjoyed our game." speech="" play="A73" />
+      <Item id="1" agent="ComputerStudent1" text="_user_, I feel like I learned a lot. I hope you did too." speech="" media="media/Lesson4_Close.html" play="_user_,B25" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, yes. you got some good practice in. Can you tell me something you learned" speech="" play="A71" />
+      <Item id="3" agent="ComputerStudent1" text="I learned that affixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." speech="I learned that aahfixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." play="B26" />
+      <Item id="4" agent="ComputerTutor" text="Yes. That's right. Anything else?" speech="" play="A72" />
+      <Item id="5" agent="ComputerStudent1" text="I also learned how to read a sentence and to use the context to figure out how an affix could be added to a word to make it mean something that works in that sentence." speech="I also learned how to read a sentence and to use the context to figure out how an aahfix could be added to a word to make it mean something that works in that sentence." play="B27" />
+      <Item id="6" agent="ComputerTutor" text="Good. Well in addition to learning about word parts, I hope you enjoyed our game." speech="" play="A73" />
     </RigidPack>
     <RigidPack name="StartEasy" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_, I feel like I learned a lot. I hope you did too." speech="" media="media/Lesson4_Close.html" play="_user_,B28" />
-      <Item id="2" agent="Cristina" text="Jordan, yes. you got some good practice in. Can you tell me something you learned" speech="" play="A74" />
-      <Item id="3" agent="Jordan" text="I learned that affixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." speech="I learned that aahfixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." play="B29" />
-      <Item id="4" agent="Cristina" text="Yes. That's right. Anything else?" speech="" play="A75" />
-      <Item id="5" agent="Jordan" text="I also learned how to read a sentence and to use the context to figure out how an affix could be added to a word to make it mean something that works in that sentence." speech="I also learned how to read a sentence and to use the context to figure out how an aahfix could be added to a word to make it mean something that works in that sentence." play="B30" />
-      <Item id="6" agent="Cristina" text="Good. Well in addition to learning about word parts, I hope you enjoyed our game." speech="" play="A76" />
+      <Item id="1" agent="ComputerStudent1" text="_user_, I feel like I learned a lot. I hope you did too." speech="" media="media/Lesson4_Close.html" play="_user_,B28" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, yes. you got some good practice in. Can you tell me something you learned" speech="" play="A74" />
+      <Item id="3" agent="ComputerStudent1" text="I learned that affixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." speech="I learned that aahfixes are added to root words to change their meanings. Prefixes are added at the beginning of a word and suffixes are added at the end." play="B29" />
+      <Item id="4" agent="ComputerTutor" text="Yes. That's right. Anything else?" speech="" play="A75" />
+      <Item id="5" agent="ComputerStudent1" text="I also learned how to read a sentence and to use the context to figure out how an affix could be added to a word to make it mean something that works in that sentence." speech="I also learned how to read a sentence and to use the context to figure out how an aahfix could be added to a word to make it mean something that works in that sentence." play="B30" />
+      <Item id="6" agent="ComputerTutor" text="Good. Well in addition to learning about word parts, I hope you enjoyed our game." speech="" play="A76" />
     </RigidPack>
-    <RigidPack name="Jordan" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_,It looks like Jordan got more points this time. " speech="" play="_user_,A77" />
+    <RigidPack name="ComputerStudent1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_,It looks like ComputerStudent1 got more points this time. " speech="" play="_user_,A77" />
     </RigidPack>
     <RigidPack name="OpeningG" usedIn="">
-      <Item id="1" agent="Jordan" text="I can add the suffix, ing, to tell the reader that the test is being taken right now." speech="" play="B31" />
-      <Item id="2" agent="Cristina" text="OK, can you use that in a sentence?" speech="" play="A78" />
+      <Item id="1" agent="ComputerStudent1" text="I can add the suffix, ing, to tell the reader that the test is being taken right now." speech="" play="B31" />
+      <Item id="2" agent="ComputerTutor" text="OK, can you use that in a sentence?" speech="" play="A78" />
     </RigidPack>
     <RigidPack name="OpeningD" usedIn="">
-      <Item id="1" agent="Cristina" text="Here it is in a sentence. The detective uncovered evidence that solved the case." speech="" play="A79" />
+      <Item id="1" agent="ComputerTutor" text="Here it is in a sentence. The detective uncovered evidence that solved the case." speech="" play="A79" />
     </RigidPack>
     <RigidPack name="DOpening" usedIn="">
-      <Item id="1" agent="Cristina" text="Jordan, For this example sentence, what do you think the correct answer might be?" speech="" play="A80" />
-      <Item id="2" agent="Jordan" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="" play="B32" />
-      <Item id="3" agent="Cristina" text="Jordan, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A81" />
-      <Item id="4" agent="Jordan" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B33" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, For this example sentence, what do you think the correct answer might be?" speech="" play="A80" />
+      <Item id="2" agent="ComputerStudent1" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="" play="B32" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, you are on the right track. I know you can do it. Just remember to read the choices carefully. The correct answer is Becoming because it tells the reader that the event is going on now. The answer you choose will turn yellow when you click it just like the previous questions before. It turns green for correct and red for incorrect. Good luck." speech="" play="A81" />
+      <Item id="4" agent="ComputerStudent1" text="_user_, I hope you're ready to lose." speech="" media="media/Lesson4_Level3_1.html" play="_user_,B33" />
     </RigidPack>
     <RigidPack name="OpeningB" usedIn="">
-      <Item id="1" agent="Cristina" text="If we add the prefix, un, it changes the meaning of the word to the opposite of cover." speech="" play="A82" />
+      <Item id="1" agent="ComputerTutor" text="If we add the prefix, un, it changes the meaning of the word to the opposite of cover." speech="" play="A82" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_,and Jordan, welcome back." speech="" media="media/Lesson4-IntroTitle.html" play="_user_,A83" />
-      <Item id="2" agent="Cristina" text="Let's take some time to review affixes. Affixes are added to words to change their meaning. They can be prefixes or suffixes." speech="Let's take some time to review aahfixes. Aahfixes are added to words to change their meaning. They can be prefixes or suffixes." play="A84" />
-      <Item id="3" agent="Jordan" text="Cristina, could you give examples of prefixes and suffixes? I don't know much about them." speech="" play="B34" />
-      <Item id="4" agent="Cristina" text="Sure, prefixes are letters or words added to the beginning of words to change their meaning. For example, if we look at the word recharge, re, is the prefix changing the meaning of charge. Suffixes are letters or words added to the end of words to change their meaning. For example, if we look at the word government, ment, is changing the meaning of govern." speech="" play="A85" />
+      <Item id="1" agent="ComputerTutor" text="_user_,and ComputerStudent1, welcome back." speech="" media="media/Lesson4-IntroTitle.html" play="_user_,A83" />
+      <Item id="2" agent="ComputerTutor" text="Let's take some time to review affixes. Affixes are added to words to change their meaning. They can be prefixes or suffixes." speech="Let's take some time to review aahfixes. Aahfixes are added to words to change their meaning. They can be prefixes or suffixes." play="A84" />
+      <Item id="3" agent="ComputerStudent1" text="ComputerTutor, could you give examples of prefixes and suffixes? I don't know much about them." speech="" play="B34" />
+      <Item id="4" agent="ComputerTutor" text="Sure, prefixes are letters or words added to the beginning of words to change their meaning. For example, if we look at the word recharge, re, is the prefix changing the meaning of charge. Suffixes are letters or words added to the end of words to change their meaning. For example, if we look at the word government, ment, is changing the meaning of govern." speech="" play="A85" />
     </RigidPack>
     <RigidPack name="Tie" usedIn="">
-      <Item id="1" agent="Cristina" text="great job. You have a tie score. You are both good at this!" speech="" play="A86" />
+      <Item id="1" agent="ComputerTutor" text="great job. You have a tie score. You are both good at this!" speech="" play="A86" />
     </RigidPack>
     <RigidPack name="Competition2" usedIn="">
-      <Item id="1" agent="Cristina" text="Notice that each sentence will have a key word with either a blank before or after the root word in a question. You will need to decide the appropriate affix for the word in each sentence based on the sentence. " speech="Notice that each sentence will have a key word with either a blank before or after the root word in a question. You will need to decide the appropriate aahffix for the word in each sentence based on the sentence. " play="A87" />
-      <Item id="2" agent="Jordan" text="Ok, so we just need to click an answer like the other questions?" speech="" play="B35" />
-      <Item id="3" agent="Cristina" text="Yes, Jordan that's correct. However, for the questions in the competition round you will need to find the affix and you will need to understand how the affix changes the meaning of the word." speech="Yes, Jordan that's correct. However, for the questions in the competition round you will need to find the aahfix and you will need to understand how the aahfix changes the meaning of the word." play="A88" />
-      <Item id="4" agent="Cristina" text="Jordan, For this example sentence, what do you think the correct answer might be?" speech="" play="A89" />
-      <Item id="5" agent="Jordan" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" play="B36" />
+      <Item id="1" agent="ComputerTutor" text="Notice that each sentence will have a key word with either a blank before or after the root word in a question. You will need to decide the appropriate affix for the word in each sentence based on the sentence. " speech="Notice that each sentence will have a key word with either a blank before or after the root word in a question. You will need to decide the appropriate aahffix for the word in each sentence based on the sentence. " play="A87" />
+      <Item id="2" agent="ComputerStudent1" text="Ok, so we just need to click an answer like the other questions?" speech="" play="B35" />
+      <Item id="3" agent="ComputerTutor" text="Yes, ComputerStudent1 that's correct. However, for the questions in the competition round you will need to find the affix and you will need to understand how the affix changes the meaning of the word." speech="Yes, ComputerStudent1 that's correct. However, for the questions in the competition round you will need to find the aahfix and you will need to understand how the aahfix changes the meaning of the word." play="A88" />
+      <Item id="4" agent="ComputerTutor" text="ComputerStudent1, For this example sentence, what do you think the correct answer might be?" speech="" play="A89" />
+      <Item id="5" agent="ComputerStudent1" text="I think that the best answer might be becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" speech="I think that the best answer might be, becoming. The other choices do not sound like they make as much sense but knowing the definition would make this one seem tricky!" play="B36" />
     </RigidPack>
     <RigidPack name="OpeningA" usedIn="">
-      <Item id="1" agent="Cristina" text="Let's look at an example. Here is the root word, cover. " speech="" play="A90" />
+      <Item id="1" agent="ComputerTutor" text="Let's look at an example. Here is the root word, cover. " speech="" play="A90" />
     </RigidPack>
     <RigidPack name="Competition" usedIn="">
-      <Item id="1" agent="Cristina" text="Now, let's change things up a bit! The next set of questions will give you a chance to show what you have learned. Each of you will respond to the question and each will get one point for a correct answer. At the end, we will see who has the most correct answers. " speech="" play="A91" />
-      <Item id="2" agent="Jordan" text="That sounds like fun. I enjoy a little friendly competition. " speech="" play="B37" />
-      <Item id="3" agent="Cristina" text="Before we get started, let's look at an example of a question for this round. Here is an example of the type of sentences you might see,  As the tropical storm is becoming a hurricane. I can see an eye forming in the center of the storm on the weather radar." speech="" play="A92" />
+      <Item id="1" agent="ComputerTutor" text="Now, let's change things up a bit! The next set of questions will give you a chance to show what you have learned. Each of you will respond to the question and each will get one point for a correct answer. At the end, we will see who has the most correct answers. " speech="" play="A91" />
+      <Item id="2" agent="ComputerStudent1" text="That sounds like fun. I enjoy a little friendly competition. " speech="" play="B37" />
+      <Item id="3" agent="ComputerTutor" text="Before we get started, let's look at an example of a question for this round. Here is an example of the type of sentences you might see,  As the tropical storm is becoming a hurricane. I can see an eye forming in the center of the storm on the weather radar." speech="" play="A92" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, Here is a list of words. Can you find the affixed word?" speech="_user_,Here is a list of words. Can you find the aahfixed word?" media="" play="_user_,A93">
+        <Question id="1" agent="ComputerTutor" text="_user_, Here is a list of words. Can you find the affixed word?" speech="_user_,Here is a list of words. Can you find the aahfixed word?" media="" play="_user_,A93">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word here is vividly." speech="The aahfixed word here is vividly." keys="na" threshold="" test="" play="A94" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,A95" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how about you?" speech="" keys="na" threshold="" test="" play="A96" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Is the answer vividly?" speech="" keys="na" threshold="" test="" play="B38" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is the correct answer disaster?" speech="" keys="na" threshold="" test="" play="B39" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,can you help me out please?" speech="" keys="na" threshold="" test="" play="_user_,B40" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word here is vividly." speech="The aahfixed word here is vividly." keys="na" threshold="" test="" play="A94" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,A95" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how about you?" speech="" keys="na" threshold="" test="" play="A96" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Is the answer vividly?" speech="" keys="na" threshold="" test="" play="B38" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is the correct answer disaster?" speech="" keys="na" threshold="" test="" play="B39" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,can you help me out please?" speech="" keys="na" threshold="" test="" play="_user_,B40" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="_user_, Can you find the affixed word in the options below?" speech="_user_, Can you find the aahfixed word in the options below?" media="" play="_user_,A97">
+        <Question id="2" agent="ComputerTutor" text="_user_, Can you find the affixed word in the options below?" speech="_user_, Can you find the aahfixed word in the options below?" media="" play="_user_,A97">
           <Answers />
         </Question>
       </Questions>
@@ -280,14 +280,14 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, let's look for another affixed word from this list." speech="_user_, let's look for another aahfixed word from this list." media="" play="_user_,A98">
+        <Question id="1" agent="ComputerTutor" text="_user_, let's look for another affixed word from this list." speech="_user_, let's look for another aahfixed word from this list." media="" play="_user_,A98">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is reconverted. The affixes re- and -ed were added to the root word convert." speech="The aahfixed word is reconverted. The aahfixes, ree, and, ed, were added to the root word, convert." keys="na" threshold="" test="" play="A99" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_,  can you figure out the answer?" speech="" keys="na" threshold="" test="" play="_user_,A100" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what about you? Do you know the answer?" speech="Jordan, what about you, do you know the answer?" keys="na" threshold="" test="" play="A101" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is reconverted." speech="" keys="na" threshold="" test="" play="B41" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am really not sure. I think it might be provide." speech="" keys="na" threshold="" test="" play="B42" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I really need some help from you." speech="" keys="na" threshold="" test="" play="_user_,B43" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is reconverted. The affixes re- and -ed were added to the root word convert." speech="The aahfixed word is reconverted. The aahfixes, ree, and, ed, were added to the root word, convert." keys="na" threshold="" test="" play="A99" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_,  can you figure out the answer?" speech="" keys="na" threshold="" test="" play="_user_,A100" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what about you? Do you know the answer?" speech="ComputerStudent1, what about you, do you know the answer?" keys="na" threshold="" test="" play="A101" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is reconverted." speech="" keys="na" threshold="" test="" play="B41" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am really not sure. I think it might be provide." speech="" keys="na" threshold="" test="" play="B42" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I really need some help from you." speech="" keys="na" threshold="" test="" play="_user_,B43" />
           </Answers>
         </Question>
       </Questions>
@@ -296,14 +296,14 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, Let's look for root words. Can you find the root word for the affixed word detectable?" speech="_user_, Let's look for root words. Can you find the root word for the aahfixed word detectable?" media="" play="_user_,A102">
+        <Question id="1" agent="ComputerTutor" text="_user_, Let's look for root words. Can you find the root word for the affixed word detectable?" speech="_user_, Let's look for root words. Can you find the root word for the aahfixed word detectable?" media="" play="_user_,A102">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word is detect. " speech="" keys="na" threshold="" test="" play="A103" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Which is the right word?" speech="" keys="na" threshold="" test="" play="_user_,A104" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which one is the root word?" speech="" keys="na" threshold="" test="" play="A105" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm not sure, but I think it is detect." speech="" keys="na" threshold="" test="" play="B44" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I really don't know what the root word is. Is it able?" speech="" keys="na" threshold="" test="" play="B45" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, please help me out here. What do you think the root word is?" speech="" keys="na" threshold="" test="" play="_user_,B46" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word is detect. " speech="" keys="na" threshold="" test="" play="A103" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, Which is the right word?" speech="" keys="na" threshold="" test="" play="_user_,A104" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which one is the root word?" speech="" keys="na" threshold="" test="" play="A105" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm not sure, but I think it is detect." speech="" keys="na" threshold="" test="" play="B44" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I really don't know what the root word is. Is it able?" speech="" keys="na" threshold="" test="" play="B45" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, please help me out here. What do you think the root word is?" speech="" keys="na" threshold="" test="" play="_user_,B46" />
           </Answers>
         </Question>
       </Questions>
@@ -312,14 +312,14 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="1" agent="Cristina" text="What is the root word for the affixed word unremarkable?" speech="What is the root word for the aahfixed word unremarkable?" media="" play="A106">
+        <Question id="1" agent="ComputerTutor" text="What is the root word for the affixed word unremarkable?" speech="What is the root word for the aahfixed word unremarkable?" media="" play="A106">
           <Answers>
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the correct answer?" speech="" keys="na" threshold="" test="" play="_user_,A107" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how about you?" speech="" keys="na" threshold="" test="" play="A108" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure, is it markable?" speech="" keys="na" threshold="" test="" play="B47" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is mark." speech="" keys="na" threshold="" test="" play="B48" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, please give me a hand." speech="" keys="na" threshold="" test="" play="_user_,B49" />
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word for remarkable is mark. The root word is the word after all of the affixes are removed." speech="The root word for remarkable is mark. The root word is the word after all of the aahfixes are removed." keys="na" threshold="" test="" play="A109" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the correct answer?" speech="" keys="na" threshold="" test="" play="_user_,A107" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how about you?" speech="" keys="na" threshold="" test="" play="A108" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure, is it markable?" speech="" keys="na" threshold="" test="" play="B47" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is mark." speech="" keys="na" threshold="" test="" play="B48" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, please give me a hand." speech="" keys="na" threshold="" test="" play="_user_,B49" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word for remarkable is mark. The root word is the word after all of the affixes are removed." speech="The root word for remarkable is mark. The root word is the word after all of the aahfixes are removed." keys="na" threshold="" test="" play="A109" />
           </Answers>
         </Question>
       </Questions>
@@ -328,14 +328,14 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now let's find the root word for this one. What is the root word for disoriented?" speech="" media="" play="A110">
+        <Question id="1" agent="ComputerTutor" text="Now let's find the root word for this one. What is the root word for disoriented?" speech="" media="" play="A110">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="In this case, the root word is orient." speech="" keys="na" threshold="" test="" play="A111" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you have an answer for us?" speech="" keys="na" threshold="" test="" play="_user_,A112" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, I am hoping you know the answer to this." speech="" keys="na" threshold="" test="" play="A113" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I have this one. It is orient" speech="" keys="na" threshold="" test="" play="B50" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am going to guess it is disorder." speech="" keys="na" threshold="" test="" play="B51" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I really need some help here. Do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B52" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this case, the root word is orient." speech="" keys="na" threshold="" test="" play="A111" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you have an answer for us?" speech="" keys="na" threshold="" test="" play="_user_,A112" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, I am hoping you know the answer to this." speech="" keys="na" threshold="" test="" play="A113" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I have this one. It is orient" speech="" keys="na" threshold="" test="" play="B50" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am going to guess it is disorder." speech="" keys="na" threshold="" test="" play="B51" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I really need some help here. Do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B52" />
           </Answers>
         </Question>
       </Questions>
@@ -344,14 +344,14 @@
     </TutoringPack>
     <TutoringPack name="TPD1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is another list of words, only one is affixed, can you find it?" speech="Here is another list of words, only one is aahfixed, can you find it?" media="" play="A114">
+        <Question id="1" agent="ComputerTutor" text="Here is another list of words, only one is affixed, can you find it?" speech="Here is another list of words, only one is aahfixed, can you find it?" media="" play="A114">
           <Answers>
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,do you have any idea of the answer?" speech="" keys="na" threshold="" test="" play="_user_,B53" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you pick out the affixed word?" speech="_user_,can you pick out the aahfixed word?" keys="na" threshold="" test="" play="_user_,A115" />
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is submerging. The affixes, sub-, and, -ing, were added to change the root word merge. Sometimes a letter at the end of the word will be dropped if the word is affixed." speech="The aahfixed word is submerging. The aahfixes, sub, and, ing, were added to change the root word, merge. Sometimes a letter at the end of the word will be dropped if the word is aahfixed." keys="na" threshold="" test="" play="A116" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is the correct answer persuade?" speech="" keys="na" threshold="" test="" play="B54" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the affixed word is submerging." speech="I think the aahfixed word is submerging" keys="na" threshold="" test="" play="B55" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which of these words is the affixed one?" speech="Jordan, do you know which of these words is the aahfixed one." keys="na" threshold="" test="" play="A117" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,do you have any idea of the answer?" speech="" keys="na" threshold="" test="" play="_user_,B53" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you pick out the affixed word?" speech="_user_,can you pick out the aahfixed word?" keys="na" threshold="" test="" play="_user_,A115" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is submerging. The affixes, sub-, and, -ing, were added to change the root word merge. Sometimes a letter at the end of the word will be dropped if the word is affixed." speech="The aahfixed word is submerging. The aahfixes, sub, and, ing, were added to change the root word, merge. Sometimes a letter at the end of the word will be dropped if the word is aahfixed." keys="na" threshold="" test="" play="A116" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is the correct answer persuade?" speech="" keys="na" threshold="" test="" play="B54" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the affixed word is submerging." speech="I think the aahfixed word is submerging" keys="na" threshold="" test="" play="B55" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which of these words is the affixed one?" speech="ComputerStudent1, do you know which of these words is the aahfixed one." keys="na" threshold="" test="" play="A117" />
           </Answers>
         </Question>
       </Questions>
@@ -360,14 +360,14 @@
     </TutoringPack>
     <TutoringPack name="TPD2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Can you find the word that is affixed?" speech="Can you find the word that is aahfixed" media="" play="A118">
+        <Question id="1" agent="ComputerTutor" text="Can you find the word that is affixed?" speech="Can you find the word that is aahfixed" media="" play="A118">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is transport. Trans- does not make sense as a word on its own so it is an affix. " speech="The aahfixed word is transport. Trans, does not make sense as a word on its own, so it is an aahfix." keys="na" threshold="" test="" play="A119" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which one is the right word?" speech="" keys="na" threshold="" test="" play="_user_,A120" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you find it?" speech="" keys="na" threshold="" test="" play="A121" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the affixed word is transport." speech="I think the aahfixed word is transport." keys="na" threshold="" test="" play="B56" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is it interpret?" speech="" keys="na" threshold="" test="" play="B57" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I could use some help here." speech="" keys="na" threshold="" test="" play="_user_,B58" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is transport. Trans- does not make sense as a word on its own so it is an affix. " speech="The aahfixed word is transport. Trans, does not make sense as a word on its own, so it is an aahfix." keys="na" threshold="" test="" play="A119" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which one is the right word?" speech="" keys="na" threshold="" test="" play="_user_,A120" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you find it?" speech="" keys="na" threshold="" test="" play="A121" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the affixed word is transport." speech="I think the aahfixed word is transport." keys="na" threshold="" test="" play="B56" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is it interpret?" speech="" keys="na" threshold="" test="" play="B57" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I could use some help here." speech="" keys="na" threshold="" test="" play="_user_,B58" />
           </Answers>
         </Question>
       </Questions>
@@ -376,14 +376,14 @@
     </TutoringPack>
     <TutoringPack name="TPD3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Which of these words is affixed?" speech="Which of these words is aahfixed?" media="" play="A122">
+        <Question id="1" agent="ComputerTutor" text="Which of these words is affixed?" speech="Which of these words is aahfixed?" media="" play="A122">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is doer. The word was changed by adding the suffix -er to the root word do." speech="The aahfixed word is doer. The word was changed by adding the suffix, er, to the root word, do." keys="na" threshold="" test="" play="A123" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you have an answer for me?" speech="" keys="na" threshold="" test="" play="A124" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's doer" speech="" keys="na" threshold="" test="" play="B59" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Cristina, I am not sure. Is it educate?" speech="" keys="na" threshold="" test="" play="B60" />
-            <Answer name="AskUser " agent="Cristina" type="AskUser" text="_user_, do you know the right word?" speech="" keys="na" threshold="" test="" play="_user_,A125" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, do you have any idea which is the affixed word?" speech="_user_, do you have any idea which is the aahfixed word?" keys="na" threshold="" test="" play="_user_,B61" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is doer. The word was changed by adding the suffix -er to the root word do." speech="The aahfixed word is doer. The word was changed by adding the suffix, er, to the root word, do." keys="na" threshold="" test="" play="A123" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you have an answer for me?" speech="" keys="na" threshold="" test="" play="A124" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's doer" speech="" keys="na" threshold="" test="" play="B59" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="ComputerTutor, I am not sure. Is it educate?" speech="" keys="na" threshold="" test="" play="B60" />
+            <Answer name="AskUser " agent="ComputerTutor" type="AskUser" text="_user_, do you know the right word?" speech="" keys="na" threshold="" test="" play="_user_,A125" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, do you have any idea which is the affixed word?" speech="_user_, do you have any idea which is the aahfixed word?" keys="na" threshold="" test="" play="_user_,B61" />
           </Answers>
         </Question>
       </Questions>
@@ -392,14 +392,14 @@
     </TutoringPack>
     <TutoringPack name="TPD4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Can you tell me which one is the affixed word?" speech="Can you tell me which one is the aahfixed word?" media="" play="A126">
+        <Question id="1" agent="ComputerTutor" text="Can you tell me which one is the affixed word?" speech="Can you tell me which one is the aahfixed word?" media="" play="A126">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word on this list is active. You can tell it is affixed because the suffix -ive changes the word act to describe someone or something having a tendency to act." speech="The aahfixed word on this list is active. You can tell it is aahfixed, because the suffix, eev, changes, act, to describe someone or some thing having a tendency to act." keys="na" threshold="" test="" play="A127" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A128" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what to you think is the correct answer?" speech="" keys="na" threshold="" test="" play="A129" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the right answer is active." speech="" keys="na" threshold="" test="" play="B62" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am really not sure, is the right answer foray." speech="" keys="na" threshold="" test="" play="B63" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I haven't heard from you. What do you think?" speech="" keys="na" threshold="" test="" play="_user_,B64" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word on this list is active. You can tell it is affixed because the suffix -ive changes the word act to describe someone or something having a tendency to act." speech="The aahfixed word on this list is active. You can tell it is aahfixed, because the suffix, eev, changes, act, to describe someone or some thing having a tendency to act." keys="na" threshold="" test="" play="A127" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A128" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what to you think is the correct answer?" speech="" keys="na" threshold="" test="" play="A129" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the right answer is active." speech="" keys="na" threshold="" test="" play="B62" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am really not sure, is the right answer foray." speech="" keys="na" threshold="" test="" play="B63" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I haven't heard from you. What do you think?" speech="" keys="na" threshold="" test="" play="_user_,B64" />
           </Answers>
         </Question>
       </Questions>
@@ -408,14 +408,14 @@
     </TutoringPack>
     <TutoringPack name="TPD5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is one more. Can you find the affixed word on this list?" speech="Here is one more. Can you find the aahfixed word on this list?" media="" play="A130">
+        <Question id="1" agent="ComputerTutor" text="Here is one more. Can you find the affixed word on this list?" speech="Here is one more. Can you find the aahfixed word on this list?" media="" play="A130">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="In this case, the affixed word is fixable. The suffix, -able, changes the meaning of the word fix to mean something that can be fixed." speech="In this case, the aahfixed word is fixable. The suffix, able, changes the meaning of the word, fix, to mean something that can be fixed." keys="na" threshold="" test="" play="A131" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know what the answer is?" speech="" keys="na" threshold="" test="" play="_user_,A132" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which answer do you think is correct?" speech="" keys="na" threshold="" test="" play="A133" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the right answer is fixable." speech="" keys="na" threshold="" test="" play="B65" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Cristina, I am not sure which of these is the right word. Could it be ambitious?" speech="" keys="na" threshold="" test="" play="B66" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I have no idea, can you please give me an answer?" speech="" keys="na" threshold="" test="" play="_user_,B67" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this case, the affixed word is fixable. The suffix, -able, changes the meaning of the word fix to mean something that can be fixed." speech="In this case, the aahfixed word is fixable. The suffix, able, changes the meaning of the word, fix, to mean something that can be fixed." keys="na" threshold="" test="" play="A131" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know what the answer is?" speech="" keys="na" threshold="" test="" play="_user_,A132" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which answer do you think is correct?" speech="" keys="na" threshold="" test="" play="A133" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the right answer is fixable." speech="" keys="na" threshold="" test="" play="B65" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="ComputerTutor, I am not sure which of these is the right word. Could it be ambitious?" speech="" keys="na" threshold="" test="" play="B66" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I have no idea, can you please give me an answer?" speech="" keys="na" threshold="" test="" play="_user_,B67" />
           </Answers>
         </Question>
       </Questions>
@@ -424,14 +424,14 @@
     </TutoringPack>
     <TutoringPack name="TPD6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is something different to do. Let's see if you can figure out the root word of the affixed word underestimated." speech="Here is something different to do. Let's see if you can figure out, the root word of the aahfixed word, underestamated." media="" play="A134">
+        <Question id="1" agent="ComputerTutor" text="Here is something different to do. Let's see if you can figure out the root word of the affixed word underestimated." speech="Here is something different to do. Let's see if you can figure out, the root word of the aahfixed word, underestamated." media="" play="A134">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word here is estimate. You have to be careful when finding root words, make sure you are taking away all of the affixes and suffixes. In this case, they are under- and -ed." speech="The root word here is estamate. You have to be careful when finding root words, make sure you are taking away all of the aahfixes and suffixes. In this case, they are, under, and, ed." keys="na" threshold="" test="" play="A135" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you figure out the root word?" speech="" keys="na" threshold="" test="" play="_user_,A136" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know what the root word is here?" speech="" keys="na" threshold="" test="" play="A137" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going to say that the correct answer is estimate." speech="I am going to say that the correct answer is estamate." keys="na" threshold="" test="" play="B68" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the correct answer is estimated." speech="" keys="na" threshold="" test="" play="B69" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I am not sure what the root word is here. Can you help?" speech="" keys="na" threshold="" test="" play="_user_,B70" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word here is estimate. You have to be careful when finding root words, make sure you are taking away all of the affixes and suffixes. In this case, they are under- and -ed." speech="The root word here is estamate. You have to be careful when finding root words, make sure you are taking away all of the aahfixes and suffixes. In this case, they are, under, and, ed." keys="na" threshold="" test="" play="A135" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you figure out the root word?" speech="" keys="na" threshold="" test="" play="_user_,A136" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know what the root word is here?" speech="" keys="na" threshold="" test="" play="A137" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am going to say that the correct answer is estimate." speech="I am going to say that the correct answer is estamate." keys="na" threshold="" test="" play="B68" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the correct answer is estimated." speech="" keys="na" threshold="" test="" play="B69" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I am not sure what the root word is here. Can you help?" speech="" keys="na" threshold="" test="" play="_user_,B70" />
           </Answers>
         </Question>
       </Questions>
@@ -440,14 +440,14 @@
     </TutoringPack>
     <TutoringPack name="TPD7">
       <Questions>
-        <Question id="1" agent="Cristina" text="What is the root word for the affixed word wonderful?" speech="What is the root word for the aahfixed word wonderful?" media="" play="A138">
+        <Question id="1" agent="ComputerTutor" text="What is the root word for the affixed word wonderful?" speech="What is the root word for the aahfixed word wonderful?" media="" play="A138">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word here is wonder. Adding the suffix -ful means characterized by or resembling wonder." speech="The root word here, is wonder. Adding the suffix, ful, means characterized by, or resembling, wonder." keys="na" threshold="" test="" play="A139" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which answer do you think is correct?" speech="" keys="na" threshold="" test="" play="_user_,A140" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you tell me the root word?" speech="" keys="na" threshold="" test="" play="A141" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think I got this one. The root word is wonder." speech="" keys="na" threshold="" test="" play="B71" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think I have this. Is the root word ful?" speech="I think I have this. Is the root word, full?" keys="na" threshold="" test="" play="B72" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ ,I could use some help with this." speech="" keys="na" threshold="" test="" play="_user_,B73" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word here is wonder. Adding the suffix -ful means characterized by or resembling wonder." speech="The root word here, is wonder. Adding the suffix, ful, means characterized by, or resembling, wonder." keys="na" threshold="" test="" play="A139" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which answer do you think is correct?" speech="" keys="na" threshold="" test="" play="_user_,A140" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me the root word?" speech="" keys="na" threshold="" test="" play="A141" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think I got this one. The root word is wonder." speech="" keys="na" threshold="" test="" play="B71" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think I have this. Is the root word ful?" speech="I think I have this. Is the root word, full?" keys="na" threshold="" test="" play="B72" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ ,I could use some help with this." speech="" keys="na" threshold="" test="" play="_user_,B73" />
           </Answers>
         </Question>
       </Questions>
@@ -456,14 +456,14 @@
     </TutoringPack>
     <TutoringPack name="TPD8">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's try another one. What is the root word for the affixed word dripped?" speech="Let's try another one. What is the root word for the aahfixed word dripped?" media="" play="A142">
+        <Question id="1" agent="ComputerTutor" text="Let's try another one. What is the root word for the affixed word dripped?" speech="Let's try another one. What is the root word for the aahfixed word dripped?" media="" play="A142">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word is drip. Adding the suffix -ed, the verb becomes a past tense." speech="The root word is, drip. Adding the suffix, ed, the verb becomes a past tense." keys="na" threshold="" test="" play="A143" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, I bet you know the answer." speech="" keys="na" threshold="" test="" play="_user_,A144" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know the answer?" speech="" keys="na" threshold="" test="" play="A145" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I know that the root word is drip." speech="" keys="na" threshold="" test="" play="B74" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure which one is the root word. Is it rip?" speech="" keys="na" threshold="" test="" play="B75" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,can you help me?" speech="" keys="na" threshold="" test="" play="_user_,B76" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word is drip. Adding the suffix -ed, the verb becomes a past tense." speech="The root word is, drip. Adding the suffix, ed, the verb becomes a past tense." keys="na" threshold="" test="" play="A143" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, I bet you know the answer." speech="" keys="na" threshold="" test="" play="_user_,A144" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know the answer?" speech="" keys="na" threshold="" test="" play="A145" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I know that the root word is drip." speech="" keys="na" threshold="" test="" play="B74" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure which one is the root word. Is it rip?" speech="" keys="na" threshold="" test="" play="B75" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,can you help me?" speech="" keys="na" threshold="" test="" play="_user_,B76" />
           </Answers>
         </Question>
       </Questions>
@@ -472,14 +472,14 @@
     </TutoringPack>
     <TutoringPack name="TPD9">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, here is the affixed word submerging. Can you find the root word? Remember to remove all the affixes to find the root." speech="_user_, Here is the aahfixed word submerging. Can you find the root word? Remember to remove all the aahfixes to find the root." media="" play="_user_,A146">
+        <Question id="1" agent="ComputerTutor" text="_user_, here is the affixed word submerging. Can you find the root word? Remember to remove all the affixes to find the root." speech="_user_, Here is the aahfixed word submerging. Can you find the root word? Remember to remove all the aahfixes to find the root." media="" play="_user_,A146">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word for submerging is merge. The affixes are sub- and -ing. Please note that sometimes root words lose a letter at the end when they are affixed." speech="The root word for, sub merging, is merge. The affixes are, sub, and, ing. Please note that sometimes root words lose a letter at the end when they are aahfixed" keys="na" threshold="" test="" play="A147" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A148" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you have an idea?" speech="" keys="na" threshold="" test="" play="A149" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the root word is merge." speech="" keys="na" threshold="" test="" play="B77" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure, is the root word submerge." speech="" keys="na" threshold="" test="" play="B78" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,I am having some problems here. Can you lend a hand?" speech="" keys="na" threshold="" test="" play="_user_,B79" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word for submerging is merge. The affixes are sub- and -ing. Please note that sometimes root words lose a letter at the end when they are affixed." speech="The root word for, sub merging, is merge. The affixes are, sub, and, ing. Please note that sometimes root words lose a letter at the end when they are aahfixed" keys="na" threshold="" test="" play="A147" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A148" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you have an idea?" speech="" keys="na" threshold="" test="" play="A149" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the root word is merge." speech="" keys="na" threshold="" test="" play="B77" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure, is the root word submerge." speech="" keys="na" threshold="" test="" play="B78" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,I am having some problems here. Can you lend a hand?" speech="" keys="na" threshold="" test="" play="_user_,B79" />
           </Answers>
         </Question>
       </Questions>
@@ -488,14 +488,14 @@
     </TutoringPack>
     <TutoringPack name="TPDA">
       <Questions>
-        <Question id="1" agent="Cristina" text="What is the root word for the affixed word impressed?" speech="What is the root word for the aahfixed word impressed?" media="" play="A150">
+        <Question id="1" agent="ComputerTutor" text="What is the root word for the affixed word impressed?" speech="What is the root word for the aahfixed word impressed?" media="" play="A150">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word in this case is press. The affixes are im- and -ed. Remember you have to remove all of the affixes to get to the root word." speech="The root word in this case is, press. The affixes are, im, and, ed. Remember you have to remove all of the aahfixes to get to the root word." keys="na" threshold="" test="" play="A151" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell what the root word is?" speech="" keys="na" threshold="" test="" play="_user_,A152" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you have an idea which is the root word?" speech="" keys="na" threshold="" test="" play="A153" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the root word is press." speech="" keys="na" threshold="" test="" play="B80" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure, but I think it is impress." speech="" keys="na" threshold="" test="" play="B81" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,come on, can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B82" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word in this case is press. The affixes are im- and -ed. Remember you have to remove all of the affixes to get to the root word." speech="The root word in this case is, press. The affixes are, im, and, ed. Remember you have to remove all of the aahfixes to get to the root word." keys="na" threshold="" test="" play="A151" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell what the root word is?" speech="" keys="na" threshold="" test="" play="_user_,A152" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you have an idea which is the root word?" speech="" keys="na" threshold="" test="" play="A153" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the root word is press." speech="" keys="na" threshold="" test="" play="B80" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure, but I think it is impress." speech="" keys="na" threshold="" test="" play="B81" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,come on, can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B82" />
           </Answers>
         </Question>
       </Questions>
@@ -504,14 +504,14 @@
     </TutoringPack>
     <TutoringPack name="TPE1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's look for some more affixed words. How about the words on this list?" speech="Let's look for some more aahfixed words. How about the words on this list?" media="" play="A154">
+        <Question id="1" agent="ComputerTutor" text="Let's look for some more affixed words. How about the words on this list?" speech="Let's look for some more aahfixed words. How about the words on this list?" media="" play="A154">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is forecast." speech="The aahfixed word is, forecast." keys="na" threshold="" test="" play="A155" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, go ahead, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A156" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, I am pretty sure you can get this one." speech="" keys="na" threshold="" test="" play="A157" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I know this one. It is forecast." speech="" keys="na" threshold="" test="" play="B83" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure which one is affixed. Is it middle?" speech="I am not sure which one is aahfixed. Is it middle?" keys="na" threshold="" test="" play="B84" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,can you give me some help here, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B85" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is forecast." speech="The aahfixed word is, forecast." keys="na" threshold="" test="" play="A155" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, go ahead, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A156" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, I am pretty sure you can get this one." speech="" keys="na" threshold="" test="" play="A157" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I know this one. It is forecast." speech="" keys="na" threshold="" test="" play="B83" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure which one is affixed. Is it middle?" speech="I am not sure which one is aahfixed. Is it middle?" keys="na" threshold="" test="" play="B84" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,can you give me some help here, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B85" />
           </Answers>
         </Question>
       </Questions>
@@ -520,14 +520,14 @@
     </TutoringPack>
     <TutoringPack name="TPE2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Find the affixed word in this group of words." speech="" media="" play="A158">
+        <Question id="1" agent="ComputerTutor" text="Find the affixed word in this group of words." speech="" media="" play="A158">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word here is enclose. The affix, en-, was added to the root word close" speech="The aahfixed word here is enclose. The aahfix, en, was added to the root word, close" keys="na" threshold="" test="" play="A159" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you find the word that is affixed?" speech="_user_, can you find the word that is aahfixed?" keys="na" threshold="" test="" play="_user_,A160" />
-            <Answer name="AskJordan" agent="Jordan" type="AskJordan" text="Jordan, which word on this list is affixed?" speech="Jordan, which word on this list is aahfixed?" keys="na" threshold="" test="" play="B86" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I know this. The affixed word is enclose." speech="I know this. The aahfixed word is, enclose" keys="na" threshold="" test="" play="B87" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure, is the affixed word under?" speech="I am not sure. Is the aahfixed word, under?" keys="na" threshold="" test="" play="B88" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, please help me out." speech="" keys="na" threshold="" test="" play="_user_,B89" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word here is enclose. The affix, en-, was added to the root word close" speech="The aahfixed word here is enclose. The aahfix, en, was added to the root word, close" keys="na" threshold="" test="" play="A159" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you find the word that is affixed?" speech="_user_, can you find the word that is aahfixed?" keys="na" threshold="" test="" play="_user_,A160" />
+            <Answer name="AskJordan" agent="ComputerStudent1" type="AskJordan" text="ComputerStudent1, which word on this list is affixed?" speech="ComputerStudent1, which word on this list is aahfixed?" keys="na" threshold="" test="" play="B86" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I know this. The affixed word is enclose." speech="I know this. The aahfixed word is, enclose" keys="na" threshold="" test="" play="B87" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure, is the affixed word under?" speech="I am not sure. Is the aahfixed word, under?" keys="na" threshold="" test="" play="B88" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, please help me out." speech="" keys="na" threshold="" test="" play="_user_,B89" />
           </Answers>
         </Question>
       </Questions>
@@ -536,14 +536,14 @@
     </TutoringPack>
     <TutoringPack name="TPE3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Which one of these words is the correct choice?" speech="" media="" play="A161">
+        <Question id="1" agent="ComputerTutor" text="Which one of these words is the correct choice?" speech="" media="" play="A161">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word here is farming, it tells the reader that the farmer is working at that moment." speech="The aahfixed word here is farming, it tells the reader that the farmer is working at that moment." keys="na" threshold="" test="" play="A162" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell me which of these words is affixed?" speech="_user_, can you tell me which of these words is aahfixed?" keys="na" threshold="" test="" play="_user_,A163" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which of these words is affixed?" speech="Jordan, do you know which of these words is aahfixed?" keys="na" threshold="" test="" play="A164" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The affixed word on this list is farming." speech="The aahfixed word on this list is farming." keys="na" threshold="" test="" play="B90" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Is the affixed word exit?" speech="Is the aahfixed word exit?" keys="na" threshold="" test="" play="B91" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I would love some help from you." speech="" keys="na" threshold="" test="" play="_user_,B92" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word here is farming, it tells the reader that the farmer is working at that moment." speech="The aahfixed word here is farming, it tells the reader that the farmer is working at that moment." keys="na" threshold="" test="" play="A162" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me which of these words is affixed?" speech="_user_, can you tell me which of these words is aahfixed?" keys="na" threshold="" test="" play="_user_,A163" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which of these words is affixed?" speech="ComputerStudent1, do you know which of these words is aahfixed?" keys="na" threshold="" test="" play="A164" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The affixed word on this list is farming." speech="The aahfixed word on this list is farming." keys="na" threshold="" test="" play="B90" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Is the affixed word exit?" speech="Is the aahfixed word exit?" keys="na" threshold="" test="" play="B91" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I would love some help from you." speech="" keys="na" threshold="" test="" play="_user_,B92" />
           </Answers>
         </Question>
       </Questions>
@@ -552,14 +552,14 @@
     </TutoringPack>
     <TutoringPack name="TPE4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's keep practicing. Here is another list of words, which is the affixed word?" speech="Let's keep practicing. Here is another list of words, which is the aahfixed word?" media="" play="A165">
+        <Question id="1" agent="ComputerTutor" text="Let's keep practicing. Here is another list of words, which is the affixed word?" speech="Let's keep practicing. Here is another list of words, which is the aahfixed word?" media="" play="A165">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word is useless. An affix was added to the root word use." speech="The aahfixed word is, useless. An affix was added to the root word, use" keys="na" threshold="" test="" play="A166" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the answer is?" speech="" keys="na" threshold="" test="" play="_user_,A167" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is your response?" speech="" keys="na" threshold="" test="" play="A168" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the affixed word on this list is useless." speech="I think the aahfixed word on this list is, useless." keys="na" threshold="" test="" play="B93" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the affixed word on this list is extract." speech="I think the aahfixed word on this list is, extract." keys="na" threshold="" test="" play="B94" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I have no idea. Do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B95" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is useless. An affix was added to the root word use." speech="The aahfixed word is, useless. An affix was added to the root word, use" keys="na" threshold="" test="" play="A166" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the answer is?" speech="" keys="na" threshold="" test="" play="_user_,A167" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is your response?" speech="" keys="na" threshold="" test="" play="A168" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the affixed word on this list is useless." speech="I think the aahfixed word on this list is, useless." keys="na" threshold="" test="" play="B93" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the affixed word on this list is extract." speech="I think the aahfixed word on this list is, extract." keys="na" threshold="" test="" play="B94" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I have no idea. Do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,B95" />
           </Answers>
         </Question>
       </Questions>
@@ -568,14 +568,14 @@
     </TutoringPack>
     <TutoringPack name="TPE5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's try this again. Can you find the affixed word from this list?" speech="Let's try this again. Can you find the aahfixed word from this list?" media="" play="A169">
+        <Question id="1" agent="ComputerTutor" text="Let's try this again. Can you find the affixed word from this list?" speech="Let's try this again. Can you find the aahfixed word from this list?" media="" play="A169">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The affixed word on this list is tightest." speech="The aahfixed word on this list is, tightest." keys="na" threshold="" test="" play="A170" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you pick out which word is affixed?" speech="_user_, can you pick out which word is aahfixed?" keys="na" threshold="" test="" play="_user_,A171" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these words is affixed?" speech="Jordan, which of these words is aahfixed?" keys="na" threshold="" test="" play="A172" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The affixed word from this list is tightest." speech="The aahfixed word from this list is, tightest." keys="na" threshold="" test="" play="B96" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is the correct answer convert?" speech="" keys="na" threshold="" test="" play="B97" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I am having some trouble thinking of the correct answer." speech="" keys="na" threshold="" test="" play="_user_,B98" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word on this list is tightest." speech="The aahfixed word on this list is, tightest." keys="na" threshold="" test="" play="A170" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you pick out which word is affixed?" speech="_user_, can you pick out which word is aahfixed?" keys="na" threshold="" test="" play="_user_,A171" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these words is affixed?" speech="ComputerStudent1, which of these words is aahfixed?" keys="na" threshold="" test="" play="A172" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The affixed word from this list is tightest." speech="The aahfixed word from this list is, tightest." keys="na" threshold="" test="" play="B96" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is the correct answer convert?" speech="" keys="na" threshold="" test="" play="B97" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I am having some trouble thinking of the correct answer." speech="" keys="na" threshold="" test="" play="_user_,B98" />
           </Answers>
         </Question>
       </Questions>
@@ -584,14 +584,14 @@
     </TutoringPack>
     <TutoringPack name="TPE6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's see if we can find some root words. Can you find the root word for the affixed word midfield?" speech="Let's see if we can find some root words. Can you find the root word for the aahfixed word midfield?" media="" play="A173">
+        <Question id="1" agent="ComputerTutor" text="Let's see if we can find some root words. Can you find the root word for the affixed word midfield?" speech="Let's see if we can find some root words. Can you find the root word for the aahfixed word midfield?" media="" play="A173">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word in this case is field. The root word is the word before the affix is added." speech="The root word in this case is, field. The root word is the word before the aahfix is added." keys="na" threshold="" test="" play="A174" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know how to find the root word here?" speech="" keys="na" threshold="" test="" play="_user_,A175" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know how to find the root word from this list?" speech="" keys="na" threshold="" test="" play="A176" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I know this one. The root word is field." speech="I know this one. The root word is, field" keys="na" threshold="" test="" play="B99" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure I know how to find the root word. Is it middle?" speech="" keys="na" threshold="" test="" play="B100" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, I think it might be middle, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B101" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word in this case is field. The root word is the word before the affix is added." speech="The root word in this case is, field. The root word is the word before the aahfix is added." keys="na" threshold="" test="" play="A174" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know how to find the root word here?" speech="" keys="na" threshold="" test="" play="_user_,A175" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know how to find the root word from this list?" speech="" keys="na" threshold="" test="" play="A176" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I know this one. The root word is field." speech="I know this one. The root word is, field" keys="na" threshold="" test="" play="B99" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure I know how to find the root word. Is it middle?" speech="" keys="na" threshold="" test="" play="B100" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, I think it might be middle, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B101" />
           </Answers>
         </Question>
       </Questions>
@@ -600,14 +600,14 @@
     </TutoringPack>
     <TutoringPack name="TPE7">
       <Questions>
-        <Question id="1" agent="Cristina" text="How about this word? The affixed word is lied." speech="How about this word? The aahfixed word is lied." media="" play="A177">
+        <Question id="1" agent="ComputerTutor" text="How about this word? The affixed word is lied." speech="How about this word? The aahfixed word is lied." media="" play="A177">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word is lie." speech="The root word is, lie" keys="na" threshold="" test="" play="A178" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the root word is for this affixed word?" speech="_user_, what do you think the root word is for this aahfixed word?" keys="na" threshold="" test="" play="_user_,A179" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the root word is for this affixed word?" speech="Jordan, what do you think the root word is for this aahfixed word?" keys="na" threshold="" test="" play="A180" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am pretty sure the correct answer is lie." speech="I am pretty sure the correct answer is, lie." keys="na" threshold="" test="" play="B102" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I really don't know, is the root word lied?" speech="" keys="na" threshold="" test="" play="B103" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, this is confusing to me can you please help me out" speech="" keys="na" threshold="" test="" play="_user_,B104" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word is lie." speech="The root word is, lie" keys="na" threshold="" test="" play="A178" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the root word is for this affixed word?" speech="_user_, what do you think the root word is for this aahfixed word?" keys="na" threshold="" test="" play="_user_,A179" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think the root word is for this affixed word?" speech="ComputerStudent1, what do you think the root word is for this aahfixed word?" keys="na" threshold="" test="" play="A180" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am pretty sure the correct answer is lie." speech="I am pretty sure the correct answer is, lie." keys="na" threshold="" test="" play="B102" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I really don't know, is the root word lied?" speech="" keys="na" threshold="" test="" play="B103" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, this is confusing to me can you please help me out" speech="" keys="na" threshold="" test="" play="_user_,B104" />
           </Answers>
         </Question>
       </Questions>
@@ -616,14 +616,14 @@
     </TutoringPack>
     <TutoringPack name="TPE8">
       <Questions>
-        <Question id="1" agent="Cristina" text="The next affixed word is sleepy. Can you tell me what the root word is?" speech="The next aahfixed word is sleepy. Can you tell me what the root word is?" media="" play="A181">
+        <Question id="1" agent="ComputerTutor" text="The next affixed word is sleepy. Can you tell me what the root word is?" speech="The next aahfixed word is sleepy. Can you tell me what the root word is?" media="" play="A181">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word of sleepy is sleep." speech="The root word of sleepy, is, sleep." keys="na" threshold="" test="" play="A182" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know which is the root word?" speech="" keys="na" threshold="" test="" play="_user_,A183" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which one is the root word?" speech="" keys="na" threshold="" test="" play="A184" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I know this one, the root word is sleep." speech="I know this one, the root word is, sleep" keys="na" threshold="" test="" play="B105" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Wow this seems easy, is the correct answer leap?" speech="Wow this seems easy, is the correct answer, leap?" keys="na" threshold="" test="" play="B106" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, can you help me figure this one out?" speech="" keys="na" threshold="" test="" play="_user_,B107" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word of sleepy is sleep." speech="The root word of sleepy, is, sleep." keys="na" threshold="" test="" play="A182" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know which is the root word?" speech="" keys="na" threshold="" test="" play="_user_,A183" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which one is the root word?" speech="" keys="na" threshold="" test="" play="A184" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I know this one, the root word is sleep." speech="I know this one, the root word is, sleep" keys="na" threshold="" test="" play="B105" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Wow this seems easy, is the correct answer leap?" speech="Wow this seems easy, is the correct answer, leap?" keys="na" threshold="" test="" play="B106" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, can you help me figure this one out?" speech="" keys="na" threshold="" test="" play="_user_,B107" />
           </Answers>
         </Question>
       </Questions>
@@ -632,14 +632,14 @@
     </TutoringPack>
     <TutoringPack name="TPE9">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is another one for practice. Can  you find the root word of the affixed word narrowest?" speech="Here is another one for practice. Can you find the root word of the aahfixed word, narrowest?" media="" play="A185">
+        <Question id="1" agent="ComputerTutor" text="Here is another one for practice. Can  you find the root word of the affixed word narrowest?" speech="Here is another one for practice. Can you find the root word of the aahfixed word, narrowest?" media="" play="A185">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word here is narrow." speech="The root word here is, narrow" keys="na" threshold="" test="" play="A186" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the answer to this one?" speech="" keys="na" threshold="" test="" play="_user_,A187" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know the answer?" speech="" keys="na" threshold="" test="" play="A188" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Yes, I have this one. The root word is narrow. " speech="Yes, I have this one. The root word is, narrow. " keys="na" threshold="" test="" play="B108" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think I have this one. Is the root word row?" speech="I think I have this one. Is the root word, row?" keys="na" threshold="" test="" play="B109" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,I could really use some help here." speech="" keys="na" threshold="" test="" play="_user_,B110" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word here is narrow." speech="The root word here is, narrow" keys="na" threshold="" test="" play="A186" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the answer to this one?" speech="" keys="na" threshold="" test="" play="_user_,A187" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know the answer?" speech="" keys="na" threshold="" test="" play="A188" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Yes, I have this one. The root word is narrow. " speech="Yes, I have this one. The root word is, narrow. " keys="na" threshold="" test="" play="B108" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think I have this one. Is the root word row?" speech="I think I have this one. Is the root word, row?" keys="na" threshold="" test="" play="B109" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,I could really use some help here." speech="" keys="na" threshold="" test="" play="_user_,B110" />
           </Answers>
         </Question>
       </Questions>
@@ -648,14 +648,14 @@
     </TutoringPack>
     <TutoringPack name="TPEA">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's do another one of these. Can you find the root word for the word talented?" speech="" media="" play="A189">
+        <Question id="1" agent="ComputerTutor" text="Let's do another one of these. Can you find the root word for the word talented?" speech="" media="" play="A189">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The root word for this affixed word is talent." speech="The root word for this aahfixed word is, talent." keys="na" threshold="" test="" play="A190" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how about you?" speech="" keys="na" threshold="" test="" play="_user_,A191" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan ,can you do this one?" speech="" keys="na" threshold="" test="" play="A192" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Is the root word talent?" speech="Is the root word, talent?" keys="na" threshold="" test="" play="B111" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is the root word relent? " speech="I am not sure. Is the root word, relent? " keys="na" threshold="" test="" play="B112" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, help me out here,  I need you to chime in." speech="" keys="na" threshold="" test="" play="_user_,B113" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root word for this affixed word is talent." speech="The root word for this aahfixed word is, talent." keys="na" threshold="" test="" play="A190" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how about you?" speech="" keys="na" threshold="" test="" play="_user_,A191" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 ,can you do this one?" speech="" keys="na" threshold="" test="" play="A192" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Is the root word talent?" speech="Is the root word, talent?" keys="na" threshold="" test="" play="B111" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is the root word relent? " speech="I am not sure. Is the root word, relent? " keys="na" threshold="" test="" play="B112" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, help me out here,  I need you to chime in." speech="" keys="na" threshold="" test="" play="_user_,B113" />
           </Answers>
         </Question>
       </Questions>
@@ -664,14 +664,14 @@
     </TutoringPack>
     <TutoringPack name="TPF1">
       <Questions>
-        <Question id="1" agent="Cristina" text="The root word needs an affix for it to make sense in this sentence. Which is the correct affix for this word?" speech="The root word needs an aahfix for it to make sense in this sentence. Which is the correct aahfix for this word?" media="" play="A193">
+        <Question id="1" agent="ComputerTutor" text="The root word needs an affix for it to make sense in this sentence. Which is the correct affix for this word?" speech="The root word needs an aahfix for it to make sense in this sentence. Which is the correct aahfix for this word?" media="" play="A193">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="To change the root word so that it makes sense here in this sentence, the correct affix is -ing" speech="To change the root word so that it makes sense here in this sentence, the correct aahfix is, ing" keys="na" threshold="" test="" play="A194" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which affix makes sense here?" speech="_user_, which aahfix makes sense here?" keys="na" threshold="" test="" play="_user_,A195" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which affix will change the root word so it makes sense?" speech="Jordan, which aahfix will change the root word so it makes sense?" keys="na" threshold="" test="" play="A196" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am sure it is -ing." speech="I am sure it is, ing" keys="na" threshold="" test="" play="B114" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Let's see. I think it is -ful." speech="Let's see. I think it is full." keys="na" threshold="" test="" play="B115" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B116" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="To change the root word so that it makes sense here in this sentence, the correct affix is -ing" speech="To change the root word so that it makes sense here in this sentence, the correct aahfix is, ing" keys="na" threshold="" test="" play="A194" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which affix makes sense here?" speech="_user_, which aahfix makes sense here?" keys="na" threshold="" test="" play="_user_,A195" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which affix will change the root word so it makes sense?" speech="ComputerStudent1, which aahfix will change the root word so it makes sense?" keys="na" threshold="" test="" play="A196" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am sure it is -ing." speech="I am sure it is, ing" keys="na" threshold="" test="" play="B114" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Let's see. I think it is -ful." speech="Let's see. I think it is full." keys="na" threshold="" test="" play="B115" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B116" />
           </Answers>
         </Question>
       </Questions>
@@ -680,14 +680,14 @@
     </TutoringPack>
     <TutoringPack name="TPF2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Can you use the context in the sentence to figure out the correct affix?" speech="Can you use the context in the sentence to figure out the correct aahfix?" media="" play="A197">
+        <Question id="1" agent="ComputerTutor" text="Can you use the context in the sentence to figure out the correct affix?" speech="Can you use the context in the sentence to figure out the correct aahfix?" media="" play="A197">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="In this case, the correct affix is -ing." speech="In this case, the correct aahfix is, ing" keys="na" threshold="" test="" play="A198" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you have an answer for this question?" speech="" keys="na" threshold="" test="" play="_user_,A199" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which is the right answer?" speech="" keys="na" threshold="" test="" play="A200" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the correct affix for this is -ing." speech="I think the correct aahfix for this is, ing" keys="na" threshold="" test="" play="B117" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure, I think the correct affix for this one is -able." speech="I am not sure, I think the correct aahfix for this one is, able." keys="na" threshold="" test="" play="B118" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,what do you think the right answer is?" speech="" keys="na" threshold="" test="" play="_user_,B119" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this case, the correct affix is -ing." speech="In this case, the correct aahfix is, ing" keys="na" threshold="" test="" play="A198" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you have an answer for this question?" speech="" keys="na" threshold="" test="" play="_user_,A199" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which is the right answer?" speech="" keys="na" threshold="" test="" play="A200" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the correct affix for this is -ing." speech="I think the correct aahfix for this is, ing" keys="na" threshold="" test="" play="B117" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure, I think the correct affix for this one is -able." speech="I am not sure, I think the correct aahfix for this one is, able." keys="na" threshold="" test="" play="B118" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,what do you think the right answer is?" speech="" keys="na" threshold="" test="" play="_user_,B119" />
           </Answers>
         </Question>
       </Questions>
@@ -696,14 +696,14 @@
     </TutoringPack>
     <TutoringPack name="TPF3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Which is the correct affix to change the meaning of the word?" speech="Which is the correct aahfix to change the meaning of the word?" media="" play="A201">
+        <Question id="1" agent="ComputerTutor" text="Which is the correct affix to change the meaning of the word?" speech="Which is the correct aahfix to change the meaning of the word?" media="" play="A201">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix in this case is re-." speech="The correct aahfix in this case is, re." keys="na" threshold="" test="" play="A202" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_ ,can you figure out the correct affix?" speech="_user_,can you figure out the correct aahfix?" keys="na" threshold="" test="" play="_user_,A203" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you figure out the correct affix to change the meaning of the word?" speech="Jordan, can you figure out the correct aahfix to change the meaning of the word?" keys="na" threshold="" test="" play="A204" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="To change the root word I would use the affix re-." speech="To change the root word I would use the aahffix, re" keys="na" threshold="" test="" play="B120" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="To change the root word I would use the affix over-." speech="To change the root word I would use the aahfix, over" keys="na" threshold="" test="" play="B121" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, can you figure out what the correct affix is?" speech="_user_,can you figure out what the correct aahfix is?" keys="na" threshold="" test="" play="_user_,B122" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix in this case is re-." speech="The correct aahfix in this case is, re." keys="na" threshold="" test="" play="A202" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_ ,can you figure out the correct affix?" speech="_user_,can you figure out the correct aahfix?" keys="na" threshold="" test="" play="_user_,A203" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you figure out the correct affix to change the meaning of the word?" speech="ComputerStudent1, can you figure out the correct aahfix to change the meaning of the word?" keys="na" threshold="" test="" play="A204" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="To change the root word I would use the affix re-." speech="To change the root word I would use the aahffix, re" keys="na" threshold="" test="" play="B120" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="To change the root word I would use the affix over-." speech="To change the root word I would use the aahfix, over" keys="na" threshold="" test="" play="B121" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, can you figure out what the correct affix is?" speech="_user_,can you figure out what the correct aahfix is?" keys="na" threshold="" test="" play="_user_,B122" />
           </Answers>
         </Question>
       </Questions>
@@ -712,14 +712,14 @@
     </TutoringPack>
     <TutoringPack name="TPF4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Which of these affixes will correctly change the word so that it makes sense?" speech="Which of these aahfixes will correctly change the word so that it makes sense?" media="" play="A205">
+        <Question id="1" agent="ComputerTutor" text="Which of these affixes will correctly change the word so that it makes sense?" speech="Which of these aahfixes will correctly change the word so that it makes sense?" media="" play="A205">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix here is -ed." speech="The correct aahfix here is, ed" keys="na" threshold="" test="" play="A206" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which affix will correctly change the root word?" speech="_user_, which aahfix will correctly change the root word?" keys="na" threshold="" test="" play="_user_,A207" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which affix will change the root word?" speech="Jordan, which aahfix will change the root word?" keys="na" threshold="" test="" play="A208" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="To change the root word so that it makes sense, I would choose the affix -ed." speech="To change the root word so that it makes sense, I would choose the aahfix, ed" keys="na" threshold="" test="" play="B123" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="To change the root word correctly I think the right affix is -ing." speech="To change the root word correctly I think the right aahfix is, ing" keys="na" threshold="" test="" play="B124" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,I would like to hear what you think." speech="" keys="na" threshold="" test="" play="_user_,B125" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix here is -ed." speech="The correct aahfix here is, ed" keys="na" threshold="" test="" play="A206" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which affix will correctly change the root word?" speech="_user_, which aahfix will correctly change the root word?" keys="na" threshold="" test="" play="_user_,A207" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which affix will change the root word?" speech="ComputerStudent1, which aahfix will change the root word?" keys="na" threshold="" test="" play="A208" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="To change the root word so that it makes sense, I would choose the affix -ed." speech="To change the root word so that it makes sense, I would choose the aahfix, ed" keys="na" threshold="" test="" play="B123" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="To change the root word correctly I think the right affix is -ing." speech="To change the root word correctly I think the right aahfix is, ing" keys="na" threshold="" test="" play="B124" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,I would like to hear what you think." speech="" keys="na" threshold="" test="" play="_user_,B125" />
           </Answers>
         </Question>
       </Questions>
@@ -728,14 +728,14 @@
     </TutoringPack>
     <TutoringPack name="TPF5">
       <Questions>
-        <Question id="1" agent="Cristina" text="What is the correct affix to change the meaning of the root word?" speech="What is the correct aahfix to change the meaning of the root word?" media="" play="A209">
+        <Question id="1" agent="ComputerTutor" text="What is the correct affix to change the meaning of the root word?" speech="What is the correct aahfix to change the meaning of the root word?" media="" play="A209">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="To correctly change the meaning of the root word, you would use the affix semi-." speech="To correctly change the meaning of the root word, you would use the aahfix, semi" keys="na" threshold="" test="" play="A210" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the answer to this one?" speech="_user_, do you know the answer to this one." keys="na" threshold="" test="" play="_user_,A211" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know the answer to this one?" speech="Jordan, do you know the answer to this one." keys="na" threshold="" test="" play="A212" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the correct affix for this one is semi-." speech="I think the correct aahfix for this one is, semi." keys="na" threshold="" test="" play="B126" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the correct affix for this one is non-." speech="I think the correct aahfix for this one is, non." keys="na" threshold="" test="" play="B127" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B128" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="To correctly change the meaning of the root word, you would use the affix semi-." speech="To correctly change the meaning of the root word, you would use the aahfix, semi" keys="na" threshold="" test="" play="A210" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the answer to this one?" speech="_user_, do you know the answer to this one." keys="na" threshold="" test="" play="_user_,A211" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know the answer to this one?" speech="ComputerStudent1, do you know the answer to this one." keys="na" threshold="" test="" play="A212" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the correct affix for this one is semi-." speech="I think the correct aahfix for this one is, semi." keys="na" threshold="" test="" play="B126" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the correct affix for this one is non-." speech="I think the correct aahfix for this one is, non." keys="na" threshold="" test="" play="B127" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B128" />
           </Answers>
         </Question>
       </Questions>
@@ -744,14 +744,14 @@
     </TutoringPack>
     <TutoringPack name="TPF6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Read the sentence and select the correct affix so that the word makes sense." speech="Read the sentence and select the correct aahfix so that the word makes sense." media="" play="A213">
+        <Question id="1" agent="ComputerTutor" text="Read the sentence and select the correct affix so that the word makes sense." speech="Read the sentence and select the correct aahfix so that the word makes sense." media="" play="A213">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="For this sentence, the word part un- makes the most sense." speech="For this sentence, the word part, un, makes the most sense." keys="na" threshold="" test="" play="A214" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of the affixes would you choose?" speech="_user_,which of the aahfixes would you choose?" keys="na" threshold="" test="" play="_user_,A215" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which one would you choose?" speech="" keys="na" threshold="" test="" play="A216" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Uh, I think the one that makes the most sense is, un-." speech="Uh, I think the one that makes the most sense is, un." keys="na" threshold="" test="" play="B129" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I will choose the affix, up-." speech="I will choose the aahfix, up." keys="na" threshold="" test="" play="B130" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,do you want to give it a shot?" speech="" keys="na" threshold="" test="" play="_user_,B131" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="For this sentence, the word part un- makes the most sense." speech="For this sentence, the word part, un, makes the most sense." keys="na" threshold="" test="" play="A214" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of the affixes would you choose?" speech="_user_,which of the aahfixes would you choose?" keys="na" threshold="" test="" play="_user_,A215" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which one would you choose?" speech="" keys="na" threshold="" test="" play="A216" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Uh, I think the one that makes the most sense is, un-." speech="Uh, I think the one that makes the most sense is, un." keys="na" threshold="" test="" play="B129" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I will choose the affix, up-." speech="I will choose the aahfix, up." keys="na" threshold="" test="" play="B130" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,do you want to give it a shot?" speech="" keys="na" threshold="" test="" play="_user_,B131" />
           </Answers>
         </Question>
       </Questions>
@@ -760,14 +760,14 @@
     </TutoringPack>
     <TutoringPack name="TPF7">
       <Questions>
-        <Question id="1" agent="Cristina" text="Can you select the right affix and the reason that affix is correct?" speech="Can you select the right aahfix and the reason that aahfix is correct?" media="" play="A217">
+        <Question id="1" agent="ComputerTutor" text="Can you select the right affix and the reason that affix is correct?" speech="Can you select the right aahfix and the reason that aahfix is correct?" media="" play="A217">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix is -ed because is tells the reader the event happened in the past." speech="The correct aahfix is, ed, because is tells the reader the event happened in the past." keys="na" threshold="" test="" play="A218" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which affix and meaning would you choose?" speech="_user_, which aahfix and meaning would you choose?" keys="na" threshold="" test="" play="_user_,A219" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which is the correct affix and why?" speech="Jordan, which is the correct aahfix and why" keys="na" threshold="" test="" play="A220" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the correct affix is -ed. I chose that one because it changes the root word to the past tense." speech="I think the correct aahfix is, ed. I chose that one because it changes the root word to the past tense" keys="na" threshold="" test="" play="B132" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the correct affix is -s because it tells the reader there was more than one activity." speech="I think the correct aahfix is, s, because it tells the reader there was more than one activity." keys="na" threshold="" test="" play="B133" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B134" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix is -ed because is tells the reader the event happened in the past." speech="The correct aahfix is, ed, because is tells the reader the event happened in the past." keys="na" threshold="" test="" play="A218" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which affix and meaning would you choose?" speech="_user_, which aahfix and meaning would you choose?" keys="na" threshold="" test="" play="_user_,A219" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which is the correct affix and why?" speech="ComputerStudent1, which is the correct aahfix and why" keys="na" threshold="" test="" play="A220" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the correct affix is -ed. I chose that one because it changes the root word to the past tense." speech="I think the correct aahfix is, ed. I chose that one because it changes the root word to the past tense" keys="na" threshold="" test="" play="B132" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the correct affix is -s because it tells the reader there was more than one activity." speech="I think the correct aahfix is, s, because it tells the reader there was more than one activity." keys="na" threshold="" test="" play="B133" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B134" />
           </Answers>
         </Question>
       </Questions>
@@ -776,14 +776,14 @@
     </TutoringPack>
     <TutoringPack name="TPF8">
       <Questions>
-        <Question id="1" agent="Cristina" text="Can you choose the right affix along with the reason why it is the correct choice?" speech="Can you choose the right aahfix along with the reason why it is the correct choice?" media="" play="A221">
+        <Question id="1" agent="ComputerTutor" text="Can you choose the right affix along with the reason why it is the correct choice?" speech="Can you choose the right aahfix along with the reason why it is the correct choice?" media="" play="A221">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix is -ful to tell the reader the animal has a lot of power." speech="The correct aahfix is, full, to tell the reader the animal has a lot of power." keys="na" threshold="" test="" play="A222" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how about you?" speech="" keys="na" threshold="" test="" play="_user_,A223" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="na" threshold="" test="" play="A224" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I would choose -ful because it tells the reader that the animal has a lot of power." speech="I would choose, full, because it tells the reader that the animal has a lot of power." keys="na" threshold="" test="" play="B135" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I would choose -ness to tell the reader the animal is not friendly." speech="I would choose, ness, to tell the reader the animal is not friendly." keys="na" threshold="" test="" play="B136" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, which one would you choose?" speech="" keys="na" threshold="" test="" play="_user_,B137" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix is -ful to tell the reader the animal has a lot of power." speech="The correct aahfix is, full, to tell the reader the animal has a lot of power." keys="na" threshold="" test="" play="A222" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how about you?" speech="" keys="na" threshold="" test="" play="_user_,A223" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think?" speech="" keys="na" threshold="" test="" play="A224" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I would choose -ful because it tells the reader that the animal has a lot of power." speech="I would choose, full, because it tells the reader that the animal has a lot of power." keys="na" threshold="" test="" play="B135" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I would choose -ness to tell the reader the animal is not friendly." speech="I would choose, ness, to tell the reader the animal is not friendly." keys="na" threshold="" test="" play="B136" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, which one would you choose?" speech="" keys="na" threshold="" test="" play="_user_,B137" />
           </Answers>
         </Question>
       </Questions>
@@ -792,14 +792,14 @@
     </TutoringPack>
     <TutoringPack name="TPF9">
       <Questions>
-        <Question id="1" agent="Cristina" text="Here is another choice for you two. You need to select both the affix and why." speech="Here is another choice for you two. You need to select both the aahfix and why." media="" play="A225">
+        <Question id="1" agent="ComputerTutor" text="Here is another choice for you two. You need to select both the affix and why." speech="Here is another choice for you two. You need to select both the aahfix and why." media="" play="A225">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix is -ing. The correct reason is to tell the reader that it is an action they need to take." speech="The correct aahfix is, ing. The correct reason is to tell the reader that it is an action they need to take." keys="na" threshold="" test="" play="A226" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_,what is the correct response?" speech="" keys="na" threshold="" test="" play="_user_,A227" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you know which is the correct affix and why?" speech="Jordan, do you know which is the correct aahfix and why?" keys="na" threshold="" test="" play="A228" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="It looks like the correct affix is -ing because it tells the reader there is an action they need to take." speech="It looks like the correct aahfix is, ing, because it tells the reader there is an action they need to take." keys="na" threshold="" test="" play="B138" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the correct affix is -ing because it tells the reader how to do the activity." speech="I think the correct aahfix is, ing, because it tells the reader how to do the activity." keys="na" threshold="" test="" play="B139" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, do you have any idea?" speech="" keys="na" threshold="" test="" play="_user_,B140" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix is -ing. The correct reason is to tell the reader that it is an action they need to take." speech="The correct aahfix is, ing. The correct reason is to tell the reader that it is an action they need to take." keys="na" threshold="" test="" play="A226" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_,what is the correct response?" speech="" keys="na" threshold="" test="" play="_user_,A227" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know which is the correct affix and why?" speech="ComputerStudent1, do you know which is the correct aahfix and why?" keys="na" threshold="" test="" play="A228" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It looks like the correct affix is -ing because it tells the reader there is an action they need to take." speech="It looks like the correct aahfix is, ing, because it tells the reader there is an action they need to take." keys="na" threshold="" test="" play="B138" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the correct affix is -ing because it tells the reader how to do the activity." speech="I think the correct aahfix is, ing, because it tells the reader how to do the activity." keys="na" threshold="" test="" play="B139" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, do you have any idea?" speech="" keys="na" threshold="" test="" play="_user_,B140" />
           </Answers>
         </Question>
       </Questions>
@@ -808,14 +808,14 @@
     </TutoringPack>
     <TutoringPack name="TPFA">
       <Questions>
-        <Question id="1" agent="Cristina" text="Choose the correct affix to change the meaning of the root word and the correct reason to use that affix." speech="Choose the correct aahfix to change the meaning of the root word and the correct reason to use that aahfix." media="" play="A229">
+        <Question id="1" agent="ComputerTutor" text="Choose the correct affix to change the meaning of the root word and the correct reason to use that affix." speech="Choose the correct aahfix to change the meaning of the root word and the correct reason to use that aahfix." media="" play="A229">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix here is sub- because it tells the reader the way is underground." speech="The correct aahfix here is, sub, because it tells the reader the way is underground" keys="na" threshold="" test="" play="A230" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A231" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which is the right answer?" speech="" keys="na" threshold="" test="" play="A232" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The correct affix is sub-. I chose this because it tells the reader the way was under something." speech="The correct aahfix is, sub. I chose this because it tells the reader the way was under something." keys="na" threshold="" test="" play="B141" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The correct affix is sub- because it tells the reader something was wrong with the tracks." speech="The correct aahfix is, sub, because it tells the reader something was wrong with the tracks" keys="na" threshold="" test="" play="B142" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B143" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix here is sub- because it tells the reader the way is underground." speech="The correct aahfix here is, sub, because it tells the reader the way is underground" keys="na" threshold="" test="" play="A230" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you know the answer?" speech="" keys="na" threshold="" test="" play="_user_,A231" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which is the right answer?" speech="" keys="na" threshold="" test="" play="A232" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The correct affix is sub-. I chose this because it tells the reader the way was under something." speech="The correct aahfix is, sub. I chose this because it tells the reader the way was under something." keys="na" threshold="" test="" play="B141" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The correct affix is sub- because it tells the reader something was wrong with the tracks." speech="The correct aahfix is, sub, because it tells the reader something was wrong with the tracks" keys="na" threshold="" test="" play="B142" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B143" />
           </Answers>
         </Question>
       </Questions>
@@ -824,14 +824,14 @@
     </TutoringPack>
     <TutoringPack name="TPFB">
       <Questions>
-        <Question id="1" agent="Cristina" text="Select the correct affix and tell me why it is the correct one." speech="Select the correct aahfix and tell me why it is the correct one." media="" play="A233">
+        <Question id="1" agent="ComputerTutor" text="Select the correct affix and tell me why it is the correct one." speech="Select the correct aahfix and tell me why it is the correct one." media="" play="A233">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct affix is inter- because it tells the reader the travel took place across states." speech="The correct aahfix is, inter, because it tells the reader the travel took place across states." keys="na" threshold="" test="" play="A234" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what answer do you think is correct?" speech="" keys="na" threshold="" test="" play="_user_,A235" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, can you figure out the correct response?" speech="" keys="na" threshold="" test="" play="A236" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the correct affix is inter-. I chose this one because it tells the reader the trip was across different states." speech="I think the correct aahfix is, inter. I chose this one because it tells the reader the trip was across different states." keys="na" threshold="" test="" play="B144" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am not sure. Is the correct affix mis-? I think it might be this because it tells the reader the family went to the wrong states" speech="I am not sure. Is the correct affix, mis? I think it might be this because it tells the reader the family went to the wrong states" keys="na" threshold="" test="" play="B145" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B146" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct affix is inter- because it tells the reader the travel took place across states." speech="The correct aahfix is, inter, because it tells the reader the travel took place across states." keys="na" threshold="" test="" play="A234" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what answer do you think is correct?" speech="" keys="na" threshold="" test="" play="_user_,A235" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you figure out the correct response?" speech="" keys="na" threshold="" test="" play="A236" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the correct affix is inter-. I chose this one because it tells the reader the trip was across different states." speech="I think the correct aahfix is, inter. I chose this one because it tells the reader the trip was across different states." keys="na" threshold="" test="" play="B144" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure. Is the correct affix mis-? I think it might be this because it tells the reader the family went to the wrong states" speech="I am not sure. Is the correct affix, mis? I think it might be this because it tells the reader the family went to the wrong states" keys="na" threshold="" test="" play="B145" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, can you help me out?" speech="" keys="na" threshold="" test="" play="_user_,B146" />
           </Answers>
         </Question>
       </Questions>
@@ -840,14 +840,14 @@
     </TutoringPack>
     <TutoringPack name="TPFC">
       <Questions>
-        <Question id="1" agent="Cristina" text="Choose the correct affix to change the meaning of the word so that it makes sense in the sentence." speech="Choose the correct aahfix to change the meaning of the word so that it makes sense in the sentence." media="" play="A237">
+        <Question id="1" agent="ComputerTutor" text="Choose the correct affix to change the meaning of the word so that it makes sense in the sentence." speech="Choose the correct aahfix to change the meaning of the word so that it makes sense in the sentence." media="" play="A237">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="In this sentence,  you would choose the affix -ar to make the word muscular. This is to indicate a specific characteristic of the wombat. in this case, to make it an adjective that means the wombat has muscles." speech="In this sentence,  you would choose the affix, ar, to make the word, mahscular. This is to indicate a specific characteristic of the wombat. In this case, to make it an adjective that means the wombat has muscles." keys="na" threshold="" test="" play="A238" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which affix changes the meaning of the root word to make sense." speech="_user_,which aahfix changes the meaning of the root word to make sense" keys="na" threshold="" test="" play="_user_,A239" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which affix would you use to change the meaning of the root word." speech="Jordan, which aahfix would you use to change the meaning of the root word" keys="na" threshold="" test="" play="A240" />
-            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Let's see. I think it must be the last one, -ar.  Because it describes a specific characteristic of the muscle." speech="Let's see. I think it must be the last one, ar. because it describes a specific characteristic of the muscle." keys="na" threshold="" test="" play="B147" />
-            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Tough one. It must be -ity to indicate the condition of the wombat's muscles." speech="Tough one. It must be, eetee, to indicate the condition of the wombat's muscles." keys="na" threshold="" test="" play="B148" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B149" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this sentence,  you would choose the affix -ar to make the word muscular. This is to indicate a specific characteristic of the wombat. in this case, to make it an adjective that means the wombat has muscles." speech="In this sentence,  you would choose the affix, ar, to make the word, mahscular. This is to indicate a specific characteristic of the wombat. In this case, to make it an adjective that means the wombat has muscles." keys="na" threshold="" test="" play="A238" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which affix changes the meaning of the root word to make sense." speech="_user_,which aahfix changes the meaning of the root word to make sense" keys="na" threshold="" test="" play="_user_,A239" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which affix would you use to change the meaning of the root word." speech="ComputerStudent1, which aahfix would you use to change the meaning of the root word" keys="na" threshold="" test="" play="A240" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Let's see. I think it must be the last one, -ar.  Because it describes a specific characteristic of the muscle." speech="Let's see. I think it must be the last one, ar. because it describes a specific characteristic of the muscle." keys="na" threshold="" test="" play="B147" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Tough one. It must be -ity to indicate the condition of the wombat's muscles." speech="Tough one. It must be, eetee, to indicate the condition of the wombat's muscles." keys="na" threshold="" test="" play="B148" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, what do you think?" speech="" keys="na" threshold="" test="" play="_user_,B149" />
           </Answers>
         </Question>
       </Questions>
@@ -937,7 +937,7 @@
     <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="Wait" data="9999" id="1" />
     </Rule>
-    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="Show meida and decide question agent. The media implemented for Cristina to ask main question. No main question was prepared for Jordan. Got to AskQ rule.">
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="Show meida and decide question agent. The media implemented for ComputerTutor to ask main question. No main question was prepared for ComputerStudent1. Got to AskQ rule.">
       <Action agent="System" act="SetStatus" data="AskQ" id="1" />
       <Action agent="System" act="ShowMediaItem" data="" id="2" />
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
@@ -947,186 +947,186 @@
       <Action agent="System" act="SetStatus" data="Start2" id="1" />
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
-    <Rule name="CristinaAskQJordanCorrectJordanFirst" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="20" description="Cristina asks main question, Jordan answer correctly, then asks user. JordanCorrect message goes to no where. That is the javascript function did not implement JordanCorrect. Go to UserAnswer2 rule.">
+    <Rule name="CristinaAskQJordanCorrectJordanFirst" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="20" description="ComputerTutor asks main question, ComputerStudent1 answer correctly, then asks user. JordanCorrect message goes to no where. That is the javascript function did not implement JordanCorrect. Go to UserAnswer2 rule.">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
-      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="4" />
       <Action agent="System" act="GetMediaEvent" data="JordanCorrect" id="5" />
-      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="6" />
       <Action agent="System" act="WaitForEvent" data="100" id="7" />
     </Rule>
-    <Rule name="CorrectFJCJordanFirst" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="50" description="Jordan correct, user correct. PositiveFeedbacktoBoth. To GoBack rule.">
+    <Rule name="CorrectFJCJordanFirst" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="50" description="ComputerStudent1 correct, user correct. PositiveFeedbacktoBoth. To GoBack rule.">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBothUserSecond" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBothUserSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="IncorrectFJCJordanFirst" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="50" description="jordan correct, user incorrect. Feedback, correct answer. To GoBack rule.">
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedback" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackJordan" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbackJordan" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="CristinaAskQJordanIncorrectJordanFirst" status="AskQ" response="" event="Cristina" hasItem="" priority="1" frequency="20" description="Cristina asks main question but Jordan answers incorrectly. Javascript did not implement JordanIncorrect. Wait for user answer and go to UserAnswer1 rule.">
+    <Rule name="CristinaAskQJordanIncorrectJordanFirst" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="1" frequency="20" description="ComputerTutor asks main question but ComputerStudent1 answers incorrectly. Javascript did not implement JordanIncorrect. Wait for user answer and go to UserAnswer1 rule.">
       <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="4" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="4" />
       <Action agent="System" act="GetMediaEvent" data="JordanIncorrect" id="5" />
-      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="6" />
       <Action agent="System" act="WaitForEvent" data="100" id="7" />
     </Rule>
-    <Rule name="CorrectFJI" status="UserAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="50" description="Jordan incorrect, user correct.Give feedback and correct answer. Go to GoBack.">
+    <Rule name="CorrectFJI" status="UserAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="50" description="ComputerStudent1 incorrect, user correct.Give feedback and correct answer. Go to GoBack.">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToUserSecondNegativeFeedbackToJordanFirst" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbackToUserSecondNegativeFeedbackToJordanFirst" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="IncorrectFJI" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="1" frequency="50" description="Both incorrect. Give feedback, answer correct and go to GoBack rule.">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
-    <Rule name="CristinaAskQUserFirst" status="AskQ" response="" event="Cristina" hasItem="" priority="1" frequency="60" description="Cristina asks main question, wait for user and go to UserAnswer rule.">
+    <Rule name="CristinaAskQUserFirst" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="1" frequency="60" description="ComputerTutor asks main question, wait for user and go to UserAnswer rule.">
       <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="3" />
       <Action agent="System" act="WaitForEvent" data="100" id="4" />
     </Rule>
     <Rule name="CorrectJCUserFirst" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="50" description="user correct and let jordan answer correct, JordanCorrect media not implemented. Give feedback and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
       <Action agent="System" act="ShowMediaEvent" data="JordanCorrect" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="CorrectJIUserFirst" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="50" description="User correct and let jordan answer incorrect, give feedback and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
       <Action agent="System" act="ShowMediaEvent" data="JordanIncorrect" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="6" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="7" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToJordan" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="IncorrectJI" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="User incorrect, jordan incorrect, feedback, correct answer and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="IncorrectJC" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="User incorrect, jordancorrect, feedback correct answer and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackJordan" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackJordan" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="4" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="BlankPumpJC" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="Blank prompt, goto UserAnswer2 rule.">
       <Action agent="System" act="SetStatus" data="BlankPumpJC" id="1" />
-      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="CorrectPumpFJC" status="BlankPumpJC" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="IncorrectPumpFJC" status="BlankPumpJC" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackJordan" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackJordan" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="BlankPumpJI" status="UserAnswer1" response="" event="" hasItem="" priority="2" frequency="" description="Blank prompt, goto BlankPumpJI rule.">
       <Action agent="System" act="SetStatus" data="BlankPumpJI" id="1" />
-      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
-    <Rule name="CorrectPumpFJI" status="BlankPumpJI" response="" event="Correct" hasItem="" priority="1" frequency="" description="Jordan incorrect, user correct. To GoBack rule.">
+    <Rule name="CorrectPumpFJI" status="BlankPumpJI" response="" event="Correct" hasItem="" priority="1" frequency="" description="ComputerStudent1 incorrect, user correct. To GoBack rule.">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserSecondNegativeFeedbackToJordanFirst" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUserSecondNegativeFeedbackToJordanFirst" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="IncorrectPumpFJI" status="BlankPumpJI" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Both incorrect. To GoBack rule.">
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbacktoBoth" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbacktoBoth" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="BlankPump" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="BlankPump" id="1" />
-      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="CorrectPumpJC" status="BlankPump" response="" event="Correct" hasItem="" priority="1" frequency="50" description="user correct and let jordan answer correct, JordanCorrect media not implemented. Give feedback and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
       <Action agent="System" act="ShowMediaEvent" data="JordanCorrect" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="CorrectPumpJI" status="BlankPump" response="" event="Correct" hasItem="" priority="1" frequency="50" description="User correct and let jordan answer incorrect, give feedback and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
       <Action agent="System" act="ShowMediaEvent" data="JordanIncorrect" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="6" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="7" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="IncorrectPumpJI" status="BlankPump" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="User incorrect, jordan incorrect, feedback, correct answer and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="IncorrectPumpJC" status="BlankPump" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="User incorrect, jordancorrect, feedback correct answer and go to GoBack rule.">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackJordan" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackJordan" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="4" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="BlankAgain" status="BlankPump*" response="" event="" hasItem="" priority="2" frequency="" description="Double blank.To GoBack rule.">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
@@ -1174,7 +1174,7 @@
       <Action agent="System" act="Wait" data="5" id="9" />
     </Rule>
     <Rule name="Agent" status="ScoreCall" response="" event="Agent" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="DeliverRigidPack" data="Jordan" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="ComputerStudent1" id="1" />
       <Action agent="System" act="SetStatus" data="Close" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>

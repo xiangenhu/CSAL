@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_ Awesome! You got it right!" speech="Awesome" play="_user_,B1" />
         <Item text="_user_, Super! You got the question right!" speech="" play="_user_,B2" />
@@ -27,13 +27,13 @@
         <Item text="_user_ Try again. I don't think that was the right answer." speech="" play="_user_,B16" />
       </SpeechCan>
       <SpeechCan name="ThanksCristina">
-        <Item text="Thanks Cristina, I would've never gotten that." speech="" play="B17" />
+        <Item text="Thanks ComputerTutor, I would've never gotten that." speech="" play="B17" />
       </SpeechCan>
       <SpeechCan name="ThanksUser">
         <Item text="Oh thanks _user_, I would've never gotten that!" speech="" play="B18,_user_,B19" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_ I think you are right." speech="" play="_user_,A1" />
         <Item text="_user_ I think I agree with you. " speech="" play="_user_,A2" />
@@ -56,17 +56,17 @@
         <Item text="Ok _user_ here is the answer." speech="" play="A9,_user_,A10" />
       </SpeechCan>
       <SpeechCan name="JordanNegativeFeedback">
-        <Item text="Jordan you didn't pick the correct answer!" speech="" play="A11" />
-        <Item text="Jordan you actually got that question wrong!" speech="" play="A12" />
-        <Item text="Jordan that's not right!" speech="" play="A13" />
-        <Item text="Jordan you gave an incorrect answer." speech="" play="A14" />
-        <Item text="Jordan you were wrong." speech="" play="A15" />
-        <Item text="Sorry Jordan that's not right." speech="" play="A16" />
+        <Item text="ComputerStudent1 you didn't pick the correct answer!" speech="" play="A11" />
+        <Item text="ComputerStudent1 you actually got that question wrong!" speech="" play="A12" />
+        <Item text="ComputerStudent1 that's not right!" speech="" play="A13" />
+        <Item text="ComputerStudent1 you gave an incorrect answer." speech="" play="A14" />
+        <Item text="ComputerStudent1 you were wrong." speech="" play="A15" />
+        <Item text="Sorry ComputerStudent1 that's not right." speech="" play="A16" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedToJordan">
-        <Item text="Jordan! Great job! " speech="" play="A17" />
-        <Item text="Jordan, you are correct!" speech="" play="A18" />
-        <Item text="Jordan! Way to go!" speech="" play="A19" />
+        <Item text="ComputerStudent1! Great job! " speech="" play="A17" />
+        <Item text="ComputerStudent1, you are correct!" speech="" play="A18" />
+        <Item text="ComputerStudent1! Way to go!" speech="" play="A19" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -117,82 +117,82 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="TP4" usedIn="TP4">
-      <Item id="1" agent="Jordan" text="Thanks Cristina and _user_, I would've never gotten that!" speech="" play="B20,_user_,B21" />
-      <Item id="2" agent="Jordan" text="so now we need to fill out the explanation or supporting information." speech="" play="B22" />
-      <Item id="3" agent="Cristina" text="That's right Jordan. What is a supporting information in the text?" speech="" play="A20" />
-      <Item id="4" agent="Jordan" text="It is a piece of information that supports the main idea." speech="" play="B23" />
-      <Item id="5" agent="Cristina" text="Wonderful Jordan!" speech="" play="A21" />
+      <Item id="1" agent="ComputerStudent1" text="Thanks ComputerTutor and _user_, I would've never gotten that!" speech="" play="B20,_user_,B21" />
+      <Item id="2" agent="ComputerStudent1" text="so now we need to fill out the explanation or supporting information." speech="" play="B22" />
+      <Item id="3" agent="ComputerTutor" text="That's right ComputerStudent1. What is a supporting information in the text?" speech="" play="A20" />
+      <Item id="4" agent="ComputerStudent1" text="It is a piece of information that supports the main idea." speech="" play="B23" />
+      <Item id="5" agent="ComputerTutor" text="Wonderful ComputerStudent1!" speech="" play="A21" />
     </RigidPack>
     <RigidPack name="TP1" usedIn="">
-      <Item id="1" agent="Cristina" text="Before we take a look at Jordan's summaries, first let's take a look at this passage." speech="" play="A22" />
-      <Item id="2" agent="Cristina" text="And before we read the text, what is the topic of this text? Jordan, based on the text signals, what do you think the topic of this text is?" speech="" play="A23" />
-      <Item id="3" agent="Jordan" text="I think it is about Vegetables. " speech="" play="B24" />
+      <Item id="1" agent="ComputerTutor" text="Before we take a look at ComputerStudent1's summaries, first let's take a look at this passage." speech="" play="A22" />
+      <Item id="2" agent="ComputerTutor" text="And before we read the text, what is the topic of this text? ComputerStudent1, based on the text signals, what do you think the topic of this text is?" speech="" play="A23" />
+      <Item id="3" agent="ComputerStudent1" text="I think it is about Vegetables. " speech="" play="B24" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Jordan" text="Wow, I really learned a lot from you guys today. Thanks so much Cristina. And you too, _user_." speech="" play="B25,_user_" />
-      <Item id="2" agent="Cristina" text="No problem at all. I'm glad that I could help out." speech="" play="A24" />
-      <Item id="3" agent="Jordan" text="I hope to see you guys again!" speech="" play="B26" />
+      <Item id="1" agent="ComputerStudent1" text="Wow, I really learned a lot from you guys today. Thanks so much ComputerTutor. And you too, _user_." speech="" play="B25,_user_" />
+      <Item id="2" agent="ComputerTutor" text="No problem at all. I'm glad that I could help out." speech="" play="A24" />
+      <Item id="3" agent="ComputerStudent1" text="I hope to see you guys again!" speech="" play="B26" />
     </RigidPack>
     <RigidPack name="DOpening" usedIn="">
-      <Item id="1" agent="Jordan" text="Well, I certainly learned a lot about asparagus." speech="" play="B27" />
-      <Item id="2" agent="Cristina" text="Good. The point of informational texts is to learn a lot of useful facts about a certain topic." speech="" play="A25" />
-      <Item id="3" agent="Jordan" text="This makes sense to me, but I think I could use some extra practice." speech="" play="B28" />
-      <Item id="4" agent="Cristina" text="Certainly, Jordan. Why don't you and _user_ take a look at this next passage. It is about the origin of the Olympics." speech="" play="A26,_user_,A27" />
-      <Item id="5" agent="Jordan" text="Oh boy. I really look forward to the Olympics. Let's start reading, _user_. Click to continue when you are done!" speech="" play="B29,_user_,B30" />
+      <Item id="1" agent="ComputerStudent1" text="Well, I certainly learned a lot about asparagus." speech="" play="B27" />
+      <Item id="2" agent="ComputerTutor" text="Good. The point of informational texts is to learn a lot of useful facts about a certain topic." speech="" play="A25" />
+      <Item id="3" agent="ComputerStudent1" text="This makes sense to me, but I think I could use some extra practice." speech="" play="B28" />
+      <Item id="4" agent="ComputerTutor" text="Certainly, ComputerStudent1. Why don't you and _user_ take a look at this next passage. It is about the origin of the Olympics." speech="" play="A26,_user_,A27" />
+      <Item id="5" agent="ComputerStudent1" text="Oh boy. I really look forward to the Olympics. Let's start reading, _user_. Click to continue when you are done!" speech="" play="B29,_user_,B30" />
     </RigidPack>
     <RigidPack name="TP8" usedIn="TP8">
-      <Item id="1" agent="Jordan" text="I think so but I'm not sure." speech="" play="B31" />
-      <Item id="2" agent="Cristina" text="Jordan, give it shot at explaining why that would be a good summary." speech="" play="A28" />
-      <Item id="3" agent="Jordan" text="I guess it is because this summary mentions that asparagus is very healthy and contains nutrients. " speech="" play="B32" />
+      <Item id="1" agent="ComputerStudent1" text="I think so but I'm not sure." speech="" play="B31" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, give it shot at explaining why that would be a good summary." speech="" play="A28" />
+      <Item id="3" agent="ComputerStudent1" text="I guess it is because this summary mentions that asparagus is very healthy and contains nutrients. " speech="" play="B32" />
     </RigidPack>
     <RigidPack name="TP3" usedIn="TP3">
-      <Item id="1" agent="Cristina" text="Now let us do a little exercise. Jordan, I want you to fill out a text map. " speech="" play="A29" />
-      <Item id="2" agent="Jordan" text="Oh boy, this is gonna be hard." speech="" play="B33" />
-      <Item id="3" agent="Cristina" text="First, let's identify the main idea, Jordan. The main idea is important because it gives the reader a sense of what to expect when reading a text. Do you know what the main idea of this text is, Jordan?" speech="" play="A30" />
-      <Item id="4" agent="Jordan" text="No, I don't know, Cristina." speech="" play="B34" />
+      <Item id="1" agent="ComputerTutor" text="Now let us do a little exercise. ComputerStudent1, I want you to fill out a text map. " speech="" play="A29" />
+      <Item id="2" agent="ComputerStudent1" text="Oh boy, this is gonna be hard." speech="" play="B33" />
+      <Item id="3" agent="ComputerTutor" text="First, let's identify the main idea, ComputerStudent1. The main idea is important because it gives the reader a sense of what to expect when reading a text. Do you know what the main idea of this text is, ComputerStudent1?" speech="" play="A30" />
+      <Item id="4" agent="ComputerStudent1" text="No, I don't know, ComputerTutor." speech="" play="B34" />
     </RigidPack>
     <RigidPack name="TP5" usedIn="TP5">
-      <Item id="1" agent="Cristina" text="Great job Jordan!" speech="" play="A31" />
+      <Item id="1" agent="ComputerTutor" text="Great job ComputerStudent1!" speech="" play="A31" />
     </RigidPack>
     <RigidPack name="EOpening" usedIn="">
-      <Item id="1" agent="Jordan" text="Well, I certainly learned a lot about asparagus." speech="" play="B35" />
-      <Item id="2" agent="Cristina" text="Good. The point of informational texts is to learn a lot of useful facts about a certain topic." speech="" play="A32" />
-      <Item id="3" agent="Jordan" text="It was still pretty tough for me to pick out the important information. Do you think we could try again?" speech="" play="B36" />
-      <Item id="4" agent="Cristina" text="That's a great idea, Jordan. You and _user_ should take a look at this passage about Chinese New Year." speech="" play="A33,_user_,A34" />
-      <Item id="5" agent="Jordan" text="Interesting! I don't know anything about it. Let's get started _user_. Click to continue so I will know when you are done." speech="" play="B37,_user_,B38" />
+      <Item id="1" agent="ComputerStudent1" text="Well, I certainly learned a lot about asparagus." speech="" play="B35" />
+      <Item id="2" agent="ComputerTutor" text="Good. The point of informational texts is to learn a lot of useful facts about a certain topic." speech="" play="A32" />
+      <Item id="3" agent="ComputerStudent1" text="It was still pretty tough for me to pick out the important information. Do you think we could try again?" speech="" play="B36" />
+      <Item id="4" agent="ComputerTutor" text="That's a great idea, ComputerStudent1. You and _user_ should take a look at this passage about Chinese New Year." speech="" play="A33,_user_,A34" />
+      <Item id="5" agent="ComputerStudent1" text="Interesting! I don't know anything about it. Let's get started _user_. Click to continue so I will know when you are done." speech="" play="B37,_user_,B38" />
     </RigidPack>
     <RigidPack name="TP2" usedIn="TP2">
-      <Item id="1" agent="Cristina" text="_user_." speech="" play="_user_" />
+      <Item id="1" agent="ComputerTutor" text="_user_." speech="" play="_user_" />
     </RigidPack>
     <RigidPack name="TP2B" usedIn="TP2B">
-      <Item id="1" agent="Cristina" text="Jordan, do you know why?" speech="" play="A35" />
-      <Item id="2" agent="Jordan" text="Not really." speech="" play="B39" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, do you know why?" speech="" play="A35" />
+      <Item id="2" agent="ComputerStudent1" text="Not really." speech="" play="B39" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="Hello _user_, I would like to ask you a favor. Jordan needs your help." speech="" media="media\Lesson19-IntroTitle.html" play="A36,_user_,A37" />
-      <Item id="2" agent="Jordan" text=" Yes _user_, I am having trouble reading these texts." speech="" play="B40,_user_,B41" />
-      <Item id="3" agent="Cristina" text=" as we know, a great way to assess our understanding of texts is to summarize." speech="" play="A38" />
-      <Item id="4" agent="Jordan" text="Yes Cristina, I have done that, but I still don't know if I did it right." speech="" play="B42" />
-      <Item id="5" agent="Cristina" text="That's alright Jordan. Let's start by taking a look at this informational passage. Click to continue when you are done reading. If you would like to listen to the audio, click the green button, but remember to click the red button in order to continue." speech="" media="media\Lesson19MediumReading.html" play="A39" />
+      <Item id="1" agent="ComputerTutor" text="Hello _user_, I would like to ask you a favor. ComputerStudent1 needs your help." speech="" media="media\Lesson19-IntroTitle.html" play="A36,_user_,A37" />
+      <Item id="2" agent="ComputerStudent1" text=" Yes _user_, I am having trouble reading these texts." speech="" play="B40,_user_,B41" />
+      <Item id="3" agent="ComputerTutor" text=" as we know, a great way to assess our understanding of texts is to summarize." speech="" play="A38" />
+      <Item id="4" agent="ComputerStudent1" text="Yes ComputerTutor, I have done that, but I still don't know if I did it right." speech="" play="B42" />
+      <Item id="5" agent="ComputerTutor" text="That's alright ComputerStudent1. Let's start by taking a look at this informational passage. Click to continue when you are done reading. If you would like to listen to the audio, click the green button, but remember to click the red button in order to continue." speech="" media="media\Lesson19MediumReading.html" play="A39" />
     </RigidPack>
     <RigidPack name="TP9" usedIn="TP9">
-      <Item id="1" agent="Jordan" text="Thanks so much _user_ and Cristina, for helping me on this. " speech="" play="B43,_user_,B44" />
-      <Item id="2" agent="Cristina" text="Well you know what they say, practice makes perfect!" speech="" play="A40" />
-      <Item id="3" agent="Jordan" text="you are so right Cristina. _user_, can you help me look at another one? I've filled out the text map and wrote the summaries. But I'm having problem with the main idea on this one also." speech="" play="B45,_user_,B46" />
+      <Item id="1" agent="ComputerStudent1" text="Thanks so much _user_ and ComputerTutor, for helping me on this. " speech="" play="B43,_user_,B44" />
+      <Item id="2" agent="ComputerTutor" text="Well you know what they say, practice makes perfect!" speech="" play="A40" />
+      <Item id="3" agent="ComputerStudent1" text="you are so right ComputerTutor. _user_, can you help me look at another one? I've filled out the text map and wrote the summaries. But I'm having problem with the main idea on this one also." speech="" play="B45,_user_,B46" />
     </RigidPack>
     <RigidPack name="TP7" usedIn="TP7">
-      <Item id="1" agent="Cristina" text="Great job the both of you. Now that you both have picked out the important information from the text. Let's look at Jordan's summaries." speech="" play="A41" />
-      <Item id="2" agent="Jordan" text="Yes Cristina and _user_. I've written two summaries. I don't know which one is better." speech="" play="B47,_user_,B48" />
+      <Item id="1" agent="ComputerTutor" text="Great job the both of you. Now that you both have picked out the important information from the text. Let's look at ComputerStudent1's summaries." speech="" play="A41" />
+      <Item id="2" agent="ComputerStudent1" text="Yes ComputerTutor and _user_. I've written two summaries. I don't know which one is better." speech="" play="B47,_user_,B48" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="Easy1">
       <Questions>
-        <Question id="1" agent="Cristina" text="it would be great if you could help Jordan out again _user_. What does the writer want you to know about Chinese New Year? Please click on a sentence." speech="" media="" itemDif="" play="A42,_user_,A43">
+        <Question id="1" agent="ComputerTutor" text="it would be great if you could help ComputerStudent1 out again _user_. What does the writer want you to know about Chinese New Year? Please click on a sentence." speech="" media="" itemDif="" play="A42,_user_,A43">
           <Answers>
-            <Answer name="Good" agent="Cristina" type="Good" text="The main idea is the first sentence, the Chinese New Year is the busiest holiday celebrated among Chinese people. " speech="" keys="asdf" threshold="" test="" play="A44" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Thanks so much _user_. This was so hard, thanks for helping me out." speech="" keys="asdf" threshold="" test="" play="B49,_user_,B50" />
-            <Answer name="JordanAsnwer2" agent="Jordan" type="UserIncorrect" text="Thanks so much Cristina for helping me out on this. " speech="" keys="adf" threshold="" test="" play="B51" />
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="The main idea is the first sentence, the Chinese New Year is the busiest holiday celebrated among Chinese people. " speech="" keys="asdf" threshold="" test="" play="A44" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Thanks so much _user_. This was so hard, thanks for helping me out." speech="" keys="asdf" threshold="" test="" play="B49,_user_,B50" />
+            <Answer name="JordanAsnwer2" agent="ComputerStudent1" type="UserIncorrect" text="Thanks so much ComputerTutor for helping me out on this. " speech="" keys="adf" threshold="" test="" play="B51" />
           </Answers>
         </Question>
       </Questions>
@@ -201,11 +201,11 @@
     </TutoringPack>
     <TutoringPack name="Easy2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now _user_. Does Jordan's sentence help prove what the writer wants you to know about Chinese New Year? Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that Jordan picked out." speech="" media="" play="A45,_user_,A46">
+        <Question id="1" agent="ComputerTutor" text="Now _user_. Does ComputerStudent1's sentence help prove what the writer wants you to know about Chinese New Year? Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that ComputerStudent1 picked out." speech="" media="" play="A45,_user_,A46">
           <Answers>
-            <Answer name="Goodsupport1" agent="Cristina" type="Good" text="Jordan picked the correct sentence. The second sentence, traditionally, the festival was a time to honor deities as well as ancestors, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A47" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Yay, I got it right! Thanks so much for helping me _user_!" speech="" keys="asdf" threshold="" test="" play="B52,_user_" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="UserIncorrect" text="Yay, I got it right! Thanks so much for helping out Cristina!" speech="" keys="asdf" threshold="" test="" play="B53" />
+            <Answer name="Goodsupport1" agent="ComputerTutor" type="Good" text="ComputerStudent1 picked the correct sentence. The second sentence, traditionally, the festival was a time to honor deities as well as ancestors, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A47" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Yay, I got it right! Thanks so much for helping me _user_!" speech="" keys="asdf" threshold="" test="" play="B52,_user_" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="UserIncorrect" text="Yay, I got it right! Thanks so much for helping out ComputerTutor!" speech="" keys="asdf" threshold="" test="" play="B53" />
           </Answers>
         </Question>
       </Questions>
@@ -214,10 +214,10 @@
     </TutoringPack>
     <TutoringPack name="Easy3">
       <Questions>
-        <Question id="1" agent="Cristina" text="What about this sentence that Jordan picked out? Does it help prove what the writer wants you to know about Chinese New Year? Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that Jordan picked out." speech="" media="" play="A48">
+        <Question id="1" agent="ComputerTutor" text="What about this sentence that ComputerStudent1 picked out? Does it help prove what the writer wants you to know about Chinese New Year? Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that ComputerStudent1 picked out." speech="" media="" play="A48">
           <Answers>
-            <Answer name="TryAgainCorrect" agent="Cristina" type="TryAgainCorrect" text="You are right that Jordan did not identify a correct supporting sentence this time. " speech="" keys="adf" threshold="" test="" play="A49" />
-            <Answer name="TryAgainIncorrect" agent="Cristina" type="TryAgainIncorrect" text="I do not think that Jordan has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="adsf" threshold="" test="" play="A50" />
+            <Answer name="TryAgainCorrect" agent="ComputerTutor" type="TryAgainCorrect" text="You are right that ComputerStudent1 did not identify a correct supporting sentence this time. " speech="" keys="adf" threshold="" test="" play="A49" />
+            <Answer name="TryAgainIncorrect" agent="ComputerTutor" type="TryAgainIncorrect" text="I do not think that ComputerStudent1 has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="adsf" threshold="" test="" play="A50" />
           </Answers>
         </Question>
       </Questions>
@@ -226,11 +226,11 @@
     </TutoringPack>
     <TutoringPack name="Easy4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you please help Jordan identify a correct supporting information from the text? Please click on the correct sentence that help prove what the writer wants you to know about Chinese New Year." speech="" media="" play="_user_,A51">
+        <Question id="1" agent="ComputerTutor" text="_user_, can you please help ComputerStudent1 identify a correct supporting information from the text? Please click on the correct sentence that help prove what the writer wants you to know about Chinese New Year." speech="" media="" play="_user_,A51">
           <Answers>
-            <Answer name="Goodsupport3" agent="Cristina" type="Good" text="The eleventh sentence, It is also traditional for every family to thoroughly cleanse the house, in order to sweep away any ill-fortune and to make way for good incoming luck, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A52" />
-            <Answer name="Goodsupport4" agent="Jordan" type="UserCorrect" text="Oh, I see now, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B54,_user_" />
-            <Answer name="Goodsupport5" agent="Jordan" type="UserIncorrect" text="Oh, I see now, thanks so much Cristina. " speech="" keys="asdf" threshold="" test="" play="B55" />
+            <Answer name="Goodsupport3" agent="ComputerTutor" type="Good" text="The eleventh sentence, It is also traditional for every family to thoroughly cleanse the house, in order to sweep away any ill-fortune and to make way for good incoming luck, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A52" />
+            <Answer name="Goodsupport4" agent="ComputerStudent1" type="UserCorrect" text="Oh, I see now, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B54,_user_" />
+            <Answer name="Goodsupport5" agent="ComputerStudent1" type="UserIncorrect" text="Oh, I see now, thanks so much ComputerTutor. " speech="" keys="asdf" threshold="" test="" play="B55" />
           </Answers>
         </Question>
       </Questions>
@@ -239,11 +239,11 @@
     </TutoringPack>
     <TutoringPack name="Easy5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what about this last piece of supporting information that Jordan has? Please click on the correct sentence that help prove what the writer wants you to know about Chinese New Year." speech="" media="" play="_user_,A53">
+        <Question id="1" agent="ComputerTutor" text="_user_, what about this last piece of supporting information that ComputerStudent1 has? Please click on the correct sentence that help prove what the writer wants you to know about Chinese New Year." speech="" media="" play="_user_,A53">
           <Answers>
-            <Answer name="Goodsupport1" agent="Cristina" type="Good" text="Excellent! The 10th sentence, It is a time when families and friends say goodbye to the old and welcome the new, is a supporting sentence " speech="" keys="asdf" threshold="" test="" play="A54" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Yay I got it right! Thanks so much for looking it over _user_!" speech="" keys="asdf" threshold="" test="" play="B56,_user_" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="UserIncorrect" text="Yay I got it right! Thanks so much for looking it over _user_!" speech="" keys="asdf" threshold="" test="" play="B57,_user_" />
+            <Answer name="Goodsupport1" agent="ComputerTutor" type="Good" text="Excellent! The 10th sentence, It is a time when families and friends say goodbye to the old and welcome the new, is a supporting sentence " speech="" keys="asdf" threshold="" test="" play="A54" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Yay I got it right! Thanks so much for looking it over _user_!" speech="" keys="asdf" threshold="" test="" play="B56,_user_" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="UserIncorrect" text="Yay I got it right! Thanks so much for looking it over _user_!" speech="" keys="asdf" threshold="" test="" play="B57,_user_" />
           </Answers>
         </Question>
       </Questions>
@@ -252,11 +252,11 @@
     </TutoringPack>
     <TutoringPack name="Easy6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now _user_, can you look at Jordan's summaries and tell us which one is the best summary?" speech="" media="" play="A55,_user_,A56">
+        <Question id="1" agent="ComputerTutor" text="Now _user_, can you look at ComputerStudent1's summaries and tell us which one is the best summary?" speech="" media="" play="A55,_user_,A56">
           <Answers>
-            <Answer name="Good" agent="Cristina" type="Good" text="I would say that the second summary is the best one." speech="" keys="asdf" threshold="" test="" play="A57" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Thanks so much _user_." speech="" keys="asdf" threshold="" test="" play="B58,_user_" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="UserIncorrect" text="Thanks so much Cristina" speech="" keys="asdf" threshold="" test="" play="B59" />
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="I would say that the second summary is the best one." speech="" keys="asdf" threshold="" test="" play="A57" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Thanks so much _user_." speech="" keys="asdf" threshold="" test="" play="B58,_user_" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="UserIncorrect" text="Thanks so much ComputerTutor" speech="" keys="asdf" threshold="" test="" play="B59" />
           </Answers>
         </Question>
       </Questions>
@@ -265,11 +265,11 @@
     </TutoringPack>
     <TutoringPack name="Hard1">
       <Questions>
-        <Question id="1" agent="Cristina" text="it would be great if you could help Jordan out again _user_. Please click on one of the highlited sentences that gives the main idea of the text." speech="" media="" play="A58,_user_,A59">
+        <Question id="1" agent="ComputerTutor" text="it would be great if you could help ComputerStudent1 out again _user_. Please click on one of the highlited sentences that gives the main idea of the text." speech="" media="" play="A58,_user_,A59">
           <Answers>
-            <Answer name="Good" agent="Cristina" type="Good" text="This was a tricky one _user_. The main idea sentence is usually the first sentence but not always. In this case, it is actually the last sentence, regarding the heart of the Olympic Games. " speech="" keys="asdf" threshold="" test="" play="A60,_user_,A61" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Thanks so much _user_. This was so hard, thanks for helping me out." speech="" keys="asdf" threshold="" test="" play="B60,_user_,B61" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="UserIncorrect" text="Thanks so much Cristina for helping me out on this. " speech="" keys="adf" threshold="" test="" play="B62" />
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="This was a tricky one _user_. The main idea sentence is usually the first sentence but not always. In this case, it is actually the last sentence, regarding the heart of the Olympic Games. " speech="" keys="asdf" threshold="" test="" play="A60,_user_,A61" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Thanks so much _user_. This was so hard, thanks for helping me out." speech="" keys="asdf" threshold="" test="" play="B60,_user_,B61" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="UserIncorrect" text="Thanks so much ComputerTutor for helping me out on this. " speech="" keys="adf" threshold="" test="" play="B62" />
           </Answers>
         </Question>
       </Questions>
@@ -278,10 +278,10 @@
     </TutoringPack>
     <TutoringPack name="Hard2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now _user_. Please look at the rest of Jordan's work on supporting sentences and see if you agree with his choice. Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that Jordan picked out as a supporting information." speech="" media="" play="A62,_user_,A63">
+        <Question id="1" agent="ComputerTutor" text="Now _user_. Please look at the rest of ComputerStudent1's work on supporting sentences and see if you agree with his choice. Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that ComputerStudent1 picked out as a supporting information." speech="" media="" play="A62,_user_,A63">
           <Answers>
-            <Answer name="TryAgainCorrect" agent="Cristina" type="TryAgainCorrect" text="You are right that Jordan did not identify a correct supporting sentence this time. " speech="" keys="asdf" threshold="" test="" play="A64" />
-            <Answer name="TryAgainIncorrect" agent="Cristina" type="TryAgainIncorrect" text="I do not think that Jordan has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A65" />
+            <Answer name="TryAgainCorrect" agent="ComputerTutor" type="TryAgainCorrect" text="You are right that ComputerStudent1 did not identify a correct supporting sentence this time. " speech="" keys="asdf" threshold="" test="" play="A64" />
+            <Answer name="TryAgainIncorrect" agent="ComputerTutor" type="TryAgainIncorrect" text="I do not think that ComputerStudent1 has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A65" />
           </Answers>
         </Question>
       </Questions>
@@ -290,11 +290,11 @@
     </TutoringPack>
     <TutoringPack name="Hard3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you please help Jordan identify a correct supporting sentence from the text? Please click on one of the highlighted sentence that is a correct supporting information." speech="" media="" play="_user_,A66">
+        <Question id="1" agent="ComputerTutor" text="_user_, can you please help ComputerStudent1 identify a correct supporting sentence from the text? Please click on one of the highlighted sentence that is a correct supporting information." speech="" media="" play="_user_,A66">
           <Answers>
-            <Answer name="Goodsupport1" agent="Cristina" type="Good" text="The fifth sentence, During the Truce, wars were suspended, armies were prohibited from threatening the Games, legal disputes were stopped, and death penalties were forbidden, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A67" />
-            <Answer name="Goodsupport4" agent="Jordan" type="UserCorrect" text="Oh, I see now, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B63,_user_" />
-            <Answer name="Goodsupport5" agent="Jordan" type="UserIncorrect" text="Oh, I see now, thanks so much Cristina. " speech="" keys="asdf" threshold="" test="" play="B64" />
+            <Answer name="Goodsupport1" agent="ComputerTutor" type="Good" text="The fifth sentence, During the Truce, wars were suspended, armies were prohibited from threatening the Games, legal disputes were stopped, and death penalties were forbidden, is a supporting sentence." speech="" keys="asdf" threshold="" test="" play="A67" />
+            <Answer name="Goodsupport4" agent="ComputerStudent1" type="UserCorrect" text="Oh, I see now, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B63,_user_" />
+            <Answer name="Goodsupport5" agent="ComputerStudent1" type="UserIncorrect" text="Oh, I see now, thanks so much ComputerTutor. " speech="" keys="asdf" threshold="" test="" play="B64" />
           </Answers>
         </Question>
       </Questions>
@@ -303,10 +303,10 @@
     </TutoringPack>
     <TutoringPack name="Hard4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what about the second supporting sentence that Jordan has put into the text map. Do you think he had the correct supporting sentence?  Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that Jordan picked out as a supporting information." speech="" media="" play="_user_,A68">
+        <Question id="1" agent="ComputerTutor" text="_user_, what about the second supporting sentence that ComputerStudent1 has put into the text map. Do you think he had the correct supporting sentence?  Please click on 'agree' or &quot;disagree&quot; with one of the highlighted sentence that ComputerStudent1 picked out as a supporting information." speech="" media="" play="_user_,A68">
           <Answers>
-            <Answer name="TryAgainCorrect" agent="Cristina" type="TryAgainCorrect" text="You are right that Jordan did not identify a correct supporting sentence this time. " speech="" keys="asdf" threshold="" test="" play="A69" />
-            <Answer name="TryAgainIncorrect" agent="Cristina" type="TryAgainIncorrect" text="I do not think that Jordan has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A70" />
+            <Answer name="TryAgainCorrect" agent="ComputerTutor" type="TryAgainCorrect" text="You are right that ComputerStudent1 did not identify a correct supporting sentence this time. " speech="" keys="asdf" threshold="" test="" play="A69" />
+            <Answer name="TryAgainIncorrect" agent="ComputerTutor" type="TryAgainIncorrect" text="I do not think that ComputerStudent1 has identified a correct supporting sentence this time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A70" />
           </Answers>
         </Question>
       </Questions>
@@ -315,11 +315,11 @@
     </TutoringPack>
     <TutoringPack name="Hard5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you please help Jordan identify another correct supporting sentence from the text? Please click on one of the highlighted sentence that is a correct supporting information." speech="" media="" play="_user_,A71">
+        <Question id="1" agent="ComputerTutor" text="_user_, can you please help ComputerStudent1 identify another correct supporting sentence from the text? Please click on one of the highlighted sentence that is a correct supporting information." speech="" media="" play="_user_,A71">
           <Answers>
-            <Answer name="Goodsupport1" agent="Cristina" type="Good" text="The tenth sentence, Coubertin thought that by encouraging athletics for the youth, people of the world would come to have a better understanding of one another, is another supporting sentence." speech="" keys="asdf" threshold="" test="" play="A72" />
-            <Answer name="Goodsupport4" agent="Jordan" type="UserCorrect" text="Oh, okay I see, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B65,_user_" />
-            <Answer name="Goodsupport5" agent="Jordan" type="UserIncorrect" text="Oh, okay I see, thanks so much Cristina. " speech="" keys="asdf" threshold="" test="" play="B66" />
+            <Answer name="Goodsupport1" agent="ComputerTutor" type="Good" text="The tenth sentence, Coubertin thought that by encouraging athletics for the youth, people of the world would come to have a better understanding of one another, is another supporting sentence." speech="" keys="asdf" threshold="" test="" play="A72" />
+            <Answer name="Goodsupport4" agent="ComputerStudent1" type="UserCorrect" text="Oh, okay I see, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B65,_user_" />
+            <Answer name="Goodsupport5" agent="ComputerStudent1" type="UserIncorrect" text="Oh, okay I see, thanks so much ComputerTutor. " speech="" keys="asdf" threshold="" test="" play="B66" />
           </Answers>
         </Question>
       </Questions>
@@ -328,10 +328,10 @@
     </TutoringPack>
     <TutoringPack name="Hard6">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what about this last piece of supporting information that Jordan has?  Please click on 'agree' or &quot;disagree&quot; with the last highlighted sentence that Jordan picked out as a supporting information." speech="" media="" play="_user_,A73">
+        <Question id="1" agent="ComputerTutor" text="_user_, what about this last piece of supporting information that ComputerStudent1 has?  Please click on 'agree' or &quot;disagree&quot; with the last highlighted sentence that ComputerStudent1 picked out as a supporting information." speech="" media="" play="_user_,A73">
           <Answers>
-            <Answer name="TryAgainCorrect" agent="Cristina" type="TryAgainCorrect" text="You are right that Jordan did not identify a correct supporting sentence this time either. " speech="" keys="asdf" threshold="" test="" play="A74" />
-            <Answer name="TryAgainIncorrect" agent="Cristina" type="TryAgainIncorrect" text="I do not think that Jordan has identified a third correct supporting sentence this last time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A75" />
+            <Answer name="TryAgainCorrect" agent="ComputerTutor" type="TryAgainCorrect" text="You are right that ComputerStudent1 did not identify a correct supporting sentence this time either. " speech="" keys="asdf" threshold="" test="" play="A74" />
+            <Answer name="TryAgainIncorrect" agent="ComputerTutor" type="TryAgainIncorrect" text="I do not think that ComputerStudent1 has identified a third correct supporting sentence this last time. Can you please try to take a look again?" speech="" keys="asdf" threshold="" test="" play="A75" />
           </Answers>
         </Question>
       </Questions>
@@ -340,11 +340,11 @@
     </TutoringPack>
     <TutoringPack name="Hard7">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you please help Jordan identify a last correct supporting sentence from the text? Please click on one of the highlighted sentence that is the last correct supporting information." speech="" media="" play="_user_,A76">
+        <Question id="1" agent="ComputerTutor" text="_user_, can you please help ComputerStudent1 identify a last correct supporting sentence from the text? Please click on one of the highlighted sentence that is the last correct supporting information." speech="" media="" play="_user_,A76">
           <Answers>
-            <Answer name="Goodsupport1" agent="Cristina" type="Good" text="Excellent! The second last sentence, The Olympic Truce was revived by UN resolution 48/11 of 25 October 1993, as well by the United Nations Millennium Declaration relating to the world peace and security, is the last supporting sentence in the text." speech="" keys="asdf" threshold="" test="" play="A77" />
-            <Answer name="Goodsupport4" agent="Jordan" type="UserCorrect" text="Geez, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B67,_user_" />
-            <Answer name="Goodsupport5" agent="Jordan" type="UserIncorrect" text="Geez, thanks so much Cristina. " speech="" keys="asdf" threshold="" test="" play="B68" />
+            <Answer name="Goodsupport1" agent="ComputerTutor" type="Good" text="Excellent! The second last sentence, The Olympic Truce was revived by UN resolution 48/11 of 25 October 1993, as well by the United Nations Millennium Declaration relating to the world peace and security, is the last supporting sentence in the text." speech="" keys="asdf" threshold="" test="" play="A77" />
+            <Answer name="Goodsupport4" agent="ComputerStudent1" type="UserCorrect" text="Geez, thanks so much _user_. " speech="" keys="asdf" threshold="" test="" play="B67,_user_" />
+            <Answer name="Goodsupport5" agent="ComputerStudent1" type="UserIncorrect" text="Geez, thanks so much ComputerTutor. " speech="" keys="asdf" threshold="" test="" play="B68" />
           </Answers>
         </Question>
       </Questions>
@@ -353,11 +353,11 @@
     </TutoringPack>
     <TutoringPack name="Hard8">
       <Questions>
-        <Question id="8" agent="Cristina" text="Now _user_, can you look at Jordan's summaries and tell us which one is the best summary?" speech="" media="" play="A78,_user_,A79">
+        <Question id="8" agent="ComputerTutor" text="Now _user_, can you look at ComputerStudent1's summaries and tell us which one is the best summary?" speech="" media="" play="A78,_user_,A79">
           <Answers>
-            <Answer name="Good" agent="Cristina" type="Good" text="I would agree that the second summary is the best one." speech="" keys="asdf" threshold="" test="" play="A80" />
-            <Answer name="JordanAnswer1" agent="Jordan" type="UserCorrect" text="Thanks so much _user_." speech="" keys="asdf" threshold="" test="" play="B69,_user_" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="UserIncorrect" text="Thanks so much Cristina" speech="" keys="asdf" threshold="" test="" play="B70" />
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="I would agree that the second summary is the best one." speech="" keys="asdf" threshold="" test="" play="A80" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="UserCorrect" text="Thanks so much _user_." speech="" keys="asdf" threshold="" test="" play="B69,_user_" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="UserIncorrect" text="Thanks so much ComputerTutor" speech="" keys="asdf" threshold="" test="" play="B70" />
           </Answers>
         </Question>
       </Questions>
@@ -366,20 +366,20 @@
     </TutoringPack>
     <TutoringPack name="TP2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, do you agree with Jordan's answer? Please click either &quot;Yes&quot; or &quot;No.&quot;" speech="_user_, do you agree with Jordan's answer? Please click either Yes or No." media="" play="_user_,A81">
+        <Question id="1" agent="ComputerTutor" text="_user_, do you agree with ComputerStudent1's answer? Please click either &quot;Yes&quot; or &quot;No.&quot;" speech="_user_, do you agree with ComputerStudent1's answer? Please click either Yes or No." media="" play="_user_,A81">
           <Answers>
-            <Answer name="CI" agent="Cristina" type="UserCorrect" text="You are correct that Jordan is wrong about the topic." speech="" keys="asdf" threshold="" test="" play="A82" />
-            <Answer name="II" agent="Cristina" type="UserIncorrect" text="Actually _user_, Jordan's answer was not correct. Let us try again." speech="" keys="asdf" threshold="" test="" play="A83,_user_,A84" />
-            <Answer name="JordanFirstGood" agent="Jordan" type="Good1" text="I think it is asparagus" speech="" keys="adf" threshold="" test="" play="B71" />
-            <Answer name="JordanFirstBad1" agent="Jordan" type="Bad1" text="I think it is A, vegetables" speech="" keys="asdf" threshold="" test="" play="B72" />
-            <Answer name="JordanFirstBad2" agent="Jordan" type="Bad1" text="I think it is B, food." speech="" keys="asdf" threshold="" test="" play="B73" />
+            <Answer name="CI" agent="ComputerTutor" type="UserCorrect" text="You are correct that ComputerStudent1 is wrong about the topic." speech="" keys="asdf" threshold="" test="" play="A82" />
+            <Answer name="II" agent="ComputerTutor" type="UserIncorrect" text="Actually _user_, ComputerStudent1's answer was not correct. Let us try again." speech="" keys="asdf" threshold="" test="" play="A83,_user_,A84" />
+            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="Good1" text="I think it is asparagus" speech="" keys="adf" threshold="" test="" play="B71" />
+            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="Bad1" text="I think it is A, vegetables" speech="" keys="asdf" threshold="" test="" play="B72" />
+            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="Bad1" text="I think it is B, food." speech="" keys="asdf" threshold="" test="" play="B73" />
           </Answers>
         </Question>
-        <Question id="2" agent="Cristina" text="which topic do you think is appropriate _user_?" speech="" media="asparagus passage" play="A85,_user_">
+        <Question id="2" agent="ComputerTutor" text="which topic do you think is appropriate _user_?" speech="" media="asparagus passage" play="A85,_user_">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="Yes _user_, you are right, the answer is C, asparagus. Jordan, do you know why?" speech="" keys="asdf" threshold="" play="A86,_user_,A87" />
-            <Answer name="IC1" agent="Cristina" type="IC1" text="_user_, you are right that Jordan was incorrect, but vegetables is also not correct. " speech="" keys="asdf" threshold="" play="_user_,A88" />
-            <Answer name="IC2" agent="Cristina" type="IC2" text="_user_, you are right that Jordan was incorrect, but food is also not correct. " speech="" keys="asdf" threshold="" play="_user_,A89" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="Yes _user_, you are right, the answer is C, asparagus. ComputerStudent1, do you know why?" speech="" keys="asdf" threshold="" play="A86,_user_,A87" />
+            <Answer name="IC1" agent="ComputerTutor" type="IC1" text="_user_, you are right that ComputerStudent1 was incorrect, but vegetables is also not correct. " speech="" keys="asdf" threshold="" play="_user_,A88" />
+            <Answer name="IC2" agent="ComputerTutor" type="IC2" text="_user_, you are right that ComputerStudent1 was incorrect, but food is also not correct. " speech="" keys="asdf" threshold="" play="_user_,A89" />
           </Answers>
         </Question>
       </Questions>
@@ -388,10 +388,10 @@
     </TutoringPack>
     <TutoringPack name="TP2B">
       <Questions>
-        <Question id="1" agent="Cristina" text="Based on the title and image, what is the topic? click on the word in the title that identifies the topic" speech="" media="" play="A90">
+        <Question id="1" agent="ComputerTutor" text="Based on the title and image, what is the topic? click on the word in the title that identifies the topic" speech="" media="" play="A90">
           <Answers>
-            <Answer name="Good1" agent="Cristina" type="UserCorrect" text="Yes _user_, you are right, the answer is asparagus." speech="" keys="asdf" threshold="" test="" play="A91,_user_,A92" />
-            <Answer name="Good2" agent="Cristina" type="UserIncorrect" text="actually, _user_, the correct answer is asparagus." speech="" keys="asdf" threshold="" test="" play="A93,_user_,A94" />
+            <Answer name="Good1" agent="ComputerTutor" type="UserCorrect" text="Yes _user_, you are right, the answer is asparagus." speech="" keys="asdf" threshold="" test="" play="A91,_user_,A92" />
+            <Answer name="Good2" agent="ComputerTutor" type="UserIncorrect" text="actually, _user_, the correct answer is asparagus." speech="" keys="asdf" threshold="" test="" play="A93,_user_,A94" />
           </Answers>
         </Question>
       </Questions>
@@ -400,10 +400,10 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what about you?  Based on the title and image, what is the topic? click on the word in the title that identifies the topic" speech="" media="" play="_user_,A95">
+        <Question id="1" agent="ComputerTutor" text="_user_, what about you?  Based on the title and image, what is the topic? click on the word in the title that identifies the topic" speech="" media="" play="_user_,A95">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="_user_, you are right. You can find the topic of a passage from either a keyword in the title or the picture." speech="" keys="asdf" threshold="" test="" play="_user_,A96" />
-            <Answer name="IC" agent="Cristina" type="UserIncorrect" text="_user_, you are on the right track, but try to find the keyword in the title. In this case it is asparagus. The picture also gives it away." speech="" keys="asdf" threshold="" test="" play="_user_,A97" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="_user_, you are right. You can find the topic of a passage from either a keyword in the title or the picture." speech="" keys="asdf" threshold="" test="" play="_user_,A96" />
+            <Answer name="IC" agent="ComputerTutor" type="UserIncorrect" text="_user_, you are on the right track, but try to find the keyword in the title. In this case it is asparagus. The picture also gives it away." speech="" keys="asdf" threshold="" test="" play="_user_,A97" />
           </Answers>
         </Question>
       </Questions>
@@ -412,10 +412,10 @@
     </TutoringPack>
     <TutoringPack name="TP4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Okay, no problem. _user_, can you point out the main idea of this text? A main idea asks what does the writer want me to know about asparagus. Please click on one of the highlighted sentences that gives the main idea of the text." speech="" media="" play="A98,_user_,A99">
+        <Question id="1" agent="ComputerTutor" text="Okay, no problem. _user_, can you point out the main idea of this text? A main idea asks what does the writer want me to know about asparagus. Please click on one of the highlighted sentences that gives the main idea of the text." speech="" media="" play="A98,_user_,A99">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="Yes _user_, you are right! The main idea of the text is usually the first sentence. Also called the &quot;topic sentence.&quot;" speech="Yes _user_, you are right! The main idea of the text is usually the first sentence. Also called the topic sentence." keys="sdfg" threshold="" test="" play="A100,_user_,A101" />
-            <Answer name="IC" agent="Cristina" type="UserIncorrect" text="No sorry _user_ that's not correct. The main idea of the text is usually the first sentence. Also called the 'topic sentence.'" speech="No sorry _user_ that's not correct. The main idea of the text is usually the first sentence. Also called the topic sentence." keys="asdf" threshold="" test="" play="A102,_user_,A103" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="Yes _user_, you are right! The main idea of the text is usually the first sentence. Also called the &quot;topic sentence.&quot;" speech="Yes _user_, you are right! The main idea of the text is usually the first sentence. Also called the topic sentence." keys="sdfg" threshold="" test="" play="A100,_user_,A101" />
+            <Answer name="IC" agent="ComputerTutor" type="UserIncorrect" text="No sorry _user_ that's not correct. The main idea of the text is usually the first sentence. Also called the 'topic sentence.'" speech="No sorry _user_ that's not correct. The main idea of the text is usually the first sentence. Also called the topic sentence." keys="asdf" threshold="" test="" play="A102,_user_,A103" />
           </Answers>
         </Question>
       </Questions>
@@ -424,11 +424,11 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what's one piece of supporting information? Please click on one of the highlighted sentences as one of the supporting information that will appear in the text map" speech="" media="" play="_user_,A104">
+        <Question id="1" agent="ComputerTutor" text="_user_, what's one piece of supporting information? Please click on one of the highlighted sentences as one of the supporting information that will appear in the text map" speech="" media="" play="_user_,A104">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="That's right, good job _user_! Jordan, what is another piece of supporting information?" speech="" keys="asdf" threshold="" test="" play="A105,_user_,A106" />
-            <Answer name="IC" agent="Cristina" type="UserIncorrect" text="oops, that's not correct. Jordan, what is another piece of supporting information? here's one correct supporting  information for you _user_." speech="" keys="asdf" threshold="" test="" play="A107,_user_" />
-            <Answer name="JordanAnswer" agent="Jordan" type="Good3" text="Oh I know, here's another piece of supporting information." speech="" keys="asdf" threshold="" test="" play="B74" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="That's right, good job _user_! ComputerStudent1, what is another piece of supporting information?" speech="" keys="asdf" threshold="" test="" play="A105,_user_,A106" />
+            <Answer name="IC" agent="ComputerTutor" type="UserIncorrect" text="oops, that's not correct. ComputerStudent1, what is another piece of supporting information? here's one correct supporting  information for you _user_." speech="" keys="asdf" threshold="" test="" play="A107,_user_" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="Good3" text="Oh I know, here's another piece of supporting information." speech="" keys="asdf" threshold="" test="" play="B74" />
           </Answers>
         </Question>
       </Questions>
@@ -437,10 +437,10 @@
     </TutoringPack>
     <TutoringPack name="TP7">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, can you put in the last piece of supporting information?" speech="" media="" play="_user_,A108">
+        <Question id="1" agent="ComputerTutor" text="_user_, can you put in the last piece of supporting information?" speech="" media="" play="_user_,A108">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="Great job _user_" speech="" keys="adsf" threshold="" play="A109,_user_" />
-            <Answer name="IC1" agent="Cristina" type="UserIncorrect" text="Actually the last piece of supporting information is this sentence." speech="" keys="asdf" threshold="" play="A110" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="Great job _user_" speech="" keys="adsf" threshold="" play="A109,_user_" />
+            <Answer name="IC1" agent="ComputerTutor" type="UserIncorrect" text="Actually the last piece of supporting information is this sentence." speech="" keys="asdf" threshold="" play="A110" />
           </Answers>
         </Question>
       </Questions>
@@ -449,10 +449,10 @@
     </TutoringPack>
     <TutoringPack name="TP8">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, why don't you look at Jordan's summaries and select the one that is most appropriate for the text. Please click on the best summary." speech="" media="" play="_user_,A111">
+        <Question id="1" agent="ComputerTutor" text="_user_, why don't you look at ComputerStudent1's summaries and select the one that is most appropriate for the text. Please click on the best summary." speech="" media="" play="_user_,A111">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="Jordan, do you think this summary that _user_ picked out is the best summary for the text?" speech="" keys="asdf" threshold="" play="A112,_user_,A113" />
-            <Answer name="IC" agent="Cristina" type="UserIncorrect" text="Actually, I would really go for this one _______. Jordan, do you know why that's a good summary?" speech="" keys="adsf" threshold="" play="A114,A115" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="ComputerStudent1, do you think this summary that _user_ picked out is the best summary for the text?" speech="" keys="asdf" threshold="" play="A112,_user_,A113" />
+            <Answer name="IC" agent="ComputerTutor" type="UserIncorrect" text="Actually, I would really go for this one _______. ComputerStudent1, do you know why that's a good summary?" speech="" keys="adsf" threshold="" play="A114,A115" />
           </Answers>
         </Question>
       </Questions>
@@ -461,10 +461,10 @@
     </TutoringPack>
     <TutoringPack name="TP9">
       <Questions>
-        <Question id="1" agent="Cristina" text="Okay. _user_, do you agree with Jordan's explanation?" speech="" media="" play="A116,_user_,A117">
+        <Question id="1" agent="ComputerTutor" text="Okay. _user_, do you agree with ComputerStudent1's explanation?" speech="" media="" play="A116,_user_,A117">
           <Answers>
-            <Answer name="C" agent="Cristina" type="UserCorrect" text="Excellent _user_. You are right, Jordan's is not correct that a good summery of this text is because it mentions that asparagus is very healthy and contains nutrients. But actually, it is a good summary because it contains all the main points" speech="" keys="asdf" threshold="" play="A118,_user_,A119" />
-            <Answer name="IC" agent="Cristina" type="UserIncorrect" text="actually _user_, that's not actually a good explanation. Actually, it is a good summary because it contains all the main points" speech="" keys="asdf" threshold="" play="A120,_user_,A121" />
+            <Answer name="C" agent="ComputerTutor" type="UserCorrect" text="Excellent _user_. You are right, ComputerStudent1's is not correct that a good summery of this text is because it mentions that asparagus is very healthy and contains nutrients. But actually, it is a good summary because it contains all the main points" speech="" keys="asdf" threshold="" play="A118,_user_,A119" />
+            <Answer name="IC" agent="ComputerTutor" type="UserIncorrect" text="actually _user_, that's not actually a good explanation. Actually, it is a good summary because it contains all the main points" speech="" keys="asdf" threshold="" play="A120,_user_,A121" />
           </Answers>
         </Question>
       </Questions>
@@ -505,7 +505,7 @@
     </Rule>
     <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="MoreTime" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="UserMoveOn1" status="MoveOn" response="" event="MediumReadingStop" hasItem="" priority="1" frequency="" description="">
@@ -576,7 +576,7 @@
     <Rule name="HasItem1" status="GetItem1" response="" event="Continue" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="ShowItemFirstPart" id="1" />
       <Action agent="System" act="ShowMediaItem" data="" id="2" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="3" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="3" />
       <Action agent="System" act="WaitForEvent" data="1000" id="4" />
     </Rule>
     <Rule name="HasItem2" status="GetItem2" response="" event="Continue" hasItem="true" priority="" frequency="" description="">
@@ -597,20 +597,20 @@
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="CheckJordanAnswerUserCorrectTrue" status="CheckJordanAnswerUserCorrect" response="" event="" hasItem="true" priority="" frequency="" description="">
-      <Action agent="Jordan" act="Answer" data="Good2" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Good2" id="1" />
       <Action agent="System" act="SetStatus" data="GoBack" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="CheckJordanAnswerUserCorrectFalse" status="CheckJordanAnswerUserCorrect" response="" event="" hasItem="false" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="UserCorrect" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="UserCorrect" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="SetStatus" data="CheckJordanAnswerThird" id="3" />
-      <Action agent="Jordan" act="GetAnswer" data="Good3" id="4" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="Good3" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="CheckJordanAnswerThirdTrue" status="CheckJordanAnswerThird" response="" event="" hasItem="true" priority="" frequency="" description="">
-      <Action agent="Jordan" act="Answer" data="Good3" id="1" />
-      <Action agent="System" act="GetMediaEvent" data="Jordan" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="Good3" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ComputerStudent1" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
@@ -620,14 +620,14 @@
     </Rule>
     <Rule name="Correct" status="ShowItemFirstPart" response="" event="Correct" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="CheckJordanAnswerUserCorrect" id="1" />
-      <Action agent="Jordan" act="GetAnswer" data="Good2" id="2" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="Good2" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="Incorrect" status="ShowItemFirstPart" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="UserIncorrect" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="SetStatus" data="CheckJordanAnswerThird" id="3" />
-      <Action agent="Jordan" act="GetAnswer" data="Good3" id="4" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="Good3" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
@@ -652,46 +652,46 @@
     </Rule>
     <Rule name="MainQuestionAsked" status="AskQ" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="ShowMediaItem" data="" id="3" />
       <Action agent="System" act="WaitForEvent" data="200000" id="4" />
     </Rule>
     <Rule name="Correct1" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="1" />
       <Action agent="System" act="SetStatus" data="CheckCristinaTryAgainCorrect" id="2" />
-      <Action agent="Cristina" act="GetAnswer" data="TryAgainCorrect" id="3" />
+      <Action agent="ComputerTutor" act="GetAnswer" data="TryAgainCorrect" id="3" />
     </Rule>
     <Rule name="Incorrect1" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
       <Action agent="System" act="SetStatus" data="CheckCristinaTryAgainIncorrect" id="2" />
-      <Action agent="Cristina" act="GetAnswer" data="TryAgainIncorrect" id="3" />
+      <Action agent="ComputerTutor" act="GetAnswer" data="TryAgainIncorrect" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="CheckTryAgainCorrectTrue" status="CheckCristinaTryAgainCorrect" response="" event="" hasItem="true" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="TryAgainCorrect" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TryAgainCorrect" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="SetStatus" data="NextQ" id="3" />
     </Rule>
     <Rule name="CheckTryAgainCorrectFalse" status="CheckCristinaTryAgainCorrect" response="" event="" hasItem="false" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="Good" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Jordan" act="Answer" data="UserCorrect" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="UserCorrect" id="3" />
       <Action agent="System" act="SetStatus" data="NextQ" id="4" />
     </Rule>
     <Rule name="CheckTryAgainIncorrectTrue" status="CheckCristinaTryAgainIncorrect" response="" event="" hasItem="true" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="TryAgainIncorrect" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TryAgainIncorrect" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="SetStatus" data="NextQ" id="3" />
     </Rule>
     <Rule name="CheckTryAgainIncorrectFalse" status="CheckCristinaTryAgainIncorrect" response="" event="" hasItem="false" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="Good" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Jordan" act="Answer" data="UserIncorrect" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="UserIncorrect" id="3" />
       <Action agent="System" act="SetStatus" data="NextQ" id="4" />
     </Rule>
     <Rule name="GoBack2" status="NextQ" response="" event="" hasItem="" priority="" frequency="" description="">

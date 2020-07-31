@@ -201,12 +201,9 @@ function xAPIPostOther(acePostjson,averb){
 		};
 		
 	var SKOTitle=qs("LessonName","alesson");
-	var SKOGuid="AnIDBeingUsed";
-	var activityObj={id:JSON.parse(acePostjson.PresentationID).scriptPath,
-				 definition:{type: "https://app.skoonline.org/ITSProfile/"+verb,
-				             name:{"en-US":SKOTitle}
-							 }
-			};
+	var SKOGuid=qs("guid","154ade4f-7cbb-40c5-b64f-1c2cf5a90918");
+	var activityObj={id:SKOGuid,
+				 "objectType": "StatementRef"};
 	// Activity
 	var data=JSON.parse(acePostjson.PresentationHistory);
 	var ResultObj={};

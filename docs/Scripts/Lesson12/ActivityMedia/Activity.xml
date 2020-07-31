@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
       <SpeechCan name="Pump">
         <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
       </SpeechCan>
@@ -23,7 +23,7 @@
         <Item text="Exactly, you nailed it _user_!" speech="" play="B17,_user_" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
       <SpeechCan name="PositiveFeedback">
         <Item text="Great job _user_!" speech="" play="A1,_user_" />
         <Item text="_user_ you are on a roll! You answered the question correctly." speech="" play="_user_,A2" />
@@ -49,11 +49,11 @@
         <Item text="Ok _user_ here is the answer." speech="" play="A18,_user_,A19" />
       </SpeechCan>
       <SpeechCan name="JordanNegativeFeedback">
-        <Item text="Jordan you didn't pick the correct answer!" speech="" play="A20" />
-        <Item text="Jordan you actually got that question wrong!" speech="" play="A21" />
-        <Item text="Jordan that's not right!" speech="" play="A22" />
-        <Item text="Jordan you gave an incorrect answer." speech="" play="A23" />
-        <Item text="Sorry Jordan, that's not right." speech="" play="A24" />
+        <Item text="ComputerStudent1 you didn't pick the correct answer!" speech="" play="A20" />
+        <Item text="ComputerStudent1 you actually got that question wrong!" speech="" play="A21" />
+        <Item text="ComputerStudent1 that's not right!" speech="" play="A22" />
+        <Item text="ComputerStudent1 you gave an incorrect answer." speech="" play="A23" />
+        <Item text="Sorry ComputerStudent1, that's not right." speech="" play="A24" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -104,40 +104,40 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_! You have helped Jordan so much I can already tell." speech="" play="_user_,A25" />
-      <Item id="2" agent="Jordan" text="Indeed Cristina. Now I know how to cash my check, what bank I can cash it at,and how to pay my bill." speech="" play="B18" />
-      <Item id="3" agent="Cristina" text="Try to remember the strategies we used in this lesson when you read from now on." speech="" play="A26" />
-      <Item id="4" agent="Jordan" text="Sure Cristina! _user_ now we know what makes a narrative, a persuasive, and an informational text different from each other." speech="" play="B19,_user_,B20" />
-      <Item id="5" agent="Cristina" text="Remember the article about cashing a check was an informational text, it provided you with facts such as how to endorse a check." speech="" media="media\Lesson12-IntroTextTypes.html" play="A27" />
-      <Item id="6" agent="Jordan" text="And the article about the woman paying her bill, that was a narrative because it contained emotion triggers." speech="" play="B21" />
-      <Item id="7" agent="Cristina" text="The Williford bank ad was persuasive. The bank is trying to convince Jordan that he should cash his check there. The bank uses opinions to convince. Remember that opinions are not facts, they can be argued against." speech="" play="A28" />
-      <Item id="8" agent="Jordan" text="Well I should go cash my check now. Thanks again _user_! Bye Cristina." speech="" play="B22,_user_,B23" />
-      <Item id="9" agent="Cristina" text="Goodbye Jordan and _user_! You two have a great day and try to do another lesson soon!" speech="" play="A29,_user_,A30" />
+      <Item id="1" agent="ComputerTutor" text="_user_! You have helped ComputerStudent1 so much I can already tell." speech="" play="_user_,A25" />
+      <Item id="2" agent="ComputerStudent1" text="Indeed ComputerTutor. Now I know how to cash my check, what bank I can cash it at,and how to pay my bill." speech="" play="B18" />
+      <Item id="3" agent="ComputerTutor" text="Try to remember the strategies we used in this lesson when you read from now on." speech="" play="A26" />
+      <Item id="4" agent="ComputerStudent1" text="Sure ComputerTutor! _user_ now we know what makes a narrative, a persuasive, and an informational text different from each other." speech="" play="B19,_user_,B20" />
+      <Item id="5" agent="ComputerTutor" text="Remember the article about cashing a check was an informational text, it provided you with facts such as how to endorse a check." speech="" media="media\Lesson12-IntroTextTypes.html" play="A27" />
+      <Item id="6" agent="ComputerStudent1" text="And the article about the woman paying her bill, that was a narrative because it contained emotion triggers." speech="" play="B21" />
+      <Item id="7" agent="ComputerTutor" text="The Williford bank ad was persuasive. The bank is trying to convince ComputerStudent1 that he should cash his check there. The bank uses opinions to convince. Remember that opinions are not facts, they can be argued against." speech="" play="A28" />
+      <Item id="8" agent="ComputerStudent1" text="Well I should go cash my check now. Thanks again _user_! Bye ComputerTutor." speech="" play="B22,_user_,B23" />
+      <Item id="9" agent="ComputerTutor" text="Goodbye ComputerStudent1 and _user_! You two have a great day and try to do another lesson soon!" speech="" play="A29,_user_,A30" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="Hi _user_ and Jordan! How are you two today!" speech="" media="media\Lesson12-IntroTitle.html" play="A31,_user_,A32" />
-      <Item id="2" agent="Jordan" text="Hey Cristina and _user_! I have been better. I received a check from my new job but I don't have a checking account." speech="" play="B24,_user_,B25" />
-      <Item id="3" agent="Cristina" text="Don't worry Jordan, _user_ and I are here to help you. I found three different articles about cashing checks and paying bills that may help!" speech="" play="A33,_user_,A34" />
-      <Item id="4" agent="Jordan" text="Cool Christina. What kind of articles?" speech="" play="B26" />
-      <Item id="5" agent="Cristina" text="I found a persuasive article, an informational article, and a narrative article." speech="" play="A35" />
-      <Item id="6" agent="Jordan" text="Persuasive, informational and narrative articles. Got it." speech="" play="B27" />
-      <Item id="7" agent="Cristina" text="Persuasive articles use opinions  to try and convince the reader of some point of view. An informational article contains many facts and is meant to inform the reader. A narrative text tells a story and entertains us by affecting our emotions." speech="" media="media\Lesson12-IntroTextTypes.html" play="A36" />
-      <Item id="8" agent="Jordan" text="So I should pay attention to facts, opinions and emotion triggers when I read." speech="" play="B28" />
-      <Item id="9" agent="Cristina" text="You got it! Let's take a look at the first article _user_." speech="" play="A37,_user_" />
-      <Item id="10" agent="Cristina" text="Read the article below and then we will talk about it. Click the blue continue button when you are done reading. Remember to use the read text button if you need help." speech="" media="media\Lesson12-Practical-Main0-0.html" play="A38" />
+      <Item id="1" agent="ComputerTutor" text="Hi _user_ and ComputerStudent1! How are you two today!" speech="" media="media\Lesson12-IntroTitle.html" play="A31,_user_,A32" />
+      <Item id="2" agent="ComputerStudent1" text="Hey ComputerTutor and _user_! I have been better. I received a check from my new job but I don't have a checking account." speech="" play="B24,_user_,B25" />
+      <Item id="3" agent="ComputerTutor" text="Don't worry ComputerStudent1, _user_ and I are here to help you. I found three different articles about cashing checks and paying bills that may help!" speech="" play="A33,_user_,A34" />
+      <Item id="4" agent="ComputerStudent1" text="Cool Christina. What kind of articles?" speech="" play="B26" />
+      <Item id="5" agent="ComputerTutor" text="I found a persuasive article, an informational article, and a narrative article." speech="" play="A35" />
+      <Item id="6" agent="ComputerStudent1" text="Persuasive, informational and narrative articles. Got it." speech="" play="B27" />
+      <Item id="7" agent="ComputerTutor" text="Persuasive articles use opinions  to try and convince the reader of some point of view. An informational article contains many facts and is meant to inform the reader. A narrative text tells a story and entertains us by affecting our emotions." speech="" media="media\Lesson12-IntroTextTypes.html" play="A36" />
+      <Item id="8" agent="ComputerStudent1" text="So I should pay attention to facts, opinions and emotion triggers when I read." speech="" play="B28" />
+      <Item id="9" agent="ComputerTutor" text="You got it! Let's take a look at the first article _user_." speech="" play="A37,_user_" />
+      <Item id="10" agent="ComputerTutor" text="Read the article below and then we will talk about it. Click the blue continue button when you are done reading. Remember to use the read text button if you need help." speech="" media="media\Lesson12-Practical-Main0-0.html" play="A38" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPMain01">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, based on what we read, do you think this article is informational,  persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main0-1.html" play="_user_,A39">
+        <Question id="1" agent="ComputerTutor" text="_user_, based on what we read, do you think this article is informational,  persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main0-1.html" play="_user_,A39">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="This is an informational text because the writer uses facts to inform us about how to cash a check." speech="" keys="any" threshold="" play="A40" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that facts, opinions, and emotion triggers inform us about the type of text. So does this text have a lot of facts, opinions or emotion triggers _user_? Think about it and then try a different answer choice." speech="" keys="any" threshold="" play="A41,_user_,A42" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="It's not a problem if you need more time _user_. Remember to look for facts, opinions and emotion triggers." speech="" keys="any" threshold="" play="B29,_user_,B30" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This is an informational text because the writer uses facts to to inform us about how to cash a check." speech="" keys="any" threshold="" play="A43" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Do you know the answer Jordan?" speech="" keys="any" threshold="" play="A44" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Is it a persuasive article Cristina? I'm not sure." speech="" keys="any" threshold="" play="B31" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This is an informational text because the writer uses facts to inform us about how to cash a check." speech="" keys="any" threshold="" play="A40" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Remember that facts, opinions, and emotion triggers inform us about the type of text. So does this text have a lot of facts, opinions or emotion triggers _user_? Think about it and then try a different answer choice." speech="" keys="any" threshold="" play="A41,_user_,A42" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="It's not a problem if you need more time _user_. Remember to look for facts, opinions and emotion triggers." speech="" keys="any" threshold="" play="B29,_user_,B30" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="This is an informational text because the writer uses facts to to inform us about how to cash a check." speech="" keys="any" threshold="" play="A43" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="Do you know the answer ComputerStudent1?" speech="" keys="any" threshold="" play="A44" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="Is it a persuasive article ComputerTutor? I'm not sure." speech="" keys="any" threshold="" play="B31" />
           </Answers>
         </Question>
       </Questions>
@@ -146,14 +146,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain02">
       <Questions>
-        <Question id="1" agent="Cristina" text="So _user_, what could happen to you or Jordan if you accept a check from someone you don't know?" speech="" media="media\Lesson12-Practical-Main0-2.html" play="A45,_user_,A46">
+        <Question id="1" agent="ComputerTutor" text="So _user_, what could happen to you or ComputerStudent1 if you accept a check from someone you don't know?" speech="" media="media\Lesson12-Practical-Main0-2.html" play="A45,_user_,A46">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="If Jordan accepts a check from someone he doesn't know the check could bounce." speech="" keys="any" threshold="" play="A47" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ in the first section it says you should trust the person who wrote the check. What else does it say can happen if you don't trust the check writer?" speech="" keys="any" threshold="" play="_user_,A48" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="This one was tricky for me too _user_. It's ok if you don't know the answer, just pick the best choice you see." speech="" keys="any" threshold="" play="B32,_user_,B33" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="If you accept a check from a person who is not trustworthy, the check could bounce. Make sure you trust the person who writes you a check." speech="" keys="any" threshold="" play="A49" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan which answer did you select?" speech="" keys="any" threshold="" play="A50" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Thanks _user_!  I get it now!  If I accept a check from someone I don't know I can receive fees and the check could bounce." speech="" keys="any" threshold="" play="B34,_user_,B35" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="If ComputerStudent1 accepts a check from someone he doesn't know the check could bounce." speech="" keys="any" threshold="" play="A47" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ in the first section it says you should trust the person who wrote the check. What else does it say can happen if you don't trust the check writer?" speech="" keys="any" threshold="" play="_user_,A48" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="This one was tricky for me too _user_. It's ok if you don't know the answer, just pick the best choice you see." speech="" keys="any" threshold="" play="B32,_user_,B33" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="If you accept a check from a person who is not trustworthy, the check could bounce. Make sure you trust the person who writes you a check." speech="" keys="any" threshold="" play="A49" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 which answer did you select?" speech="" keys="any" threshold="" play="A50" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="Thanks _user_!  I get it now!  If I accept a check from someone I don't know I can receive fees and the check could bounce." speech="" keys="any" threshold="" play="B34,_user_,B35" />
           </Answers>
         </Question>
       </Questions>
@@ -162,14 +162,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain03">
       <Questions>
-        <Question id="1" agent="Jordan" text="_user_ why do I need my ID when I am getting a check cashed? I don't know why it's important." speech="" media="media\Lesson12-Practical-Main0-3.html" play="_user_,B36">
+        <Question id="1" agent="ComputerStudent1" text="_user_ why do I need my ID when I am getting a check cashed? I don't know why it's important." speech="" media="media\Lesson12-Practical-Main0-3.html" play="_user_,B36">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The bank has to verify that Jordans ID matches the name on the check before they can cash it! You have selected the correct answer." speech="" keys="any" threshold="" play="A51" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ if Jordan doesn't have his ID he can't cash his check, but why? Why does he need to have his ID when  he goes to cash his check _user_?  " speech="" keys="any" threshold="" play="_user_,A52,_user_" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Why do I need my ID when I go cash my check?" speech="" keys="any" threshold="" play="_user_,B37" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Jordan has to bring his ID to the bank to prove to them he is who he says he is. The bank has to verify Jordan's identity before they can cash his check! " speech="" keys="any" threshold="" play="A53" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the answer is to the question?" speech="" keys="any" threshold="" play="A54" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I see _user_! This is important. The bank requires my ID to verify that I am who I say I am." speech="" keys="any" threshold="" play="B38,_user_,B39" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The bank has to verify that Jordans ID matches the name on the check before they can cash it! You have selected the correct answer." speech="" keys="any" threshold="" play="A51" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ if ComputerStudent1 doesn't have his ID he can't cash his check, but why? Why does he need to have his ID when  he goes to cash his check _user_?  " speech="" keys="any" threshold="" play="_user_,A52,_user_" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ did you need more time to answer the question? Why do I need my ID when I go cash my check?" speech="" keys="any" threshold="" play="_user_,B37" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="ComputerStudent1 has to bring his ID to the bank to prove to them he is who he says he is. The bank has to verify ComputerStudent1's identity before they can cash his check! " speech="" keys="any" threshold="" play="A53" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the answer is to the question?" speech="" keys="any" threshold="" play="A54" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I see _user_! This is important. The bank requires my ID to verify that I am who I say I am." speech="" keys="any" threshold="" play="B38,_user_,B39" />
           </Answers>
         </Question>
       </Questions>
@@ -178,14 +178,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain04">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, I have highlighted this sentence in the article for you! Does this sentence contain an opinion, a fact, or an emotion trigger?" speech="" media="media\Lesson12-Practical-Main0-4.html" play="_user_,A55">
+        <Question id="1" agent="ComputerTutor" text="_user_, I have highlighted this sentence in the article for you! Does this sentence contain an opinion, a fact, or an emotion trigger?" speech="" media="media\Lesson12-Practical-Main0-4.html" play="_user_,A55">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="A fact states something that cannot be denied. In this case the fact is, to endorse a check you always have to flip it over and sign next to the x. Great job recognizing this is a fact _user_!" speech="" keys="any" threshold="" play="A56,_user_" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ this sentence contains a piece of information that can not be changed. This type of information can be found in informational texts. So _user_, does this sentence contain a fact, an opinion, or an emotion trigger?" speech="  " keys="any" threshold="" play="A57" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best. Does this sentence contain a fact, an opinion, or an emotion trigger?" speech="" keys="any" threshold="" play="_user_,B40" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This sentence contains a fact. The sentence states information that can not be argued against. The fact here was, In order to endorse a check you always have to flip it over and sign next to the x." speech="" keys="any" threshold="" play="A58" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is Jordan?" speech="" keys="any" threshold="" play="A59" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I'm not sure Cristina, but I think it might be an emotion trigger." speech="" keys="any" threshold="" play="B41" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="A fact states something that cannot be denied. In this case the fact is, to endorse a check you always have to flip it over and sign next to the x. Great job recognizing this is a fact _user_!" speech="" keys="any" threshold="" play="A56,_user_" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ this sentence contains a piece of information that can not be changed. This type of information can be found in informational texts. So _user_, does this sentence contain a fact, an opinion, or an emotion trigger?" speech="  " keys="any" threshold="" play="A57" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best. Does this sentence contain a fact, an opinion, or an emotion trigger?" speech="" keys="any" threshold="" play="_user_,B40" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="This sentence contains a fact. The sentence states information that can not be argued against. The fact here was, In order to endorse a check you always have to flip it over and sign next to the x." speech="" keys="any" threshold="" play="A58" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is ComputerStudent1?" speech="" keys="any" threshold="" play="A59" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I'm not sure ComputerTutor, but I think it might be an emotion trigger." speech="" keys="any" threshold="" play="B41" />
           </Answers>
         </Question>
       </Questions>
@@ -194,9 +194,9 @@
     </TutoringPack>
     <TutoringPack name="TPMain10">
       <Questions>
-        <Question id="1" agent="Jordan" text="Oh, look, what does Cristina have here for us!" speech="" media="media\Lesson12-Practical-Main1-0.html" play="B42">
+        <Question id="1" agent="ComputerStudent1" text="Oh, look, what does ComputerTutor have here for us!" speech="" media="media\Lesson12-Practical-Main1-0.html" play="B42">
           <Answers>
-            <Answer name="IntroducePassage" agent="Cristina" type="IntroducePassage" text="Jordan and _user_ here is a bank advertisement! Jordan may be able to cash his check at the Williford Bank! Let's take a look at the ad. _user_ click the continue button at the bottom of the page once you are finished reading." speech="" keys="any" threshold="" play="A60,_user_,A61,_user_,A62" />
+            <Answer name="IntroducePassage" agent="ComputerTutor" type="IntroducePassage" text="ComputerStudent1 and _user_ here is a bank advertisement! ComputerStudent1 may be able to cash his check at the Williford Bank! Let's take a look at the ad. _user_ click the continue button at the bottom of the page once you are finished reading." speech="" keys="any" threshold="" play="A60,_user_,A61,_user_,A62" />
           </Answers>
         </Question>
       </Questions>
@@ -205,14 +205,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain11">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ do you think this ad is mainly informational, persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main1-1.html" play="_user_,A63">
+        <Question id="1" agent="ComputerTutor" text="_user_ do you think this ad is mainly informational, persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main1-1.html" play="_user_,A63">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The Williford Bank is trying to convince Jordan to use their banking services with this persuasive ad! You were correct!" speech="" keys="any" threshold="" play="A64" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_, ads are usually trying to convince us of something. Which type of text tries to convince us, informational, persuasive, or narrative texts?" speech="" keys="any" threshold="" play="_user_,A65" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Give it a shot _user_! Is this ad narrative, persuasive, or informational?" speech="" keys="any" threshold="" play="B43,_user_,B44" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="This is a persuasive ad. The Williford Bank is trying to convince Jordan to cash his check at their bank!" speech="" keys="any" threshold="" play="A66" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is Jordan?" speech="" keys="any" threshold="" play="A67" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Welp... I think it might be a narrative ad, but I might be wrong." speech="" keys="any" threshold="" play="B45" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The Williford Bank is trying to convince ComputerStudent1 to use their banking services with this persuasive ad! You were correct!" speech="" keys="any" threshold="" play="A64" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_, ads are usually trying to convince us of something. Which type of text tries to convince us, informational, persuasive, or narrative texts?" speech="" keys="any" threshold="" play="_user_,A65" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="Give it a shot _user_! Is this ad narrative, persuasive, or informational?" speech="" keys="any" threshold="" play="B43,_user_,B44" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="This is a persuasive ad. The Williford Bank is trying to convince ComputerStudent1 to cash his check at their bank!" speech="" keys="any" threshold="" play="A66" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is ComputerStudent1?" speech="" keys="any" threshold="" play="A67" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="Welp... I think it might be a narrative ad, but I might be wrong." speech="" keys="any" threshold="" play="B45" />
           </Answers>
         </Question>
       </Questions>
@@ -221,14 +221,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain12">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ which of the highlighted phrases do you think is trying to convince Jordan?" speech="" media="media\Lesson12-Practical-Main1-22.html" play="_user_,A68">
+        <Question id="1" agent="ComputerTutor" text="_user_ which of the highlighted phrases do you think is trying to convince ComputerStudent1?" speech="" media="media\Lesson12-Practical-Main1-22.html" play="_user_,A68">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The phrase &quot;we have the most helpful tellers&quot; is a convincing statement, and not a fact or emotion trigger. Great answer _user_!" speech="" keys="any" threshold="" play="A69,_user_" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ , which highlighted statement is trying to convince us that Williford is the number one bank in the country?" speech="" keys="any" threshold="" play="_user_,A70" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ the Williford bank claims to have the most helpful bank tellers. That is one reason they believe they are the number one bank! The ad is trying to convince us of that." speech="" keys="any" threshold="" play="_user_,B46" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" The Williford bank claims to have the most helpful bank tellers. That is one reason why they think they are the number one bank in the country! The ad is trying to convince us of that." speech="" keys="any" threshold="" play="A71" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is Jordan?" speech="" keys="any" threshold="" play="A72" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think the highlighted phrase check cashing is trying to convince me. But I could be wrong." speech="" keys="any" threshold="" play="B47" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The phrase &quot;we have the most helpful tellers&quot; is a convincing statement, and not a fact or emotion trigger. Great answer _user_!" speech="" keys="any" threshold="" play="A69,_user_" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ , which highlighted statement is trying to convince us that Williford is the number one bank in the country?" speech="" keys="any" threshold="" play="_user_,A70" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ the Williford bank claims to have the most helpful bank tellers. That is one reason they believe they are the number one bank! The ad is trying to convince us of that." speech="" keys="any" threshold="" play="_user_,B46" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text=" The Williford bank claims to have the most helpful bank tellers. That is one reason why they think they are the number one bank in the country! The ad is trying to convince us of that." speech="" keys="any" threshold="" play="A71" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is ComputerStudent1?" speech="" keys="any" threshold="" play="A72" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I think the highlighted phrase check cashing is trying to convince me. But I could be wrong." speech="" keys="any" threshold="" play="B47" />
           </Answers>
         </Question>
       </Questions>
@@ -237,14 +237,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain122">
       <Questions>
-        <Question id="1" agent="Jordan" text="Williford bank is trying to convince us that they are the number one bank in the country, right? How can we know if this is an opinion _user_?" speech="" media="media\Lesson12-Practical-Main1-2.html" play="B48,_user_">
+        <Question id="1" agent="ComputerStudent1" text="Williford bank is trying to convince us that they are the number one bank in the country, right? How can we know if this is an opinion _user_?" speech="" media="media\Lesson12-Practical-Main1-2.html" play="B48,_user_">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Some people will think the opinion that they have the most helpful bank tellers is true, while others might not agree. An opinion is not a fact, which means it has not been proven. You picked the correct answer." speech="" keys="any" threshold="" play="A73" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that an opinion is different from a fact because a fact is proven information. So how can we know that Williford banks claim is an opinion?" speech="" keys="any" threshold="" play="_user_,A74" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ give it a shot. How can we know if the statement, Williford bank is the number one bank in the country, is an opinion?" speech="" keys="any" threshold="" play="_user_,B49" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="An opinion is something that can be argued. Some people will think it is true while others will think it is not true. Also, an opinion is not a fact, which means it has not shown to be true." speech="" keys="any" threshold="" play="A75" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the answer is?" speech="" keys="any" threshold="" play="A76" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="_user_ I understand now! The statement is an opinion because it has not been proven. Nice!" speech="" keys="any" threshold="" play="_user_,B50" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Some people will think the opinion that they have the most helpful bank tellers is true, while others might not agree. An opinion is not a fact, which means it has not been proven. You picked the correct answer." speech="" keys="any" threshold="" play="A73" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ remember that an opinion is different from a fact because a fact is proven information. So how can we know that Williford banks claim is an opinion?" speech="" keys="any" threshold="" play="_user_,A74" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ give it a shot. How can we know if the statement, Williford bank is the number one bank in the country, is an opinion?" speech="" keys="any" threshold="" play="_user_,B49" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="An opinion is something that can be argued. Some people will think it is true while others will think it is not true. Also, an opinion is not a fact, which means it has not shown to be true." speech="" keys="any" threshold="" play="A75" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the answer is?" speech="" keys="any" threshold="" play="A76" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="_user_ I understand now! The statement is an opinion because it has not been proven. Nice!" speech="" keys="any" threshold="" play="_user_,B50" />
           </Answers>
         </Question>
       </Questions>
@@ -253,9 +253,9 @@
     </TutoringPack>
     <TutoringPack name="TPMain20">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_ and Jordan" speech="_user_ and Jordan" media="media\Lesson12-Practical-Main2-0.html" play="_user_,A77">
+        <Question id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1" speech="_user_ and ComputerStudent1" media="media\Lesson12-Practical-Main2-0.html" play="_user_,A77">
           <Answers>
-            <Answer name="IntroducePassage" agent="Cristina" type="IntroducePassage" text="This passage is about a woman who had a bad experience when paying a bill! I think you may find this interesting so take a look! _user_ remember to click the continue button at the bottom of the page once you have finished reading." speech="" keys="any" threshold="" play="A78,_user_,A79" />
+            <Answer name="IntroducePassage" agent="ComputerTutor" type="IntroducePassage" text="This passage is about a woman who had a bad experience when paying a bill! I think you may find this interesting so take a look! _user_ remember to click the continue button at the bottom of the page once you have finished reading." speech="" keys="any" threshold="" play="A78,_user_,A79" />
           </Answers>
         </Question>
       </Questions>
@@ -264,14 +264,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain21">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, do you think this text is informational,  persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main2-1.html" play="_user_,A80">
+        <Question id="1" agent="ComputerTutor" text="_user_, do you think this text is informational,  persuasive, or narrative?" speech="" media="media\Lesson12-Practical-Main2-1.html" play="_user_,A80">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="The passage tells us a story of how Anne pays her bills with the checks she cashes from her job. When a writer tells a story it is a narrative text. I hope you can both learn something from Anne's mistake! Great job _user_!" speech="" keys="any" threshold="" play="A81,_user_" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ since we read a passage that describes an experience, or story from Anne herself, that makes this article a what? A narrative, informational, or persuasive text?" speech="" keys="any" threshold="" play="_user_,A82" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Give it a shot _user_! Is the article a narrative, persuasive, or informational text?" speech="" keys="any" threshold="" play="B51,_user_,B52" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The passage tells us a story of how Anne pays her bills with the checks she cashes from her job. When a writer tells a story it is a narrative text. I hope you can both learn something from Anne's mistake!" speech="" keys="any" threshold="" play="A83" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is Jordan?" speech="" keys="any" threshold="" play="A84" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I think this article is informational because I saw some facts." speech="" keys="any" threshold="" play="B53" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The passage tells us a story of how Anne pays her bills with the checks she cashes from her job. When a writer tells a story it is a narrative text. I hope you can both learn something from Anne's mistake! Great job _user_!" speech="" keys="any" threshold="" play="A81,_user_" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ since we read a passage that describes an experience, or story from Anne herself, that makes this article a what? A narrative, informational, or persuasive text?" speech="" keys="any" threshold="" play="_user_,A82" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="Give it a shot _user_! Is the article a narrative, persuasive, or informational text?" speech="" keys="any" threshold="" play="B51,_user_,B52" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="The passage tells us a story of how Anne pays her bills with the checks she cashes from her job. When a writer tells a story it is a narrative text. I hope you can both learn something from Anne's mistake!" speech="" keys="any" threshold="" play="A83" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is ComputerStudent1?" speech="" keys="any" threshold="" play="A84" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I think this article is informational because I saw some facts." speech="" keys="any" threshold="" play="B53" />
           </Answers>
         </Question>
       </Questions>
@@ -280,14 +280,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain22">
       <Questions>
-        <Question id="1" agent="Jordan" text="_user_ since I have to pay a bill like Anne, where could I go to pay my utility bill after I cash my check?" speech="" media="media\Lesson12-Practical-Main2-2.html" play="_user_,B54">
+        <Question id="1" agent="ComputerStudent1" text="_user_ since I have to pay a bill like Anne, where could I go to pay my utility bill after I cash my check?" speech="" media="media\Lesson12-Practical-Main2-2.html" play="_user_,B54">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan could go to a money service center in a grocery store like Anne did in the story. This might be a good place for him to try to cash his check." speech="" keys="any" threshold="" play="A85" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ Anne states that the place she goes to is authorized to take bill payments. What is the name of this location? Jordan may also be able to cash his check there." speech="" keys="any" threshold="" play="_user_,A86" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Give it a shot _user_! Where could I go to pay my bill after I cash my check at the bank?" speech="" keys="any" threshold="" play="B55,_user_,B56" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Jordan could go to a money service center in a grocery store like Anne did in the story. This might be a good place for him to try to cash his check." speech="" keys="any" threshold="" play="A87" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the answer is to the question?" speech="" keys="any" threshold="" play="A88" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I see now _user_! I could go to a money service center in a grocery store to pay my bills, just like Anne." speech="" keys="any" threshold="" play="B57,_user_,B58" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="ComputerStudent1 could go to a money service center in a grocery store like Anne did in the story. This might be a good place for him to try to cash his check." speech="" keys="any" threshold="" play="A85" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ Anne states that the place she goes to is authorized to take bill payments. What is the name of this location? ComputerStudent1 may also be able to cash his check there." speech="" keys="any" threshold="" play="_user_,A86" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="Give it a shot _user_! Where could I go to pay my bill after I cash my check at the bank?" speech="" keys="any" threshold="" play="B55,_user_,B56" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="ComputerStudent1 could go to a money service center in a grocery store like Anne did in the story. This might be a good place for him to try to cash his check." speech="" keys="any" threshold="" play="A87" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the answer is to the question?" speech="" keys="any" threshold="" play="A88" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I see now _user_! I could go to a money service center in a grocery store to pay my bills, just like Anne." speech="" keys="any" threshold="" play="B57,_user_,B58" />
           </Answers>
         </Question>
       </Questions>
@@ -296,14 +296,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain23">
       <Questions>
-        <Question id="1" agent="Jordan" text="_user_ what could happen if I go to a place that is not authorized to take bill payments? This seems like an important question." speech="" media="media\Lesson12-Practical-Main2-3.html" play="_user_,B59">
+        <Question id="1" agent="ComputerStudent1" text="_user_ what could happen if I go to a place that is not authorized to take bill payments? This seems like an important question." speech="" media="media\Lesson12-Practical-Main2-3.html" play="_user_,B59">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="If Jordan goes to a place that is not authorized to take bill payments someone may steal his money. If you aren't sure whether you can pay your bills at a service location, ask the store manager or someone with authority." speech="" keys="any" threshold="" play="A89" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ in the article Anne tells us that if the service is not authorized to take payments something bad may happen. What could happen if Jordan goes to a place that is not authorized to take bill payments?" speech="" keys="any" threshold="" play="_user_,A90" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Give it a shot _user_! What could happen if I go to a place that is not authorized to take bill payments?" speech="" keys="any" threshold="" play="B60,_user_,B61" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="If Jordan goes to a place that is not authorized to take bill payments someone may steal his money. If you aren't sure whether you can pay your bills at a service location, ask the store manager or someone with authority." speech="" keys="any" threshold="" play="A91" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is to the question Jordan?" speech="" keys="any" threshold="" play="A92" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="Thanks _user_! I understand now that if a place is not authorized to receive bill payments somebody could trick me into paying them." speech="" keys="any" threshold="" play="B62,_user_,B63" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="If ComputerStudent1 goes to a place that is not authorized to take bill payments someone may steal his money. If you aren't sure whether you can pay your bills at a service location, ask the store manager or someone with authority." speech="" keys="any" threshold="" play="A89" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ in the article Anne tells us that if the service is not authorized to take payments something bad may happen. What could happen if ComputerStudent1 goes to a place that is not authorized to take bill payments?" speech="" keys="any" threshold="" play="_user_,A90" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="Give it a shot _user_! What could happen if I go to a place that is not authorized to take bill payments?" speech="" keys="any" threshold="" play="B60,_user_,B61" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="If ComputerStudent1 goes to a place that is not authorized to take bill payments someone may steal his money. If you aren't sure whether you can pay your bills at a service location, ask the store manager or someone with authority." speech="" keys="any" threshold="" play="A91" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is to the question ComputerStudent1?" speech="" keys="any" threshold="" play="A92" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="Thanks _user_! I understand now that if a place is not authorized to receive bill payments somebody could trick me into paying them." speech="" keys="any" threshold="" play="B62,_user_,B63" />
           </Answers>
         </Question>
       </Questions>
@@ -312,14 +312,14 @@
     </TutoringPack>
     <TutoringPack name="TPMain24">
       <Questions>
-        <Question id="1" agent="Jordan" text="_user_ here is a highlighted sentence that Cristina gave us. Does the sentence contain an emotion trigger, a fact, or an opinion?" speech="" media="media\Lesson12-Practical-Main2-4.html" play="_user_,B64">
+        <Question id="1" agent="ComputerStudent1" text="_user_ here is a highlighted sentence that ComputerTutor gave us. Does the sentence contain an emotion trigger, a fact, or an opinion?" speech="" media="media\Lesson12-Practical-Main2-4.html" play="_user_,B64">
           <Answers>
-            <Answer name="Correct" agent="Cristina" type="Correct" text="Anne tells us to make sure we do not make the same mistake she did! She sounds so passionate about it and even used an exclamation mark, so this was definitely an emotion trigger. Great job!" speech="" keys="any" threshold="" play="A93" />
-            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_ remember that this article is a narrative. And narrative texts contain what type of information? Emotion triggers, facts, or opinions?" speech="" keys="any" threshold="" play="_user_,A94" />
-            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="Give it a shot _user_! Does this sentence contain emotion triggers, facts, or opinions?" speech="" keys="any" threshold="" play="B65,_user_,B66" />
-            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Anne tells us to make sure we do not make the same mistake she did! She sounds so passionate about it and even used an exclamation mark, so this was definitely an emotion trigger." speech="" keys="any" threshold="" play="A95" />
-            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think the answer is Jordan?" speech="" keys="any" threshold="" play="A96" />
-            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="I understand now _user_! The highlighted sentence contains emotion triggers." speech="" keys="any" threshold="" play="B67,_user_,B68" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Anne tells us to make sure we do not make the same mistake she did! She sounds so passionate about it and even used an exclamation mark, so this was definitely an emotion trigger. Great job!" speech="" keys="any" threshold="" play="A93" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_ remember that this article is a narrative. And narrative texts contain what type of information? Emotion triggers, facts, or opinions?" speech="" keys="any" threshold="" play="_user_,A94" />
+            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="Give it a shot _user_! Does this sentence contain emotion triggers, facts, or opinions?" speech="" keys="any" threshold="" play="B65,_user_,B66" />
+            <Answer name="Assertion" agent="ComputerTutor" type="Assertion" text="Anne tells us to make sure we do not make the same mistake she did! She sounds so passionate about it and even used an exclamation mark, so this was definitely an emotion trigger." speech="" keys="any" threshold="" play="A95" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="What do you think the answer is ComputerStudent1?" speech="" keys="any" threshold="" play="A96" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="JordanAnswer" text="I understand now _user_! The highlighted sentence contains emotion triggers." speech="" keys="any" threshold="" play="B67,_user_,B68" />
           </Answers>
         </Question>
       </Questions>
@@ -344,7 +344,7 @@
     </Rule>
     <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="MoreTime" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
@@ -392,19 +392,19 @@
       <Action agent="System" act="SetStatus" data="Start2" id="1" />
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
-    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="Wait" data="1" id="3" />
     </Rule>
-    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+    <Rule name="JordanAskQ" status="AskQ" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
-      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="Wait" data="1" id="3" />
     </Rule>
     <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="Read" id="1" />
-      <Action agent="Cristina" act="Answer" data="IntroducePassage" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="IntroducePassage" id="2" />
       <Action agent="System" act="ShowAudioButton" data="" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
@@ -418,34 +418,34 @@
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
       <Action agent="System" act="Wait" data="1" id="3" />
     </Rule>
-    <Rule name="JordanAsked" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+    <Rule name="JordanAsked" status="QAsked" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
-      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAnswer" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="ChristinaAsked" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="4" />
+    <Rule name="ChristinaAsked" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="4" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
-      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedback" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerStudent1" act="GiveFeedback" data="PositiveFeedback" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
-      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="IncorrectPrompt" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
@@ -453,35 +453,35 @@
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
       <Action agent="System" act="Wait" data="1" id="3" />
     </Rule>
-    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
-      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAnswer" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
-      <Action agent="Cristina" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="4" />
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="4" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
-      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
-      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedback" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
+      <Action agent="ComputerStudent1" act="GiveFeedback" data="PositiveFeedback" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="Cristina" act="Answer" data="Assertion" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Assertion" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="Assertion" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Assertion" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>

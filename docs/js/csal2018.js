@@ -342,11 +342,11 @@ function runActions() {
 		var agentNum;
 		var isSpeakingSegments = false;
 		console.log(actions[0]);
-		if (agent != "Cristina" && agent != "Jordan" && agent != "System") {
+		if (agent != "ComputerTutor" && agent != "ComputerStudent1" && agent != "System") {
 			return;
-		} else if (agent == "Cristina") {
+		} else if (agent == "ComputerTutor") {
 			agentNum = 0;
-		} else if (agent == "Jordan") {
+		} else if (agent == "ComputerStudent1") {
 			agentNum = 1;
 		}
 		switch (act) {
@@ -386,6 +386,12 @@ function runActions() {
 				break;
 			case "Speak":
 //				var uname = sessionStorage.getItem("uname");
+				data=data.replace("ComputerTutor",C1);
+				data=data.replace("ComputerStudent1",C2);
+				data=data.replace("ComputerStudent2",C3);
+				data=data.replace("ComputerStudent3",C4);
+				data=data.replace("_self_",C1);
+
 				var uname = qs("SName","John");
 				data = data.replace("_user_",uname);
 				// data = agentNum + ":" + data;
@@ -751,7 +757,7 @@ function SetScoreBoard(ScoreName, Score) {
 
 	} else {
 
-		$('#scoreBoardUserNameR').html("Jordan");
+		$('#scoreBoardUserNameR').html("ComputerStudent1");
 		$('#scoreR').html(Score);
 	}
 
@@ -1038,7 +1044,7 @@ function GetMediaFeedBackMsg_old(msg) {
 	var agentFeedBack = feedBackInfo[1];
 	if (agentFeedBack == "Instruction" || agentFeedBack == "TAGoodAnswer") {
 
-		if (feedBackInfo[0] == "Cristina") {
+		if (feedBackInfo[0] == "ComputerTutor") {
 
 			var test = feedBackInfo[2];
 
@@ -1055,7 +1061,7 @@ function GetMediaFeedBackMsg_old(msg) {
 		}
 
 	} else if (agentFeedBack == "SAGoodAnswer" || agentFeedBack == "SABadAnswer" || agentFeedBack == "SABadAnswer") {
-		if (feedBackInfo[0] == "Jordan") {
+		if (feedBackInfo[0] == "ComputerStudent1") {
 
 
 			playList = setPlayList(1, feedBackInfo[3]);

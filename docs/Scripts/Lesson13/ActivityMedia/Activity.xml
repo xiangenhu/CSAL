@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
       <SpeechCan name="PositiveFeedback">
         <Item text="That is what I thought!" speech="" play="B1" />
         <Item text="I agree!" speech="" play="B2" />
@@ -48,7 +48,7 @@
         <Item text="Maybe you can help me." speech="" play="B29" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
       <SpeechCan name="OK">
         <Item text="_user_, ok, perhaps next time." speech="" play="_user_,A1" />
       </SpeechCan>
@@ -62,13 +62,13 @@
         <Item text="_user_, can you please choose one and drag it to the blank?" speech="" play="_user_,A4" />
       </SpeechCan>
       <SpeechCan name="AskJordan">
-        <Item text="Jordan, can you answer this question?" speech="" play="A5" />
+        <Item text="ComputerStudent1, can you answer this question?" speech="" play="A5" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToJordan">
-        <Item text="Jordan, you did not answer correctly." speech=" " play="A6" />
-        <Item text="Jordan, you didn't select the correct answer." speech="" play="A7" />
-        <Item text="Jordan, you chose the wrong answer." speech="" play="A8" />
-        <Item text="Jordan, you selected the wrong answer." speech="" play="A9" />
+        <Item text="ComputerStudent1, you did not answer correctly." speech=" " play="A6" />
+        <Item text="ComputerStudent1, you didn't select the correct answer." speech="" play="A7" />
+        <Item text="ComputerStudent1, you chose the wrong answer." speech="" play="A8" />
+        <Item text="ComputerStudent1, you selected the wrong answer." speech="" play="A9" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToUser">
         <Item text="_user_, Yeah, that's right." speech=" " play="_user_,A10" />
@@ -95,21 +95,21 @@
         <Item text="Please try again." speech="" play="A27" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToJordan">
-        <Item text="Jordan, Yeah, that's right." speech=" " play="A28" />
-        <Item text="Jordan, Great." speech=" " play="A29" />
-        <Item text="Jordan, Nice job ." speech=" " play="A30" />
-        <Item text="Jordan, Perfect ." speech=" " play="A31" />
-        <Item text="Jordan, Good answer, ." speech=" " play="A32" />
-        <Item text="Jordan, Good job ." speech=" " play="A33" />
-        <Item text="Jordan, Good, ." speech=" " play="A34" />
-        <Item text="Jordan, Right, . Nice job." speech=" " play="A35" />
-        <Item text="Jordan, Excellent, ." speech=" " play="A36" />
-        <Item text="Jordan, Brilliant, ." speech=" " play="A37" />
-        <Item text="Jordan, Great job." speech="" play="A38" />
-        <Item text="Jordan, Right. super work." speech="" play="A39" />
-        <Item text="Jordan, Awesome job." speech="" play="A40" />
-        <Item text="Jordan, you are doing great." speech="" play="A41" />
-        <Item text="Jordan, nice, thats right. Great job." speech="" play="A42" />
+        <Item text="ComputerStudent1, Yeah, that's right." speech=" " play="A28" />
+        <Item text="ComputerStudent1, Great." speech=" " play="A29" />
+        <Item text="ComputerStudent1, Nice job ." speech=" " play="A30" />
+        <Item text="ComputerStudent1, Perfect ." speech=" " play="A31" />
+        <Item text="ComputerStudent1, Good answer, ." speech=" " play="A32" />
+        <Item text="ComputerStudent1, Good job ." speech=" " play="A33" />
+        <Item text="ComputerStudent1, Good, ." speech=" " play="A34" />
+        <Item text="ComputerStudent1, Right, . Nice job." speech=" " play="A35" />
+        <Item text="ComputerStudent1, Excellent, ." speech=" " play="A36" />
+        <Item text="ComputerStudent1, Brilliant, ." speech=" " play="A37" />
+        <Item text="ComputerStudent1, Great job." speech="" play="A38" />
+        <Item text="ComputerStudent1, Right. super work." speech="" play="A39" />
+        <Item text="ComputerStudent1, Awesome job." speech="" play="A40" />
+        <Item text="ComputerStudent1, you are doing great." speech="" play="A41" />
+        <Item text="ComputerStudent1, nice, thats right. Great job." speech="" play="A42" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToUser">
         <Item text="_user_, No. That's incorrect." speech=" " play="_user_,A43" />
@@ -128,29 +128,29 @@
   </Agents>
   <RigidPacks>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="Hi there. It's Cristina once again to tell you about the activities." speech="" media="media\IntroTitle.html" play="A50" />
-      <Item id="2" agent="Jordan" text="Good to see everyone again! Cristina, can you please tell us more about today's activity?" speech="" play="B30" />
-      <Item id="3" agent="Cristina" text="In this activity, you will answer questions about basic plot structure in narrative texts. For the purpose of the activity, we will be looking at simple stories instead of complex novels. After answering each question you will be given a piece of a story. You can fill in the blanks of the story to create your own version of the plot. " speech="" media="media\L13-Opening1.html" play="A51" />
-      <Item id="4" agent="Jordan" text="Wow, awesome! This sounds like fun." speech="" play="B31" />
-      <Item id="5" agent="Cristina" text="Jordan, glad you think so. In order to fill in the blanks, you will press on one of the button options and drag that option to a blank area in the sentence. When the line under the blank turns green,  you will know that your answer can be dropped into the sentence." speech="" play="A52" />
-      <Item id="6" agent="Jordan" text="_user_, I think we can do this. Let's get to the first question!" speech="" play="_user_,B32" />
+      <Item id="1" agent="ComputerTutor" text="Hi there. It's ComputerTutor once again to tell you about the activities." speech="" media="media\IntroTitle.html" play="A50" />
+      <Item id="2" agent="ComputerStudent1" text="Good to see everyone again! ComputerTutor, can you please tell us more about today's activity?" speech="" play="B30" />
+      <Item id="3" agent="ComputerTutor" text="In this activity, you will answer questions about basic plot structure in narrative texts. For the purpose of the activity, we will be looking at simple stories instead of complex novels. After answering each question you will be given a piece of a story. You can fill in the blanks of the story to create your own version of the plot. " speech="" media="media\L13-Opening1.html" play="A51" />
+      <Item id="4" agent="ComputerStudent1" text="Wow, awesome! This sounds like fun." speech="" play="B31" />
+      <Item id="5" agent="ComputerTutor" text="ComputerStudent1, glad you think so. In order to fill in the blanks, you will press on one of the button options and drag that option to a blank area in the sentence. When the line under the blank turns green,  you will know that your answer can be dropped into the sentence." speech="" play="A52" />
+      <Item id="6" agent="ComputerStudent1" text="_user_, I think we can do this. Let's get to the first question!" speech="" play="_user_,B32" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="Here is your finished story. You used your knowledge of how narrative texts are arranged to create your own story.  You both did a great job and I hope you enjoyed this activity." speech="" play="A53" />
-      <Item id="2" agent="Jordan" text="I certainly did. _user_ ,thanks for all your help. I look forward to seeing you next time." speech="I certainly did. _user_ thanks for all your help. I look forward to seeing you next time." play="B33,_user_,B34" />
+      <Item id="1" agent="ComputerTutor" text="Here is your finished story. You used your knowledge of how narrative texts are arranged to create your own story.  You both did a great job and I hope you enjoyed this activity." speech="" play="A53" />
+      <Item id="2" agent="ComputerStudent1" text="I certainly did. _user_ ,thanks for all your help. I look forward to seeing you next time." speech="I certainly did. _user_ thanks for all your help. I look forward to seeing you next time." play="B33,_user_,B34" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TP1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's start developing the beginning of your story. What is one element that is usually introduced in the beginning of a story?" speech="" media="" itemDif="" play="A54">
+        <Question id="1" agent="ComputerTutor" text="Let's start developing the beginning of your story. What is one element that is usually introduced in the beginning of a story?" speech="" media="" itemDif="" play="A54">
           <Answers>
-            <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="I think it is A. You need to introduce the characters." speech="I think it is eigh. You need to introduce the characters." keys="A" threshold="" test="" play="B35" />
-            <Answer name="JordanAnswer2" agent="Jordan" type="Bad1First" text="I think it is B. You need to introduce the major event." speech="" keys="B" threshold="" test="" play="B36" />
-            <Answer name="JordanAnswer3" agent="Jordan" type="Bad2First" text="I think it is C. You need to talk about the ending." speech="I think it is Sea. you need to talk about the ending." keys="C" threshold="" test="" play="B37" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. Characters are typically introduced in the beginning of a story.  " speech="The correct answer is eigh. Characters are typically introduced in the beginning of a story.  " keys="A" threshold="" test="" play="A55" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, why don't you start this first round? Please press on either A, B, or C." speech="" keys="any" threshold="" test="" play="A56" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the correct element is for the beginning of the story? Choose either A, B, or C." speech="" keys="any" threshold="" test="" play="_user_,A57" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="GoodFirst" text="I think it is A. You need to introduce the characters." speech="I think it is eigh. You need to introduce the characters." keys="A" threshold="" test="" play="B35" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="Bad1First" text="I think it is B. You need to introduce the major event." speech="" keys="B" threshold="" test="" play="B36" />
+            <Answer name="JordanAnswer3" agent="ComputerStudent1" type="Bad2First" text="I think it is C. You need to talk about the ending." speech="I think it is Sea. you need to talk about the ending." keys="C" threshold="" test="" play="B37" />
+            <Answer name="CristinaGood" agent="ComputerTutor" type="Good" text="The correct answer is A. Characters are typically introduced in the beginning of a story.  " speech="The correct answer is eigh. Characters are typically introduced in the beginning of a story.  " keys="A" threshold="" test="" play="A55" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, why don't you start this first round? Please press on either A, B, or C." speech="" keys="any" threshold="" test="" play="A56" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the correct element is for the beginning of the story? Choose either A, B, or C." speech="" keys="any" threshold="" test="" play="_user_,A57" />
           </Answers>
         </Question>
       </Questions>
@@ -159,14 +159,14 @@
     </TutoringPack>
     <TutoringPack name="TP2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you know how to begin your story, you can start by choosing two characters from the list below and drag them to the blanks. The two characters you choose will be your story's main characters." speech="" media="" play="A58">
+        <Question id="1" agent="ComputerTutor" text="Now that you know how to begin your story, you can start by choosing two characters from the list below and drag them to the blanks. The two characters you choose will be your story's main characters." speech="" media="" play="A58">
           <Answers>
-            <Answer name="JordanAnswer" agent="Jordan" type="DD" text="Here is my selection. " speech="" keys="Any" threshold="" test="" play="B38" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Good selection you two, these two will be your story's main characters. Now let's continue building your story!" speech="" keys="main characters" threshold="" test="" play="A59" />
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_ I like your choice alot!" speech="_user_ I like your choice alot!" keys="Like" threshold="" test="" play="_user_,B39" />
-            <Answer name="Temp" agent="Cristina" type="Temp" text="_user_ choose a character by dragging one of the choices to the blank." speech="_user_ choose an answer!" keys="any" threshold="" test="" play="_user_,A60" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what will you select for yours?" speech="" keys="any" threshold="" test="" play="A61" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, go ahead, choose one." speech="" keys="any" threshold="" test="" play="_user_,A62" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="DD" text="Here is my selection. " speech="" keys="Any" threshold="" test="" play="B38" />
+            <Answer name="CristinaDD" agent="ComputerTutor" type="Review" text="Good selection you two, these two will be your story's main characters. Now let's continue building your story!" speech="" keys="main characters" threshold="" test="" play="A59" />
+            <Answer name="JordanAgrees" agent="ComputerStudent1" type="LikeUserChoice" text="_user_ I like your choice alot!" speech="_user_ I like your choice alot!" keys="Like" threshold="" test="" play="_user_,B39" />
+            <Answer name="Temp" agent="ComputerTutor" type="Temp" text="_user_ choose a character by dragging one of the choices to the blank." speech="_user_ choose an answer!" keys="any" threshold="" test="" play="_user_,A60" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, what will you select for yours?" speech="" keys="any" threshold="" test="" play="A61" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, go ahead, choose one." speech="" keys="any" threshold="" test="" play="_user_,A62" />
           </Answers>
         </Question>
       </Questions>
@@ -175,14 +175,14 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." speech="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." media="" play="A63">
+        <Question id="1" agent="ComputerTutor" text="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." speech="Ok, I have another question for both of you. what element describes when and where a story takes place? This element may change." media="" play="A63">
           <Answers>
-            <Answer name="JordanAnswer2" agent="Jordan" type="GoodSecond" text="I'm going to go for B. I think the setting needs to be introduced in the beginning of the story." speech="I'm going to go for Bee. I think the setting needs to be introduced in the beginning of the story." keys="B" threshold="" test="" play="B40" />
-            <Answer name="JordanAnswer4" agent="Jordan" type="Bad1Second" text="I'm going to go for A. I think It's the ending with the problem solved." speech="I'm going to go for, eigh. I think It's the ending with the problem solved." keys="A" threshold="" test="" play="B41" />
-            <Answer name="JordanAnswer6" agent="Jordan" type="Bad2Second" text="I'm going to go for C. I think it's the events leading to the major event. " speech="I'm going to go for, sea, I think it's the events leading to the major event. " keys="C" threshold="" test="" play="B42" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues. " speech="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues." keys="B" threshold="" test="" play="A64" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what do you think?" speech="" keys="asd" threshold="" test="" play="A65" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn, please choose either A, B, or C. " speech="" keys="asd" threshold="" test="" play="_user_,A66" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="GoodSecond" text="I'm going to go for B. I think the setting needs to be introduced in the beginning of the story." speech="I'm going to go for Bee. I think the setting needs to be introduced in the beginning of the story." keys="B" threshold="" test="" play="B40" />
+            <Answer name="JordanAnswer4" agent="ComputerStudent1" type="Bad1Second" text="I'm going to go for A. I think It's the ending with the problem solved." speech="I'm going to go for, eigh. I think It's the ending with the problem solved." keys="A" threshold="" test="" play="B41" />
+            <Answer name="JordanAnswer6" agent="ComputerStudent1" type="Bad2Second" text="I'm going to go for C. I think it's the events leading to the major event. " speech="I'm going to go for, sea, I think it's the events leading to the major event. " keys="C" threshold="" test="" play="B42" />
+            <Answer name="CristinaGood" agent="ComputerTutor" type="Good" text="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues. " speech="The correct answer is B. You need to establish the setting early on in the story, but the setting may change a lot as the story continues." keys="B" threshold="" test="" play="A64" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, what do you think?" speech="" keys="asd" threshold="" test="" play="A65" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, it's your turn, please choose either A, B, or C. " speech="" keys="asd" threshold="" test="" play="_user_,A66" />
           </Answers>
         </Question>
       </Questions>
@@ -191,13 +191,13 @@
     </TutoringPack>
     <TutoringPack name="TP4">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you know that you need to establish the setting we will select a time and place for the setting. _user_ please choose a place for the setting from the list below and drag them to the blanks. Jordan will select the time." speech="Now that you know that you need to establish the setting we will select a time and place for the setting._user_ please choose a place for the setting from the list below and drag them to the blanks. Jordan will select the time." media="" play="A67,_user_,A68">
+        <Question id="1" agent="ComputerTutor" text="Now that you know that you need to establish the setting we will select a time and place for the setting. _user_ please choose a place for the setting from the list below and drag them to the blanks. ComputerStudent1 will select the time." speech="Now that you know that you need to establish the setting we will select a time and place for the setting._user_ please choose a place for the setting from the list below and drag them to the blanks. ComputerStudent1 will select the time." media="" play="A67,_user_,A68">
           <Answers>
-            <Answer name="JordanAnswer" agent="Jordan" type="DD" text="Here's what I'm going to choose." speech="" keys="Any" threshold="" test="" play="B43" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Nice settings you two, you two are being very creative!" speech="Nice settings you two, you are being very creative!" keys="Any" threshold="" test="" play="A69" />
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, I think you chose very well!" speech="_user_ I think you chose very well!" keys="like" threshold="" test="" play="_user_,B44" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your choice?" speech="" keys="adsf" threshold="" test="" play="A70" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which will you select?" speech="" keys="asdf" threshold="" test="" play="_user_,A71" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="DD" text="Here's what I'm going to choose." speech="" keys="Any" threshold="" test="" play="B43" />
+            <Answer name="CristinaDD" agent="ComputerTutor" type="Review" text="Nice settings you two, you two are being very creative!" speech="Nice settings you two, you are being very creative!" keys="Any" threshold="" test="" play="A69" />
+            <Answer name="JordanAgrees" agent="ComputerStudent1" type="LikeUserChoice" text="_user_, I think you chose very well!" speech="_user_ I think you chose very well!" keys="like" threshold="" test="" play="_user_,B44" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, what is your choice?" speech="" keys="adsf" threshold="" test="" play="A70" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which will you select?" speech="" keys="asdf" threshold="" test="" play="_user_,A71" />
           </Answers>
         </Question>
       </Questions>
@@ -206,14 +206,14 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates conflict for the characters?" speech="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates connflict for the characters?" media="" play="A72">
+        <Question id="1" agent="ComputerTutor" text="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates conflict for the characters?" speech="Now that you both have chosen a setting, let's continue. Here is another question about the composition of a story. What is the element early in the story that creates connflict for the characters?" media="" play="A72">
           <Answers>
-            <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="I'm going to answer A. I think there needs to be a problem at the beginning of the story." speech="I'm going to answer, eigh. I think there needs to be a problem at the beginning of the story." keys="A" threshold="" test="" play="B45" />
-            <Answer name="JordanAnswer3" agent="Jordan" type="Bad1First" text="I think I'm going to answer B. I think this time, the major event needs to be at the beginning of the story." speech="I think I'm going to answer, Bee. I think this time, the major event needs to be at the beginning of the story." keys="B" threshold="" test="" play="B46" />
-            <Answer name="JordanAnswer5" agent="Jordan" type="Bad2First" text="I think I'm going to answer C. I think this time, it's the ending with the problem solved." speech="I think I'm going to answer, Sea. I think this time, it's the ending with the problem solved." keys="C" threshold="" test="" play="B47" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. In the beginning of the story, there typically is a problem." speech="The correct answer is, A. In the beginning of the story, there typically is a problem." keys="C" threshold="" test="" play="A73" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, it's your turn." speech="" keys="adsf" threshold="" test="" play="A74" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what is your answer?" speech="" keys="asf" threshold="" test="" play="_user_,A75" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="GoodFirst" text="I'm going to answer A. I think there needs to be a problem at the beginning of the story." speech="I'm going to answer, eigh. I think there needs to be a problem at the beginning of the story." keys="A" threshold="" test="" play="B45" />
+            <Answer name="JordanAnswer3" agent="ComputerStudent1" type="Bad1First" text="I think I'm going to answer B. I think this time, the major event needs to be at the beginning of the story." speech="I think I'm going to answer, Bee. I think this time, the major event needs to be at the beginning of the story." keys="B" threshold="" test="" play="B46" />
+            <Answer name="JordanAnswer5" agent="ComputerStudent1" type="Bad2First" text="I think I'm going to answer C. I think this time, it's the ending with the problem solved." speech="I think I'm going to answer, Sea. I think this time, it's the ending with the problem solved." keys="C" threshold="" test="" play="B47" />
+            <Answer name="CristinaGood" agent="ComputerTutor" type="Good" text="The correct answer is A. In the beginning of the story, there typically is a problem." speech="The correct answer is, A. In the beginning of the story, there typically is a problem." keys="C" threshold="" test="" play="A73" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, it's your turn." speech="" keys="adsf" threshold="" test="" play="A74" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is your answer?" speech="" keys="asf" threshold="" test="" play="_user_,A75" />
           </Answers>
         </Question>
       </Questions>
@@ -222,11 +222,11 @@
     </TutoringPack>
     <TutoringPack name="TP6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you know that you must introduce a problem at the beginning of the story, _user_, please choose a problem from the list below and drag it to the blank." speech="" media="" play="A76,_user_,A77">
+        <Question id="1" agent="ComputerTutor" text="Now that you know that you must introduce a problem at the beginning of the story, _user_, please choose a problem from the list below and drag it to the blank." speech="" media="" play="A76,_user_,A77">
           <Answers>
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, great choice of a problem. I like how this story is coming together." speech="_user_ Great choice of a problem. I like how this story is coming together." keys="like" threshold="" test="" play="_user_,B48" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Yes, now we have an interesting problem. Let's go on." speech="" keys="any" threshold="" test="" play="A78" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Go ahead. " speech="" keys="asdf" threshold="" test="" play="A79" />
+            <Answer name="JordanAgrees" agent="ComputerStudent1" type="LikeUserChoice" text="_user_, great choice of a problem. I like how this story is coming together." speech="_user_ Great choice of a problem. I like how this story is coming together." keys="like" threshold="" test="" play="_user_,B48" />
+            <Answer name="CristinaDD" agent="ComputerTutor" type="Review" text="Yes, now we have an interesting problem. Let's go on." speech="" keys="any" threshold="" test="" play="A78" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="Go ahead. " speech="" keys="asdf" threshold="" test="" play="A79" />
           </Answers>
         </Question>
       </Questions>
@@ -235,14 +235,14 @@
     </TutoringPack>
     <TutoringPack name="TP7">
       <Questions>
-        <Question id="1" agent="Cristina" text="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" speech="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" media="" play="A80">
+        <Question id="1" agent="ComputerTutor" text="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" speech="There have been a lot of events so far in the story. Can you tell me what happens at the most important point of the story?" media="" play="A80">
           <Answers>
-            <Answer name="JordanAnswer2" agent="Jordan" type="GoodSecond" text="I think it leads up to the major event. So C is correct." speech="" keys="C" threshold="" test="" play="B49" />
-            <Answer name="JordanAnswer4" agent="Jordan" type="Bad1Second" text="I think the answer is A. It would lead up to more problems." speech="I think the answer is eigh. It would lead up to more problems." keys="A" threshold="" test="" play="B50" />
-            <Answer name="JordanAnswer6" agent="Jordan" type="Bad2Second" text="I think the answer is B. It leads up to the ending with the problem solved." speech="I think the answer is Bee. It leads up to the ending with the problem solved." keys="B" threshold="" test="" play="B51" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is C. When something happens that complicates the problem it leads up to a major event. " speech="The correct answer is Sea. When something happens that complicates the problem it leads up to a major event. " keys="C" threshold="" test="" play="A81" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A82" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, it's your turn to answer. Press either A, B, or C." speech="" keys="asdf" threshold="" test="" play="_user_,A83" />
+            <Answer name="JordanAnswer2" agent="ComputerStudent1" type="GoodSecond" text="I think it leads up to the major event. So C is correct." speech="" keys="C" threshold="" test="" play="B49" />
+            <Answer name="JordanAnswer4" agent="ComputerStudent1" type="Bad1Second" text="I think the answer is A. It would lead up to more problems." speech="I think the answer is eigh. It would lead up to more problems." keys="A" threshold="" test="" play="B50" />
+            <Answer name="JordanAnswer6" agent="ComputerStudent1" type="Bad2Second" text="I think the answer is B. It leads up to the ending with the problem solved." speech="I think the answer is Bee. It leads up to the ending with the problem solved." keys="B" threshold="" test="" play="B51" />
+            <Answer name="CristinaGood" agent="ComputerTutor" type="Good" text="The correct answer is C. When something happens that complicates the problem it leads up to a major event. " speech="The correct answer is Sea. When something happens that complicates the problem it leads up to a major event. " keys="C" threshold="" test="" play="A81" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, what is your answer?" speech="" keys="asdf" threshold="" test="" play="A82" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, it's your turn to answer. Press either A, B, or C." speech="" keys="asdf" threshold="" test="" play="_user_,A83" />
           </Answers>
         </Question>
       </Questions>
@@ -251,10 +251,10 @@
     </TutoringPack>
     <TutoringPack name="TP8">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now we know that a major event must follow the problem. let's read the middle of the story. _user_, please choose a major event from the list below and drag it to the blank." speech="Now we know that a major event must follow the problem. let's read the middle of the story, _user_, please choose a major event from the list below and drag it to the blank." media="" play="A84,_user_,A85">
+        <Question id="1" agent="ComputerTutor" text="Now we know that a major event must follow the problem. let's read the middle of the story. _user_, please choose a major event from the list below and drag it to the blank." speech="Now we know that a major event must follow the problem. let's read the middle of the story, _user_, please choose a major event from the list below and drag it to the blank." media="" play="A84,_user_,A85">
           <Answers>
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, your major event is brilliant!" speech="_user_, your major event is brilliant!" keys="any" threshold="" test="" play="_user_,B52" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="_user_, great choice of major event!  Let's move on to the ending of your story." speech="_user_ Great choice of major event!  Let's move on to the ending of your story." keys="any" threshold="" test="" play="_user_,A86" />
+            <Answer name="JordanAgrees" agent="ComputerStudent1" type="LikeUserChoice" text="_user_, your major event is brilliant!" speech="_user_, your major event is brilliant!" keys="any" threshold="" test="" play="_user_,B52" />
+            <Answer name="CristinaDD" agent="ComputerTutor" type="Review" text="_user_, great choice of major event!  Let's move on to the ending of your story." speech="_user_ Great choice of major event!  Let's move on to the ending of your story." keys="any" threshold="" test="" play="_user_,A86" />
           </Answers>
         </Question>
       </Questions>
@@ -263,14 +263,14 @@
     </TutoringPack>
     <TutoringPack name="TP9">
       <Questions>
-        <Question id="1" agent="Cristina" text="can you tell me what happens at the end of a story?" speech="can you tell me what happens at the end of a story?" media="" play="A87">
+        <Question id="1" agent="ComputerTutor" text="can you tell me what happens at the end of a story?" speech="can you tell me what happens at the end of a story?" media="" play="A87">
           <Answers>
-            <Answer name="JordanAnswer1" agent="Jordan" type="GoodFirst" text="Oh I know, A. It's where the problem is solved!" speech="Oh I know! eigh! It's where the problem is solved!" keys="A" threshold="" test="" play="B53" />
-            <Answer name="JordanAnswer3" agent="Jordan" type="Bad1First" text="Oh I know, B. It's where the major event occurs!" speech="Oh I know! Bee! it's where the major event occurs!" keys="B" threshold="" test="" play="B54" />
-            <Answer name="JordanAnswer4" agent="Jordan" type="Bad2First" text="Oh I know, C. It's where the problem occurs!" speech="Oh I know! Sea! it's where the problem occurs!" keys="C" threshold="" test="" play="B55" />
-            <Answer name="CristinaGood" agent="Cristina" type="Good" text="The correct answer is A. The ending of the story is where the problem is finally solved." speech="The correct answer is, eigh. The ending of the story is where the problem is finally solved." keys="A" threshold="" test="" play="A88" />
-            <Answer name="JordanTurn" agent="Cristina" type="JordanTurn" text="Jordan, it's your turn. Choose A, B, or C." speech="" keys="asdf" threshold="" test="" play="A89" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what about you? What do you think happens at the end of a story? Press on either A, B, or C." speech="" keys="adf" threshold="" test="" play="_user_,A90" />
+            <Answer name="JordanAnswer1" agent="ComputerStudent1" type="GoodFirst" text="Oh I know, A. It's where the problem is solved!" speech="Oh I know! eigh! It's where the problem is solved!" keys="A" threshold="" test="" play="B53" />
+            <Answer name="JordanAnswer3" agent="ComputerStudent1" type="Bad1First" text="Oh I know, B. It's where the major event occurs!" speech="Oh I know! Bee! it's where the major event occurs!" keys="B" threshold="" test="" play="B54" />
+            <Answer name="JordanAnswer4" agent="ComputerStudent1" type="Bad2First" text="Oh I know, C. It's where the problem occurs!" speech="Oh I know! Sea! it's where the problem occurs!" keys="C" threshold="" test="" play="B55" />
+            <Answer name="CristinaGood" agent="ComputerTutor" type="Good" text="The correct answer is A. The ending of the story is where the problem is finally solved." speech="The correct answer is, eigh. The ending of the story is where the problem is finally solved." keys="A" threshold="" test="" play="A88" />
+            <Answer name="JordanTurn" agent="ComputerTutor" type="JordanTurn" text="ComputerStudent1, it's your turn. Choose A, B, or C." speech="" keys="asdf" threshold="" test="" play="A89" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what about you? What do you think happens at the end of a story? Press on either A, B, or C." speech="" keys="adf" threshold="" test="" play="_user_,A90" />
           </Answers>
         </Question>
       </Questions>
@@ -279,11 +279,11 @@
     </TutoringPack>
     <TutoringPack name="TQ1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." speech="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." media="" play="A91,_user_,A92">
+        <Question id="1" agent="ComputerTutor" text="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." speech="Now that you know what the ending of a story is, we need an ending for your story. _user_, please select an ending and drag it to the blank." media="" play="A91,_user_,A92">
           <Answers>
-            <Answer name="JordanAgrees" agent="Jordan" type="LikeUserChoice" text="_user_, you picked a pretty good ending." speech="_user_ You picked a pretty good ending." keys="any" threshold="" test="" play="_user_,B56" />
-            <Answer name="CristinaDD" agent="Cristina" type="Review" text="Great ending, and a good way to resolve the story's problem." speech="" keys="any" threshold="" test="" play="A93" />
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Go ahead." speech="" keys="asdf" threshold="" test="" play="A94" />
+            <Answer name="JordanAgrees" agent="ComputerStudent1" type="LikeUserChoice" text="_user_, you picked a pretty good ending." speech="_user_ You picked a pretty good ending." keys="any" threshold="" test="" play="_user_,B56" />
+            <Answer name="CristinaDD" agent="ComputerTutor" type="Review" text="Great ending, and a good way to resolve the story's problem." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="Go ahead." speech="" keys="asdf" threshold="" test="" play="A94" />
           </Answers>
         </Question>
       </Questions>
@@ -292,9 +292,9 @@
     </TutoringPack>
     <TutoringPack name="TQ2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Before we look at your finished story, let's come up with a title for it. I think this will complete the basic writing structure for your story. _user_, why don't you give the story a title?" speech="" media="" play="A95,_user_,A96">
+        <Question id="1" agent="ComputerTutor" text="Before we look at your finished story, let's come up with a title for it. I think this will complete the basic writing structure for your story. _user_, why don't you give the story a title?" speech="" media="" play="A95,_user_,A96">
           <Answers>
-            <Answer name="AskUser" agent="Cristina" type="AskUser" text="Please choose one from the options below." speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="Please choose one from the options below." speech="" keys="any" threshold="" test="" play="A97" />
           </Answers>
         </Question>
       </Questions>
@@ -325,7 +325,7 @@
     </Rule>
     <Rule name="HasTutoringPackDD" status="HasTutoringPackDD" response="" event="" hasItem="true" priority="" frequency="" description="Ask main q. To QuestionTypeDD">
       <Action agent="System" act="SetStatus" data="QuestionTypeDD" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="NoMoreTutoringPackDD" status="HasTutoringPackDD" response="" event="" hasItem="false" priority="" frequency="" description="">
@@ -334,7 +334,7 @@
     </Rule>
     <Rule name="HasTutoringPackMC" status="HasTutoringPackMC" response="" event="" hasItem="true" priority="" frequency="" description="Ask main q. To QuestionTypeMC">
       <Action agent="System" act="SetStatus" data="QuestionTypeMC" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="NoMoreTutoringPackMC" status="HasTutoringPackMC" response="" event="" hasItem="false" priority="" frequency="" description="No more mc tutoring pack. To End">
@@ -356,17 +356,17 @@
     </Rule>
     <Rule name="GetNextItemMCJordanFirstGood" status="NextItemMC" response="" event="Continue" hasItem="" priority="" frequency="" description="Check jordan GoodFirst. To CheckJordanAnswerGood (2)">
       <Action agent="System" act="SetStatus" data="CheckJordanFirstMCGood" id="1" />
-      <Action agent="Jordan" act="GetAnswer" data="GoodFirst" id="2" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="GoodFirst" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="GetNextItemMCJordanFirstBad1" status="NextItemMC" response="" event="Continue" hasItem="" priority="" frequency="" description="Check jordan BadFirst. To CheckJordanAnswerBad (2)">
       <Action agent="System" act="SetStatus" data="CheckJordanFirstMCBad1" id="1" />
-      <Action agent="Jordan" act="GetAnswer" data="Bad1First" id="2" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="Bad1First" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="GetNextItemMCJordanFirstBad2" status="NextItemMC" response="" event="Continue" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="CheckJordanFirstMCBad2" id="1" />
-      <Action agent="Jordan" act="GetAnswer" data="Bad2First" id="2" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="Bad2First" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="StopExerciseMC" status="NextItemMC" response="" event="Stop" hasItem="" priority="" frequency="" description="No item. To End">
@@ -383,21 +383,21 @@
     </Rule>
     <Rule name="GetNextItemDD" status="GetNextItemDD" response="" event="" hasItem="" priority="" frequency="" description="Let user drag drop. To DDAnswer">
       <Action agent="System" act="SetStatus" data="DDAnswer" id="1" />
-      <Action agent="Cristina" act="Answer" data="Temp" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Temp" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
-    <Rule name="ShowItemJordanFirstGood" status="MCJordanFirstGoodUserAnswerSecond" response="" event="" hasItem="" priority="" frequency="" description="Jordan good. User answer. To MCJordanFirstGood">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+    <Rule name="ShowItemJordanFirstGood" status="MCJordanFirstGoodUserAnswerSecond" response="" event="" hasItem="" priority="" frequency="" description="ComputerStudent1 good. User answer. To MCJordanFirstGood">
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstGood" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="ShowItemJordanFirstBad2" status="MCJordanFirstBad2UserAnswerSecond" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstBad2" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
-    <Rule name="ShowItemJordanFirstBad1" status="MCJordanFirstBad1UserAnswerSecond" response="" event="" hasItem="" priority="" frequency="" description="Jordan bad. User answer. To GetNextItemMCJordanAnsweredBad">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+    <Rule name="ShowItemJordanFirstBad1" status="MCJordanFirstBad1UserAnswerSecond" response="" event="" hasItem="" priority="" frequency="" description="ComputerStudent1 bad. User answer. To GetNextItemMCJordanAnsweredBad">
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstBad1" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
@@ -413,398 +413,398 @@
       <Action agent="System" act="SetStatus" data="MCUserFirstJordanBad2" id="1" />
       <Action agent="System" act="WaitForEvent" data="100" id="2" />
     </Rule>
-    <Rule name="JordanFirstMCGoodTrue" status="CheckJordanFirstMCGood" response="" event="" hasItem="true" priority="" frequency="" description="Jordan answer first. To GetNextItemMCJordanAnsweredGood">
+    <Rule name="JordanFirstMCGoodTrue" status="CheckJordanFirstMCGood" response="" event="" hasItem="true" priority="" frequency="" description="ComputerStudent1 answer first. To GetNextItemMCJordanAnsweredGood">
       <Action agent="System" act="ShowMediaItem" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="GoodFirst" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodFirst" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="4" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstGoodUserAnswerSecond" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="JordanFirstMCBad1True" status="CheckJordanFirstMCBad1" response="" event="" hasItem="true" priority="" frequency="" description="Jordan answer first. To GetNextItemMCJordanAnsweredBad">
+    <Rule name="JordanFirstMCBad1True" status="CheckJordanFirstMCBad1" response="" event="" hasItem="true" priority="" frequency="" description="ComputerStudent1 answer first. To GetNextItemMCJordanAnsweredBad">
       <Action agent="System" act="ShowMediaItem" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="Bad1First" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1First" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="4" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstBad1UserAnswerSecond" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="JordanFirstMCBad2True" status="CheckJordanFirstMCBad2" response="" event="" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaItem" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="Bad2First" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2First" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="4" />
       <Action agent="System" act="SetStatus" data="MCJordanFirstBad2UserAnswerSecond" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="JordanFirstGoodFalse" status="CheckJordanFirstMCGood" response="" event="" hasItem="false" priority="" frequency="" description="Check GoodFirst. To GetNextItemMCUserAnswerJordanGood">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="GetNextItemMCJordanSecondGood" id="2" />
       <Action agent="System" act="ShowMediaItem" data="" id="3" />
     </Rule>
     <Rule name="JordanFirstBad1False" status="CheckJordanFirstMCBad1" response="" event="" hasItem="false" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="GetNextItemMCJordanSecondBad1" id="2" />
       <Action agent="System" act="ShowMediaItem" data="" id="3" />
     </Rule>
     <Rule name="JordanFirstBad2False" status="CheckJordanFirstMCBad2" response="" event="" hasItem="false" priority="" frequency="" description="Check bad first. To GetNextItemMCUserAnswerJordanBad">
-      <Action agent="Cristina" act="Answer" data="AskUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="1" />
       <Action agent="System" act="SetStatus" data="GetNextItemMCJordanSecondBad2" id="2" />
       <Action agent="System" act="ShowMediaItem" data="" id="3" />
     </Rule>
     <Rule name="UserDDAnswer" status="DDAnswer" response="" event="UserAnswer" hasItem="" priority="1" frequency="" description="User answered. Check jordan answer. To CheckJordanResponseDD">
-      <Action agent="Jordan" act="GetAnswer" data="DD" id="1" />
+      <Action agent="ComputerStudent1" act="GetAnswer" data="DD" id="1" />
       <Action agent="System" act="SetStatus" data="CheckJordanResponseDD" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="UserDDAny" status="DDAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out. Pump. to PumpDD">
-      <Action agent="Cristina" act="CannedExpression" data="PumpDD" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpDD" id="1" />
       <Action agent="System" act="SetStatus" data="PumpDD" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
-    <Rule name="UserDDAnyAnswer" status="PumpDD" response="" event="" hasItem="" priority="1" frequency="" description="Check Jordan answer. To CheckJordanResponseDDAnyAny">
-      <Action agent="Jordan" act="GetAnswer" data="DD" id="1" />
+    <Rule name="UserDDAnyAnswer" status="PumpDD" response="" event="" hasItem="" priority="1" frequency="" description="Check ComputerStudent1 answer. To CheckJordanResponseDDAnyAny">
+      <Action agent="ComputerStudent1" act="GetAnswer" data="DD" id="1" />
       <Action agent="System" act="SetStatus" data="CheckJordanResponseDDAnyAny" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule name="JordanAnswerDDAnyAnyTrue" status="CheckJordanResponseDDAnyAny" response="" event="" hasItem="true" priority="" frequency="" description="Jordan select. To JordanAnsweredDD">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="DD" id="2" />
+    <Rule name="JordanAnswerDDAnyAnyTrue" status="CheckJordanResponseDDAnyAny" response="" event="" hasItem="true" priority="" frequency="" description="ComputerStudent1 select. To JordanAnsweredDD">
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="DD" id="2" />
       <Action agent="System" act="SetStatus" data="JordanAnsweredDD" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanSelect" id="4" />
     </Rule>
-    <Rule name="JordanAnswerDDAnyAnyFalse" status="CheckJordanResponseDDAnyAny" response="" event="" hasItem="false" priority="" frequency="" description="Jordan agrees. To GoBack">
-      <Action agent="Jordan" act="Answer" data="LikeUserChoice" id="1" />
-      <Action agent="Cristina" act="Answer" data="Review" id="2" />
+    <Rule name="JordanAnswerDDAnyAnyFalse" status="CheckJordanResponseDDAnyAny" response="" event="" hasItem="false" priority="" frequency="" description="ComputerStudent1 agrees. To GoBack">
+      <Action agent="ComputerStudent1" act="Answer" data="LikeUserChoice" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Review" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
-    <Rule name="JordanAnswerDDTrue" status="CheckJordanResponseDD" response="" event="" hasItem="true" priority="" frequency="" description="Jordan answered. To JordanAnsweredDD">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="DD" id="2" />
+    <Rule name="JordanAnswerDDTrue" status="CheckJordanResponseDD" response="" event="" hasItem="true" priority="" frequency="" description="ComputerStudent1 answered. To JordanAnsweredDD">
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="DD" id="2" />
       <Action agent="System" act="SetStatus" data="JordanAnsweredDD" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanSelect" id="4" />
     </Rule>
-    <Rule name="JordanAnsweredDD" status="JordanAnsweredDD" response="" event="JordanSelect" hasItem="" priority="" frequency="" description="Jordan select drag drop. To GoBack">
-      <Action agent="Cristina" act="Answer" data="Review" id="1" />
+    <Rule name="JordanAnsweredDD" status="JordanAnsweredDD" response="" event="JordanSelect" hasItem="" priority="" frequency="" description="ComputerStudent1 select drag drop. To GoBack">
+      <Action agent="ComputerTutor" act="Answer" data="Review" id="1" />
       <Action agent="System" act="SetStatus" data="GoBack" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule name="JordanAnsweredDD1" status="JordanAnsweredDD" response="" event="JordanSelect1" hasItem="" priority="" frequency="" description="Jordan select drag drop. To GoBack">
-      <Action agent="Cristina" act="Answer" data="Review" id="1" />
+    <Rule name="JordanAnsweredDD1" status="JordanAnsweredDD" response="" event="JordanSelect1" hasItem="" priority="" frequency="" description="ComputerStudent1 select drag drop. To GoBack">
+      <Action agent="ComputerTutor" act="Answer" data="Review" id="1" />
       <Action agent="System" act="SetStatus" data="GoBack" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule name="JordanAnsweredDD2" status="JordanAnsweredDD" response="" event="JordanSelect2" hasItem="" priority="" frequency="" description="Jordan select drag drop. To GoBack">
-      <Action agent="Cristina" act="Answer" data="Review" id="1" />
+    <Rule name="JordanAnsweredDD2" status="JordanAnsweredDD" response="" event="JordanSelect2" hasItem="" priority="" frequency="" description="ComputerStudent1 select drag drop. To GoBack">
+      <Action agent="ComputerTutor" act="Answer" data="Review" id="1" />
       <Action agent="System" act="SetStatus" data="GoBack" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule name="JordanAnswerDDFalse" status="CheckJordanResponseDD" response="" event="" hasItem="false" priority="" frequency="" description="Jordan agrees. To GoBack">
-      <Action agent="Jordan" act="Answer" data="LikeUserChoice" id="1" />
-      <Action agent="Cristina" act="Answer" data="Review" id="2" />
+    <Rule name="JordanAnswerDDFalse" status="CheckJordanResponseDD" response="" event="" hasItem="false" priority="" frequency="" description="ComputerStudent1 agrees. To GoBack">
+      <Action agent="ComputerStudent1" act="Answer" data="LikeUserChoice" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Review" id="2" />
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="MCUserFirstCorrectJordanGood" status="MCUserFirstJordanGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="GoodSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCUserFirstCorrectJordanBad1" status="MCUserFirstJordanBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad1Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCUserFirstCorrectJordanBad2" status="MCUserFirstJordanBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad2Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCUserFirstIncorrectJordanGood" status="MCUserFirstJordanGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="GoodSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCUserFirstIncorrectJordanBad1" status="MCUserFirstJordanBad1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad1Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCUserFirstIncorrectJordanBad2" status="MCUserFirstJordanBad2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad2Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCNoResponseJordanGood" status="MCUserFirstJordanGood" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCUserFirstJordanGood" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCNoResponseJordanBad1" status="MCUserFirstJordanBad1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCUserFirstJordanBad1" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCNoResponseJordanBad2" status="MCUserFirstJordanBad2" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCUserFirstJordanBad2" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCAnyUserFirstCGood" status="PumpMCUserFirstJordanGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="GoodSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCAnyUserFirstCBad1" status="PumpMCUserFirstJordanBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad1Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCAnyUserFirstCBad2" status="PumpMCUserFirstJordanBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad2Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCAnyUserFirstICGood" status="PumpMCUserFirstJordanGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="GoodSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodSecond" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToUser" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="4" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToUser" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCAnyUserFirstICBad1" status="PumpMCUserFirstJordanBad1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad1Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCAnyUserFirstICBad2" status="PumpMCUserFirstJordanBad2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="1" />
-      <Action agent="Jordan" act="Answer" data="Bad2Second" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2Second" id="2" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="3" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="Good" id="5" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="MCAnyAnyJordanGood" status="PumpMCUserFirstJordanGood" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="GoodSecond" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="GoodSecond" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanGood" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCAnyAnyJordanBad1" status="PumpMCUserFirstJordanBad1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="Bad1Second" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad1Second" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad1" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCAnyAnyJordanBad2" status="PumpMCUserFirstJordanBad2" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="Answer" data="JordanTurn" id="2" />
-      <Action agent="Jordan" act="Answer" data="Bad2Second" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="JordanTurn" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="Bad2Second" id="3" />
       <Action agent="System" act="GetMediaEvent" data="JordanBad2" id="4" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
-      <Action agent="Cristina" act="Answer" data="Good" id="6" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="6" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="MCJordanFirstGoodUserSecondCorrect" status="MCJordanFirstGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="Both correct. Feedback. Go Back">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
-    <Rule name="MCJordanFirstGoodUserSecondIncorrect" status="MCJordanFirstGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Jordan correct, usre wrong. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    <Rule name="MCJordanFirstGoodUserSecondIncorrect" status="MCJordanFirstGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="ComputerStudent1 correct, usre wrong. Feedback. To GoBack">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="MCJordanFirstBad1UserSecondCorrect" status="MCJordanFirstBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="Jordan wrong, user correct. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    <Rule name="MCJordanFirstBad1UserSecondCorrect" status="MCJordanFirstBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="ComputerStudent1 wrong, user correct. Feedback. To GoBack">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="MCJordanFirstBad2UserSecondCorrect" status="MCJordanFirstBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="MCJordanFirstBad2UserSecondIncorrect" status="MCJordanFirstBad2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="MCJordanFirstBad1UserSecondIncorrect" status="MCJordanFirstBad1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Both wrong. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="MCNoResJordanGood" status="MCJordanFirstGood" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out. Pump. To PumpMCJordanFirstGood">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCJordanFirstGood" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCNoResJordanBad1" status="MCJordanFirstBad1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCJordanFirstBad1" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="MCNoResJordanBad2" status="MCJordanFirstBad2" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out. Pump. To PumpMCJordanFirstBad">
-      <Action agent="Cristina" act="CannedExpression" data="PumpMC" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpMC" id="1" />
       <Action agent="System" act="SetStatus" data="PumpMCJordanFirstBad2" id="2" />
       <Action agent="System" act="WaitForEvent" data="100" id="3" />
     </Rule>
     <Rule name="McAnyCorrectJordanGood" status="PumpMCJordanFirstGood" response="" event="Correct" hasItem="" priority="1" frequency="" description="Both correct. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="MCAnyCorrectJordanBad1" status="PumpMCJordanFirstBad1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="MCAnyCorrectJordanBad2" status="PumpMCJordanFirstBad2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="MCAnyIncorrectJordanGood" status="PumpMCJordanFirstGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Jordan correct. User wrong. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToUser" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    <Rule name="MCAnyIncorrectJordanGood" status="PumpMCJordanFirstGood" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="ComputerStudent1 correct. User wrong. Feedback. To GoBack">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToUser" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="MCAnyIncorrectJordanBad1" status="PumpMCJordanFirstBad1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="MCAnyIncorrectJordanBad2" status="PumpMCJordanFirstBad2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Both wrong. Feedback. To GoBack">
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
-      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
-    <Rule name="MCAnyAny2JordanGood" status="PumpMCJordanFirstGood" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out 2. Jordan correct. Feedback. To GoBack">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    <Rule name="MCAnyAny2JordanGood" status="PumpMCJordanFirstGood" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out 2. ComputerStudent1 correct. Feedback. To GoBack">
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="MCAnyAny2JordanBad1" status="PumpMCJordanFirstBad1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="MCAnyAny2JordanBad2" status="PumpMCJordanFirstBad2" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out 2. Jordan wrong. Feedback. To GoBack">
-      <Action agent="Cristina" act="CannedExpression" data="OK" id="1" />
-      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    <Rule name="MCAnyAny2JordanBad2" status="PumpMCJordanFirstBad2" response="Any" event="" hasItem="" priority="2" frequency="" description="Time out 2. ComputerStudent1 wrong. Feedback. To GoBack">
+      <Action agent="ComputerTutor" act="CannedExpression" data="OK" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />

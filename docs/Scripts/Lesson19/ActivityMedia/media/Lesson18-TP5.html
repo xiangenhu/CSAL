@@ -454,11 +454,11 @@
 			{
 				if (data == "MainQ")
 				{
-					parent.GetWorldEvent("Jordan");
+					parent.GetWorldEvent("ComputerStudent1");
 				}
 				else if (data == "ThisQ")
 				{
-					parent.GetWorldEvent("Cristina");
+					parent.GetWorldEvent("ComputerTutor");
 				}
 				else if (data == "ShowTextMap")
 				{
@@ -468,7 +468,7 @@
 				{
 					HideTextMap();
 				}
-				else if (data == "Jordan")
+				else if (data == "ComputerStudent1")
 				{
 					var value = parseInt(Math.random() * (correctAnswerArray.length - 1 + 0) + 0); 
 					
@@ -484,7 +484,7 @@
 				{
 				//alert(info);
 				//parent.nextPage("media/"+"Lesson18-TP6.html?score="+info);
-				parent.nextPage("media/"+"Lesson18-TP7.html?score="+info+ "?system="+systemAnswer1+"?Jordan="+JordanAnswer);
+				parent.nextPage("media/"+"Lesson18-TP7.html?score="+info+ "?system="+systemAnswer1+"?ComputerStudent1="+JordanAnswer);
 				
 				}
 				else if (data == "Difficulty")

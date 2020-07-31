@@ -459,18 +459,18 @@
 			
 				if (data == "AskQ") 
 				{
-				parent.GetWorldEvent("Cristina");
+				parent.GetWorldEvent("ComputerTutor");
 				}
 				else if (data == "ThisQ")
 				{
 					
 					if(questionNum==1 ||   questionNum==2 || questionNum==4 ||   questionNum==5 ||  questionNum==6 ||   questionNum==8 || questionNum==10 )
 						{
-						parent.GetWorldEvent("Cristina");
+						parent.GetWorldEvent("ComputerTutor");
 						}
 						else
 						{
-						parent.GetWorldEvent("Jordan");
+						parent.GetWorldEvent("ComputerStudent1");
 						}
 				$(getSpan).css({"border-radius": "12px"});
 				$(getSpan).css({"padding-left": "4px"});
@@ -492,7 +492,7 @@
 					{
 						parent.nextPage("media/"+"Lesson9-Main1-0new.html?id="+strId);
 					}
-					parent.GetWorldEvent("Cristina");
+					parent.GetWorldEvent("ComputerTutor");
 				}
 				else if (data == "JordanAnswer")
 				{

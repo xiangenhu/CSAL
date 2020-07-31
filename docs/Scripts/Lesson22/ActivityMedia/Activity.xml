@@ -1,7 +1,7 @@
 <!-- <?xml version="1.0" encoding="utf-8"?> -->
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
       <SpeechCan name="PumpBlankRemind">
         <Item text="_user_, I bet you know this." speech="" play="_user_,B1" />
         <Item text="_user_, try this, please. " speech="" play="_user_,B2" />
@@ -13,14 +13,14 @@
         <Item text="_user_, I am sure you can get this. " speech="" play="_user_,B8" />
       </SpeechCan>
       <SpeechCan name="SAAudioPump">
-        <Item text="Cristina, I haven't finished reading. I need one or two minutes." speech="" play="B9" />
-        <Item text="Cristina, I haven't finished. I need two more minutes. " speech="" play="B10" />
-        <Item text="Cristina, I need one more minute." speech="" play="B11" />
+        <Item text="ComputerTutor, I haven't finished reading. I need one or two minutes." speech="" play="B9" />
+        <Item text="ComputerTutor, I haven't finished. I need two more minutes. " speech="" play="B10" />
+        <Item text="ComputerTutor, I need one more minute." speech="" play="B11" />
       </SpeechCan>
       <SpeechCan name="JordanDisagree">
         <Item text="Actually, I don't think that's right." speech="" play="B12" />
-        <Item text="_user_ and Cristina, I would have to disagree." speech="" play="_user_,B13" />
-        <Item text="_user_  and Cristina, I don't think this answer is right." speech="" play="_user_,B14" />
+        <Item text="_user_ and ComputerTutor, I would have to disagree." speech="" play="_user_,B13" />
+        <Item text="_user_  and ComputerTutor, I don't think this answer is right." speech="" play="_user_,B14" />
         <Item text="I don't think thats correct." speech="" play="B15" />
         <Item text="Well actually, I was thinking it might be something else." speech="" play="B16" />
         <Item text="that answer doesn't seem right to me." speech="" play="B17" />
@@ -29,14 +29,14 @@
         <Item text="I'm not sure, but maybe the correct answer is something different." speech="" play="B20" />
       </SpeechCan>
       <SpeechCan name="JordanAgree">
-        <Item text="Cristina, yeah, I think that's right." speech="" play="B21" />
+        <Item text="ComputerTutor, yeah, I think that's right." speech="" play="B21" />
         <Item text="I think that's the correct answer as well." speech="" play="B22" />
         <Item text="Yeah, i'm pretty sure thats correct." speech="" play="B23" />
         <Item text="I agree with that answer" speech="" play="B24" />
         <Item text="_user_, we agree. We both think that's the correct answer. " speech="" play="_user_,B25" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
       <SpeechCan name="TryAgain">
         <Item text="_user_, Please have another try." speech="" play="_user_,A1" />
         <Item text="_user_, please try this one again." speech="" play="_user_,A2" />
@@ -44,32 +44,32 @@
         <Item text="_user_, Please try it again." speech="" play="_user_,A4" />
       </SpeechCan>
       <SpeechCan name="AskJordan">
-        <Item text="Jordan, which answer do you think is correct?" speech="" play="A5" />
-        <Item text="Jordan, what is your answer?" speech="" play="A6" />
-        <Item text="Jordan, can you please give us your answer?" speech="" play="A7" />
-        <Item text="Jordan, what about you? What do you think?" speech="" play="A8" />
-        <Item text="Jordan, do you have an answer?" speech="" play="A9" />
-        <Item text="Jordan, could you please tell us your answer?" speech="" play="A10" />
-        <Item text="Jordan, what is your answer?" speech="" play="A11" />
-        <Item text="Jordan, your answer, please." speech="" play="A12" />
-        <Item text="Jordan, it is your turn. What is your answer?" speech="" play="A13" />
-        <Item text="Jordan, what about you? What do you think?" speech="" play="A14" />
-        <Item text="Jordan, do you have an answer?" speech="" play="A15" />
-        <Item text="Jordan, could you please tell us your answer?" speech="" play="A16" />
+        <Item text="ComputerStudent1, which answer do you think is correct?" speech="" play="A5" />
+        <Item text="ComputerStudent1, what is your answer?" speech="" play="A6" />
+        <Item text="ComputerStudent1, can you please give us your answer?" speech="" play="A7" />
+        <Item text="ComputerStudent1, what about you? What do you think?" speech="" play="A8" />
+        <Item text="ComputerStudent1, do you have an answer?" speech="" play="A9" />
+        <Item text="ComputerStudent1, could you please tell us your answer?" speech="" play="A10" />
+        <Item text="ComputerStudent1, what is your answer?" speech="" play="A11" />
+        <Item text="ComputerStudent1, your answer, please." speech="" play="A12" />
+        <Item text="ComputerStudent1, it is your turn. What is your answer?" speech="" play="A13" />
+        <Item text="ComputerStudent1, what about you? What do you think?" speech="" play="A14" />
+        <Item text="ComputerStudent1, do you have an answer?" speech="" play="A15" />
+        <Item text="ComputerStudent1, could you please tell us your answer?" speech="" play="A16" />
       </SpeechCan>
       <SpeechCan name="SilenceFeedback">
-        <Item text="Ok, let's see what answer Jordan chose." speech="" play="A17" />
-        <Item text="Alright, let's see what Jordan chose." speech="" play="A18" />
-        <Item text="Well, let's see whether Jordan agrees with this answer." speech="" play="A19" />
+        <Item text="Ok, let's see what answer ComputerStudent1 chose." speech="" play="A17" />
+        <Item text="Alright, let's see what ComputerStudent1 chose." speech="" play="A18" />
+        <Item text="Well, let's see whether ComputerStudent1 agrees with this answer." speech="" play="A19" />
       </SpeechCan>
       <SpeechCan name="NegativeToBoth">
         <Item text="sorry, but both of you are incorrect." speech="" play="A20" />
         <Item text="So, you are both wrong this time." speech="" play="A21" />
         <Item text="No, sorry. you are both incorrect." speech="" play="A22" />
-        <Item text="_user_ and Jordan , you both answered this question incorrectly." speech="" play="_user_,A23" />
-        <Item text="_user_ and Jordan , you  are both incorrect this time." speech="" play="_user_,A24" />
+        <Item text="_user_ and ComputerStudent1 , you both answered this question incorrectly." speech="" play="_user_,A23" />
+        <Item text="_user_ and ComputerStudent1 , you  are both incorrect this time." speech="" play="_user_,A24" />
         <Item text="Unfortunately, you are both incorrect." speech="" play="A25" />
-        <Item text="_user_ and Jordan, this time you are both incorrect." speech="" play="_user_,A26" />
+        <Item text="_user_ and ComputerStudent1, this time you are both incorrect." speech="" play="_user_,A26" />
       </SpeechCan>
       <SpeechCan name="ClickToContinue">
         <Item text="After reading, remember to press the continue button." speech="" play="A27" />
@@ -91,14 +91,14 @@
         <Item text="_user_, very good. You got it." speech="" play="_user_,A39" />
       </SpeechCan>
       <SpeechCan name="PositiveToBoth">
-        <Item text="_user_ and Jordan , you both got that one correct. Good job." speech="" play="_user_,A40" />
-        <Item text="_user_ and Jordan , you are both right. Great job." speech="" play="_user_,A41" />
+        <Item text="_user_ and ComputerStudent1 , you both got that one correct. Good job." speech="" play="_user_,A40" />
+        <Item text="_user_ and ComputerStudent1 , you are both right. Great job." speech="" play="_user_,A41" />
         <Item text="both of you are right this time. That's fantastic." speech="" play="A42" />
-        <Item text="_user_ and Jordan , both of you are correct. Nice job." speech="" play="_user_,A43" />
-        <Item text="_user_ and Jordan , nice work. You are both right." speech="" play="_user_,A44" />
-        <Item text="_user_ and Jordan , awesome. Both of you are correct." speech="" play="_user_,A45" />
-        <Item text="_user_ and Jordan , very good. You both got it." speech="" play="_user_,A46" />
-        <Item text="_user_ and Jordan , nice job. You are both right." speech="" play="_user_,A47" />
+        <Item text="_user_ and ComputerStudent1 , both of you are correct. Nice job." speech="" play="_user_,A43" />
+        <Item text="_user_ and ComputerStudent1 , nice work. You are both right." speech="" play="_user_,A44" />
+        <Item text="_user_ and ComputerStudent1 , awesome. Both of you are correct." speech="" play="_user_,A45" />
+        <Item text="_user_ and ComputerStudent1 , very good. You both got it." speech="" play="_user_,A46" />
+        <Item text="_user_ and ComputerStudent1 , nice job. You are both right." speech="" play="_user_,A47" />
       </SpeechCan>
       <SpeechCan name="PumpBlank">
         <Item text="_user_, you can do it. Please at least have a try. Let me repeat my question again." speech="" play="_user_,A48" />
@@ -120,10 +120,10 @@
         <Item text="I'll repeat the question for you." speech="" play="A62" />
       </SpeechCan>
       <SpeechCan name="AskJordanCheck">
-        <Item text="Jordan, do you think that is the right answer." speech="" play="A63" />
-        <Item text="Jordan, is that answer correct?" speech="" play="A64" />
-        <Item text="Jordan, do you think that answer is correct?" speech="" play="A65" />
-        <Item text="Jordan, what do you think about that answer?" speech="" play="A66" />
+        <Item text="ComputerStudent1, do you think that is the right answer." speech="" play="A63" />
+        <Item text="ComputerStudent1, is that answer correct?" speech="" play="A64" />
+        <Item text="ComputerStudent1, do you think that answer is correct?" speech="" play="A65" />
+        <Item text="ComputerStudent1, what do you think about that answer?" speech="" play="A66" />
       </SpeechCan>
       <SpeechCan name="NegativeToUser">
         <Item text="_user_, I am sorry, but you are incorrect." speech="" play="_user_,A67" />
@@ -135,34 +135,34 @@
         <Item text="_user_, this time you are incorrect" speech="" play="_user_,A73" />
       </SpeechCan>
       <SpeechCan name="PositiveToAgent">
-        <Item text="Jordan, you are absolutely correct, good job." speech="" play="A74" />
-        <Item text="Jordan, you got it right, excellent." speech="" play="A75" />
-        <Item text="Jordan, you are right, that's great." speech="" play="A76" />
-        <Item text="Jordan, that is correct, well done." speech="" play="A77" />
-        <Item text="Jordan, that's right, great job." speech="" play="A78" />
-        <Item text="Jordan, yes. That's correct." speech="" play="A79" />
-        <Item text="Jordan, that's it. Nice job." speech="" play="A80" />
-        <Item text="Jordan, yes. That's right." speech="" play="A81" />
+        <Item text="ComputerStudent1, you are absolutely correct, good job." speech="" play="A74" />
+        <Item text="ComputerStudent1, you got it right, excellent." speech="" play="A75" />
+        <Item text="ComputerStudent1, you are right, that's great." speech="" play="A76" />
+        <Item text="ComputerStudent1, that is correct, well done." speech="" play="A77" />
+        <Item text="ComputerStudent1, that's right, great job." speech="" play="A78" />
+        <Item text="ComputerStudent1, yes. That's correct." speech="" play="A79" />
+        <Item text="ComputerStudent1, that's it. Nice job." speech="" play="A80" />
+        <Item text="ComputerStudent1, yes. That's right." speech="" play="A81" />
       </SpeechCan>
       <SpeechCan name="PositiveUserNegativeAgent">
-        <Item text="_user_, good job. You are correct. Jordan, I'm sorry, you didn't get that one right." speech="" play="_user_,A82" />
-        <Item text="_user_, you are correct. Nicely done. Jordan, sorry but you are wrong." speech="" play="_user_,A83" />
-        <Item text="_user_, great, You're right. Jordan, you are wrong on this one." speech="" play="_user_,A84" />
-        <Item text="_user_, awesome. That's right. Jordan, you didn't get it correct this time" speech="" play="_user_,A85" />
-        <Item text="_user_, nice job,  that's correct. Jordan, you need more practice, you didn't get it right." speech="" play="_user_,A86" />
-        <Item text="_user_, wonderful. That's correct. Jordan, your answer is incorrect." speech="" play="_user_,A87" />
-        <Item text="_user_, Perfect. You got it. Jordan, sorry, you were incorrect." speech="" play="_user_,A88" />
-        <Item text="_user_, that's it. Nice job. Jordan, I hate to say this, but you are wrong." speech="" play="_user_,A89" />
-        <Item text="_user_, great job. You're doing really well. Jordan, you are wrong." speech="" play="_user_,A90" />
+        <Item text="_user_, good job. You are correct. ComputerStudent1, I'm sorry, you didn't get that one right." speech="" play="_user_,A82" />
+        <Item text="_user_, you are correct. Nicely done. ComputerStudent1, sorry but you are wrong." speech="" play="_user_,A83" />
+        <Item text="_user_, great, You're right. ComputerStudent1, you are wrong on this one." speech="" play="_user_,A84" />
+        <Item text="_user_, awesome. That's right. ComputerStudent1, you didn't get it correct this time" speech="" play="_user_,A85" />
+        <Item text="_user_, nice job,  that's correct. ComputerStudent1, you need more practice, you didn't get it right." speech="" play="_user_,A86" />
+        <Item text="_user_, wonderful. That's correct. ComputerStudent1, your answer is incorrect." speech="" play="_user_,A87" />
+        <Item text="_user_, Perfect. You got it. ComputerStudent1, sorry, you were incorrect." speech="" play="_user_,A88" />
+        <Item text="_user_, that's it. Nice job. ComputerStudent1, I hate to say this, but you are wrong." speech="" play="_user_,A89" />
+        <Item text="_user_, great job. You're doing really well. ComputerStudent1, you are wrong." speech="" play="_user_,A90" />
       </SpeechCan>
       <SpeechCan name="NegativeToAgent">
-        <Item text="Jordan, I am sorry, but you are incorrect." speech="" play="A91" />
-        <Item text="Jordan, no, sorry, but you are wrong." speech="" play="A92" />
-        <Item text="Jordan, sorry. you are incorrect." speech="" play="A93" />
-        <Item text="Jordan, you answered this question incorrectly." speech="" play="A94" />
-        <Item text="Jordan, unfortunately you are incorrect this time." speech="" play="A95" />
-        <Item text="Jordan, unfortunately, you are incorrect." speech="" play="A96" />
-        <Item text="Jordan, this time you are incorrect" speech="" play="A97" />
+        <Item text="ComputerStudent1, I am sorry, but you are incorrect." speech="" play="A91" />
+        <Item text="ComputerStudent1, no, sorry, but you are wrong." speech="" play="A92" />
+        <Item text="ComputerStudent1, sorry. you are incorrect." speech="" play="A93" />
+        <Item text="ComputerStudent1, you answered this question incorrectly." speech="" play="A94" />
+        <Item text="ComputerStudent1, unfortunately you are incorrect this time." speech="" play="A95" />
+        <Item text="ComputerStudent1, unfortunately, you are incorrect." speech="" play="A96" />
+        <Item text="ComputerStudent1, this time you are incorrect" speech="" play="A97" />
       </SpeechCan>
       <SpeechCan name="Thanks">
         <Item text="_user_, thank you. " speech="" play="_user_,A98" />
@@ -170,7 +170,7 @@
         <Item text="_user_, thank you so much." speech="" play="_user_,A100" />
       </SpeechCan>
       <SpeechCan name="RedoInstruction">
-        <Item text="_user_ and Jordan , let's do it again." speech="" play="_user_,A101" />
+        <Item text="_user_ and ComputerStudent1 , let's do it again." speech="" play="_user_,A101" />
       </SpeechCan>
       <SpeechCan name="TAAudioPump">
         <Item text=" Don't forget to press the continue button to go to the next section." speech="" play="A102" />
@@ -183,145 +183,145 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="ClosingPoster" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_  and Cristina, thanks! I am going to put this up around the neighborhood. " speech="" play="_user_,B26" />
-      <Item id="2" agent="Cristina" text="Sounds good, but before you go, let's briefly wrap up what we learned today." speech="" play="A105" />
-      <Item id="3" agent="Jordan" text="ok. We found out about the description text structure and how it can paint a mental picture for the reader." speech="" media="media\Lesson19-Closing.html" play="B27" />
-      <Item id="4" agent="Cristina" text=" " speech="" />
-      <Item id="5" agent="Jordan" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B28" />
-      <Item id="6" agent="Cristina" text="A good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures." speech="" play="A106" />
-      <Item id="7" agent="Jordan" text="Alright. If that's it, I'm off to put up the posters. Please call me if either of you see Lola. Bye for now." speech="" play="B29" />
-      <Item id="8" agent="Cristina" text="Ok, I'll be on the lookout for Lola. See everyone soon." speech="" play="A107" />
+      <Item id="1" agent="ComputerStudent1" text="_user_  and ComputerTutor, thanks! I am going to put this up around the neighborhood. " speech="" play="_user_,B26" />
+      <Item id="2" agent="ComputerTutor" text="Sounds good, but before you go, let's briefly wrap up what we learned today." speech="" play="A105" />
+      <Item id="3" agent="ComputerStudent1" text="ok. We found out about the description text structure and how it can paint a mental picture for the reader." speech="" media="media\Lesson19-Closing.html" play="B27" />
+      <Item id="4" agent="ComputerTutor" text=" " speech="" />
+      <Item id="5" agent="ComputerStudent1" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B28" />
+      <Item id="6" agent="ComputerTutor" text="A good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures." speech="" play="A106" />
+      <Item id="7" agent="ComputerStudent1" text="Alright. If that's it, I'm off to put up the posters. Please call me if either of you see Lola. Bye for now." speech="" play="B29" />
+      <Item id="8" agent="ComputerTutor" text="Ok, I'll be on the lookout for Lola. See everyone soon." speech="" play="A107" />
     </RigidPack>
     <RigidPack name="PlayAudioCar" usedIn="">
-      <Item id="1" agent="Cristina" text="Now let's listen to this car ad." speech="" media="media\Lesson22Medium.mp3" play="A108" />
+      <Item id="1" agent="ComputerTutor" text="Now let's listen to this car ad." speech="" media="media\Lesson22Medium.mp3" play="A108" />
     </RigidPack>
     <RigidPack name="TransitionD6" usedIn="TPD5">
-      <Item id="1" agent="Jordan" text="Cristina, I wrote a summary about Aunt Kerry's symptoms. Is it a good summary to send to her doctor?" speech="" play="B30" />
-      <Item id="2" agent="Cristina" text="Jordan, this summary is not good. " speech="" play="A109" />
+      <Item id="1" agent="ComputerStudent1" text="ComputerTutor, I wrote a summary about Aunt Kerry's symptoms. Is it a good summary to send to her doctor?" speech="" play="B30" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, this summary is not good. " speech="" play="A109" />
     </RigidPack>
     <RigidPack name="TransitionE6" usedIn="TPE5">
-      <Item id="1" agent="Jordan" text="Let me call my grandma and tell her what we did. " speech="" play="B31" />
-      <Item id="2" agent="Cristina" text="_user_ and Jordan, this poster is a good summary. " speech="" play="_user_,A110" />
+      <Item id="1" agent="ComputerStudent1" text="Let me call my grandma and tell her what we did. " speech="" play="B31" />
+      <Item id="2" agent="ComputerTutor" text="_user_ and ComputerStudent1, this poster is a good summary. " speech="" play="_user_,A110" />
     </RigidPack>
     <RigidPack name="TransitionM1" usedIn="">
-      <Item id="1" agent="Cristina" text="At the bottom of the screen, you can see a text map. Text maps help us define the important information from a passage." speech="" play="A111" />
-      <Item id="2" agent="Jordan" text="Do we need to drag the sentences to the text map." speech="" play="B32" />
-      <Item id="3" agent="Cristina" text="Actually, you don't need to do any dragging. Just press on the sentence, and it will automatically show in the text map." speech="" play="A112" />
+      <Item id="1" agent="ComputerTutor" text="At the bottom of the screen, you can see a text map. Text maps help us define the important information from a passage." speech="" play="A111" />
+      <Item id="2" agent="ComputerStudent1" text="Do we need to drag the sentences to the text map." speech="" play="B32" />
+      <Item id="3" agent="ComputerTutor" text="Actually, you don't need to do any dragging. Just press on the sentence, and it will automatically show in the text map." speech="" play="A112" />
     </RigidPack>
     <RigidPack name="PlayAudioEmail" usedIn="">
-      <Item id="1" agent="Cristina" text="Let's listen to this email." speech="" media="media\Lesson22Hard.mp3" play="A113" />
+      <Item id="1" agent="ComputerTutor" text="Let's listen to this email." speech="" media="media\Lesson22Hard.mp3" play="A113" />
     </RigidPack>
     <RigidPack name="ClosingEmail" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_ and Cristina, thank you so much for helping me with this email. Now, i really have to go and check up on my aunt. Are we finished?" speech="" play="_user_,B33" />
-      <Item id="2" agent="Cristina" text="Jordan, You are very welcome for the help. I hope your aunt is OK. We are almost finished, but before you go, let's briefly wrap up what we learned today." speech="" play="A114" />
-      <Item id="3" agent="Jordan" text="We found out about the description text structure and how it can paint a mental picture for the reader." speech="" media="media\Lesson19-Closing.html" play="B34" />
-      <Item id="4" agent="Cristina" text="That's right. We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. " speech="" play="A115" />
-      <Item id="5" agent="Jordan" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B35" />
-      <Item id="6" agent="Cristina" text="A good summary can help us remember the most important information from the reading. We will come back to this idea when we look at summarizing other text structures." speech="" play="A116" />
-      <Item id="7" agent="Jordan" text="Wow. sounds almost too fun to be true. We can go now right?" speech="" play="B36" />
-      <Item id="8" agent="Cristina" text="Yes, you can go. Be safe and see both of you next time." speech="" play="A117" />
+      <Item id="1" agent="ComputerStudent1" text="_user_ and ComputerTutor, thank you so much for helping me with this email. Now, i really have to go and check up on my aunt. Are we finished?" speech="" play="_user_,B33" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, You are very welcome for the help. I hope your aunt is OK. We are almost finished, but before you go, let's briefly wrap up what we learned today." speech="" play="A114" />
+      <Item id="3" agent="ComputerStudent1" text="We found out about the description text structure and how it can paint a mental picture for the reader." speech="" media="media\Lesson19-Closing.html" play="B34" />
+      <Item id="4" agent="ComputerTutor" text="That's right. We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. " speech="" play="A115" />
+      <Item id="5" agent="ComputerStudent1" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B35" />
+      <Item id="6" agent="ComputerTutor" text="A good summary can help us remember the most important information from the reading. We will come back to this idea when we look at summarizing other text structures." speech="" play="A116" />
+      <Item id="7" agent="ComputerStudent1" text="Wow. sounds almost too fun to be true. We can go now right?" speech="" play="B36" />
+      <Item id="8" agent="ComputerTutor" text="Yes, you can go. Be safe and see both of you next time." speech="" play="A117" />
     </RigidPack>
     <RigidPack name="TransitionE4" usedIn="TPE3">
-      <Item id="1" agent="Jordan" text="I hope people will now be able to identify Lola if they see her. " speech="" play="B37" />
-      <Item id="2" agent="Cristina" text="Perhaps, we should add one more feature. " speech="" play="A118" />
+      <Item id="1" agent="ComputerStudent1" text="I hope people will now be able to identify Lola if they see her. " speech="" play="B37" />
+      <Item id="2" agent="ComputerTutor" text="Perhaps, we should add one more feature. " speech="" play="A118" />
     </RigidPack>
     <RigidPack name="TransitionD5" usedIn="TPD4">
-      <Item id="1" agent="Jordan" text="Aunt Kerry suffered chest pain, nausea and dizziness" speech="" play="B38" />
+      <Item id="1" agent="ComputerStudent1" text="Aunt Kerry suffered chest pain, nausea and dizziness" speech="" play="B38" />
     </RigidPack>
     <RigidPack name="TransitionE5" usedIn="TPE4">
-      <Item id="1" agent="Jordan" text="Now, I think we have all the most important details about Lola." speech="" play="B39" />
-      <Item id="2" agent="Cristina" text="Hold on, we forgot the most important part." speech="" play="A119" />
+      <Item id="1" agent="ComputerStudent1" text="Now, I think we have all the most important details about Lola." speech="" play="B39" />
+      <Item id="2" agent="ComputerTutor" text="Hold on, we forgot the most important part." speech="" play="A119" />
     </RigidPack>
     <RigidPack name="TransitionD3" usedIn="TPD2">
-      <Item id="1" agent="Jordan" text="Oh my gosh. Aunt Kerry has one of the heart attack symptoms, chest pain." speech="" play="B40" />
-      <Item id="2" agent="Cristina" text="Jordan, take it easy. Let's keep reading." speech="" play="A120" />
+      <Item id="1" agent="ComputerStudent1" text="Oh my gosh. Aunt Kerry has one of the heart attack symptoms, chest pain." speech="" play="B40" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, take it easy. Let's keep reading." speech="" play="A120" />
     </RigidPack>
     <RigidPack name="TransitionM6" usedIn="TPM5">
-      <Item id="1" agent="Jordan" text="_user_ and Cristina, thanks! I will contact the owner and take a test drive." speech="" play="_user_,B41" />
-      <Item id="2" agent="Cristina" text="Sounds good." speech="" play="A121" />
+      <Item id="1" agent="ComputerStudent1" text="_user_ and ComputerTutor, thanks! I will contact the owner and take a test drive." speech="" play="_user_,B41" />
+      <Item id="2" agent="ComputerTutor" text="Sounds good." speech="" play="A121" />
     </RigidPack>
     <RigidPack name="TransitionE3" usedIn="TPE2">
-      <Item id="1" agent="Cristina" text="Let's see what other descriptions should be included." speech="" play="A122" />
+      <Item id="1" agent="ComputerTutor" text="Let's see what other descriptions should be included." speech="" play="A122" />
     </RigidPack>
     <RigidPack name="TransitionD4" usedIn="TPD3">
-      <Item id="1" agent="Cristina" text="Let's see the heart attack list." speech="" play="A123" />
+      <Item id="1" agent="ComputerTutor" text="Let's see the heart attack list." speech="" play="A123" />
     </RigidPack>
     <RigidPack name="ListenToEmail" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_  and Cristina, I just got an important email from my sister. It says my Aunt Kerry isn't feeling well. I'm pretty upset and I need your help to understand the email." speech="" play="_user_,B42" />
-      <Item id="2" agent="Cristina" text="Jordan, take a deep breath and try not to worry. Let's read the email and see what happened." speech="" play="A124" />
-      <Item id="3" agent="Jordan" text="Ok, yes. Good idea. Let's read the e-mail. " speech="Ok, yes. Good idea. Let's reed the e-mail." play="B43" />
-      <Item id="4" agent="Cristina" text="_user_,  you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" play="_user_,A125" />
+      <Item id="1" agent="ComputerStudent1" text="_user_  and ComputerTutor, I just got an important email from my sister. It says my Aunt Kerry isn't feeling well. I'm pretty upset and I need your help to understand the email." speech="" play="_user_,B42" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, take a deep breath and try not to worry. Let's read the email and see what happened." speech="" play="A124" />
+      <Item id="3" agent="ComputerStudent1" text="Ok, yes. Good idea. Let's read the e-mail. " speech="Ok, yes. Good idea. Let's reed the e-mail." play="B43" />
+      <Item id="4" agent="ComputerTutor" text="_user_,  you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" play="_user_,A125" />
     </RigidPack>
     <RigidPack name="Opening1" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_ and Jordan , hello. Welcome to today's lesson." speech="" media="media\Lesson19-IntroTitle.html" play="_user_,A126" />
-      <Item id="2" agent="Jordan" text="Hey everyone. I am glad you are both here, because I need some help understanding this car advertisement I found on Craigslist. " speech="" play="B44" />
-      <Item id="3" agent="Cristina" text="You want to buy a car?" speech="" play="A127" />
-      <Item id="4" agent="Jordan" text="Yes, the car looks nice, but the add is difficult for me to understand." speech="" play="B45" />
-      <Item id="5" agent="Cristina" text="Jordan, no worries. This is a good example of a descriptive text. We can help you find the most important details that you need to know." speech="" play="A128" />
-      <Item id="6" agent="Jordan" text="Should we read the ad first?" speech="" play="B46" />
-      <Item id="7" agent="Cristina" text="Yes, let's read the ad first. _user_,  you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" media="media\Lesson19-ReadingCar.html" play="A129,_user_,A130" />
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1 , hello. Welcome to today's lesson." speech="" media="media\Lesson19-IntroTitle.html" play="_user_,A126" />
+      <Item id="2" agent="ComputerStudent1" text="Hey everyone. I am glad you are both here, because I need some help understanding this car advertisement I found on Craigslist. " speech="" play="B44" />
+      <Item id="3" agent="ComputerTutor" text="You want to buy a car?" speech="" play="A127" />
+      <Item id="4" agent="ComputerStudent1" text="Yes, the car looks nice, but the add is difficult for me to understand." speech="" play="B45" />
+      <Item id="5" agent="ComputerTutor" text="ComputerStudent1, no worries. This is a good example of a descriptive text. We can help you find the most important details that you need to know." speech="" play="A128" />
+      <Item id="6" agent="ComputerStudent1" text="Should we read the ad first?" speech="" play="B46" />
+      <Item id="7" agent="ComputerTutor" text="Yes, let's read the ad first. _user_,  you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" media="media\Lesson19-ReadingCar.html" play="A129,_user_,A130" />
     </RigidPack>
     <RigidPack name="TransitionM5" usedIn="TPM4">
-      <Item id="1" agent="Jordan" text="This car seems pretty great with new tires and brakes! But I'm a little overwhelmed with all of the information." speech="" play="B47" />
-      <Item id="2" agent="Cristina" text="Yes, ads and other descriptive texts can sometimes seem overwhelming because of all the detail. Let's try to make a summary of the important parts." speech="" play="A131" />
+      <Item id="1" agent="ComputerStudent1" text="This car seems pretty great with new tires and brakes! But I'm a little overwhelmed with all of the information." speech="" play="B47" />
+      <Item id="2" agent="ComputerTutor" text="Yes, ads and other descriptive texts can sometimes seem overwhelming because of all the detail. Let's try to make a summary of the important parts." speech="" play="A131" />
     </RigidPack>
     <RigidPack name="TransitionE2" usedIn="TPE1">
-      <Item id="1" agent="Cristina" text="Jordan, a reward for finding Lola is a good idea." speech="" play="A132" />
-      <Item id="2" agent="Jordan" text="I'm worried ten dollars is not a big enough reward, but it's all i have right now. I hope it is enough to get people to look for Lola. " speech="" play="B48" />
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, a reward for finding Lola is a good idea." speech="" play="A132" />
+      <Item id="2" agent="ComputerStudent1" text="I'm worried ten dollars is not a big enough reward, but it's all i have right now. I hope it is enough to get people to look for Lola. " speech="" play="B48" />
     </RigidPack>
     <RigidPack name="ListenToCar" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_, you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" play="_user_,A133" />
+      <Item id="1" agent="ComputerTutor" text="_user_, you can either read to yourself or listen to the audio by pressing the green audio button at the bottom of the tablet. " speech="" play="_user_,A133" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="Now let's briefly wrap up what we learned today." speech="" play="A134" />
-      <Item id="2" agent="Jordan" text="We found out about the description text structure and how it can paint a mental picture for the reader. " speech="" media="media\Lesson19-Closing.html" play="B49" />
-      <Item id="3" agent="Cristina" text="That's right. We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. " speech="" play="A135" />
-      <Item id="4" agent="Jordan" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B50" />
-      <Item id="5" agent="Cristina" text="A good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures. See you both next time." speech="" play="A136" />
+      <Item id="1" agent="ComputerTutor" text="Now let's briefly wrap up what we learned today." speech="" play="A134" />
+      <Item id="2" agent="ComputerStudent1" text="We found out about the description text structure and how it can paint a mental picture for the reader. " speech="" media="media\Lesson19-Closing.html" play="B49" />
+      <Item id="3" agent="ComputerTutor" text="That's right. We have also learned that not all of the details in a text are important. It is our job to decide what the most important descriptions are and how they support the main idea, or the writer's purpose. " speech="" play="A135" />
+      <Item id="4" agent="ComputerStudent1" text="Oh yeah! That helps us create a good summary because we know we only need to remember the main idea and the most important descriptions for the writer's purpose. The text maps help with that!" speech="" play="B50" />
+      <Item id="5" agent="ComputerTutor" text="A good summary can help us remember the most important information from the reading. We will keep that in mind when we look at summarizing other text structures. See you both next time." speech="" play="A136" />
     </RigidPack>
     <RigidPack name="TransitionD1" usedIn="">
-      <Item id="1" agent="Jordan" text="Oh man. After reading this i'm even more worried. I think I should call Aunt Kerry's doctor. _user_, can I borrow your cell phone?" speech="" play="B51,_user_,B52" />
-      <Item id="2" agent="Cristina" text="Jordan, Calm down. Let's see what symptoms she has before calling her doctor." speech="" play="A137" />
+      <Item id="1" agent="ComputerStudent1" text="Oh man. After reading this i'm even more worried. I think I should call Aunt Kerry's doctor. _user_, can I borrow your cell phone?" speech="" play="B51,_user_,B52" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, Calm down. Let's see what symptoms she has before calling her doctor." speech="" play="A137" />
     </RigidPack>
     <RigidPack name="TransitionM4" usedIn="TPM3">
-      <Item id="1" agent="Jordan" text="I am glad that the AC and heat are in good condition." speech="" play="B53" />
-      <Item id="2" agent="Cristina" text="Definitely, especially since we are supposed to have a hot summer here. Let's continue." speech="" play="A138" />
+      <Item id="1" agent="ComputerStudent1" text="I am glad that the AC and heat are in good condition." speech="" play="B53" />
+      <Item id="2" agent="ComputerTutor" text="Definitely, especially since we are supposed to have a hot summer here. Let's continue." speech="" play="A138" />
     </RigidPack>
     <RigidPack name="TransitionE1" usedIn="">
-      <Item id="1" agent="Jordan" text="_user_  and Cristina, my grandma lost her beloved dog, Lola. I feel so bad for her!" speech="" play="_user_,B54" />
-      <Item id="2" agent="Cristina" text="Oh no, how can we help. Have you tried to write a poster to let people know the dog is lost?" speech="" play="A139" />
-      <Item id="3" agent="Jordan" text="Wow, that's a great idea. But, what should be in the poster?" speech="" play="B55" />
-      <Item id="4" agent="Cristina" text="_user_ and I will help you with the poster. The poster will be like a summary of a description of Lola. First, let's think of a title for this poster." speech="" play="_user_,A140" />
+      <Item id="1" agent="ComputerStudent1" text="_user_  and ComputerTutor, my grandma lost her beloved dog, Lola. I feel so bad for her!" speech="" play="_user_,B54" />
+      <Item id="2" agent="ComputerTutor" text="Oh no, how can we help. Have you tried to write a poster to let people know the dog is lost?" speech="" play="A139" />
+      <Item id="3" agent="ComputerStudent1" text="Wow, that's a great idea. But, what should be in the poster?" speech="" play="B55" />
+      <Item id="4" agent="ComputerTutor" text="_user_ and I will help you with the poster. The poster will be like a summary of a description of Lola. First, let's think of a title for this poster." speech="" play="_user_,A140" />
     </RigidPack>
     <RigidPack name="TransitionD2" usedIn="TPD1">
-      <Item id="1" agent="Jordan" text="So is Aunt Kerry having a heart attack?" speech="" play="B56" />
-      <Item id="2" agent="Cristina" text="We can try to figure this out together. Here is a list of the symptoms of a heart attack. " speech="" play="A141" />
+      <Item id="1" agent="ComputerStudent1" text="So is Aunt Kerry having a heart attack?" speech="" play="B56" />
+      <Item id="2" agent="ComputerTutor" text="We can try to figure this out together. Here is a list of the symptoms of a heart attack. " speech="" play="A141" />
     </RigidPack>
     <RigidPack name="TransitionM2" usedIn="TPM1">
-      <Item id="1" agent="Cristina" text="The ad is trying to persuade people to buy this 2001 Honda Accord." speech="" play="A142" />
-      <Item id="2" agent="Jordan" text="But we don't know whether this car is good or not." speech="" play="B57" />
-      <Item id="3" agent="Cristina" text="Let's see what information this ad provides." speech="" play="A143" />
+      <Item id="1" agent="ComputerTutor" text="The ad is trying to persuade people to buy this 2001 Honda Accord." speech="" play="A142" />
+      <Item id="2" agent="ComputerStudent1" text="But we don't know whether this car is good or not." speech="" play="B57" />
+      <Item id="3" agent="ComputerTutor" text="Let's see what information this ad provides." speech="" play="A143" />
     </RigidPack>
     <RigidPack name="TransitionM3" usedIn="TPM2">
-      <Item id="1" agent="Jordan" text="I like this car because it will save gas." speech="" play="B58" />
-      <Item id="2" agent="Cristina" text="Yes, You can save money that way. Let's see what other information is provided." speech="" play="A144" />
+      <Item id="1" agent="ComputerStudent1" text="I like this car because it will save gas." speech="" play="B58" />
+      <Item id="2" agent="ComputerTutor" text="Yes, You can save money that way. Let's see what other information is provided." speech="" play="A144" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPD1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which of the highlighted sentences describes a symptom that Aunt Kerry has? Choose a sentence please." speech="" media="" itemDif="0.1" play="_user_,A145">
+        <Question id="1" agent="ComputerTutor" text="_user_, which of the highlighted sentences describes a symptom that Aunt Kerry has? Choose a sentence please." speech="" media="" itemDif="0.1" play="_user_,A145">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The third sentence describes some symptoms such as abnormal pressure or squeezing pain in her chest." speech="" keys="lik" threshold=".9" test="" play="A146" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first two sentences don't describe any symptoms that Aunt Kerry has." speech="" keys="lik" threshold=".9" test="" play="B59" />
-            <Answer name="CristinaExplanation" agent="Cristina" type="TAExplain" text="A symptom is a sign of a disease." speech="" keys="lik" threshold=".9" test="" play="A147" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which of the highlighted sentences describes a symptom that Aunt Kerry has?" speech="" keys="lik" threshold=".9" test="" play="_user_,A148" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="The first sentence doesn't mention any sign of disease." speech="" keys="lik" threshold=".9" test="" play="A149" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="The second sentence only mentions that Kerry is having some discomfort but does not clearly mention any symptoms." speech="" keys="lik" threshold=".9" test="" play="A150" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="The third sentence describes some symptoms." speech="" keys="lik" threshold=".9" test="" play="B60" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="The second sentence says Kerry isn't feeling comfortable." speech="" keys="lik" threshold=".9" test="" play="B61" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I don't think the first sentence mentions any signs of disease." speech="" keys="lik" threshold=".9" test="" play="B62" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="The second sentence only mentions that Kerry is having some discomfort but does not clearly mention any symptoms." speech="" keys="lik" threshold=".9" test="" play="B63" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The third sentence describes some symptoms such as abnormal pressure or squeezing pain in her chest." speech="" keys="lik" threshold=".9" test="" play="A146" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first two sentences don't describe any symptoms that Aunt Kerry has." speech="" keys="lik" threshold=".9" test="" play="B59" />
+            <Answer name="CristinaExplanation" agent="ComputerTutor" type="TAExplain" text="A symptom is a sign of a disease." speech="" keys="lik" threshold=".9" test="" play="A147" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which of the highlighted sentences describes a symptom that Aunt Kerry has?" speech="" keys="lik" threshold=".9" test="" play="_user_,A148" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="The first sentence doesn't mention any sign of disease." speech="" keys="lik" threshold=".9" test="" play="A149" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="The second sentence only mentions that Kerry is having some discomfort but does not clearly mention any symptoms." speech="" keys="lik" threshold=".9" test="" play="A150" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The third sentence describes some symptoms." speech="" keys="lik" threshold=".9" test="" play="B60" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="The second sentence says Kerry isn't feeling comfortable." speech="" keys="lik" threshold=".9" test="" play="B61" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I don't think the first sentence mentions any signs of disease." speech="" keys="lik" threshold=".9" test="" play="B62" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="The second sentence only mentions that Kerry is having some discomfort but does not clearly mention any symptoms." speech="" keys="lik" threshold=".9" test="" play="B63" />
           </Answers>
         </Question>
       </Questions>
@@ -330,22 +330,22 @@
     </TutoringPack>
     <TutoringPack name="TPD2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which symptom described in the highlighted sentence is also on the list of heart attack symptoms? Please choose your answer." speech="" media="" play="_user_,A151">
+        <Question id="1" agent="ComputerTutor" text="_user_, which symptom described in the highlighted sentence is also on the list of heart attack symptoms? Please choose your answer." speech="" media="" play="_user_,A151">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="This sentence describes the symptom chest pain. Abnormal pressure isn't on the list." speech="" keys="lik" threshold=".9" play="A152" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The other symptoms were not mentioned in the highlighted sentence." speech="" keys="lik" threshold=".9" play="B64" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The symptom on the list could be a more specific term for the symptom described in the highlighted sentence." speech="" keys="lik" threshold=".9" play="A153" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which symptom described in the highlighted sentence is on the list of heart attack symptoms?" speech="" keys="lik" threshold=".8" play="_user_,A154" />
-            <Answer name="TAHintD" agent="Cristina" type="TAHintD" text="Abnormal pressure could mean that Aunt Kerry is feeling tightness in her chest or like a weight is on her. It doesn't mean stress." speech="" keys="lik" threshold=".9" play="A155" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="An upset stomach means belly ache. This symptom isn't mentioned in the highlighted sentence." speech="" keys="lik" threshold=".9" play="A156" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="Fatigue means exhaustion. That is not the symptom that Jordan's Aunt Kerry is describing here." speech="" keys="lik" threshold=".9" play="A157" />
-            <Answer name="TAHintE" agent="Cristina" type="TAHintE" text="Aunt Kerry is describing pain in her chest. This is different from nausea which means feeling like you may vomit." speech="" keys="lik" threshold=".9" play="A158" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="Chest pain is the symptom described in the sentence." speech="" keys="lik" threshold=".9" play="B65" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I choose stress." speech="" keys="lik" threshold=".9" play="B66" />
-            <Answer name="JordanHintD" agent="Jordan" type="SAHintD" text="Abnormal pressure could mean that Aunt Kerry feels like a weight is on her. I don't think it means stress." speech="" keys="lik" threshold=".9" play="B67" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="I think upset stomach means something like a belly ache. I do nott see this symptom in the highlighted sentence." speech="" keys="lik" threshold=".9" play="B68" />
-            <Answer name="JordanHintB" agent="Jordan" type="TAHintB" text="I am pretty sure that fatigue means really tired. I do not think this is what Aunt Kerry is trying to describe." speech="" keys="lik" threshold=".9" play="B69" />
-            <Answer name="JordanHintE" agent="Jordan" type="TAHintE" text="I feel like nausea has more to do with throwing up, so I don't think it is the same as tightness in your chest." speech="" keys="lik" threshold=".9" play="B70" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="This sentence describes the symptom chest pain. Abnormal pressure isn't on the list." speech="" keys="lik" threshold=".9" play="A152" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The other symptoms were not mentioned in the highlighted sentence." speech="" keys="lik" threshold=".9" play="B64" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The symptom on the list could be a more specific term for the symptom described in the highlighted sentence." speech="" keys="lik" threshold=".9" play="A153" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which symptom described in the highlighted sentence is on the list of heart attack symptoms?" speech="" keys="lik" threshold=".8" play="_user_,A154" />
+            <Answer name="TAHintD" agent="ComputerTutor" type="TAHintD" text="Abnormal pressure could mean that Aunt Kerry is feeling tightness in her chest or like a weight is on her. It doesn't mean stress." speech="" keys="lik" threshold=".9" play="A155" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="An upset stomach means belly ache. This symptom isn't mentioned in the highlighted sentence." speech="" keys="lik" threshold=".9" play="A156" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Fatigue means exhaustion. That is not the symptom that ComputerStudent1's Aunt Kerry is describing here." speech="" keys="lik" threshold=".9" play="A157" />
+            <Answer name="TAHintE" agent="ComputerTutor" type="TAHintE" text="Aunt Kerry is describing pain in her chest. This is different from nausea which means feeling like you may vomit." speech="" keys="lik" threshold=".9" play="A158" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Chest pain is the symptom described in the sentence." speech="" keys="lik" threshold=".9" play="B65" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I choose stress." speech="" keys="lik" threshold=".9" play="B66" />
+            <Answer name="JordanHintD" agent="ComputerStudent1" type="SAHintD" text="Abnormal pressure could mean that Aunt Kerry feels like a weight is on her. I don't think it means stress." speech="" keys="lik" threshold=".9" play="B67" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I think upset stomach means something like a belly ache. I do nott see this symptom in the highlighted sentence." speech="" keys="lik" threshold=".9" play="B68" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="TAHintB" text="I am pretty sure that fatigue means really tired. I do not think this is what Aunt Kerry is trying to describe." speech="" keys="lik" threshold=".9" play="B69" />
+            <Answer name="JordanHintE" agent="ComputerStudent1" type="TAHintE" text="I feel like nausea has more to do with throwing up, so I don't think it is the same as tightness in your chest." speech="" keys="lik" threshold=".9" play="B70" />
           </Answers>
         </Question>
       </Questions>
@@ -354,18 +354,18 @@
     </TutoringPack>
     <TutoringPack name="TPD3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which sentence has a description of a symptom that Aunt Kerry is experiencing? Please select that sentence." speech="" media="" play="_user_,A159">
+        <Question id="1" agent="ComputerTutor" text="_user_, which sentence has a description of a symptom that Aunt Kerry is experiencing? Please select that sentence." speech="" media="" play="_user_,A159">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The last sentence describes Aunt Kerry as feeling nauseous and lightheaded. " speech="" keys="lik" threshold=".9" play="A160" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first two sentences don't include any symptoms of disease." speech="" keys="lik" threshold=".9" play="B71" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The first two sentences do not give us descriptions that will help us figure out what is wrong. " speech="" keys="lik" threshold=".9" play="A161" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which sentence has a description of a symptom that Aunt Kerry is experiencing? " speech="" keys="am" threshold=".9" play="_user_,A162" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="The first sentence doesn't mention any symptoms." speech="" keys="lik" threshold=".9" play="A163" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="The second sentence only mentions that Aunt Kerry doesn't want to eat anything. It does not clearly mention a symptom." speech="" keys="lik" threshold=".9" play="A164" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think the last sentence describes some symptoms." speech="" keys="lik" threshold=".9" play="B72" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I choose the second sentence. It says that Aunt Kerry can't eat anything." speech="" keys="lik" threshold=".9" play="B73" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I feel like the first sentence isn't really describing a symptom." speech="" keys="lik" threshold=".9" play="B74" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="The second sentence just says Aunt Kerry can't eat anything. That could be for a lot of reasons. " speech="" keys="lik" threshold=".9" play="B75" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The last sentence describes Aunt Kerry as feeling nauseous and lightheaded. " speech="" keys="lik" threshold=".9" play="A160" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first two sentences don't include any symptoms of disease." speech="" keys="lik" threshold=".9" play="B71" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The first two sentences do not give us descriptions that will help us figure out what is wrong. " speech="" keys="lik" threshold=".9" play="A161" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which sentence has a description of a symptom that Aunt Kerry is experiencing? " speech="" keys="am" threshold=".9" play="_user_,A162" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="The first sentence doesn't mention any symptoms." speech="" keys="lik" threshold=".9" play="A163" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="The second sentence only mentions that Aunt Kerry doesn't want to eat anything. It does not clearly mention a symptom." speech="" keys="lik" threshold=".9" play="A164" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think the last sentence describes some symptoms." speech="" keys="lik" threshold=".9" play="B72" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I choose the second sentence. It says that Aunt Kerry can't eat anything." speech="" keys="lik" threshold=".9" play="B73" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I feel like the first sentence isn't really describing a symptom." speech="" keys="lik" threshold=".9" play="B74" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="The second sentence just says Aunt Kerry can't eat anything. That could be for a lot of reasons. " speech="" keys="lik" threshold=".9" play="B75" />
           </Answers>
         </Question>
       </Questions>
@@ -374,22 +374,22 @@
     </TutoringPack>
     <TutoringPack name="TPD4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which symptom in the highlighted sentence is on the list of symptoms for heart attack? Please choose an answer." speech="" media="" play="_user_,A165">
+        <Question id="1" agent="ComputerTutor" text="_user_, which symptom in the highlighted sentence is on the list of symptoms for heart attack? Please choose an answer." speech="" media="" play="_user_,A165">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="Yes. It is most likely that Aunt Kerry is experiencing nausea. " speech="" keys="lik" threshold=".9" play="A166" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="So we just have to figure out which one of the symptoms would feel like a combination of both of those things." speech="" keys="lik" threshold=".9" play="B76" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="Nausea means feeling like you might vomit. Lightheaded means dizzy." speech="" keys="lik" threshold=".9" play="A167" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which symptom in the highlighted sentence is on the list for heart attack?" speech="" keys="lik" threshold=".9" play="_user_,A168" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="Nauseous means feeling like you are going to vomit. " speech="" keys="lik" threshold=".9" play="A169" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="Lightheaded means that you feel like the room is spinning." speech="" keys="lik" threshold=".9" play="A170" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="Nauseous means feeling like you are going to vomit. " speech="" keys="lik" threshold=".9" play="A171" />
-            <Answer name="TAHintD" agent="Cristina" type="TAHintD" text="Lightheaded means that you feel like the room is spinning." speech="" keys="lik" threshold=".9" play="A172" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think it sounds like she has nausea." speech="" keys="lik" threshold=".9" play="B77" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="This does not sound good. I am not quite sure what it means though." speech="" keys="lik" threshold=".9" play="B78" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="_user_, I think nauseous means feeling like you might vomit, but you do not actually throw up." speech="" keys="lik" threshold=".9" play="_user_,B79" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="_user_, I think lightheaded means that you feel dizzy. " speech="" keys="lik" threshold=".9" play="_user_,B80" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="_user_, I think nauseous means feeling like you might vomit, but you do not actually throw up." speech="" keys="lik" threshold=".9" play="_user_,B81" />
-            <Answer name="JordanHintD" agent="Jordan" type="SAHintD" text="_user_, I think lightheaded means that you feel dizzy. " speech="" keys="lik" threshold=".9" play="_user_,B82" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Yes. It is most likely that Aunt Kerry is experiencing nausea. " speech="" keys="lik" threshold=".9" play="A166" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="So we just have to figure out which one of the symptoms would feel like a combination of both of those things." speech="" keys="lik" threshold=".9" play="B76" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Nausea means feeling like you might vomit. Lightheaded means dizzy." speech="" keys="lik" threshold=".9" play="A167" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which symptom in the highlighted sentence is on the list for heart attack?" speech="" keys="lik" threshold=".9" play="_user_,A168" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Nauseous means feeling like you are going to vomit. " speech="" keys="lik" threshold=".9" play="A169" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Lightheaded means that you feel like the room is spinning." speech="" keys="lik" threshold=".9" play="A170" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Nauseous means feeling like you are going to vomit. " speech="" keys="lik" threshold=".9" play="A171" />
+            <Answer name="TAHintD" agent="ComputerTutor" type="TAHintD" text="Lightheaded means that you feel like the room is spinning." speech="" keys="lik" threshold=".9" play="A172" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think it sounds like she has nausea." speech="" keys="lik" threshold=".9" play="B77" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="This does not sound good. I am not quite sure what it means though." speech="" keys="lik" threshold=".9" play="B78" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_, I think nauseous means feeling like you might vomit, but you do not actually throw up." speech="" keys="lik" threshold=".9" play="_user_,B79" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="_user_, I think lightheaded means that you feel dizzy. " speech="" keys="lik" threshold=".9" play="_user_,B80" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="_user_, I think nauseous means feeling like you might vomit, but you do not actually throw up." speech="" keys="lik" threshold=".9" play="_user_,B81" />
+            <Answer name="JordanHintD" agent="ComputerStudent1" type="SAHintD" text="_user_, I think lightheaded means that you feel dizzy. " speech="" keys="lik" threshold=".9" play="_user_,B82" />
           </Answers>
         </Question>
       </Questions>
@@ -398,22 +398,22 @@
     </TutoringPack>
     <TutoringPack name="TPD5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which symptom in the highlighted sentences is on the list of heart attack symptoms? Please select the symptom." speech="" media="" play="_user_,A173">
+        <Question id="1" agent="ComputerTutor" text="_user_, which symptom in the highlighted sentences is on the list of heart attack symptoms? Please select the symptom." speech="" media="" play="_user_,A173">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="Fatigue means extremely tired. So the correct symptom of heart attack would be fatigue." speech="" keys="lik" threshold=".9" play="A174" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="I think it is similar to the way people feel extremely tired after a long run. " speech="" keys="lik" threshold=".9" play="B83" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="Aunt Kerry's lack of sleep is directly stated in the sentences. We can also see she's exhausted since she describes feeling like she ran a marathon." speech="" keys="lik" threshold=".9" play="A175" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which symptom in the highlighted sentences is on the list?" speech="" keys="lik" threshold=".9" play="_user_,A176" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="When Aunt Kerry says she feels like she has run a marathon, it does not mean she has chest pain. " speech="" keys="lik" threshold=".9" play="A177" />
-            <Answer name="TAHintD" agent="Cristina" type="TAHintD" text="The fact that she did not get any rest this morning is probably not related to stress." speech="" keys="lik" threshold=".9" play="A178" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as having an upset stomach." speech="" keys="lik" threshold=".9" play="A179" />
-            <Answer name="TAHintE" agent="Cristina" type="TAHintE" text="Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as experiencing nausea." speech="" keys="lik" threshold=".9" play="A180" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think that what Cheryl is describing in the e-mail is fatigue." speech="" keys="lik" threshold=".9" play="B84" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="This is hard. I'm not sure. Maybe upset stomach?" speech="" keys="lik" threshold=".9" play="B85" />
-            <Answer name="JordanHintD" agent="Jordan" type="SAHintD" text="I think that if you are stressed, you do not feel like you have run a marathon." speech="" keys="lik" threshold=".9" play="B86" />
-            <Answer name="JordanHintE" agent="Jordan" type="SAHintE" text="I didn't think it was nausea, since previous sentences described that symptom." speech="" keys="lik" threshold=".9" play="B87" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="It sounds like Aunt Kerry is not able to sleep. I don't think this is the same as having an upset stomach. " speech="" keys="lik" threshold=".9" play="B88" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I didn't think it was chest pain, since previous sentences described that symptom." speech="" keys="lik" threshold=".9" play="B89" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Fatigue means extremely tired. So the correct symptom of heart attack would be fatigue." speech="" keys="lik" threshold=".9" play="A174" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I think it is similar to the way people feel extremely tired after a long run. " speech="" keys="lik" threshold=".9" play="B83" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Aunt Kerry's lack of sleep is directly stated in the sentences. We can also see she's exhausted since she describes feeling like she ran a marathon." speech="" keys="lik" threshold=".9" play="A175" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which symptom in the highlighted sentences is on the list?" speech="" keys="lik" threshold=".9" play="_user_,A176" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="When Aunt Kerry says she feels like she has run a marathon, it does not mean she has chest pain. " speech="" keys="lik" threshold=".9" play="A177" />
+            <Answer name="TAHintD" agent="ComputerTutor" type="TAHintD" text="The fact that she did not get any rest this morning is probably not related to stress." speech="" keys="lik" threshold=".9" play="A178" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as having an upset stomach." speech="" keys="lik" threshold=".9" play="A179" />
+            <Answer name="TAHintE" agent="ComputerTutor" type="TAHintE" text="Aunt Kerry describes herself as feeling like she has run a marathon. It sounds like she is really tired which is not the same as experiencing nausea." speech="" keys="lik" threshold=".9" play="A180" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think that what Cheryl is describing in the e-mail is fatigue." speech="" keys="lik" threshold=".9" play="B84" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="This is hard. I'm not sure. Maybe upset stomach?" speech="" keys="lik" threshold=".9" play="B85" />
+            <Answer name="JordanHintD" agent="ComputerStudent1" type="SAHintD" text="I think that if you are stressed, you do not feel like you have run a marathon." speech="" keys="lik" threshold=".9" play="B86" />
+            <Answer name="JordanHintE" agent="ComputerStudent1" type="SAHintE" text="I didn't think it was nausea, since previous sentences described that symptom." speech="" keys="lik" threshold=".9" play="B87" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="It sounds like Aunt Kerry is not able to sleep. I don't think this is the same as having an upset stomach. " speech="" keys="lik" threshold=".9" play="B88" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I didn't think it was chest pain, since previous sentences described that symptom." speech="" keys="lik" threshold=".9" play="B89" />
           </Answers>
         </Question>
       </Questions>
@@ -422,18 +422,18 @@
     </TutoringPack>
     <TutoringPack name="TPD6">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, why is this NOT a good summary? Please select the best answer." speech="" media="" play="_user_,A181">
+        <Question id="1" agent="ComputerTutor" text="_user_, why is this NOT a good summary? Please select the best answer." speech="" media="" play="_user_,A181">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="While this summary tells us some important details from the email, such as Aunt Kerry being tired, the summary is not good because it includes too much extra, unimportant information. The fact that Aunt Kerry usually eats a soup and sandwich for lunch does not help us understand what is wrong with her." speech="" keys="lik" threshold=".9" play="A182" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="Ok, i understand. So a good summary should include all the important descriptions from the e-mail, but not extra information." speech="" keys="lik" threshold=".9" play="B90" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="In order to make this a good summary you need to include some of the specific terms that we researched that match Aunt Kerry's descriptions." speech="" keys="lik" threshold=".9" play="A183" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, why do you think this summary is not a good one?" speech="" keys="lik" threshold=".9" play="_user_,A184" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="This summary does not include any symptoms from the list of heart attack symptoms. " speech="" keys="lik" threshold=".9" play="A185" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="This summary does not appear to have any of Aunt Kerry's specific symptoms." speech="" keys="lik" threshold=".9" play="A186" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think that the summary has details that are not important. I choose the second answer." speech="" keys="lik" threshold=".9" play="B91" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="Cristina, I have no idea what the answer is. " speech="" keys="lik" threshold=".9" play="B92" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I don't think this summary includes any symptoms from the list of heart attack symptoms. " speech="" keys="lik" threshold=".9" play="B93" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="It seems to me that this summary does not have any of Aunt Kerry's specific symptoms." speech="" keys="lik" threshold=".9" play="B94" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="While this summary tells us some important details from the email, such as Aunt Kerry being tired, the summary is not good because it includes too much extra, unimportant information. The fact that Aunt Kerry usually eats a soup and sandwich for lunch does not help us understand what is wrong with her." speech="" keys="lik" threshold=".9" play="A182" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Ok, i understand. So a good summary should include all the important descriptions from the e-mail, but not extra information." speech="" keys="lik" threshold=".9" play="B90" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="In order to make this a good summary you need to include some of the specific terms that we researched that match Aunt Kerry's descriptions." speech="" keys="lik" threshold=".9" play="A183" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why do you think this summary is not a good one?" speech="" keys="lik" threshold=".9" play="_user_,A184" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="This summary does not include any symptoms from the list of heart attack symptoms. " speech="" keys="lik" threshold=".9" play="A185" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="This summary does not appear to have any of Aunt Kerry's specific symptoms." speech="" keys="lik" threshold=".9" play="A186" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think that the summary has details that are not important. I choose the second answer." speech="" keys="lik" threshold=".9" play="B91" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="ComputerTutor, I have no idea what the answer is. " speech="" keys="lik" threshold=".9" play="B92" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I don't think this summary includes any symptoms from the list of heart attack symptoms. " speech="" keys="lik" threshold=".9" play="B93" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="It seems to me that this summary does not have any of Aunt Kerry's specific symptoms." speech="" keys="lik" threshold=".9" play="B94" />
           </Answers>
         </Question>
       </Questions>
@@ -442,18 +442,18 @@
     </TutoringPack>
     <TutoringPack name="TPE1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the best title for this poster? Please choose an answer." speech="" media="" play="_user_,A187">
+        <Question id="1" agent="ComputerTutor" text="_user_, what is the best title for this poster? Please choose an answer." speech="" media="" play="_user_,A187">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="Lost Dog $10 Reward is the best title for our poster. " speech="" keys="lik" threshold=".9" play="A188" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first one has Lola's name, but doesn't tell us what she is." speech="" keys="lik" threshold=".9" play="B95" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The second one tells us it is a missing dog but doesn't have anything about the reward." speech="" keys="lik" threshold=".9" play="A189" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, what do you think is the best title?" speech="" keys="lik" threshold=".9" play="_user_,A190" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="People may not know what Lola is, so that part of the description is important." speech="" keys="lik" threshold=".9" play="A191" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="The second one does not give you a reason to look for the dog." speech="" keys="lik" threshold=".9" play="A192" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think the best title might be Lost Dog ten dollar reward." speech="" keys="lik" threshold=".9" play="B96" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I'm not sure. Maybe the second one?" speech="" keys="lik" threshold=".9" play="B97" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="People who don't know Lola won't know what she is. " speech="" keys="lik" threshold=".9" play="B98" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="The second one doesn't give you much information." speech="" keys="lik" threshold=".9" play="B99" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Lost Dog $10 Reward is the best title for our poster. " speech="" keys="lik" threshold=".9" play="A188" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first one has Lola's name, but doesn't tell us what she is." speech="" keys="lik" threshold=".9" play="B95" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The second one tells us it is a missing dog but doesn't have anything about the reward." speech="" keys="lik" threshold=".9" play="A189" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, what do you think is the best title?" speech="" keys="lik" threshold=".9" play="_user_,A190" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="People may not know what Lola is, so that part of the description is important." speech="" keys="lik" threshold=".9" play="A191" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="The second one does not give you a reason to look for the dog." speech="" keys="lik" threshold=".9" play="A192" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think the best title might be Lost Dog ten dollar reward." speech="" keys="lik" threshold=".9" play="B96" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I'm not sure. Maybe the second one?" speech="" keys="lik" threshold=".9" play="B97" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="People who don't know Lola won't know what she is. " speech="" keys="lik" threshold=".9" play="B98" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="The second one doesn't give you much information." speech="" keys="lik" threshold=".9" play="B99" />
           </Answers>
         </Question>
       </Questions>
@@ -462,18 +462,18 @@
     </TutoringPack>
     <TutoringPack name="TPE2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what information below should be included in the poster? Please click on your answer." speech="" media="" play="_user_,A193">
+        <Question id="1" agent="ComputerTutor" text="_user_, what information below should be included in the poster? Please click on your answer." speech="" media="" play="_user_,A193">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="It is most important to describe what kind of dog Lola is and how old she is. " speech="" keys="lik" threshold=".9" play="A194" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="Knowing that Lola enjoys chasing ducks doesn't really help us find her." speech="" keys="lik" threshold=".9" play="B100" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="We need to include only the descriptions that are most likely to help people find Lola." speech="" keys="lik" threshold=".9" play="A195" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which one of these details should be included in the poster?" speech="" keys="lik" threshold=".9" play="_user_,A196" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="It is cute that she loves walks but it does not help us find her. " speech="" keys="lik" threshold=".9" play="A197" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="It is fun to watch Lola chase ducks, but it is not a description that will help others find her." speech="" keys="lik" threshold=".9" play="A198" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="Maybe the first description of Lola?" speech="" keys="lik" threshold=".9" play="B101" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="It is true that she loves walks. I think we should include that one." speech="" keys="lik" threshold=".9" play="B102" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="I guess the fact that she loves walks will not really help us find her. " speech="" keys="lik" threshold=".9" play="B103" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="I love watching her chase ducks, but I don't think it will help us find her. " speech="" keys="lik" threshold=".9" play="B104" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="It is most important to describe what kind of dog Lola is and how old she is. " speech="" keys="lik" threshold=".9" play="A194" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Knowing that Lola enjoys chasing ducks doesn't really help us find her." speech="" keys="lik" threshold=".9" play="B100" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="We need to include only the descriptions that are most likely to help people find Lola." speech="" keys="lik" threshold=".9" play="A195" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which one of these details should be included in the poster?" speech="" keys="lik" threshold=".9" play="_user_,A196" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="It is cute that she loves walks but it does not help us find her. " speech="" keys="lik" threshold=".9" play="A197" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="It is fun to watch Lola chase ducks, but it is not a description that will help others find her." speech="" keys="lik" threshold=".9" play="A198" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Maybe the first description of Lola?" speech="" keys="lik" threshold=".9" play="B101" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="It is true that she loves walks. I think we should include that one." speech="" keys="lik" threshold=".9" play="B102" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I guess the fact that she loves walks will not really help us find her. " speech="" keys="lik" threshold=".9" play="B103" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="I love watching her chase ducks, but I don't think it will help us find her. " speech="" keys="lik" threshold=".9" play="B104" />
           </Answers>
         </Question>
       </Questions>
@@ -482,18 +482,18 @@
     </TutoringPack>
     <TutoringPack name="TPE3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which description can help people identify Lola?" speech="" media="" play="_user_,A199">
+        <Question id="1" agent="ComputerTutor" text="_user_, which description can help people identify Lola?" speech="" media="" play="_user_,A199">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The best description is the last one. It tells us Lola's weight and appearance. These unique features will help people identify Lola easily." speech="" keys="lik" threshold=".9" play="A200" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first two descriptions are normal for most dogs. They are not unique to Lola." speech="" keys="lik" threshold=".9" play="B105" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="We should include the description that is unique to Lola." speech="" keys="lik" threshold=".9" play="A201" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which description is unique to Lola? Choose an answer by clicking on the buttons. " speech="" keys="lik" threshold=".9" play="_user_,A202" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="The first answer is not helpful because it is true of most dogs." speech="" keys="lik" threshold=".9" play="A203" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="The second answer is not a good description because it is true of most dogs not just Lola." speech="" keys="lik" threshold=".9" play="A204" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I'm pretty sure the last one is the best description of Lola." speech="" keys="lik" threshold=".9" play="B106" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="She loves belly rubs. I think that is a good description of Lola." speech="" keys="lik" threshold=".9" play="B107" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I don't think it is the first one because that is true of most dogs." speech="" keys="lik" threshold=".9" play="B108" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="The second answer is probably not the most unique description of Lola." speech="" keys="lik" threshold=".9" play="B109" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The best description is the last one. It tells us Lola's weight and appearance. These unique features will help people identify Lola easily." speech="" keys="lik" threshold=".9" play="A200" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first two descriptions are normal for most dogs. They are not unique to Lola." speech="" keys="lik" threshold=".9" play="B105" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="We should include the description that is unique to Lola." speech="" keys="lik" threshold=".9" play="A201" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which description is unique to Lola? Choose an answer by clicking on the buttons. " speech="" keys="lik" threshold=".9" play="_user_,A202" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="The first answer is not helpful because it is true of most dogs." speech="" keys="lik" threshold=".9" play="A203" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="The second answer is not a good description because it is true of most dogs not just Lola." speech="" keys="lik" threshold=".9" play="A204" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I'm pretty sure the last one is the best description of Lola." speech="" keys="lik" threshold=".9" play="B106" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="She loves belly rubs. I think that is a good description of Lola." speech="" keys="lik" threshold=".9" play="B107" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I don't think it is the first one because that is true of most dogs." speech="" keys="lik" threshold=".9" play="B108" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="The second answer is probably not the most unique description of Lola." speech="" keys="lik" threshold=".9" play="B109" />
           </Answers>
         </Question>
       </Questions>
@@ -502,18 +502,18 @@
     </TutoringPack>
     <TutoringPack name="TPE4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which of the following is the most unique description for Lola? Click on your answer." speech="" media="" play="_user_,A205">
+        <Question id="1" agent="ComputerTutor" text="_user_, which of the following is the most unique description for Lola? Click on your answer." speech="" media="" play="_user_,A205">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The descriptions of where she was last seen are not helpful because they are probably no longer true. The second option is the most helpful." speech="" keys="lik" threshold=".9" play="A206" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first and last descriptions tell us where Lola was last seen. " speech="" keys="lik" threshold=".9" play="B110" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="We should not include descriptions that could not be true anymore. " speech="" keys="lik" threshold=".9" play="A207" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, which of the descriptions will help us find Lola?" speech="" keys="lik" threshold=".9" play="_user_,A208" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="Playing with another dog is a temporary action. This action  will probably not continue until people find Lola." speech="" keys="lik" threshold=".9" play="A209" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="Getting into a grocery store is a temporary action. By the time people see the poster it will probably not be true." speech="" keys="lik" threshold=".9" play="A210" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="The description on her collar and tag seems to be the most helpful. I choose the second one. " speech="" keys="lik" threshold=".9" play="B111" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I think it might be the first one. She loves other dogs. " speech="" keys="lik" threshold=".9" play="B112" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="Most likely, she is not still playing with the terrier. I don't think this description is helpful. " speech="" keys="lik" threshold=".9" play="B113" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="Most likely, she is not still trying to get into the grocery store. I don't think this description is helpful. " speech="" keys="lik" threshold=".9" play="B114" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The descriptions of where she was last seen are not helpful because they are probably no longer true. The second option is the most helpful." speech="" keys="lik" threshold=".9" play="A206" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first and last descriptions tell us where Lola was last seen. " speech="" keys="lik" threshold=".9" play="B110" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="We should not include descriptions that could not be true anymore. " speech="" keys="lik" threshold=".9" play="A207" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which of the descriptions will help us find Lola?" speech="" keys="lik" threshold=".9" play="_user_,A208" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Playing with another dog is a temporary action. This action  will probably not continue until people find Lola." speech="" keys="lik" threshold=".9" play="A209" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Getting into a grocery store is a temporary action. By the time people see the poster it will probably not be true." speech="" keys="lik" threshold=".9" play="A210" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The description on her collar and tag seems to be the most helpful. I choose the second one. " speech="" keys="lik" threshold=".9" play="B111" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think it might be the first one. She loves other dogs. " speech="" keys="lik" threshold=".9" play="B112" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="Most likely, she is not still playing with the terrier. I don't think this description is helpful. " speech="" keys="lik" threshold=".9" play="B113" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="Most likely, she is not still trying to get into the grocery store. I don't think this description is helpful. " speech="" keys="lik" threshold=".9" play="B114" />
           </Answers>
         </Question>
       </Questions>
@@ -522,18 +522,18 @@
     </TutoringPack>
     <TutoringPack name="TPE5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which important piece of information is missing from the poster? Click on your answer please." speech="" media="" play="_user_,A211">
+        <Question id="1" agent="ComputerTutor" text="_user_, which important piece of information is missing from the poster? Click on your answer please." speech="" media="" play="_user_,A211">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="That's right, Jordan. The important details are complete when we add the contact information for Lola's owners." speech="" keys="lik" threshold=".9" play="A212" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The poster already has Lola's picture and it is probably not helpful to know her favorite food." speech="" keys="lik" threshold=".9" play="B115" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="If someone finds Lola it is important that they know who to contact to return her. This is a very important part of the poster. " speech="" keys="lik" threshold=".9" play="A213" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, what important piece of information is not on the poster?" speech="" keys="lik" threshold=".9" play="_user_,A214" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="Knowing her favorite food will not help people find Lola." speech="" keys="lik" threshold=".9" play="A215" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="Lola's picture is already on the poster." speech="" keys="lik" threshold=".9" play="A216" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="The contact information is missing from the poster!" speech="" keys="lik" threshold=".9" play="B116" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="Maybe if people know her favorite food they can get her to come with them. " speech="" keys="lik" threshold=".9" play="B117" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="I guess it wouldn't help to know her favorite food. " speech="" keys="lik" threshold=".9" play="B118" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="I think we already have her picture on the poster." speech="" keys="lik" threshold=".9" play="B119" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="That's right, ComputerStudent1. The important details are complete when we add the contact information for Lola's owners." speech="" keys="lik" threshold=".9" play="A212" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The poster already has Lola's picture and it is probably not helpful to know her favorite food." speech="" keys="lik" threshold=".9" play="B115" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="If someone finds Lola it is important that they know who to contact to return her. This is a very important part of the poster. " speech="" keys="lik" threshold=".9" play="A213" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, what important piece of information is not on the poster?" speech="" keys="lik" threshold=".9" play="_user_,A214" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Knowing her favorite food will not help people find Lola." speech="" keys="lik" threshold=".9" play="A215" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Lola's picture is already on the poster." speech="" keys="lik" threshold=".9" play="A216" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The contact information is missing from the poster!" speech="" keys="lik" threshold=".9" play="B116" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe if people know her favorite food they can get her to come with them. " speech="" keys="lik" threshold=".9" play="B117" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I guess it wouldn't help to know her favorite food. " speech="" keys="lik" threshold=".9" play="B118" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="I think we already have her picture on the poster." speech="" keys="lik" threshold=".9" play="B119" />
           </Answers>
         </Question>
       </Questions>
@@ -542,18 +542,18 @@
     </TutoringPack>
     <TutoringPack name="TPE6">
       <Questions>
-        <Question id="1" agent="Jordan" text="_user_, can you tell me why this is a good summary? Please click on an answer." speech="" media="" play="_user_,B120">
+        <Question id="1" agent="ComputerStudent1" text="_user_, can you tell me why this is a good summary? Please click on an answer." speech="" media="" play="_user_,B120">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="This poster is a good summary because it includes all of the most important descriptions of Lola to help us find her." speech="" keys="lik" threshold=".9" play="A217" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="In the poster, we left out the information that wasn't helpful like how much Lola loves walks." speech="" keys="lik" threshold=".9" play="B121" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="A good summary should include only the most important information to support the writer's purpose." speech="" keys="lik" threshold=".9" play="A218" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, why is this summary good?" speech="" keys="lik" threshold=".9" play="_user_,A219" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="Based on the poster on the right, this summary doesn't include Lola's hobbies." speech="" keys="lik" threshold=".9" play="A220" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="Based on the poster on the right, this summary doesn't include any information about when Lola was last seen." speech="" keys="lik" threshold=".9" play="A221" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think it is the second one because we only included the most important details in the poster." speech="" keys="lik" threshold=".9" play="B122" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I am not sure what would make a good summary." speech="" keys="lik" threshold=".9" play="B123" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="I don't see any of Lola's favorite activities on the poster." speech="" keys="lik" threshold=".9" play="B124" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="I don't think the poster says anything about where we were when we lost Lola." speech="" keys="lik" threshold=".9" play="B125" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="This poster is a good summary because it includes all of the most important descriptions of Lola to help us find her." speech="" keys="lik" threshold=".9" play="A217" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="In the poster, we left out the information that wasn't helpful like how much Lola loves walks." speech="" keys="lik" threshold=".9" play="B121" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="A good summary should include only the most important information to support the writer's purpose." speech="" keys="lik" threshold=".9" play="A218" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why is this summary good?" speech="" keys="lik" threshold=".9" play="_user_,A219" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Based on the poster on the right, this summary doesn't include Lola's hobbies." speech="" keys="lik" threshold=".9" play="A220" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Based on the poster on the right, this summary doesn't include any information about when Lola was last seen." speech="" keys="lik" threshold=".9" play="A221" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think it is the second one because we only included the most important details in the poster." speech="" keys="lik" threshold=".9" play="B122" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I am not sure what would make a good summary." speech="" keys="lik" threshold=".9" play="B123" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I don't see any of Lola's favorite activities on the poster." speech="" keys="lik" threshold=".9" play="B124" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I don't think the poster says anything about where we were when we lost Lola." speech="" keys="lik" threshold=".9" play="B125" />
           </Answers>
         </Question>
       </Questions>
@@ -562,18 +562,18 @@
     </TutoringPack>
     <TutoringPack name="TPM1">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which sentence tells us the main idea of this ad? Please click on the sentence." speech="" media="" play="_user_,A222">
+        <Question id="1" agent="ComputerTutor" text="_user_, which sentence tells us the main idea of this ad? Please click on the sentence." speech="" media="" play="_user_,A222">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The first sentence is the main idea because it tells us that the author is trying to persuade people to buy the car. " speech="" keys="lik" threshold=".9" play="A223" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first sentence is often the main idea." speech="" keys="lik" threshold=".9" play="B126" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The main idea is the essential point that the author is trying to make. " speech="" keys="lik" threshold=".9" play="A224" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="Which sentence tells us the main idea of this ad?" speech="" keys="lik" threshold=".9" play="A225" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="If the sentence delivers the main idea, the following sentences should support it." speech="" keys="lik" threshold=".9" play="A226" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="This sentence is too specific to be the main idea. It seems like supporting information." speech="" keys="lik" threshold=".9" play="A227" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think the first sentence tells us the main idea of the ad." speech="" keys="lik" threshold=".9" play="B127" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="Maybe the third sentence. I want the car to take me where I want to go!" speech="" keys="lik" threshold=".9" play="B128" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="This sentence seems more like a detail about the main idea. It is pretty specific." speech="" keys="lik" threshold=".9" play="B129" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="This sentence just seems like a description, but not the main point. " speech="" keys="lik" threshold=".9" play="B130" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The first sentence is the main idea because it tells us that the author is trying to persuade people to buy the car. " speech="" keys="lik" threshold=".9" play="A223" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first sentence is often the main idea." speech="" keys="lik" threshold=".9" play="B126" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The main idea is the essential point that the author is trying to make. " speech="" keys="lik" threshold=".9" play="A224" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="Which sentence tells us the main idea of this ad?" speech="" keys="lik" threshold=".9" play="A225" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="If the sentence delivers the main idea, the following sentences should support it." speech="" keys="lik" threshold=".9" play="A226" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="This sentence is too specific to be the main idea. It seems like supporting information." speech="" keys="lik" threshold=".9" play="A227" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think the first sentence tells us the main idea of the ad." speech="" keys="lik" threshold=".9" play="B127" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe the third sentence. I want the car to take me where I want to go!" speech="" keys="lik" threshold=".9" play="B128" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="This sentence seems more like a detail about the main idea. It is pretty specific." speech="" keys="lik" threshold=".9" play="B129" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="This sentence just seems like a description, but not the main point. " speech="" keys="lik" threshold=".9" play="B130" />
           </Answers>
         </Question>
       </Questions>
@@ -582,18 +582,18 @@
     </TutoringPack>
     <TutoringPack name="TPM2">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the most important description in the highlighted sentences? Click on an answer." speech="" media="" play="_user_,A228">
+        <Question id="1" agent="ComputerTutor" text="_user_, what is the most important description in the highlighted sentences? Click on an answer." speech="" media="" play="_user_,A228">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="These two sentences describe one feature. This car gets great gas mileage." speech="" keys="lik" threshold=".9" play="A229" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="Oh, I see. The second sentence elaborates on what gas saver means." speech="" keys="lik" threshold=".9" play="B131" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The second sentence describes the feature introduced in the first sentence." speech="" keys="lik" threshold=".9" play="A230" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="What feature is described in the highlighted sentences?" speech="" keys="lik" threshold=".9" play="A231" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="The second sentence describes how you can save money on gas in the city. What feature of the car does it support?" speech="" keys="lik" threshold=".9" play="A232" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="When this sentence describes the excellent gas mileage in rural areas it is elaborating on a feature of the car. What is that feature?" speech="" keys="lik" threshold=".9" play="A233" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="Maybe the first answer is correct." speech="" keys="lik" threshold=".9" play="B132" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="Maybe the second answer is correct." speech="" keys="lik" threshold=".9" play="B133" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="It seems like the second sentence talks about saving money on gas in the city. That doesn't seem like the main feature. " speech="" keys="lik" threshold=".9" play="B134" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="The sentence only tells us that the car achieves the best mileage in rural areas. What point does this sentence support?" speech="" keys="lik" threshold=".9" play="B135" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="These two sentences describe one feature. This car gets great gas mileage." speech="" keys="lik" threshold=".9" play="A229" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Oh, I see. The second sentence elaborates on what gas saver means." speech="" keys="lik" threshold=".9" play="B131" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The second sentence describes the feature introduced in the first sentence." speech="" keys="lik" threshold=".9" play="A230" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="What feature is described in the highlighted sentences?" speech="" keys="lik" threshold=".9" play="A231" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="The second sentence describes how you can save money on gas in the city. What feature of the car does it support?" speech="" keys="lik" threshold=".9" play="A232" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="When this sentence describes the excellent gas mileage in rural areas it is elaborating on a feature of the car. What is that feature?" speech="" keys="lik" threshold=".9" play="A233" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Maybe the first answer is correct." speech="" keys="lik" threshold=".9" play="B132" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe the second answer is correct." speech="" keys="lik" threshold=".9" play="B133" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="It seems like the second sentence talks about saving money on gas in the city. That doesn't seem like the main feature. " speech="" keys="lik" threshold=".9" play="B134" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="The sentence only tells us that the car achieves the best mileage in rural areas. What point does this sentence support?" speech="" keys="lik" threshold=".9" play="B135" />
           </Answers>
         </Question>
       </Questions>
@@ -602,18 +602,18 @@
     </TutoringPack>
     <TutoringPack name="TPM3">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, what is the most important description in the highlighted sentences? Please click on your answer." speech="" media="" play="_user_,A234">
+        <Question id="1" agent="ComputerTutor" text="_user_, what is the most important description in the highlighted sentences? Please click on your answer." speech="" media="" play="_user_,A234">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The AC and heat are in great condition, so that makes travel comfortable in any weather. " speech="" keys="lik" threshold=".9" play="A235" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="The first answer only mentions the AC, but both the AC and the heat are described in the sentences." speech="" keys="lik" threshold=".9" play="B136" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="The description should include both the AC and the heat to be complete." speech="" keys="lik" threshold=".9" play="A236" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, is one of the sentences supported by the other sentences?" speech="" keys="lik" threshold=".9" play="_user_,A237" />
-            <Answer name="TAHintA" agent="Cristina" type="TAHintA" text="The AC is necessary for warm weather but you might want something else when it is cold to be comfortable." speech="" keys="lik" threshold=".9" play="A238" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="One of the highlighted sentences says, they make travel comfortable in any weather. What is making travel comfortable in any weather?" speech="" keys="lik" threshold=".9" play="A239" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="The last option sounds right to me. The second and third sentences support the idea that the AC and heat are in great condition. " speech="" keys="lik" threshold=".9" play="B137" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I think it is the second option. I bet the Honda runs well in any weather." speech="" keys="lik" threshold=".9" play="B138" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="It seems like the highlighted sentences describe more than just the AC. " speech="" keys="lik" threshold=".9" play="B139" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="None of the highlighted sentences say that the car runs well in any weather. " speech="" keys="lik" threshold=".9" play="B140" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The AC and heat are in great condition, so that makes travel comfortable in any weather. " speech="" keys="lik" threshold=".9" play="A235" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first answer only mentions the AC, but both the AC and the heat are described in the sentences." speech="" keys="lik" threshold=".9" play="B136" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The description should include both the AC and the heat to be complete." speech="" keys="lik" threshold=".9" play="A236" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, is one of the sentences supported by the other sentences?" speech="" keys="lik" threshold=".9" play="_user_,A237" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="The AC is necessary for warm weather but you might want something else when it is cold to be comfortable." speech="" keys="lik" threshold=".9" play="A238" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="One of the highlighted sentences says, they make travel comfortable in any weather. What is making travel comfortable in any weather?" speech="" keys="lik" threshold=".9" play="A239" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The last option sounds right to me. The second and third sentences support the idea that the AC and heat are in great condition. " speech="" keys="lik" threshold=".9" play="B137" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think it is the second option. I bet the Honda runs well in any weather." speech="" keys="lik" threshold=".9" play="B138" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="It seems like the highlighted sentences describe more than just the AC. " speech="" keys="lik" threshold=".9" play="B139" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="None of the highlighted sentences say that the car runs well in any weather. " speech="" keys="lik" threshold=".9" play="B140" />
           </Answers>
         </Question>
       </Questions>
@@ -622,18 +622,18 @@
     </TutoringPack>
     <TutoringPack name="TPM4">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, which highlighted sentence gives the best description of the car to someone who may want to buy it? Please  select the sentence in the passage that is your answer." speech="" media="" play="_user_,A240">
+        <Question id="1" agent="ComputerTutor" text="_user_, which highlighted sentence gives the best description of the car to someone who may want to buy it? Please  select the sentence in the passage that is your answer." speech="" media="" play="_user_,A240">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="The new tires and brakes are the most attractive to the buyer even though there is some rust." speech="" keys="lik" threshold=".9" play="A241" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="It is great that the car is so clean but it would cost less to have the car cleaned than it would to buy new tires and brakes." speech="" keys="lik" threshold=".9" play="B141" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="This description should attract the buyer." speech="" keys="lik" threshold=".9" play="A242" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="Which highlighted sentence gives the best car description to a future buyer?  " speech="" keys="lik" threshold=".9" play="A243" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="The fact that the car is clean is not as important as the car's other features." speech="" keys="lik" threshold=".9" play="A244" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="This sentence does not provide a feature of the car. " speech="" keys="lik" threshold=".9" play="A245" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think it is the first one because new tires and brakes are expensive!" speech="" keys="lik" threshold=".9" play="B142" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I'm not sure, but I like the fact that it is clean. I choose sentence 3. " speech="" keys="lik" threshold=".9" play="B143" />
-            <Answer name="JordanHintA" agent="Jordan" type="SAHintA" text="Well I'm not sure I should buy a car just because it is clean. " speech="" keys="lik" threshold=".9" play="B144" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="I don't think this sentence has a feature of the car in it. " speech="" keys="lik" threshold=".9" play="B145" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The new tires and brakes are the most attractive to the buyer even though there is some rust." speech="" keys="lik" threshold=".9" play="A241" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It is great that the car is so clean but it would cost less to have the car cleaned than it would to buy new tires and brakes." speech="" keys="lik" threshold=".9" play="B141" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="This description should attract the buyer." speech="" keys="lik" threshold=".9" play="A242" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="Which highlighted sentence gives the best car description to a future buyer?  " speech="" keys="lik" threshold=".9" play="A243" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="The fact that the car is clean is not as important as the car's other features." speech="" keys="lik" threshold=".9" play="A244" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="This sentence does not provide a feature of the car. " speech="" keys="lik" threshold=".9" play="A245" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think it is the first one because new tires and brakes are expensive!" speech="" keys="lik" threshold=".9" play="B142" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I'm not sure, but I like the fact that it is clean. I choose sentence 3. " speech="" keys="lik" threshold=".9" play="B143" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="Well I'm not sure I should buy a car just because it is clean. " speech="" keys="lik" threshold=".9" play="B144" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I don't think this sentence has a feature of the car in it. " speech="" keys="lik" threshold=".9" play="B145" />
           </Answers>
         </Question>
       </Questions>
@@ -642,18 +642,18 @@
     </TutoringPack>
     <TutoringPack name="TPM5">
       <Questions>
-        <Question id="1" agent="Cristina" text="_user_, why is this a good summary of the car ad? Please select your answer below." speech="" media="" play="_user_,A246">
+        <Question id="1" agent="ComputerTutor" text="_user_, why is this a good summary of the car ad? Please select your answer below." speech="" media="" play="_user_,A246">
           <Answers>
-            <Answer name="CorrectCristina" agent="Cristina" type="TACorrectAnswer" text="That's right. We need to know that the car can save gas, but also that it has some rust. So the correct answer is the first one. This summary  includes all the important car descriptions." speech="" keys="lik" threshold=".9" play="A247" />
-            <Answer name="JordanExplain" agent="Jordan" type="SAExplain" text="I think a good summary should probably include both the good and bad features, so you can get a good picture in your mind. " speech="" keys="lik" threshold=".9" play="B146" />
-            <Answer name="ExplanationCristina" agent="Cristina" type="TAExplain" text="A good summary should include the most important information from the ad." speech="" keys="lik" threshold=".9" play="A248" />
-            <Answer name="RepeatQuestion" agent="Cristina" type="RepeatQ" text="_user_, can you explain why this is a good summary of the ad?" speech="" keys="lik" threshold=".9" play="_user_,A249" />
-            <Answer name="TAHintC" agent="Cristina" type="TAHintC" text="The summary should not be limited to the good descriptions." speech="" keys="lik" threshold=".9" play="A250" />
-            <Answer name="TAHintB" agent="Cristina" type="TAHintB" text="A good summary needs to include the unattractive descriptions, if they are important." speech="" keys="lik" threshold=".9" play="A251" />
-            <Answer name="JordanCorAnswer" agent="Jordan" type="JordanCorAnswer" text="I think that the first answer is correct. We need to include all the important details, not just the good ones. " speech="" keys="lik" threshold=".9" play="B147" />
-            <Answer name="JordanIncorAnswer" agent="Jordan" type="JordanIncorAnswer" text="I think it is the third option. I only need to hear the attractive details about the car. " speech="" keys="lik" threshold=".9" play="B148" />
-            <Answer name="JordanHintC" agent="Jordan" type="SAHintC" text="This summary describes all the important car details. " speech="" keys="lik" threshold=".9" play="B149" />
-            <Answer name="JordanHintB" agent="Jordan" type="SAHintB " text="This summary includes the part about the rust, so it includes some unattractive descriptions." speech="" keys="lik" threshold=".9" play="B150" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="That's right. We need to know that the car can save gas, but also that it has some rust. So the correct answer is the first one. This summary  includes all the important car descriptions." speech="" keys="lik" threshold=".9" play="A247" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I think a good summary should probably include both the good and bad features, so you can get a good picture in your mind. " speech="" keys="lik" threshold=".9" play="B146" />
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="A good summary should include the most important information from the ad." speech="" keys="lik" threshold=".9" play="A248" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, can you explain why this is a good summary of the ad?" speech="" keys="lik" threshold=".9" play="_user_,A249" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="The summary should not be limited to the good descriptions." speech="" keys="lik" threshold=".9" play="A250" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="A good summary needs to include the unattractive descriptions, if they are important." speech="" keys="lik" threshold=".9" play="A251" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think that the first answer is correct. We need to include all the important details, not just the good ones. " speech="" keys="lik" threshold=".9" play="B147" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think it is the third option. I only need to hear the attractive details about the car. " speech="" keys="lik" threshold=".9" play="B148" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="This summary describes all the important car details. " speech="" keys="lik" threshold=".9" play="B149" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB " text="This summary includes the part about the rust, so it includes some unattractive descriptions." speech="" keys="lik" threshold=".9" play="B150" />
           </Answers>
         </Question>
       </Questions>
@@ -674,7 +674,7 @@
     <Rule name="HasAudioCar" status="GetItemAudioCar" response="" event="Continue" hasItem="" priority="1" frequency="" description="Show media. To ShowItemAudioCar rules(2).">
       <Action agent="System" act="SetStatus" data="ShowItemAudioCar" id="1" />
       <Action agent="System" act="ShowMediaItem" data="" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="ClickToContinue" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="ClickToContinue" id="3" />
       <Action agent="System" act="WaitForEvent" data="600" id="4" />
     </Rule>
     <Rule name="NoAudioCar" status="GetItemAudioCar" response="" event="Stop" hasItem="" priority="2" frequency="" description="No more items. To NextPage rules(6).">
@@ -688,8 +688,8 @@
     </Rule>
     <Rule name="AudioCarAny" status="ShowItemAudioCar" response="" event="" hasItem="" priority="2" frequency="" description="User did not click. Pump. To AudioPumpCar rules(2).">
       <Action agent="System" act="SetStatus" data="AudioPumpCar" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="SAAudioPump" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="TAAudioPump" id="3" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="SAAudioPump" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TAAudioPump" id="3" />
       <Action agent="System" act="Unlock" data="" id="4" />
       <Action agent="System" act="WaitForEvent" data="120" id="5" />
     </Rule>
@@ -707,7 +707,7 @@
     <Rule name="HasAudioEmail" status="GetItemAudioEmail" response="" event="Continue" hasItem="" priority="1" frequency="" description="Tell user to click. To ShowItemAudioEmail rules(2).">
       <Action agent="System" act="SetStatus" data="ShowItemAudioEmail" id="1" />
       <Action agent="System" act="ShowMediaItem" data="" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="ClickToContinue" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="ClickToContinue" id="3" />
       <Action agent="System" act="WaitForEvent" data="600" id="4" />
     </Rule>
     <Rule name="NoAudioEmail" status="GetItemAudioEmail" response="" event="Stop" hasItem="" priority="2" frequency="" description="Move to next page. To NextPage rules(6).">
@@ -721,8 +721,8 @@
     </Rule>
     <Rule name="AudioEmailAny" status="ShowItemAudioEmail" response="" event="" hasItem="" priority="2" frequency="" description="Prompt user to click. To AudioPumpEmail rules(2).">
       <Action agent="System" act="SetStatus" data="AudioPumpEmail" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="SAAudioPump" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="TAAudioPump" id="3" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="SAAudioPump" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TAAudioPump" id="3" />
       <Action agent="System" act="Unlock" data="" id="4" />
       <Action agent="System" act="WaitForEvent" data="120" id="5" />
     </Rule>
@@ -789,18 +789,18 @@
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
     </Rule>
     <Rule name="CorrectJordanCor" status="AskQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct, jordan correct. To Summary rule.">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToBoth" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToBoth" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="CorrectJordanInor" status="AskQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="User correct, jordan incorrect. To Summary rule.">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="2" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorAnswer" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToAgent" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToUser" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="5" />
       <Action agent="System" act="SetStatus" data="Summary" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
@@ -808,147 +808,147 @@
       <Action agent="System" act="SetStatus" data="Incorrect" id="1" />
       <Action agent="System" act="GetMediaEvent" data="UserAnswer" id="2" />
     </Rule>
-    <Rule name="IncorrectAJordanCor" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="Answer A hint Jordan disagrees. To HintQ rules(4).">
+    <Rule name="IncorrectAJordanCor" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="Answer A hint ComputerStudent1 disagrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintA" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectAJordanIncor" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="Answer A hint. Jordan agrees. To HintQ rules(4).">
+    <Rule name="IncorrectAJordanIncor" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="Answer A hint. ComputerStudent1 agrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintA" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectBJordanCor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="Answer B hint. Jordan disagrees. To HintQ rules(4).">
+    <Rule name="IncorrectBJordanCor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="Answer B hint. ComputerStudent1 disagrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintB" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectBJordanIncor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="Answer B hint. Jordan agrees. To HintQ rules(4).">
+    <Rule name="IncorrectBJordanIncor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="Answer B hint. ComputerStudent1 agrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintB" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectCJordanCor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="Answer C hint. Jordan disagrees. To HintQ rules(4).">
+    <Rule name="IncorrectCJordanCor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="Answer C hint. ComputerStudent1 disagrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintC" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectCJordanIncor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="Answer C hint. Jordan agrees. To HintQ rules(4).">
+    <Rule name="IncorrectCJordanIncor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="Answer C hint. ComputerStudent1 agrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintC" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectDJordanCor" status="Incorrect" response="" event="D" hasItem="" priority="1" frequency="" description="Answer D hint. Jordan disagrees. To HintQ rules(4).">
+    <Rule name="IncorrectDJordanCor" status="Incorrect" response="" event="D" hasItem="" priority="1" frequency="" description="Answer D hint. ComputerStudent1 disagrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintD" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintD" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectDJordanIncor" status="Incorrect" response="" event="D" hasItem="" priority="1" frequency="" description="Answer D hint. Jordan agrees. To HintQ rules(4).">
+    <Rule name="IncorrectDJordanIncor" status="Incorrect" response="" event="D" hasItem="" priority="1" frequency="" description="Answer D hint. ComputerStudent1 agrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="TAHintD" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TAHintD" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectEJordanCor" status="Incorrect" response="" event="E" hasItem="" priority="1" frequency="" description="Answer E hint. Jordan disagrees. To HintQ rules(4).">
+    <Rule name="IncorrectEJordanCor" status="Incorrect" response="" event="E" hasItem="" priority="1" frequency="" description="Answer E hint. ComputerStudent1 disagrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintE" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintE" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
-    <Rule name="IncorrectEJordanIncor" status="Incorrect" response="" event="E" hasItem="" priority="1" frequency="" description="Answer E hint. Jordan agrees. To HintQ rules(4).">
+    <Rule name="IncorrectEJordanIncor" status="Incorrect" response="" event="E" hasItem="" priority="1" frequency="" description="Answer E hint. ComputerStudent1 agrees. To HintQ rules(4).">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="TAHintE" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TAHintE" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="180" id="10" />
     </Rule>
     <Rule name="Any" status="AskQ" response="" event="" hasItem="" priority="2" frequency="" description="User no answer. Pump. To AnyQ rules(5)">
       <Action agent="System" act="SetStatus" data="AnyQ" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="PumpBlankRemind" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="PumpBlank" id="3" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="4" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="PumpBlankRemind" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpBlank" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="4" />
       <Action agent="System" act="Unlock" data="" id="5" />
       <Action agent="System" act="WaitForEvent" data="200" id="6" />
     </Rule>
     <Rule name="AnyQCorrectJordanCor" status="AnyQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="user correct, jordan agrees. Feedback. To Summary rule.">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToBoth" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToBoth" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="AnyQCorrectJordanInor" status="AnyQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="user correct, jordan disagrees. Feedback. To Summary rule.">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="1" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="2" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorAnswer" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToAgent" id="4" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToUser" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="5" />
       <Action agent="System" act="SetStatus" data="Summary" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
@@ -958,167 +958,167 @@
     </Rule>
     <Rule name="AnyQIncorrectAJordanCor" status="AnyQIncorrect" response="" event="A" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintA" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectAJordanIncor" status="AnyQIncorrect" response="" event="A" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintA" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectBJordanCor" status="AnyQIncorrect" response="" event="B" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintB" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectBJordanIncor" status="AnyQIncorrect" response="" event="B" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintB" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectCJordanCor" status="AnyQIncorrect" response="" event="C" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Jordan" act="Answer" data="SAHintC" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectCJordanIncor" status="AnyQIncorrect" response="" event="C" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintC" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectDJordanCor" status="AnyQIncorrect" response="" event="D" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Cristina" act="Answer" data="SAHintD" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="SAHintD" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectDJordanIncor" status="AnyQIncorrect" response="" event="D" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintD" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintD" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectEJordanCor" status="AnyQIncorrect" response="" event="E" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanDisagree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintE" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintE" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQIncorrectEJordanIncor" status="AnyQIncorrect" response="" event="E" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HintQ" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="AskJordanCheck" id="2" />
-      <Action agent="Jordan" act="CannedExpression" data="JordanAgree" id="3" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToBoth" id="4" />
-      <Action agent="Cristina" act="Answer" data="TAHintE" id="5" />
-      <Action agent="Cristina" act="CannedExpression" data="TryAgain" id="6" />
-      <Action agent="Cristina" act="CannedExpression" data="RepeatQuestion" id="7" />
-      <Action agent="Cristina" act="Answer" data="RepeatQ" id="8" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintE" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="7" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="8" />
       <Action agent="System" act="Unlock" data="" id="9" />
       <Action agent="System" act="WaitForEvent" data="120" id="10" />
     </Rule>
     <Rule name="AnyQJordanCor" status="AnyQ" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorAnswer" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="AnyQJordanIncor" status="AnyQ" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorAnswer" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToAgent" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="HintAnyJordanCor" status="HintQ" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanCorAnswer" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToAgent" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="HintAnyJordanIncor" status="HintQ" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
-      <Action agent="Jordan" act="Answer" data="JordanIncorAnswer" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="NegativeToAgent" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="3" />
       <Action agent="System" act="SetStatus" data="Summary" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="HintCorrect" status="HintQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PositiveToUser" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="1" />
       <Action agent="System" act="SetStatus" data="Summary" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="HintIncorrect" status="HintQ" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="SetStatus" data="Summary" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="Summary" status="Summary" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="Cristina" act="Answer" data="TAExplain" id="2" />
-      <Action agent="Jordan" act="Answer" data="SAExplain" id="3" />
-      <Action agent="Cristina" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
       <Action agent="System" act="SetStatus" data="NextPage" id="5" />
       <Action agent="System" act="GetMediaEvent" data="NextPage" id="6" />
     </Rule>

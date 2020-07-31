@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
+    <Agent name="ComputerStudent1" gender="Male" title="Mr." firstName="ComputerStudent1" lastName="Smith" displayName="ComputerStudent1">
       <SpeechCan name="PositiveFeedback">
         <Item text="Awesome" speech="Awesome" play="B1" />
       </SpeechCan>
     </Agent>
-    <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
+    <Agent name="ComputerTutor" gender="Female" title="Dr." firstName="ComputerTutor" lastName="Valdez" displayName="ComputerTutor">
       <SpeechCan name="Pump">
         <Item text="_user_, Give it a try." speech="_user_, Give it a try." play="_user_,A1" />
       </SpeechCan>
@@ -30,79 +30,79 @@
   <SpeechActs />
   <RigidPacks>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_, Hello, welcome back. Today I am going to show you and Jordan how to ask yourself important questions while reading. These questions will help us better understand texts we read." speech="_user_, Hello, welcome back ! Two day I am going to show you and Jordan how to ask yourself important questions while reading. These questions will help us better understand texts we read." media="media/Lesson15-IntroTitle.html" play="_user_,A9" />
-      <Item id="2" agent="Jordan" text="_user_  and Cristina. Hey there. I'm looking forward to this lesson." speech="" play="_user_,B2" />
-      <Item id="3" agent="Cristina" text="Before we get started, let me explain what you will have to do during this lesson." speech="" play="A10" />
-      <Item id="4" agent="Jordan" text="Great, your explanations help me understand what to do during a lesson." speech="" media="media/Lesson15-Blank.html" play="B3" />
+      <Item id="1" agent="ComputerTutor" text="_user_, Hello, welcome back. Today I am going to show you and ComputerStudent1 how to ask yourself important questions while reading. These questions will help us better understand texts we read." speech="_user_, Hello, welcome back ! Two day I am going to show you and ComputerStudent1 how to ask yourself important questions while reading. These questions will help us better understand texts we read." media="media/Lesson15-IntroTitle.html" play="_user_,A9" />
+      <Item id="2" agent="ComputerStudent1" text="_user_  and ComputerTutor. Hey there. I'm looking forward to this lesson." speech="" play="_user_,B2" />
+      <Item id="3" agent="ComputerTutor" text="Before we get started, let me explain what you will have to do during this lesson." speech="" play="A10" />
+      <Item id="4" agent="ComputerStudent1" text="Great, your explanations help me understand what to do during a lesson." speech="" media="media/Lesson15-Blank.html" play="B3" />
     </RigidPack>
     <RigidPack name="Reading" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_, read the following story, and then press continue at the bottom of the story when you are done. This will move the lesson forward. If you need help reading the story, press the green voice button at the bottom of the screen and the story will be red to you." speech="" media="media/Lesson15-Activity-Main0.html" play="_user_,A11" />
+      <Item id="1" agent="ComputerTutor" text="_user_, read the following story, and then press continue at the bottom of the story when you are done. This will move the lesson forward. If you need help reading the story, press the green voice button at the bottom of the screen and the story will be red to you." speech="" media="media/Lesson15-Activity-Main0.html" play="_user_,A11" />
     </RigidPack>
     <RigidPack name="Opening2" usedIn="">
-      <Item id="1" agent="Cristina" text="First, you will need to read the passage that is displayed on the screen. To move through the passage you can drag the scroll bar on the right. You can also move through the passage by pressing the down arrow at the bottom of the screen. Once you are done reading, press the continue button." speech="" play="A12" />
-      <Item id="2" agent="Jordan" text="I see, anything else Cristina?" speech="" play="B4" />
+      <Item id="1" agent="ComputerTutor" text="First, you will need to read the passage that is displayed on the screen. To move through the passage you can drag the scroll bar on the right. You can also move through the passage by pressing the down arrow at the bottom of the screen. Once you are done reading, press the continue button." speech="" play="A12" />
+      <Item id="2" agent="ComputerStudent1" text="I see, anything else ComputerTutor?" speech="" play="B4" />
     </RigidPack>
     <RigidPack name="Opening3" usedIn="">
-      <Item id="1" agent="Cristina" text="After reading, you will be asked two types of multiple choice questions. Some questions you will press a button to respond." speech="" play="A13" />
+      <Item id="1" agent="ComputerTutor" text="After reading, you will be asked two types of multiple choice questions. Some questions you will press a button to respond." speech="" play="A13" />
     </RigidPack>
     <RigidPack name="Opening4" usedIn="">
-      <Item id="1" agent="Cristina" text="For the other question type you will need to press on a highlighted sentence in the text. Simply press one of the buttons to submit an answer." speech="" play="A14" />
-      <Item id="2" agent="Jordan" text="_user_, Ok great! Let's get started then ." speech="" play="_user_,B5" />
+      <Item id="1" agent="ComputerTutor" text="For the other question type you will need to press on a highlighted sentence in the text. Simply press one of the buttons to submit an answer." speech="" play="A14" />
+      <Item id="2" agent="ComputerStudent1" text="_user_, Ok great! Let's get started then ." speech="" play="_user_,B5" />
     </RigidPack>
     <RigidPack name="TP1" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." speech="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." play="A15" />
-      <Item id="2" agent="Cristina" text="Jordan, what was your answer to this question?" speech="Jordan, what was your answer to this question?" play="A16" />
-      <Item id="3" agent="Jordan" text=" I thought the answer was, the writer knows a lot about computers." speech=" I thought the answer was, the writer knows a lot about computers." play="B6" />
-      <Item id="4" agent="Cristina" text="No worries, Jordan! That is incorrect because the writer does not talk about knowing anything about computers, only liking them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" speech="No worries, Jordan! That is incorrect because the writer does not talk about knowing anything about computers, only liking them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" play="A17" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." speech="The correct answer is the writer did not learn about computers in high school. The writer talks about his or her passion for computers, however the text does not mention learning about them." play="A15" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, what was your answer to this question?" speech="ComputerStudent1, what was your answer to this question?" play="A16" />
+      <Item id="3" agent="ComputerStudent1" text=" I thought the answer was, the writer knows a lot about computers." speech=" I thought the answer was, the writer knows a lot about computers." play="B6" />
+      <Item id="4" agent="ComputerTutor" text="No worries, ComputerStudent1! That is incorrect because the writer does not talk about knowing anything about computers, only liking them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" speech="No worries, ComputerStudent1! That is incorrect because the writer does not talk about knowing anything about computers, only liking them. This activity can be really tricky! It's important that we stay on our toes and read carefully! Even I get tripped up sometimes!" play="A17" />
     </RigidPack>
     <RigidPack name="TP4" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is, I believe the best way to fulfill this dream is to go to college. This is because the text suggests that going back to school will help the writer fulfill his or her dream." speech="The correct answer is, I believe the best way to fulfill this dream is to go to college. This is because the text suggests that going back to school will help the writer fulfill his or her dream." play="A18" />
-      <Item id="2" agent="Cristina" text="Jordan, What did you think the correct answer was?" speech="Jordan, What did you think the correct answer was?" play="A19" />
-      <Item id="3" agent="Jordan" text="I thought the answer was, I did everything I could to get money. Because going back to school could eventually help the writer make more money." speech="I thought the answer was, I did everything I could to get money. Because going back to school could eventually help the writer make more money." play="B7" />
-      <Item id="4" agent="Cristina" text="That is incorrect because the writer talks about wanting to pursue a particular dream. This could include making more money, but that is not the main reason the writer wants to go back to school. Let's go to the next question." speech="That is incorrect because the writer talks about wanting to pursue a particular dream. This could include making more money, but that is not the main reason the writer wants to go back to school. Let's go to the next question." play="A20" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is, I believe the best way to fulfill this dream is to go to college. This is because the text suggests that going back to school will help the writer fulfill his or her dream." speech="The correct answer is, I believe the best way to fulfill this dream is to go to college. This is because the text suggests that going back to school will help the writer fulfill his or her dream." play="A18" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, What did you think the correct answer was?" speech="ComputerStudent1, What did you think the correct answer was?" play="A19" />
+      <Item id="3" agent="ComputerStudent1" text="I thought the answer was, I did everything I could to get money. Because going back to school could eventually help the writer make more money." speech="I thought the answer was, I did everything I could to get money. Because going back to school could eventually help the writer make more money." play="B7" />
+      <Item id="4" agent="ComputerTutor" text="That is incorrect because the writer talks about wanting to pursue a particular dream. This could include making more money, but that is not the main reason the writer wants to go back to school. Let's go to the next question." speech="That is incorrect because the writer talks about wanting to pursue a particular dream. This could include making more money, but that is not the main reason the writer wants to go back to school. Let's go to the next question." play="A20" />
     </RigidPack>
     <RigidPack name="TP2" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." speech="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." play="A21" />
-      <Item id="2" agent="Cristina" text="Jordan, What did you think?" speech="Jordan, What did you think?" play="A22" />
-      <Item id="3" agent="Jordan" text="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " speech="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " play="B8" />
-      <Item id="4" agent="Cristina" text="Jordan, that was a good catch." speech="Jordan, that was a Good catch." play="A23" />
-      <Item id="5" agent="Jordan" text="Thanks Cristina. I'm on a role!" speech="Thanks Cristina. I'm on a role!" play="B9" />
-      <Item id="6" agent="Cristina" text="Alright Jordan, curb your enthusiasm. Let's move on to the next question. " speech="Alright Jordan, curb your enthusiasm. Let's move on to the next question. " play="A24" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." speech="The correct answer is, when I got to high school, I didn't pay much attention to computers. This is correct because the text suggests that the writer did not pay attention to computers at that time." play="A21" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, What did you think?" speech="ComputerStudent1, What did you think?" play="A22" />
+      <Item id="3" agent="ComputerStudent1" text="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " speech="That's what I thought too. If the writer didn't pay much attention to computers, then he or she probably didn't learn anything about them. " play="B8" />
+      <Item id="4" agent="ComputerTutor" text="ComputerStudent1, that was a good catch." speech="ComputerStudent1, that was a Good catch." play="A23" />
+      <Item id="5" agent="ComputerStudent1" text="Thanks ComputerTutor. I'm on a role!" speech="Thanks ComputerTutor. I'm on a role!" play="B9" />
+      <Item id="6" agent="ComputerTutor" text="Alright ComputerStudent1, curb your enthusiasm. Let's move on to the next question. " speech="Alright ComputerStudent1, curb your enthusiasm. Let's move on to the next question. " play="A24" />
     </RigidPack>
     <RigidPack name="TP3" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is, the writer wants to go back to school. This is because the writer says that the only way to to work with computers is to become more educated." speech="The correct answer is, the writer wants to go back to school. This is because the writer says that the only way to to work with computers is to become more educated." play="A25" />
-      <Item id="2" agent="Cristina" text="Jordan, What about you." speech="Jordan, What about you?" play="A26" />
-      <Item id="3" agent="Jordan" text="I thought the answer was the writer went to college and did not study." speech="I thought the answer was the writer went to college and did not study." play="B10" />
-      <Item id="4" agent="Cristina" text="That cannot be the correct answer because writer mentions not graduating from high school. An individual needs to graduate high school before attending college." speech="That cannot be the correct answer because writer mentions not graduating from high school. An individual needs to graduate high school before attending college." play="A27" />
-      <Item id="5" agent="Jordan" text="Oh that makes sense, I didn't think about it that way," speech="Oh that makes sense, I didn't think about it that way," play="B11" />
-      <Item id="6" agent="Cristina" text="Okay, let's move on." speech="Okay, let's move on." play="A28" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is, the writer wants to go back to school. This is because the writer says that the only way to to work with computers is to become more educated." speech="The correct answer is, the writer wants to go back to school. This is because the writer says that the only way to to work with computers is to become more educated." play="A25" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, What about you." speech="ComputerStudent1, What about you?" play="A26" />
+      <Item id="3" agent="ComputerStudent1" text="I thought the answer was the writer went to college and did not study." speech="I thought the answer was the writer went to college and did not study." play="B10" />
+      <Item id="4" agent="ComputerTutor" text="That cannot be the correct answer because writer mentions not graduating from high school. An individual needs to graduate high school before attending college." speech="That cannot be the correct answer because writer mentions not graduating from high school. An individual needs to graduate high school before attending college." play="A27" />
+      <Item id="5" agent="ComputerStudent1" text="Oh that makes sense, I didn't think about it that way," speech="Oh that makes sense, I didn't think about it that way," play="B11" />
+      <Item id="6" agent="ComputerTutor" text="Okay, let's move on." speech="Okay, let's move on." play="A28" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="Cristina" text="_user_, That is the end of our lesson for today! , feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" speech="_user_, That is the end of our lesson for today! , feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" play="_user_,A29" />
-      <Item id="2" agent="Jordan" text="_user_, See you later !" speech="See you later!" play="B12" />
+      <Item id="1" agent="ComputerTutor" text="_user_, That is the end of our lesson for today! , feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" speech="_user_, That is the end of our lesson for today! , feel free to come back any time to get in some more practice with elaborating through questioning! I look forward to seeing you again!" play="_user_,A29" />
+      <Item id="2" agent="ComputerStudent1" text="_user_, See you later !" speech="See you later!" play="B12" />
     </RigidPack>
     <RigidPack name="TP5" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling a dream of working with computers and the only way to do that is by going back to school." speech="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling a dream of working with computers and the only way to do that is by going back to school." play="A30" />
-      <Item id="2" agent="Cristina" text="Jordan, what did you think?" speech="Jordan, what did you think?" play="A31" />
-      <Item id="3" agent="Jordan" text="The writer also talked about not finishing high school, so couldn't the first choice be the right answer too?" speech="The writer also talked about not finishing high school, so couldn't the first choice be the right answer too?" play="B13" />
-      <Item id="4" agent="Cristina" text="I am impressed you spotted that.  While the writer does mention not completing high school, it is not really what the story is about. In this case, that is just a detail about the story." speech="I am impressed you spotted that. While the writer does mention not completing high school, it is not really what the story is about. In this case, that is just a detail about the story!" play="A32" />
-      <Item id="5" agent="Jordan" text="Okay, so just because the writer says something, it does not mean it is the main idea?" speech="Okay, so just because the writer says something, it does not mean it is the main idea?" play="B14" />
-      <Item id="6" agent="Cristina" text="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." speech="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." play="A33" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling a dream of working with computers and the only way to do that is by going back to school." speech="The correct answer is, the writer wants a G E D to get a job working with computers. Throughout the story, the writer talks about fulfilling a dream of working with computers and the only way to do that is by going back to school." play="A30" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, what did you think?" speech="ComputerStudent1, what did you think?" play="A31" />
+      <Item id="3" agent="ComputerStudent1" text="The writer also talked about not finishing high school, so couldn't the first choice be the right answer too?" speech="The writer also talked about not finishing high school, so couldn't the first choice be the right answer too?" play="B13" />
+      <Item id="4" agent="ComputerTutor" text="I am impressed you spotted that.  While the writer does mention not completing high school, it is not really what the story is about. In this case, that is just a detail about the story." speech="I am impressed you spotted that. While the writer does mention not completing high school, it is not really what the story is about. In this case, that is just a detail about the story!" play="A32" />
+      <Item id="5" agent="ComputerStudent1" text="Okay, so just because the writer says something, it does not mean it is the main idea?" speech="Okay, so just because the writer says something, it does not mean it is the main idea?" play="B14" />
+      <Item id="6" agent="ComputerTutor" text="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." speech="That's right! I know it can be kind of hard to understand, so if it takes some time to be able to spot, that is perfectly fine! Now, let's move on." play="A33" />
     </RigidPack>
     <RigidPack name="TP6" usedIn="">
-      <Item id="1" agent="Cristina" text="The correct answer is, what the G E D means to me. This story is about how the writer is going to earn a G E D in the hopes of working with computers in the future. The writer does talk about slacking off in school, but also says that it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school. The writer does not talk about how to use a computer, so this can't be the title either." speech="The correct answer is, what the G E D means to me. This story is about how the writer is going to earn a G E D in the hopes of working with computers in the future. The writer does talk about slacking off in school, but also says that it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school. The writer does not talk about how to use a computer, so this can't be the title either." play="A34" />
-      <Item id="2" agent="Cristina" text="Jordan, What about you. What did you think the answer was?" speech="Jordan, what about you. What did you think the answer was?" play="A35" />
-      <Item id="3" agent="Jordan" text="I was not sure about this one. Answering this question involved a lot of thinking and now my head kind of hurts. This is a tough lesson." speech="I was not sure about this one. Answering this question involved a lot of thinking and now my head kind of hurts. This is a tough lesson." play="B15" />
-      <Item id="4" agent="Cristina" text=" Yes, this lesson is a tough one, but you both  did so well and practice makes perfect. The more we make these connections the easier it becomes!" speech=" Yes, this lesson is a tough one, but you both  did so well and practice makes perfect. The more we make these connections the easier it becomes!" play="A36" />
-      <Item id="5" agent="Jordan" text="I sure hope so!" speech="I sure hope so!" play="B16" />
+      <Item id="1" agent="ComputerTutor" text="The correct answer is, what the G E D means to me. This story is about how the writer is going to earn a G E D in the hopes of working with computers in the future. The writer does talk about slacking off in school, but also says that it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school. The writer does not talk about how to use a computer, so this can't be the title either." speech="The correct answer is, what the G E D means to me. This story is about how the writer is going to earn a G E D in the hopes of working with computers in the future. The writer does talk about slacking off in school, but also says that it did not pay off. The writer has to go back to school so the title can't be, it pays to slack off in school. The writer does not talk about how to use a computer, so this can't be the title either." play="A34" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, What about you. What did you think the answer was?" speech="ComputerStudent1, what about you. What did you think the answer was?" play="A35" />
+      <Item id="3" agent="ComputerStudent1" text="I was not sure about this one. Answering this question involved a lot of thinking and now my head kind of hurts. This is a tough lesson." speech="I was not sure about this one. Answering this question involved a lot of thinking and now my head kind of hurts. This is a tough lesson." play="B15" />
+      <Item id="4" agent="ComputerTutor" text=" Yes, this lesson is a tough one, but you both  did so well and practice makes perfect. The more we make these connections the easier it becomes!" speech=" Yes, this lesson is a tough one, but you both  did so well and practice makes perfect. The more we make these connections the easier it becomes!" play="A36" />
+      <Item id="5" agent="ComputerStudent1" text="I sure hope so!" speech="I sure hope so!" play="B16" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TP1">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's take a closer look at the first paragraph of the passage." speech="Let's take a closer look at the first paragraph of the passage." media="media/Lesson15-Activity-Main1.html" play="A37">
+        <Question id="1" agent="ComputerTutor" text="Let's take a closer look at the first paragraph of the passage." speech="Let's take a closer look at the first paragraph of the passage." media="media/Lesson15-Activity-Main1.html" play="A37">
           <Answers>
-            <Answer name="MainQuestion" agent="Cristina" type="MainQuestion" text="_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?" speech="_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you red in this text?" keys="any" threshold="" play="_user_,A38" />
+            <Answer name="MainQuestion" agent="ComputerTutor" type="MainQuestion" text="_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?" speech="_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you red in this text?" keys="any" threshold="" play="_user_,A38" />
           </Answers>
         </Question>
       </Questions>
@@ -110,7 +110,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below." speech="The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below." media="" play="A39">
+            <Hint id="1" agent="ComputerTutor" text="The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below." speech="The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below." media="" play="A39">
               <Answers />
             </Hint>
           </Hints>
@@ -121,9 +121,9 @@
     </TutoringPack>
     <TutoringPack name="TP2">
       <Questions>
-        <Question id="1" agent="Cristina" text="Please reread the sentences in yellow in the passage." speech="Please reread the sentences in yellow in the passage." media="" play="A40">
+        <Question id="1" agent="ComputerTutor" text="Please reread the sentences in yellow in the passage." speech="Please reread the sentences in yellow in the passage." media="" play="A40">
           <Answers>
-            <Answer name="MainQuestion1" agent="Cristina" type="MainQuestion" text="_user_, press on the sentence above that supports the statement, The writer did not learn about computers in high school." speech="" keys="any" threshold="" play="_user_,A41" />
+            <Answer name="MainQuestion1" agent="ComputerTutor" type="MainQuestion" text="_user_, press on the sentence above that supports the statement, The writer did not learn about computers in high school." speech="" keys="any" threshold="" play="_user_,A41" />
           </Answers>
         </Question>
       </Questions>
@@ -131,7 +131,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below." speech="_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below." media="" play="_user_,A42">
+            <Hint id="1" agent="ComputerTutor" text="_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below." speech="_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below." media="" play="_user_,A42">
               <Answers />
             </Hint>
           </Hints>
@@ -142,9 +142,9 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="Cristina" text="Let's read this passage in the story again." speech="Let's read this passage in the story again.." media="media/Lesson15-Activity-Main2.html" play="A43">
+        <Question id="1" agent="ComputerTutor" text="Let's read this passage in the story again." speech="Let's read this passage in the story again.." media="media/Lesson15-Activity-Main2.html" play="A43">
           <Answers>
-            <Answer name="MainQuestion2" agent="Cristina" type="MainQuestion" text="_user_, Why is the writer explaining the hardships of life without a high school diploma? Please press an answer below." speech="" keys="any" threshold="" play="_user_,A44" />
+            <Answer name="MainQuestion2" agent="ComputerTutor" type="MainQuestion" text="_user_, Why is the writer explaining the hardships of life without a high school diploma? Please press an answer below." speech="" keys="any" threshold="" play="_user_,A44" />
           </Answers>
         </Question>
       </Questions>
@@ -152,7 +152,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below." speech="The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below." media="" play="A45">
+            <Hint id="1" agent="ComputerTutor" text="The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below." speech="The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below." media="" play="A45">
               <Answers />
             </Hint>
           </Hints>
@@ -163,9 +163,9 @@
     </TutoringPack>
     <TutoringPack name="TP4">
       <Questions>
-        <Question id="2" agent="Cristina" text="Take a look at the sentences in yellow in the passage." speech="Take a look at the sentences in yellow in the passage." media="" play="A46">
+        <Question id="2" agent="ComputerTutor" text="Take a look at the sentences in yellow in the passage." speech="Take a look at the sentences in yellow in the passage." media="" play="A46">
           <Answers>
-            <Answer name="MainQuestion4" agent="Cristina" type="MainQuestion" text="_user_, press on the sentence above that supports the statement, the writer wants to go back to school." speech="" keys="any" threshold="" play="_user_,A47" />
+            <Answer name="MainQuestion4" agent="ComputerTutor" type="MainQuestion" text="_user_, press on the sentence above that supports the statement, the writer wants to go back to school." speech="" keys="any" threshold="" play="_user_,A47" />
           </Answers>
         </Question>
       </Questions>
@@ -173,7 +173,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below." speech="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below." media="" play="A48">
+            <Hint id="1" agent="ComputerTutor" text="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below." speech="There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below." media="" play="A48">
               <Answers />
             </Hint>
           </Hints>
@@ -184,9 +184,9 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="Cristina" text="" speech="" media="media/Lesson15-Activity-Main3.html" play="A51">
+        <Question id="1" agent="ComputerTutor" text="" speech="" media="media/Lesson15-Activity-Main3.html" play="A51">
           <Answers>
-            <Answer name="MainQuestion5" agent="Cristina" type="MainQuestion" text="_user_, what do you think the main idea of this story is? press your answer below." speech="" keys="any" threshold="" play="_user_,A49" />
+            <Answer name="MainQuestion5" agent="ComputerTutor" type="MainQuestion" text="_user_, what do you think the main idea of this story is? press your answer below." speech="" keys="any" threshold="" play="_user_,A49" />
           </Answers>
         </Question>
       </Questions>
@@ -194,7 +194,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below." speech="In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below." media="" play="A50">
+            <Hint id="1" agent="ComputerTutor" text="In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below." speech="In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below." media="" play="A50">
               <Answers />
             </Hint>
           </Hints>
@@ -205,9 +205,9 @@
     </TutoringPack>
     <TutoringPack name="TP6">
       <Questions>
-        <Question id="1" agent="Cristina" text="Okay, We have read the whole story and picked out the main idea." speech="Okay, We have read the whole story and picked out the main idea." media="media/Lesson15-Activity-Main4.html" play="A51">
+        <Question id="1" agent="ComputerTutor" text="Okay, We have read the whole story and picked out the main idea." speech="Okay, We have read the whole story and picked out the main idea." media="media/Lesson15-Activity-Main4.html" play="A51">
           <Answers>
-            <Answer name="MainQuestion6" agent="Cristina" type="MainQuestion" text=" _user_, which of these choices do you think is the best title of this text? press your answer at the top of the page." speech="" keys="any" threshold="" play="_user_,A52" />
+            <Answer name="MainQuestion6" agent="ComputerTutor" type="MainQuestion" text=" _user_, which of these choices do you think is the best title of this text? press your answer at the top of the page." speech="" keys="any" threshold="" play="_user_,A52" />
           </Answers>
         </Question>
       </Questions>
@@ -215,7 +215,7 @@
         <Expectation id="1" text="">
           <Answers />
           <Hints>
-            <Hint id="1" agent="Cristina" text="The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below." speech="The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below." media="" play="A53">
+            <Hint id="1" agent="ComputerTutor" text="The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below." speech="The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below." media="" play="A53">
               <Answers />
             </Hint>
           </Hints>
@@ -278,7 +278,7 @@
     </Rule>
     <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
-      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="MoreTime" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop" hasItem="" priority="1" frequency="" description="">
@@ -290,12 +290,12 @@
     <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
       <Action agent="System" act="PlayAudio" data="" id="2" />
-      <Action agent="Cristina" act="CannedExpression" data="Click" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="Click" id="3" />
       <Action agent="System" act="WaitForEvent" data="30" id="4" />
     </Rule>
     <Rule name="HasTP" status="NewPage" response="" event="" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="ShowItem" id="1" />
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="GetMediaItem" data="" id="3" />
       <Action agent="System" act="Wait" data="5" id="4" />
     </Rule>
@@ -340,23 +340,23 @@
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="Prompt(TP)" status="Prompt" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="AskMainQuestion" data="" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="1" />
       <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
       <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
     <Rule name="AskQ(inanswers)" status="AskQ" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="Cristina" act="Answer" data="MainQuestion" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="MainQuestion" id="1" />
       <Action agent="System" act="SetStatus" data="UserAnswer" id="2" />
       <Action agent="System" act="WaitForEvent" data="90" id="3" />
     </Rule>
     <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
     </Rule>
     <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
       <Action agent="System" act="GetExpectation" data="" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
@@ -372,7 +372,7 @@
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="Pump" id="1" />
       <Action agent="System" act="SetStatus" data="Pump" id="2" />
       <Action agent="System" act="WaitForEvent" data="90" id="3" />
     </Rule>
@@ -382,30 +382,30 @@
       <Action agent="System" act="SetStatus" data="GoBack" id="3" />
     </Rule>
     <Rule name="HasHint" status="GetHint" response="" event="" hasItem="true" priority="" frequency="" description="">
-      <Action agent="Cristina" act="DeliverHint" data="" id="1" />
+      <Action agent="ComputerTutor" act="DeliverHint" data="" id="1" />
       <Action agent="System" act="SetStatus" data="DeliverHint" id="2" />
       <Action agent="System" act="WaitForEvent" data="90" id="3" />
     </Rule>
     <Rule name="PumpCorrect" status="Pump" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="PumpAny" status="Pump" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="GetExpectation" data="" id="1" />
+      <Action agent="ComputerTutor" act="GetExpectation" data="" id="1" />
       <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="HintCorrect" status="DeliverHint" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
     </Rule>
     <Rule name="HintAny" status="DeliverHint" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
       <Action agent="System" act="DeliverRigidPack" data="TP" id="3" />
       <Action agent="System" act="SetStatus" data="GoBack" id="4" />
