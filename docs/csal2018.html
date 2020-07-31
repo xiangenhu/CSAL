@@ -33,25 +33,8 @@
     var thLoaded=false;
 	$( document ).ready(function() {
 	   loadCharas();
-		var aud = document.getElementById("audio");
-			aud.onended = function() { 	
-			if(loaded==2 && thLoaded==false) {
-			thLoaded=true;		
-			} else if(loaded==2 && thLoaded==true) {
-				agentBusy=false;	
-			}
-			
-		};
-			aud.onplaying = function() { 
-			if(loaded==2 && thLoaded==true) {
-			agentBusy=true;
-			}
-		};
 	   }
 	)
-	function TestSpeech(){
-	   startLesson()
-	}
 	</script>
 </head>
 
@@ -59,7 +42,7 @@
 
 <audio id="audio"></audio> 
         <div id="talkingHeads"></div>
-	<button id="StartingBtn" align="center" onclick="TestSpeech()"><h3>Please wait until you see the agents and then click on the Next button below to proceed.</h3></button> 
+	<button id="StartingBtn" align="center" onclick="startLesson()"><h3>Please wait until you see the agents and then click on the Next button below to proceed.</h3></button> 
     <div id="containerNoImg">
 		<div id="mainscreen" style="display:none">
         <div id="PB">Progress Bar

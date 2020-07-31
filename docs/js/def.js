@@ -21,7 +21,7 @@ var F2=qs('F2','Head');
 var V2=qs('V2','Matthew');	
 
 	
-var C3=qs('C3','Anna');
+var C3=qs('C3','');
 var CR3=C3
 var F3=qs('F3','Head');
 var V3=qs('V3','Kimberly');
@@ -104,7 +104,6 @@ function loadCharas(){
 		s +='<div id="'+C1+'Renderer"></div>';
 		s +='</div>';
 		s += '</td>';
-
 	}
 	if (C2.length>1)	{
 	    s += '<td align="center">';
@@ -155,5 +154,15 @@ function loadCharas(){
 
 
 function HandleCMD(id,cmd){
+	
 	}
+	
+function AudioPlaying(){
+	var currentAudio = document.getElementById("audio");
+    return currentAudio
+        && currentAudio.currentTime > 0
+        && !currentAudio.paused
+        && !currentAudio.ended
+        && currentAudio.readyState > 2;
+}
 	

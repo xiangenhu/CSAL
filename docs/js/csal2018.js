@@ -242,7 +242,7 @@ document.getElementById('containerNoImg').style.display="block";
 function repeatSpeakList()
 {
 	if(SpeakRepeatList.length==0)return;
-	agentBusy = true;
+	agentBusy = AudioPlaying();
 	
 	for(var i=0; i<SpeakRepeatList.length;i++)
 	{
@@ -322,6 +322,7 @@ function setProgressValue(currentMediaUrl) {
 
 
 function runActions() {
+	agentBusy=AudioPlaying();
 	if (agentBusy == true) {
 		return;
 	}
@@ -388,9 +389,12 @@ function runActions() {
 				var uname = qs("SName","John");
 				data = data.replace("_user_",uname);
 				// data = agentNum + ":" + data;
+				var action="<say>"+data+"<cmd done='1'/></say>";
 				if (agentNum=="0"){
+//					playTTS(C1, action);
 			    msSpeakQueued(C1,data)
 				} else{
+//					playTTS(C2, action);
 					msSpeakQueued(C2,data)
 				}
 				//AngentSpeak(data);
@@ -398,8 +402,7 @@ function runActions() {
 			case "Play":
 				if(talkingheadUsing=="Play")
 				{
-					 playList = setPlayList(agentNum, data);
-
+					playList = setPlayList(agentNum, data);
 					repeatList = repeatList.concat(playList);
 					AngentPlay(playList);
 				}
@@ -408,10 +411,9 @@ function runActions() {
 				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
-//			    msSpeakQueued(C1,data);
 				if(talkingheadUsing=="Speak2")
 				{
-					agentBusy = true;
+					agentBusy = AudioPlaying();
 					var SName = sessionStorage.getItem("SName");
 					data = data.replace("_user_,", "#"+SName+"#");
 					data = data.replace("_user_!", "#"+SName+"#");
@@ -699,7 +701,7 @@ function isPunctuation(ch)	{
 	}
 function AngentSpeak(data) {
 	if (talkingheadOn == true) {
-		agentBusy = true;
+		agentBusy = AudioPlaying();
 		document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
 	} else
 	if (talkingheadOn == false) {
@@ -712,7 +714,7 @@ var playListStatus = false;
 
 function AngentPlay(playList) {
 	if (talkingheadOn == true) {
-		agentBusy = true;
+		agentBusy = AudioPlaying();
 		document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "on");
 		playList.splice(0, 1);
 
@@ -723,7 +725,7 @@ function AngentPlay(playList) {
 		}
 
 	} else if (talkingheadOn == false) {
-		agentBusy = true;
+		agentBusy =AudioPlaying();
 
 		document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "off");
 		playList.splice(0, 1);
@@ -1210,7 +1212,7 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	PutStatus == false;
 	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
 	actions = recoveryActions;
-	agentBusy = true;
+	agentBusy = AudioPlaying();
 	StartTimer();
 	checkLessonConfig(lessonID, PresentationHistory.progressBarValue);
 }

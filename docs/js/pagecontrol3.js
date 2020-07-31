@@ -6,16 +6,13 @@ var domainURL = "https://ace.autotutor.org";
 // var scriptFolderURL = "https://ace.autotutor.org/at2017/scripts/";
 var scriptFolderURL = "Scripts/";
 var talkingheadLoaded = false;
-var agentBusy = false;
+var agentBusy = AudioPlaying();
 var lessonRecovery = false;
 $(document).ready(function() {
     getSystemConfig();
-    InitTalkingHead();
     InitParameters();
-    //HideHomeButton();
     $("#home").click(function() {
         mainpageInit();
-        InitTalkingHead();
         InitParameters();
         if (vidplayerBusy == true) {
             vidplayerBusy = false;
@@ -27,8 +24,6 @@ $(document).ready(function() {
     $('#textInput').keydown(function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
-            //Use the timeout so this function can return (or the dialog
-            //won't properly close)
             setTimeout(function() {
                 $('#textInputSubmit').click()
             }, 55);
@@ -169,20 +164,14 @@ function mainpageInit2() {
 
 }
 
-function InitTalkingHead() {
-	
-    //var url = scriptFolderURL + "lesson0" + "/html5/index.html?lessonName=lesson0";
-    var url = "angentsjs/speakTH.html";
 
-    //LoadTalkingHead(url, "lesson0")
-}
 
 function InitParameters() {
     actions = [];
     nextButtonStatus = false;
     idleTime = 0;
     maxIdle = 0;
-    agentBusy = false;
+    agentBusy = AudioPlaying();
 	//
 	repeatTimes=0;
 	userAnswerSpendTime=0
