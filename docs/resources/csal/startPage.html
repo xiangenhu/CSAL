@@ -119,7 +119,7 @@
 			var browserName=getBrowserName();
 			sessionStorage.setItem("GUID",getGuid);
 			sessionStorage.setItem("browser",browserName);
-			sessionStorage.setItem("currentTalkingHead","lesson0");
+			sessionStorage.setItem("currentTalkingHead","Lesson0");
 			//this sets the hover animation & cursor for buttons
 			$( ".mybutton" ).mouseover(function()
 			{ $(this).stop().animate({backgroundColor: "#f8ffca"}, 350); });
@@ -134,10 +134,10 @@
 					{
 					var LessonInfo="{'lessonId':'lesson0','lessonName':'Introduction','lessonDes':'','isRecoverable':false,'isShow':false,'activity1':'Unlock','activity2':'Unlock','activity3':'Unlock','isHasVideo':false,'videoId':'Lesson1_10.27.15.mp4:2','isHasProgressBar':false,'isHasNextButton':false,'pages':[]}";
 						using_click();
-						parent.GetScript("lesson0");
+						parent.GetScript("Lesson0");
 						//------------------------------------------------------------------------
 						sessionStorage.setItem("LessonName", "Introduction");
-						sessionStorage.setItem("LessonID", "lesson0");
+						sessionStorage.setItem("LessonID", "Lesson0");
 						sessionStorage.setItem("LessonInfo", JSON.stringify(LessonInfo));
 						sessionStorage.setItem("isHasVideo", false);
 						sessionStorage.setItem("videoId", "");

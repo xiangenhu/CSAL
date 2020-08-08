@@ -23,8 +23,10 @@ function emailIsValid(email) {
     if (isemail) {
 		return email
 	}else{
+		if (email.indexOf("%40")>-1){
+			email=email.split("%40").join("_");
+		}
 		return email.split("%20").join("_")+"@csal.autotutor.org";
-		
 	}
 }
 

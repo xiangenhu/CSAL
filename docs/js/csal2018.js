@@ -43,7 +43,7 @@ function setCurrentLessonInfo(lessonID) {
 
 	for (var i in allLessonsInfoObj) {
 		var lessonStatus = false;
-		if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId) {
+		if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId.toLowerCase()) {
 			var LessonInfo = allLessonsInfoObj[i];
 			sessionStorage.setItem("LessonName", LessonInfo.lessonName);
 			sessionStorage.setItem("LessonID", LessonInfo.lessonId);
@@ -269,7 +269,7 @@ function LoadLesson(lessonID) {
 	acePostjson.ScriptURL = aurl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
-	if (lessonID == "lesson0" || lessonID == "lesson00") {
+	if (lessonID == "Lesson0" || lessonID == "Lesson00") {
 		// acePostjson.ID = sessionStorage.getItem("GUID");
 		acePostjson.ID = sessionStorage.getItem("UID");
 
@@ -320,6 +320,20 @@ function setProgressValue(currentMediaUrl) {
 }
 
 
+function speakTurn(Data,AgentNum){
+	Data=Data.replace("ComputerTutor",C1);
+				Data=Data.replace("ComputerStudent1",C2);
+				Data=Data.replace("ComputerStudent2",C3);
+				Data=Data.replace("ComputerStudent3",C4);
+				Data=Data.replace("_self_",C1);
+				var uname = qs("SName","John");
+				Data = Data.replace("_user_",uname);
+				if (AgentNum=="0"){
+			        msSpeakQueued(C1,Data)
+				} else{
+					msSpeakQueued(C2,Data)
+				}
+}
 
 function runActions() {
 	agentBusy=AudioPlaying();
@@ -374,7 +388,7 @@ function runActions() {
 					getQuestionName = data.replace(getUserName, "_user_");
 					console.log(getQuestionName);
 				}
-				else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
+				else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="Lesson10") {
 					var getUserName = sessionStorage.getItem("uname");
 					getQuestionName = data.replace(getUserName, "_user_");
 					console.log(getQuestionName);
@@ -385,25 +399,7 @@ function runActions() {
 
 				break;
 			case "Speak":
-//				var uname = sessionStorage.getItem("uname");
-				data=data.replace("ComputerTutor",C1);
-				data=data.replace("ComputerStudent1",C2);
-				data=data.replace("ComputerStudent2",C3);
-				data=data.replace("ComputerStudent3",C4);
-				data=data.replace("_self_",C1);
-
-				var uname = qs("SName","John");
-				data = data.replace("_user_",uname);
-				// data = agentNum + ":" + data;
-				var action="<say>"+data+"<cmd done='1'/></say>";
-				if (agentNum=="0"){
-//					playTTS(C1, action);
-			    msSpeakQueued(C1,data)
-				} else{
-//					playTTS(C2, action);
-					msSpeakQueued(C2,data)
-				}
-				//AngentSpeak(data);
+//				speakTurn(data,agentNum);
 				break;
 			case "Play":
 				if(talkingheadUsing=="Play")
@@ -417,6 +413,7 @@ function runActions() {
 				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
+			    speakTurn(data,agentNum);/* 
 				if(talkingheadUsing=="Speak2")
 				{
 					agentBusy = AudioPlaying();
@@ -448,7 +445,7 @@ function runActions() {
 					 addRepeatSpeech(data);
 					 
 					  
-				}
+				} */
 				   
 
 				//console.log(agentNum,data, "Play");
@@ -585,7 +582,7 @@ function runActions() {
 				break;
 
 			case "End":
-			if (currentLessonID == "lesson10") 
+			if (currentLessonID == "Lesson10") 
 			   {
 				setProgress(100);
 				}			 
@@ -636,7 +633,7 @@ function runActions() {
 			mediaActions="unsure";
 		}
 		
-		if (currentLessonID != "lesson0") {
+		if (currentLessonID != "Lesson0") {
 
 
 		   if(mediaActions=="userInputTrue")
@@ -649,7 +646,7 @@ function runActions() {
 
 
 
-		} else if (currentLessonID == "lesson0" || currentLessonID != "lesson00") {
+		} else if (currentLessonID == "Lesson0" || currentLessonID != "Lesson00") {
 			//acePutjson.ID = sessionStorage.getItem("GUID");
 			acePutjson.ID = sessionStorage.getItem("UID");
 			acePutjson.Text = userInput;
@@ -805,13 +802,13 @@ function showScriptNextButton(data) {
 				//if (pagePath.toLowerCase() == data.toLowerCase()) 
 				 if (pagePath.toLowerCase() == dataURL) 
 				{
-				if(lessonID=="lesson8" ||  lessonID == "lesson9" || lessonID == "lesson10")
+				if(lessonID=="Lesson8" ||  lessonID == "Lesson9" || lessonID == "Lesson10")
 					{
 					   $("#mainFrame").attr("src", currentMediaUrl);
 
 						var d = new Date();
 						pageStartTimestamp = d.getTime();
-						 if(lessonID == "lesson10") // ***zc: added by z cai 11/30/2018
+						 if(lessonID == "Lesson10") // ***zc: added by z cai 11/30/2018
 						 {
 						  setProgress(getMediaObj[i].progressBarValue);
 						 }
@@ -929,8 +926,8 @@ function nextPage(data) {
 function askClickNextButton()
 {
 	var lessonID=sessionStorage.getItem("LessonID");
-	/*if(lessonID=="lesson1" ||lessonID=="lesson2" ||lessonID=="lesson4" || lessonID=="lesson6"|| lessonID=="lesson7"|| lessonID=="lesson12" || lessonID=="lesson15"|| lessonID =="lesson17" || lessonID=="lesson18"||lessonID=="lesson20"|| lessonID =="lesson21" ||lessonID == "lesson22" || lessonID=="lesson24"||lessonID=="lesson25"||  lessonID=="lesson27" || lessonID=="lesson28"||  lessonID=="lesson29"||lessonID=="lesson30"||lessonID=="lesson31" ||  lessonID=="lesson32" || lessonID == "lesson33" )*/
-	if(lessonID!="lesson10"&&lessonID!="lesson11"&&lessonID!="lesson18")
+	/*if(lessonID=="Lesson1" ||lessonID=="Lesson2" ||lessonID=="Lesson4" || lessonID=="Lesson6"|| lessonID=="Lesson7"|| lessonID=="Lesson12" || lessonID=="Lesson15"|| lessonID =="Lesson17" || lessonID=="Lesson18"||lessonID=="Lesson20"|| lessonID =="Lesson21" ||lessonID == "Lesson22" || lessonID=="Lesson24"||lessonID=="Lesson25"||  lessonID=="Lesson27" || lessonID=="Lesson28"||  lessonID=="Lesson29"||lessonID=="Lesson30"||lessonID=="Lesson31" ||  lessonID=="Lesson32" || lessonID == "Lesson33" )*/
+	if(lessonID!="Lesson10"&&lessonID!="Lesson11"&&lessonID!="Lesson18")
 	{
 		//var playList=setPlayList("0", "s1");
 		// AngentPlay(playList);
@@ -986,7 +983,7 @@ function getAgentMessage(msg)
 			userSelectedItem = msg.userSelectedItem;
 			mediaActions = msg.userAnswer;
 			var lessonID = sessionStorage.getItem("LessonID");
-			if (lessonID == "lesson8") {
+			if (lessonID == "Lesson8") {
 
 				getQuestionName = msg.question;
 			}
@@ -998,11 +995,11 @@ function getAgentMessage(msg)
 	} else {
 		mediaActions = msg;
 		var lessonID = sessionStorage.getItem("LessonID");
-		if (mediaActions == mediaActions && lessonID == "lesson8") {
+		if (mediaActions == mediaActions && lessonID == "Lesson8") {
 			repeatList = [];
 
 		}
-		if (lessonID == "lesson10" && msg == "Continue") {
+		if (lessonID == "Lesson10" && msg == "Continue") {
 			repeatList = [];
 		}
 	}
@@ -1020,7 +1017,8 @@ function GetMediaFeedBackMsg(msg) {
 
 		getMediaFeedBack = false;
 	}
-	var uname = sessionStorage.getItem("SName");
+//	var uname = sessionStorage.getItem("SName");
+	var uname = qs("SName","John");
 	msg = msg.replace("_user_", uname);
 	SpeakRepeatList=[];
 	var feedBackInfo = msg.split(':');
@@ -1034,46 +1032,7 @@ function GetMediaFeedBackMsg(msg) {
 		   addRepeatSpeech("1:"+feedBackInfo[2]);
 		}
 	}
-function GetMediaFeedBackMsg_old(msg) {
 
-	if (getMediaFeedBack == true) {
-
-		getMediaFeedBack = false;
-	}
-	var feedBackInfo = msg.split(':');
-	var agentFeedBack = feedBackInfo[1];
-	if (agentFeedBack == "Instruction" || agentFeedBack == "TAGoodAnswer") {
-
-		if (feedBackInfo[0] == "ComputerTutor") {
-
-			var test = feedBackInfo[2];
-
-			if (test.indexOf("_user_") >= 0) {
-				playList = setPlayList(0, feedBackInfo[3]);
-				repeatList = repeatList.concat(playList);
-				AngentPlay(playList);
-			} else {
-				playList = setPlayList(0, feedBackInfo[3]);
-				repeatList = repeatList.concat(playList);
-				AngentPlay(playList);
-			}
-
-		}
-
-	} else if (agentFeedBack == "SAGoodAnswer" || agentFeedBack == "SABadAnswer" || agentFeedBack == "SABadAnswer") {
-		if (feedBackInfo[0] == "ComputerStudent1") {
-
-
-			playList = setPlayList(1, feedBackInfo[3]);
-			//playList = setPlayList(1, feedBackInfo[4]);
-			repeatList = repeatList.concat(playList);
-			AngentPlay(playList);
-
-
-		}
-	}
-
-}
 function setPresentationIDObj(lessonID, currentScripturl) {
 	PresentationIDObj = {};
 	PresentationIDObj.lessonID = lessonID;

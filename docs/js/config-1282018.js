@@ -14,7 +14,7 @@ var systemConfig={
   },
   "lessonsConfig": [
     {
-      "lessonId": "lesson0",
+      "lessonId": "Lesson0",
       "lessonName": "Introduction",
       "lessonDes": "Introduction",
       "isRecoverable": false,
@@ -29,7 +29,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "lesson1",
+      "lessonId": "Lesson1",
       "lessonName": "Text Signals",
       "lessonDes": "Predicting Topic: Using Text Signals",
       "ishasReadingPage": true,
@@ -283,7 +283,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson2",
+      "lessonId": "Lesson2",
       "lessonName": "Purpose of Texts",
       "lessonDes": "Predicting Purpose: Inform Persuade Entertain",
       "ishasReadingPage": true,
@@ -598,7 +598,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson3",
+      "lessonId": "Lesson3",
       "lessonName": "Complex Texts",
       "lessonDes": "Predicting Purpose: Hybrid Texts",
       "ishasReadingPage": true,
@@ -894,7 +894,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson4",
+      "lessonId": "Lesson4",
       "lessonName": "Word Parts",
       "lessonDes": "Acquiring Vocabulary: Prefixes and Suffixes",
       "ishasReadingPage": false,
@@ -1170,7 +1170,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson5",
+      "lessonId": "Lesson5",
       "lessonName": "Punctuation",
       "lessonDes": "Clarifying Confusion: Context Clues - Punctuation",
       "ishasReadingPage": false,
@@ -1404,7 +1404,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson6",
+      "lessonId": "Lesson6",
       "lessonName": "Word Meaning Clues",
       "lessonDes": "Clarifying Confusion: Context Clues",
       "ishasReadingPage": true,
@@ -1588,7 +1588,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson7",
+      "lessonId": "Lesson7",
       "lessonName": "Learning New Words",
       "lessonDes": "Acquiring Words Strategy",
       "ishasReadingPage": false,
@@ -1689,7 +1689,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson8",
+      "lessonId": "Lesson8",
       "lessonName": "Multiple Meaning Words",
       "lessonDes": "Clarifying Confusion: Multiple Meaning Words",
       "ishasReadingPage": false,
@@ -1946,7 +1946,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson9",
+      "lessonId": "Lesson9",
       "lessonName": "Pronouns",
       "lessonDes": "Clarifying Confusion: Pronouns",
       "ishasReadingPage": false,
@@ -2243,7 +2243,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson10",
+      "lessonId": "Lesson10",
       "lessonName": "Non-Literal Language",
       "lessonDes": "Clarifying Confusion: Non-Literal Language",
       "ishasReadingPage": false,
@@ -2500,7 +2500,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson11",
+      "lessonId": "Lesson11",
       "lessonName": "Review 1",
       "lessonDes": "Review: Acquiring and Clarifying Skills",
       "ishasReadingPage": false,
@@ -2629,7 +2629,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson12",
+      "lessonId": "Lesson12",
       "lessonName": "Key Information",
       "lessonDes": "Differentiating Between Texts Using Key Information",
       "ishasReadingPage": true,
@@ -2750,7 +2750,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson13",
+      "lessonId": "Lesson13",
       "lessonName": "Stories 1",
       "lessonDes": "Evaluating: Narrative Texts",
       "ishasReadingPage": false,
@@ -2844,7 +2844,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson14",
+      "lessonId": "Lesson14",
       "lessonName": "Connecting Ideas",
       "lessonDes": "Evaluating: Bridge Building in Narratives",
       "ishasReadingPage": true,
@@ -2933,7 +2933,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson15",
+      "lessonId": "Lesson15",
       "lessonName": "Story Maps",
       "lessonDes": "Elaborating: Narrative Inferences",
       "ishasReadingPage": true,
@@ -3194,7 +3194,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson16",
+      "lessonId": "Lesson16",
       "lessonName": "Main Ideas",
       "lessonDes": "Evaluating Understanding: Topic Main Idea Support",
       "ishasReadingPage": true,
@@ -3434,7 +3434,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson17",
+      "lessonId": "Lesson17",
       "lessonName": "Persuasion 1",
       "lessonDes": "Evaluating: Persuasive Argument and Reasoning",
       "ishasReadingPage": true,
@@ -3737,7 +3737,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson18",
+      "lessonId": "Lesson18",
       "lessonName": "Review 2",
       "lessonDes": "Review: Predicting Acquiring Clarifying and Evaluating Skills",
       "ishasReadingPage": false,
@@ -3866,7 +3866,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson19",
+      "lessonId": "Lesson19",
       "lessonName": "Claims versus Support",
       "lessonDes": "Evaluating: Statement and Explanation Texts",
       "ishasReadingPage": true,
@@ -3924,7 +3924,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson20",
+      "lessonId": "Lesson20",
       "lessonName": "Problems and Solutions",
       "lessonDes": "Evaluating: Problem and Solution Texts",
       "ishasReadingPage": true,
@@ -4090,7 +4090,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson21",
+      "lessonId": "Lesson21",
       "lessonName": "Cause and Effect",
       "lessonDes": "Evaluating: Cause and Effect Texts",
       "ishasReadingPage": true,
@@ -4386,7 +4386,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson22",
+      "lessonId": "Lesson22",
       "lessonName": "Describing Things",
       "lessonDes": "Evaluating: Description and Spatial Texts",
       "ishasReadingPage": true,
@@ -4549,7 +4549,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson23",
+      "lessonId": "Lesson23",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Evaluating: Compare and Contrast Texts",
       "ishasReadingPage": true,
@@ -4789,7 +4789,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson24",
+      "lessonId": "Lesson24",
       "lessonName": "Time and Order",
       "lessonDes": "Evaluating: Time Order/Order of Importance Texts",
       "ishasReadingPage": true,
@@ -5064,7 +5064,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson25",
+      "lessonId": "Lesson25",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Evaluating: Procedural Texts",
       "ishasReadingPage": true,
@@ -5339,7 +5339,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson26",
+      "lessonId": "Lesson26",
       "lessonName": "Review 3",
       "lessonDes": "Review of E-S in PACES",
       "ishasReadingPage": false,
@@ -5355,7 +5355,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "lesson27",
+      "lessonId": "Lesson27",
       "lessonName": "Stories 2",
       "lessonDes": "Elaborating: Bridging Inferences - Narrative",
       "ishasReadingPage": true,
@@ -5429,7 +5429,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson28",
+      "lessonId": "Lesson28",
       "lessonName": "Inferences from Texts",
       "lessonDes": "Elaborating: Informational Inferences",
       "ishasReadingPage": true,
@@ -5683,7 +5683,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29",
+      "lessonId": "Lesson29",
       "lessonName": "Persuasion 2",
       "lessonDes": "Elaborating: Persuasive Inferences",
       "ishasReadingPage": true,
@@ -5930,7 +5930,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson30",
+      "lessonId": "Lesson30",
       "lessonName": "Forms and Documents",
       "lessonDes": "Evaluating Understanding: Documents",
       "ishasReadingPage": true,
@@ -6184,7 +6184,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson31",
+      "lessonId": "Lesson31",
       "lessonName": "Job Applications",
       "lessonDes": "Computer Skills: Applications",
       "ishasReadingPage": false,
@@ -6257,7 +6257,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson32",
+      "lessonId": "Lesson32",
       "lessonName": "Searching the Web",
       "lessonDes": "Computer Skills: Online Research",
       "ishasReadingPage": false,
@@ -6358,7 +6358,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson33",
+      "lessonId": "Lesson33",
       "lessonName": "Using Email",
       "lessonDes": "Computer Skills: Introduction to E-mail",
       "ishasReadingPage": false,
@@ -6459,7 +6459,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson34",
+      "lessonId": "Lesson34",
       "lessonName": "Social Media",
       "lessonDes": "Computer Skills: Introduction to Social Media",
       "ishasReadingPage": false,

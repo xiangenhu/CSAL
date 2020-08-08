@@ -14,7 +14,7 @@ var systemConfig={
   },
   "lessonsConfig": [
      {
-      "lessonId": "lesson15_2_emh",
+      "lessonId": "Lesson15_2_emh",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -309,7 +309,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_emh",
+      "lessonId": "Lesson23_2_emh",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -580,7 +580,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_emh",
+      "lessonId": "Lesson25_2_emh",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -891,7 +891,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_emh",
+      "lessonId": "Lesson29_2_emh",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -1170,7 +1170,7 @@ var systemConfig={
       ]
     },
    {
-      "lessonId": "lesson15_2_ehm",
+      "lessonId": "Lesson15_2_ehm",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -1465,7 +1465,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_ehm",
+      "lessonId": "Lesson23_2_ehm",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -1736,7 +1736,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_ehm",
+      "lessonId": "Lesson25_2_ehm",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -2047,7 +2047,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_ehm",
+      "lessonId": "Lesson29_2_ehm",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -2326,7 +2326,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "lesson15_2_meh",
+      "lessonId": "Lesson15_2_meh",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -2621,7 +2621,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_meh",
+      "lessonId": "Lesson23_2_meh",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -2892,7 +2892,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_meh",
+      "lessonId": "Lesson25_2_meh",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -3203,7 +3203,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_meh",
+      "lessonId": "Lesson29_2_meh",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -3482,7 +3482,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "lesson15_2_mhe",
+      "lessonId": "Lesson15_2_mhe",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -3777,7 +3777,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_mhe",
+      "lessonId": "Lesson23_2_mhe",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -4048,7 +4048,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_mhe",
+      "lessonId": "Lesson25_2_mhe",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -4359,7 +4359,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_mhe",
+      "lessonId": "Lesson29_2_mhe",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -4638,7 +4638,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "lesson15_2_hem",
+      "lessonId": "Lesson15_2_hem",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -4933,7 +4933,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_hem",
+      "lessonId": "Lesson23_2_hem",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -5204,7 +5204,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_hem",
+      "lessonId": "Lesson25_2_hem",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -5515,7 +5515,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_hem",
+      "lessonId": "Lesson29_2_hem",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -5794,7 +5794,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "lesson15_2_hme",
+      "lessonId": "Lesson15_2_hme",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -6089,7 +6089,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson23_2_hme",
+      "lessonId": "Lesson23_2_hme",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -6360,7 +6360,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "lesson25_2_hme",
+      "lessonId": "Lesson25_2_hme",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -6671,7 +6671,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29_2_hme",
+      "lessonId": "Lesson29_2_hme",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,

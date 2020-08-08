@@ -4,7 +4,7 @@
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
-		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson30") {
+		    if (lessonID == "Lesson1" ||lessonID == "Lesson2" || lessonID == "Lesson6" || lessonID == "Lesson29" || lessonID == "Lesson7" || lessonID == "Lesson4" || lessonID == "Lesson25" || lessonID == "Lesson20" || lessonID == "Lesson22"|| lessonID == "Lesson24"|| lessonID == "Lesson34" || lessonID == "Lesson16" || lessonID == "Lesson31" || lessonID == "Lesson33" || lessonID == "Lesson12" || lessonID == "Lesson17" || lessonID == "Lesson30") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -51,7 +51,7 @@
 
 		        }
 
-		    }  else if (lessonID == "lesson18") {
+		    }  else if (lessonID == "Lesson18") {
 		        var countAnswerTime = 1;
 				lesson18CountTotalAnswerTimes++;
 		        if (TotalScoreArr.length > 0) {
@@ -111,7 +111,7 @@
 
 		        }
 
-		    } else if ( lessonID == "lesson27" ) {
+		    } else if ( lessonID == "Lesson27" ) {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -160,7 +160,7 @@
 
 				setProgress(progressBarValue);
 
-		    } else if (lessonID == "lesson9") {
+		    } else if (lessonID == "Lesson9") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -211,7 +211,7 @@
 
 
 
-		    } else if (lessonID == "lesson10") {
+		    } else if (lessonID == "Lesson10") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -262,7 +262,7 @@
 
 
 
-		    } else if (lessonID == "lesson8") {
+		    } else if (lessonID == "Lesson8") {
 
 		        var n = userAnswer.search(/MCQuizC/i);
 		        if (n != -1) {
@@ -321,7 +321,7 @@
 		function showEndingPage() {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    //user can answer two times for a question
-		    if (lessonID == "lesson1") {
+		    if (lessonID == "Lesson1") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -348,7 +348,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson2") {
+		    } else if (lessonID == "Lesson2") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -372,7 +372,7 @@
 
 		        }
 
-		    }else if (lessonID == "lesson4") {
+		    }else if (lessonID == "Lesson4") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -396,7 +396,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson6") {
+		    } else if (lessonID == "Lesson6") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -420,7 +420,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson7") {
+		    } else if (lessonID == "Lesson7") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -460,7 +460,7 @@
 		        }
 
 
-		    } else if (lessonID == "lesson9") {
+		    } else if (lessonID == "Lesson9") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -484,7 +484,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson10") {
+		    } else if (lessonID == "Lesson10") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -508,7 +508,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson18") {
+		    } else if (lessonID == "Lesson18") {
 		       
 		        if (lesson18CountTotalAnswerTimes < 23 && lesson18score>=3000) {
 
@@ -521,7 +521,7 @@
 				 lesson18score=0;
 				 lesson18CountTotalAnswerTimes=0;
 
-		    } else if (lessonID == "lesson20") {
+		    } else if (lessonID == "Lesson20") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -545,7 +545,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson22") {
+		    } else if (lessonID == "Lesson22") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -584,7 +584,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson24") {
+		    } else if (lessonID == "Lesson24") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -623,7 +623,7 @@
 
 		        }
 
-		     } else if (lessonID == "lesson16") {
+		     } else if (lessonID == "Lesson16") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -662,7 +662,7 @@
 
 		        }
 
-		    }  else if (lessonID == "lesson25") {
+		    }  else if (lessonID == "Lesson25") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -705,7 +705,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson27") {
+		    } else if (lessonID == "Lesson27") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -729,7 +729,7 @@
 
 		            }
 
-		    } else if (lessonID == "lesson29") {
+		    } else if (lessonID == "Lesson29") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -753,7 +753,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson8") {
+		    } else if (lessonID == "Lesson8") {
 		        var countPerformance = 0;
 		        for (var i in TotalScoreArr) {
 		            if (TotalScoreArr[i].userAnswer == "Correct") {
@@ -774,7 +774,7 @@
 		        }
 
 		    }
-			else if (lessonID == "lesson34") {
+			else if (lessonID == "Lesson34") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -798,7 +798,7 @@
 
 		        }
 
-		    } else if (lessonID == "lesson31"){
+		    } else if (lessonID == "Lesson31"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -821,7 +821,7 @@
 		            userPerformancePage("Failed");
 
 		        } 
-			} else if (lessonID == "lesson33"){
+			} else if (lessonID == "Lesson33"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -844,7 +844,7 @@
 		            userPerformancePage("Failed");
 
 		        } 
-			} else if (lessonID == "lesson12"){
+			} else if (lessonID == "Lesson12"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -868,7 +868,7 @@
 
 		        } 
 			} 
-			else if (lessonID == "lesson17") {
+			else if (lessonID == "Lesson17") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -908,7 +908,7 @@
 		        }
 
 
-		    } 	else if (lessonID == "lesson30") {
+		    } 	else if (lessonID == "Lesson30") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {

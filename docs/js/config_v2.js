@@ -14,7 +14,7 @@ var systemConfig={
   },
   "lessonsConfig": [
     {
-      "lessonId": "lesson0",
+      "lessonId": "Lesson0",
       "lessonName": "First Lesson",
       "lessonDes": "How to use AutoTutor on the computer",
       "isRecoverable": false,
@@ -29,7 +29,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "lesson1",
+      "lessonId": "Lesson1",
       "lessonName": "Text Signals",
       "lessonDes": "Finding the topic of a text",
       "ishasReadingPage": true,
@@ -283,7 +283,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson2",
+      "lessonId": "Lesson2",
       "lessonName": "Purpose of Texts",
       "lessonDes": "Tests that inform, persuade, versus entertain",
       "ishasReadingPage": true,
@@ -598,7 +598,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson3",
+      "lessonId": "Lesson3",
       "lessonName": "Complex Texts",
       "lessonDes": "Predicting Purpose: Hybrid Texts",
       "ishasReadingPage": true,
@@ -894,7 +894,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson4",
+      "lessonId": "Lesson4",
       "lessonName": "Word Parts",
       "lessonDes": "How to break up words into parts",
       "ishasReadingPage": false,
@@ -1170,7 +1170,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson5",
+      "lessonId": "Lesson5",
       "lessonName": "Punctuation",
       "lessonDes": "The meaning of punctuation marks",
       "ishasReadingPage": false,
@@ -1404,7 +1404,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson6",
+      "lessonId": "Lesson6",
       "lessonName": "Word Meaning Clues",
       "lessonDes": "How to use text clues to figure out the meaning of a word",
       "ishasReadingPage": true,
@@ -1588,7 +1588,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson7",
+      "lessonId": "Lesson7",
       "lessonName": "Learning New Words",
       "lessonDes": "How to learn the meaning of new words",
       "ishasReadingPage": false,
@@ -1689,7 +1689,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson8",
+      "lessonId": "Lesson8",
       "lessonName": "Multiple Meaning Words",
       "lessonDes": "How to decide which meaning of a word is relevant",
       "ishasReadingPage": false,
@@ -1946,7 +1946,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson9",
+      "lessonId": "Lesson9",
       "lessonName": "Pronouns",
       "lessonDes": "How to decide what a pronoun refers to",
       "ishasReadingPage": false,
@@ -2243,7 +2243,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson10",
+      "lessonId": "Lesson10",
       "lessonName": "Non-Literal Language",
       "lessonDes": "Sentences that have unusual meanings",
       "ishasReadingPage": false,
@@ -2500,7 +2500,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson11",
+      "lessonId": "Lesson11",
       "lessonName": "Review 1",
       "lessonDes": "Review of understanding words and sentences",
       "ishasReadingPage": false,
@@ -2629,7 +2629,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson12",
+      "lessonId": "Lesson12",
       "lessonName": "Key Information",
       "lessonDes": "How to identify the type of text ",
       "ishasReadingPage": true,
@@ -2750,7 +2750,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson13",
+      "lessonId": "Lesson13",
       "lessonName": "Simple Stories",
       "lessonDes": "The parts of simple stories",
       "ishasReadingPage": false,
@@ -2844,7 +2844,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson14",
+      "lessonId": "Lesson14",
       "lessonName": "Connecting Ideas",
       "lessonDes": "Linking sentences with inferences",
       "ishasReadingPage": true,
@@ -2933,7 +2933,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson15",
+      "lessonId": "Lesson15",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -3194,7 +3194,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson16",
+      "lessonId": "Lesson16",
       "lessonName": "Main Ideas",
       "lessonDes": "Finding the main idea in a text",
       "ishasReadingPage": true,
@@ -3434,7 +3434,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson17",
+      "lessonId": "Lesson17",
       "lessonName": "Persuasive Texts",
       "lessonDes": "Finding the main arguments and support",
       "ishasReadingPage": true,
@@ -3737,7 +3737,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson18",
+      "lessonId": "Lesson18",
       "lessonName": "Review 2",
       "lessonDes": "Review of different types of texts",
       "ishasReadingPage": false,
@@ -3866,7 +3866,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson19",
+      "lessonId": "Lesson19",
       "lessonName": "Claims versus Support",
       "lessonDes": "Identifying main ideas versus suport for the ideas",
       "ishasReadingPage": true,
@@ -3924,7 +3924,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson20",
+      "lessonId": "Lesson20",
       "lessonName": "Problems and Solutions",
       "lessonDes": "Identifying problems and how to solve them",
       "ishasReadingPage": true,
@@ -4090,7 +4090,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson21",
+      "lessonId": "Lesson21",
       "lessonName": "Cause and Effect",
       "lessonDes": "Finding causes and consequences in texts",
       "ishasReadingPage": true,
@@ -4386,7 +4386,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson22",
+      "lessonId": "Lesson22",
       "lessonName": "Describing Things",
       "lessonDes": "Describing prople, places, objects and ideas",
       "ishasReadingPage": true,
@@ -4549,7 +4549,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson23",
+      "lessonId": "Lesson23",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -4789,7 +4789,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson24",
+      "lessonId": "Lesson24",
       "lessonName": "Time and Order",
       "lessonDes": "Ordering events in time and importance",
       "ishasReadingPage": true,
@@ -5064,7 +5064,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson25",
+      "lessonId": "Lesson25",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -5339,7 +5339,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson26",
+      "lessonId": "Lesson26",
       "lessonName": "Review 3",
       "lessonDes": "Review of E-S in PACES",
       "ishasReadingPage": false,
@@ -5355,7 +5355,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "lesson27",
+      "lessonId": "Lesson27",
       "lessonName": "A Personal Story",
       "lessonDes": "Reading a personal story about an adult   ",
       "ishasReadingPage": true,
@@ -5429,7 +5429,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson28",
+      "lessonId": "Lesson28",
       "lessonName": "Inferences from Texts",
       "lessonDes": "Making inferences in informational texts",
       "ishasReadingPage": true,
@@ -5683,7 +5683,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson29",
+      "lessonId": "Lesson29",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -5930,7 +5930,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson30",
+      "lessonId": "Lesson30",
       "lessonName": "Forms and Documents",
       "lessonDes": "Understanding forms, documents, and surveys",
       "ishasReadingPage": true,
@@ -6184,7 +6184,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson31",
+      "lessonId": "Lesson31",
       "lessonName": "Job Applications",
       "lessonDes": "How to fill out a job application",
       "ishasReadingPage": false,
@@ -6257,7 +6257,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson32",
+      "lessonId": "Lesson32",
       "lessonName": "Searching the Web",
       "lessonDes": "How to search the web for information",
       "ishasReadingPage": false,
@@ -6358,7 +6358,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson33",
+      "lessonId": "Lesson33",
       "lessonName": "Using Email",
       "lessonDes": "How to commuicate with people using email",
       "ishasReadingPage": false,
@@ -6459,7 +6459,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "lesson34",
+      "lessonId": "Lesson34",
       "lessonName": "Social Media",
       "lessonDes": "How to use facebook and other social media ",
       "ishasReadingPage": false,
