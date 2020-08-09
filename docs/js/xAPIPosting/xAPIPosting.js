@@ -133,9 +133,12 @@ function init() {
 
 
 function AceResponse(Data,averb){
-	if (Data.ACEActions.length==0) {
+	if (Data.ACEActions!=null) {
+		if (Data.ACEActions.length==0) {
 		return;
+		}
 	}
+	
 	var SKOGuid=qs("guid","guid");
 	var AnActor={mbox:"mailto:"+qs("LessonName","Lesson")+"_"+qs("guid","guid")+"@csal.memphis.edu",
 				 name:qs("LessonName","Lesson"),
