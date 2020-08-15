@@ -84,11 +84,22 @@ left: 11%;
 
 }
 
+#debuggingBtn{
+	display:none;
+	bottom:20px;
+	left:0px;
+	width:100%;
+	text-align:center;
+    position: absolute;
+	background-color: LightGrey;
+	
+}
+
 #readText {
     width: 30px;
     height: 30px;
     background-color: black;
-       top: -30px;
+    top: -30px;
     margin-right: 280px;
     cursor: pointer;
     position: relative;

@@ -33,8 +33,15 @@
     var thLoaded=false;
 	$( document ).ready(function() {
 	   loadCharas();
+	   if (DEBUGGING=="1"){
+	       $("#debuggingBtn").show();
+		}
 	   }
 	)
+	function DebuggingStart(){
+	  StopTimer();
+      runActions();	  
+	}
 	</script>
 </head>
 
@@ -91,7 +98,12 @@
         </div>
     </div>
 	</div>
-
+	<div  id="debuggingBtn">
+    <button onclick="DebuggingStart()">Click for next Step</button><br/>
+	<div id="ActionAgent"></div>
+	<div id="ActionType"></div>
+	<div id="ActionData"></div>
+	</div>
 </body>
 
 </html>

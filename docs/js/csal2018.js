@@ -38,6 +38,8 @@ var isFirstTimer=true;
 var talkingheadUsing="Speak2";
 var SpeakRepeatList = [];
 
+var DEBUGGING=qs("DEBUGGING","0");
+
 var TRANSSCRIPT_CTRL = "transcript";
 function setCurrentLessonInfo(lessonID) {
 
@@ -356,6 +358,11 @@ function runActions() {
 		var agentNum;
 		var isSpeakingSegments = false;
 		console.log(actions[0]);
+		if (DEBUGGING=="1"){
+			$("#ActionAgent").text(agent);
+			$("#ActionType").text(act);
+			$("#ActionData").text(data);
+		}
 		if (agent != "ComputerTutor" && agent != "ComputerStudent1" && agent != "System") {
 			return;
 		} else if (agent == "ComputerTutor") {
@@ -399,7 +406,7 @@ function runActions() {
 
 				break;
 			case "Speak":
-//				speakTurn(data,agentNum);
+				speakTurn(data,agentNum);
 				break;
 			case "Play":
 				if(talkingheadUsing=="Play")
@@ -413,7 +420,8 @@ function runActions() {
 				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
-			    speakTurn(data,agentNum);/* 
+//			    speakTurn(data,agentNum);
+                /* 
 				if(talkingheadUsing=="Speak2")
 				{
 					agentBusy = AudioPlaying();
