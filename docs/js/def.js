@@ -15,16 +15,16 @@ var CR1=C1
 var F1=qs('F1','Head');
 var V1=qs('V1','Joanna');
 
-var C2=qs('C2','Ben');
+var C2=qs('C2','');
 var CR2=C2
 var F2=qs('F2','Head');
 var V2=qs('V2','Matthew');	
 
 	
-var C3=qs('C3','');
+var C3=qs('C3','Lee');
 var CR3=C3
 var F3=qs('F3','Head');
-var V3=qs('V3','Kimberly');
+var V3=qs('V3','Matthew');
 
 var C4=qs('C4','');
 var CR4=C4
@@ -97,7 +97,7 @@ function LoadChara(id,character,format,voice){
 
 function loadCharas(){
 	var Avatars = document.getElementById("talkingHeads");
-	var s = '<table align="center" width="1024px"><tr>';
+	var s = '<table align="center" width="600px"><tr>';
 	if (C1.length>1){
 		s += '<td align="center">';
 		s += '<div id="'+C1+'" class="tl-agent">';

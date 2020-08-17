@@ -259,7 +259,7 @@ function LoadLesson(lessonID) {
 		source:"ScriptOnly",
 		return:"scriptContent",
 		authorname:"xiangenhu",
-		TagName:"SKOSCRIPTS"}
+		TagName:"AutoTutorScript"}
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
@@ -1214,7 +1214,7 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 		source:"ScriptOnly",
 		return:"scriptContent",
 		authorname:"xiangenhu",
-		TagName:"SKOSCRIPTS"}
+		TagName:"AutoTutorScript"}
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
 	
 	
