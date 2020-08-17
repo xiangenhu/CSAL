@@ -5,7 +5,7 @@ var currentLessonID;
 var domainURL = location.origin;
 //var scriptFolderURL = "https://ace.autotutor.org/at2017/scripts/";
 
-var scriptFolderURL = domainURL+"/Scripts/";
+var scriptFolderURL = qs("DURL",domainURL)+"/Scripts/";
 
 var talkingheadLoaded = false;
 var agentBusy = false;
