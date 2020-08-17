@@ -267,11 +267,15 @@ function LoadLesson(lessonID) {
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
+	if (qs("useGUID","0")==1){
+       currentScripturl = aurl;
+	}
+	
 	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
-	setPresentationIDObj(lessonID, aurl);
+	setPresentationIDObj(lessonID, currentScripturl);
 
 	var acePostjson = {};
-	acePostjson.ScriptURL = aurl;
+	acePostjson.ScriptURL = currentScripturl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	if (lessonID == "lesson0" || lessonID == "lesson00") {
@@ -1220,8 +1224,9 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
 	
-	currentScripturl = aurl;
-	
+	if (qs("useGUID","0")==1){
+       currentScripturl = aurl;
+	}
 	
 	setPresentationIDObj(lessonID, currentScripturl)
 	LoadTalkingHead(url, lessonID)

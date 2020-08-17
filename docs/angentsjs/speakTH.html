@@ -14,7 +14,7 @@
 	<script src="https://js.autotutor.org/ATcommonjs/TH/def.js"></script> 
 	<script src="https://xiangenhu.github.io/skoplayer/js/Interface.js"></script>
 	
-<script>C1="Angela";C2="Lee"</script>
+<script>C1="Angela"; C2="0"; C3="Lee";C4="0"</script>
 
 	
 	<link rel="stylesheet" href="../buttons/buttons.css" type="text/css" media="screen">
@@ -99,7 +99,7 @@ function start()
 }
 function TestSpeech(Words){
 	
-	msSpeakQueued(C2,Words,"");
+	msSpeakQueued(C3,Words,"");
 	msSpeakQueued(C1,Words,"");
 }
 
@@ -146,7 +146,7 @@ msSpeakQueued(C1,Words,"");
 }
 function JordanSpeak(word)
 {
-msSpeakQueued(C2,Words,"");
+msSpeakQueued(C3,Words,"");
 }
 
 
@@ -168,7 +168,7 @@ msSpeakQueued(C2,Words,"");
                
                  
                 } else if (firstPart == 1) {
-            msSpeakQueued(C2,segments[i],"");
+            msSpeakQueued(C3,segments[i],"");
                    
                 }
 }
