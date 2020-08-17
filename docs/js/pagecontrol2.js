@@ -7,6 +7,8 @@ var domainURL = location.origin;
 
 var scriptFolderURL = qs("DURL",domainURL)+"/Scripts/";
 
+var MediaFolderURL = qs("MURL",domainURL)+"/Scripts/";
+
 var talkingheadLoaded = false;
 var agentBusy = false;
 var lessonRecovery = false;

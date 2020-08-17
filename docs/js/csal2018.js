@@ -253,10 +253,6 @@ function repeatSpeakList()
 function LoadLesson(lessonID) {
 	var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
-
-	/* currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
-	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
-	setPresentationIDObj(lessonID, currentScripturl) */
 	
 	var retriveObj={
 		guid:qs("guid",""),
@@ -271,7 +267,7 @@ function LoadLesson(lessonID) {
        currentScripturl = aurl;
 	}
 	
-	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
+	currentMediaPath = MediaFolderURL + lessonID + "/ActivityMedia/";
 	setPresentationIDObj(lessonID, currentScripturl);
 
 	var acePostjson = {};
@@ -1232,7 +1228,7 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	LoadTalkingHead(url, lessonID)
 	lessonRecovery = true;
 	PutStatus == false;
-	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
+	currentMediaPath = MediaFolderURL + lessonID + "/ActivityMedia/";
 	actions = recoveryActions;
 	agentBusy = true;
 	StartTimer();
