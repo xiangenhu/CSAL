@@ -271,7 +271,7 @@ function LoadLesson(lessonID) {
 	setPresentationIDObj(lessonID, aurl);
 
 	var acePostjson = {};
-	acePostjson.ScriptURL = currentScripturl;
+	acePostjson.ScriptURL = aurl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	if (lessonID == "lesson0" || lessonID == "lesson00") {
