@@ -5,10 +5,13 @@
 <script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-1.12.4.js"></script>
-	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>		
-	<script src="js/msapi.js"></script>		
-	<script src="https://xiangenhu.github.io/skoplayer/js/pixi.min.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>	
+	<script src="https://js.autotutor.org/ATcommonjs/TH/api1/pixi.min.js"></script>
+	<script src="https://js.autotutor.org/ATcommonjs/TH/api1/msapi.js"></script> 
+	<script src="https://js.autotutor.org/ATcommonjs/TH/def.js"></script> 
 	<script src="https://xiangenhu.github.io/skoplayer/js/Interface.js"></script>
+	
+<script>C1="Angela";C2="Lee";C3="Carl";C4="Lily"</script>
 	
 		<style type="text/css" id="page-css">
 canvas {
@@ -32,18 +35,18 @@ function onLoad() {
 
 function TestSpeech(Words){
 	
-	msSpeakQueued("Lee",Words,"");
-	msSpeakQueued("Angela",Words,"");
+	msSpeakQueued(C2",Words,"");
+	msSpeakQueued(C1,Words,"");
 }
 function TestSpeech1(){
 	
 	var Words=document.getElementById("myText1").value
-	msSpeakQueued("Angela",Words,"");
+	msSpeakQueued(C1,Words,"");
 }
 function TestSpeech2(){
 	
 	var Words=document.getElementById("myText1").value
-	msSpeakQueued("Lee",Words,"");
+	msSpeakQueued(C2,Words,"");
 }
 
 var aud = document.getElementById("audio");
@@ -85,11 +88,11 @@ queue=[];
 }
 function CristinaSpeak(word)
 {
-msSpeakQueued("Angela",Words,"");
+msSpeakQueued(C1,Words,"");
 }
 function JordanSpeak(word)
 {
-msSpeakQueued("Lee",Words,"");
+msSpeakQueued(C2,Words,"");
 }
 
 
@@ -103,11 +106,11 @@ msSpeakQueued("Lee",Words,"");
             if (status == "Speak") {
 
                 if (firstPart == 0) {
-				msSpeakQueued("Angela",scoendPart,"");
+				msSpeakQueued(C1,scoendPart,"");
                
                  
                 } else if (firstPart == 1) {
-            msSpeakQueued("Lee",scoendPart,"");
+            msSpeakQueued(C2,scoendPart,"");
                    
                 }
 
@@ -136,7 +139,7 @@ msSpeakQueued("Lee",Words,"");
     width: 600px;
     height: 400px;
     margin: auto;">
-<div id="TopDiv" style="position:relative; width:100%; height:200px;"> </div>	 
+<div id="talkingHeads" style="position:relative; width:100%; height:200px;"> </div>	 
 
 
 <div id="left" style="float: left;">

@@ -33,7 +33,7 @@
 				s += '</table>';
 
 
-				document.getElementById('TopDiv').innerHTML = s;
+				document.getElementById('talkingHeads').innerHTML = s;
 				msAttach('Movie1', lessonNameShort+'A', 'output/'+lessonNameShort+'A_Files', 140, 115);
 				msAttach('Movie2', lessonNameShort+'B', 'output/'+lessonNameShort+'B_Files', 140, 115);
 			}

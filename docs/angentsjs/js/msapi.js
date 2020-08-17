@@ -419,7 +419,7 @@ function addQuestion(Character){
 
 function loadCharas(){
 	o={};
-	var Avatars = document.getElementById("TopDiv");
+	var Avatars = document.getElementById("talkingHeads");
 	var s = '';
 	if (C1.length>1){
 		s += '<div id="'+C1+'" class="tl-agent"><div id="'+C1+'Renderer"></div>';
