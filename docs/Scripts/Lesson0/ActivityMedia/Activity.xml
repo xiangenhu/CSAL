@@ -68,7 +68,7 @@
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
-    <TutoringPack name="TP1">
+    <TutoringPack name="T1">
       <Questions>
         <Question id="1" agent="ComputerTutor" text="Right now, the button is locked. Try clicking the button when it unlocks." speech="" media="media/TrainingMedia0.html" play="A19">
           <Answers>
@@ -79,7 +79,7 @@
       <Expectations />
       <Misconceptions />
     </TutoringPack>
-    <TutoringPack name="TP2">
+    <TutoringPack name="T2">
       <Questions>
         <Question id="1" agent="ComputerTutor" text="Type the name you selected and it will appear in the box below. Press enter when you are done." speech="" media="media/loginPage.html" play="A21">
           <Answers>
@@ -91,7 +91,7 @@
       <Expectations />
       <Misconceptions />
     </TutoringPack>
-    <TutoringPack name="TP3">
+    <TutoringPack name="T3">
       <Questions>
         <Question id="1" agent="ComputerTutor" text="_user_, please click one of the answers below when the buttons unlock." speech="" media="media/TrainingMedia1.html" play="_user_,A23">
           <Answers>
@@ -103,7 +103,7 @@
       <Expectations />
       <Misconceptions />
     </TutoringPack>
-    <TutoringPack name="TP4">
+    <TutoringPack name="T4">
       <Questions>
         <Question id="1" agent="ComputerTutor" text="_user_, read the text below and practice scrolling. Press Click Here to Continue at the bottom of the passage when you are finished." speech="" media="media/TrainingMedia2.html" play="_user_,A25">
           <Answers>
@@ -154,7 +154,7 @@
     </Rule>
     <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
-      <Action agent="System" act="GetTutoringPack" data="TP" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="T" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">

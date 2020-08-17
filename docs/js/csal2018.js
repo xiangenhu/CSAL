@@ -255,12 +255,7 @@ function repeatSpeakList()
 function LoadLesson(lessonID) {
 	var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
-
-	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
-	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
-	setPresentationIDObj(lessonID, currentScripturl)
-
-	var acePostjson = {};
+	
 	var retriveObj={
 		guid:qs("guid",""),
 		source:"ScriptOnly",
@@ -268,6 +263,14 @@ function LoadLesson(lessonID) {
 		authorname:"xiangenhu",
 		TagName:"SKOSCRIPTS"}
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
+	
+	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
+	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
+	setPresentationIDObj(lessonID, aurl);
+//	setPresentationIDObj(lessonID, currentScripturl);
+
+	var acePostjson = {};
+	
 	acePostjson.ScriptURL = aurl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
@@ -662,7 +665,7 @@ function runActions() {
 
 
 		}
-		console.log(acePutjson);
+//		console.log(acePutjson);
 		Put(acePutjson);
 		PutStatus = true;
 		StopTimer();
@@ -1178,7 +1181,19 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	repeatTimes = PresentationHistory.repeatTimes;
 	replayVideoTimes = PresentationHistory.replayVideoTimes;
 	var url = scriptFolderURL + lessonID + "/html5/index.html?lessonName=" + lessonID;
+	
+	var retriveObj={
+		guid:qs("guid",""),
+		source:"ScriptOnly",
+		return:"scriptContent",
+		authorname:"xiangenhu",
+		TagName:"SKOSCRIPTS"}
+	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
+	
+	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
+	
+	currentScripturl = aurl;
 	setPresentationIDObj(lessonID, currentScripturl)
 	LoadTalkingHead(url, lessonID)
 	lessonRecovery = true;

@@ -61,7 +61,7 @@ function Compose(AnActor,
 		context:{"contextActivities":contextActivities,"extensions":Extdata.extensions}
 		};
 		timestamp:(new Date()).toISOString();
-	console.log(JSON.stringify(parts));
+//	console.log(JSON.stringify(parts));
 	return parts;
 	}
 
@@ -187,7 +187,7 @@ function AceResponse(Data,averb){
 								ResultObj,
 								activityObj,
 								Extdata);
-		console.log(JSON.stringify(statements));						
+//		console.log(JSON.stringify(statements));						
 		ADL.XAPIWrapper.sendStatement(statements);
 }
 
@@ -254,7 +254,7 @@ function xAPIPostOther(acePostjson,averb){
 							ResultObj,
 							activityObj,
 							Extdata);
-	console.log(JSON.stringify(statements));
+//	console.log(JSON.stringify(statements));
 	ADL.XAPIWrapper.sendStatement(statements);
 }
 
@@ -308,6 +308,6 @@ function xAPIPostStart(acePostjson,averb){
 							ResultObj,
 							activityObj,
 							Extdata);
-	console.log(JSON.stringify(statements));
+//	console.log(JSON.stringify(statements));
 	ADL.XAPIWrapper.sendStatement(statements);
 }

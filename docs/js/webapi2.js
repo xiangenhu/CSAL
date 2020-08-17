@@ -35,6 +35,10 @@ function Put(acePutjson) {
     var content = acePutjson;
     var method = "PUT";
     webAPImethod = method;
+	console.log("================================");
+	console.log(JSON.stringify(acePutjson));
+	console.log("================================");
+	
     var getUrl = $.ajax({
         type: method,
         url: aceurl,
@@ -42,7 +46,6 @@ function Put(acePutjson) {
         success: function(data) {
 		// post xAPI User Action
 		if (acePutjson.PresentationHistory!=null){
-			console.log(JSON.stringify(acePutjson));
 			var xAPIdata=acePutjson;
 			xAPIPostOther(xAPIdata,"action");
 			}
