@@ -14,7 +14,7 @@ var systemConfig={
   },
   "lessonsConfig": [
     {
-      "lessonId": "Lesson0",
+      "lessonId": "lesson0",
       "lessonName": "Introduction",
       "lessonDes": "Introduction",
       "isRecoverable": false,
@@ -29,7 +29,7 @@ var systemConfig={
       "pages": []
     },
     {
-      "lessonId": "Lesson1",
+      "lessonId": "lesson1",
       "lessonName": "Text Signals",
       "lessonDes": "Predicting Topic: Using Text Signals",
       "lessonReadingInfo": [
@@ -251,7 +251,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson2",
+      "lessonId": "lesson2",
       "lessonName": "Predicting Purpose",
       "lessonDes": "Predicting Purpose: Inform, Persuade, Entertain",
       "lessonReadingInfo": [
@@ -525,7 +525,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson3",
+      "lessonId": "lesson3",
       "lessonName": "Hybrid Texts",
       "lessonDes": "Predicting Purpose: Hybrid Texts",
       "lessonReadingInfo": [
@@ -783,7 +783,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson4",
+      "lessonId": "lesson4",
       "lessonName": "Prefixes and Suffixes",
       "lessonDes": "Acquiring Vocabulary: Prefixes and Suffixes",
       "lessonReadingInfo": [],
@@ -1022,7 +1022,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson5",
+      "lessonId": "lesson5",
       "lessonName": "Punctuation",
       "lessonDes": "Clarifying Confusion: Context Clues - Punctuation",
       "lessonReadingInfo": [],
@@ -1225,7 +1225,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson6",
+      "lessonId": "lesson6",
       "lessonName": "Context Clues",
       "lessonDes": "Clarifying Confusion: Context Clues",
       "lessonReadingInfo": [
@@ -1387,7 +1387,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson7",
+      "lessonId": "lesson7",
       "lessonName": "Acquiring New Words",
       "lessonDes": "Acquiring Words Strategy",
       "lessonReadingInfo": [],
@@ -1476,7 +1476,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson8",
+      "lessonId": "lesson8",
       "lessonName": "Multiple Meaning Words",
       "lessonDes": "Clarifying Confusion: Multiple Meaning Words",
       "lessonReadingInfo": [],
@@ -1703,7 +1703,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson9",
+      "lessonId": "lesson9",
       "lessonName": "Pronouns",
       "lessonDes": "Clarifying Confusion: Pronouns",
       "lessonReadingInfo": [
@@ -1747,250 +1747,250 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Kim sees her every month for check ups. _user_ Click on the noun that best replaces the pronoun her."
+          "quesionName": "Cristina:Kim sees her every month for check ups. _user_ Click on the noun that best replaces the pronoun her."
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "2",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Here is the next one, Then she takes Kim's blood pressure and gets a blood sample. _user_ Which of the highlighted nouns best replaces the pronoun she?"
+          "quesionName": "Cristina:Here is the next one, Then she takes Kim's blood pressure and gets a blood sample. _user_ Which of the highlighted nouns best replaces the pronoun she?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "3",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:She also lets Kim and Ben listen. _user_ what do you think the answer is for this one? I am really unsure but I think the correct answer is the nurse."
+          "quesionName": "Jordan:She also lets Kim and Ben listen. _user_ what do you think the answer is for this one? I am really unsure but I think the correct answer is the nurse."
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "4",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart! _user_ Which choice replaces their in this sentence?"
+          "quesionName": "Cristina:It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart! _user_ Which choice replaces their in this sentence?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "5",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:The doctor reminds her to eat healthy food and drink lots of water. _user_ Who does her refer back to in this one?"
+          "quesionName": "Cristina:The doctor reminds her to eat healthy food and drink lots of water. _user_ Who does her refer back to in this one?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "6",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Here is another one. She also explains that Kim needs to take a daily vitamin. _user_ Which is the best answer here?"
+          "quesionName": "Cristina:Here is another one. She also explains that Kim needs to take a daily vitamin. _user_ Which is the best answer here?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "7",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:_user_ let's try to figure this one out. They could harm the baby's health. Which would you replace they with? My selection is the doctor but I am not confident here!"
+          "quesionName": "Jordan:_user_ let's try to figure this one out. They could harm the baby's health. Which would you replace they with? My selection is the doctor but I am not confident here!"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "8",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:The doctor also tells Kim and Ben what to expect as it grows. _user_ It can be best replaced by which noun?"
+          "quesionName": "Cristina:The doctor also tells Kim and Ben what to expect as it grows. _user_ It can be best replaced by which noun?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "9",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:Alright _user_ we just have a few more to knock out! How would you replace they in the sentence they are eager to visit. ?"
+          "quesionName": "Jordan:Alright _user_ we just have a few more to knock out! How would you replace they in the sentence they are eager to visit. ?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "10",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:These classes are a good way to meet other parents and learn about their baby. _user_ How would you replace the pronoun their?"
+          "quesionName": "Cristina:These classes are a good way to meet other parents and learn about their baby. _user_ How would you replace the pronoun their?"
         },
         {
           "questionPath": "Lesson9-Main0-0new.html",
           "questionID": "11",
           "questionLevel": "Medium",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:Alright. this sentence. They will also discuss feeding. dressing. diapering. and bathing babies. I think the answer might be Kim and Ben! What do you think _user_?"
+          "quesionName": "Jordan:Alright. this sentence. They will also discuss feeding. dressing. diapering. and bathing babies. I think the answer might be Kim and Ben! What do you think _user_?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "12",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:In the sentence. she made the U.S. olympic team. _user_ which noun best replaces she?"
+          "quesionName": "Cristina:In the sentence. she made the U.S. olympic team. _user_ which noun best replaces she?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "13",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:In this sentence. it was all over the news.  _user_ Which noun best replaces the pronoun it?"
+          "quesionName": "Cristina:In this sentence. it was all over the news.  _user_ Which noun best replaces the pronoun it?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "14",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:_user_ I am really not sure about this next one. She was shocked by the level of interest. Can you help me? I think the answer is Lanny."
+          "quesionName": "Jordan:_user_ I am really not sure about this next one. She was shocked by the level of interest. Can you help me? I think the answer is Lanny."
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "15",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Let's keep going you two. Lanny was having a good season this winter. but she got sick during a set of races in Italy. _user_ How would the pronoun she be best replaced here?"
+          "quesionName": "Cristina:Let's keep going you two. Lanny was having a good season this winter. but she got sick during a set of races in Italy. _user_ How would the pronoun she be best replaced here?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "16",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:But she would not change her mind. _user_ this sentence also uses the pronoun she but what does it refer to here?"
+          "quesionName": "Jordan:But she would not change her mind. _user_ this sentence also uses the pronoun she but what does it refer to here?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "17",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:_user_ How would you replace her in the sentence. once I let her know how much it meant to me.  she realized it was a good thing to do."
+          "quesionName": "Cristina:_user_ How would you replace her in the sentence. once I let her know how much it meant to me.  she realized it was a good thing to do."
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "18",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Ok you two. it is the pronoun for this sentence. But she doesn't mind missing it. _user_ Which noun does it refer to?"
+          "quesionName": "Cristina:Ok you two. it is the pronoun for this sentence. But she doesn't mind missing it. _user_ Which noun does it refer to?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "19",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:She's really excited. _user_ What is the best replacement for the pronoun she?"
+          "quesionName": "Cristina:She's really excited. _user_ What is the best replacement for the pronoun she?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "20",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:She is close to earning a degree in marketing. _user_ click on the noun you think best fits in this sentence."
+          "quesionName": "Cristina:She is close to earning a degree in marketing. _user_ click on the noun you think best fits in this sentence."
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "21",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:_user_ I think I need a little help here. I am not sure what the correct answer is. That is helping a business to sell its products. Which is the best choice to replace that? I think it could be marketing."
+          "quesionName": "Jordan:_user_ I think I need a little help here. I am not sure what the correct answer is. That is helping a business to sell its products. Which is the best choice to replace that? I think it could be marketing."
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "22",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Let's see what you two come up with for another pronoun in this sentence. What is the best replacement for its?"
+          "quesionName": "Cristina:Let's see what you two come up with for another pronoun in this sentence. What is the best replacement for its?"
         },
         {
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "23",
           "questionLevel": "Easy",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:Last question _user_. Can you help me find the correct noun to replace their. In the sentence. that's what the twins do in their sport? I think it might refer to the hunters."
+          "quesionName": "Jordan:Last question _user_. Can you help me find the correct noun to replace their. In the sentence. that's what the twins do in their sport? I think it might refer to the hunters."
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "24",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:_user_ Click on the noun that best replaces the pronoun in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted."
+          "quesionName": "Cristina:_user_ Click on the noun that best replaces the pronoun in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted."
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "25",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:They hope it is a clue that could help solve the mystery of the missing plane; however. instead. they learn that it is garbage. a piece of fishing equipment. or it is a box that fell from a passing ship. _user_ which do you think is the correct noun?"
+          "quesionName": "Cristina:They hope it is a clue that could help solve the mystery of the missing plane; however. instead. they learn that it is garbage. a piece of fishing equipment. or it is a box that fell from a passing ship. _user_ which do you think is the correct noun?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "26",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:_user_ here is the next sentence. In 1997. he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California."
+          "quesionName": "Cristina:_user_ here is the next sentence. In 1997. he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California."
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "27",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:_user_ this one is tricky to me. It is at least the size of Texas. I would guess the answer is California. Will you help me to find the best answer for this one?"
+          "quesionName": "Jordan:_user_ this one is tricky to me. It is at least the size of Texas. I would guess the answer is California. Will you help me to find the best answer for this one?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "28",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:The debris has a negative effect on marine life because much of it is not biodegradable. _user_ which of the nouns best fits this sentence?"
+          "quesionName": "Cristina:The debris has a negative effect on marine life because much of it is not biodegradable. _user_ which of the nouns best fits this sentence?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "29",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:That means the water moves around in a circle. _user_ Pick the best noun to replace that for this one!"
+          "quesionName": "Cristina:That means the water moves around in a circle. _user_ Pick the best noun to replace that for this one!"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "30",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean while some is swept into the sea by tsunamis. _user_ How would you replace the pronoun it?"
+          "quesionName": "Cristina:Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean while some is swept into the sea by tsunamis. _user_ How would you replace the pronoun it?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "31",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:Let's try another one! Those are huge waves caused by earthquakes under the sea.  _user_ how would you replace the pronoun those. I think the answer is rivers."
+          "quesionName": "Jordan:Let's try another one! Those are huge waves caused by earthquakes under the sea.  _user_ how would you replace the pronoun those. I think the answer is rivers."
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "32",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Just a couple more. They are dangerous. floating around for months. _user_. what is the best noun to replace they?"
+          "quesionName": "Cristina:Just a couple more. They are dangerous. floating around for months. _user_. what is the best noun to replace they?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "33",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerStudent1:Waves break them up into much smaller pieces and animals swallow them. Which noun best replaces them _user_? I think that the shipping containers is the best answer."
+          "quesionName": "Jordan:Waves break them up into much smaller pieces and animals swallow them. Which noun best replaces them _user_? I think that the shipping containers is the best answer."
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "34",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:They understand the challenges garbage poses. _user_. which noun best replaces the pronoun they in this sentence?"
+          "quesionName": "Cristina:They understand the challenges garbage poses. _user_. which noun best replaces the pronoun they in this sentence?"
         },
         {
           "questionPath": "Lesson9-Main2-0new.html",
           "questionID": "35",
           "questionLevel": "Hard",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Last question _user_. Can you help me find the correct noun to replace their. In the sentence, that's what the twins do in their sport? I think it might refer to the hunters."
+          "quesionName": "Cristina:Last question _user_. Can you help me find the correct noun to replace their. In the sentence, that's what the twins do in their sport? I think it might refer to the hunters."
         }
       ]
     },
     {
-      "lessonId": "Lesson10",
+      "lessonId": "lesson10",
       "lessonName": "Non-Literal Language",
       "lessonDes": "Clarifying Confusion: Non-Literal Language",
       "lessonReadingInfo": [],
@@ -2009,215 +2009,215 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "TP11",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdPerky.html",
           "questionID": "2",
           "questionLevel": "TP12",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan. take one at night. be out like a light? Click the correct answer."
+          "quesionName": "Cristina:Is there a comparison being made in the slogan. take one at night. be out like a light? Click the correct answer."
         },
         {
           "questionPath": "AdPerky.html",
           "questionID": "3",
           "questionLevel": "TP13",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Why is the writer comparing the reader and a light? Please click the correct response."
+          "quesionName": "Cristina:Why is the writer comparing the reader and a light? Please click the correct response."
         },
         {
           "questionPath": "AdPerky.html",
           "questionID": "4",
           "questionLevel": "TP14",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:What is the intended meaning of. out like a light? Click the correct response."
+          "quesionName": "Cristina:What is the intended meaning of. out like a light? Click the correct response."
         },
         {
           "questionPath": "AdPerky.html",
           "questionID": "5",
           "questionLevel": "TP15",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Click the correct response."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Click the correct response."
         },
         {
           "questionPath": "AdGlasses.html",
           "questionID": "6",
           "questionLevel": "TP21",
           "progressBarValue": "20",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdGlasses.html",
           "questionID": "7",
           "questionLevel": "TP22",
           "progressBarValue": "20",
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan. blind as a bat. we can fix that? Click the correct answer."
+          "quesionName": "Cristina:Is there a comparison being made in the slogan. blind as a bat. we can fix that? Click the correct answer."
         },
         {
           "questionPath": "AdGlasses.html",
           "questionID": "8",
           "questionLevel": "TP23",
           "progressBarValue": "20",
-          "quesionName": "ComputerTutor:Why is the writer comparing the reader's eyesight and a bat's eyesight? Please click the correct response."
+          "quesionName": "Cristina:Why is the writer comparing the reader's eyesight and a bat's eyesight? Please click the correct response."
         },
         {
           "questionPath": "AdGlasses.html",
           "questionID": "9",
           "questionLevel": "TP24",
           "progressBarValue": "20",
-          "quesionName": "ComputerTutor:What is the intended meaning of. blind as a bat? We can fix that!? Click the correct response."
+          "quesionName": "Cristina:What is the intended meaning of. blind as a bat? We can fix that!? Click the correct response."
         },
         {
           "questionPath": "AdGlasses.html",
           "questionID": "10",
           "questionLevel": "TP25",
           "progressBarValue": "20",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Click the correct response."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Click the correct response."
         },
         {
           "questionPath": "AdOrganize.html",
           "questionID": "11",
           "questionLevel": "TP31",
           "progressBarValue": "40",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdOrganize.html",
           "questionID": "12",
           "questionLevel": "TP32",
           "progressBarValue": "40",
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan. it will keep you on the ball!? Click the correct answer."
+          "quesionName": "Cristina:Is there a comparison being made in the slogan. it will keep you on the ball!? Click the correct answer."
         },
         {
           "questionPath": "AdOrganize.html",
           "questionID": "13",
           "questionLevel": "TP33",
           "progressBarValue": "40",
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral langwidge? Please click the correct response below."
+          "quesionName": "Cristina:Why is the writer using this nonliteral langwidge? Please click the correct response below."
         },
         {
           "questionPath": "AdOrganize.html",
           "questionID": "14",
           "questionLevel": "TP34",
           "progressBarValue": "40",
-          "quesionName": "ComputerTutor:What is the intended meaning of this idiom? Click the correct response."
+          "quesionName": "Cristina:What is the intended meaning of this idiom? Click the correct response."
         },
         {
           "questionPath": "AdOrganize.html",
           "questionID": "15",
           "questionLevel": "TP35",
           "progressBarValue": "40",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response below."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response below."
         },
         {
           "questionPath": "AdPotato.html",
           "questionID": "16",
           "questionLevel": "TP41",
           "progressBarValue": "60",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdPotato.html",
           "questionID": "17",
           "questionLevel": "TP42",
           "progressBarValue": "60",
-          "quesionName": "ComputerTutor:Is there a comparison being made in the phrase. couch potato? Click the correct answer."
+          "quesionName": "Cristina:Is there a comparison being made in the phrase. couch potato? Click the correct answer."
         },
         {
           "questionPath": "AdPotato.html",
           "questionID": "18",
           "questionLevel": "TP43",
           "progressBarValue": "60",
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral langwidge? Please click the correct response below."
+          "quesionName": "Cristina:Why is the writer using this nonliteral langwidge? Please click the correct response below."
         },
         {
           "questionPath": "AdPotato.html",
           "questionID": "19",
           "questionLevel": "TP44",
           "progressBarValue": "60",
-          "quesionName": "ComputerTutor:What is the intended meaning of. couch potato? Please click the correct answer below."
+          "quesionName": "Cristina:What is the intended meaning of. couch potato? Please click the correct answer below."
         },
         {
           "questionPath": "AdPotato.html",
           "questionID": "20",
           "questionLevel": "TP45",
           "progressBarValue": "60",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
         },
         {
           "questionPath": "AdSpa.html",
           "questionID": "21",
           "questionLevel": "TP51",
           "progressBarValue": "80",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdSpa.html",
           "questionID": "22",
           "questionLevel": "TP52",
           "progressBarValue": "80",
-          "quesionName": "ComputerTutor:Is a comparison being made in the phrase. on cloud nine? Please click yes or no."
+          "quesionName": "Cristina:Is a comparison being made in the phrase. on cloud nine? Please click yes or no."
         },
         {
           "questionPath": "AdSpa.html",
           "questionID": "23",
           "questionLevel": "TP53",
           "progressBarValue": "80",
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral langwidge? Please click the correct response."
+          "quesionName": "Cristina:Why is the writer using this nonliteral langwidge? Please click the correct response."
         },
         {
           "questionPath": "AdSpa.html",
           "questionID": "24",
           "questionLevel": "TP54",
           "progressBarValue": "80",
-          "quesionName": "ComputerTutor:What is the intended meaning of this nonliteral langwidge? Click the correct response."
+          "quesionName": "Cristina:What is the intended meaning of this nonliteral langwidge? Click the correct response."
         },
         {
           "questionPath": "AdSpa.html",
           "questionID": "25",
           "questionLevel": "TP55",
           "progressBarValue": "80",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
         },
         {
           "questionPath": "AdTea.html",
           "questionID": "26",
           "questionLevel": "TP61",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
+          "quesionName": "Cristina:If you need to look at the image again. click on the advertisement to make it bigger. When you are ready. click the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? Click the correct answer."
         },
         {
           "questionPath": "AdTea.html",
           "questionID": "27",
           "questionLevel": "TP62",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan. one sip and you're in heaven? Please click yes or no."
+          "quesionName": "Cristina:Is there a comparison being made in the slogan. one sip and you're in heaven? Please click yes or no."
         },
         {
           "questionPath": "AdTea.html",
           "questionID": "28",
           "questionLevel": "TP63",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Why is the writer comparing. a sip of tea. and. being in heaven? Please click the correct response."
+          "quesionName": "Cristina:Why is the writer comparing. a sip of tea. and. being in heaven? Please click the correct response."
         },
         {
           "questionPath": "AdTea.html",
           "questionID": "29",
           "questionLevel": "TP64",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:What is the intended meaning of. one sip and you're in heaven? Please click the correct response."
+          "quesionName": "Cristina:What is the intended meaning of. one sip and you're in heaven? Please click the correct response."
         },
         {
           "questionPath": "AdTea.html",
           "questionID": "30",
           "questionLevel": "TP65",
           "progressBarValue": "0",
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral langwidge? Please click the correct response."
         }
       ]
     },
     {
-      "lessonId": "Lesson11",
+      "lessonId": "lesson11",
       "lessonName": "Review",
       "lessonDes": "Review: Acquiring and Clarifying Skills",
       "lessonReadingInfo": [],
@@ -2330,7 +2330,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson12",
+      "lessonId": "lesson12",
       "lessonName": "Using Key Information",
       "lessonDes": "Differentiating Between Texts Using Key Information",
       "lessonReadingInfo": [
@@ -2438,7 +2438,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson13",
+      "lessonId": "lesson13",
       "lessonName": "Evaluating Narrative",
       "lessonDes": "Evaluating: Narrative Texts",
       "lessonReadingInfo": [],
@@ -2521,7 +2521,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson14",
+      "lessonId": "lesson14",
       "lessonName": "Bridge Building",
       "lessonDes": "Evaluating: Bridge Building in Narratives",
       "lessonReadingInfo": [
@@ -2601,7 +2601,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15",
+      "lessonId": "lesson15",
       "lessonName": "Elaborating Narrative",
       "lessonDes": "Elaborating: Narrative Inferences",
       "lessonReadingInfo": [
@@ -2769,7 +2769,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson16",
+      "lessonId": "lesson16",
       "lessonName": "Evaluating Understanding",
       "lessonDes": "Evaluating Understanding: Topic, Main Idea, Support",
       "lessonReadingInfo": [
@@ -2979,7 +2979,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson17",
+      "lessonId": "lesson17",
       "lessonName": "Evaluating Persuasive",
       "lessonDes": "Evaluating: Persuasive Argument and Reasoning",
       "lessonReadingInfo": [
@@ -3243,7 +3243,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson18",
+      "lessonId": "lesson18",
       "lessonName": "Review",
       "lessonDes": "Review: Predicting, Acquiring, Clarifying, and Evaluating Skills",
       "lessonReadingInfo": [],
@@ -3356,7 +3356,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson19",
+      "lessonId": "lesson19",
       "lessonName": "Statement and Explanation",
       "lessonDes": "Evaluating: Statement and Explanation Texts",
       "lessonReadingInfo": [
@@ -3410,7 +3410,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson20",
+      "lessonId": "lesson20",
       "lessonName": "Problem and Solution Texts",
       "lessonDes": "Evaluating: Problem and Solution Texts",
       "lessonReadingInfo": [
@@ -3556,7 +3556,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson21",
+      "lessonId": "lesson21",
       "lessonName": "Cause and Effect Texts",
       "lessonDes": "Evaluating: Cause and Effect Texts",
       "lessonReadingInfo": [
@@ -3814,7 +3814,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson22",
+      "lessonId": "lesson22",
       "lessonName": "Description and Spatial",
       "lessonDes": "Evaluating: Description and Spatial Texts",
       "lessonReadingInfo": [
@@ -3958,7 +3958,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson23",
+      "lessonId": "lesson23",
       "lessonName": "Compare and Contrast Texts",
       "lessonDes": "Evaluating: Compare and Contrast Texts",
       "lessonReadingInfo": [
@@ -4168,7 +4168,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson24",
+      "lessonId": "lesson24",
       "lessonName": "Time Order",
       "lessonDes": "Evaluating: Time Order/Order of Importance Texts",
       "lessonReadingInfo": [
@@ -4408,7 +4408,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson25",
+      "lessonId": "lesson25",
       "lessonName": "Procedural Texts",
       "lessonDes": "Evaluating: Procedural Texts",
       "lessonReadingInfo": [
@@ -4648,7 +4648,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson26",
+      "lessonId": "lesson26",
       "lessonName": "null",
       "lessonDes": "Review of E-S in PACES",
       "lessonReadingInfo": [],
@@ -4664,7 +4664,7 @@ var systemConfig={
       "pages": []
     },
     {
-      "lessonId": "Lesson27",
+      "lessonId": "lesson27",
       "lessonName": "Elaborating: Narrative",
       "lessonDes": "Elaborating: Bridging Inferences - Narrative",
       "lessonReadingInfo": [
@@ -4732,7 +4732,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson28",
+      "lessonId": "lesson28",
       "lessonName": "Elaborating:Informational ",
       "lessonDes": "Elaborating: Informational Inferences",
       "lessonReadingInfo": [
@@ -4954,7 +4954,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson29",
+      "lessonId": "lesson29",
       "lessonName": "Elaborating:Persuasive",
       "lessonDes": "Elaborating: Persuasive Inferences",
       "lessonReadingInfo": [
@@ -5170,7 +5170,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson30",
+      "lessonId": "lesson30",
       "lessonName": "Documents",
       "lessonDes": "Evaluating Understanding: Documents",
       "lessonReadingInfo": [
@@ -5392,7 +5392,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson31",
+      "lessonId": "lesson31",
       "lessonName": "Applications",
       "lessonDes": "Computer Skills: Applications",
       "lessonReadingInfo": [],
@@ -5457,7 +5457,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson32",
+      "lessonId": "lesson32",
       "lessonName": "Online Research",
       "lessonDes": "Computer Skills: Online Research",
       "lessonReadingInfo": [],
@@ -5546,7 +5546,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson33",
+      "lessonId": "lesson33",
       "lessonName": "Email",
       "lessonDes": "Computer Skills: Introduction to E-mail",
       "lessonReadingInfo": [],
@@ -5635,7 +5635,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson34",
+      "lessonId": "lesson34",
       "lessonName": "Social Media",
       "lessonDes": "Computer Skills: Introduction to Social Media",
       "lessonReadingInfo": [],

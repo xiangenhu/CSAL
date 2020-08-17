@@ -14,6 +14,9 @@ var LRSURL=qs("lrs","https://record.x-in-y.com/myclass/xapi/");
 var LRSLogin=qs("lrslogin","fuficp");
 var LRSPassword=qs("lrspassword","jihlur");
 var wrapper;
+var SKOSchool="AutoTutorARC:"+qs("client","ProLiteracy");
+var sessionID="http://"+qs("ssid","anAICC_sid");
+
  ADL.launch(function(err, launchdata, xAPIWrapper) {
 		if (!err) {
 			wrapper = ADL.XAPIWrapper = xAPIWrapper;
@@ -36,14 +39,16 @@ function Compose(AnActor,
 				ResultObj,
 				activityObj,
 				Extdata){
+	var contextActivities={grouping:[{id:SKOSchool},{id:sessionID}]}
 	var parts = {
 		actor: AnActor,
 		verb: verbObj,
 		object: activityObj,
 		result: ResultObj,
-		context:Extdata 
+		context:{"contextActivities":contextActivities,"extensions":Extdata.extensions}
 		};
 		timestamp:(new Date()).toISOString();
+	console.log(JSON.stringify(parts));
 	return parts;
 	}
 
@@ -72,7 +77,6 @@ function init() {
         } */
 	
 	// Activity
-	var SKOSchool="CSAL";
 	var SKOTitle="Test CSAL Module";
 	var SKOGuid="AnIDBeingUsed";
 	var activityObj={id:SKOSchool+"/skoid/"+SKOGuid,
@@ -128,7 +132,6 @@ function AceResponse(Data,averb){
 				 "en":verb 
 			}
 		};
-	var SKOSchool="CSAL";
 	var SKOTitle=qs("LessonName","alesson");
 	var SKOGuid="AnIDBeingUsed";
 	var activityObj={objectType:"Agent",
@@ -185,7 +188,7 @@ function xAPIPostOther(acePostjson,averb){
 				 "en":verb 
 			}
 		};
-	var SKOSchool="CSAL";
+		
 	var SKOTitle=qs("LessonName","alesson");
 	var SKOGuid="AnIDBeingUsed";
 	var activityObj={id:JSON.parse(acePostjson.PresentationID).scriptPath,
@@ -224,11 +227,10 @@ function xAPIPostOther(acePostjson,averb){
 		}
 		var Extdata={}
 		}
-	}else{
-		var Extdata={
-			extensions: {
-				"https://app.skoonline.org/ITSProfile/CSAL/Data": data
-			}
+	}
+	var Extdata={
+		extensions: {
+			"https://app.skoonline.org/ITSProfile/CSAL/Data": data
 		}
 	}	
 	var statements=Compose(AnActor,
@@ -253,7 +255,6 @@ function xAPIPostStart(acePostjson,averb){
 				 "en":verb 
 			}
 		};
-	var SKOSchool="CSAL";
 	var SKOTitle=qs("LessonName","alesson");
 	var SKOGuid="AnIDBeingUsed";
 	var activityObj={id:acePostjson.ScriptURL,

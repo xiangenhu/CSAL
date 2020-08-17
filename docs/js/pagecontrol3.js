@@ -3,16 +3,18 @@ var AudioButtonOn, DisplayAreaOn, HomeButtonOn, NextButtonOn, PlayVideoButtonOn,
 var currentLessonStatus = false;
 var currentLessonID;
 var domainURL = "https://ace.autotutor.org";
-// var scriptFolderURL = "https://ace.autotutor.org/at2017/scripts/";
-var scriptFolderURL = "Scripts/";
+var scriptFolderURL = "https://ace.autotutor.org/at2017/scripts/";
 var talkingheadLoaded = false;
-var agentBusy = AudioPlaying();
+var agentBusy = false;
 var lessonRecovery = false;
 $(document).ready(function() {
     getSystemConfig();
+    InitTalkingHead();
     InitParameters();
+    //HideHomeButton();
     $("#home").click(function() {
         mainpageInit();
+        InitTalkingHead();
         InitParameters();
         if (vidplayerBusy == true) {
             vidplayerBusy = false;
@@ -24,6 +26,8 @@ $(document).ready(function() {
     $('#textInput').keydown(function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
+            //Use the timeout so this function can return (or the dialog
+            //won't properly close)
             setTimeout(function() {
                 $('#textInputSubmit').click()
             }, 55);
@@ -108,8 +112,6 @@ function mainpageInit() {
     clearDisplayArea();
 
     var uname = sessionStorage.getItem("uname");
-	
-    uname = qs("SName","John");
     var GUID = sessionStorage.getItem("GUID");
     var UID = sessionStorage.getItem("UID");
 	if(GUID==UID)
@@ -124,7 +126,7 @@ function mainpageInit() {
     } else if (uname == undefined ) {
         $("#mainFrame").attr("src", "resources/csal/startPage.html");
     } else {
-        $("#mainFrame").attr("src", "resources/csal/CSALScreenPage.html");
+        $("#mainFrame").attr("src", "resources/csal/CSALscreenPage.html");
     }
 		
 		
@@ -164,14 +166,20 @@ function mainpageInit2() {
 
 }
 
+function InitTalkingHead() {
+	
+    //var url = scriptFolderURL + "lesson0" + "/html5/index.html?lessonName=lesson0";
+    var url = "angentsjs/speakTH.html";
 
+    //LoadTalkingHead(url, "lesson0")
+}
 
 function InitParameters() {
     actions = [];
     nextButtonStatus = false;
     idleTime = 0;
     maxIdle = 0;
-    agentBusy = AudioPlaying();
+    agentBusy = false;
 	//
 	repeatTimes=0;
 	userAnswerSpendTime=0

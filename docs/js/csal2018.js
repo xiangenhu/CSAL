@@ -37,15 +37,11 @@ var isQuestionPageAfterFirst=false;
 var isFirstTimer=true;
 var talkingheadUsing="Speak2";
 var SpeakRepeatList = [];
-
-var DEBUGGING=qs("DEBUGGING","0");
-
-var TRANSSCRIPT_CTRL = "transcript";
 function setCurrentLessonInfo(lessonID) {
 
 	for (var i in allLessonsInfoObj) {
 		var lessonStatus = false;
-		if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId.toLowerCase()) {
+		if (lessonID.toLowerCase() == allLessonsInfoObj[i].lessonId) {
 			var LessonInfo = allLessonsInfoObj[i];
 			sessionStorage.setItem("LessonName", LessonInfo.lessonName);
 			sessionStorage.setItem("LessonID", LessonInfo.lessonId);
@@ -77,8 +73,11 @@ function addRepeatSpeech(agent_speech)
 	}
 	SpeakRepeatList.push(agent_speech);
 }
-function loadAgent() {
+function loadAgent()
+{
+document.getElementById('agentsLarge').src = "angentsjs/speakTH.html";
 			talkingheadLoaded = true;
+			
 }
 function getLessonInfo() {
 	var URLParams = URI.parseQuery(window.location.search);
@@ -168,7 +167,7 @@ $(document).ready(function() {
 	});
 	
 	$("#btNext").click(function() {
-	elldeSpeakRepeatList=[];
+	SpeakRepeatList=[];
 		nextButtonStatus = false;
 		HideRepeatButton();
 		HidePlayVideoButton()
@@ -222,18 +221,17 @@ $(document).ready(function() {
 	});
 
 });
-function startLesson() {
+function startLesson()
+{
 var x2 = $(window).width();
-	/* if (x2 < 1400) {
+	if (x2 < 1400) {
 		$("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
-	} */
-document.getElementById('mainscreen').style.display="block"; 
-
-document.getElementById('containerNoImg').style.backgroundImage = "url(images/TabletFrame2.png)";
-document.getElementById('containerNoImg').style.backgroundPosition="center top";
+	}
+document.getElementById('mainscreen').style.display="block";
+document.getElementById('containerNoImg').style.backgroundImage = "url(../images/TabletFrame2.png)";
+document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
 document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
-document.getElementById('containerNoImg').style.display="block";
-
+document.getElementById('agentsLarge').style.height = "97px";
  var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
 	$("#home").hide();
@@ -244,7 +242,7 @@ document.getElementById('containerNoImg').style.display="block";
 function repeatSpeakList()
 {
 	if(SpeakRepeatList.length==0)return;
-	agentBusy = AudioPlaying();
+	agentBusy = true;
 	
 	for(var i=0; i<SpeakRepeatList.length;i++)
 	{
@@ -255,6 +253,10 @@ function repeatSpeakList()
 function LoadLesson(lessonID) {
 	var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
+
+	/* currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
+	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
+	setPresentationIDObj(lessonID, currentScripturl) */
 	
 	var retriveObj={
 		guid:qs("guid",""),
@@ -267,14 +269,12 @@ function LoadLesson(lessonID) {
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
 	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
 	setPresentationIDObj(lessonID, aurl);
-//	setPresentationIDObj(lessonID, currentScripturl);
 
 	var acePostjson = {};
-	
-	acePostjson.ScriptURL = aurl;
+	acePostjson.ScriptURL = currentScripturl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
-	if (lessonID == "Lesson0" || lessonID == "Lesson00") {
+	if (lessonID == "lesson0" || lessonID == "lesson00") {
 		// acePostjson.ID = sessionStorage.getItem("GUID");
 		acePostjson.ID = sessionStorage.getItem("UID");
 
@@ -325,23 +325,8 @@ function setProgressValue(currentMediaUrl) {
 }
 
 
-function speakTurn(Data,AgentNum){
-	Data=Data.replace("ComputerTutor",C1);
-				Data=Data.replace("ComputerStudent1",C2);
-				Data=Data.replace("ComputerStudent2",C3);
-				Data=Data.replace("ComputerStudent3",C4);
-				Data=Data.replace("_self_",C1);
-				var uname = qs("SName","John");
-				Data = Data.replace("_user_",uname);
-				if (AgentNum=="0"){
-			        msSpeakQueued(C1,Data)
-				} else{
-					msSpeakQueued(C2,Data)
-				}
-}
 
 function runActions() {
-	agentBusy=AudioPlaying();
 	if (agentBusy == true) {
 		return;
 	}
@@ -361,16 +346,11 @@ function runActions() {
 		var agentNum;
 		var isSpeakingSegments = false;
 		console.log(actions[0]);
-		if (DEBUGGING=="1"){
-			$("#ActionAgent").text(agent);
-			$("#ActionType").text(act);
-			$("#ActionData").text(data);
-		}
-		if (agent != "ComputerTutor" && agent != "ComputerStudent1" && agent != "System") {
+		if (agent != "Cristina" && agent != "Jordan" && agent != "System") {
 			return;
-		} else if (agent == "ComputerTutor") {
+		} else if (agent == "Cristina") {
 			agentNum = 0;
-		} else if (agent == "ComputerStudent1") {
+		} else if (agent == "Jordan") {
 			agentNum = 1;
 		}
 		switch (act) {
@@ -398,7 +378,7 @@ function runActions() {
 					getQuestionName = data.replace(getUserName, "_user_");
 					console.log(getQuestionName);
 				}
-				else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="Lesson10") {
+				else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
 					var getUserName = sessionStorage.getItem("uname");
 					getQuestionName = data.replace(getUserName, "_user_");
 					console.log(getQuestionName);
@@ -409,12 +389,17 @@ function runActions() {
 
 				break;
 			case "Speak":
-				speakTurn(data,agentNum);
+				var uname = sessionStorage.getItem("uname");
+				data = data.replace("_user_",uname);
+				data = agentNum + ":" + data;
+
+				//AngentSpeak(data);
 				break;
 			case "Play":
 				if(talkingheadUsing=="Play")
 				{
-					playList = setPlayList(agentNum, data);
+					 playList = setPlayList(agentNum, data);
+
 					repeatList = repeatList.concat(playList);
 					AngentPlay(playList);
 				}
@@ -423,11 +408,9 @@ function runActions() {
 				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
-//			    speakTurn(data,agentNum);
-                /* 
 				if(talkingheadUsing=="Speak2")
 				{
-					agentBusy = AudioPlaying();
+					agentBusy = true;
 					var SName = sessionStorage.getItem("SName");
 					data = data.replace("_user_,", "#"+SName+"#");
 					data = data.replace("_user_!", "#"+SName+"#");
@@ -451,12 +434,12 @@ function runActions() {
 					 actions[0].Data=mergedSegments;
 					isSpeakingSegments = true;
 					}
-//					Speak2(data);
+					Speak2(data);
 					 //SpeakRepeatList.push(data);
 					 addRepeatSpeech(data);
 					 
 					  
-				} */
+				}
 				   
 
 				//console.log(agentNum,data, "Play");
@@ -593,7 +576,7 @@ function runActions() {
 				break;
 
 			case "End":
-			if (currentLessonID == "Lesson10") 
+			if (currentLessonID == "lesson10") 
 			   {
 				setProgress(100);
 				}			 
@@ -644,7 +627,7 @@ function runActions() {
 			mediaActions="unsure";
 		}
 		
-		if (currentLessonID != "Lesson0") {
+		if (currentLessonID != "lesson0") {
 
 
 		   if(mediaActions=="userInputTrue")
@@ -657,7 +640,7 @@ function runActions() {
 
 
 
-		} else if (currentLessonID == "Lesson0" || currentLessonID != "Lesson00") {
+		} else if (currentLessonID == "lesson0" || currentLessonID != "lesson00") {
 			//acePutjson.ID = sessionStorage.getItem("GUID");
 			acePutjson.ID = sessionStorage.getItem("UID");
 			acePutjson.Text = userInput;
@@ -665,7 +648,7 @@ function runActions() {
 
 
 		}
-//		console.log(acePutjson);
+		console.log(acePutjson);
 		Put(acePutjson);
 		PutStatus = true;
 		StopTimer();
@@ -691,31 +674,27 @@ function StartTimer() {
 function StopTimer() {
 	clearInterval(timer);
 }
-function Speak2(data) {
-	if(talkingheadOn=="true"){
-		msSpeakQueued(C1,data);
-		/* var SpeechData=data.split(":");
-		if (SpeechData.length>1){
-			if (SpeechData[0]=="0"){
-				msSpeakQueued(C1,SpeechData[1]);
-			}else{
-				msSpeakQueued(C2,SpeechData[1]);
-			}
-		} else{
-			msSpeakQueued(C1,data);
-		} */
-//	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
-	}	else	{
+function Speak2(data)
+{
+	if(talkingheadOn=="true")
+	{
+	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
+	}
+	else
+	{
 	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "off");
 	}
+ 
+
 
 }
-function isPunctuation(ch)	{
+	function isPunctuation(ch)
+	{
 		return ch.toLowerCase() == ch.toUpperCase();
 	}
 function AngentSpeak(data) {
 	if (talkingheadOn == true) {
-		agentBusy = AudioPlaying();
+		agentBusy = true;
 		document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
 	} else
 	if (talkingheadOn == false) {
@@ -728,7 +707,7 @@ var playListStatus = false;
 
 function AngentPlay(playList) {
 	if (talkingheadOn == true) {
-		agentBusy = AudioPlaying();
+		agentBusy = true;
 		document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "on");
 		playList.splice(0, 1);
 
@@ -739,7 +718,7 @@ function AngentPlay(playList) {
 		}
 
 	} else if (talkingheadOn == false) {
-		agentBusy =AudioPlaying();
+		agentBusy = true;
 
 		document.getElementById('agentsLarge').contentWindow.callBoth(playList[0], "Play", "off");
 		playList.splice(0, 1);
@@ -765,7 +744,7 @@ function SetScoreBoard(ScoreName, Score) {
 
 	} else {
 
-		$('#scoreBoardUserNameR').html("ComputerStudent1");
+		$('#scoreBoardUserNameR').html("Jordan");
 		$('#scoreR').html(Score);
 	}
 
@@ -813,13 +792,13 @@ function showScriptNextButton(data) {
 				//if (pagePath.toLowerCase() == data.toLowerCase()) 
 				 if (pagePath.toLowerCase() == dataURL) 
 				{
-				if(lessonID=="Lesson8" ||  lessonID == "Lesson9" || lessonID == "Lesson10")
+				if(lessonID=="lesson8" ||  lessonID == "lesson9" || lessonID == "lesson10")
 					{
 					   $("#mainFrame").attr("src", currentMediaUrl);
 
 						var d = new Date();
 						pageStartTimestamp = d.getTime();
-						 if(lessonID == "Lesson10") // ***zc: added by z cai 11/30/2018
+						 if(lessonID == "lesson10") // ***zc: added by z cai 11/30/2018
 						 {
 						  setProgress(getMediaObj[i].progressBarValue);
 						 }
@@ -870,6 +849,11 @@ function showMedia(data) {
 	HidePlayVideoButton();
 	currentMediaUrl = currentMediaPath + data;
 	showScriptNextButton(data);
+  /*  $("#mainFrame").attr("src", currentMediaUrl);
+  
+	var d = new Date();
+	pageStartTimestamp = d.getTime();*/
+
 }
 function skipNextButton()
 {
@@ -937,8 +921,8 @@ function nextPage(data) {
 function askClickNextButton()
 {
 	var lessonID=sessionStorage.getItem("LessonID");
-	/*if(lessonID=="Lesson1" ||lessonID=="Lesson2" ||lessonID=="Lesson4" || lessonID=="Lesson6"|| lessonID=="Lesson7"|| lessonID=="Lesson12" || lessonID=="Lesson15"|| lessonID =="Lesson17" || lessonID=="Lesson18"||lessonID=="Lesson20"|| lessonID =="Lesson21" ||lessonID == "Lesson22" || lessonID=="Lesson24"||lessonID=="Lesson25"||  lessonID=="Lesson27" || lessonID=="Lesson28"||  lessonID=="Lesson29"||lessonID=="Lesson30"||lessonID=="Lesson31" ||  lessonID=="Lesson32" || lessonID == "Lesson33" )*/
-	if(lessonID!="Lesson10"&&lessonID!="Lesson11"&&lessonID!="Lesson18")
+	/*if(lessonID=="lesson1" ||lessonID=="lesson2" ||lessonID=="lesson4" || lessonID=="lesson6"|| lessonID=="lesson7"|| lessonID=="lesson12" || lessonID=="lesson15"|| lessonID =="lesson17" || lessonID=="lesson18"||lessonID=="lesson20"|| lessonID =="lesson21" ||lessonID == "lesson22" || lessonID=="lesson24"||lessonID=="lesson25"||  lessonID=="lesson27" || lessonID=="lesson28"||  lessonID=="lesson29"||lessonID=="lesson30"||lessonID=="lesson31" ||  lessonID=="lesson32" || lessonID == "lesson33" )*/
+	if(lessonID!="lesson10"&&lessonID!="lesson11"&&lessonID!="lesson18")
 	{
 		//var playList=setPlayList("0", "s1");
 		// AngentPlay(playList);
@@ -994,7 +978,7 @@ function getAgentMessage(msg)
 			userSelectedItem = msg.userSelectedItem;
 			mediaActions = msg.userAnswer;
 			var lessonID = sessionStorage.getItem("LessonID");
-			if (lessonID == "Lesson8") {
+			if (lessonID == "lesson8") {
 
 				getQuestionName = msg.question;
 			}
@@ -1006,11 +990,11 @@ function getAgentMessage(msg)
 	} else {
 		mediaActions = msg;
 		var lessonID = sessionStorage.getItem("LessonID");
-		if (mediaActions == mediaActions && lessonID == "Lesson8") {
+		if (mediaActions == mediaActions && lessonID == "lesson8") {
 			repeatList = [];
 
 		}
-		if (lessonID == "Lesson10" && msg == "Continue") {
+		if (lessonID == "lesson10" && msg == "Continue") {
 			repeatList = [];
 		}
 	}
@@ -1028,22 +1012,63 @@ function GetMediaFeedBackMsg(msg) {
 
 		getMediaFeedBack = false;
 	}
-//	var uname = sessionStorage.getItem("SName");
-	var uname = qs("SName","John");
+	var uname = sessionStorage.getItem("SName");
 	msg = msg.replace("_user_", uname);
 	SpeakRepeatList=[];
 	var feedBackInfo = msg.split(':');
 	var agentFeedBack = feedBackInfo[1];
 	if (agentFeedBack == "Instruction" || agentFeedBack == "TAGoodAnswer") {
 		Speak2("0:"+feedBackInfo[2]);
+		//SpeakRepeatList.push("0:"+feedBackInfo[2]);
 		addRepeatSpeech("0:"+feedBackInfo[2]);
 		}
 	else if (agentFeedBack == "SAGoodAnswer" || agentFeedBack == "SABadAnswer" || agentFeedBack == "SABadAnswer") {
+	   
 		   Speak2("1:"+feedBackInfo[2]);
+		   //SpeakRepeatList.push("1:"+feedBackInfo[2]);
 		   addRepeatSpeech("1:"+feedBackInfo[2]);
 		}
 	}
+function GetMediaFeedBackMsg_old(msg) {
 
+	if (getMediaFeedBack == true) {
+
+		getMediaFeedBack = false;
+	}
+	var feedBackInfo = msg.split(':');
+	var agentFeedBack = feedBackInfo[1];
+	if (agentFeedBack == "Instruction" || agentFeedBack == "TAGoodAnswer") {
+
+		if (feedBackInfo[0] == "Cristina") {
+
+			var test = feedBackInfo[2];
+
+			if (test.indexOf("_user_") >= 0) {
+				playList = setPlayList(0, feedBackInfo[3]);
+				repeatList = repeatList.concat(playList);
+				AngentPlay(playList);
+			} else {
+				playList = setPlayList(0, feedBackInfo[3]);
+				repeatList = repeatList.concat(playList);
+				AngentPlay(playList);
+			}
+
+		}
+
+	} else if (agentFeedBack == "SAGoodAnswer" || agentFeedBack == "SABadAnswer" || agentFeedBack == "SABadAnswer") {
+		if (feedBackInfo[0] == "Jordan") {
+
+
+			playList = setPlayList(1, feedBackInfo[3]);
+			//playList = setPlayList(1, feedBackInfo[4]);
+			repeatList = repeatList.concat(playList);
+			AngentPlay(playList);
+
+
+		}
+	}
+
+}
 function setPresentationIDObj(lessonID, currentScripturl) {
 	PresentationIDObj = {};
 	PresentationIDObj.lessonID = lessonID;
@@ -1180,7 +1205,9 @@ function InvokeScript(funcName, funcParam) {
 function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	repeatTimes = PresentationHistory.repeatTimes;
 	replayVideoTimes = PresentationHistory.replayVideoTimes;
-	var url = scriptFolderURL + lessonID + "/html5/index.html?lessonName=" + lessonID;
+	
+	/* var url = scriptFolderURL + lessonID + "/html5/index.html?lessonName=" + lessonID;
+	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml"; */
 	
 	var retriveObj={
 		guid:qs("guid",""),
@@ -1194,13 +1221,15 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
 	
 	currentScripturl = aurl;
+	
+	
 	setPresentationIDObj(lessonID, currentScripturl)
 	LoadTalkingHead(url, lessonID)
 	lessonRecovery = true;
 	PutStatus == false;
 	currentMediaPath = scriptFolderURL + lessonID + "/ActivityMedia/";
 	actions = recoveryActions;
-	agentBusy = AudioPlaying();
+	agentBusy = true;
 	StartTimer();
 	checkLessonConfig(lessonID, PresentationHistory.progressBarValue);
 }

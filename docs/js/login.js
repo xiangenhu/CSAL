@@ -15,7 +15,7 @@
 				"Memphis-Test-Habibah:Habibah Khan C13",
 				"Memphis-Test-Haiying:Haiying Li C14",
 				"Memphis-Test-Janay:Janay Stewart C15",
-				"Memphis-Test-ComputerStudent1:ComputerStudent1 Delong C16",
+				"Memphis-Test-Jordan:Jordan Delong C16",
 				"Memphis-Test-Lijia:Lijia Wang C17",
 				"Memphis-Test-Logan:Logan Garrison C18",
 				"Memphis-Test-Mark:Mark Conley C19",
@@ -50,7 +50,7 @@
 				"Habibah Khan",
 				"Haiying Li",
 				"Janay Stewart",
-				"ComputerStudent1 Delong",
+				"Jordan Delong",
 				"Lijia Wang",
 				"Logan Garrison",
 				"Mark Conley",
@@ -158,7 +158,7 @@
 				//var id = document.getElementById("id").value;
 				//window.external.GetName(name);
 				//window.external.GetId(name);
-				window.location = "CSALScreenPage.html";
+				window.location = "CSALscreenPage.html";
 			}
 			
 			function isNumber(evt) {

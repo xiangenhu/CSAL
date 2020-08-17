@@ -1,0 +1,130 @@
+
+<html>
+<head>
+<script>document.domain = "ace.autotutor.org"</script>
+<script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-1.12.4.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>		
+	<script src="js/msapi.js"></script>		
+	<script src="https://xiangenhu.github.io/skoplayer/js/pixi.min.js"></script>
+	<script src="https://xiangenhu.github.io/skoplayer/js/Interface.js"></script>
+	
+		<style type="text/css" id="page-css">
+canvas {
+    width: 130px;
+}
+#Lee {
+  float: right;
+}
+body {
+  overflow: hidden;
+}
+		</style>
+</head>
+<body onload="onLoad()">
+<audio id="audio"></audio> 
+
+<div id="TopDiv" style="position:relative; width:100%; height:200px;"></div>	
+ <button onclick="start()">Start</button> 
+
+
+<script>
+var thLoaded=false;
+var thBusy=false;
+function onLoad() {
+	
+	loadCharas()
+	
+}
+function start()
+{
+	parent.getAgentMessage("start");
+}
+function TestSpeech(Words){
+	
+	msSpeakQueued("Lee",Words,"");
+	msSpeakQueued("Angela",Words,"");
+}
+
+var aud = document.getElementById("audio");
+	aud.onended = function() {
+	
+	if(loaded==2 && thLoaded==false)
+	{
+		thLoaded=true;
+		//alert("thLoaded"+thLoaded);
+		 window.parent.postMessage(0, '*');
+		
+	}
+	else if(loaded==2 && thLoaded==true)
+	{
+		var thBusy=false;
+		//alert("thBusy"+thBusy);
+		  window.parent.postMessage(0, '*');
+		
+		
+	}
+    
+};
+aud.onplaying = function() {
+
+if(loaded==2 && thLoaded==true)
+	{
+	var thBusy=true;
+		//alert("thBusy"+thBusy);
+		
+	}
+   
+};
+
+function stopQueue()
+{
+queue=[];
+	abort();
+	
+}
+function CristinaSpeak(word)
+{
+msSpeakQueued("Angela",Words,"");
+}
+function JordanSpeak(word)
+{
+msSpeakQueued("Lee",Words,"");
+}
+
+
+ function callBoth(str, status, talkingheadSwitch) {
+		if(talkingheadSwitch=="on")
+		{
+				 var strs = str.split(":");
+            var firstPart = strs[0];
+            var scoendPart = strs[1];
+
+            if (status == "Speak") {
+
+                if (firstPart == 0) {
+				msSpeakQueued("Angela",scoendPart,"");
+               
+                 
+                } else if (firstPart == 1) {
+            msSpeakQueued("Lee",scoendPart,"");
+                   
+                }
+
+            } 
+			
+		}
+			else if(talkingheadSwitch=="off")
+			{
+				 window.parent.postMessage(0, '*');
+				
+			}
+           
+        }
+
+</script>
+<p align="center">
+<button onclick="TestSpeech('I am not ready.... I am working very hard to get ready for the ITS 2018 tutorial!<bigsmile/>')" style="display:none">Click here to Ask Me</button> </p>
+</body>
+</html>

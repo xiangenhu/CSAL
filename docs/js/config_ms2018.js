@@ -14,7 +14,7 @@ var systemConfig={
   },
   "lessonsConfig": [
     {
-      "lessonId": "Lesson0",
+      "lessonId": "lesson0",
       "lessonName": "First Lesson",
       "lessonDes": "How to use AutoTutor on the computer",
       "isRecoverable": false,
@@ -29,7 +29,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "Lesson1",
+      "lessonId": "lesson1",
       "lessonName": "Text Signals",
       "lessonDes": "Finding the topic of a text",
       "ishasReadingPage": true,
@@ -316,7 +316,7 @@ var systemConfig={
       ]
     },
      {
-      "lessonId": "Lesson2",
+      "lessonId": "lesson2",
       "lessonName": "Purpose of Texts",
       "lessonDes": "Tests that inform, persuade, versus entertain",
       "ishasReadingPage": true,
@@ -673,7 +673,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson3",
+      "lessonId": "lesson3",
       "lessonName": "Complex Texts",
       "lessonDes": "Predicting Purpose: Hybrid Texts",
       "ishasReadingPage": true,
@@ -1008,7 +1008,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson4",
+      "lessonId": "lesson4",
       "lessonName": "Word Parts",
       "lessonDes": "How to break up words into parts",
       "ishasReadingPage": false,
@@ -1321,7 +1321,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson5",
+      "lessonId": "lesson5",
       "lessonName": "Punctuation",
       "lessonDes": "The meaning of punctuation marks",
       "ishasReadingPage": false,
@@ -1586,7 +1586,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson6",
+      "lessonId": "lesson6",
       "lessonName": "Word Meaning Clues",
       "lessonDes": "How to use text clues to figure out the meaning of a word",
       "ishasReadingPage": true,
@@ -1873,7 +1873,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson7",
+      "lessonId": "lesson7",
       "lessonName": "Learning New Words",
       "lessonDes": "How to learn the meaning of new words",
       "ishasReadingPage": false,
@@ -2138,7 +2138,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson8",
+      "lessonId": "lesson8",
       "lessonName": "Multiple Meaning Words",
       "lessonDes": "How to decide which meaning of a word is relevant",
       "ishasReadingPage": false,
@@ -2425,7 +2425,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson9",
+      "lessonId": "lesson9",
       "lessonName": "Pronouns",
       "lessonDes": "How to decide what a pronoun refers to",
       "ishasReadingPage": false,
@@ -2445,7 +2445,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "Medium",
           "progressBarValue": 2,
-          "quesionName": "ComputerTutor:_user_, Here is another sentence.  Kim sees, her, every month for checkups.  Click on the noun that best replaces the pronoun, her.",
+          "quesionName": "Cristina:_user_, Here is another sentence.  Kim sees, her, every month for checkups.  Click on the noun that best replaces the pronoun, her.",
           "notCountedItem": false
         },
         {
@@ -2454,7 +2454,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "Medium",
           "progressBarValue": 5,
-          "quesionName": "ComputerTutor:_user_,try this next one. Which of the highlighted nouns best replaces the pronoun, she, in this sentence? Then she takes Kim's blood pressure and gets a blood sample.",
+          "quesionName": "Cristina:_user_,try this next one. Which of the highlighted nouns best replaces the pronoun, she, in this sentence? Then she takes Kim's blood pressure and gets a blood sample.",
           "notCountedItem": false
         },
         {
@@ -2463,7 +2463,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "Medium",
           "progressBarValue": 10,
-          "quesionName": "ComputerStudent1:_user_, please help me. Which noun could replace the pronoun, she, in this sentence?: She also lets Kim and Ben listen.",
+          "quesionName": "Jordan:_user_, please help me. Which noun could replace the pronoun, she, in this sentence?: She also lets Kim and Ben listen.",
           "notCountedItem": false
         },
         {
@@ -2472,7 +2472,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "Medium",
           "progressBarValue": 15,
-          "quesionName": "ComputerTutor:_user_, Here is the next sentence. It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. Which choice replaces the word, their, in this sentence?",
+          "quesionName": "Cristina:_user_, Here is the next sentence. It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. Which choice replaces the word, their, in this sentence?",
           "notCountedItem": false
         },
         {
@@ -2481,7 +2481,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "Medium",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:_user_, who does the pronoun, her, refer to in this sentence? The doctor reminds her to eat healthy food and drink lots of water.",
+          "quesionName": "Cristina:_user_, who does the pronoun, her, refer to in this sentence? The doctor reminds her to eat healthy food and drink lots of water.",
           "notCountedItem": false
         },
         {
@@ -2490,7 +2490,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "ComputerTutor:_user_, here is another one. Which is the best word to replace the pronoun, she, in this sentence? She also explains that Kim needs to take a daily vitamin.",
+          "quesionName": "Cristina:_user_, here is another one. Which is the best word to replace the pronoun, she, in this sentence? She also explains that Kim needs to take a daily vitamin.",
           "notCountedItem": false
         },
         {
@@ -2499,7 +2499,7 @@ var systemConfig={
           "questionID": "7",
           "questionLevel": "Medium",
           "progressBarValue": 30,
-          "quesionName": "ComputerStudent1:_user_,can you help me with this one? Here is the sentence: They could harm the baby's health. Which word should we put in place of the pronoun, they?",
+          "quesionName": "Jordan:_user_,can you help me with this one? Here is the sentence: They could harm the baby's health. Which word should we put in place of the pronoun, they?",
           "notCountedItem": false
         },
         {
@@ -2508,7 +2508,7 @@ var systemConfig={
           "questionID": "8",
           "questionLevel": "Medium",
           "progressBarValue": 35,
-          "quesionName": "ComputerTutor:_user_ ,here is another sentence. The doctor also tells Kim and Ben what to expect as it grows. In that sentence the pronoun,It, can be best replaced by which noun.",
+          "quesionName": "Cristina:_user_ ,here is another sentence. The doctor also tells Kim and Ben what to expect as it grows. In that sentence the pronoun,It, can be best replaced by which noun.",
           "notCountedItem": false
         },
         {
@@ -2517,7 +2517,7 @@ var systemConfig={
           "questionID": "9",
           "questionLevel": "Medium",
           "progressBarValue": 40,
-          "quesionName": "ComputerStudent1:_user_, alright. we just have a few more to knock out. How would you replace the pronoun, they, in the sentence: they are eager to visit?",
+          "quesionName": "Jordan:_user_, alright. we just have a few more to knock out. How would you replace the pronoun, they, in the sentence: they are eager to visit?",
           "notCountedItem": false
         },
         {
@@ -2526,7 +2526,7 @@ var systemConfig={
           "questionID": "10",
           "questionLevel": "Medium",
           "progressBarValue": 45,
-          "quesionName": "ComputerTutor:_user_, in this next sentence, how would you replace the pronoun, their. These classes are a good way to meet other parents and learn about their baby.",
+          "quesionName": "Cristina:_user_, in this next sentence, how would you replace the pronoun, their. These classes are a good way to meet other parents and learn about their baby.",
           "notCountedItem": false
         },
         {
@@ -2535,7 +2535,7 @@ var systemConfig={
           "questionID": "11",
           "questionLevel": "Medium",
           "progressBarValue": 50,
-          "quesionName": "ComputerStudent1:_user_, What do you think about this sentence?  They will also discuss feeding, dressing, diapering, and bathing babies. What could we put in place of the pronoun, they?",
+          "quesionName": "Jordan:_user_, What do you think about this sentence?  They will also discuss feeding, dressing, diapering, and bathing babies. What could we put in place of the pronoun, they?",
           "notCountedItem": false
         },
         {
@@ -2544,7 +2544,7 @@ var systemConfig={
           "questionID": "12",
           "questionLevel": "Hard",
           "progressBarValue": 53,
-          "quesionName": "ComputerTutor:_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted.",
+          "quesionName": "Cristina:_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted.",
           "notCountedItem": false
         },
         {
@@ -2553,7 +2553,7 @@ var systemConfig={
           "questionID": "13",
           "questionLevel": "Hard",
           "progressBarValue": 58,
-          "quesionName": "ComputerTutor:_user_, which do you think is the correct noun to replace the pronoun, it, in this sentence? They hope it is a clue that could help solve the mystery of the missing plane; however, instead, they learn that it is garbage, a piece of fishing equipment, or it is a box that fell from a passing ship.",
+          "quesionName": "Cristina:_user_, which do you think is the correct noun to replace the pronoun, it, in this sentence? They hope it is a clue that could help solve the mystery of the missing plane; however, instead, they learn that it is garbage, a piece of fishing equipment, or it is a box that fell from a passing ship.",
           "notCountedItem": false
         },
         {
@@ -2562,7 +2562,7 @@ var systemConfig={
           "questionID": "14",
           "questionLevel": "Hard",
           "progressBarValue": 62,
-          "quesionName": "ComputerTutor:_user_,  here is the next sentence. In 1997, he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California.",
+          "quesionName": "Cristina:_user_,  here is the next sentence. In 1997, he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California.",
           "notCountedItem": false
         },
         {
@@ -2571,7 +2571,7 @@ var systemConfig={
           "questionID": "15",
           "questionLevel": "Hard",
           "progressBarValue": 68,
-          "quesionName": "ComputerStudent1:_user_, this one is tricky to me. What noun should replace the pronoun, it, in this sentence: It, is at least the size of Texas. Will you help me to find the best answer for this one?",
+          "quesionName": "Jordan:_user_, this one is tricky to me. What noun should replace the pronoun, it, in this sentence: It, is at least the size of Texas. Will you help me to find the best answer for this one?",
           "notCountedItem": false
         },
         {
@@ -2580,7 +2580,7 @@ var systemConfig={
           "questionID": "16",
           "questionLevel": "Hard",
           "progressBarValue": 72,
-          "quesionName": "ComputerTutor:_user_, lets go on to the next one.  Which of the nouns best replaces the word, it, in this sentence? The debris has a negative effect on marine life because much of it is not decomposed.",
+          "quesionName": "Cristina:_user_, lets go on to the next one.  Which of the nouns best replaces the word, it, in this sentence? The debris has a negative effect on marine life because much of it is not decomposed.",
           "notCountedItem": false
         },
         {
@@ -2589,7 +2589,7 @@ var systemConfig={
           "questionID": "17",
           "questionLevel": "Hard",
           "progressBarValue": 76,
-          "quesionName": "ComputerTutor:_user_, here is another one. Pick the best noun to replace the pronoun, that, for this phrase. That, means the water moves around in a circle.",
+          "quesionName": "Cristina:_user_, here is another one. Pick the best noun to replace the pronoun, that, for this phrase. That, means the water moves around in a circle.",
           "notCountedItem": false
         },
         {
@@ -2598,7 +2598,7 @@ var systemConfig={
           "questionID": "18",
           "questionLevel": "Hard",
           "progressBarValue": 79,
-          "quesionName": "ComputerTutor:_user_, Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean, while some is swept into the sea by tsunamis. How would you replace the pronoun, it? ?",
+          "quesionName": "Cristina:_user_, Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean, while some is swept into the sea by tsunamis. How would you replace the pronoun, it? ?",
           "notCountedItem": false
         },
         {
@@ -2607,7 +2607,7 @@ var systemConfig={
           "questionID": "19",
           "questionLevel": "Hard",
           "progressBarValue": 82,
-          "quesionName": "ComputerStudent1:_user_,  Let's try another one. Here is the sentence.  Those are huge waves caused by earthquakes under the sea.   how would you replace the pronoun, those? I think the answer is rivers. What about you?",
+          "quesionName": "Jordan:_user_,  Let's try another one. Here is the sentence.  Those are huge waves caused by earthquakes under the sea.   how would you replace the pronoun, those? I think the answer is rivers. What about you?",
           "notCountedItem": false
         },
         {
@@ -2616,7 +2616,7 @@ var systemConfig={
           "questionID": "20",
           "questionLevel": "Hard",
           "progressBarValue": 84,
-          "quesionName": "ComputerTutor:_user_, Just a couple more. Try this sentence. They are dangerous, floating around for months.  what is the best noun to replace the pronoun, they?",
+          "quesionName": "Cristina:_user_, Just a couple more. Try this sentence. They are dangerous, floating around for months.  what is the best noun to replace the pronoun, they?",
           "notCountedItem": false
         },
         {
@@ -2625,7 +2625,7 @@ var systemConfig={
           "questionID": "21",
           "questionLevel": "Hard",
           "progressBarValue": 88,
-          "quesionName": "ComputerStudent1:_user_, in the next sentence, which noun best replaces the pronoun, them. Waves break them up into much smaller pieces and animals swallow them.",
+          "quesionName": "Jordan:_user_, in the next sentence, which noun best replaces the pronoun, them. Waves break them up into much smaller pieces and animals swallow them.",
           "notCountedItem": false
         },
         {
@@ -2634,7 +2634,7 @@ var systemConfig={
           "questionID": "22",
           "questionLevel": "Hard",
           "progressBarValue": 92,
-          "quesionName": "ComputerTutor:_user_, which noun best replaces the pronoun, they, in this sentence? They understand the challenges garbage poses.",
+          "quesionName": "Cristina:_user_, which noun best replaces the pronoun, they, in this sentence? They understand the challenges garbage poses.",
           "notCountedItem": false
         },
         {
@@ -2643,7 +2643,7 @@ var systemConfig={
           "questionID": "23",
           "questionLevel": "Hard",
           "progressBarValue": 96,
-          "quesionName": "ComputerStudent1:Last question _user_. Can you help me find the correct noun to replace their. In the sentence. that's what the twins do in their sport? I think it might refer to the hunters.",
+          "quesionName": "Jordan:Last question _user_. Can you help me find the correct noun to replace their. In the sentence. that's what the twins do in their sport? I think it might refer to the hunters.",
           "notCountedItem": false
         },
         {
@@ -2652,7 +2652,7 @@ var systemConfig={
           "questionID": "24",
           "questionLevel": "Hard",
           "progressBarValue": 100,
-          "quesionName": "ComputerTutor:_user_, here is the Last one. how would you replace the pronoun, it, in this sentence:  Not only is debris in the oceans an  issue for finding the missing plane, but it also has a greater global impact on the environment.",
+          "quesionName": "Cristina:_user_, here is the Last one. how would you replace the pronoun, it, in this sentence:  Not only is debris in the oceans an  issue for finding the missing plane, but it also has a greater global impact on the environment.",
           "notCountedItem": false
         },
         {
@@ -2661,7 +2661,7 @@ var systemConfig={
           "questionID": "25",
           "questionLevel": "Easy",
           "progressBarValue": 52,
-          "quesionName": "ComputerTutor:_user_, which noun best replaces the pronoun,  she, in this sentence? She made the U.S. olympic team.",
+          "quesionName": "Cristina:_user_, which noun best replaces the pronoun,  she, in this sentence? She made the U.S. olympic team.",
           "notCountedItem": false
         },
         {
@@ -2670,7 +2670,7 @@ var systemConfig={
           "questionID": "26",
           "questionLevel": "Easy",
           "progressBarValue": 56,
-          "quesionName": "ComputerTutor:_user_, in this sentence which noun best replaces the pronoun, it. It was all over the news.",
+          "quesionName": "Cristina:_user_, in this sentence which noun best replaces the pronoun, it. It was all over the news.",
           "notCountedItem": false
         },
         {
@@ -2679,7 +2679,7 @@ var systemConfig={
           "questionID": "27",
           "questionLevel": "Easy",
           "progressBarValue": 60,
-          "quesionName": "ComputerStudent1:_user_, I am really not sure about this next one. What does the pronoun, she, refer to in this sentence. She was shocked by the level of interest. Can you help me?",
+          "quesionName": "Jordan:_user_, I am really not sure about this next one. What does the pronoun, she, refer to in this sentence. She was shocked by the level of interest. Can you help me?",
           "notCountedItem": false
         },
         {
@@ -2688,7 +2688,7 @@ var systemConfig={
           "questionID": "28",
           "questionLevel": "Easy",
           "progressBarValue": 64,
-          "quesionName": "ComputerTutor:The debris has a negative effect on marine life because much of it is not biodegradable. _user_ which of the nouns best fits this sentence?",
+          "quesionName": "Cristina:The debris has a negative effect on marine life because much of it is not biodegradable. _user_ which of the nouns best fits this sentence?",
           "notCountedItem": false
         },
         {
@@ -2697,7 +2697,7 @@ var systemConfig={
           "questionID": "29",
           "questionLevel": "Easy",
           "progressBarValue": 68,
-          "quesionName": "ComputerTutor:_user_, Let's keep going. How would you replace the pronoun, she, in this sentence? Lanny was having a good season this winter, but she got sick during a set of races in Italy.",
+          "quesionName": "Cristina:_user_, Let's keep going. How would you replace the pronoun, she, in this sentence? Lanny was having a good season this winter, but she got sick during a set of races in Italy.",
           "notCountedItem": false
         },
         {
@@ -2706,7 +2706,7 @@ var systemConfig={
           "questionID": "30",
           "questionLevel": "Easy",
           "progressBarValue": 72,
-          "quesionName": "ComputerStudent1:_user_, in the sentence, But she would not change her mind, the pronoun, she, is used. What does, she, refer to here?",
+          "quesionName": "Jordan:_user_, in the sentence, But she would not change her mind, the pronoun, she, is used. What does, she, refer to here?",
           "notCountedItem": false
         },
         {
@@ -2715,7 +2715,7 @@ var systemConfig={
           "questionID": "31",
           "questionLevel": "Easy",
           "progressBarValue": 76,
-          "quesionName": "ComputerTutor:_user_,  How would you replace the word, her, in the sentence, once I let her know how much it meant to me,  she realized it was a good thing to do.",
+          "quesionName": "Cristina:_user_,  How would you replace the word, her, in the sentence, once I let her know how much it meant to me,  she realized it was a good thing to do.",
           "notCountedItem": false
         },
         {
@@ -2724,7 +2724,7 @@ var systemConfig={
           "questionID": "32",
           "questionLevel": "Easy",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:_user_, Which noun does the word, it, refer to in this sentence? But she doesn't mind missing it.",
+          "quesionName": "Cristina:_user_, Which noun does the word, it, refer to in this sentence? But she doesn't mind missing it.",
           "notCountedItem": false
         },
         {
@@ -2733,7 +2733,7 @@ var systemConfig={
           "questionID": "33",
           "questionLevel": "Easy",
           "progressBarValue": 84,
-          "quesionName": "ComputerTutor:_user_, What is the best replacement for the pronoun, she, in this sentence?",
+          "quesionName": "Cristina:_user_, What is the best replacement for the pronoun, she, in this sentence?",
           "notCountedItem": false
         },
         {
@@ -2742,7 +2742,7 @@ var systemConfig={
           "questionID": "34",
           "questionLevel": "Easy",
           "progressBarValue": 88,
-          "quesionName": "ComputerTutor:_user_, What does the pronoun, She, refer to in this sentence. She is close to earning a degree in marketing.",
+          "quesionName": "Cristina:_user_, What does the pronoun, She, refer to in this sentence. She is close to earning a degree in marketing.",
           "notCountedItem": false
         },
         {
@@ -2751,7 +2751,7 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 92,
-          "quesionName": "ComputerStudent1:_user_ I think I need a little help here. I am not sure what the correct answer is. Which is the best choice to replace the word, that, in this phrase? That, is helping a business to sell its products.",
+          "quesionName": "Jordan:_user_ I think I need a little help here. I am not sure what the correct answer is. Which is the best choice to replace the word, that, in this phrase? That, is helping a business to sell its products.",
           "notCountedItem": false
         },
 		{
@@ -2760,7 +2760,7 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 96,
-          "quesionName": "ComputerTutor:Let's see what you come up with for another pronoun in this sentence. What is the best replacement for the pronoun, its?",
+          "quesionName": "Cristina:Let's see what you come up with for another pronoun in this sentence. What is the best replacement for the pronoun, its?",
           "notCountedItem": false
         },
 		{
@@ -2769,13 +2769,13 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 100,
-          "quesionName": "ComputerStudent1:_user_, this is the Last question. Can you help me find the correct noun to replace the pronoun, their, in the sentence, that's what the twins do in their sport?",
+          "quesionName": "Jordan:_user_, this is the Last question. Can you help me find the correct noun to replace the pronoun, their, in the sentence, that's what the twins do in their sport?",
           "notCountedItem": false
         }
       ]
     },
     {
-      "lessonId": "Lesson10",
+      "lessonId": "lesson10",
       "lessonName": "Non-Literal Language",
       "lessonDes": "Sentences that have unusual meanings",
       "ishasReadingPage": false,
@@ -2795,7 +2795,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "TP11",
           "progressBarValue": 10,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2804,7 +2804,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "TP12",
           "progressBarValue": 10,
-          "quesionName": "ComputerTutor:Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer.",
+          "quesionName": "Cristina:Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2813,7 +2813,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "TP13",
           "progressBarValue": 10,
-          "quesionName": "ComputerTutor:Why is the writer comparing the reader and a light. _user_, Please press the correct response.",
+          "quesionName": "Cristina:Why is the writer comparing the reader and a light. _user_, Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2822,7 +2822,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "TP14",
           "progressBarValue": 10,
-          "quesionName": "ComputerTutor:What is the intended meaning of the phrase, out like a light. press the correct response.",
+          "quesionName": "Cristina:What is the intended meaning of the phrase, out like a light. press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2831,7 +2831,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "TP15",
           "progressBarValue": 10,
-          "quesionName": "ComputerTutor:Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response.",
+          "quesionName": "Cristina:Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2840,7 +2840,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "TP21",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's first determine which phrase in this advertisement uses nonliteral language. press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's first determine which phrase in this advertisement uses nonliteral language. press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2849,7 +2849,7 @@ var systemConfig={
           "questionID": "7",
           "questionLevel": "TP22",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer.",
+          "quesionName": "Cristina:As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2858,7 +2858,7 @@ var systemConfig={
           "questionID": "8",
           "questionLevel": "TP23",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response.",
+          "quesionName": "Cristina:_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2867,7 +2867,7 @@ var systemConfig={
           "questionID": "9",
           "questionLevel": "TP24",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response.",
+          "quesionName": "Cristina:_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2876,7 +2876,7 @@ var systemConfig={
           "questionID": "10",
           "questionLevel": "TP25",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response.",
+          "quesionName": "Cristina:If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2885,7 +2885,7 @@ var systemConfig={
           "questionID": "11",
           "questionLevel": "TP31",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:Take a look at this next advertisement. When you think you are ready, press on the image to view the first question,",
+          "quesionName": "Cristina:Take a look at this next advertisement. When you think you are ready, press on the image to view the first question,",
           "notCountedItem": false
         },
         {
@@ -2894,7 +2894,7 @@ var systemConfig={
           "questionID": "12",
           "questionLevel": "TP32",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2903,7 +2903,7 @@ var systemConfig={
           "questionID": "13",
           "questionLevel": "TP33",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." ,
+          "quesionName": "Cristina:Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." ,
           "notCountedItem": false
         },
         {
@@ -2912,7 +2912,7 @@ var systemConfig={
           "questionID": "14",
           "questionLevel": "TP34",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral language? Please press the correct response below.",
+          "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
         {
@@ -2921,7 +2921,7 @@ var systemConfig={
           "questionID": "15",
           "questionLevel": "TP35",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:What is the intended meaning of this idiom? press the correct response.",
+          "quesionName": "Cristina:What is the intended meaning of this idiom? press the correct response.",
           "notCountedItem": false
         },{
           "Type": "QuestionPage",
@@ -2929,7 +2929,7 @@ var systemConfig={
           "questionID": "15",
           "questionLevel": "TP35",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral language? Please press the correct response below.",
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
         {
@@ -2938,7 +2938,7 @@ var systemConfig={
           "questionID": "16",
           "questionLevel": "TP41",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2947,7 +2947,7 @@ var systemConfig={
           "questionID": "17",
           "questionLevel": "TP42",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:Is there a comparison being made in the phrase, couch potato? press the correct answer.",
+          "quesionName": "Cristina:Is there a comparison being made in the phrase, couch potato? press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2956,7 +2956,7 @@ var systemConfig={
           "questionID": "18",
           "questionLevel": "TP43",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral language? Please press the correct response below.",
+          "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
         },
         {
@@ -2965,7 +2965,7 @@ var systemConfig={
           "questionID": "19",
           "questionLevel": "TP44",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:What is the intended meaning of couch potato? Please press the correct answer below.",
+          "quesionName": "Cristina:What is the intended meaning of couch potato? Please press the correct answer below.",
           "notCountedItem": false
         },
         {
@@ -2974,7 +2974,7 @@ var systemConfig={
           "questionID": "20",
           "questionLevel": "TP45",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response.",
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -2983,7 +2983,7 @@ var systemConfig={
           "questionID": "21",
           "questionLevel": "TP51",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -2992,7 +2992,7 @@ var systemConfig={
           "questionID": "22",
           "questionLevel": "TP52",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:Is a comparison being made in the phrase, on cloud nine? Please press yes or no.",
+          "quesionName": "Cristina:Is a comparison being made in the phrase, on cloud nine? Please press yes or no.",
           "notCountedItem": false
         },
         {
@@ -3001,7 +3001,7 @@ var systemConfig={
           "questionID": "23",
           "questionLevel": "TP53",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:Why is the writer using this nonliteral language? Please press the correct response.",
+          "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -3010,7 +3010,7 @@ var systemConfig={
           "questionID": "24",
           "questionLevel": "TP54",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:What is the intended meaning of this nonliteral language, on cloud nine? press the correct response.",
+          "quesionName": "Cristina:What is the intended meaning of this nonliteral language, on cloud nine? press the correct response.",
           "notCountedItem": false
         },
         {
@@ -3019,7 +3019,7 @@ var systemConfig={
           "questionID": "25",
           "questionLevel": "TP55",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral language? Please press the correct response.",
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -3028,7 +3028,7 @@ var systemConfig={
           "questionID": "26",
           "questionLevel": "TP61",
           "progressBarValue": 90,
-          "quesionName": "ComputerTutor:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
+          "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
         },
         {
@@ -3037,7 +3037,7 @@ var systemConfig={
           "questionID": "27",
           "questionLevel": "TP62",
           "progressBarValue": 90,
-          "quesionName": "ComputerTutor:Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no.",
+          "quesionName": "Cristina:Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no.",
           "notCountedItem": false
         },
         {
@@ -3046,7 +3046,7 @@ var systemConfig={
           "questionID": "28",
           "questionLevel": "TP63",
           "progressBarValue": 90,
-          "quesionName": "ComputerTutor:Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response.",
+          "quesionName": "Cristina:Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -3055,7 +3055,7 @@ var systemConfig={
           "questionID": "29",
           "questionLevel": "TP64",
           "progressBarValue": 90,
-          "quesionName": "ComputerTutor:What is the intended meaning of, one sip and you're in heaven? Please press the correct response.",
+          "quesionName": "Cristina:What is the intended meaning of, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
         },
         {
@@ -3064,13 +3064,13 @@ var systemConfig={
           "questionID": "30",
           "questionLevel": "TP65",
           "progressBarValue": 90,
-          "quesionName": "ComputerTutor:Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response.",
+          "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
         }
       ]
     },
     {
-      "lessonId": "Lesson11",
+      "lessonId": "lesson11",
       "lessonName": "Review 1",
       "lessonDes": "Review of understanding words and sentences",
       "ishasReadingPage": false,
@@ -3215,7 +3215,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson12",
+      "lessonId": "lesson12",
       "lessonName": "Key Information",
       "lessonDes": "How to identify the type of text ",
       "ishasReadingPage": true,
@@ -3350,7 +3350,7 @@ var systemConfig={
       ]
     },
    {
-      "lessonId": "Lesson13",
+      "lessonId": "lesson13",
       "lessonName": "Simple Stories",
       "lessonDes": "The parts of simple stories",
       "ishasReadingPage": false,
@@ -3455,7 +3455,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson14",
+      "lessonId": "lesson14",
       "lessonName": "Connecting Ideas",
       "lessonDes": "Linking sentences with inferences",
       "ishasReadingPage": true,
@@ -3554,7 +3554,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15",
+      "lessonId": "lesson15",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understanding complex stories ",
       "ishasReadingPage": true,
@@ -3849,7 +3849,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson16",
+      "lessonId": "lesson16",
       "lessonName": "Main Ideas",
       "lessonDes": "Finding the main idea in a text",
       "ishasReadingPage": true,
@@ -4120,7 +4120,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson17",
+      "lessonId": "lesson17",
       "lessonName": "Persuasive Texts",
       "lessonDes": "Finding the main arguments and support",
       "ishasReadingPage": true,
@@ -4463,7 +4463,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson18",
+      "lessonId": "lesson18",
       "lessonName": "Review 2",
       "lessonDes": "Review of different types of texts",
       "ishasReadingPage": false,
@@ -4608,7 +4608,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson19",
+      "lessonId": "lesson19",
       "lessonName": "Claims versus Support",
       "lessonDes": "Identifying main ideas versus suport for the ideas",
       "ishasReadingPage": true,
@@ -4671,7 +4671,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson20",
+      "lessonId": "lesson20",
       "lessonName": "Problems and Solutions",
       "lessonDes": "Identifying problems and how to solve them",
       "ishasReadingPage": true,
@@ -4868,7 +4868,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson21",
+      "lessonId": "lesson21",
       "lessonName": "Cause and Effect",
       "lessonDes": "Finding causes and consequences in texts",
       "ishasReadingPage": true,
@@ -5203,7 +5203,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson22",
+      "lessonId": "lesson22",
       "lessonName": "Describing Things",
       "lessonDes": "Describing prople, places, objects and ideas",
       "ishasReadingPage": true,
@@ -5386,7 +5386,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson23",
+      "lessonId": "lesson23",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -5657,7 +5657,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson24",
+      "lessonId": "lesson24",
       "lessonName": "Time and Order",
       "lessonDes": "Ordering events in time and importance",
       "ishasReadingPage": true,
@@ -5968,7 +5968,7 @@ var systemConfig={
       ]
     },
        {
-      "lessonId": "Lesson25",
+      "lessonId": "lesson25",
       "lessonName": "Steps in Procedures",
       "lessonDes": "Understanding the steps and motives in procedures",
       "ishasReadingPage": true,
@@ -6279,7 +6279,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson26",
+      "lessonId": "lesson26",
       "lessonName": "Review 3",
       "lessonDes": "Review of E-S in PACES",
       "ishasReadingPage": false,
@@ -6295,7 +6295,7 @@ var systemConfig={
       "pages": "[]"
     },
     {
-      "lessonId": "Lesson27",
+      "lessonId": "lesson27",
       "lessonName": "A Personal Story",
       "lessonDes": "Reading a personal story about an adult",
       "ishasReadingPage": true,
@@ -6325,7 +6325,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "",
           "progressBarValue": 5,
-          "quesionName": "ComputerTutor:_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?",
+          "quesionName": "Cristina:_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?",
           "notCountedItem": false
         },
 		{
@@ -6334,7 +6334,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "",
           "progressBarValue": 5,
-          "quesionName": "ComputerTutor:The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below.",
+          "quesionName": "Cristina:The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below.",
           "notCountedItem": false
         },
         {
@@ -6343,7 +6343,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:_user_, press on the sentence above that supports the statement, The writer did not learn about computers in high school.",
+          "quesionName": "Cristina:_user_, press on the sentence above that supports the statement, The writer did not learn about computers in high school.",
           "notCountedItem": false
         },
 		{
@@ -6352,7 +6352,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "",
           "progressBarValue": 20,
-          "quesionName": "ComputerTutor:_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below.",
+          "quesionName": "Cristina:_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6361,7 +6361,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:_user_, Why is the writer explaining the hardships of life without a high school diploma? Please press an answer below.",
+          "quesionName": "Cristina:_user_, Why is the writer explaining the hardships of life without a high school diploma? Please press an answer below.",
           "notCountedItem": false
         },
 		{
@@ -6370,7 +6370,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "",
           "progressBarValue": 40,
-          "quesionName": "ComputerTutor:The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below.",
+          "quesionName": "Cristina:The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below.",
 		   "notCountedItem": false
         },
         {
@@ -6379,7 +6379,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:_user_, press on the sentence above that supports the statement, the writer wants to go back to school.",
+          "quesionName": "Cristina:_user_, press on the sentence above that supports the statement, the writer wants to go back to school.",
           "notCountedItem": false
         }, 
 		{
@@ -6388,7 +6388,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "",
           "progressBarValue": 60,
-          "quesionName": "ComputerTutor:There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below.",
+          "quesionName": "Cristina:There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6397,7 +6397,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:_user_, what do you think the main idea of this story is? press your answer below.",
+          "quesionName": "Cristina:_user_, what do you think the main idea of this story is? press your answer below.",
           "notCountedItem": false
         },
 		{
@@ -6406,7 +6406,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "",
           "progressBarValue": 80,
-          "quesionName": "ComputerTutor:In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below.",
+          "quesionName": "Cristina:In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6415,7 +6415,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "",
           "progressBarValue": 100,
-          "quesionName": "ComputerTutor:_user_, which of these choices do you think is the best title of this text? press your answer at the top of the page.",
+          "quesionName": "Cristina:_user_, which of these choices do you think is the best title of this text? press your answer at the top of the page.",
           "notCountedItem": false
         },
         {
@@ -6424,13 +6424,13 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "",
           "progressBarValue": 100,
-          "quesionName": "ComputerTutor:The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below.",
+          "quesionName": "Cristina:The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below.",
           "notCountedItem": false
         }
       ]
     },
     {
-      "lessonId": "Lesson28",
+      "lessonId": "lesson28",
       "lessonName": "Inferences from Texts",
       "lessonDes": "Making inferences in informational texts",
       "ishasReadingPage": true,
@@ -6717,7 +6717,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson29",
+      "lessonId": "lesson29",
       "lessonName": "Complex Persuasive Texts",
       "lessonDes": "Making inferences in persuasive texts",
       "ishasReadingPage": true,
@@ -6996,7 +6996,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson30",
+      "lessonId": "lesson30",
       "lessonName": "Forms and Documents",
       "lessonDes": "Understanding forms, documents, and surveys",
       "ishasReadingPage": true,
@@ -7283,7 +7283,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson31",
+      "lessonId": "lesson31",
       "lessonName": "Job Applications",
       "lessonDes": "How to fill out a job application",
       "ishasReadingPage": false,
@@ -7364,7 +7364,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson32",
+      "lessonId": "lesson32",
       "lessonName": "Searching the Web",
       "lessonDes": "How to search the web for information",
       "ishasReadingPage": false,
@@ -7477,7 +7477,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson33",
+      "lessonId": "lesson33",
       "lessonName": "Using Email",
       "lessonDes": "How to commuicate with people using email",
       "ishasReadingPage": false,
@@ -7590,7 +7590,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson34",
+      "lessonId": "lesson34",
       "lessonName": "Social Media",
       "lessonDes": "How to use facebook and other social media ",
       "ishasReadingPage": false,
@@ -7719,7 +7719,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_meh",
+      "lessonId": "lesson15_meh",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -8014,7 +8014,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_mhe",
+      "lessonId": "lesson15_mhe",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -8309,7 +8309,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_emh",
+      "lessonId": "lesson15_emh",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -8604,7 +8604,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_ehm",
+      "lessonId": "lesson15_ehm",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -8899,7 +8899,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_hem",
+      "lessonId": "lesson15_hem",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -9194,7 +9194,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson15_hme",
+      "lessonId": "lesson15_hme",
       "lessonName": "Complex Stories ",
       "lessonDes": "Understandig complex stories ",
       "ishasReadingPage": true,
@@ -9489,7 +9489,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "Lesson23_emh",
+      "lessonId": "lesson23_emh",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -9760,7 +9760,7 @@ var systemConfig={
       ]
     },
 	 {
-      "lessonId": "Lesson23_hme",
+      "lessonId": "lesson23_hme",
       "lessonName": "Compare and Contrast",
       "lessonDes": "Finding the similarities and differences between two things",
       "ishasReadingPage": true,
@@ -10031,7 +10031,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson28_hme",
+      "lessonId": "lesson28_hme",
       "lessonName": "Inferences from Texts",
       "lessonDes": "Making inferences in informational texts",
       "ishasReadingPage": true,
@@ -10318,7 +10318,7 @@ var systemConfig={
       ]
     },
     {
-      "lessonId": "Lesson28_emh",
+      "lessonId": "lesson28_emh",
       "lessonName": "Inferences from Texts",
       "lessonDes": "Making inferences in informational texts",
       "ishasReadingPage": true,
