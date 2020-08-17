@@ -2,7 +2,7 @@ var AudioButtonOn, DisplayAreaOn, HomeButtonOn, NextButtonOn, PlayVideoButtonOn,
 
 var currentLessonStatus = false;
 var currentLessonID;
-var domainURL = "https://ace.autotutor.org";
+var domainURL = location.origin;
 var scriptFolderURL = "https://ace.autotutor.org/at2017/scripts/";
 var talkingheadLoaded = false;
 var agentBusy = false;

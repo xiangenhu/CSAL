@@ -1,1 +1,1 @@
-var document.domain = "ace.autotutor.org";
+vardocument.domain = location.host;;
