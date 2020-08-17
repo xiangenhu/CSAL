@@ -263,7 +263,7 @@ function LoadLesson(lessonID) {
 	var aurl="https://class.x-in-y.com/retrieve?json="+JSON.stringify(retriveObj);
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
-	if (qs("useGUID","0")==1){
+	if (qs("useGUID","1")==1){
        currentScripturl = aurl;
 	}
 	
@@ -1220,7 +1220,7 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
 	
-	if (qs("useGUID","0")==1){
+	if (qs("useGUID","1")==1){
        currentScripturl = aurl;
 	}
 	
