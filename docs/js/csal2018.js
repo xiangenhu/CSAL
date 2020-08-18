@@ -236,6 +236,7 @@ document.getElementById('agentsLarge').style.height = "97px";
 	$("#mainFrame").attr("src", loadingPage);
 	$("#home").hide();
 	$("#displayArea").hide();
+	$("#caption").hide();
 	allLessonsInfoObj = getLessonsConfig()
 	getLessonInfo();
 }

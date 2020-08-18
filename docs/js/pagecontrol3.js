@@ -199,12 +199,26 @@ function InitParameters() {
 
 function clearDisplayArea() {
     $("#speechArea").html("");
+	
+    $("#caption").html("");
 }
 
 function appendTextToDisplayArea(data) {
-    $("#speechArea").append(data + "\n\n");
-    var textarea = document.getElementById('speechArea');
-    textarea.scrollTop = textarea.scrollHeight;
+	if (qs("CaptionOn","0")=="1"){
+		$("#speechArea").append(data + "\n\n");
+		var textarea = document.getElementById('speechArea');
+		textarea.scrollTop = textarea.scrollHeight;
+		
+		$("#caption").show();
+		var displayText=data.split("#").join(" ");
+		displayText= displayText.split(":").join(": ")
+		$("#caption").append(displayText + "\n\n");
+		var textarea = document.getElementById('caption');
+		textarea.scrollTop = textarea.scrollHeight;
+	}else{
+		$("#caption").hide();
+	}
+	
 }
 
 function ShowTalkinghead() {

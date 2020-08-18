@@ -7,14 +7,10 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0"> -->
     <title>CSAL Web Application</title>
-    <script>
-        document.domain = location.host;
-    </script>
+
 	<link rel="stylesheet" type="text/css" href="https://js.autotutor.org/csal/css/mainPage.css">
 	
 	
-    <style>
-    </style>
 	
 	<script src="js/xAPIPosting/xapiwrapper.min.js"></script>
     <script src="https://js.autotutor.org/csal/xAPIPosting/Posting.js"></script>
@@ -30,6 +26,21 @@
     <script src="js/userPerformance.js"></script>
     <script src="js/URI.js"></script>
 	<script src="js/csal2018.js"></script>
+    <style>
+		#caption{	
+			width: 1024px;
+			height: 100px;
+			margin: 0 auto;
+			border: medium blue solid;
+			border-radius: 5px;
+			background-color: lightBlue;
+			bottom:10px;
+			left:50%;
+			margin-left:-512px;
+			display:none;
+		}
+
+    </style>
 </head>
 
 <body>
@@ -88,11 +99,11 @@
             </div>
         </div>
         <div id="displayArea">
-            <textarea id="speechArea" name="textInput" autofocus rows="15" cols="111"></textarea>
+            <textarea id="speechArea" name="textInput" autofocus ></textarea>
         </div>
     </div>
 	</div>
-    <div id="caption">asdlkfasldkfasdf</div>
+	<textarea id="caption" autofocus rows="15" cols="111"> </textarea>
 </body>
 
 </html>
