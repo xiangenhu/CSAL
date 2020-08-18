@@ -212,7 +212,7 @@ function appendTextToDisplayArea(data) {
 		$("#caption").show();
 		var displayText=data.split("#").join(" ");
 		displayText= displayText.split(":").join(": ")
-		$("#caption").append(displayText + "\n\n");
+		$("#caption").append(displayText + "\n");
 		var textarea = document.getElementById('caption');
 		textarea.scrollTop = textarea.scrollHeight;
 	}else{
