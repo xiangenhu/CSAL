@@ -204,7 +204,7 @@ function clearDisplayArea() {
 }
 
 function appendTextToDisplayArea(data) {
-	if (qs("CaptionOn","0")=="1"){
+	if (qs("CaptionOn","1")=="1"){
 		$("#speechArea").append(data + "\n\n");
 		var textarea = document.getElementById('speechArea');
 		textarea.scrollTop = textarea.scrollHeight;
