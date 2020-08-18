@@ -1,6 +1,6 @@
 /*
  * jScrollPane build script
- * https://jscrollpane.kelvinluck.com/
+ * http://jscrollpane.kelvinluck.com/
  *
  * Copyright (c) 2013 Kelvin Luck
  * Licensed under the MIT license.

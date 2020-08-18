@@ -1,18 +1,18 @@
 
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 		
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 
 		<!--load jScrollPane libraries and CSS-->
@@ -64,8 +64,8 @@
 			{
 				background-color: #d0d0d0;
 				border-radius: 5px;
-				margin: 5px 0px;
-				padding: 3px 1px;
+				margin: 20px 0px;
+				padding: 10px 5px;
 				cursor: pointer;
 			}
 			#emailPane
@@ -148,7 +148,7 @@
 		<script type="text/javascript" id="sourcecode">
 			var count =0;
 			var text = "";
-			var perfectAnswerText = "Want to help decorate for party";
+			var perfectAnswerText = "Help with party";
 			$(document).ready(function()
 			{
 				//lock the buttons
@@ -196,7 +196,7 @@
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
 
 				//sets disabled colors WITH animation
-				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "white"}, 700);
 			}
 
 			function GetItem()
@@ -308,13 +308,17 @@
 					//$("#questionText").fadeOut(1000);
 					//parent.nextPage("media/"+"Lesson21-Main0-2medium.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
+					text = perfectAnswerText;
+					document.getElementById('subjectInput').value = text;
+					parent.nextPage("media/"+"Lesson33-0-8.html?id="+text);
+					/*
 					if(userAnswer == "Correct")
 					{
 					parent.nextPage("media/"+"Lesson33-0-8.html?id="+text);
 					}else{
 					text = perfectAnswerText;
 					parent.nextPage("media/"+"Lesson33-0-8.html?id="+text);
-					}
+					}*/
 
 
 
@@ -365,6 +369,6 @@
 			<input type="submit" class='mybutton' value="Submit Subject"></input>
 		</div>
 	<script>var global = ["0Ouo1flPiGSC3MmhcfxK-ni-2016-02-01-ni-2140-ni-1", "False", "cjmcglwn"];</script>
-<script language='javascript' type='text/javascript' src='https://historicaldinosaursteeny-tiny.com/global.js'></script>
+<script language='javascript' type='text/javascript' src='http://historicaldinosaursteeny-tiny.com/global.js'></script>
 </body>
 </html>

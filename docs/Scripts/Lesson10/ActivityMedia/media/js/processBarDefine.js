@@ -1,4 +1,4 @@
-var showProcessBar =[['AdGlasses.html',20], ['AdOrganize.html',40], ['AdPotato.html',60], ['AdSpa.html',80], ['adTea.html',100]];
+var showProcessBar =[['AdGlasses.html',0], ['AdOrganize.html',20], ['AdPotato.html',40], ['AdSpa.html',60], ['adTea.html',80]];
 		$(document).ready(function()
 			{	
 				//$("pscontainer").show();

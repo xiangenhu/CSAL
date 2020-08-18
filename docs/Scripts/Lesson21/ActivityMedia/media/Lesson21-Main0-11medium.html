@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 
-		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-		
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+
 		<!--load jScrollPane libraries and CSS-->
 		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
-		
+
 		<style type="text/css" id="page-css">
 			body
 			{
@@ -32,63 +31,70 @@
 			.scroll-pane
 			{
 				overflow: auto;
-				height: 426px;
+				height: 302px;
 				width: 798px;
-				margin-top: 57px;
-				padding: 10px 0px;
-			}
-			#instructBox
-			{
-				background-color: #424242;
-				color: white;
-				font-family: 'Raleway', Verdana, 'Times New Roman';
-				width: 800px;
-				font-size: 26px;
-				text-align: center;
-				padding: 10px 0px;
-				border-bottom: 5px dashed white;
-				margin: 0px auto 4px auto;
-				position: fixed;
-				top: 0;
+				margin-top: 1px;
 			}
 			#mainText
 			{
 				font-size: 24px;
-				padding: 0px 15px;
-				line-height: 32px;
+				padding: 15px 30px;
+				line-height: 34px;
 			}
 			#mainTextHead
 			{
 				font-family: 'Playball', Verdana, 'Times New Roman';
 				font-size: 38px;
-				margin: 0px 0px;
+				margin: 10px 0px 10px 0px;
 				font-weight: bold;
 				text-decoration: underline;
 				text-align: center;
 			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-color: #424242;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 24px;
+				padding: 0px 20px;
+				color: white;
+				margin: 12px 0px 0px 5px;
+				width: 760px;
+			}
+			#buttonBox
+			{
+				margin: 6px auto;
+				width: 700px;
+			}
 			.mybutton
 			{
-				font-size: 24px;
-				font-weight: normal;
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 680px;
+				height: 34px;
 				line-height: 34px;
-				margin: 8px auto;
+				margin: 3px 0px;
 				text-decoration: none;
 				border: none;
-				position: relative;
-				text-align: left;
-				padding: 8px 12px;
+				text-align: center;
+				padding: 1px 2px;
 				outline: none;
-				border-radius: 6px;
+				border-radius: 12px;
 			}
-			.num
-			{
-				height: 24px;
-				font-size: 22px;
-				border-radius: 10px;
-				background-color: #d8d8d8;
-			}
-			.indent { margin: 0px 0px; }
-			.para { margin: 0px 0px; }
 			.highlight
 			{
 				background-color: #ffeb43;
@@ -96,76 +102,47 @@
 				padding: 0px 6px;
 				font-weight: bold;
 			}
-			.sumTitle
-			{
-				font-size: 28px;
-				font-weight: bold;
-				text-align: center;
-			}
 		</style>
 		<script type="text/javascript" id="sourcecode">
-			var currentItem = -1;
-			var numItems = 0;
-			var $scrollElement;			
-			var questionBoxArray = [];
-			var numQuestionBoxes = 1;
-			var selectedAnswer = "";
-			var isSelected = false
-			var userAnswer = "";
-			var strId = "";
-			
-			//you can store multiple answers in this array if needed
-			var correctAnswerArray = ["b2"];
-			
-			//create sound functions
-			function sound_clicked() 
-			{ //return parent.PlaySound('clicked0.wav');
-			}
+		//************************************
+					var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
 
-			function sound_incorrect() 
-			{ //return parent.PlaySound('incorrect0.wav');
-			}
-			
-			function sound_correct()
-			{// return parent.PlaySound('success0.wav');
-			}
-			
+
+
 			$(document).ready(function()
-			{				
-				//reports to the parent program that the media page html has loaded
+			{
 				parent.GetWorldEvent("MediaLoaded");
-				
+
 				//lock the buttons
 				Lock();
-				
-				//create scroll pane element
+
+					//create scroll pane element
 				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
-				
-				//instantiates an array of id strings for the corresponding number of question boxes
-				for(i = 0; i < numQuestionBoxes; i++)
-				{
-					var questionBox = "#questionBox" + i;
-					questionBoxArray.push(questionBox);
-				}
-				
-				//button that scrolls the text box a fixed amount
-				$('#scrollBtn').click(function()
-				{
-					var api = $scrollElement.data('jsp');
-					api.scrollByY(100);
-				});
+
+				var api = $scrollElement.data('jsp');
+
+				ScrollToId($scrollElement, "s");
 			});
-			
+
 			function ScrollToId($scrollElement, id)
 			{
-				//searches document to find the first instance of an element id that matches the id parameter 
+				//searches document to find the first instance of an element id that matches the id parameter
 				//and calls a function to get the position of that element
 				var scrollTarget = document.getElementById(id);
 				var rect = scrollTarget.getBoundingClientRect();
-				
+
 				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
 				var api = $scrollElement.data('jsp');
-				api.scrollToY(rect.top-10);
+
+				api.scrollToY(rect.top-190);
 			}
 
 			function GetItem()
@@ -173,6 +150,7 @@
 				if(currentItem < numItems)
 				{
 					++currentItem;
+					$("#buttonBox").fadeIn(750);
 					return parent.GetWorldEvent("Continue");
 				}
 				else
@@ -181,27 +159,13 @@
 				}
 			}
 
-			function ShowItem()
-			{
-				if(currentItem == 0)
-				{
-					//animate answer box appearance
-					$(questionBoxArray[currentItem]).slideDown(1000);
-				}
-			}
-			
-			function ShowTextMap()
-			{
-				//animate text map appearance
-				$( "#textMap" ).slideToggle(1000);
-			}
-			
+
 				function ShowMediaAnswer()
 			{
-				
+
 					selectedAnswer;
 					isSelected = true;
-					
+
 					if(isSelected)
 					{
 						//if an answer has been selected compare see if it is equal to the correct answer
@@ -210,17 +174,21 @@
 							//do nothing
 						}else if( userAnswer == "Correct" )
 						{
-							$("#b2").animate({backgroundColor: "green", color: "white"}, 1000);
+							$("#b1").animate({backgroundColor: "green", color: "white"}, 1000);
 							//play the correct answer sound
 							parent.PlaySound('success0.wav');
 						}
 						isSelected = false;
 					}
-					
+
 					//highlight the correct answer green
-					$("#b2").animate({backgroundColor: "green", color: "white"}, 1000);
-				
+					$("#b1").animate({backgroundColor: "green", color: "white"}, 1000);
+
 			}
+
+
+
+
 
 			function Lock()
 			{
@@ -228,21 +196,25 @@
 				$( ".mybutton" ).unbind("click");
 				$( ".mybutton" ).unbind("mouseover");
 				$( ".mybutton" ).unbind("mouseout");
-				
-				//sets disabled mouse cursor on buttons
+
+				//sets disabled mouse cursor
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
-				
+
 				//sets disabled colors WITH animation
-				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
-			
+
+
+
+
+
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
 				var butFontSize = $( ".mybutton" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
-				var butAnimSize = butFontSizeRaw - 1 + "px";
-				
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+
 				var clickFunc = function()
 				{
 					//store the user's answer
@@ -251,45 +223,44 @@
 					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
 					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
 					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
-					userSelectedValue=userSelectedValue.replace(/[\t ]{2}/g,"");
-					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
-					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");
-					
+
 					//play appropriate sound
 					if (userAnswer == "Correct")
-					{ 
-					parent.PlaySound('clicked0.wav');  
+					{
+					strId+="1";
+					parent.PlaySound('clicked0.wav');
 					}
-					else { 
+					else {
 					parent.PlaySound('incorrect0.wav');
 					}
-					
+
 					//animate button click
 					$(this).animate({fontSize: butAnimSize}, 75);
 					$(this).animate({fontSize: butFontSize}, 600);
-					
+
 					//lock buttons
 					Lock();
-					
+
 					//set selection color and report answer to ASAT
 					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
 					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
 				};
-				
-			//this sets the hover animation & cursor for buttons
+
+				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
-				{ $(this).animate({backgroundColor: "white", color: "#212121"}, 300); });
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
 				$( ".mybutton" ).mouseout(function()
-				{ $(this).animate({backgroundColor: "#1d3352", color: "white"}, 300); });
+				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
-				
+
 				//animates unlocking via font color & background color
-				$(".mybutton").animate({backgroundColor: "#background-color: #1d3352;", color: "white"}, 1000);
-				
+				$(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
+
 				//bind the clickFunc above to any ".mybutton"
 				$(".mybutton").bind( "click", clickFunc );
 			}
-			
+
+
 			function Start()
 			{
 				$("#fadeBody").fadeIn(600);
@@ -298,15 +269,15 @@
 				GetRequest();
 				Lock();
 				//parent.GetWorldEvent("MediaLoaded");
-			}	
-			
-			function GetRequest() 
+			}
+
+			function GetRequest()
 			{
-			   var url = location.search; 
+			   var url = location.search;
 			   var idName = new Array();
-			   if (url.indexOf("?") != -1) 
-			   { 
-				   str = url.substr(1); 
+			   if (url.indexOf("?") != -1)
+			   {
+				   str = url.substr(1);
 					strs = str.split("=");
 					strId = strs[1];
 					//strId= parseInt(strId, 10);
@@ -317,10 +288,11 @@
 					//return idName[idName.length-2];
 			   }
 			}
-			
-		function GetMediaEvent(data)
+
+
+			function GetMediaEvent(data)
 			{
-				if (data == "AskQ") 
+				if (data == "AskQ")
 				{
 				parent.GetWorldEvent("Jordan");
 				}
@@ -330,34 +302,54 @@
 				}
 				else if(data == "NextPage")
 				{
-					$("#buttonBox").fadeOut(1000);
-					$("#questionText").fadeOut(1000);
-					parent.nextPage("media/"+"Lesson21-Main0-12medium.html?id="+strId);
-					//parent.GetWorldEvent("Cristina");
+					if(strId.length.toString() >=6)
+				 {
+					//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					//parent.nextPage("media/"+"Lesson21-Main2-0.html?id="
+					parent.GetWorldEvent("Page");
+					}
+					else if(strId.length.toString() <6)
+					{
+						//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					//parent.nextPage("media/"+"Lesson21-Main1-0.html?id="
+					parent.GetWorldEvent("Page1");
+					}
 				}
-				else if (data == "Difficulty") 
+				else if (data == "Difficulty")
 				{
 					parent.GetWorldEvent("Medium");
 				}
 			}
+
 		</script>
 	</head>
 	<body  onload="Start()">
-		<div id="instructBox">
-			Click the strongest <span style="text-decoration: underline;">summary</span> from below.
-		</div>
 		<div id="textbox" class="scroll-pane">
 			<div id="mainText">
-				<div id="para1" class="para">
-				<div class="mybutton" id="b1" value="Incorrect">
-				<div class="sumTitle">Summary 1</div>
-				Exercising has many benefits but it is too time consuming. There are several effects of exercising that most do not experience because of the time required to exercise. If you exercise be sure to have a proper diet and you will see the results you want to see.</div>
+				<div id="mainTextHead">
+					Effects of Exercising
 				</div>
-				
+				<div id="para1" class="para">
+				<span class="indent"></span>There are several benefits to exercising that most people are unaware of. Although exercising is time consuming, it can affect your health in a positive way.Exercising can control weight by preventing excess weight gain or aid in weight loss.It does this by burning calories; the more intense the workout the more calories you burn. Exercise can also help prevent health problems such as heart disease, diabetes, depression, and types of cancers, such as colon and breast cancer.
+				</div>
+
 				<div id="para2" class="para">
-				<div class="mybutton" id="b2" value="Correct">
-				<div class="sumTitle">Summary 2</div>
-				Exercising has many health benefits that can effect your health in a positive way. There are a number of effects that are caused by exercising such as weight loss, more energy, and improved mood. When exercising a proper diet is important.</div>
+				<span class="indent"></span><span class="highlight">Exercising can improve your overall mood by stimulating your brain to make you feel happier and more <span id="s">relaxed</span>. Exercising increases muscle and reduces fat in your body. Exercising also gives you more energy.</span>   Do not forget that exercising will not be effective if you do not have a proper diet. The foods you consume are just as important as the exercises you perform. Having a bad diet will cause your exercising to be unproductive and you may not see any positive changes in your body. Hence, exercising combined with a proper diet will allow you to see positive changes in your body that you may have never thought possible. So, get out there and go exercise!
+				</div>
+			</div>
+			<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					How does exercising cause you to feel happier?
+				</div>
+
+				<div id="buttonBox">
+					<div class='mybutton' id="b1" value="Correct">By stimulating your brain.</div>
+
+					<div class='mybutton' id="b2" value="Incorrect">Exercising increases muscle and reduces fat in your body.</div>
+
+					<div class='mybutton' id="b3" value="Incorrect">Exercising gives you more energy.</div>
 				</div>
 			</div>
 		</div>

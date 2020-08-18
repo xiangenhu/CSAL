@@ -1,25 +1,24 @@
 <DOCTYPE html>
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 
-		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
+
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
-		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+
 		<!--load jScrollPane libraries and CSS-->
 		<!--<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>-->
-		
+
 		<style type="text/css" id="page-css">
 			.border { border: 5px double gray; }
 			.indent { padding-left: 20px; }
@@ -30,11 +29,11 @@
 			.vertSpace { margin-top: 5px; margin-bottom: 5px; }
 			.vertSpace1 { margin-top: 10px; margin-bottom: 10px; }
 			.center {text-align: center;}
-			
+
 			/*
 			*{border: 1px solid red;}
 			*/
-			
+
 			body
 			{
 				background-image:url('mainbkgd.jpg');
@@ -104,20 +103,20 @@
 				font-size: 20px;
 				font-family: Raleway, Verdana, 'Times New Roman';
 				font-weight: 700;
-				
-				
+
+
 				text-decoration: none;
 				border: none;
 				position: absolute;
 				text-align: center;
-				
+
 				display: inline-block;
 				margin: 5px auto;
 				margin-left: -5px;
 				outline: none;
 				border-radius: 0px 12px 12px 0px;
 			}
-			
+
 			#mainBody
 			{
 				background-color: rgba(255,255,255,0.9);
@@ -154,7 +153,7 @@
 			}
 			#questionBox
 			{
-				
+
 				background-color: #444;
 				color: white;
 				font-size: 28px;
@@ -172,7 +171,7 @@
 			#questionBoxText
 			{
 				display: table-cell;
-				vertical-align: middle;	
+				vertical-align: middle;
 				padding: 0px 10px;
 				height: 100%;
 			}
@@ -180,22 +179,22 @@
 			{
 				background-color: #b3ccff;
 			}
-			
+
 		</style>
 		<script type="text/javascript" id="sourcecode">
 			var userAnswer = "";
 			$(document).ready(function()
 			{
-				
-				
+
+
 				//lock the buttons
 				Lock();
 				$('#questionBox').hide();
 				//parent.GetWorldEvent("MainPageLoaded");
-				
+
 				//create scroll pane element
 				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
-				
+
 				Unlock();
 			});
 			function GetItem()
@@ -214,75 +213,75 @@
 			{
 				$('#questionBox').toggle('slide', 'left', 1000);
 			}
-			
+
 			function Lock()
 			{
 				//unbinds click function and hover
 				$( ".mybutton" ).unbind("click");
 				$( ".mybutton" ).unbind("mouseover");
 				$( ".mybutton" ).unbind("mouseout");
-				
+
 				//sets disabled mouse cursor
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
-				
+
 				//sets disabled colors WITH animation
 				//$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
-			
+
 			function Unlock()
 			{
 				//this section determines the font size for the click animation used in the clickFunc function below
 				var butFontSize = $( ".mybutton" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
 				var butAnimSize = butFontSizeRaw - 2 + "px";
-				
+
 				var clickFunc = function()
 				{
 					//store the user's answer
 					//userAnswer = $(this).attr("value");
 					var newLocation= $(this).attr("id");
-					
+
 					//Go to ""website"
 					parent.nextPage("media/"+ newLocation);
-					
+
 					//play appropriate sound
 					if (userAnswer == "Correct")
 					{
-						//parent.PlaySound('clicked0.wav'); 
+						//parent.PlaySound('clicked0.wav');
 					}
 					else {
 						//parent.PlaySound('incorrect0.wav');
 					}
-					
+
 					//animate button click
 					$(this).animate({fontSize: butAnimSize}, 75);
 					$(this).animate({fontSize: butFontSize}, 600);
-					
+
 					//lock buttons
 					Lock();
-					
+
 					//set selection color and report answer to ASAT
 					$(this).animate({backgroundColor: "#edff73"}, 600);
 					//parent.GetWorldEvent(userAnswer);
 				};
-				
+
 				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
 				{ $(this).stop().animate({backgroundColor: "#fdffe7"}, 300); });
 				$( ".mybutton" ).mouseout(function()
 				{ $(this).stop().animate({backgroundColor: "#b3ccff"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
-				
+
 				//animates unlocking via font color & background color
 				//$(".mybutton").animate({backgroundColor: "#ddd", color: "#212121"}, 1000);
-				
+
 				//bind the clickFunc above to any ".mybutton"
 				$(".mybutton").bind( "click", clickFunc );
 			}
 			function GetMediaEvent(data)
 			{
 				if (data == "NextPage")
-				{	
+				{
 				//*********
 					parent.nextPage("media/"+"Lesson32-0-2.html");
 				}
@@ -298,14 +297,14 @@
 				{
 					JordanAnswer = $("#b1").attr("value");
 					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
-					
+
 					//parent.GetWorldEvent(JordanAnswer);
 				}
 				else if(data=="JordanBad")
 				{
 					JordanAnswer = $("#b2").attr("value");
 					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
-					
+
 					//parent.GetWorldEvent(JordanAnswer);
 				}
 			}
@@ -332,39 +331,41 @@
 		<div id="mainBody">
 			<div class="link mybutton" id="Lesson32-0-1A.html"value="Correct">
 				<div class="linkHead "  >
-					Mary Poppins (1964)-IMDb
+					The Small Clinic
 					<div class="linkHeadSub">
-						www.imdb.com/title/tt0058331
+						https://www.thesmallclinic.com/
 					</div>
 				</div>
 				<div class="linkBody">
-					Directed by Robert Stevenson. With Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns. A magic nanny comes to work for a cold banker's unhappy ...
+					Select a Clinic to schedule appointments and view services. Find ... The Small Clinic, Part of Groger Health's Growing Platform of Health Care Assets, Awarded ...
 				</div>
 			</div>
-			
+
 			<div class="link mybutton" id="Lesson32-0-1B.html"value="Correct">
 				<div class="linkHead "  >
-					Mary Poppins (film) - Wikipedia, the free encyclopedia
+					Tampbell Clinic
 					<div class="linkHeadSub">
-						en.wikipedia.org/wiki/Mary_Poppins_(film) 
+						https://www.tampbellclinic.com/
 					</div>
 				</div>
 				<div class="linkBody">
-					Mary Poppins is a 1964 American musical fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the ...
+					Tampbell Clinic is one of the nation's leading orthopedic care clinics. Specializing in sports medicine, oncology, rehabilitation, surgery, and more, Tampbell ...
 				</div>
 			</div>
-			
+
 			<div class="link mybutton" id="Lesson32-0-1C.html"  value="Incorrect">
 				<div class="linkHead ">
-					Mary Poppins musical at Bishop McDevitt High School ...
+					The Wood Pediatrics Clinic
 					<div class="linkHeadSub">
-						www.pennlive.com/.../mary_poppins_musical_at_bish...
+						www.thewoodpediatrics.com/
 					</div>
 				</div>
 				<div class="linkBody">
-					Bishop McDevitt high school's musical for 2015 is Mary Poppins. ... Mary Poppins musical at Bishop McDevitt High School: photo gallery. 1 / 19.
+					Pediatricians Providing Quality Medical Care for Children in town.
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
+
+

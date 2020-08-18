@@ -1,1 +1,0 @@
-vardocument.domain = location.host;;

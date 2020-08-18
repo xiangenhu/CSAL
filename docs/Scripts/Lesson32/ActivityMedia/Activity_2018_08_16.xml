@@ -1,0 +1,1006 @@
+<AutoTutorScript xmlns="">
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="MoveOn">
+        <Item text="All right. Let's move on." speech="" play="B1" />
+        <Item text="Let's move on to the next item." speech="" play="B2" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="Please try it." speech=" " play="B3" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="TP2Incorrect">
+        <Item text="_user_, I would not choose this third link, as shown in this webpage, it has nothing to do with the actual Mary Poppins film. But let us go on. " speech="" play="_user_,A1" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Good" speech="" play="A2" />
+        <Item text="Great!" speech="" play="A3" />
+      </SpeechCan>
+      <SpeechCan name="MoveOn">
+        <Item text="All right. Let's move on." speech="" play="A4" />
+        <Item text="Let's move on to the next item." speech="" play="A5" />
+      </SpeechCan>
+      <SpeechCan name="TP9Wrong">
+        <Item text="_user_, I would not choose this website, as once again it is somebody's opinion from a news source instead of reliable medical sources. But go ahead, take a look at what's in it. Use the left arrow button to go back to the previous page. " speech="" play="_user_,A6" />
+      </SpeechCan>
+      <SpeechCan name="TP8Wrong">
+        <Item text="_user_, I would not choose this website, as it is a news story instead of reliable medical sources. But you can go ahead and take a look at what's in it. Use the left arrow button to go back to the previous page. " speech="" play="_user_,A7" />
+      </SpeechCan>
+      <SpeechCan name="TP8or9linkclickagain">
+        <Item text="_user_, please try to click on one of the two links again" speech="" play="_user_,A8" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="Please try it." speech=" " play="A9" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="sorry, something is wrong" speech="" play="A10" />
+        <Item text="Unfortunately that's not right." speech="" play="A11" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="a">a</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="RP4C" usedIn="TP4C">
+      <Item id="1" agent="Jordan" text="Let us read some more in the second half of the wikipedia page!" speech="" play="B4" />
+    </RigidPack>
+    <RigidPack name="RP4B" usedIn="TP4B">
+      <Item id="1" agent="Cristina" text="Here in the wikipedia article you can find information on what allergies are and even the signs of symptoms. It is important to check the accuracy of the information as it is not always correct. You can check the sources of the information for its reliability, by looking at the little numbers right next to the text. Click on them and it will take you to the bibliography below." speech="" play="A12" />
+      <Item id="2" agent="Jordan" text="_user_, why don't we read over this page a little." speech="" play="_user_,B5" />
+    </RigidPack>
+    <RigidPack name="RP1" usedIn="TP1">
+      <Item id="1" agent="Cristina" text="_user_, Here you can see the results of our search for information on Mary Poppins. From here, you can click on any of the links to see if any of the websites seem like good sources for the information you want." speech="" play="_user_,A13" />
+      <Item id="2" agent="Jordan" text="Wow! This is neat Cristina. What happens if we click on one of the links and we don't think the website is very helpful?" speech="" play="B6" />
+      <Item id="3" agent="Cristina" text="If you click on a link, but do not think it was the best one for your search, just click the back button on your browser. The back button is usually close to the search bar and has an arrow pointing to the left. On our pages, you will see that it is highlighted in blue." speech="" play="A14" />
+      <Item id="4" agent="Jordan" text="_user_, does that make sense to you? Let's click on these links to see which one will give us the most information." speech="" play="_user_,B7" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, you really helped me learn a lot about online research today! We covered a lot of information." speech="" play="_user_,B8" />
+      <Item id="2" agent="Cristina" text="_user_, thanks so much for helping Jordan out!" speech="" play="_user_,A15" />
+      <Item id="3" agent="Jordan" text="I think I’m going to go buy the i drops now. I’ll see you next time _user_!" speech="" play="B9,_user_" />
+      <Item id="4" agent="Cristina" text="I’ll see you two soon, thanks again! Good bye!" speech="" play="A16" />
+    </RigidPack>
+    <RigidPack name="RP8" usedIn="TP8">
+      <Item id="1" agent="Jordan" text="I see now, the second link is also a blog article. Boy there are so many of those!" speech="" play="B10" />
+      <Item id="2" agent="Cristina" text="right Jordan! On the internet anyone can post on any topic! That is why looking at where the article comes from is very important!" speech="" play="A17" />
+      <Item id="3" agent="Jordan" text="Thanks! I'm learning so much from the both of you!" speech="" play="B11" />
+    </RigidPack>
+    <RigidPack name="RP91" usedIn="TP91">
+      <Item id="1" agent="Jordan" text=" I will go with your recommendations! Thanks again!" speech="" play="B12" />
+      <Item id="2" agent="Cristina" text="Yes Jordan, now you can do some shopping!" speech="" play="A18" />
+      <Item id="3" agent="Jordan" text="Yay!" speech="" play="B13" />
+    </RigidPack>
+    <RigidPack name="RP6" usedIn="TP6">
+      <Item id="1" agent="Jordan" text="oh thanks, I guess I should have seen that the second link was a news blog, so it wouldn’t be as reliable. " speech="" play="B14" />
+      <Item id="2" agent="Cristina" text="that’s right Jordan, you are learning!!" speech="" play="A19" />
+    </RigidPack>
+    <RigidPack name="RP4" usedIn="TP4">
+      <Item id="1" agent="Cristina" text="wikipedia is a very commonly used site for general information." speech="" play="A20" />
+      <Item id="2" agent="Jordan" text="Wow Cristina thanks! Let me look at the wikipedia page then." speech="" play="B15" />
+    </RigidPack>
+    <RigidPack name="RP4D" usedIn="TP4D">
+      <Item id="1" agent="Jordan" text="I have been reading about the signs and symptoms of allergies and wikipedia says that many allergies come from pollen." speech="" play="B16" />
+      <Item id="2" agent="Cristina" text="That’s right Jordan. Pollen allergies are very common, especially in the summer." speech="" play="A21" />
+      <Item id="3" agent="Jordan" text="Really Cristina? Well then I would like to look for more information on pollen allergies. My allergies get really bad during the summer." speech="" play="B17" />
+      <Item id="4" agent="Cristina" text="Let’s go back to the previous search page." speech="" play="A22" />
+    </RigidPack>
+    <RigidPack name="RP3" usedIn="TP3">
+      <Item id="1" agent="Cristina" text="Jordan, are you seeing links to the information that you need?" speech="" play="A23" />
+      <Item id="2" agent="Jordan" text="Maybe, there are too many options. Which one should I click on?" speech="" play="B18" />
+      <Item id="3" agent="Cristina" text="well Jordan, usually the top few links that show up after a search are the links with the most relevant information to what you are trying to find. If you are looking for general information on allergies, I think the best source is: Wikipedia!" speech="" play="A24" />
+    </RigidPack>
+    <RigidPack name="RP2B" usedIn="TP2B">
+      <Item id="1" agent="Jordan" text="The internet is really powerful! I wonder if I can search some other things using it." speech="" play="B19" />
+      <Item id="2" agent="Cristina" text="Yes Jordan, you can find quite a lot of information on a variety of topics using the search engines on the web." speech="" play="A25" />
+      <Item id="3" agent="Jordan" text="Let me think. I have some very bad allergy problems and I would like to learn more about it. _user_ can you help me?" speech="" play="B20,_user_,B21" />
+      <Item id="4" agent="Cristina" text="That is a good topic for us to research next. Let us go back to the search engine." speech="" play="A26" />
+    </RigidPack>
+    <RigidPack name="RP8B" usedIn="TP8B">
+      <Item id="1" agent="Jordan" text="From what I’ve found out so far, it seems that the fact that my eyes itch a lot is most likely due to allergies. _user_, can you help me find some medication for it?" speech="" play="B22,_user_,B23" />
+      <Item id="2" agent="Cristina" text="Jordan, I think what you need are some allergy eye drops." speech="Jordan, I think what you need are some allergy i drops." play="A27" />
+      <Item id="3" agent="Jordan" text="yes, it seems that that’s what I need." speech="" play="B24" />
+      <Item id="4" agent="Cristina" text="okay, let’s go back to the search engine." speech="" play="A28" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_ hi! I have heard that I can find information about almost anything on the internet. I’m starting to learn how to use search engines and I was wondering if you would be interested in helping me." speech="" media="media\Lesson32-IntroTitle.html" play="_user_,B25" />
+      <Item id="2" agent="Cristina" text="_user_, this can be a useful skill to have." speech="" play="_user_,A29" />
+      <Item id="3" agent="Jordan" text="For example, the other day I saw the movie, Mary Poppins, with a friend and I want to find out more about that movie." speech="" play="B26" />
+      <Item id="4" agent="Cristina" text="Well, then a good place for us to start learning about internet research would be to look up information about the movie online." speech="" play="A30" />
+      <Item id="5" agent="Jordan" text="Yes, that is what my friend said also. I didn’t want to tell him that I’ve never used a search engine. _user_, can you help me find a website that has information on Mary Poppins?" speech="" media="media\Lesson32-0-0.html" play="B27,_user_,B28" />
+    </RigidPack>
+    <RigidPack name="RP9" usedIn="TP9">
+      <Item id="1" agent="Jordan" text="I want to get something cheap. " speech="" play="B29" />
+    </RigidPack>
+    <RigidPack name="RP8C" usedIn="TP8C">
+      <Item id="1" agent="Jordan" text="I guess I should click on the first link: shop for eye drops for allergies on this search engine." speech="I guess I should click on the first link: shop for i drops for allergies on this search engine." play="B30" />
+      <Item id="2" agent="Cristina" text="Yes, that would be a good place to start." speech="" play="A31" />
+    </RigidPack>
+    <RigidPack name="RP7" usedIn="TP7">
+      <Item id="1" agent="Jordan" text="I don't know which one to choose!" speech="" play="B31" />
+    </RigidPack>
+    <RigidPack name="RP6B" usedIn="TP6B">
+      <Item id="1" agent="Jordan" text="This is interesting. I think now I would like to know how to treat a pollen allergy." speech="" play="B32" />
+      <Item id="2" agent="Cristina" text="well, this site has some of that information at the bottom. But you can always search for it again." speech="" play="A32" />
+      <Item id="3" agent="Jordan" text="_user_, you seem to be really good with this, while I read this page, can you help me search for treatments?" speech="" play="_user_,B33" />
+      <Item id="4" agent="Cristina" text="_user_, let us go back to the previous search page" speech="" play="_user_,A33" />
+    </RigidPack>
+    <RigidPack name="RP5" usedIn="TP5">
+      <Item id="1" agent="Jordan" text="I think the second link looks good to me, but I'm not sure. _user_, which link would you click?" speech="" play="B34,_user_,B35" />
+    </RigidPack>
+    <RigidPack name="RP2" usedIn="TP2">
+      <Item id="1" agent="Jordan" text="This website has a ton of information! I wonder if we can find out the name of the actress who played Mary Poppins." speech="" play="B36" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TP1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, let’s try this out. Typically, to start a search, you need to enter in some key terms or words that might help you search for the information you need. Let's practice here by selecting the best key words from the box below the search bar for Voogle. Remember, we are trying to help Jordan find information about the movie, Mary Poppins. Once you pick the best key words, click on the blue search button with the magnifying glass on it." speech="" media="" play="_user_,A34">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Those are the right keywords to use" speech="" keys="mary poppins" threshold="1" test="" play="A35" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Thanks so much _user_!" speech="" keys="mary poppins" threshold="1" test="" play="B37,_user_" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Yes _user_, let’s try this out. Please select an answer from the drop down meanu to enter in the search engine Voogle  for Jordan to search information on the film Mary Poppins. ">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Mary and Poppins would be good keywords to use" speech="" keys="mary poppins" threshold="1" test="" play="A36" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="Okay, let's try this. What is name of the movie that Jordan saw? That would be a good keyword to select." speech="" media="" play="A37">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Mary and Poppins would be good keywords to use" speech="" keys="mary poppins" threshold="" test="" play="A38" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="thanks so much Cristina" speech="" keys="mary poppins" threshold="" test="" play="B38" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Please click on the links and explore each of the sites. _user_, When you have found the site that you think is the best, click on the Use This next button at the top of the page." speech="" media="" itemDif="0.1" play="A39,_user_,A40">
+          <Answers>
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much" speech="" keys="asdf" threshold="" test="" play="_user_,B39" />
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="_user_, I think the IMDB website is the best one, since it is a site dedicated to movies. But the wikipedia website is also a good source for finding information. The Bishop McDevitt website in the third link would not be good because it is about a high school play and not actually about the film." speech="" keys="asdf" threshold="" test="" play="_user_,A41" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="The links IMDB and wikipedia are the correct links." kc="">
+          <Answers>
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much" speech="" keys="asdf" threshold="" test="" play="_user_,B40" />
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="The IMDB and wikipedia pages are good pages for information on the film" speech="" keys="asdf" threshold="" test="" play="A42" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, I would not choose this third link, as shown in this webpage, it has nothing to do with the film. But please click continue to go on." speech="" media="" play="_user_,A43">
+              <Answers>
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Thanks so much Cristina" speech="" keys="asdf" threshold="" test="" play="B41" />
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="The IMDB and wikipedia pages are good pages for information on the film" speech="" keys="asdf" threshold="" test="" play="A44" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP2B">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, let's try to find this information for Jordan. Scroll through the IMDB site to find the information and then click on the button with the name of the actress who played Mary Poppins." speech="" media="" play="_user_,A45">
+          <Answers>
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much! I learned something today from you!" speech="" keys="julie,andrews" threshold="1" test="" play="_user_,B42" />
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="_user_ yes Julie Andrews is the actress who played Mary Poppins." speech="" keys="julie,andrews" threshold="1" test="" play="_user_,A46" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, please click on the name of the actress who played Mary Poppins from the three choices shown in the buttons. Thank you.">
+          <Answers>
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much! I learned something today from you!" speech="" keys="julie,andrews" threshold="1" test="" play="_user_,B43" />
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Julie Andrews is the actress who played Mary Poppins." speech="" keys="julie,andrews" threshold="1" test="" play="A47" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please click on the name of the actress who played Mary Poppins from the three choices shown in the buttons. Thank you." speech="" media="" play="_user_,A48">
+              <Answers>
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much! I learned something today from you!" speech="" keys="julie,andrews" threshold="1" test="" play="_user_,B44" />
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Julie Andrews is the actress who played Mary Poppins." speech="" keys="julie,andrews" threshold="1" test="" play="A49" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, please select a keyword from the list of keywords in the box under the search bar. Remember, Jordan is looking for information on his allergies. Once you select some key words, the keyword will appear in the search bar. Next, please click the blue search button with the magnifying glass." speech="" media="" play="_user_,A50">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="_user_ Great job! " speech="" keys="allerg" threshold=".5" test="" play="_user_,A51" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="allerg" threshold=".5" test="" play="_user_,B45" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, can you please select a keyword to put in the search box that will help Jordan find information on allergies?">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="By selecting the keyword allergy you could find the correct webpage" speech="" keys="allerg" threshold=".5" test="" play="A52" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="allerg" threshold=".5" test="" play="_user_,B46" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please type a keyword in the search box that would be what Jordan is trying to find, please try again." speech="" media="" play="_user_,A53">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="By typing the keyword allergy you could find the correct webpage" speech="" keys="allerg" threshold=".5" test="" play="A54" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="allerg" threshold=".5" test="" play="_user_,B47" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, please click on the continue button to continue." speech="" media="" play="_user_,A55">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A56" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B48" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, please click on the continue button.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A57" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B49" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please click on the continue button to continue." speech="" media="" play="_user_,A58">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A59" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B50" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4B">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, please click on the continue button for more information." speech="" media="" play="_user_,A60">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's see what is next." speech="" keys="asdf" threshold="" test="" play="A61" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B51" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, please click on the continue button to continue.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A62" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B52" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please click on the continue button to continue." speech="" media="" play="_user_,A63">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A64" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B53" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4C">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, when you have finished reading this wikipedia article on allergies, please click the continue button to go on." speech="" media="" play="_user_,A65">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="There is a lot of information here." speech="" keys="asdf" threshold="" test="" play="A66" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B54" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, when you have finished reading this wikipedia article on allergies, please click the continue button to go on.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A67" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B55" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, when you have finished reading this wikipedia article on allergies, please click the continue button to go on." speech="" media="" play="_user_,A68">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A69" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B56" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4D">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Please scroll up to read the rest of the wikipedia article. When you have finished, please click the continue button to go on." speech="" media="" play="_user_,A70">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="We are almost to the end of this page." speech="" keys="asdf" threshold="" test="" play="A71" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B57" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, when you have finished reading this wikipedia article on allergies, please click the continue button to go on.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A72" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B58" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, when you have finished reading this wikipedia article on allergies, please click the continue button to go on." speech="" media="" play="_user_,A73">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A74" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B59" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Let's see if we can find more information on pollen based allergies. _user_, please select a keyword from the list in the box. The key words that you selected should appear in the search bar. Next, click on the blue button with the magnifying glass to start your search." speech="" media="" play="A75,_user_,A76">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Selecting the keywords pollen and allergy will get you a list of good links." speech="" keys="pollen,allerg" threshold=".4" test="" play="A77" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ thanks so much!" speech="" keys="pollen,allerg" threshold=".4" test="" play="_user_,B60" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, pollen allergy is an important one, because it is very common.  Please select keywords to put into the search engine that will show information on allergic reactions to pollen">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="selecting the keywords pollen and allergy would get you to the correct webpage" speech="" keys="pollen,allerg" threshold=".4" test="" play="A78" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ thanks so much!" speech="" keys="pollen,allerg" threshold=".4" test="" play="_user_,B61" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please remember that sometimes you would need to select more than one word for keywords for the search engine to give accurate results. Please try again." speech="" media="" play="_user_,A79">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="selecting the keywords pollen and allergy would get you to the correct webpage" speech="" keys="pollen.allerg" threshold=".4" test="" play="A80" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="pollen.allerg" threshold=".4" test="" play="_user_,B62" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, what do you think? Which link is the most reliable for information on allergic reactions to pollen? Please click on one of the two." speech="" media="" play="_user_,A81">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="This website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source. " speech="" keys="asdf" threshold="" test="" play="A82" />
+            <Answer name="TP8Wrong" agent="Cristina" type="TP8Wrong" text="_user_ I would choose the other website. As it is a  website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source. " speech="" keys="asdf" threshold="" test="" play="_user_,A83" />
+          </Answers>
+        </Question>
+        <Question id="2" agent="Cristina" text="_user_, what do you think? Which link do you think is the most reliable link for information on allergic reactions to pollen? Please click on one of the two." speech="" media="" play="_user_,A84">
+          <Answers>
+            <Answer name="UserIncorrect" agent="Cristina" type="UserIncorrect" text="_user_ and Jordan, I would not pick this page. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The second website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source." speech="" keys="asdf" threshold="" test="" play="_user_,A85" />
+            <Answer name="UserIncorrectJordan" agent="Jordan" type="JordanBad" text="_user_ I agree with you!" speech="" keys="asdf" threshold="" test="" play="_user_,B63" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, what do you think? Which link is the most reliable for information on allergic reactions to pollen? Please click on one of the two.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="I would not pick this the second link. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The first website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source." speech="" keys="pollen,allerg" threshold=".4" test="" play="A86" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ thanks so much!" speech="" keys="pollen,allerg" threshold=".4" test="" play="_user_,B64" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, what do you think? Which link is the most reliable for information on allergic reactions to pollen? Please click on one of the two." speech="" media="" play="_user_,A87">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="I would not pick this the second link. It is an ABC news website written by a journalist once again. So even though the title is very catchy, its information might just be the opinion of the journalist, which means that it is not necessarily accurate. The first website is from the American College of allergy asthma and Immunology website, so it is likely to be a reliable source." speech="" keys="pollen.allerg" threshold=".4" test="" play="A88" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="pollen.allerg" threshold=".4" test="" play="_user_,B65" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP6B">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, if you would like, please feel free to look over this web page. When you are ready to go on, please click on the continue button." speech="" media="" play="_user_,A89">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A90" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B66" />
+          </Answers>
+        </Question>
+        <Question id="2" agent="Cristina" text="_user_, please click continue to go on." speech="" media="" play="_user_,A91">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="Mary Poppins | (RegEx=1, LSA=0)" play="A92" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="Mary Poppins | (RegEx=1, LSA=0)" play="B67" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, please click continue to go on.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="pollen,allerg" threshold=".4" test="" play="A93" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ thanks so much!" speech="" keys="pollen,allerg" threshold=".4" test="" play="_user_,B68" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please click continue to go on." speech="" media="" play="_user_,A94">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="pollen.allerg" threshold=".4" test="" play="A95" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="Thanks so much _user_!" speech="" keys="pollen.allerg" threshold=".4" test="" play="B69,_user_" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, now we are looking for treatments for a pollen allergy. Can you select a keyword from the list and then click the blue button with the magnifying glass to start your search?" speech="" media="" play="_user_,A96">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="selecting the keywords allergy and treatment would work" speech="" keys="allerg treat" threshold=".4" test="" play="A97" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="allerg,treat" threshold=".4" test="" play="_user_,B70" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, can you select the keywords that will immediately find information on how to treat pollen allergies?">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="selecting the keywords allergy and treatment would work" speech="" keys="allerg,treat" threshold=".4" test="" play="A98" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="allerg,treat" threshold=".4" test="" play="_user_,B71" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, don't overthink this. Sometimes succinct keywords are enough. Please try again." speech="" media="" play="_user_,A99">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="selecting the keywords allergy and treatment would work" speech="" keys="allerg,treat" threshold=".4" test="" play="A100" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="allerg,treat" threshold=".4" test="" play="_user_,B72" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, which of these two pages should Jordan use, please click one?" speech="" media="" play="_user_,A101">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="_user_ I would agree with you, this link is a website made specifically for everything deals with pollen and its source." speech="" keys="asdf" threshold="" test="" play="_user_,A102" />
+            <Answer name="UserIncorrectJordan" agent="Jordan" type="UserIncorrect" text="thanks so much Cristina, this is plenty helpful!" speech="" keys="asdf" threshold="" test="" play="B73" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="asdf" threshold="" test="" play="_user_,B74" />
+            <Answer name="CristinaTP8WrongAnswer" agent="Cristina" type="TP9Wrong" text="This second link is some non-mainstream news source with individual opinions once again.The first link is the one that you should choose, as it is a website made specifically for everything deals with pollen and its source. " speech="" keys="asdf" threshold="" test="" play="A103" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Now let’s look at some of these pages. _user_, which of these two pages should Jordan be looking at?">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="The first link is a website made specifically for everything deals with pollen and its source. Whereas the second link is some non-mainstream news source with individual opinions once againWhereas the other link is some non-mainstream news source with individual opinions once again" speech="" keys="allerg,treat" threshold=".4" test="" play="A104" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="allerg,treat" threshold=".4" test="" play="_user_,B75" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, don't overthink this. Sometimes succinct keywords are enough. Please try again." speech="" media="" play="_user_,A105">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="_user_ I would agree with you, this link is a website made specifically for everything deals with pollen and its source." speech="" keys="allerg.treat" threshold=".4" test="" play="_user_,A106" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="allerg.treat" threshold=".4" test="" play="_user_,B76" />
+                <Answer name="CristinaTP8WrongAnswer" agent="Cristina" type="TP9Wrong" text="This second link is some non-mainstream news source with individual opinions once again.The first link is the one that you should choose, as it is a website made specifically for everything deals with pollen and its source. " speech="" keys="asdf" threshold="" test="" play="A107" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP8B">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, please feel free to review this web page. When you are ready to go on, please click on the continue button." speech="" media="" play="_user_,A108">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A109" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B77" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, please click on the continue button to continue.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A110" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B78" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, please click on the continue button to continue." speech="" media="" play="_user_,A111">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's keep going." speech="" keys="asdf" threshold="" test="" play="A112" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="Ok." speech="" keys="asdf" threshold="" test="" play="B79" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP8C">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, let's try to find some eye drops for Jordan. Can you click on a good set of key words? Don't forget to click on the blue search button for the search." speech="_user_, let's try to find some i drops for Jordan. Can you click on a good set of key words? Don't forget to click on the blue search button for the search." media="" itemDif="" play="_user_,A113">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="To be safe, selecting keywords like allergy, eye, and drops, would be the best way to get to the right links." speech="" keys="eye,drop,allerg" threshold=".3" test="" play="A114" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="eye,drop,allerg" threshold=".3" test="" play="_user_,B80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, can you type in a keyword for some allergy eye drops for Jordan?" kc="">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="To be safe, selecting keywords, which are allergy, eye, and drops, would be the best way to get to the right webpages." speech="" keys="eye,drop,allerg" threshold=".3" test="" play="A115" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="eye,drop,allerg" threshold=".3" test="" play="_user_,B81" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, Jordan would like to find medications for eye drops that relieves allergies, please try to type in the three main keywords." speech="" media="" play="_user_,A116">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="To be safe, selecting keywords, which are allergy, eye, and drops, would be the best way to get to the right webpages." speech="" keys="eye,drop,allerg" threshold=".3" test="" play="A117" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="eye,drop,allerg" threshold=".3" test="" play="_user_,B82" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, can you please click on the first link for Jordan?" speech="" media="" play="_user_,A118">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Let's see what eye drops we can get for Jordan." speech="" keys="asdf" threshold="" test="" play="A119" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="asdf" threshold="" test="" play="_user_,B83" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, can you please click on the first link for Jordan?">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="The first link will do in this case" speech="" keys="asdf" threshold="" test="" play="A120" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much!" speech="" keys="asdf" threshold="" test="" play="_user_,B84" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, can you please click on the first link for Jordan?" speech="" media="" play="_user_,A121">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="The first link will do in this case" speech="" keys="asdf" threshold="" test="" play="A122" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much!" speech="" keys="asdf" threshold="" test="" play="_user_,B85" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP91">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, which one of these should Jordan get? He would like the cheapest eye drop. Please click on the name for the eye drop in the box below." speech="_user_, which one of these should Jordan get? He would like the cheapest i drop. Please click on the name for the i drop in the box below." media="" play="_user_,A123">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="The eye drop called alcon naphcon would be good for Jordan." speech="" keys="alcon,naphcon" threshold=".5" test="" play="A124" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much! I will try it out!" speech="" keys="alcon,naphcon" threshold=".5" test="" play="_user_,B86" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_, which one of these should Jordan get? He would like the cheapest eye drop. Please click on the name for the eye drop in the box below.">
+          <Answers>
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="The eye drop called alcon naphcon would be good for Jordan." speech="" keys="alcon,naphcon" threshold=".5" test="" play="A125" />
+            <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_ Thanks so much! I will try it out!" speech="" keys="alcon,naphcon" threshold=".5" test="" play="_user_,B87" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="_user_, many of these items will have similar descriptions, it is important to identify the unique name for the product. Please try again to click on the name of the eye drop for Jordan that is the cheapest one." speech="" media="" play="_user_,A126">
+              <Answers>
+                <Answer name="UserCorrect" agent="Cristina" type="Good" text="The eye drop called alcon naphcon would be good for Jordan." speech="" keys="alcon,naphcon" threshold=".5" test="" play="A127" />
+                <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="_user_ Thanks so much! I will try it out!" speech="" keys="alcon,naphcon" threshold=".5" test="" play="_user_,B88" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="LoadPage">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="GetTutoringPack">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+    </Rule>
+    <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="HasTutoringPack">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TP" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="GetItem">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="Close">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="End">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="AskQ">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="Start2">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="CristinaAskTyping" status="AskQ" response="" event="CristinaT" hasItem="" priority="" frequency="" description="UserAnswerT">
+      <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="100000000000" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="80" description="UserAnswer">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100000000000" id="3" />
+    </Rule>
+    <Rule name="CorrectT" status="UserAnswerT1C" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="QAskedT">
+      <Action agent="System" act="SetStatus" data="QAskedT" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CorrectT1I" status="UserAnswerT1I" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="QAskedT1I">
+      <Action agent="System" act="SetStatus" data="QAskedT1I" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CorrectT1C" status="UserAnswerT1C" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="QAskedT1C">
+      <Action agent="System" act="SetStatus" data="QAskedT1C" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Correct1" status="UserAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="" description="QAsked1">
+      <Action agent="System" act="SetStatus" data="QAsked1" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TP8Wrong" status="UserAnswer" response="" event="TP8Wrong" hasItem="" priority="1" frequency="" description="TP8WrongSecondTry">
+      <Action agent="Cristina" act="CannedExpression" data="TP8Wrong" id="1" />
+      <Action agent="System" act="ShowMedia" data="media\Lesson32-0-2B.html" id="2" />
+      <Action agent="System" act="SetStatus" data="TP8WrongSecondTry" id="3" />
+      <Action agent="System" act="WaitForEvent" data="10000000" id="4" />
+    </Rule>
+    <Rule name="TP9Wrong" status="UserAnswer" response="" event="TP9Wrong" hasItem="" priority="1" frequency="" description="TP9WrongSecondTry">
+      <Action agent="Cristina" act="CannedExpression" data="TP9Wrong" id="1" />
+      <Action agent="System" act="ShowMedia" data="media\Lesson32-0-3B.html" id="2" />
+      <Action agent="System" act="SetStatus" data="TP9WrongSecondTry" id="3" />
+      <Action agent="System" act="WaitForEvent" data="10000000000" id="4" />
+    </Rule>
+    <Rule name="TP8WrongSecondTryCorrect" status="TP8WrongSecondTry" response="" event="Correct" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="TP9WrongSecondTryCorrect" status="TP9WrongSecondTry" response="" event="Correct" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="TP8WrongSecondTryIncorrect" status="TP8WrongSecondTry" response="" event="TP8Wrong" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="Cristina" act="Answer" data="TP8Wrong" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="TP9WrongSecondTryIncorrect" status="TP9WrongSecondTry" response="" event="TP9Wrong" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="Cristina" act="Answer" data="TP9Wrong" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="QAsked">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CAskedFJCT" status="QAskedT1C" response="" event="CristinaT" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+    </Rule>
+    <Rule name="CAskedFJIT" status="QAskedT1I" response="" event="CristinaT" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CAskedJCT" status="QAskedT" response="" event="CristinaT" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAskedFJC" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAskedJC" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="Jordan" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="JordanAskedJC" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="IncorrectFJIT" status="UserAnswerT1I" response="Main-Bad" event="" hasItem="" priority="" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectFJITNeutral" status="UserAnswerT1I" response="Any" event="" hasItem="" priority="2" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectFJCTNeutral" status="UserAnswerT1C" response="Any" event="" hasItem="" priority="2" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectFUNeutral" status="UserAnswerT" response="Any" event="" hasItem="" priority="2" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="IncorrectJCT" status="UserAnswerT" response="Main-Bad" event="" hasItem="" priority="1" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="IncorrectJIT" status="UserAnswerT" response="Main-Bad" event="" hasItem="" priority="1" frequency="" description="GetExpectationT">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationT" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="CorrectT1" status="UserAnswerT" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="IncorrectFJI" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="" frequency="" description="GetExpectation">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectFJC" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="" frequency="" description="GetExpectation">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="GetExpectation">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="TP2Incorrect" status="UserAnswer" response="" event="TP2Incorrect" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="Cristina" act="CannedExpression" data="TP2Incorrect" id="1" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Blank1" status="UserAnswer1" response="Any" event="" hasItem="" priority="2" frequency="" description="UserAnswer2">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100000000000" id="3" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="GetExpectation">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="QAsked2">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="GoBack">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="GoBack">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="Good" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Good" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HasExpectationT" status="GetExpectationT" response="" event="" hasItem="true" priority="" frequency="" description="GetHintT">
+      <Action agent="System" act="GetHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetHintT" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoExpectationT" status="GetExpectationT" response="" event="" hasItem="false" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HasExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="GetHint">
+      <Action agent="System" act="GetHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetHint" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoExpectation" status="GetExpectation" response="" event="" hasItem="false" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HasHint" status="GetHint" response="" event="" hasItem="true" priority="" frequency="" description="UserAnswerHint">
+      <Action agent="System" act="SetStatus" data="UserAnswerHint" id="1" />
+      <Action agent="Cristina" act="DeliverHint" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="100000000000" id="3" />
+    </Rule>
+    <Rule name="NoHint" status="GetHint" response="" event="" hasItem="false" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HasHintT" status="GetHintT" response="" event="" hasItem="true" priority="" frequency="" description="UserAnswerTH">
+      <Action agent="System" act="SetStatus" data="UserAnswerTH" id="1" />
+      <Action agent="Cristina" act="DeliverHint" data="" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="100000000000" id="3" />
+    </Rule>
+    <Rule name="NoHintT" status="GetHintT" response="" event="" hasItem="false" priority="" frequency="" description="GoBack">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+    </Rule>
+    <Rule name="HintCorrect" status="UserAnswerTH" response="Hint-Good" event="" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintBlank" status="UserAnswerTH" response="" event="" hasItem="" priority="2" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="HintIncorrect" status="UserAnswerTH" response="Hint-Bad" event="" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintCorrect-NoType" status="UserAnswerHint" response="" event="Correct" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintBlank-NoType" status="UserAnswerHint" response="" event="" hasItem="" priority="2" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintIncorrect-NoType" status="UserAnswerHint" response="" event="Incorrect" hasItem="" priority="" frequency="" description="GoBack">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="GoToNextPage">
+      <Action agent="System" act="DeliverRigidPack" data="RP" id="1" />
+      <Action agent="System" act="SetStatus" data="GoToNextPage" id="2" />
+    </Rule>
+    <Rule name="GoToNextPage" status="GoToNextPage" response="" event="" hasItem="" priority="" frequency="" description="GetTutoringPack">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+	  <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="Close">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="GetTutoringPack">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

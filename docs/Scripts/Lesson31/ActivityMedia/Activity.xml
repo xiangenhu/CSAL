@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
       <SpeechCan name="Pump">
         <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
       </SpeechCan>
@@ -9,70 +9,98 @@
         <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text=" _user_ I don't think that's it." speech="" play="_user_,B3" />
-        <Item text=" _user_ I don't think that was the right answer. " speech="" play="_user_,B4" />
-        <Item text="_user_ Oops looks like wasn't quite right. " speech="" play="_user_,B5" />
+        <Item text="_user_ I don't think that's it." speech="" play="_user_,B3" />
+        <Item text="_user_ I don't think that was the right answer." speech="" play="_user_,B4" />
+        <Item text="Oops looks like wasn't quite right." speech="" play="B5" />
+        <Item text="_user_, sorry, you were not correct this time, good effort." speech="" play="_user_,B6" />
+        <Item text="_user_, sorry! # that wasn't what I was looking for." speech="" play="_user_,B7" />
+        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,B8" />
+        <Item text="_user_, Whoops! # Looks like you picked the wrong answer." speech="" play="_user_,B9" />
+        <Item text="_user_ Better luck next time! # That wasn't the best answer." speech="" play="_user_,B10" />
+        <Item text="_user_, it looks like you picked the wrong answer." speech="" play="_user_,B11" />
+        <Item text="_user_ Unfortunately I cannot agree with your choice." speech="" play="_user_,B12" />
+        <Item text="_user_, sorry that's not correct." speech="" play="_user_,B13" />
+        <Item text="_user_, well, that wasn't the right choice." speech="" play="_user_,B14" />
+        <Item text="_user_, it Looks like you picked the wrong answer." speech="" play="_user_,B15" />
+        <Item text="Whoops! # Looks like you picked the wrong answer." speech="" play="B16" />
+        <Item text="_user_ sorry! # that wasn't the right answer." speech="" play="_user_,B17" />
+        <Item text="_user_, Looks like you picked the wrong answer" speech="" play="_user_,B18" />
+        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,B19" />
+        <Item text="_user_, No, sorry, that answer is not correct." speech="" play="_user_,B20" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,B21" />
+        <Item text="Well, actually, that is not what I was looking for." speech="" play="B22" />
+        <Item text="Oh sorry, that isn't what I was looking for" speech="" play="B23" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
-        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B6" />
-        <Item text="_user_ Super! You got it!" speech="" play="_user_,B7" />
-        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B8" />
-        <Item text="_user_ You answered correctly! Awesome job!" speech="" play="_user_,B9" />
-        <Item text="_user_ Amazing, you're doing great!" speech="" play="_user_,B10" />
-        <Item text="_user_ Magnificent!" speech="" play="_user_,B11" />
-        <Item text="_user_ Exactly, you nailed it!" speech="" play="_user_,B12" />
-        <Item text="_user_ , Wow, that's it! " speech="" play="_user_,B13" />
+        <Item text="Good! # You got it right!" speech="" play="B24" />
+        <Item text="Super! # You got it!" speech="" play="B25" />
+        <Item text="Great job! # You answered right!" speech="" play="B26" />
+        <Item text="You answered correctly! # Awesome job!" speech="" play="B27" />
+        <Item text="Amazing, you're doing great!" speech="" play="B28" />
+        <Item text="Magnificent!" speech="" play="B29" />
+        <Item text="Exactly, you nailed it!" speech="" play="B30" />
+        <Item text="Wow, that's it!" speech="" play="B31" />
       </SpeechCan>
     </Agent>
-    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
       <SpeechCan name="NegativeFeedbacktoUser">
-        <Item text="_user_, sorry! that wasn't what I was looking for." speech="" play="_user_,A1" />
-        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A2" />
-        <Item text="_user_, Whoops! Looks like you picked the wrong answer." speech="" play="_user_,A3" />
-        <Item text="_user_ Better luck next time! That wasn't the best answer." speech="" play="_user_,A4" />
+        <Item text="Sorry. # that wasn't what I was looking for." speech="" play="A1" />
+        <Item text="Well, not quite, That wasn't the right choice." speech="" play="A2" />
+        <Item text="It looks like you picked the wrong answer." speech="" play="A3" />
+        <Item text="Sorry. # That wasn't the best answer." speech="" play="A4" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbacktoUser">
-        <Item text="_user_ Great job!" speech="" play="_user_,A5" />
-        <Item text="_user_, Good! That is right." speech="" play="_user_,A6" />
-        <Item text=" _user_  You are correct!" speech="" play="_user_,A7" />
-        <Item text="_user_, Perfect! You got it right!" speech="" play="_user_,A8" />
-        <Item text="_user_ great! You answered correctly." speech="" play="_user_,A9" />
-        <Item text=" _user_. You got it right!" speech=" " play="_user_,A10" />
-        <Item text="_user_, Exactly! You are right!" speech="" play="_user_,A11" />
-        <Item text="_user_, Amazing! " speech="" play="_user_,A12" />
-        <Item text="_user_, Awesome job! You answered correctly! " speech="" play="_user_,A13" />
-        <Item text="_user_, Just superb! You're incredible!" speech="" play="_user_,A14" />
-        <Item text="_user_, Brilliant job! You got it right!" speech="" play="_user_,A15" />
-        <Item text="_user_, Perfect! Good work." speech="" play="_user_,A16" />
-        <Item text="_user_, Well done! You're good!" speech="" play="_user_,A17" />
-        <Item text="_user_, That's correct! You're doing beautifully! " speech="" play="_user_,A18" />
-        <Item text="_user_, You rock my socks off! Awesome job getting that one right!" speech="" play="_user_,A19" />
+        <Item text="Great job." speech="" play="A5" />
+        <Item text="Good. # That is right." speech="" play="A6" />
+        <Item text="You are correct." speech="" play="A7" />
+        <Item text="Perfect. # You got it right." speech="" play="A8" />
+        <Item text="great. # You answered correctly." speech="" play="A9" />
+        <Item text="You got it right." speech=" " play="A10" />
+        <Item text="Exactly. # You are right." speech="" play="A11" />
+        <Item text="Amazing. # That's right." speech="" play="A12" />
+        <Item text="Awesome job. # You answered correctly." speech="" play="A13" />
+        <Item text="Just superb. # You're incredible." speech="" play="A14" />
+        <Item text="Brilliant job. # You got it right." speech="" play="A15" />
+        <Item text="Perfect. # Good work." speech="" play="A16" />
+        <Item text="Well done. # You're good." speech="" play="A17" />
+        <Item text="That's correct. # You're doing beautifully." speech="" play="A18" />
+        <Item text="Nice job. # You got that one right." speech="" play="A19" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackFinal">
-        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A20" />
-        <Item text="_user_, Whoops! you are not correct." speech="" play="_user_,A21" />
-        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,A22" />
-        <Item text="_user_, Not exactly, good try" speech="" play="_user_,A23" />
-        <Item text="_user_, Well, that wasn't what I was thinking. Here is the best choice in green" speech="" play="_user_,A24" />
+        <Item text="Well, actually, that is not what I was looking for." speech="" play="A20" />
+        <Item text="Sorry but you are not correct." speech="" play="A21" />
+        <Item text="Oh sorry, that isn't what I was looking for" speech="" play="A22" />
+        <Item text="Not exactly, good try" speech="" play="A23" />
+        <Item text="Well, that wasn't what I was thinking." speech="" play="A24" />
       </SpeechCan>
       <SpeechCan name="Pump">
-        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A25" />
-        <Item text="_user_ Please try to answer the question." speech="" play="_user_,A26" />
-        <Item text="_user_ Please try to give me an answer" speech="" play="_user_,A27" />
+        <Item text="Your answer was not correct." speech="" play="A25" />
+        <Item text="Not exactly." speech="" play="A26" />
+        <Item text="No, that was not the answer i was looking for." speech="" play="A27" />
       </SpeechCan>
       <SpeechCan name="NeutralFeedback">
-        <Item text="_user_ here is the answer." speech="" play="_user_,A28" />
+        <Item text="Here is the answer." speech="" play="A28" />
       </SpeechCan>
       <SpeechCan name="JordanPositiveFeedback">
-        <Item text="ComputerStudent1, Wonderful! You answered the question correctly." speech="" play="A29" />
-        <Item text="ComputerStudent1, You rock! That's right!" speech="" play="A30" />
-        <Item text="ComputerStudent1, That's right!" speech="" play="A31" />
-        <Item text="ComputerStudent1, great work! You got it right!" speech="" play="A32" />
-        <Item text="ComputerStudent1, Awesome work! That's it!" speech="" play="A33" />
+        <Item text="Jordan, Wonderful. # You answered the question correctly." speech="" play="A29" />
+        <Item text="Jordan, You rock. # That's right." speech="" play="A30" />
+        <Item text="Jordan, That's right." speech="" play="A31" />
+        <Item text="Jordan, great work. # You got it right." speech="" play="A32" />
+        <Item text="Jordan, Awesome work. # That's it." speech="" play="A33" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
         <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A34" />
         <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A35" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Good. # You got it right." speech="" play="A36" />
+        <Item text="Super, You got it." speech="" play="A37" />
+        <Item text="Great job. # You answered correctly." speech="" play="A38" />
+        <Item text="You answered correctly. # Amazing job." speech="" play="A39" />
+        <Item text="Amazing, you're doing great." speech="" play="A40" />
+        <Item text="Magnificent. # That's right." speech="" play="A41" />
+        <Item text="Exactly, you got it." speech="" play="A42" />
+        <Item text="Yes, that's it." speech="" play="A43" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -123,28 +151,27 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="I hope you two learned some things about online applications today. For example, it is important to tell an employer information about yourself that is related to the job. Also, you want to be honest on your application and list references that can talk about your skills as an employee." speech="" play="A36" />
-      <Item id="2" agent="ComputerStudent1" text="Yeah. And you also want to be sure to select the correct buttons for questions about yourself, like whether or not you graduated from high school." speech="" play="B14" />
-      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, yes. Let's hope you do not make that mistake again. Again, great job both of you. ComputerStudent1, good look on your job search. See everyone soon." speech="" play="A37" />
-      <Item id="4" agent="ComputerStudent1" text="user_, you really helped me today! Thank you so much! I hope I can get the job! See you two next time." speech="" play="B15" />
+      <Item id="1" agent="Cristina" text="I hope you both learned some things about online applications today. # For example, it is important to tell an employer information about yourself that is related to the job. # Also, you want to be honest on your application and list references that can talk about your skills as an employee." speech="" play="A44" />
+      <Item id="2" agent="Jordan" text="Yeah. # And you also want to be sure to select the correct buttons for questions about yourself, like whether or not you graduated from high school." speech="" play="B32" />
+      <Item id="3" agent="Cristina" text="Jordan, yes. # Let's hope you do not make that mistake again." speech="" play="A45" />
+      <Item id="4" agent="Jordan" text="_user_, you really helped me today! # Thank you so much! # See you two next time." speech="" play="_user_,B33" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, hello. Hope everyone is doing well. " speech="" media="media\Lesson31-IntroTitle.html" play="_user_,A38" />
-      <Item id="2" agent="ComputerStudent1" text="Hi ComputerTutor! I'm great. Now that I have moved to a new place. I am ready to look for a new job." speech="" play="B16" />
-      <Item id="3" agent="ComputerStudent1" text="I just think I need some help filling out the application online. I'm not so good with computers." speech="" play="B17" />
-      <Item id="4" agent="ComputerTutor" text="ComputerStudent1, that's great. Well, you already have a resume. _user_ and I can help you fill out applications." speech="" play="A39,_user_,A40" />
-      <Item id="5" agent="ComputerTutor" text="_user_, it would be great if you can help ComputerStudent1 with some of his questions. I will be here along the way as well." speech="" media="media\JobApplication-0-0.html" play="_user_,A41" />
-      <Item id="6" agent="ComputerStudent1" text="ComputerTutor, that sounds perfect. _user_, I have a few problem areas I think you can help me with." speech="" play="B18,_user_,B19" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, hello." speech="" media="media\Lesson31-IntroTitle.html" play="_user_,A46" />
+      <Item id="2" agent="Jordan" text="_user_ and Cristina, hi. # I'm glad you are both here. # I'm getting ready to apply for a new job working at the Eastside Grill but I need some help filling out the application online. # I'm not so good with computers." speech="" play="_user_,B34" />
+      <Item id="3" agent="Cristina" text="Jordan, that's great. # We can look at your resume and help you fill out applications." speech="" play="A47" />
+      <Item id="4" agent="Jordan" text="That sounds perfect. # _user_, I have a few problem areas I think you can help me with. " speech="" media="" play="B35,_user_,B36" />
+      <Item id="5" agent="Jordan" text="Here is the first question that i am having trouble with." speech="" media="media\JobApplication-0-0.html" play="B37" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_ Let's see if we can figure this out together. When filling out an application, what information should you be prepared to give an employer? I think all of this information is important. Which do you think is best?" speech="" media="" itemDif="0.1" play="_user_,B20">
+        <Question id="1" agent="Jordan" text="The Eastside Grill is saying that to fill out their application, I should be prepared to give them certain information. # _user_, which information do they want? # I think all of this information is important. # Please select one of the choices for me." speech="" media="" itemDif="0.1" play="B38,_user_,B39">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The best answer is Experience, education, and contact information. " speech="" keys="any" threshold="" test="" play="A42" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A43" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="Got it ComputerTutor! This is really helping me to better understand." speech="" keys="any" threshold="" test="" play="B21" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is Experience, education, and contact information. # All of these things are important for an employer to have in order to hire you. # The first answer is not correct because it says you should include your credit history. # You will not need to provide this for a job application, and remember to always be careful in giving out personal information. # The third answer is not correct because family history is not important for an application to work at the eastside grill." speech="" keys="any" threshold="" test="" play="A48" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A49" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Ok, Got it. # This is really helping me to better understand." speech="" keys="any" threshold="" test="" play="B40" />
           </Answers>
         </Question>
       </Questions>
@@ -153,11 +180,11 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="2" agent="ComputerStudent1" text="_user_, Here's the next question. Why is important to be completely honest when filling out an application? I think it is important to always be honest, but if I had to choose I think it just shows you have bad morals." speech="" media="" itemDif="0.1" play="_user_,B22">
+        <Question id="2" agent="Jordan" text="_user_, Here's the next question. # Why is important to be completely honest when filling out an application? # I think it is important to be honest, but my mom said it's ok sometimes to tell a small lie. # So i'm not too sure about how to answer this one. # Will you select an answer for me?" speech="" media="" itemDif="0.1" play="_user_,B41">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Dishonesty could result in not being hired. You should always provide correct and up to date information. Any mistakes could cost you the job." speech="" keys="any" threshold="" test="" play="A44" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_, Please select an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A45" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="Oh, that is important information to remember. " speech="" keys="any" threshold="" test="" play="B23" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The second and third choices do not say anything about how lying will affect your chances of being hired. # The reason you are filling out an application is to get a job. # The first choice is the correct one because dishonesty could result in not being hired. # You should always provide correct and up to date information. # Any mistakes could cost you the job." speech="" keys="any" threshold="" test="" play="A50" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer choice." speech="" keys="any" threshold="" test="" play="_user_,A51" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh, that is important information to remember." speech="" keys="any" threshold="" test="" play="B42" />
           </Answers>
         </Question>
       </Questions>
@@ -166,11 +193,11 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="3" agent="ComputerStudent1" text="_user_, Which position do you think I should apply for? Check my resume if you need." speech="" media="" itemDif="0.1" play="_user_,B24">
+        <Question id="3" agent="Jordan" text="_user_, Which position do you think I should apply for? # Check my resume if you need." speech="" media="" itemDif="0.1" play="_user_,B43">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Server is a good choice based on ComputerStudent1's information. However, he could always apply for any open position. " speech="" keys="any" threshold="" test="" play="A46" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A47" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="That is a great choice! I enjoy serving customers and I have the experience. " speech="" keys="any" threshold="" test="" play="B25" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Server is a good choice based on Jordan's information. # However, he could always apply for any open position." speech="" keys="any" threshold="" test="" play="A52" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A53" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="That is a great choice! # I enjoy serving customers and I have the experience." speech="" keys="any" threshold="" test="" play="B44" />
           </Answers>
         </Question>
       </Questions>
@@ -179,27 +206,29 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="4" agent="ComputerStudent1" text="_user_ ,I'm not sure which skills best show that I can talk to customers. What would you choose? Just type your answer below. The choices are underlined in this job posting I found." speech="" media="" itemDif="0.1" play="_user_,B26">
+        <Question id="4" agent="Jordan" text="_user_ ,I'm not sure which skills best show that I can talk to customers. # What would you choose? # Just type your answer below. # The answer choices are underlined in this job posting I found." speech="" media="" itemDif="0.1" play="_user_,B45">
           <Answers>
-            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="Communication skills would be the best answer. Communication is the sharing of information. What better way to share that by talking. However, a positive attitude might help too." speech="" keys="communi|skills" threshold="0.7" test="" play="A48" />
-            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="That's not quite what I was looking for. A better answer could be something like communication skills. " speech="" keys="well-organized" threshold="0.2" test="" play="A49" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The best answer would be communication skills or even just having a positive attitude." speech="" keys="any" threshold="" test="" play="A50" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please type an answer." speech="" keys="any" threshold="" test="" play="A51" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="That is important to speaking with customers. I didn't even consider it. Awesome!" speech="" keys="any" threshold="" test="" play="B27" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Communication skills would be the best answer. # Communication is the sharing of information. # Being able to talk to customers and find out what they need would mean you have good communication skills. # However, a positive attitude might help too." speech="" keys="communi|skills" threshold="0.7" test="" play="A54" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Being well-organized is not what I was looking for. # Someone could be very well organized but not be able to have a conversation." speech="" keys="well-organized" threshold="0.8" test="" play="A55" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer would be communication skills or even just having a positive attitude. # Being able to talk to customers to find out what they need would show you have good communication skills." speech="" keys="any" threshold="" test="" play="A56" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please type an answer." speech="" keys="any" threshold="0.8" test="" play="A57" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Communication skills are important in talking with customers. # I didn't even consider it. # Awesome!" speech="" keys="any" threshold="0.8" test="" play="B46" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
-        <Expectation id="1" text="" kc="">
+        <Expectation id="1" text="communication skills" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="communication" speech="" keys="\b(comm?\w*|pos?\w*|att?\w*|team\w*|players\w*)\b" threshold="0.6" test="communicatz skills | (RegEx=1, LSA=0.056)&#xD;&#xA;team player | (RegEx=1, LSA=0.016)&#xD;&#xA;comunication | (RegEx=1, LSA=0.419)&#xD;&#xA;atitood | (RegEx=1, LSA=0)" play="A52" />
-            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="well-organized" speech="" keys="well-organized" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A53" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Communication skills would be the best answer. # Communication is the sharing of information. # Being able to talk to customers to figure out what they need would mean you have good communication skills. # However, a positive attitude might help too." speech="" keys="\b(comm?\w*|pos?\w*|att?\w*|team\w*|players\w*)\b" threshold="0.6" test="communicatz skills | (RegEx=1, LSA=0.056)&#xD;&#xA;team player | (RegEx=1, LSA=0.016)&#xD;&#xA;comunication | (RegEx=1, LSA=0.419)&#xD;&#xA;atitood | (RegEx=1, LSA=0)" play="A58" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="well-organized" speech="" keys="well-organized" threshold="0.8" test="communication skills | (RegEx=0, LSA=0)" play="A59" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Communication skills are important in talking with customers. # I didn't even consider it. # Awesome!" speech="" keys="any" threshold="0.8" test="" play="B47" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="ComputerTutor" text="Remember, we are look for the kind of job ComputerStudent1 would like to get. Type the best answer below." speech="" media="" play="A54">
+            <Hint id="1" agent="Cristina" text="Remember, we are looking for skills that would show Jordan can talk to customers. # Type the best answer below." speech="" media="" play="A60">
               <Answers>
-                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="communi|attitude" threshold="0.7" test="" play="A55" />
-                <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Oh that isn't quite what I was looking for. The best answer would be something like communication skills." speech="" keys="doctor" threshold="0.2" test="" play="A56" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Communication skills would be the best answer. # Communication is the sharing of information. # Being able to talk to customers to figure out what they need would mean you have good communication skills. # However, a positive attitude might help too." speech="" keys="communi|attitude" threshold="0.7" test="" play="A61" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Well-organized" speech="" keys="well-organized" threshold="0.8" test="" play="A62" />
+                <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Communication skills are important in talking with customers. # I didn't even consider it. # Awesome!" speech="" keys="any" threshold="0.8" test="" play="B48" />
               </Answers>
             </Hint>
           </Hints>
@@ -210,11 +239,11 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="5" agent="ComputerTutor" text="Let's get started on a few things ComputerStudent1 had trouble with on his application. Here's the next question. Has ComputerStudent1 ever been employed by Eastside Grill restaurants before? ComputerStudent1 has selected the box for no. Let's refer to ComputerStudent1's resume to double check his answers for this section. Please press the button at the bottom for yes or no to respond." speech="" media="" itemDif="0.1" play="A57">
+        <Question id="5" agent="Cristina" text="Let's keep looking at the application. # Has Jordan ever been employed by Eastside Grill restaurants before? # Jordan has selected the box for no. # Let's refer to Jordan's resume to double check his answers for this section. # Please press the button at the bottom for yes or no to respond." speech="" media="" itemDif="0.1" play="A63">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is yes. We can find this information on ComputerStudent1's resume. He has worked for this company before in a different city. Always double check your selections because remember dishonesty can result in not getting the job. " speech="" keys="any" threshold="" test="" play="A58" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A59" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="I told you I was not good with computers! I can't believe I selected the wrong button. " speech="" keys="any" threshold="" test="" play="B28" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is yes. # We can find this information on Jordan's resume. # He has worked for this company before in a different city. # Always double check your selections because remember dishonesty can result in not getting the job." speech="" keys="any" threshold="" test="" play="A64" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="I told you I was not good with computers! # I can't believe I selected the wrong button." speech="" keys="any" threshold="" test="" play="B49" />
           </Answers>
         </Question>
       </Questions>
@@ -223,11 +252,11 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="6" agent="ComputerTutor" text="ComputerStudent1 has marked that he did not graduate from high school? According to his resume, is this information correct? Please select yes or no at the bottom to submit your answer." speech="" media="" itemDif="0.1" play="A60">
+        <Question id="6" agent="Cristina" text="Let's keep going. # Look at the section where it asks if Jordan graduated from high school. # It looks like Jordan has marked that he did not graduate. # According to his resume, did Jordan graduate from high school? # _user_, please select yes or no at the bottom to submit your answer." speech="" media="" itemDif="0.1" play="A66,_user_,A67">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is yes. ComputerStudent1 did graduate from high school. Again, it is important to make sure that you press the correct buttons when filling out a resume or you run the risk of not being hired. " speech="" keys="any" threshold="" test="" play="A61" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A62" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="Oh yeah! I did graduate. what a silly mistake! I am glad we caught it before I turned in my application. " speech="" keys="any" threshold="" test="" play="B29" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is yes. # Jordan did graduate from high school. # Again, it is important to make sure that you press the correct buttons when filling out a resume or you run the risk of not being hired." speech="" keys="any" threshold="" test="" play="A68" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A69" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh yeah! # I did graduate. # what a silly mistake! # I am glad we caught it before I turned in my application." speech="" keys="any" threshold="" test="" play="B50" />
           </Answers>
         </Question>
       </Questions>
@@ -236,11 +265,11 @@
     </TutoringPack>
     <TutoringPack name="TPA7">
       <Questions>
-        <Question id="7" agent="ComputerTutor" text="_user_, Press on the task that is the most related to the open serving position." speech="" media="" itemDif="0.1" play="_user_,A63">
+        <Question id="7" agent="Cristina" text="Look at the tasks listed below. # Which task is the most related to the open serving position? # _user_, please choose an answer for Jordan." speech="" media="" itemDif="0.1" play="A70,_user_,A71">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The best answer is Seated and obtained orders. Because seating and taking orders is experience that can be used in many different settings. Every restaurant may not be the same and some of the tasks listed may not apply to serving anywhere rather than just on place.  " speech="" keys="any" threshold="" test="" play="A64" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A65" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="Alright ComputerTutor, I think I'm getting this!" speech="" keys="any" threshold="" test="" play="B30" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is Seated and obtained orders. # This is the best answer because seating and taking orders is experience that can be used in many different restaurants. # Every restaurant may not be the same and some of the tasks listed may not apply to serving at other restaurants." speech="" keys="any" threshold="" test="" play="A72" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A73" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Alright Cristina, I think I'm getting this!" speech="" keys="any" threshold="" test="" play="B51" />
           </Answers>
         </Question>
       </Questions>
@@ -249,27 +278,27 @@
     </TutoringPack>
     <TutoringPack name="TPA8">
       <Questions>
-        <Question id="8" agent="ComputerStudent1" text="_user_, Which reference do you think is best for applying to Eastside Grill? You can type your answer into the boxes with the red star next to them." speech="" media="" itemDif="0.1" play="_user_,B31">
+        <Question id="8" agent="Jordan" text="_user_, Which reference do you think is best for applying to Eastside Grill? # Type their name into the box with the red star next to it." speech="" media="" itemDif="0.1" play="_user_,B52">
           <Answers>
-            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="Chelsea Jones is a good answer!" speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="" play="A66" />
-            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Not quite what I was looking for." speech="" keys="bob" threshold="0.2" test="" play="A67" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Well, we now know that ComputerStudent1 has worked for Eastside Grill before. He may want to use his former manager from the restaurant as a reference. She may be able to offer information to his potential new employer that could be helpful for getting the job. " speech="" keys="any" threshold="" test="" play="A68" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A69" />
-            <Answer name="JordanResponseToCorrect" agent="ComputerStudent1" type="JordanResponseToCorrect" text="Oh Yeah. Now I see that Chelsea Jones would be the best reference for my application to the Eastside Grill. " speech="" keys="any" threshold="" test="" play="B32" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. # She also works for the same brand of restaurants as Jordan is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="" play="A74" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not quite what I was looking for." speech="" keys="bob" threshold="0.8" test="" play="A75" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Well, we now know that Jordan has worked for Eastside Grill before. # He may want to use his former manager from the restaurant as a reference. # She may be able to offer information to his potential new employer that could be helpful for getting the job." speech="" keys="any" threshold="" test="" play="A76" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A77" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Oh Yeah. # Now I see that Chelsea Jones would be the best reference for my application to the Eastside Grill." speech="" keys="any" threshold="" test="" play="B53" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
-        <Expectation id="1" text="" kc="">
+        <Expectation id="1" text="Chelsea Jones" kc="">
           <Answers>
-            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="Chelsea Jones is a good answer because she is a former manager of ComputerStudent1's. She also works for the same brand of restaurants as ComputerStudent1 is applying for. " speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A70" />
-            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)" play="A71" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. # She also works for the same brand of restaurants as Jordan is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A78" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.8" test="communication skills | (RegEx=0, LSA=0)" play="A79" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="ComputerTutor" text="Think about which person could talk about ComputerStudent1's skills working at the Eastside Grill? What do you think the best answer might be?" speech="" media="" play="A72">
+            <Hint id="1" agent="Cristina" text="Think about which person could talk about Jordan's skills working at the Eastside Grill? # What do you think the best answer might be? # Give this question another try." speech="" media="" play="A80">
               <Answers>
-                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="Chelsea Jones is a good answer because she is a former manager of ComputerStudent1's. She also works for the same brand of restaurants as ComputerStudent1 is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.5" test="" play="A73" />
-                <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.2" test="" play="A74" />
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Chelsea Jones is a good answer because she is a former manager of Jordan's. # She also works for the same brand of restaurants as Jordan is applying for." speech="" keys="\b(ch[ea]\w*|jon\w*)\b" threshold="0.5" test="" play="A81" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Not a bad answer but I think there might be another person who is better on this list." speech="" keys="bob" threshold="0.8" test="" play="A82" />
               </Answers>
             </Hint>
           </Hints>
@@ -283,7 +312,7 @@
     <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
       <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
-      <Action agent="System" act="Wait" data="5" id="3" />
+      <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
@@ -321,38 +350,38 @@
       <Action agent="System" act="SetStatus" data="Start2" id="1" />
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
-    <Rule name="JordanAskQ" status="AskQ" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
-      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
-    <Rule name="CristinaAskQJC" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="10" description="">
+    <Rule name="CristinaAskQJC" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="10" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="4" />
       <Action agent="System" act="GetMediaEvent" data="JordanCorrect" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="6" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
       <Action agent="System" act="WaitForEvent" data="100" id="7" />
     </Rule>
-    <Rule name="CristinaAskQJI" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="10" description="">
+    <Rule name="CristinaAskQJI" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="10" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="4" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="4" />
       <Action agent="System" act="GetMediaEvent" data="JordanIncorrect" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="6" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
       <Action agent="System" act="WaitForEvent" data="100" id="7" />
     </Rule>
-    <Rule name="CristinaAskQ" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="80" description="">
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="80" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="3" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="JordanAskTypingU" status="AskQ" response="" event="JordanT" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
-      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="WaitForMediaInput" data="120" id="3" />
     </Rule>
     <Rule name="CorrectT" status="UserAnswerT" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="">
@@ -372,86 +401,98 @@
     </Rule>
     <Rule name="AskedJCT" status="QAskedT" response="" event="JordanT" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
-      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
-    <Rule name="CristinaAskedFJC" status="QAsked1" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+    <Rule name="CristinaAskedFJC" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
-    </Rule>
-    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
-      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="CristinaAskedJC" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
-      <Action agent="System" act="ShowMediaEvent" data="JordanCorrect" id="3" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
-    </Rule>
-    <Rule name="CristinaAskedJI" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
-      <Action agent="System" act="ShowMediaEvent" data="JordanIncorrect" id="3" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
-    </Rule>
-    <Rule name="JordanAskedJC" status="QAsked" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanResponsetoCorrect" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CristinaAskedJC" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CristinaAskedJI" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="JordanAskedJC" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="IncorrectFUNeutral" status="UserAnswerT" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="Pump" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="Pump" id="1" />
       <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
       <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="IncorrectT" status="UserAnswerT" response="Main-Bad" event="" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
       <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
       <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="IncorrectFJI" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="IncorrectFJC" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackFinal" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerStudent1" act="Answer" data="AgreeswithUser" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
-      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="Blank1" status="UserAnswer1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
@@ -459,30 +500,37 @@
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
       <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
-    <Rule name="JordanAsked2" status="QAsked2" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
       <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
-    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanAnswer" id="2" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswer" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="HasExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetHint" id="1" />
@@ -492,38 +540,45 @@
     <Rule name="NoExpectation" status="GetExpectation" response="" event="" hasItem="false" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GoBack" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="HasHint" status="GetHint" response="" event="" hasItem="true" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswerTH" id="1" />
-      <Action agent="ComputerTutor" act="DeliverHint" data="1" id="2" />
+      <Action agent="Cristina" act="DeliverHint" data="1" id="2" />
       <Action agent="System" act="WaitForMediaInput" data="100" id="3" />
     </Rule>
     <Rule name="NoHint" status="GetHint" response="" event="" hasItem="false" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GoBack" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="HintCorrect" status="UserAnswerTH" response="Hint-Good" event="" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
-      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="HintBlank" status="UserAnswerTH" response="Any" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NeutralFeedback" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NeutralFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="HintIncorrect" status="UserAnswerTH" response="Hint-Bad" event="" hasItem="" priority="1" frequency="" description="">
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
-      <Action agent="System" act="AddScore" data="0" id="4" />
-      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
-	  <Action agent="System" act="GetRule" data="" id="6" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="AddScore" data="0" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="Transition0" id="1" />

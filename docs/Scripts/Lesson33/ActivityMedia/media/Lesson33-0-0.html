@@ -1,17 +1,17 @@
 
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 		
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -124,7 +124,7 @@
 						}
 					
 					//highlight the correct answer green
-					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "gray"}, 1000);
 				}
 			
 			function Lock()
@@ -138,7 +138,7 @@
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
 				
 				//sets disabled colors WITH animation
-				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "white"}, 700);
 			}
 			
 			function GetItem()
@@ -244,7 +244,7 @@
 		</div>
 		<form id="loginSection">
 			<div id="login">
-				Login <input type="text" id="loginInput" class="inputBox" value="ComputerStudent1@mymail.com" readonly>
+				Username <input type="text" id="loginInput" class="inputBox" value="Jordan@mymail.com" readonly>
 			</div>
 			
 			<div id="password">

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
       <SpeechCan name="PositiveFeedback">
         <Item text="That is what I thought." speech=" " play="B1" />
         <Item text="I agree." speech=" " play="B2" />
         <Item text="Yeah." speech=" " play="B3" />
         <Item text="I think so too." speech=" " play="B4" />
         <Item text="That is my answer as well." speech=" " play="B5" />
-        <Item text="You seem smart. I'll go with your answer." speech=" " play="B6" />
+        <Item text="You seem smart. # I'll go with your answer." speech=" " play="B6" />
       </SpeechCan>
       <SpeechCan name="MetaComRsp">
         <Item text="Once again." speech=" " play="B7" />
@@ -19,14 +19,14 @@
       </SpeechCan>
       <SpeechCan name="PromptStart">
         <Item text="I think the answer is something like this." speech=" " play="B12" />
-        <Item text="I think I know a part of the answer. " speech=" " play="B13" />
+        <Item text="I think I know a part of the answer." speech=" " play="B13" />
       </SpeechCan>
       <SpeechCan name="Pump">
         <Item text="And can you tell me more?" speech=" " play="B14" />
         <Item text="What else?" speech=" " play="B15" />
         <Item text="Anything else?" speech=" " play="B16" />
         <Item text="Is there anything else about that?" speech=" " play="B17" />
-        <Item text="Alright. Could you elaborate on that a little?" speech=" " play="B18" />
+        <Item text="Alright. # Could you elaborate on that a little?" speech=" " play="B18" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
         <Item text="I am not so sure about that." speech=" " play="B19" />
@@ -40,21 +40,21 @@
       </SpeechCan>
       <SpeechCan name="MetaCogRsp">
         <Item text="_user_, I bet you can give this one a try." speech=" " play="_user_,B25" />
-        <Item text="_user_, give it a try. Press the answer you think is the best here." speech=" " play="_user_,B26" />
-        <Item text="_user_, Could you try to give an answer?  We really need your help." speech=" " play="_user_,B27" />
+        <Item text="_user_, give it a try. # Press the answer you think is the best here." speech=" " play="_user_,B26" />
+        <Item text="_user_, Could you try to give an answer? # We really need your help." speech=" " play="_user_,B27" />
       </SpeechCan>
       <SpeechCan name="HintStart">
         <Item text="I have a question." speech=" " play="B28" />
         <Item text="Maybe you can help me." speech=" " play="B29" />
       </SpeechCan>
     </Agent>
-    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
       <SpeechCan name="PositiveFeedback">
         <Item text="That is correct." speech="" play="A1" />
         <Item text="That's right." speech="" play="A2" />
         <Item text="You are correct." speech="" play="A3" />
         <Item text="Great, you are right." speech="" play="A4" />
-        <Item text="Yes. That is it." speech="" play="A5" />
+        <Item text="Yes. # That is it." speech="" play="A5" />
         <Item text="You got it." speech="" play="A6" />
         <Item text="Great job." speech="" play="A7" />
         <Item text="You're correct." speech="" play="A8" />
@@ -63,7 +63,7 @@
         <Item text="_user_, please choose a question." speech="" play="_user_,A9" />
       </SpeechCan>
       <SpeechCan name="TooSlow">
-        <Item text="Having trouble deciding? Let me choose one for you." speech="" play="A10" />
+        <Item text="Having trouble deciding? # Let me choose one for you." speech="" play="A10" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
         <Item text="That is not right." speech="" play="A11" />
@@ -81,51 +81,48 @@
         <Item text="Please try again." speech="" play="A21" />
       </SpeechCan>
       <SpeechCan name="AskJordan">
-        <Item text="ComputerStudent1, can you answer this question?" speech="" play="A22" />
+        <Item text="Jordan, can you answer this question?" speech="" play="A22" />
       </SpeechCan>
     </Agent>
   </Agents>
   <RigidPacks>
     <RigidPack name="Opening1" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Sure. Here is the game board. There are four categories: Reading Check, Text Type, Text's Purpose, and Persuade and Inform." speech="Sure. Here is the game board. There are four categories: Reeding Check, Text Type, Text's Purpose, and Persuade and Inform." media="media/L18-GB.html" play="A23" />
-      <Item id="2" agent="ComputerTutor" text="Each category has 4 questions with point values of 100, 200, 300, and 400. The 400 point questions are the most difficult." speech="" play="A24" />
-      <Item id="3" agent="ComputerStudent1" text="So we are supposed to answer the questions, with the higher point value questions being the hardest. Got it." speech="" play="B30" />
-      <Item id="4" agent="ComputerTutor" text="Right. Choose a question by pressing on one of the numbers below a category. " speech="" play="A25" />
-      <Item id="5" agent="ComputerStudent1" text="And once we do that our question will appear that we can answer by pressing on the options.Got it." speech="" media="media/L18-SampleQ.html" play="B31" />
-      <Item id="6" agent="ComputerTutor" text="Once you answer a question you will go back to the main page with the game board. Your score will be shown at the top in the score bar. Once you get 2500 points you win. If you answered correctly, the question will turn green if not it will turn red. " speech="" media="media/L18-GB.html" play="A26" />
-      <Item id="7" agent="ComputerStudent1" text="_user_ you will choose each question and answer first. I will respond if you get it wrong." speech="" play="_user_,B32" />
-      <Item id="8" agent="ComputerTutor" text="_user_ the points listed up top are your points. So try your best." speech="" play="_user_,A27" />
+      <Item id="1" agent="Cristina" text="Sure. The game board has four categories: Reading Check, Text Type, Text's Purpose, and Persuade and Inform." speech="Sure. # The game board has four categories: Reeding Check, Text Type, Text's Purpose, and Persuade and Inform." media="media/L18-GB.html" play="A23" />
+      <Item id="2" agent="Jordan" text="I'm guessing we choose a question by pressing on a number below the category?" speech="" play="B30" />
+      <Item id="3" agent="Cristina" text="Right. # 100 point questions are easiest and 400 point questions are the most difficult." speech="" play="A24" />
+      <Item id="4" agent="Jordan" text="So once we choose a question, we answer it by pressing on the options?" speech="" media="media/L18-SampleQ.html" play="B31" />
+      <Item id="5" agent="Cristina" text="Yes. # Once you get 2500 points you win. # If you answered correctly, the question will turn green if not it will turn red." speech="" media="media/L18-GB.html" play="A25" />
+      <Item id="6" agent="Jordan" text="_user_,  I'll follow your lead. # You choose each question and answer first. # I'll respond if you get it wrong." speech="" play="_user_,B32" />
+      <Item id="7" agent="Cristina" text="_user_, the points at the top of the game board are your points." speech="" play="_user_,A26" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Wow. It looks like you got the 3000 points needed to finish this lesson.  great job with this activity." speech="" play="A28" />
-      <Item id="2" agent="ComputerStudent1" text="_user_, you were amazing. This was a good chance to practice on everything we learned in the other lessons. " speech="" play="_user_,B33" />
-      <Item id="3" agent="ComputerTutor" text="I'm glad you seem to have learned so much using this program." speech="" play="A29" />
-      <Item id="4" agent="ComputerStudent1" text="ComputerTutor, thanks again. See you both next time." speech="" play="B34" />
+      <Item id="1" agent="Cristina" text="Wow. # It looks like you got the 3000 points needed to finish this lesson. # great job with this activity." speech="" play="A27" />
+      <Item id="2" agent="Jordan" text="_user_, you were amazing. # This was a good chance to practice on everything we learned in the other lessons." speech="" play="_user_,B33" />
+      <Item id="3" agent="Cristina" text="I'm glad you seem to have learned so much using this program." speech="" play="A28" />
+      <Item id="4" agent="Jordan" text="Cristina, thanks again. # See you both next time." speech="" play="B34" />
     </RigidPack>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="_user_, and ComputerStudent1, hi. How is everyone today?" speech="" media="media/L18-IntroTitle.html" play="_user_,A30" />
-      <Item id="2" agent="ComputerStudent1" text="ComputerTutor, hey. I'm great. What lesson are we covering today?" speech="" play="B35" />
-      <Item id="3" agent="ComputerTutor" text="you actually won't be covering a lesson today. Today you two will review what we have covered." speech="" play="A31" />
-      <Item id="4" agent="ComputerStudent1" text="How are we going to review everything we covered?" speech="" play="B36" />
-      <Item id="5" agent="ComputerTutor" text="You are going to play jeopardy. We will review everything that was covered by playing a game." speech="" play="A32" />
-      <Item id="6" agent="ComputerStudent1" text="ComputerTutor, Can you explain?" speech="" play="B37" />
+      <Item id="1" agent="Cristina" text="_user_, and Jordan, hi. # How is everyone today?" speech="" media="media/L18-IntroTitle.html" play="_user_,A29" />
+      <Item id="2" agent="Jordan" text="Cristina, hey. # I'm great. # What are we doing today?" speech="" play="B35" />
+      <Item id="3" agent="Cristina" text="Today you two will play the game jeopardy so that we can review what we have learned." speech="" play="A30" />
+      <Item id="4" agent="Jordan" text="Cristina, Can you explain?" speech="" play="B36" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="Q1.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, Here is your question. Can you tell me what comes at the beginning of a story and is not solved until the end?" speech="" media="" play="_user_,A33">
+        <Question id="1" agent="Cristina" text="_user_, Here is your question. # Can you tell me what comes at the beginning of a story and is not solved until the end?" speech="" media="" itemDif="" play="_user_,A31">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose the problem." speech="" keys="any" threshold="" play="B38" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose the resolution. I'm sure of it." speech="" keys="any" threshold="" play="B39" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I pick the plot. I have a feeling that's the right answer." speech="" keys="any" threshold="" play="B40" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose the major event. " speech="" keys="any" threshold="" play="B41" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the problem. The problem is not solved until the end of the story but it comes at the beginning." speech="" keys="any" threshold="" play="A34" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The problem comes at the beginning of a story and is not solved until the end. The correct answer is the problem." speech="" keys="any" threshold="" play="A35" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Yes. That is correct." speech="" keys="any" threshold="" play="A36" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that is incorrect." speech="" keys="any" threshold="" play="A37" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is not right." speech="" keys="any" threshold="" play="A38" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is actually wrong." speech="" keys="any" threshold="" play="A39" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I choose the problem." speech="" keys="any" threshold="" test="" play="B37" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I choose the resolution. # I'm sure of it." speech="" keys="any" threshold="" test="" play="B38" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I pick the plot. # I have a feeling that's the right answer." speech="" keys="any" threshold="" test="" play="B39" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose the major event." speech="" keys="any" threshold="" test="" play="B40" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the problem. # The problem is not solved until the end of the story but it comes at the beginning." speech="" keys="any" threshold="" test="" play="A32" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The problem comes at the beginning of a story and is not solved until the end. # The correct answer is the problem." speech="" keys="any" threshold="" test="" play="A33" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Yes. # That is correct." speech="" keys="any" threshold="" test="" play="A34" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I'm sorry, that is incorrect." speech="" keys="any" threshold="" test="" play="A35" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is not right." speech="" keys="any" threshold="" test="" play="A36" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is actually wrong." speech="" keys="any" threshold="" test="" play="A37" />
           </Answers>
         </Question>
       </Questions>
@@ -134,18 +131,18 @@
     </TutoringPack>
     <TutoringPack name="Q1.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, Let's try this one again. What comes at the beginning of a story and is not solved until the end?" speech="" media="" play="_user_,A40">
+        <Question id="1" agent="Cristina" text="_user_, Let's try this one again. # What comes at the beginning of a story and is not solved until the end?" speech="" media="" play="_user_,A38">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I pick the problem. " speech="" keys="any" threshold="" play="B42" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the answer is the resolution. The resolution is not solved until the end of a story." speech="" keys="any" threshold="" play="B43" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I pick the plot. I believe the plot is not solved until the end of a story." speech="" keys="any" threshold="" play="B44" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose major event. " speech="" keys="any" threshold="" play="B45" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The plot is what comes at the beginning of a story but it not solved until the end." speech="" keys="any" threshold="" play="A41" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The plot of a story is what comes in the beginning and is not solved until the story is over." speech="" keys="any" threshold="" play="A42" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Yes. That is the right answer." speech="" keys="any" threshold="" play="A43" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A44" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that's not right." speech="" keys="any" threshold="" play="A45" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is not right. Sorry" speech="" keys="any" threshold="" play="A46" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I pick the problem." speech="" keys="any" threshold="" play="B41" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think the answer is the resolution. # The resolution is not solved until the end of a story." speech="" keys="any" threshold="" play="B42" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I pick the plot. # I believe the plot is not solved until the end of a story." speech="" keys="any" threshold="" play="B43" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose major event." speech="" keys="any" threshold="" play="B44" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The plot is what comes at the beginning of a story but it not solved until the end." speech="" keys="any" threshold="" play="A39" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The plot of a story is what comes in the beginning and is not solved until the story is over." speech="" keys="any" threshold="" play="A40" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Yes. # That is the right answer." speech="" keys="any" threshold="" play="A41" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A42" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No, that's not right." speech="" keys="any" threshold="" play="A43" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is not right. # Sorry" speech="" keys="any" threshold="" play="A44" />
           </Answers>
         </Question>
       </Questions>
@@ -154,16 +151,16 @@
     </TutoringPack>
     <TutoringPack name="Q10.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of this text is to what." speech="" media="" play="A47">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of this text is to what." speech="" media="" play="A45">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B46" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B47" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B48" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of this text is to inform." speech="" keys="any" threshold="" play="A48" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of this text is to inform. According to the text, this is a map from Bill to Sam so that Sam can find Bill's house. The purpose of a map like this is to inform." speech="" keys="any" threshold="" play="A49" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A50" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A51" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A52" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B45" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B46" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B47" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this text is to inform." speech="" keys="any" threshold="" play="A46" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of this text is to inform. # According to the text, this is a map from Bill to Sam so that Sam can find Bill's house. # The purpose of a map like this is to inform." speech="" keys="any" threshold="" play="A47" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A48" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A49" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A50" />
           </Answers>
         </Question>
       </Questions>
@@ -172,16 +169,16 @@
     </TutoringPack>
     <TutoringPack name="Q10.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of this text is to what." speech="" media="" play="A53">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of this text is to what." speech="" media="" play="A51">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B49" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B50" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B51" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of this text is to inform." speech="" keys="any" threshold="" play="A54" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of this text is to inform. According to the text, this is a map from Bill to Sam so that Sam can find Bill's house. The purpose of a map like this is to inform." speech="" keys="any" threshold="" play="A55" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A56" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A57" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A58" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B48" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B49" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B50" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this text is to inform." speech="" keys="any" threshold="" play="A52" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of this text is to inform. # According to the text, this is a map from Bill to Sam so that Sam can find Bill's house. # The purpose of a map like this is to inform." speech="" keys="any" threshold="" play="A53" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A54" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A55" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Too bad, that is incorrect." speech="" keys="any" threshold="" play="A56" />
           </Answers>
         </Question>
       </Questions>
@@ -190,16 +187,16 @@
     </TutoringPack>
     <TutoringPack name="Q11.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of most commercials is to what." speech="" media="" play="A59">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of most commercials is to what." speech="" media="" play="A57">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B52" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B53" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B54" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of most commercials is to persuade." speech="" keys="any" threshold="" play="A60" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of most commercials is to persuade. When a commercial is trying to get you to buy something, that is a type of persuasion." speech="" keys="any" threshold="" play="A61" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is not correct." speech="" keys="any" threshold="" play="A62" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You are right." speech="" keys="any" threshold="" play="A63" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is not correct." speech="" keys="any" threshold="" play="A64" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B51" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B52" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B53" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of most commercials is to persuade." speech="" keys="any" threshold="" play="A58" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of most commercials is to persuade. # When a commercial is trying to get you to buy something, that is a type of persuasion." speech="" keys="any" threshold="" play="A59" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That is not correct." speech="" keys="any" threshold="" play="A60" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="You are right." speech="" keys="any" threshold="" play="A61" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is not correct." speech="" keys="any" threshold="" play="A62" />
           </Answers>
         </Question>
       </Questions>
@@ -208,16 +205,16 @@
     </TutoringPack>
     <TutoringPack name="Q11.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of most commercials is to what." speech="" media="" play="A65">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of most commercials is to what." speech="" media="" play="A63">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B55" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B56" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B57" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of most commercials is to persuade." speech="" keys="any" threshold="" play="A66" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of most commercials is to persuade. When a commercial is trying to get you to buy something, that is a type of persuasion." speech="" keys="any" threshold="" play="A67" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is not correct." speech="" keys="any" threshold="" play="A68" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You are right." speech="" keys="any" threshold="" play="A69" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is not correct." speech="" keys="any" threshold="" play="A70" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B54" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B55" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B56" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of most commercials is to persuade." speech="" keys="any" threshold="" play="A64" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of most commercials is to persuade. # When a commercial is trying to get you to buy something, that is a type of persuasion." speech="" keys="any" threshold="" play="A65" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That is not correct." speech="" keys="any" threshold="" play="A66" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="You are right." speech="" keys="any" threshold="" play="A67" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is not correct." speech="" keys="any" threshold="" play="A68" />
           </Answers>
         </Question>
       </Questions>
@@ -226,16 +223,16 @@
     </TutoringPack>
     <TutoringPack name="Q12.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of the instructions on medicine bottles is to what." speech="" media="" play="A71">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of the instructions on medicine bottles is to what." speech="" media="" play="A69">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Is it to persuade?" speech="" keys="any" threshold="" play="B58" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Is it to entertain?" speech="" keys="any" threshold="" play="B59" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Is it to scare the reader?" speech="" keys="any" threshold="" play="B60" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose is to inform. Instructions on medicine bottles inform the reader about aspects of the medicine. For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A72" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Directions on medicine bottles inform the reader about aspects of the medicine. For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A73" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A74" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A75" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A76" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="Is it to persuade?" speech="" keys="any" threshold="" play="B57" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="Is it to entertain?" speech="" keys="any" threshold="" play="B58" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="Is it to scare the reader?" speech="" keys="any" threshold="" play="B59" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose is to inform. # Instructions on medicine bottles inform the reader about aspects of the medicine. # For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A70" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="Directions on medicine bottles inform the reader about aspects of the medicine. # For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A71" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A72" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A73" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A74" />
           </Answers>
         </Question>
       </Questions>
@@ -244,16 +241,16 @@
     </TutoringPack>
     <TutoringPack name="Q12.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The purpose of instructions on medicine bottles is to what." speech="" media="" play="A77">
+        <Question id="1" agent="Cristina" text="Fill in the blank. # The purpose of instructions on medicine bottles is to what." speech="" media="" play="A75">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Is it to persuade?" speech="" keys="any" threshold="" play="B61" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Is it to entertain?" speech="" keys="any" threshold="" play="B62" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Is it to scare the reader?" speech="" keys="any" threshold="" play="B63" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose is to inform. Instructions on medicine bottles inform the reader about aspects of the medicine. For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A78" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Directions on medicine bottles inform the reader about aspects of the medicine. For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A79" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A80" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A81" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A82" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="Is it to persuade?" speech="" keys="any" threshold="" play="B60" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="Is it to entertain?" speech="" keys="any" threshold="" play="B61" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="Is it to scare the reader?" speech="" keys="any" threshold="" play="B62" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose is to inform. # Instructions on medicine bottles inform the reader about aspects of the medicine. # For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A76" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="Directions on medicine bottles inform the reader about aspects of the medicine. # For example, the correct dosage to take, any side effects, and if it should be taken with a meal." speech="" keys="any" threshold="" play="A77" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Great job." speech="" keys="any" threshold="" play="A78" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A79" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A80" />
           </Answers>
         </Question>
       </Questions>
@@ -262,18 +259,18 @@
     </TutoringPack>
     <TutoringPack name="Q13.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, what is the first question we should ask ourselves when checking our understanding of informative or persuasive texts?" speech="" media="" play="_user_,A83">
+        <Question id="1" agent="Cristina" text="_user_, what is the first question we should ask ourselves when checking our understanding of informative or persuasive texts?" speech="" media="" play="_user_,A81">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think we should ask what is the topic of the text first" speech="" keys="any" threshold="" play="B64" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think we should ask what do we know about the topic" speech="" keys="any" threshold="" play="B65" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think we should ask how does this text help me solve the problem." speech="" keys="any" threshold="" play="B66" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think we should ask what is the title of the text. That helps. Right?" speech="" keys="any" threshold="" play="B67" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is to ask what is the topic of the text. This is always done first." speech="" keys="any" threshold="" play="A84" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="What is the topic of the text should always be asked first for these types of texts." speech="" keys="any" threshold="" play="A85" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You are right." speech="" keys="any" threshold="" play="A86" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Nope. That was actually wrong." speech="" keys="any" threshold="" play="A87" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Nope. That was not the correct answer. You can always try again if you'd like." speech="" keys="any" threshold="" play="A88" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A89" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think we should ask what is the topic of the text first" speech="" keys="any" threshold="" play="B63" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think we should ask what do we know about the topic" speech="" keys="any" threshold="" play="B64" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think we should ask how does this text help me solve the problem." speech="" keys="any" threshold="" play="B65" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think we should ask what is the title of the text. # That helps. # Right?" speech="" keys="any" threshold="" play="B66" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is to ask what is the topic of the text. # This is always done first." speech="" keys="any" threshold="" play="A82" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="What is the topic of the text should always be asked first for these types of texts." speech="" keys="any" threshold="" play="A83" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="You are right." speech="" keys="any" threshold="" play="A84" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Nope. # That was actually wrong." speech="" keys="any" threshold="" play="A85" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Nope. # That was not the correct answer. # You can always try again if you'd like." speech="" keys="any" threshold="" play="A86" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A87" />
           </Answers>
         </Question>
       </Questions>
@@ -282,18 +279,18 @@
     </TutoringPack>
     <TutoringPack name="Q13.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  I'm happy you want to try to answer this question again. What is the first thing that we should do when dealing with informative or persuasive texts?" speech="" media="" play="_user_,A90">
+        <Question id="1" agent="Cristina" text="_user_,  I'm happy you want to try to answer this question again. # What is the first thing that we should do when dealing with informative or persuasive texts?" speech="" media="" play="_user_,A88">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="We should ask what is the topic of the text. " speech="" keys="any" threshold="" play="B68" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="We should ask what do we already know about the topic." speech="" keys="any" threshold="" play="B69" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="We should ask how does this text help me solve a problem." speech="" keys="any" threshold="" play="B70" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="We should ask what is the title of the text." speech="" keys="any" threshold="" play="B71" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="We should always ask ourselves what is the topic of the text first." speech="" keys="any" threshold="" play="A91" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The topic of the text should always be asked first then we can ask other questions." speech="" keys="any" threshold="" play="A92" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You are correct. great work." speech="" keys="any" threshold="" play="A93" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not correct" speech="" keys="any" threshold="" play="A94" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A95" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is an incorrect answer" speech="" keys="any" threshold="" play="A96" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="We should ask what is the topic of the text." speech="" keys="any" threshold="" play="B67" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="We should ask what do we already know about the topic." speech="" keys="any" threshold="" play="B68" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="We should ask how does this text help me solve a problem." speech="" keys="any" threshold="" play="B69" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="We should ask what is the title of the text." speech="" keys="any" threshold="" play="B70" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We should always ask ourselves what is the topic of the text first." speech="" keys="any" threshold="" play="A89" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The topic of the text should always be asked first then we can ask other questions." speech="" keys="any" threshold="" play="A90" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="You are correct. # great work." speech="" keys="any" threshold="" play="A91" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is not correct" speech="" keys="any" threshold="" play="A92" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A93" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is an incorrect answer" speech="" keys="any" threshold="" play="A94" />
           </Answers>
         </Question>
       </Questions>
@@ -302,18 +299,18 @@
     </TutoringPack>
     <TutoringPack name="Q14.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, we find main arguments in what type of text?" speech="" media="" play="_user_,A97">
+        <Question id="1" agent="Cristina" text="_user_, we find main arguments in what type of text?" speech="" media="" play="_user_,A95">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think we find them in a narrative text." speech="" keys="any" threshold="" play="B72" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think we find them in an informative text" speech="" keys="any" threshold="" play="B73" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think we find them in an online text" speech="" keys="any" threshold="" play="B74" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think we find them in a persuasive text" speech="" keys="any" threshold="" play="B75" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is persuasive texts. We find main arguments in persuasive texts." speech="" keys="any" threshold="" play="A98" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="When dealing with a persuasive text we come across main arguments from the writers." speech="" keys="any" threshold="" play="A99" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A100" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is right." speech="" keys="any" threshold="" play="A101" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No, sorry. that was not the right answer." speech="" keys="any" threshold="" play="A102" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Sorry, but That is not the right answer." speech="" keys="any" threshold="" play="A103" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think we find them in a narrative text." speech="" keys="any" threshold="" play="B71" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think we find them in an informative text" speech="" keys="any" threshold="" play="B72" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think we find them in an online text" speech="" keys="any" threshold="" play="B73" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think we find them in a persuasive text" speech="" keys="any" threshold="" play="B74" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is persuasive texts. # We find main arguments in persuasive texts." speech="" keys="any" threshold="" play="A96" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="When dealing with a persuasive text we come across main arguments from the writers." speech="" keys="any" threshold="" play="A97" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A98" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is right." speech="" keys="any" threshold="" play="A99" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="No, sorry. # that was not the right answer." speech="" keys="any" threshold="" play="A100" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="Sorry, but That is not the right answer." speech="" keys="any" threshold="" play="A101" />
           </Answers>
         </Question>
       </Questions>
@@ -322,18 +319,18 @@
     </TutoringPack>
     <TutoringPack name="Q14.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, let's try this again. We find main arguments in what type of text?" speech="" media="" play="_user_,A104">
+        <Question id="1" agent="Cristina" text="_user_, let's try this again. # We find main arguments in what type of text?" speech="" media="" play="_user_,A102">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I say we find them in a narrative text" speech="" keys="any" threshold="" play="B76" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I say we find them in an informative text" speech="" keys="any" threshold="" play="B77" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I say we find them in an online text" speech="" keys="any" threshold="" play="B78" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I say we find them in a persuasive text" speech="" keys="any" threshold="" play="B79" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="We find main arguments in persuasive texts. " speech="" keys="any" threshold="" play="A105" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="We will find main arguments in persuasive texts because writers are trying to convince us of their argument." speech="" keys="any" threshold="" play="A106" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Sorry but that wasn't the right answer." speech="" keys="any" threshold="" play="A107" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Great job. you answered correctly." speech="" keys="any" threshold="" play="A108" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that is incorrect." speech="" keys="any" threshold="" play="A109" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="You selected an incorrect answer" speech="" keys="any" threshold="" play="A110" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I say we find them in a narrative text" speech="" keys="any" threshold="" play="B75" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I say we find them in an informative text" speech="" keys="any" threshold="" play="B76" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I say we find them in an online text" speech="" keys="any" threshold="" play="B77" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I say we find them in a persuasive text" speech="" keys="any" threshold="" play="B78" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We find main arguments in persuasive texts." speech="" keys="any" threshold="" play="A103" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="We will find main arguments in persuasive texts because writers are trying to convince us of their argument." speech="" keys="any" threshold="" play="A104" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Sorry but that wasn't the right answer." speech="" keys="any" threshold="" play="A105" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Great job. # you answered correctly." speech="" keys="any" threshold="" play="A106" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I'm sorry, that is incorrect." speech="" keys="any" threshold="" play="A107" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="You selected an incorrect answer" speech="" keys="any" threshold="" play="A108" />
           </Answers>
         </Question>
       </Questions>
@@ -342,18 +339,18 @@
     </TutoringPack>
     <TutoringPack name="Q15.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, a recipe for pancakes is an example of what type of text?" speech="" media="" play="_user_,A111">
+        <Question id="1" agent="Cristina" text="_user_, a recipe for pancakes is an example of what type of text?" speech="" media="" play="_user_,A109">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think a recipe is a persuasive text" speech="" keys="any" threshold="" play="B80" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think a recipe is an informative text" speech="" keys="any" threshold="" play="B81" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think a recipe is an online text" speech="" keys="any" threshold="" play="B82" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think a recipe is a narrative text" speech="" keys="any" threshold="" play="B83" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="A recipe for pancakes is a form of an informative text. the directions instruct you with information needed to properly make a pancake." speech="" keys="any" threshold="" play="A112" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="A recipe is a form of an informative text. The directions inform you how to properly create a pancake." speech="" keys="any" threshold="" play="A113" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Not quite, Let's try again." speech="" keys="any" threshold="" play="A114" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Not quite. We can try this again." speech="" keys="any" threshold="" play="A115" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You got it. Great job." speech="" keys="any" threshold="" play="A116" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A117" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think a recipe is a persuasive text" speech="" keys="any" threshold="" play="B79" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think a recipe is an informative text" speech="" keys="any" threshold="" play="B80" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think a recipe is an online text" speech="" keys="any" threshold="" play="B81" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think a recipe is a narrative text" speech="" keys="any" threshold="" play="B82" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="A recipe for pancakes is a form of an informative text. # the directions instruct you with information needed to properly make a pancake." speech="" keys="any" threshold="" play="A110" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="A recipe is a form of an informative text. # The directions inform you how to properly create a pancake." speech="" keys="any" threshold="" play="A111" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Not quite, Let's try again." speech="" keys="any" threshold="" play="A112" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Not quite. # We can try this again." speech="" keys="any" threshold="" play="A113" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="You got it. # Great job." speech="" keys="any" threshold="" play="A114" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A115" />
           </Answers>
         </Question>
       </Questions>
@@ -362,18 +359,18 @@
     </TutoringPack>
     <TutoringPack name="Q15.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Let's give this question another shot. _user_, a recipe for pancakes is an example of what type of text?" speech="" media="" play="A118,_user_,A119">
+        <Question id="1" agent="Cristina" text="Let's give this question another shot. # _user_, a recipe for pancakes is an example of what type of text?" speech="" media="" play="A116,_user_,A117">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think a recipe is like a persuasive text" speech="" keys="any" threshold="" play="B84" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think  a recipe is like an informative text" speech="" keys="any" threshold="" play="B85" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think a recipe is like an online text" speech="" keys="any" threshold="" play="B86" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think a recipe is like a narrative text" speech="" keys="any" threshold="" play="B87" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="A pancake recipe is similar to a informative text, the recipe guides you through steps so that you're able to make the perfect pancake." speech="" keys="any" threshold="" play="A120" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="A recipe is like an informative text, there are instructions on how to properly make the food, in this case, a pancake." speech="" keys="any" threshold="" play="A121" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, that was not the right answer option." speech="" keys="any" threshold="" play="A122" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry that is not the correct answer." speech="" keys="any" threshold="" play="A123" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Great work. you got it correct." speech="" keys="any" threshold="" play="A124" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A125" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think a recipe is like a persuasive text" speech="" keys="any" threshold="" play="B83" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think  a recipe is like an informative text" speech="" keys="any" threshold="" play="B84" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think a recipe is like an online text" speech="" keys="any" threshold="" play="B85" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think a recipe is like a narrative text" speech="" keys="any" threshold="" play="B86" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="A pancake recipe is similar to a informative text, the recipe guides you through steps so that you're able to make the perfect pancake." speech="" keys="any" threshold="" play="A118" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="A recipe is like an informative text, there are instructions on how to properly make the food, in this case, a pancake." speech="" keys="any" threshold="" play="A119" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="No, that was not the right answer option." speech="" keys="any" threshold="" play="A120" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Sorry that is not the correct answer." speech="" keys="any" threshold="" play="A121" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Great work. # you got it correct." speech="" keys="any" threshold="" play="A122" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That was not the correct answer." speech="" keys="any" threshold="" play="A123" />
           </Answers>
         </Question>
       </Questions>
@@ -382,18 +379,18 @@
     </TutoringPack>
     <TutoringPack name="Q16.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, an advertisement is an example of what type of text?" speech="" media="" play="_user_,A126">
+        <Question id="1" agent="Cristina" text="_user_, an advertisement is an example of what type of text?" speech="" media="" play="_user_,A124">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I believe an ad is an example of a persuasive text" speech="" keys="any" threshold="" play="B88" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I believe an ad is an example of an procedural text" speech="" keys="any" threshold="" play="B89" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think an ad is like an online text" speech="" keys="any" threshold="" play="B90" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think an ad is an example of a narrative text" speech="" keys="any" threshold="" play="B91" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="An advertisement is an example of a persuasive text, the company is trying to change your mind about an idea or product" speech="" keys="any" threshold="" play="A127" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="An advertisement is an example of a persuasive text. Remember these text types are used to portray an idea to an audience with the hopes of changing or influencing what they believe" speech="" keys="any" threshold="" play="A128" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No, sorry. That is not correct." speech="" keys="any" threshold="" play="A129" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Right. that is correct." speech="" keys="any" threshold="" play="A130" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is not the right answer." speech="" keys="any" threshold="" play="A131" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="No, sorry, You picked the wrong answer" speech="" keys="any" threshold="" play="A132" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I believe an ad is an example of a persuasive text" speech="" keys="any" threshold="" play="B87" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I believe an ad is an example of an procedural text" speech="" keys="any" threshold="" play="B88" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think an ad is like an online text" speech="" keys="any" threshold="" play="B89" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think an ad is an example of a narrative text" speech="" keys="any" threshold="" play="B90" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="An advertisement is an example of a persuasive text, the company is trying to change your mind about an idea or product" speech="" keys="any" threshold="" play="A125" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="An advertisement is an example of a persuasive text. # Remember these text types are used to portray an idea to an audience with the hopes of changing or influencing what they believe" speech="" keys="any" threshold="" play="A126" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="No, sorry. # That is not correct." speech="" keys="any" threshold="" play="A127" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Right. # that is correct." speech="" keys="any" threshold="" play="A128" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is not the right answer." speech="" keys="any" threshold="" play="A129" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="No, sorry, You picked the wrong answer" speech="" keys="any" threshold="" play="A130" />
           </Answers>
         </Question>
       </Questions>
@@ -402,18 +399,18 @@
     </TutoringPack>
     <TutoringPack name="Q16.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, let's give this question another shot. An advertisement is an example of what type of text?" speech="" media="" play="_user_,A133">
+        <Question id="1" agent="Cristina" text="_user_, let's give this question another shot. # An advertisement is an example of what type of text?" speech="" media="" play="_user_,A131">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="An ad is like a persuasive text" speech="" keys="any" threshold="" play="B92" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="An ad is like an informative text" speech="" keys="any" threshold="" play="B93" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think an ad is like an online text" speech="" keys="any" threshold="" play="B94" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="An ad is similar to a narrative text" speech="" keys="any" threshold="" play="B95" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Advertisements are examples of persuasive text. Right." speech="" keys="any" threshold="" play="A134" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Ads fall under the category of persuasive texts because they are used by companies to make an audience change their mind about an idea or product they are selling" speech="" keys="any" threshold="" play="A135" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not the right answer. Sorry" speech="" keys="any" threshold="" play="A136" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Right. You answered correctly." speech="" keys="any" threshold="" play="A137" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A138" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="You are not correct," speech="" keys="any" threshold="" play="A139" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="An ad is like a persuasive text" speech="" keys="any" threshold="" play="B91" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="An ad is like an informative text" speech="" keys="any" threshold="" play="B92" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think an ad is like an online text" speech="" keys="any" threshold="" play="B93" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="An ad is similar to a narrative text" speech="" keys="any" threshold="" play="B94" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Advertisements are examples of persuasive text. # Right." speech="" keys="any" threshold="" play="A132" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="Ads fall under the category of persuasive texts because they are used by companies to make an audience change their mind about an idea or product they are selling" speech="" keys="any" threshold="" play="A133" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is not the right answer. # Sorry" speech="" keys="any" threshold="" play="A134" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Right. # You answered correctly." speech="" keys="any" threshold="" play="A135" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A136" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="You are not correct," speech="" keys="any" threshold="" play="A137" />
           </Answers>
         </Question>
       </Questions>
@@ -422,18 +419,18 @@
     </TutoringPack>
     <TutoringPack name="Q2.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, in the beginning of the story, readers are introduced to the setting, the problem, and the what. Pick from the answer options below." speech="" media="" play="_user_,A140">
+        <Question id="1" agent="Cristina" text="_user_, in the beginning of the story, readers are introduced to the setting, the problem, and the what. # Pick from the answer options below." speech="" media="" play="_user_,A138">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="The problem. I think the Problem is introduced." speech="" keys="any" threshold="" play="B96" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the resolution is introduced." speech="" keys="any" threshold="" play="B97" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="The plot is introduced." speech="" keys="any" threshold="" play="B98" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="The main characters are introduced." speech="" keys="any" threshold="" play="B99" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The setting, the problem, and the main characters are all introduced when we read. The correct answer is main characters." speech="" keys="any" threshold="" play="A141" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The main characters are introduced with the setting and problem of the story." speech="" keys="any" threshold="" play="A142" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That was not right. Sorry." speech="" keys="any" threshold="" play="A143" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No, that is not the answer sorry." speech="" keys="any" threshold="" play="A144" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is right. You got it." speech="" keys="any" threshold="" play="A145" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="responseD" text="That is not the correct answer." speech="" keys="any" threshold="" play="A146" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="The problem. # I think the Problem is introduced." speech="" keys="any" threshold="" play="B95" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think the resolution is introduced." speech="" keys="any" threshold="" play="B96" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="The plot is introduced." speech="" keys="any" threshold="" play="B97" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="The main characters are introduced." speech="" keys="any" threshold="" play="B98" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The setting, the problem, and the main characters are all introduced when we read. # The correct answer is main characters." speech="" keys="any" threshold="" play="A139" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The main characters are introduced with the setting and problem of the story." speech="" keys="any" threshold="" play="A140" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That was not right. # Sorry." speech="" keys="any" threshold="" play="A141" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="No, that is not the answer sorry." speech="" keys="any" threshold="" play="A142" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is right. # You got it." speech="" keys="any" threshold="" play="A143" />
+            <Answer name="ResponseD" agent="Cristina" type="responseD" text="That is not the correct answer." speech="" keys="any" threshold="" play="A144" />
           </Answers>
         </Question>
       </Questions>
@@ -442,18 +439,18 @@
     </TutoringPack>
     <TutoringPack name="Q2.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, let's give this another shot. In the beginning of the story, readers are introduced to the setting, the problem, and the what." speech="" media="" play="_user_,A147">
+        <Question id="1" agent="Cristina" text="_user_, let's give this another shot. # In the beginning of the story, readers are introduced to the setting, the problem, and the what." speech="" media="" play="_user_,A145">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="The problem. I think they are introduced to the problem." speech="" keys="any" threshold="" play="B100" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I guess readers are introduced to the resolution." speech="" keys="any" threshold="" play="B101" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think that the plot is introduced in the beginning of a story." speech="" keys="any" threshold="" play="B102" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="The main characters are introduced in the beginning." speech="" keys="any" threshold="" play="B103" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The main characters are introduced in the beginning of the story." speech="" keys="any" threshold="" play="A148" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Main characters are introduced in the beginning of the story along with the setting and problem." speech="" keys="any" threshold="" play="A149" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, that is not the answer." speech="" keys="any" threshold="" play="A150" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That was not the correct answer." speech="" keys="any" threshold="" play="A151" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="You got it." speech="" keys="any" threshold="" play="A152" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I am sorry but that is not the answer." speech="" keys="any" threshold="" play="A153" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="The problem. # I think they are introduced to the problem." speech="" keys="any" threshold="" play="B99" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I guess readers are introduced to the resolution." speech="" keys="any" threshold="" play="B100" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think that the plot is introduced in the beginning of a story." speech="" keys="any" threshold="" play="B101" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="The main characters are introduced in the beginning." speech="" keys="any" threshold="" play="B102" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The main characters are introduced in the beginning of the story." speech="" keys="any" threshold="" play="A146" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="Main characters are introduced in the beginning of the story along with the setting and problem." speech="" keys="any" threshold="" play="A147" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="No, that is not the answer." speech="" keys="any" threshold="" play="A148" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That was not the correct answer." speech="" keys="any" threshold="" play="A149" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="You got it." speech="" keys="any" threshold="" play="A150" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="I am sorry but that is not the answer." speech="" keys="any" threshold="" play="A151" />
           </Answers>
         </Question>
       </Questions>
@@ -462,18 +459,18 @@
     </TutoringPack>
     <TutoringPack name="Q3.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, when we ask and answer questions in our head while reading we are doing what." speech="" media="" play="_user_,A154">
+        <Question id="1" agent="Cristina" text="_user_, when we ask and answer questions in our head while reading we are doing what." speech="" media="" play="_user_,A152">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Are we using the questioning strategy to check our understanding?" speech="" keys="any" threshold="" play="B104" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Are we using the text information to outline the plot?" speech="" keys="any" threshold="" play="B105" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Are we using the bridge strategy to understand the text?" speech="" keys="any" threshold="" play="B106" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I'm not sure. I think we might be using the author's perspective to summarize the text." speech="" keys="any" threshold="" play="B107" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="We are using the questioning strategy to check our understanding." speech="" keys="any" threshold="" play="A155" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="When we ask ourselves questions in our head we are using the questioning strategy to check our understanding." speech="" keys="any" threshold="" play="A156" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="you picked the right answer." speech="" keys="any" threshold="" play="A157" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not correct." speech="" keys="any" threshold="" play="A158" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A159" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="You selected an incorrect answer" speech="" keys="any" threshold="" play="A160" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="Are we using the questioning strategy to check our understanding?" speech="" keys="any" threshold="" play="B103" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="Are we using the text information to outline the plot?" speech="" keys="any" threshold="" play="B104" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="Are we using the bridge strategy to understand the text?" speech="" keys="any" threshold="" play="B105" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I'm not sure. # I think we might be using the author's perspective to summarize the text." speech="" keys="any" threshold="" play="B106" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We are using the questioning strategy to check our understanding." speech="" keys="any" threshold="" play="A153" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="When we ask ourselves questions in our head we are using the questioning strategy to check our understanding." speech="" keys="any" threshold="" play="A154" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="you picked the right answer." speech="" keys="any" threshold="" play="A155" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is not correct." speech="" keys="any" threshold="" play="A156" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A157" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="You selected an incorrect answer" speech="" keys="any" threshold="" play="A158" />
           </Answers>
         </Question>
       </Questions>
@@ -482,18 +479,18 @@
     </TutoringPack>
     <TutoringPack name="Q3.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="I'm happy you decided to come back to this question. When we ask and answer questions in our head while reading we are doing what." speech="" media="" play="A161">
+        <Question id="1" agent="Cristina" text="I'm happy you decided to come back to this question. # When we ask and answer questions in our head while reading we are doing what." speech="" media="" play="A159">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Are we using the questioning strategy?" speech="" keys="any" threshold="" play="B108" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Are we using the text information for help?" speech="" keys="any" threshold="" play="B109" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Are we using the bridging strategy?" speech="" keys="any" threshold="" play="B110" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I'm not sure. I think we might be using the author's perspective to summarize the text." speech="" keys="any" threshold="" play="B111" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="When we do this we are using the questioning strategy." speech="" keys="any" threshold="" play="A162" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="When we ask and answer questions in our heads while reading we are in fact using the questioning strategy." speech="" keys="any" threshold="" play="A163" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great work. You got it right." speech="" keys="any" threshold="" play="A164" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is incorrect." speech="" keys="any" threshold="" play="A165" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A166" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="You did not select the correct answer." speech="" keys="any" threshold="" play="A167" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="Are we using the questioning strategy?" speech="" keys="any" threshold="" play="B107" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="Are we using the text information for help?" speech="" keys="any" threshold="" play="B108" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="Are we using the bridging strategy?" speech="" keys="any" threshold="" play="B109" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I'm not sure. # I think we might be using the author's perspective to summarize the text." speech="" keys="any" threshold="" play="B110" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="When we do this we are using the questioning strategy." speech="" keys="any" threshold="" play="A160" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="When we ask and answer questions in our heads while reading we are in fact using the questioning strategy." speech="" keys="any" threshold="" play="A161" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Great work. # You got it right." speech="" keys="any" threshold="" play="A162" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is incorrect." speech="" keys="any" threshold="" play="A163" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is incorrect." speech="" keys="any" threshold="" play="A164" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="You did not select the correct answer." speech="" keys="any" threshold="" play="A165" />
           </Answers>
         </Question>
       </Questions>
@@ -502,18 +499,18 @@
     </TutoringPack>
     <TutoringPack name="Q4.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, what  should you look for when reading a persuasive text?" speech="" media="" play="_user_,A168">
+        <Question id="1" agent="Cristina" text="_user_, what  should you look for when reading a persuasive text?" speech="" media="" play="_user_,A166">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose main argument. We should look for the main argument." speech="" keys="any" threshold="" play="B112" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose characters. We should look for characters." speech="" keys="any" threshold="" play="B113" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think we should look for the main event when reading." speech="" keys="any" threshold="" play="B114" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think we should look for the plot when reading a persuasive text." speech="" keys="any" threshold="" play="B115" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="When reading a persuasive text you should look for the main argument." speech="" keys="any" threshold="" play="A169" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="When you read a persuasive text be sure to look for the main argument of the writer. The correct answer is main argument." speech="" keys="any" threshold="" play="A170" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is correct. Great." speech="" keys="any" threshold="" play="A171" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not the right answer, sorry." speech="" keys="any" threshold="" play="A172" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that was not the right answer." speech="" keys="any" threshold="" play="A173" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is not the correct answer." speech="" keys="any" threshold="" play="A174" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I choose main argument. # We should look for the main argument." speech="" keys="any" threshold="" play="B111" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I choose characters. # We should look for characters." speech="" keys="any" threshold="" play="B112" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think we should look for the main event when reading." speech="" keys="any" threshold="" play="B113" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think we should look for the plot when reading a persuasive text." speech="" keys="any" threshold="" play="B114" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="When reading a persuasive text you should look for the main argument." speech="" keys="any" threshold="" play="A167" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="When you read a persuasive text be sure to look for the main argument of the writer. # The correct answer is main argument." speech="" keys="any" threshold="" play="A168" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That is correct. # Great." speech="" keys="any" threshold="" play="A169" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is not the right answer, sorry." speech="" keys="any" threshold="" play="A170" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No, that was not the right answer." speech="" keys="any" threshold="" play="A171" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is not the correct answer." speech="" keys="any" threshold="" play="A172" />
           </Answers>
         </Question>
       </Questions>
@@ -522,18 +519,18 @@
     </TutoringPack>
     <TutoringPack name="Q4.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, I'm happy you wanted to try this question again. What should you look for when reading a persuasive text?" speech="" media="" play="_user_,A175">
+        <Question id="1" agent="Cristina" text="_user_, I'm happy you wanted to try this question again. # What should you look for when reading a persuasive text?" speech="" media="" play="_user_,A173">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think we should look for the main argument." speech="" keys="any" threshold="" play="B116" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I believe we should look for the characters in the text." speech="" keys="any" threshold="" play="B117" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="We should look for the main event." speech="" keys="any" threshold="" play="B118" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think we should look for the plot." speech="" keys="any" threshold="" play="B119" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="When reading a persuasive text we should look for the main argument." speech="" keys="any" threshold="" play="A176" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="When you read a persuasive text you should always look for the main argument." speech="" keys="any" threshold="" play="A177" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is correct. Great job." speech="" keys="any" threshold="" play="A178" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not right, sorry." speech="" keys="any" threshold="" play="A179" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that is not it." speech="" keys="any" threshold="" play="A180" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is not the answer." speech="" keys="any" threshold="" play="A181" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think we should look for the main argument." speech="" keys="any" threshold="" play="B115" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I believe we should look for the characters in the text." speech="" keys="any" threshold="" play="B116" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="We should look for the main event." speech="" keys="any" threshold="" play="B117" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think we should look for the plot." speech="" keys="any" threshold="" play="B118" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="When reading a persuasive text we should look for the main argument." speech="" keys="any" threshold="" play="A174" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="When you read a persuasive text you should always look for the main argument." speech="" keys="any" threshold="" play="A175" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That is correct. # Great job." speech="" keys="any" threshold="" play="A176" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="That is not right, sorry." speech="" keys="any" threshold="" play="A177" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No, that is not it." speech="" keys="any" threshold="" play="A178" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is not the answer." speech="" keys="any" threshold="" play="A179" />
           </Answers>
         </Question>
       </Questions>
@@ -542,18 +539,18 @@
     </TutoringPack>
     <TutoringPack name="Q5.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  Here is your question. Can you tell me what text type this paragraph falls under?" speech="" media="" play="_user_,A182">
+        <Question id="1" agent="Cristina" text="_user_,  Here is your question. # Can you tell me what text type this paragraph falls under?" speech="" media="" play="_user_,A180">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I picked Statement and Explanation. I think they are making a statement about the dogs and explaining the differences." speech="" keys="any" threshold="" play="B120" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose cause and effect. I'm sure it is right." speech="" keys="any" threshold="" play="B121" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="ComputerTutor, the answer is compare and contrast. This has to be right because the cocker spaniels are being compared to chihuahuas." speech="" keys="any " threshold="" play="B122" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I named that text structure and it is description. I have a feeling that's the right answer." speech="" keys="any" threshold="" play="B123" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this text, cocker spaniels are being compared to chihuahuas, so the text structure is compare and contrast. They are both good pets, but have different activity levels." speech="" keys="any" threshold="" play="A183" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="In this text, cocker spaniels are being compared to chihuahuas, so the text structure is compare and contrast. They are both good pets, but have different activity levels." speech="" keys="any" threshold="" play="A184" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A185" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A186" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry. Nice try though." speech="" keys="any" threshold="" play="A187" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is right. " speech="" keys="any " threshold="" play="A188" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I picked Statement and Explanation. # I think they are making a statement about the dogs and explaining the differences." speech="" keys="any" threshold="" play="B119" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I choose cause and effect. # I'm sure it is right." speech="" keys="any" threshold="" play="B120" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="Cristina, the answer is compare and contrast. # This has to be right because the cocker spaniels are being compared to chihuahuas." speech="" keys="any " threshold="" play="B121" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I named that text structure and it is description. # I have a feeling that's the right answer." speech="" keys="any" threshold="" play="B122" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In this text, cocker spaniels are being compared to chihuahuas, so the text structure is compare and contrast. # They are both good pets, but have different activity levels." speech="" keys="any" threshold="" play="A181" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="In this text, cocker spaniels are being compared to chihuahuas, so the text structure is compare and contrast. # They are both good pets, but have different activity levels." speech="" keys="any" threshold="" play="A182" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A183" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A184" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Sorry. # Nice try though." speech="" keys="any" threshold="" play="A185" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is right." speech="" keys="any " threshold="" play="A186" />
           </Answers>
         </Question>
       </Questions>
@@ -562,19 +559,19 @@
     </TutoringPack>
     <TutoringPack name="Q5.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, Let's try this again. Can you tell me what type of text this paragraph is? Click your answer." speech="" media="" play="_user_,A189">
+        <Question id="1" agent="Cristina" text="_user_, Let's try this again. # Can you tell me what type of text this paragraph is? # Click your answer." speech="" media="" play="_user_,A187">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I am going with my gut and picking statement and explanation" speech="" keys="any" threshold="" play="B124" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="The cause and effect answer looks good" speech="" keys="any" threshold="" play="B125" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think description is the answer since it is the most logical of the bunch" speech="" keys="any" threshold="" play="B126" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="Christina, the answer is compare and contrast. This has to be right because the cocker spaniels are being compared to chihuahuas." speech="" keys="any " threshold="" play="B127" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Compare and contrast hits the mark. It shows two different backgrounds between the two similar subjects." speech="" keys="any" threshold="" play="A190" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The dogs are being listed based on their similarities and differences. So the correct answer is compare and contrast. " speech="" keys="any" threshold="" play="A191" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Statement explanation is incorrect. Maybe you want to think this over." speech="" keys="any" threshold="" play="A192" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No dice here. Cause and effect is incorrect" speech="" keys="any" threshold="" play="A193" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry, description is not correct" speech="" keys="any" threshold="" play="A194" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I am picking compare and contrast but I am not sure it is correct." speech="" keys="any" threshold="" play="B128" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Compare and contrast is correct. You may be on to something." speech="" keys="any" threshold="" play="A195" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I am going with my gut and picking statement and explanation" speech="" keys="any" threshold="" play="B123" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="The cause and effect answer looks good" speech="" keys="any" threshold="" play="B124" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think description is the answer since it is the most logical of the bunch" speech="" keys="any" threshold="" play="B125" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="Christina, the answer is compare and contrast. # This has to be right because the cocker spaniels are being compared to chihuahuas." speech="" keys="any " threshold="" play="B126" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Compare and contrast hits the mark. # It shows two different backgrounds between the two similar subjects." speech="" keys="any" threshold="" play="A188" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The dogs are being listed based on their similarities and differences. # So the correct answer is compare and contrast." speech="" keys="any" threshold="" play="A189" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Statement explanation is incorrect. # Maybe you want to think this over." speech="" keys="any" threshold="" play="A190" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="No dice here. # Cause and effect is incorrect" speech="" keys="any" threshold="" play="A191" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Sorry, description is not correct" speech="" keys="any" threshold="" play="A192" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I am picking compare and contrast but I am not sure it is correct." speech="" keys="any" threshold="" play="B127" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="Compare and contrast is correct. # You may be on to something." speech="" keys="any" threshold="" play="A193" />
           </Answers>
         </Question>
       </Questions>
@@ -583,18 +580,18 @@
     </TutoringPack>
     <TutoringPack name="Q6.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, read the paragraph. What type of text is this? Please click your answer." speech="" media="" play="_user_,A196">
+        <Question id="1" agent="Cristina" text="_user_, read the paragraph. # What type of text is this? # Please click your answer." speech="" media="" play="_user_,A194">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="My choice is statement and explanation." speech="" keys="any" threshold="" play="B129" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I am sure it is problem and solution. I see a problem about school safety and a solution to have a main entrance and cameras. " speech="" keys="any" threshold="" play="B130" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I have a feeling Procedural is the right answer." speech="" keys="any" threshold="" play="B131" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose the text structure and it is description." speech="" keys="any" threshold="" play="B132" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is problem and solution. There was a problem with the children's safety at school so they found a solution to only let people in through one entrance and have cameras." speech="" keys="any" threshold="" play="A197" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="There was a problem in the school presented and a solution was also suggested. The correct answer is problem and solution. " speech="" keys="any" threshold="" play="A198" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Sorry. That is not correct." speech="" keys="any" threshold="" play="A199" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Problem and solution is correct." speech="" keys="any" threshold="" play="A200" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that is not it." speech="" keys="any" threshold="" play="A201" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="That is actually wrong." speech="" keys="any" threshold="" play="A202" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="My choice is statement and explanation." speech="" keys="any" threshold="" play="B128" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I am sure it is problem and solution. # I see a problem about school safety and a solution to have a main entrance and cameras." speech="" keys="any" threshold="" play="B129" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I have a feeling Procedural is the right answer." speech="" keys="any" threshold="" play="B130" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose the text structure and it is description." speech="" keys="any" threshold="" play="B131" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is problem and solution. # There was a problem with the children's safety at school so they found a solution to only let people in through one entrance and have cameras." speech="" keys="any" threshold="" play="A195" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="There was a problem in the school presented and a solution was also suggested. # The correct answer is problem and solution." speech="" keys="any" threshold="" play="A196" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Sorry. # That is not correct." speech="" keys="any" threshold="" play="A197" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Problem and solution is correct." speech="" keys="any" threshold="" play="A198" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No, that is not it." speech="" keys="any" threshold="" play="A199" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="That is actually wrong." speech="" keys="any" threshold="" play="A200" />
           </Answers>
         </Question>
       </Questions>
@@ -603,19 +600,19 @@
     </TutoringPack>
     <TutoringPack name="Q6.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,   Let's take a look at this one again. Read the paragraph and then decide what type of text this is. Please click  your answer." speech="" media="" play="_user_,A203">
+        <Question id="1" agent="Cristina" text="_user_,   Let's take a look at this one again. # Read the paragraph and then decide what type of text this is. # Please click  your answer." speech="" media="" play="_user_,A201">
           <Answers>
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="The description text structure does not fit." speech="" keys="any" threshold="" play="A204" />
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="The statement and explanation text structure seems perfect." speech="" keys="any" threshold="" play="B133" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="The description text structure is hopefully correct." speech="" keys="any" threshold="" play="B134" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="The text structure I choose is problem and solution." speech="" keys="any" threshold="" play="B135" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I have a feeling Procedural is the right answer." speech="" keys="any" threshold="" play="B136" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The correct answer is problem and solution." speech="" keys="any" threshold="" play="A205" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The children's safety at school was the problem and there were multiple solutions presented." speech="" keys="any" threshold="" play="A206" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Oh man. Statement and explanation is not correct." speech="" keys="any" threshold="" play="A207" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Problem and solution is correct. We have a genius on our hands." speech="" keys="any" threshold="" play="A208" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I am picking procedural, although I am not sure it is correct." speech="" keys="any" threshold="" play="B137" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Procedural is not right. Sorry about that one." speech="" keys="any" threshold="" play="A209" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="The description text structure does not fit." speech="" keys="any" threshold="" play="A202" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="The statement and explanation text structure seems perfect." speech="" keys="any" threshold="" play="B132" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="The description text structure is hopefully correct." speech="" keys="any" threshold="" play="B133" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="The text structure I choose is problem and solution." speech="" keys="any" threshold="" play="B134" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I have a feeling Procedural is the right answer." speech="" keys="any" threshold="" play="B135" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The correct answer is problem and solution." speech="" keys="any" threshold="" play="A203" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The children's safety at school was the problem and there were multiple solutions presented." speech="" keys="any" threshold="" play="A204" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Oh man. # Statement and explanation is not correct." speech="" keys="any" threshold="" play="A205" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Problem and solution is correct. # We have a genius on our hands." speech="" keys="any" threshold="" play="A206" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I am picking procedural, although I am not sure it is correct." speech="" keys="any" threshold="" play="B136" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="Procedural is not right. # Sorry about that one." speech="" keys="any" threshold="" play="A207" />
           </Answers>
         </Question>
       </Questions>
@@ -624,18 +621,18 @@
     </TutoringPack>
     <TutoringPack name="Q7.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  Here your question. Please read the paragraph and try to decide what type of text this is. Then press on your answer." speech="" media="" play="_user_,A210">
+        <Question id="1" agent="Cristina" text="_user_,  Here your question. # Please read the paragraph and try to decide what type of text this is. # Then press on your answer." speech="" media="" play="_user_,A208">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I am sure of it. First we heard a statement about how we get chocolate and then there is explanation. " speech="" keys="any" threshold="" play="B138" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I am pretty sure it is Problem and Solution" speech="" keys="any" threshold="" play="B139" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think it is Procedural." speech="" keys="any" threshold="" play="B140" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose compare and contrast." speech="" keys="any" threshold="" play="B141" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is Statement and Explanation. the paragraph starts with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A211" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="We can see that the correct answer is Statement and Explanation, because the paragraph starts with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A212" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is correct. Nice job." speech="" keys="any" threshold="" play="A213" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Nice try. But that is not right." speech="" keys="any" threshold="" play="A214" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, sorry, That is actually not the right answer." speech="" keys="any" threshold="" play="A215" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Sorry, That is actually wrong." speech="" keys="any" threshold="" play="A216" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I am sure of it. # First we heard a statement about how we get chocolate and then there is explanation." speech="" keys="any" threshold="" play="B137" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I am pretty sure it is Problem and Solution" speech="" keys="any" threshold="" play="B138" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think it is Procedural." speech="" keys="any" threshold="" play="B139" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose compare and contrast." speech="" keys="any" threshold="" play="B140" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is Statement and Explanation. # the paragraph starts with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A209" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="We can see that the correct answer is Statement and Explanation, because the paragraph starts with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A210" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="That is correct. # Nice job." speech="" keys="any" threshold="" play="A211" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Nice try. # But that is not right." speech="" keys="any" threshold="" play="A212" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No, sorry, That is actually not the right answer." speech="" keys="any" threshold="" play="A213" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="Sorry, That is actually wrong." speech="" keys="any" threshold="" play="A214" />
           </Answers>
         </Question>
       </Questions>
@@ -644,19 +641,19 @@
     </TutoringPack>
     <TutoringPack name="Q7.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  Let's take a closer look at the paragraph and try to decide what type of text this is. Click an answer when you think you know." speech="" media="" play="_user_,A217">
+        <Question id="1" agent="Cristina" text="_user_,  Let's take a closer look at the paragraph and try to decide what type of text this is. # Click an answer when you think you know." speech="" media="" play="_user_,A215">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I pick statement and explanation" speech="" keys="any" threshold="" play="B142" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I am going with my gut on this one and choosing problem and solution" speech="" keys="any" threshold="" play="B143" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Compare and contrast seems like the perfect answer." speech="" keys="any" threshold="" play="B144" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="" speech="I'm thinking the answer is procedural for this one." keys="any" threshold="" play="B145" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is statement and explanation. The paragraph begins with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A218" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="We see the paragraph first makes a statement about how chocolate is made, and the rest of the paragraph explains how it's made. The correct answer is statement and explanation." speech="" keys="any" threshold="" play="A219" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Yes, statement and explanation is the right answer." speech="" keys="any" threshold="" play="A220" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Problem and solution is close but that answer does not fit the bill" speech="" keys="any" threshold="" play="A221" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry, compare and contrast is not the right answer." speech="" keys="any" threshold="" play="A222" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="Procedural seems correct. I will go with this one." speech="" keys="any" threshold="" play="B146" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="A good effort but procedural is incorrect. " speech="" keys="any" threshold="" play="A223" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I pick statement and explanation" speech="" keys="any" threshold="" play="B141" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I am going with my gut on this one and choosing problem and solution" speech="" keys="any" threshold="" play="B142" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="Compare and contrast seems like the perfect answer." speech="" keys="any" threshold="" play="B143" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="" speech="I'm thinking the answer is procedural for this one." keys="any" threshold="" play="B144" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is statement and explanation. # The paragraph begins with a statement about wanting to know how chocolate is made and the rest of the paragraph explains it." speech="" keys="any" threshold="" play="A216" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="We see the paragraph first makes a statement about how chocolate is made, and the rest of the paragraph explains how it's made. # The correct answer is statement and explanation." speech="" keys="any" threshold="" play="A217" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Yes, statement and explanation is the right answer." speech="" keys="any" threshold="" play="A218" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Problem and solution is close but that answer does not fit the bill" speech="" keys="any" threshold="" play="A219" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Sorry, compare and contrast is not the right answer." speech="" keys="any" threshold="" play="A220" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="Procedural seems correct. # I will go with this one." speech="" keys="any" threshold="" play="B145" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="A good effort but procedural is incorrect." speech="" keys="any" threshold="" play="A221" />
           </Answers>
         </Question>
       </Questions>
@@ -665,18 +662,18 @@
     </TutoringPack>
     <TutoringPack name="Q8.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, , ok, let's read this paragraph. What type of text is this?" speech="" media="" play="_user_,A224">
+        <Question id="1" agent="Cristina" text="_user_, , ok, let's read this paragraph. # What type of text is this?" speech="" media="" play="_user_,A222">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I pick statement and explanation." speech="" keys="any" threshold="" play="B147" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I'm pretty sure it's problem and solution." speech="" keys="any" threshold="" play="B148" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think the text structure is procedural. I have a feeling that's the right answer because this is a procedure to make a quesadilla." speech="" keys="any" threshold="" play="B149" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose compare and contrast. I think this is right." speech="" keys="any" threshold="" play="B150" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This is a Procedural text. In this text, we are given the steps to make a quesadilla." speech="" keys="any" threshold="" play="A225" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="This text is Procedural. Here you can see the step by step instructions for a recipe to make quesadillas." speech="" keys="any" threshold="" play="A226" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, that is not it." speech="" keys="any" threshold="" play="A227" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Close but that is not it." speech="" keys="any" threshold="" play="A228" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No. That is not right." speech="" keys="any" threshold="" play="A229" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResonseD" text="Yes, That is correct." speech="" keys="any " threshold="" play="A230" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I pick statement and explanation." speech="" keys="any" threshold="" play="B146" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I'm pretty sure it's problem and solution." speech="" keys="any" threshold="" play="B147" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think the text structure is procedural. # I have a feeling that's the right answer because this is a procedure to make a quesadilla." speech="" keys="any" threshold="" play="B148" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose compare and contrast. # I think this is right." speech="" keys="any" threshold="" play="B149" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This is a Procedural text. # In this text, we are given the steps to make a quesadilla." speech="" keys="any" threshold="" play="A223" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="This text is Procedural. # Here you can see the step by step instructions for a recipe to make quesadillas." speech="" keys="any" threshold="" play="A224" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="No, that is not it." speech="" keys="any" threshold="" play="A225" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Close but that is not it." speech="" keys="any" threshold="" play="A226" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="No. # That is not right." speech="" keys="any" threshold="" play="A227" />
+            <Answer name="ResponseD" agent="Cristina" type="ResonseD" text="Yes, That is correct." speech="" keys="any " threshold="" play="A228" />
           </Answers>
         </Question>
       </Questions>
@@ -685,19 +682,19 @@
     </TutoringPack>
     <TutoringPack name="Q8.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  we are going to take another look at this paragraph. Please read it again and try to answer the question what type of text is this?" speech="" media="" play="_user_,A231">
+        <Question id="1" agent="Cristina" text="_user_,  we are going to take another look at this paragraph. # Please read it again and try to answer the question what type of text is this?" speech="" media="" play="_user_,A229">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I pick the statement and explanation structure." speech="" keys="any" threshold="" play="B151" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I am going with my gut on this one and saying description spatial." speech="" keys="any" threshold="" play="B152" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose compare and contrast. I think this is right." speech="" keys="any" threshold="" play="B153" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think the text structure is procedural. I have a feeling that's the right answer because this is a procedure to make a quesadilla." speech="" keys="any" threshold="" play="B154" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is procedural. The sentences tell you step by step how to make a quesadilla. Yum." speech="" keys="any" threshold="" play="A232" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Steps are given on how to make a quesadilla. The correct answer is procedural." speech="" keys="any" threshold="" play="A233" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Statement and explanation is incorrect." speech="" keys="any" threshold="" play="A234" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Nice try, but description spatial is not correct " speech="" keys="any" threshold="" play="A235" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry order is incorrect" speech="" keys="any" threshold="" play="A236" />
-            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="The procedural answer seems correct. I will go with that one." speech="" keys="any" threshold="" play="B155" />
-            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Correct. Procedural is a home run answer." speech="" keys="any" threshold="" play="A237" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I pick the statement and explanation structure." speech="" keys="any" threshold="" play="B150" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I am going with my gut on this one and saying description spatial." speech="" keys="any" threshold="" play="B151" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I choose compare and contrast. # I think this is right." speech="" keys="any" threshold="" play="B152" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="I think the text structure is procedural. # I have a feeling that's the right answer because this is a procedure to make a quesadilla." speech="" keys="any" threshold="" play="B153" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is procedural. # The sentences tell you step by step how to make a quesadilla. # Yum." speech="" keys="any" threshold="" play="A230" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="Steps are given on how to make a quesadilla. # The correct answer is procedural." speech="" keys="any" threshold="" play="A231" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="Statement and explanation is incorrect." speech="" keys="any" threshold="" play="A232" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="Nice try, but description spatial is not correct" speech="" keys="any" threshold="" play="A233" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="Sorry order is incorrect" speech="" keys="any" threshold="" play="A234" />
+            <Answer name="ChooseD" agent="Jordan" type="ChooseD" text="The procedural answer seems correct. # I will go with that one." speech="" keys="any" threshold="" play="B154" />
+            <Answer name="ResponseD" agent="Cristina" type="ResponseD" text="Correct. # Procedural is a home run answer." speech="" keys="any" threshold="" play="A235" />
           </Answers>
         </Question>
       </Questions>
@@ -706,16 +703,16 @@
     </TutoringPack>
     <TutoringPack name="Q9.1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  Fill in the blank. The purpose of this book is to what." speech="" media="" play="_user_,A238">
+        <Question id="1" agent="Cristina" text="_user_,  Fill in the blank. # The purpose of this book is to what." speech="" media="" play="_user_,A236">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B156" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B157" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B158" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of this book is to entertain." speech="" keys="any" threshold="" play="A239" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of this book is to entertain. The book is called Roald Dahl's Marvellous Joke Book, and joke books are almost always written to entertain." speech="" keys="any" threshold="" play="A240" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A241" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A242" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is right." speech="" keys="any" threshold="" play="A243" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B155" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B156" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B157" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this book is to entertain." speech="" keys="any" threshold="" play="A237" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of this book is to entertain. # The book is called Roald Dahl's Marvellous Joke Book, and joke books are almost always written to entertain." speech="" keys="any" threshold="" play="A238" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A239" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A240" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is right." speech="" keys="any" threshold="" play="A241" />
           </Answers>
         </Question>
       </Questions>
@@ -724,16 +721,16 @@
     </TutoringPack>
     <TutoringPack name="Q9.2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_,  Fill in the blank. The purpose of this book is to what." speech="" media="" play="_user_,A244">
+        <Question id="1" agent="Cristina" text="_user_,  Fill in the blank. # The purpose of this book is to what." speech="" media="" play="_user_,A242">
           <Answers>
-            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B159" />
-            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B160" />
-            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B161" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purpose of this book is to entertain." speech="" keys="any" threshold="" play="A245" />
-            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The purpose of this book is to entertain. The book is called Roald Dahl's Marvellous Joke Book, and joke books are almost always written to entertain." speech="" keys="any" threshold="" play="A246" />
-            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A247" />
-            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A248" />
-            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is right. good work." speech="" keys="any" threshold="" play="A249" />
+            <Answer name="ChooseA" agent="Jordan" type="ChooseA" text="I think it is to inform." speech="" keys="any" threshold="" play="B158" />
+            <Answer name="ChooseB" agent="Jordan" type="ChooseB" text="I think it is to persuade." speech="" keys="any" threshold="" play="B159" />
+            <Answer name="ChooseC" agent="Jordan" type="ChooseC" text="I think it is to entertain." speech="" keys="any" threshold="" play="B160" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this book is to entertain." speech="" keys="any" threshold="" play="A243" />
+            <Answer name="FinalAnswer" agent="Cristina" type="Final" text="The purpose of this book is to entertain. # The book is called Roald Dahl's Marvellous Joke Book, and joke books are almost always written to entertain." speech="" keys="any" threshold="" play="A244" />
+            <Answer name="ResponseA" agent="Cristina" type="ResponseA" text="No, I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A245" />
+            <Answer name="ResponseB" agent="Cristina" type="ResponseB" text="I am sorry, that is incorrect." speech="" keys="any" threshold="" play="A246" />
+            <Answer name="ResponseC" agent="Cristina" type="ResponseC" text="That is right. # good work." speech="" keys="any" threshold="" play="A247" />
           </Answers>
         </Question>
       </Questions>
@@ -750,8 +747,8 @@
     </Rule>
     <Rule name="ShowMainPage" status="ShowMainPage" response="" event="" hasItem="" priority="" frequency="" description="Load main page. To LoadMainPage">
       <Action agent="System" act="ShowMedia" data="media/L18-MainPage.html" id="1" />
-      <Action agent="System" act="SetStatus" data="LoadMainPage" id="3" />
-      <Action agent="System" act="Wait" data="1" id="4" />
+      <Action agent="System" act="SetStatus" data="LoadMainPage" id="2" />
+      <Action agent="System" act="Wait" data="1" id="3" />
     </Rule>
     <Rule name="LoadMainPage" status="LoadMainPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="Main page loaded. To LoadQuestion">
       <Action agent="System" act="SetStatus" data="LoadQuestion" id="1" />
@@ -767,12 +764,12 @@
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="PlayGame" status="ChooseQuestion" response="" event="Continue" hasItem="" priority="" frequency="" description="To AskQ(33)">
-      <Action agent="ComputerTutor" act="CannedExpression" data="ChooseQuestion" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="ChooseQuestion" id="1" />
       <Action agent="System" act="SetStatus" data="AskQ" id="2" />
       <Action agent="System" act="WaitForEvent" data="90" id="3" />
     </Rule>
     <Rule name="TooSlow" status="AskQ" response="" event="" hasItem="" priority="2" frequency="" description="Time out. To PickRandom">
-      <Action agent="ComputerTutor" act="CannedExpression" data="TooSlow" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="TooSlow" id="1" />
       <Action agent="System" act="SetStatus" data="PickRandom" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
@@ -783,212 +780,212 @@
     </Rule>
     <Rule name="AskQ1.1" status="AskQ" response="" event="L18-C1Q1.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q1.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ1.2" status="AskQ" response="" event="L18-C1Q1R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q1.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ2.1" status="AskQ" response="" event="L18-C1Q2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q2.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ2.2" status="AskQ" response="" event="L18-C1Q2R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q2.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ3.1" status="AskQ" response="" event="L18-C1Q3.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q3.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ3.2" status="AskQ" response="" event="L18-C1Q3R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q3.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ4.1" status="AskQ" response="" event="L18-C1Q4.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q4.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ4.2" status="AskQ" response="" event="L18-C1Q4R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q4.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ5.1" status="AskQ" response="" event="L18-C2Q1.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q5.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ5.2" status="AskQ" response="" event="L18-C2Q1R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q5.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ6.1" status="AskQ" response="" event="L18-C2Q2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q6.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ6.2" status="AskQ" response="" event="L18-C2Q2R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q6.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ7.1" status="AskQ" response="" event="L18-C2Q3.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q7.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ7.2" status="AskQ" response="" event="L18-C2Q3R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q7.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ8.1" status="AskQ" response="" event="L18-C2Q4.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q8.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ8.2" status="AskQ" response="" event="L18-C2Q4R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q8.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ9.1" status="AskQ" response="" event="L18-C3Q1.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q9.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ9.2" status="AskQ" response="" event="L18-C3Q1R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q9.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ10.1" status="AskQ" response="" event="L18-C3Q2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q10.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ10.2" status="AskQ" response="" event="L18-C3Q2R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q10.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ11.1" status="AskQ" response="" event="L18-C3Q3.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q11.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ11.2" status="AskQ" response="" event="L18-C3Q3R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q11.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ12.1" status="AskQ" response="" event="L18-C3Q4.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q12.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ12.2" status="AskQ" response="" event="L18-C3Q4R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q12.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ13.1" status="AskQ" response="" event="L18-C4Q1.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q13.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ13.2" status="AskQ" response="" event="L18-C4Q1R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q13.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ14.1" status="AskQ" response="" event="L18-C4Q2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q14.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ14.2" status="AskQ" response="" event="L18-C4Q2R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q14.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ15.1" status="AskQ" response="" event="L18-C4Q3.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q15.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ15.2" status="AskQ" response="" event="L18-C4Q3R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q15.2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ16.1" status="AskQ" response="" event="L18-C4Q4.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="GetTutoringPack" data="Q16.1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="SetStatus" data="UserClick" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="AskQ16.2" status="AskQ" response="" event="L18-C4Q4R2.html" hasItem="" priority="1" frequency="" description="Load tutoring pack. Ask main question. To UserClick">
       <Action agent="System" act="SetStatus" data="UserClick" id="1" />
       <Action agent="System" act="GetTutoringPack" data="Q16.2" id="2" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="3" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="Correct" status="UserClick" response="" event="Correct" hasItem="" priority="1" frequency="" description="Correct. Feedback. To LoadMainPage">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
       <Action agent="System" act="SetStatus" data="LoadMainPage" id="4" />
       <Action agent="System" act="GetMediaEvent" data="MainPage" id="5" />
       <Action agent="System" act="Wait" data="5" id="6" />
     </Rule>
     <Rule name="Incorrect" status="UserClick" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Incorrect, ask jordan. To GetUserAnswer">
-      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedback" id="1" />
-      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="NegativeFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="2" />
       <Action agent="System" act="SetStatus" data="GetUserAnswer" id="3" />
       <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="NoAnswer" status="UserClick" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="AskJordan" id="1" />
       <Action agent="System" act="SetStatus" data="GetUserAnswer" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
@@ -1062,51 +1059,51 @@
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="JordanAnswerA" status="JordanAnswerA" response="" event="" hasItem="" priority="" frequency="" description="Responde to A. To GoBack">
-      <Action agent="ComputerStudent1" act="Answer" data="ChooseA" id="1" />
+      <Action agent="Jordan" act="Answer" data="ChooseA" id="1" />
       <Action agent="System" act="GetMediaEvent" data="A" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="ResponseA" id="3" />
+      <Action agent="Cristina" act="Answer" data="ResponseA" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="Cristina" act="Answer" data="Final" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="JordanAnswerB" status="JordanAnswerB" response="" event="" hasItem="" priority="" frequency="" description="Responde to B. To GoBack">
-      <Action agent="ComputerStudent1" act="Answer" data="ChooseB" id="1" />
+      <Action agent="Jordan" act="Answer" data="ChooseB" id="1" />
       <Action agent="System" act="GetMediaEvent" data="B" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="ResponseB" id="3" />
+      <Action agent="Cristina" act="Answer" data="ResponseB" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="Cristina" act="Answer" data="Final" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="JordanAnswerD" status="JordanAnswerD" response="" event="" hasItem="" priority="" frequency="" description="Responde to C. To GoBack">
-      <Action agent="ComputerStudent1" act="GetAnswer" data="ChooseD" id="1" />
-      <Action agent="System" act="SetStatus" data="HasAnswerD" id="6" />
-      <Action agent="System" act="GetRule" data="" id="7" />
+      <Action agent="Jordan" act="GetAnswer" data="ChooseD" id="1" />
+      <Action agent="System" act="SetStatus" data="HasAnswerD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
     <Rule name="JordanAnswerDHasD" status="HasAnswerD" response="" event="" hasItem="true" priority="" frequency="" description="Responde to C. To GoBack">
-      <Action agent="ComputerStudent1" act="Answer" data="ChooseD" id="1" />
+      <Action agent="Jordan" act="Answer" data="ChooseD" id="1" />
       <Action agent="System" act="GetMediaEvent" data="D" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="ResponseD" id="3" />
+      <Action agent="Cristina" act="Answer" data="ResponseD" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="Cristina" act="Answer" data="Final" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="JordanAnswerDNoDB" status="HasAnswerD" response="" event="" hasItem="false" priority="" frequency="" description="Responde to C. To GoBack">
-      <Action agent="System" act="SetStatus" data="JordanAnswerB" id="6" />
-      <Action agent="System" act="GetRule" data="" id="7" />
+      <Action agent="System" act="SetStatus" data="JordanAnswerB" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="JordanAnswerDNoDC" status="HasAnswerD" response="" event="" hasItem="false" priority="" frequency="" description="Responde to C. To GoBack">
-      <Action agent="System" act="SetStatus" data="JordanAnswerC" id="6" />
-      <Action agent="System" act="GetRule" data="" id="7" />
+      <Action agent="System" act="SetStatus" data="JordanAnswerC" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="JordanAnswerC" status="JordanAnswerC" response="" event="" hasItem="" priority="" frequency="" description="Responde to C. To GoBack">
-      <Action agent="ComputerStudent1" act="Answer" data="ChooseC" id="1" />
+      <Action agent="Jordan" act="Answer" data="ChooseC" id="1" />
       <Action agent="System" act="GetMediaEvent" data="C" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="ResponseC" id="3" />
+      <Action agent="Cristina" act="Answer" data="ResponseC" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="Cristina" act="Answer" data="Final" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>

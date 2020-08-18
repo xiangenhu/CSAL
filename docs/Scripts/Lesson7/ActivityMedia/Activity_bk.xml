@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_, try to answer the question." speech="_user_, try to answer the question." play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_, I don't think that's the right answer." speech="" play="_user_,B3" />
+        <Item text=" _user_, I don't think that was the right answer. " speech="" play="_user_,B4" />
+        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B5" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, good. You got it right." speech="_user_, good. You got it right." play="_user_,B6" />
+        <Item text="_user_, You got it." speech="" play="_user_,B7" />
+        <Item text="_user_, Great job. Your answer was right." speech="" play="_user_,B8" />
+        <Item text="_user_, You answered correctly. Awesome job." speech="" play="_user_,B9" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A1" />
+        <Item text="_user_, If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_, If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A2" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="Jordan you didn't pick the correct answer." speech="" play="A3" />
+        <Item text="Jordan you actually got that question wrong." speech="" play="A4" />
+        <Item text="Jordan that's not right." speech="" play="A5" />
+        <Item text="Jordan your answer is incorrect." speech="" play="A6" />
+        <Item text="Jordan you were wrong." speech="" play="A7" />
+        <Item text="Jordan, Sorry, that's not right." speech="" play="A8" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Both of you got that correct. Phenomenal work." speech="" play="A9" />
+        <Item text="That's correct. Great job both of you." speech="" play="A10" />
+        <Item text="That's correct. You are both doing a really good job." speech="" play="A11" />
+        <Item text="Thats the right answer. You are both doing great." speech="" play="A12" />
+        <Item text="You are both right. Excellent work." speech="" play="A13" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_, try your best to answer the question." speech="" play="_user_,A14" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="_user_, actually, that is not what I was looking for." speech="" play="_user_,A15" />
+        <Item text="_user_, , sorry but you are not correct. " speech="" play="_user_,A16" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,A17" />
+        <Item text="_user_, Not exactly, good try" speech="" play="_user_,A18" />
+        <Item text="_user_, Well, that wasn't what I was thinking. Here is the right choice" speech="" play="_user_,A19" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackJordan">
+        <Item text="Jordan, you got it right, excellent." speech="" play="A20" />
+        <Item text="Jordan, you are right, that's great." speech="" play="A21" />
+        <Item text="Jordan, that is correct, well done." speech="" play="A22" />
+        <Item text="Jordan, that's right, great job." speech="" play="A23" />
+        <Item text="Jordan, great. That is correct." speech="" play="A24" />
+        <Item text="Jordan, that's it. Nice job." speech="" play="A25" />
+        <Item text="Jordan, yes, That's right." speech="" play="A26" />
+        <Item text="Jordan you picked the correct answer." speech="" play="A27" />
+        <Item text="Jordan you were right. good going." speech="" play="A28" />
+        <Item text="Jordan you got it this time." speech="" play="A29" />
+        <Item text="Jordan your answer is correct." speech="" play="A30" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="_user_, Ok here is the answer." speech="" play="_user_,A31" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUserNegativeFeedbackToJordanUserFirst">
+        <Item text="Jordan, you were wrong this time, _user_, you are right. " speech="" play="A32,_user_,A33" />
+        <Item text="Jordan, sorry that's not it. _user_, you were right, good work." speech="" play="A34,_user_,A35" />
+        <Item text="Jordan, better luck next time. _user_, great job on this question. You were right." speech="" play="A36,_user_,A37" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBothUserFirst">
+        <Item text="Great work. you are both correct." speech="" play="A38" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoUserFirstJordanCorrect">
+        <Item text="Jordan, yes that is correct. _user_, sorry that was not the correct answer" speech="" play="A39,_user_,A40" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBothUserSecond">
+        <Item text="_user_, and Jordan you are both correct." speech="" play="_user_,A41" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, Great job." speech="_user_, Great job." play="_user_,A42" />
+        <Item text="_user_, Good. That's right." speech="" play="_user_,A43" />
+        <Item text="_user_, you are on a roll. You got that one right." speech="" play="_user_,A44" />
+        <Item text="_user_, Wonderful. You answered the question correctly." speech="" play="_user_,A45" />
+        <Item text=" _user_,  You are correct." speech="" play="_user_,A46" />
+        <Item text="_user_, Perfect. You got it right." speech="" play="_user_,A47" />
+        <Item text="_user_, great. You answered correctly." speech="" play="_user_,A48" />
+        <Item text=" _user_, You got it right." speech=" " play="_user_,A49" />
+        <Item text="_user_, Exactly. You are right." speech="" play="_user_,A50" />
+        <Item text="_user_, Amazing. You're doing great." speech="" play="_user_,A51" />
+        <Item text="_user_, Awesome job. You answered correctly." speech="_user_, Awesome job. You answered correctly." play="_user_,A52" />
+        <Item text="_user_, superb job. That's correct." speech="" play="_user_,A53" />
+        <Item text="_user_, Brilliant job. You got it right." speech="_user_, Brilliant job. You got it right." play="_user_,A54" />
+        <Item text="_user_, Perfect. Good work." speech="" play="_user_,A55" />
+        <Item text="_user_, yes, that's correct. Well done." speech="" play="_user_,A56" />
+        <Item text="_user_, fantastic. That's right." speech="" play="_user_,A57" />
+        <Item text="_user_, That's correct. Keep up the good work." speech="" play="_user_,A58" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUserNegativeFeedbackToJordanUserSecond">
+        <Item text="_user_, you are right. Jordan, you were wrong this time." speech="" play="_user_,A59" />
+        <Item text="_user_, you were right. Jordan, sorry that's not it." speech="" play="_user_,A60" />
+        <Item text="_user_, great job on this question. You were right. Jordan, better luck next time." speech="" play="_user_,A61" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBothUserFirst">
+        <Item text="Sorry, you are both wrong. " speech="" play="A62" />
+        <Item text="Neither of you gave me the answer that I was looking for." speech="" play="A63" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBothUserSecond">
+        <Item text="_user_, and Jordan, That wasn't the correct answer." speech="" play="_user_,A64" />
+        <Item text="_user_, and Jordan, Not quite. You both got that one incorrect." speech="" play="_user_,A65" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_, sorry. that wasn't what I was looking for." speech="" play="_user_,A66" />
+        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A67" />
+        <Item text="_user_, sorry, but it looks like you picked the wrong answer. " speech="" play="_user_,A68" />
+      </SpeechCan>
+      <SpeechCan name="AskJordanJodanAsked">
+        <Item text="Jordan, what do you think about this answer?" speech="" play="A69" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Opening4" usedIn="">
+      <Item id="1" agent="Cristina" text="When you want to pick an answer, just press one of the buttons to lock in your selection. It will turn yellow to show that you've selected it." speech="" play="A70" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Cristina" text="First, you will read the sentence at the top. Pay attention to the word that is highlighted in yellow. That  is the word you will be replacing and checking." speech="" play="A71" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="Jordan" text="Cristina! I think that I need some help with the new assignment I was given today. " speech="" play="B10" />
+      <Item id="2" agent="Cristina" text="Ok Jordan, Let's see what you have to do. This assignment involves using context clues to help us learn new words. # Context clues are hints provided in a text, which lead the reader to the meanings of words. # You will press on the highlighted and numbered context clue, that helps you to understand the meaning of the highlighted word for each question. " speech="" play="A72" />
+      <Item id="3" agent="Jordan" text="I'm not very good at this but I want to learn more. _user_, can you help me finish this? " speech="" play="B11,_user_,B12" />
+      <Item id="4" agent="Cristina" text="_user_, please help Jordan. I will be here to help along the way. " speech="" play="_user_,A73" />
+    </RigidPack>
+    <RigidPack name="Opening5" usedIn="">
+      <Item id="1" agent="Cristina" text="Please note that the example below is incorrect." speech="" play="A74" />
+      <Item id="2" agent="Jordan" text="Alright, let's give it a shot." speech="" play="B13" />
+      <Item id="3" agent="Cristina" text="_user_, I will reset this first question and you can try it out." speech="" media="media\Lesson7-M1.html" play="_user_,A75" />
+    </RigidPack>
+    <RigidPack name="Opening3" usedIn="">
+      <Item id="1" agent="Cristina" text="Next, you can hover over the buttons on the bottom part of the screen to replace and check each answer. Try hovering over an option now to see what happens." speech="" play="A76" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="Great job today. You both did very well. I hope you have learned some new vocabulary today and how to use context clues to understand their meaning. " speech="" media="media\Lesson7Close.html" play="A77" />
+      <Item id="2" agent="Jordan" text="_user_, you really helped me today! Thank you so much! " speech="" play="_user_,B14" />
+      <Item id="3" agent="Cristina" text="The skills you learned today will help you in the future when you see new words. " speech="" play="A78" />
+      <Item id="4" agent="Jordan" text="Definitely! Context clues make it easier understand words that I don't know." speech="" play="B15" />
+      <Item id="5" agent="Cristina" text="_user_, I hope the same is true for you. Can't wait to see you both next time." speech="" play="_user_,A79" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_, and Jordan, Welcome back. Today we will be learning new vocabulary. " speech="" media="media\Lesson7-IntroTitle.html" play="_user_,A80" />
+      <Item id="2" agent="Jordan" text="_user_, and Cristina, Hello. New vocabulary? How will we be learning that?" speech="" play="_user_,B16" />
+      <Item id="3" agent="Cristina" text="Today we will be focusing on learning new vocabulary by using context clues. Context clues are hints in a text, which can help us understand the meanings of words we don't know.  " speech="" play="A81" />
+      <Item id="4" agent="Cristina" text="For this activity, you will be matching vocabulary words with the more common words that mean the same thing." speech="" media="media\Lesson7-M1Intro.html" play="A82" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Mr. Smith was very well known and valued in the community. It could be said that he is a prominent figure. Remember to replace and check your answers by hovering over a word with the mouse." speech="" media="" itemDif="" play="A83">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="There are context clues in the phrase, Mr. Smith was very well known and valued. # The key words, well known and valued, are clues that help us see that prominent means important. So Mr. Smith is an important, or prominent figure." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A85" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, it is your turn. Which one of the words above best replaces prominent in this sentence?" speech="" keys="any" threshold="" test="" play="A86" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Which one of the words below do you think best replaces prominent in this sentence? " speech="" keys="any" threshold="" test="" play="_user_,A87" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think that the correct answer is important." speech="" keys="any" threshold="" test="" play="B17" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think that the correct answer is rare." speech="" keys="any" threshold="" test="" play="B18" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you chose the correct answer. " speech="" keys="any" threshold="" test="" play="_user_,B19" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I'm pretty sure the answer is rare" speech="" keys="asdef" threshold="" test="" play="B20" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I think the correct answer should be important." speech="" keys="asdf" threshold="" test="" play="B21" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="2" agent="Cristina" text="The soldier returned from war a hero for his courageous acts in battle." speech="" media="" play="A88">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Courageous is best replaced by brave. War heroes often risk death or injury to fight for a cause. So their actions are considered very brave or courageous." speech="Courageous is best replaced by brave. War heros often risk death or injury to fight for a cause. So their actions are considered very brave or courageous." keys="any" threshold="" test="" play="A89" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A90" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the best replacement for courageous is in this sentence?" speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, What do you think the best answer is to replace courageous?" speech="" keys="any" threshold="" test="" play="_user_,A92" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the correct answer is brave. " speech="" keys="any" threshold="" test="" play="B22" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the answer is survive." speech="" keys="any" threshold="" test="" play="B23" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think that you are right on this one!" speech="" keys="any" threshold="" test="" play="_user_,B24" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I'm almost positive the answer is change" speech="" keys="asd" threshold="" test="" play="B25" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I think the correct answer should be brave." speech="" keys="df" threshold="" test="" play="B26" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="3" agent="Cristina" text="Children cannot subsist on candy and junk food. They need healthy foods in their diet." speech="" media="" play="A93">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is survive. When we replace the word subsist with the word survive, the sentence makes sense. So subsist means survive." speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, , please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A95" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how would you replace subsist in this sentence?" speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, How would you replace subsist in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A97" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the best answer is survive. " speech="" keys="any" threshold="" test="" play="B27" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the best answer is change. " speech="" keys="any" threshold="" test="" play="B28" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are correct." speech="" keys="any" threshold="" test="" play="_user_,B29" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I would guess the right answer is get" speech="" keys="asd" threshold="" test="" play="B30" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I would bet the correct answer is survive." speech="" keys="asdf" threshold="" test="" play="B31" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="4" agent="Cristina" text="Kim's son was expelled from school for bullying other children." speech="" media="" play="A98">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word expelled is best replaced by removed in this sentence. " speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer." speech="" keys="any" threshold="" test="" play="_user_,A100" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the best replacement for expelled is in this sentence?" speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what do you think the best replacement for expelled is in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A102" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Cristina, I think the expelled can be replaced by removed in this sentence. " speech="" keys="any" threshold="" test="" play="B32" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the best answer is expected. " speech="" keys="any" threshold="" test="" play="B33" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, that is the same answer I would choose." speech="" keys="any" threshold="" test="" play="_user_,B34" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I think the answer is average" speech="" keys="adf" threshold="" test="" play="B35" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I'm pretty sure the correct answer is removed. " speech="" keys="sdf" threshold="" test="" play="B36" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="5" agent="Cristina" text="After a hot shower, Grace rehydrated her skin with lotion." speech="" media="" play="A103">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is moisturized. Since lotion is often used to help heal dry skin, it makes sense that rehydrate would mean to moisturize." speech="" keys="any" threshold="" test="" play="A104" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A105" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how would you replace rehydrated in this one?" speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how would you replace rehydrated in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A107" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the answer is moisturized. " speech="" keys="any" threshold="" test="" play="B37" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the best choice is change. " speech="" keys="any" threshold="" test="" play="B38" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="Cristina, I think that was the correct answer." speech="" keys="any" threshold="" test="" play="B39" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Correct me if I'm wrong, but I think the answer is non stop" speech="" keys="asf" threshold="" test="" play="B40" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I think the answer is moisturized. " speech="" keys="asdf" threshold="" test="" play="B41" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="6" agent="Cristina" text="Here's the next one. Bill often receives compliments for his above and beyond work ethic. On the other hand, Joe puts forth mediocre effort and receives little to no praise." speech="" media="" play="A108">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer to replace mediocre is average. Bill gets compliments because he puts in extra effort, but joe gets little praise because he does mediocre, or average work." speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer." speech="" keys="any" threshold="" test="" play="_user_,A110" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how would you replace mediocre in this sentence?" speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, How would you replace mediocre in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A112" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the best answer is average." speech="" keys="any" threshold="" test="" play="B42" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the best answer is nonstop." speech="" keys="any" threshold="" test="" play="B43" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are correct." speech="" keys="any" threshold="" test="" play="_user_,B44" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I'm pretty confident the answer is brave" speech="" keys="adf" threshold="" test="" play="B45" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I'm not sure but I would guess the correct answer is average." speech="" keys="adf" threshold="" test="" play="B46" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="7" agent="Cristina" text="The baby's crying was relentless. It lasted into the night." speech="" media="" play="A113">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is nonstop. We know the baby's crying lasted into the night. This means it lasted a long time, and so relentless, or nonstop is a good word to describe the crying." speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer." speech="" keys="any" threshold="" test="" play="_user_,A115" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which word do you think best replaces relentless?" speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Which word best replaces relentless?" speech="" keys="any" threshold="" test="" play="_user_,A117" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Cristina, I think nonstop best replaces relentless in this sentence. " speech="" keys="any" threshold="" test="" play="B47" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the answer is get. " speech="" keys="any" threshold="" test="" play="B48" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree that is the best answer choice. " speech="" keys="any" threshold="" test="" play="_user_,B49" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I think the right answer is get" speech="" keys="adf" threshold="" test="" play="B50" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="The right answer is nonstop." speech="" keys="adsf" threshold="" test="" play="B51" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="8" agent="Cristina" text="Let's keep practicing. Take a look at this sentence, it was difficult for the plumber to locate the source of the leak." speech="" media="" play="A118">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is find. The plumber was having trouble locating, or finding the source of the leak." speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A120" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which word do you think best replaces locate in this sentence?" speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which word do you think best replaces locate in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A122" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="Find seems like the best answer here. " speech="" keys="any" threshold="" test="" play="B52" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="It seems like get might be the best answer for this one. " speech="" keys="any" threshold="" test="" play="B53" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think that is the right answer. " speech="" keys="any" threshold="" test="" play="_user_,B54" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I'm pretty sure the answer is survive." speech="" keys="ads" threshold="" test="" play="B55" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I'll take a guess and say the answer is find." speech="" keys="adf" threshold="" test="" play="B56" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="9" agent="Cristina" text="Can you find the best word to replace alter in this sentence? The birth of Michelle's daughter was a joyful occasion that would forever alter her life." speech="" media="" play="A123">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is change. The birth of a child can really alter, or change people's lives." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A125" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think is the best answer to replace alter?" speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, What do you think the best answer to replace alter?" speech="" keys="any" threshold="" test="" play="_user_,A127" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the best answer might be change." speech="" keys="any" threshold="" test="" play="B57" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="Is the answer find?" speech="" keys="any" threshold="" test="" play="B58" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with you on this one. " speech="" keys="any" threshold="" test="" play="_user_,B59" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I'll go with the word rare for this one." speech="" keys="adsf" threshold="" test="" play="B60" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I think the answer is change." speech="" keys="adf" threshold="" test="" play="B61" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA91">
+      <Questions>
+        <Question id="10" agent="Cristina" text="Endangered species such as the Siberian tiger are scarce. There are not that many of them left." speech="" media="" play="A128">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is rare. The sentence tells us there are not many Siberian tigers left. This means they are scarce, or rare." speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A130" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how would you replace scarce in this sentence?" speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how would you replace scarce in this sentence?" speech="" keys="any" threshold="" test="" play="_user_,A132" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think that the best answer is rare." speech="" keys="any" threshold="" test="" play="B62" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the best answer is average. " speech="" keys="any" threshold="" test="" play="B63" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think you chose the correct answer. " speech="" keys="any" threshold="" test="" play="B64" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I think the answer is important." speech="" keys="adf" threshold="" test="" play="B65" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I choose the word rare." speech="" keys="adsf" threshold="" test="" play="B66" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, I am so glad I have you here to help. I don't think I can find the answers by myself. What do you think the best answer is for referee? It is the first one that I highlighted in blue." speech="" media="" play="_user_,B67">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Ok, let's go through the answer choices. The first answer tells us that referees know a lot about football, but it doesn't tell us what a referee actually does. # The second answer choice tells us a referee works at sporting events, but it doesn't tell us what they do at the games. # For all we know, a referee sells popcorn to the people at the event. # The best context clue to help us know what referee means is the third answer choice: she would make sure players follow the rules of the game." speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer." speech="" keys="any" threshold="" test="" play="_user_,A134" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_, awesome job! thanks for your help. This article is pretty interesting. I often watch football. So I had an idea of what referee could mean. " speech="" keys="any" threshold="" test="" play="_user_,B68" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with that choice. " speech="" keys="any" threshold="" test="" play="_user_,B69" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I don't know, could it be sentence two? The one about her traveling to sporting events." speech="" keys="adsf" threshold="" test="" play="B70" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I don't know, I'm going to take a guess and say answer three." speech="" keys="asdf" threshold="" test="" play="B71" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="I need help identifying the best context clue to help define the word penalty. Can you help me find the best answer?" speech="" media="" play="B72">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is, a rule is broken. A penalty is a punishment in sports given to a player or team for breaking a rule. # The phrase, a rule is broken, is a context clue that leads us to the meaning of the word penalty." speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A136" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Great! I didn't know that is what you called the punishment for breaking a rule in sports." speech="" keys="any" threshold="" test="" play="B73" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, that sounds right to me. " speech="" keys="any" threshold="" test="" play="_user_,B74" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I don't know, is it maybe sentence number one?" speech="" keys="asdf" threshold="" test="" play="B75" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Could it be sentence number two?" speech="" keys="adsf" threshold="" test="" play="B76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="For the word finalist, what should I choose to understand what it means?" speech="" media="" play="B77">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct context clue is, only a few people left in the running. A finalist is a person who participates in the final round of a contest. " speech="" keys="any" threshold="" test="" play="A137" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A138" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Let's keep going! This is really helping." speech="" keys="any" threshold="" test="" play="B78" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think that was the right choice. " speech="" keys="any" threshold="" test="" play="B79" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I have no idea, maybe sentence number three?" speech="" keys="adf" threshold="" test="" play="B80" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I have no idea, maybe sentence number two?" speech="" keys="asdf" threshold="" test="" play="B81" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="I have never used the word pipeline before, how will we find out what pipeline means? _user_, I'm stumped." speech="" media="" play="B82,_user_,B83">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is, on the list to fill the referee position. This context clue gives us the definition of pipeline in this sentence." speech="" keys="any" threshold="" test="" play="A139" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A140" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Excellent! You are really good at this!" speech="" keys="any" threshold="" test="" play="B84" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with that choice. " speech="" keys="any" threshold="" test="" play="_user_,B85" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I don't know, sentence two maybe?" speech="" keys="asdf" threshold="" test="" play="B86" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I don't know, sentence one maybe?" speech="" keys="adf" threshold="" test="" play="B87" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="Athlete is a word I have heard before but I am not quite sure of the definition. Can you help me by identifying the best context clue to define athlete?" speech="" media="" play="B88">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, strong people to play and control these games. # The statement, referees and players are athletes, tells us who is considered an athlete, but it does not tell us what athlete means." speech="" keys="any" threshold="" test="" play="A141" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, Please choose an answer. " speech="" keys="any" threshold="" test="" play="_user_,A142" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="You're doing great!" speech="" keys="any" threshold="" test="" play="B89" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="That sounds right to me,  " speech="" keys="any" threshold="" test="" play="B90" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Maybe sentence three? that one is the longest." speech="" keys="adf" threshold="" test="" play="B91" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Maybe sentence two?" speech="" keys="asdf" threshold="" test="" play="B92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="Alright,the word this time is qualities? _user_, what do you think the best answer is?" speech="" media="" play="B93,_user_,B94">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is, The things that a referee needs to be able to do well." speech="" keys="any" threshold="" test="" play="A143" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please choose an answer. " speech="" keys="any" threshold="" test="" play="_user_,A144" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="I think I am going to start using all of these new words! This is great!" speech="" keys="any" threshold="" test="" play="B95" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree. " speech="" keys="any" threshold="" test="" play="_user_,B96" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Maybe it's sentence two, I don't know." speech="" keys="adf" threshold="" test="" play="B97" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Maybe it's sentence one, I don't know. " speech="" keys="adf" threshold="" test="" play="B98" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_, which clue best helps to define confident?" speech="" media="" play="_user_,B99">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best context clue is the phrase, she believes she can do a good job. To be confident means to believe in oneself." speech="" keys="any" threshold="" test="" play="A145" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A146" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_, wow! You're doing great work." speech="" keys="any" threshold="" test="" play="_user_,B100" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree." speech="" keys="any" threshold="" test="" play="_user_,B101" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Um, sentence three maybe?" speech="" keys="adsf" threshold="" test="" play="B102" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Um, sentence one maybe?" speech="" keys="asdf" threshold="" test="" play="B103" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="Last one, I still need a little help. Which clues gives the best context for the work diversity?" speech="" media="" play="B104">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best clue to give context here is the phrase, having different kinds of employees. Diversity means to have a lot of different kinds." speech="" keys="any" threshold="" test="" play="A147" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please select an answer " speech="" keys="any" threshold="" test="" play="_user_,A148" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Cristina, ok. I think that I get it. That is the best clue because it tells us more about what it means to be diverse. " speech="" keys="any" threshold="" test="" play="B105" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with that choice. " speech="" keys="any" threshold="" test="" play="_user_,B106" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Is it sentence one by any chance?" speech="" keys="adsf" threshold="" test="" play="B107" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Is it sentence three by any chance?" speech="" keys="adf" threshold="" test="" play="B108" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="I am not sure which context clue helps to best define the word promotions. _user_, which do you think is the best answer? I really need some help!" speech="" media="" play="B109,_user_,B110">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" Promotion means raising someone to a higher position or rank. We can figure this out from the phrase, it was easy to get better jobs and make more money. # Someone who gets a promotion is often happy about it because it means they will have a higher position in the company or make more money." speech="" keys="any" threshold="" test="" play="A149" />
+            <Answer name="BlankPrompt" agent="Cristina" type="Correct" text="_user_, please select an answer. " speech="" keys="any" threshold="" test="" play="_user_,A150" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_, great job! You are really going to help me out!" speech="" keys="any" threshold="" test="" play="_user_,B111" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I agree with that choice. " speech="" keys="any" threshold="" test="" play="_user_,B112" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I have no idea, is it sentence one by any chance?" speech="" keys="adf" threshold="" test="" play="B113" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I have no idea, is it sentence two by any chance?" speech="" keys="adf" threshold="" test="" play="B114" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="Let's see if we can figure out the best answer here. Which context clue helps to clarify the meaning of deficit?" speech="" media="" play="B115">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the phrase, the United States owes $680 billion. # This context clue helps us understand the meaning of deficit because it tells us the amount owed. # A deficit is the amount by which something, especially money, is too small." speech="" keys="any" threshold="" test="" play="A151" />
+            <Answer name="BlankPrompt" agent="Cristina" type="Correct" text="_user_, please press an answer." speech="" keys="any" threshold="" test="" play="_user_,A152" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_, Excellent. You're doing great work." speech="" keys="any" threshold="" test="" play="_user_,B116" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think you are right. " speech="" keys="any" threshold="" test="" play="_user_,B117" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Maybe sentence three?" speech="" keys="adf" threshold="" test="" play="B118" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Maybe sentence two?" speech="" keys="adf" threshold="" test="" play="B119" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, Furloughed is a really new word for me. Can you help me find the definition from the context clues highlighted?" speech="_user_, Fur- lowed is a really new word for me. Can you help me find the definition from the context clues highlighted?" media="" play="_user_,B120">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the phrase, They had to take days off without pay. # Workers were furloughed. The other two highlighted clues do not address the workers actions or actions taken against them." speech="The correct answer is, They had to take days off without pay. # Workers were fur-lowed.The other two highlighted clues do not address the workers actions or actions taken against them." keys="any" threshold="" test="" play="A153" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please press on an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A154" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="I think I am going to start using all of these new words! This is great!" speech="" keys="any" threshold="" test="" play="B121" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, that sounds right to me!" speech="" keys="any" threshold="" test="" play="_user_,B122" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I am going to guess sentence two." speech="" keys="adsf" threshold="" test="" play="B123" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I am going to guess sentence three." speech="" keys="ads" threshold="" test="" play="B124" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="Alright, here is the next question. Which of these context clues can help us understand the meaning of the word, situation." speech="" media="" play="B125">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, the most recent shut down was also the result of fights over funding. # The situation is the shut down and the fights over funding which caused the workers to sit at home.  # And the last highlighted sentence gives reference to Mr. Jackson's service in the government." speech="" keys="any" threshold="" test="" play="A155" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please press on an answer. " speech="" keys="any" threshold="" test="" play="A156" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Let's keep going! This is really helping." speech="" keys="any" threshold="" test="" play="B126" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with that choice. " speech="" keys="any" threshold="" test="" play="B127" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="Could it be sentence three?" speech="" keys="adf" threshold="" test="" play="B128" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="Could it be sentence one?" speech="" keys="asdf" threshold="" test="" play="B129" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="Stable is the next word. I think the answer to this one is the answer choice that says, workers can no longer count on government positions. _user_, what do you think?" speech="" media="" play="B130,_user_,B131">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, the days of that steady paycheck and good benefits has definitely disappeared. Stable, like the word steady, means not likely to change." speech="`" keys="any" threshold="" test="" play="A157" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please press on an answer. " speech="" keys="any" threshold="" test="" play="_user_,A158" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="You're doing great! Thank you for helping me today!" speech="" keys="any" threshold="" test="" play="B132" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I see why you think that's the answer. I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B133" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I don't know, is it sentence one?" speech="" keys="asdf" threshold="" test="" play="B134" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I don't know, is it sentence two?" speech="" keys="asdf" threshold="" test="" play="B135" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="Just a few more! I think I have an idea of what retirement may mean. _user_, can you identify the best context clue to clarify the definition?" speech="" media="" play="B136,_user_,B137">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best context clue is, They will have to stop working at some point. To retire means to stop doing or using something. In this case, retiring means to stop doing a job." speech="" keys="any" threshold="" test="" play="A159" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please press on an answer choice. " speech="" keys="any" threshold="" test="" play="_user_,A160" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="You rock! I only need help with a couple more! This is great!" speech="" keys="any" threshold="" test="" play="B138" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with that answer." speech="" keys="any" threshold="" test="" play="B139" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="could it be sentence one?" speech="" keys="asdf" threshold="" test="" play="B140" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="could it be sentence three?" speech="" keys="asdf" threshold="" test="" play="B141" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="Morale is an interesting new word. _user_, let's see if we can find a clue for it's definition in the article." speech="" media="" play="B142,_user_,B143">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Morale is the confidence, enthusiasm, and attitude of a person or group at a particular time. # The confidence and enthusiasm of government workers has been shaken. This clue best helps us to get an idea of what morale might be." speech="" keys="any" threshold="" test="" play="A161" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please press on an answer choice." speech="" keys="any" threshold="" test="" play="_user_,A162" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="_user_, wow, nice work. You're getting good at this!" speech="" keys="any" threshold="" test="" play="_user_,B144" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with that answer choice. That must be it." speech="" keys="any" threshold="" test="" play="B145" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I have no idea, is it sentence three?" speech="" keys="asdf" threshold="" test="" play="B146" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I have no idea, is it sentence two?" speech="" keys="asdf" threshold="" test="" play="B147" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="I wonder what claims means in this sentence. _user_, can you help me? Which context clue would you choose to understand the meaning of claims?" speech="" media="" play="B148,_user_,B149">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The phrase, workers are cashing in what they are owed, helps us to understand how the word claims is used in the text. " speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="_user_, please press on an answer." speech="" keys="any" threshold="" test="" play="_user_,A164" />
+            <Answer name="JordanResponseToCorrect" agent="Jordan" type="JordanResponseToCorrect" text="Awesome. I'm very impressed with how good you are at this stuff." speech="" keys="any" threshold="" test="" play="B150" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with that choice. " speech="" keys="any" threshold="" test="" play="B151" />
+            <Answer name="JordanDisagrees1" agent="Jordan" type="JordanDisagrees1" text="I think I will take a guess, sentence two." speech="" keys="asd" threshold="" test="" play="B152" />
+            <Answer name="JordanCorrectDisagrees" agent="Jordan" type="JordanCorrectDisagrees" text="I think I will take a guess, sentence one. " speech="" keys="asdf" threshold="" test="" play="B153" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Animation1" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="Animation2" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening3" id="5" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening4" id="6" />
+      <Action agent="System" act="GetMediaEvent" data="Animation3" id="7" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening5" id="8" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="9" />
+      <Action agent="System" act="Wait" data="3" id="10" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPH" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="WaitForEvent" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQUserAnswerFirst" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerJordanAsked" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQJordanFirstAnswerCorrect" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="10" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="JordanCorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
+      <Action agent="System" act="WaitForEvent" data="100" id="7" />
+    </Rule>
+    <Rule name="CristinaAskQJordanFirstAnswerIncorrect" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="10" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="JordanIncorrect" id="5" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="6" />
+      <Action agent="System" act="WaitForEvent" data="100" id="7" />
+    </Rule>
+    <Rule name="CristinaAskQUserAnswerFirst" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="80" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Correct2UserSecond" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Correct1" status="UserAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked1" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CristinaAskedFJIUserSecond" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordanUserSecond" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="CristinaAskedFJCUserSecond" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBothUserSecond" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="CristinaAskedJCUserCorrectFirst" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="System" act="ShowMediaEvent" data="JordanCorrect" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBothUserFirst" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAskedJIUserCorrectFirst" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="System" act="ShowMediaEvent" data="JordanIncorrect" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordanUserFirst" id="5" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAskedJCUserCorrectOnly" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="IncorrectFJIUserSecond" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBothUserSecond" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="IncorrectFJCUserSecond" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackFinal" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackJordan" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CorrectUserFirstJordanAskedJordanAgrees" status="UserAnswerJordanAsked" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanJodanAsked" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoBothUserFirst" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CorrectUserFirstJordanAskedJordanDisagrees" status="UserAnswerJordanAsked" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanJodanAsked" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagrees1" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordanUserFirst" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectUserFirstJordanAskedJordanCorrectDisagree" status="UserAnswerJordanAsked" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanJodanAsked" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrectDisagrees" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUserFirstJordanCorrect" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectUserFirstJordanAskedJordanAgrees" status="UserAnswerJordanAsked" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="CannedExpression" data="AskJordanJodanAsked" id="1" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBothUserFirst" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectUserFirstJordanAgrees" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBothUserFirst" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="IncorrectUserFirstJordanCorrectDisagree" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrectDisagrees" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUserFirstJordanCorrect" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectUserFirstJordanDisagrees1" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagrees1" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoBothUserFirst" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked3" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanResponseToCorrect" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked3" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Easy-E0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Difficult-D0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedEasy" status="Transition0" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedDifficult" status="Transition0" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

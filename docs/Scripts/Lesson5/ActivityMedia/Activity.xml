@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="ComputerStudent1" gender="Male" title="Mr." firstName="ComputerStudent1" lastName="Smith" displayName="ComputerStudent1">
+    <Agent name="Jordan" gender="Male" title="Mr." firstName="Jordan" lastName="Smith" displayName="Jordan">
       <SpeechCan name="NegativeFeedback">
         <Item text="That is incorrect." speech="" play="B1" />
         <Item text="That's not quite right." speech="" play="B2" />
@@ -9,34 +9,34 @@
         <Item text="That is the wrong answer." speech="" play="B4" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedback">
-        <Item text="Great job! That's right!" speech="" play="B5" />
-        <Item text="Brilliant! That's right!" speech="" play="B6" />
+        <Item text="Great job! # That's right!" speech="" play="B5" />
+        <Item text="Brilliant! # That's right!" speech="" play="B6" />
         <Item text="Awesome job!" speech="" play="B7" />
-        <Item text="You're on a roll! That's right!" speech="" play="B8" />
+        <Item text="You're on a roll! # That's right!" speech="" play="B8" />
         <Item text="That's right!" speech="" play="B9" />
         <Item text="Stupendous job!" speech="" play="B10" />
         <Item text="Wonderful job!" speech="" play="B11" />
         <Item text="That is correct!" speech="" play="B12" />
       </SpeechCan>
     </Agent>
-    <Agent name="ComputerTutor" gender="Female" title="Dr." firstName="ComputerTutor" lastName="Valdez" displayName="ComputerTutor">
+    <Agent name="Cristina" gender="Female" title="Dr." firstName="Cristina" lastName="Valdez" displayName="Cristina">
       <SpeechCan name="PositiveFeedback">
-        <Item text="Great job! That's right!" speech="" play="A1" />
-        <Item text="Brilliant! That's right!" speech="" play="A2" />
+        <Item text="Great job! # That's right!" speech="" play="A1" />
+        <Item text="Brilliant! # That's right!" speech="" play="A2" />
         <Item text="Awesome job!" speech="" play="A3" />
-        <Item text="You're on a roll! That's right!" speech="" play="A4" />
+        <Item text="You're on a roll! # That's right!" speech="" play="A4" />
         <Item text="That's right!" speech="" play="A5" />
         <Item text="Stupendous job!" speech="" play="A6" />
         <Item text="Wonderful job!" speech="" play="A7" />
         <Item text="That is correct!" speech="" play="A8" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToBoth">
-        <Item text="Great! You are both correct!" speech="" play="A9" />
-        <Item text="You are both correct! Excellent!" speech="" play="A10" />
-        <Item text="Nice job, both of you! You are both right!" speech="" play="A11" />
+        <Item text="Great! # You are both correct!" speech="" play="A9" />
+        <Item text="You are both correct! # Excellent!" speech="" play="A10" />
+        <Item text="Nice job, both of you! # You are both right!" speech="" play="A11" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToBoth">
-        <Item text="Oh no! It looks like that one tripped you both up!" speech="" play="A12" />
+        <Item text="Oh no! # It looks like that one tripped you both up!" speech="" play="A12" />
         <Item text="It looks like you were both wrong this time." speech="" play="A13" />
         <Item text="Both of you were incorrect this time." speech="" play="A14" />
       </SpeechCan>
@@ -47,54 +47,55 @@
         <Item text="That is the wrong answer." speech="" play="A18" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToUserPositiveFeedbackToJordan">
-        <Item text="_user_, you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,A19" />
-        <Item text="_user_, it looks like you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,A20" />
-        <Item text="_user_, you were wrong this time. ComputerStudent1, you were correct." speech="" play="_user_,A21" />
+        <Item text="_user_, you were incorrect this time. # Jordan, you were right." speech="" play="_user_,A19" />
+        <Item text="_user_, it looks like you were incorrect this time. # Jordan, you were right." speech="" play="_user_,A20" />
+        <Item text="_user_, you were wrong this time. # Jordan, you were correct." speech="" play="_user_,A21" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToUserNegativeFeedbackToJordan">
-        <Item text="_user_, you are right! ComputerStudent1, you were wrong this time." speech="" play="_user_,A22" />
-        <Item text="_user_, you were right! ComputerStudent1, you were wrong this time." speech="" play="_user_,A23" />
-        <Item text="_user_, great job on this question! You were right! ComputerStudent1, you were wrong." speech="" play="_user_,A24" />
+        <Item text="_user_, you are right! # Jordan, you were wrong this time." speech="" play="_user_,A22" />
+        <Item text="_user_, you were right! # Jordan, you were wrong this time." speech="" play="_user_,A23" />
+        <Item text="_user_, great job on this question! # You were right! # Jordan, you were wrong." speech="" play="_user_,A24" />
       </SpeechCan>
     </Agent>
   </Agents>
   <SpeechActs />
   <RigidPacks>
     <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Hello! Good to see you today, _user_ and ComputerStudent1." speech="" media="media/Lesson5-IntroTitle.html" play="A25,_user_,A26" />
-      <Item id="2" agent="ComputerStudent1" text="Hey, _user_, what's up?" speech="" play="B13,_user_,B14" />
-      <Item id="3" agent="ComputerTutor" text="Today we are going to be talking about punctuation. We are going to talk about what the different marks mean, and how they are used in different ways." speech="" play="A27" />
-      <Item id="4" agent="ComputerStudent1" text="I don't think punctuation is very important. How is it supposed to help me learn how to read and understand the words?" speech="" media="media/PunctChart.html" play="B15" />
-      <Item id="5" agent="ComputerTutor" text="On the contrary, ComputerStudent1! Punctuation is crucial to reading! It gives us incredibly important clues as to, how, to read and understand the words. Take a close look at the chart below and see a sample of the most common punctuation marks." speech="" play="A28" />
-      <Item id="6" agent="ComputerStudent1" text="If you say so, ComputerTutor." speech="" play="B16" />
-      <Item id="7" agent="ComputerTutor" text="Why don't we get started and you will see what I mean." speech="" media="media/Punctuation-Medium-1.html" play="A29" />
+      <Item id="1" agent="Cristina" text="Hello! # Good to see you today, _user_ and Jordan." speech="" media="media/Lesson5-IntroTitle.html" play="A25,_user_,A26" />
+      <Item id="2" agent="Jordan" text="Hey, _user_, what's up?" speech="" play="B13,_user_,B14" />
+      <Item id="3" agent="Cristina" text="Today we are going to be talking about punctuation. # We are going to talk about what the different marks mean, and how they are used in different ways." speech="" play="A27" />
+      <Item id="4" agent="Jordan" text="I don't think punctuation is very important. # How is it supposed to help me learn how to read and understand the words?" speech="" media="media/PunctChart.html" play="B15" />
+      <Item id="5" agent="Cristina" text="On the contrary, Jordan! # Punctuation is crucial to reading! # It gives us incredibly important clues as to, how, to read and understand the words. # Take a close look at the chart below and see a sample of the most common punctuation marks." speech="" play="A28" />
+      <Item id="6" agent="Jordan" text="If you say so, Cristina." speech="" play="B16" />
+      <Item id="7" agent="Cristina" text="Why don't we get started and you will see what I mean." speech="" media="media/Punctuation-Medium-1.html" play="A29" />
     </RigidPack>
     <RigidPack name="NewPassage" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="For this part of the lesson, we will be looking at some comics!" speech="" play="A30" />
-      <Item id="2" agent="ComputerStudent1" text="Great! I love the funnies!" speech="" play="B17" />
-      <Item id="2" agent="ComputerTutor" text="_user_ and ComputerStudent1, in this activity you will try to fill in the punctuation for a comic strip. In each pane of the comic, you will see one punctuation mark that is missing and a blank space will be in its place. Move your mouse over each of the answer options. When you hover over each answer option, it will fill in the blank to help you pick an answer. Click on one of the answer options to select your answer." speech="" play="_user_,A31" />
-      <Item id="2" agent="ComputerStudent1" text="This activity seems kind of fun. Let's get started." speech="" play="B18" />
+      <Item id="1" agent="Cristina" text="For this part of the lesson, we will be looking at some comics!" speech="" play="A30" />
+      <Item id="2" agent="Jordan" text="Great! # I love the funnies!" speech="" play="B17" />
+      <Item id="3" agent="Cristina" text="_user_ and Jordan, in this activity you will try to fill in the punctuation for a comic strip. # In each pane of the comic, you will see one punctuation mark that is missing and a blank space will be in its place." speech="" play="_user_,A31" />
+      <Item id="4" agent="Cristina" text="Move your mouse over each of the answer options. # When you hover over each answer option, it will fill in the blank to help you pick an answer. # Click on one of the answer options to select your answer." speech="" play="" />
+      <Item id="5" agent="Jordan" text="This activity seems kind of fun. # Let's get started." speech="" play="B18" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="ComputerStudent1" text="That was actually pretty fun. " speech="" media="media/PunctChart.html" play="B19" />
-      <Item id="2" agent="ComputerTutor" text="Thanks, ComputerStudent1. I hope you and _user_ now see how important punctuation is. Understanding what each of the punctuation marks mean can help us comprehend any text." speech="" play="A32,_user_,A33" />
-      <Item id="3" agent="ComputerStudent1" text="That makes sense. Using this chart as a guide helps me to see all the punctuation marks that there are! See you next time, _user_." speech="" play="B20,_user_" />
+      <Item id="1" agent="Jordan" text="That was actually pretty fun." speech="" media="media/PunctChart.html" play="B19" />
+      <Item id="2" agent="Cristina" text="Thanks, Jordan. # I hope you and _user_ now see how important punctuation is. # Understanding what each of the punctuation marks mean can help us comprehend any text." speech="" play="A32,_user_,A33" />
+      <Item id="3" agent="Jordan" text="That makes sense. # Using this chart as a guide helps me to see all the punctuation marks that there are! # See you next time, _user_." speech="" play="B20,_user_" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A34">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A34">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct punctuation mark is an exclamation point! Exclamation points are used to show excitement or a strong feeling. This person is upset that he or she forgot the keys." speech="" keys="." threshold="" play="A35" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please give it a try!" speech="" keys="." threshold="" play="A36" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these do you think is the correct mark?" speech="" keys="." threshold="" play="A37" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the, at sign." speech="" keys="." threshold="" play="B21" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B22" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, Click on the punctuation mark that fills in the blank." speech="" keys="." threshold="" play="_user_,A38" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_ was right on this one." speech="" keys="." threshold="" play="B23,_user_,B24" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Alright, I think I get it." speech="" keys="." threshold="" play="B25" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Great! Let's move on." speech="" keys="." threshold="" play="A39" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct punctuation mark is an exclamation point! # Exclamation points are used to show excitement or a strong feeling. # This person is upset that he or she forgot the keys." speech="" keys="." threshold="" play="A35" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please give it a try!" speech="" keys="." threshold="" play="A36" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these do you think is the correct mark?" speech="" keys="." threshold="" play="A37" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the, at sign." speech="" keys="." threshold="" play="B21" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B22" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Click on the punctuation mark that fills in the blank." speech="" keys="." threshold="" play="_user_,A38" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ was right on this one." speech="" keys="." threshold="" play="B23,_user_,B24" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Alright, I think I get it." speech="" keys="." threshold="" play="B25" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Great! # Let's move on." speech="" keys="." threshold="" play="A39" />
           </Answers>
         </Question>
       </Questions>
@@ -103,17 +104,17 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A40">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A40">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the period." speech="" keys="." threshold="" play="A41" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" play="A42" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which punctuation mark fits in this sentence?" speech="" keys="." threshold="" play="A43" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the colon fits!" speech="" keys="." threshold="" play="B26" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am guessing it's the period." speech="" keys="." threshold="" play="B27" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, Click on the punctuation mark that correctly fills in the blank." speech="" keys="." threshold="" play="_user_,A44" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I am thinking _user_ was right this time." speech="" keys="." threshold="" play="B28,_user_,B29" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Why do we use a period here? Periods go at the end of sentences. This is frustrating and I don't like punctuation." speech="" keys="." threshold="" play="B30" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, I am going to ignore that comment for now. _user_, I bet you know why we use a period here!" speech="" keys="." threshold="" play="A45,_user_,A46" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the period." speech="" keys="." threshold="" play="A41" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" play="A42" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which punctuation mark fits in this sentence?" speech="" keys="." threshold="" play="A43" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the colon fits!" speech="" keys="." threshold="" play="B26" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am guessing it's the period." speech="" keys="." threshold="" play="B27" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Click on the punctuation mark that correctly fills in the blank." speech="" keys="." threshold="" play="_user_,A44" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I am thinking _user_ was right this time." speech="" keys="." threshold="" play="B28,_user_,B29" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Why do we use a period here? # Periods go at the end of sentences. # This is frustrating and I don't like punctuation." speech="" keys="." threshold="" play="B30" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Jordan, I am going to ignore that comment for now. # _user_, I bet you know why we use a period here!" speech="" keys="." threshold="" play="A45,_user_,A46" />
           </Answers>
         </Question>
       </Questions>
@@ -122,17 +123,17 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Let's take a closer look." speech="" media="" play="A47">
+        <Question id="1" agent="Cristina" text="Let's take a closer look." speech="" media="" play="A47">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is, the period signals an abbreviation. Abbreviations are shortened forms of words. Another example of a common abbreviated word is mister, spelled, em, are, period." speech="" keys="." threshold="" play="A48" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click on an answer!" speech="" keys="." threshold="" play="A49" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why do we use a period in this position?" speech="" keys="." threshold="" play="A50" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the period is in the wrong spot." speech="" keys="." threshold="" play="B31" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm going to go with, the period signals an abbreviation." speech="" keys="." threshold="" play="B32" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why do we use a period in this position?" speech="" keys="." threshold="" play="_user_,A51" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B33,_user_,B34" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Oh right, I knew that. I see that all the time." speech="" keys="." threshold="" play="B35" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Exactly! See, ComputerStudent1, I told you punctuation was important!" speech="" keys="." threshold="" play="A52" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, the period signals an abbreviation. # Abbreviations are shortened forms of words. # Another example of a common abbreviated word is mister, spelled, em, are, period." speech="" keys="." threshold="" play="A48" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer!" speech="" keys="." threshold="" play="A49" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why do we use a period in this position?" speech="" keys="." threshold="" play="A50" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the period is in the wrong spot." speech="" keys="." threshold="" play="B31" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm going to go with, the period signals an abbreviation." speech="" keys="." threshold="" play="B32" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, why do we use a period in this position?" speech="" keys="." threshold="" play="_user_,A51" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B33,_user_,B34" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Oh right, I knew that. # I see that all the time." speech="" keys="." threshold="" play="B35" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Exactly! # See, Jordan, I told you punctuation was important!" speech="" keys="." threshold="" play="A52" />
           </Answers>
         </Question>
       </Questions>
@@ -141,17 +142,17 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A53">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A53">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is parentheses signal what acronyms stand for. Quotations signal speech. Acronyms are formed from a group of words using the first letter of each word. Acronyms are pronounced the same way words are. For example, ComputerStudent1, pronounce the acronym on this page." speech="" keys="." threshold="" play="A54" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click an answer!" speech="" keys="." threshold="" play="A55" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why do we use parentheses here instead of quotation marks?" speech="" keys="." threshold="" play="A56" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think parentheses signal speech and quotations signal additional information." speech="" keys="." threshold="" play="B36" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm not sure, but I'm going to go with, parentheses signal what acronyms stand for and quotes signal speech." speech="" keys="." threshold="" play="B37" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, In this instance, why do we use parentheses instead of quotation marks?" speech="" keys="." threshold="" play="_user_,A57" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I agree with _user_ on this one." speech="" keys="." threshold="" play="B38,_user_,B39" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="It's NASA, right? " speech="" keys="." threshold="" play="B40" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! Let's move on to the next question." speech="" keys="." threshold="" play="A58" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is parentheses signal what acronyms stand for. # Quotations signal speech. # Acronyms are formed from a group of words using the first letter of each word. # Acronyms are pronounced the same way words are. # For example, Jordan, pronounce the acronym on this page." speech="" keys="." threshold="" play="A54" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click an answer!" speech="" keys="." threshold="" play="A55" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, why do we use parentheses here instead of quotation marks?" speech="" keys="." threshold="" play="A56" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think parentheses signal speech and quotations signal additional information." speech="" keys="." threshold="" play="B36" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm not sure, but I'm going to go with, parentheses signal what acronyms stand for and quotes signal speech." speech="" keys="." threshold="" play="B37" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, In this instance, why do we use parentheses instead of quotation marks?" speech="" keys="." threshold="" play="_user_,A57" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with _user_ on this one." speech="" keys="." threshold="" play="B38,_user_,B39" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="It's NASA, right?" speech="" keys="." threshold="" play="B40" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's right! # Let's move on to the next question." speech="" keys="." threshold="" play="A58" />
           </Answers>
         </Question>
       </Questions>
@@ -160,17 +161,17 @@
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A59">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A59">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The, at sign tell us that something is an  email address. Email is a way to communicate electronically. When you sign up for an email address, you get to pick out what you want your user name to be." speech="" keys="." threshold="" play="A60" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click on an answer!" speech="" keys="." threshold="" play="A61" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what does the, at sign tell us?" speech="" keys="." threshold="" play="A62" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is a phone number." speech="" keys="." threshold="" play="B41" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It tells us it's an email address!" speech="" keys="." threshold="" play="B42" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, What does the, at signal tell us in this text?" speech="" keys="." threshold="" play="_user_,A63" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to have to agree with _user_." speech="" keys="." threshold="" play="B43,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I want my email address to say, master of grammar! I have a question. Why is the email address blue. And why is it underlined?" speech="" keys="." threshold="" play="B44" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's a great question!" speech="" keys="." threshold="" play="A64" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The, at sign tell us that something is an  email address. # Email is a way to communicate electronically. # When you sign up for an email address, you get to pick out what you want your user name to be." speech="" keys="." threshold="" play="A60" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer!" speech="" keys="." threshold="" play="A61" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what does the, at sign tell us?" speech="" keys="." threshold="" play="A62" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is a phone number." speech="" keys="." threshold="" play="B41" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="It tells us it's an email address!" speech="" keys="." threshold="" play="B42" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, What does the, at signal tell us in this text?" speech="" keys="." threshold="" play="_user_,A63" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to have to agree with _user_." speech="" keys="." threshold="" play="B43,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I want my email address to say, master of grammar! # I have a question. # Why is the email address blue. # And why is it underlined?" speech="" keys="." threshold="" play="B44" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's a great question!" speech="" keys="." threshold="" play="A64" />
           </Answers>
         </Question>
       </Questions>
@@ -179,17 +180,17 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A65">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A65">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is, it is a hyper link. Hyper links take you from one page to another on the computer. In this case, the hyper link will open a search engine." speech="" keys="." threshold="" play="A66" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" play="A67" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, Why is the web address blue and underlined?" speech="" keys="." threshold="" play="A68" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's an email address." speech="" keys="." threshold="" play="B45" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I bet it's a hyper link." speech="" keys="." threshold="" play="B46" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, Why is the web address, blue and underlined?" speech="" keys="." threshold="" play="_user_,A69" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B47,_user_,B48" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Now, we have talked about punctuation marks that have multiple uses, but there are also different punctuation marks that have the same basic use." speech="" keys="." threshold="" play="A70" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Oh, OK. I am excited to know what that is called!" speech="" keys="." threshold="" play="B49" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, it is a hyper link. # Hyper links take you from one page to another on the computer. # In this case, the hyper link will open a search engine." speech="" keys="." threshold="" play="A66" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" play="A67" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, Why is the web address blue and underlined?" speech="" keys="." threshold="" play="A68" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's an email address." speech="" keys="." threshold="" play="B45" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I bet it's a hyper link." speech="" keys="." threshold="" play="B46" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, Why is the web address, blue and underlined?" speech="" keys="." threshold="" play="_user_,A69" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B47,_user_,B48" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Now, we have talked about punctuation marks that have multiple uses, but there are also different punctuation marks that have the same basic use." speech="" keys="." threshold="" play="A70" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Oh, OK. # I am excited to know what that is called!" speech="" keys="." threshold="" play="B49" />
           </Answers>
         </Question>
       </Questions>
@@ -198,17 +199,17 @@
     </TutoringPack>
     <TutoringPack name="TPA7">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Let's test your knowledge." speech="" media="" play="A71">
+        <Question id="1" agent="Cristina" text="Let's test your knowledge." speech="" media="" play="A71">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is, the colon and bulleted list. Colons and bullet points both signal to the reader that there is a list." speech="" keys="." threshold="" play="A72" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="If you don't click on an answer, I can't tell what you're thinking." speech="" keys="." threshold="" play="A73" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these two punctuation marks have a similar function?" speech="" keys="." threshold="" play="A74" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the period and the comma." speech="" keys="." threshold="" play="B50" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the colon and the bulleted list." speech="" keys="." threshold="" play="B51" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these two punctuation marks have a similar function?" speech="" keys="." threshold="" play="_user_,A75" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_'s answer is correct." speech="" keys="." threshold="" play="B52,_user_,B53" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think i've seen lists that use numbers too." speech="" keys="." threshold="" play="B54" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Great observation, ComputerStudent1! There are numbered lists as well! Now that we have gotten really good at picking out the correct punctuation marks, let's talk about why some punctuation marks are wrong." speech="" keys="." threshold="" play="A76" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, the colon and bulleted list. # Colons and bullet points both signal to the reader that there is a list." speech="" keys="." threshold="" play="A72" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="If you don't click on an answer, I can't tell what you're thinking." speech="" keys="." threshold="" play="A73" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these two punctuation marks have a similar function?" speech="" keys="." threshold="" play="A74" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the period and the comma." speech="" keys="." threshold="" play="B50" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the colon and the bulleted list." speech="" keys="." threshold="" play="B51" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of these two punctuation marks have a similar function?" speech="" keys="." threshold="" play="_user_,A75" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_'s answer is correct." speech="" keys="." threshold="" play="B52,_user_,B53" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I think i've seen lists that use numbers too." speech="" keys="." threshold="" play="B54" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Great observation, Jordan! # There are numbered lists as well! # Now that we have gotten really good at picking out the correct punctuation marks, let's talk about why some punctuation marks are wrong." speech="" keys="." threshold="" play="A76" />
           </Answers>
         </Question>
       </Questions>
@@ -217,17 +218,17 @@
     </TutoringPack>
     <TutoringPack name="TPA8">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A77">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A77">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is, hyphens signal new meanings of combined words. Hyphens combine words to make words with totally different meanings. ComputerStudent1, can you think of an example of one?" speech="" keys="." threshold="" play="A78" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to answer the question!" speech="" keys="." threshold="" play="A79" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1. why is a hyphen the incorrect punctuation mark?" speech="" keys="." threshold="" play="A80" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's because hyphens signal questions." speech="" keys="." threshold="" play="B55" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think hyphens signal new meanings of combined words." speech="" keys="." threshold="" play="B56" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why is a hyphen the incorrect punctuation mark?" speech="" keys="." threshold="" play="_user_,A81" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="agreeswithUser" text="I'm siding with _user_ on this one." speech="" keys="." threshold="" play="B57,_user_,B58" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="How about, mother in law? I'm pretty sure that is a hyphenated word!" speech="" keys="." threshold="" play="B59" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! Brilliant ComputerStudent1! So now that we know what hyphens are for, let's correct the sentence!" speech="" keys="." threshold="" play="A82" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is, hyphens signal new meanings of combined words. # Hyphens combine words to make words with totally different meanings. # Jordan, can you think of an example of one?" speech="" keys="." threshold="" play="A78" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to answer the question!" speech="" keys="." threshold="" play="A79" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan. # why is a hyphen the incorrect punctuation mark?" speech="" keys="." threshold="" play="A80" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's because hyphens signal questions." speech="" keys="." threshold="" play="B55" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think hyphens signal new meanings of combined words." speech="" keys="." threshold="" play="B56" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, why is a hyphen the incorrect punctuation mark?" speech="" keys="." threshold="" play="_user_,A81" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="agreeswithUser" text="I'm siding with _user_ on this one." speech="" keys="." threshold="" play="B57,_user_,B58" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="How about, mother in law? # I'm pretty sure that is a hyphenated word!" speech="" keys="." threshold="" play="B59" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's right! # Brilliant Jordan! # So now that we know what hyphens are for, let's correct the sentence!" speech="" keys="." threshold="" play="A82" />
           </Answers>
         </Question>
       </Questions>
@@ -236,17 +237,17 @@
     </TutoringPack>
     <TutoringPack name="TPA9">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this sentence." speech="" media="" play="A83">
+        <Question id="1" agent="Cristina" text="Read this sentence." speech="" media="" play="A83">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the slash. Slashes indicate alternative words. For example, it is common to see the words either and or with a slash between them." speech="" keys="." threshold="" play="A84" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A85" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the correct punctuation mark to use in this situation?" speech="" keys="." threshold="" play="A86" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the semi colon." speech="" keys="." threshold="" play="B60" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am going guess the slash." speech="" keys="." threshold="" play="B61" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the correct punctuation mark to use in this situation?" speech="" keys="." threshold="" play="_user_,A87" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I agree with _user_'s answer." speech="" keys="." threshold="" play="B62,_user_,B63" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I keep seeing a symbol on a social media site and i'm not sure what it is." speech="" keys="." threshold="" play="B64" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's take a look!" speech="" keys="." threshold="" play="A88" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the slash. # Slashes indicate alternative words. # For example, it is common to see the words either and or with a slash between them." speech="" keys="." threshold="" play="A84" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A85" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the correct punctuation mark to use in this situation?" speech="" keys="." threshold="" play="A86" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the semi colon." speech="" keys="." threshold="" play="B60" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going guess the slash." speech="" keys="." threshold="" play="B61" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what is the correct punctuation mark to use in this situation?" speech="" keys="." threshold="" play="_user_,A87" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with _user_'s answer." speech="" keys="." threshold="" play="B62,_user_,B63" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I keep seeing a symbol on a social media site and i'm not sure what it is." speech="" keys="." threshold="" play="B64" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Let's take a look!" speech="" keys="." threshold="" play="A88" />
           </Answers>
         </Question>
       </Questions>
@@ -255,17 +256,17 @@
     </TutoringPack>
     <TutoringPack name="TPAa">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this text." speech="" media="" play="A89">
+        <Question id="1" agent="Cristina" text="Read this text." speech="" media="" play="A89">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="It is being used as a hash tag! Pound Signs are used on telephones, and it is not being used to indicate a number. Hash tags are common on social media websites. They are used to mark key words or topics of a message." speech="" keys="." threshold="" play="A90" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Remember to click on an answer!" speech="" keys="." threshold="" play="A91" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how do you think this punctuation mark is being used?" speech="" keys="." threshold="" play="A92" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is being used as the pound sign." speech="" keys="." threshold="" play="B65" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I bet this is a hash tag!" speech="" keys="." threshold="" play="B66" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how is this punctuation mark being used in this instance?" speech="" keys="." threshold="" play="_user_,A93" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm thinking _user_ is right." speech="" keys="." threshold="" play="B67,_user_,B68" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="And all the kids are saying it these days. I hear it all the time. Hash tag, kids, hash tag, bad grammar!" speech="" keys="." threshold="" play="B69" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Haha, ComputerStudent1. Yes, they have become quite popular as of late. _user_ and ComputerStudent1, I am very impressed with your progress on this! Let's get some more practice in!" speech="" keys="." threshold="" play="A94,_user_,A95" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is being used as a hash tag! # Pound Signs are used on telephones, and it is not being used to indicate a number. # Hash tags are common on social media websites. # They are used to mark key words or topics of a message." speech="" keys="." threshold="" play="A90" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to click on an answer!" speech="" keys="." threshold="" play="A91" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, how do you think this punctuation mark is being used?" speech="" keys="." threshold="" play="A92" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is being used as the pound sign." speech="" keys="." threshold="" play="B65" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I bet this is a hash tag!" speech="" keys="." threshold="" play="B66" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, how is this punctuation mark being used in this instance?" speech="" keys="." threshold="" play="_user_,A93" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm thinking _user_ is right." speech="" keys="." threshold="" play="B67,_user_,B68" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="And all the kids are saying it these days. # I hear it all the time. # Hash tag, kids, hash tag, bad grammar!" speech="" keys="." threshold="" play="B69" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Haha, Jordan. # Yes, they have become quite popular as of late. # _user_ and Jordan, I am very impressed with your progress on this! # Let's get some more practice in!" speech="" keys="." threshold="" play="A94,_user_,A95" />
           </Answers>
         </Question>
       </Questions>
@@ -274,17 +275,17 @@
     </TutoringPack>
     <TutoringPack name="TPD1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this comic." speech="" media="" play="A96">
+        <Question id="1" agent="Cristina" text="Read this comic." speech="" media="" play="A96">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the question mark. Question marks signal that the speaker does not know something, rather, they have a question." speech="" keys="." threshold="" play="A97" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please answer the question." speech="" keys="." threshold="" play="A98" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A99" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the dash." speech="" keys="." threshold="" play="B70" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm going to go with the question mark." speech="" keys="." threshold="" play="B71" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these is the correct answer?" speech="" keys="." threshold="" play="_user_,A100" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to agree with _user_ here." speech="" keys="." threshold="" play="B72,_user_,B73" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Oh! Of course, it's right in the name.That one seemed pretty straight forward." speech="" keys="." threshold="" play="B74" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Good, let's go on." speech="" keys="." threshold="" play="A101" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the question mark. # Question marks signal that the speaker does not know something, rather, they have a question." speech="" keys="." threshold="" play="A97" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please answer the question." speech="" keys="." threshold="" play="A98" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A99" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the dash." speech="" keys="." threshold="" play="B70" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm going to go with the question mark." speech="" keys="." threshold="" play="B71" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of these is the correct answer?" speech="" keys="." threshold="" play="_user_,A100" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to agree with _user_ here." speech="" keys="." threshold="" play="B72,_user_,B73" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Oh! # Of course, it's right in the name. # That one seemed pretty straight forward." speech="" keys="." threshold="" play="B74" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Good, let's go on." speech="" keys="." threshold="" play="A101" />
           </Answers>
         </Question>
       </Questions>
@@ -293,17 +294,17 @@
     </TutoringPack>
     <TutoringPack name="TPD2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this comic." speech="" media="" play="A102">
+        <Question id="1" agent="Cristina" text="Take a look at this comic." speech="" media="" play="A102">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the comma. Commas are used in between items in a list and to break up one sentence with a pause." speech="" keys="." threshold="" play="A103" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click an answer." speech="" keys="." threshold="" play="A104" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A105" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the parentheses." speech="" keys="." threshold="" play="B75" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is the comma." speech="" keys="." threshold="" play="B76" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A106" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going with the same one as _user_." speech="" keys="." threshold="" play="B77,_user_" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's move on." speech="" keys="." threshold="" play="A107" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think I get it now." speech="" keys="." threshold="" play="B78" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the comma. # Commas are used in between items in a list and to break up one sentence with a pause." speech="" keys="." threshold="" play="A103" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click an answer." speech="" keys="." threshold="" play="A104" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A105" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the parentheses." speech="" keys="." threshold="" play="B75" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is the comma." speech="" keys="." threshold="" play="B76" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A106" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going with the same one as _user_." speech="" keys="." threshold="" play="B77,_user_" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Let's move on." speech="" keys="." threshold="" play="A107" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I think I get it now." speech="" keys="." threshold="" play="B78" />
           </Answers>
         </Question>
       </Questions>
@@ -312,17 +313,17 @@
     </TutoringPack>
     <TutoringPack name="TPD3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="See the comic below." speech="" media="" play="A108">
+        <Question id="1" agent="Cristina" text="See the comic below." speech="" media="" play="A108">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the exclamation point." speech="" keys="." threshold="" play="A109" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A110" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the correct punctuation mark." speech="" keys="." threshold="" play="A111" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the ellipses." speech="" keys="." threshold="" play="B79" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B80" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, click on the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A112" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_ is right on this question." speech="" keys="." threshold="" play="B81,_user_,B82" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Exclamation points show excitement!" speech="" keys="." threshold="" play="B83" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! Or emotion in general." speech="" keys="." threshold="" play="A113" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the exclamation point." speech="" keys="." threshold="" play="A109" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A110" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the correct punctuation mark." speech="" keys="." threshold="" play="A111" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the ellipses." speech="" keys="." threshold="" play="B79" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B80" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, click on the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A112" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ is right on this question." speech="" keys="." threshold="" play="B81,_user_,B82" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Exclamation points show excitement!" speech="" keys="." threshold="" play="B83" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's right! # Or emotion in general." speech="" keys="." threshold="" play="A113" />
           </Answers>
         </Question>
       </Questions>
@@ -331,17 +332,17 @@
     </TutoringPack>
     <TutoringPack name="TPD4">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Here is another comic." speech="" media="" play="A114">
+        <Question id="1" agent="Cristina" text="Here is another comic." speech="" media="" play="A114">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the question mark. Question marks are used to signal questions, or, inquirys." speech="" keys="." threshold="" play="A115" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click on an answer." speech="" keys="." threshold="" play="A116" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A117" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the quotation marks." speech="" keys="." threshold="" play="B84" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the question mark is the right answer." speech="" keys="." threshold="" play="B85" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these is the correct punctuation mark?" speech="" keys="." threshold="" play="_user_,A118" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B86,_user_,B87" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Right on, ComputerTutor. I have no questions about that one." speech="" keys="." threshold="" play="B88" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, you're hilarious. Elipsees can be used to project sarcasm and I just used them." speech="" keys="." threshold="" play="A119" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the question mark. # Question marks are used to signal questions, or, inquirys." speech="" keys="." threshold="" play="A115" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click on an answer." speech="" keys="." threshold="" play="A116" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what is the correct punctuation mark?" speech="" keys="." threshold="" play="A117" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the quotation marks." speech="" keys="." threshold="" play="B84" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think the question mark is the right answer." speech="" keys="." threshold="" play="B85" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of these is the correct punctuation mark?" speech="" keys="." threshold="" play="_user_,A118" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B86,_user_,B87" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Right on, Cristina. # I have no questions about that one." speech="" keys="." threshold="" play="B88" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Jordan, you're hilarious. # Elipsees can be used to project sarcasm and I just used them." speech="" keys="." threshold="" play="A119" />
           </Answers>
         </Question>
       </Questions>
@@ -350,17 +351,17 @@
     </TutoringPack>
     <TutoringPack name="TPD5">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this comic." speech="" media="" play="A120">
+        <Question id="1" agent="Cristina" text="Read this comic." speech="" media="" play="A120">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the period. Remember, periods are used to signal the end of sentences and abbreviations." speech="" keys="." threshold="" play="A121" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click an answer, even if you're not sure." speech="" keys="." threshold="" play="A122" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="A123" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B89" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is the period." speech="" keys="." threshold="" play="B90" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A124" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I bet _user_ is right, i'm going with that one too." speech="" keys="." threshold="" play="B91,_user_,B92" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's move on." speech="" keys="." threshold="" play="A125" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Thanks, ComputerTutor. That makes sense." speech="" keys="." threshold="" play="B93" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the period. # Remember, periods are used to signal the end of sentences and abbreviations." speech="" keys="." threshold="" play="A121" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click an answer, even if you're not sure." speech="" keys="." threshold="" play="A122" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="A123" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the exclamation point." speech="" keys="." threshold="" play="B89" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it is the period." speech="" keys="." threshold="" play="B90" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="_user_,A124" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I bet _user_ is right, i'm going with that one too." speech="" keys="." threshold="" play="B91,_user_,B92" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Let's move on." speech="" keys="." threshold="" play="A125" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Thanks, Cristina. # That makes sense." speech="" keys="." threshold="" play="B93" />
           </Answers>
         </Question>
       </Questions>
@@ -369,17 +370,17 @@
     </TutoringPack>
     <TutoringPack name="TPD6">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, let's look at the next part of the comic." speech="" media="" play="_user_,A126">
+        <Question id="1" agent="Cristina" text="_user_ and Jordan, let's look at the next part of the comic." speech="" media="" play="_user_,A126">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the question mark. Question marks are used to signal questions or inquiries." speech="" keys="." threshold="" play="A127" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer, even if you're not sure." speech="" keys="." threshold="" play="A128" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think the correct punctuation mark is?" speech="" keys="." threshold="" play="A129" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the period." speech="" keys="." threshold="" play="B94" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm going to go with the question mark." speech="" keys="." threshold="" play="B95" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these is the correct punctuation mark?" speech="" keys="." threshold="" play="_user_,A130" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I choose the same as _user_." speech="" keys="." threshold="" play="B96,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="In this part, it seems like the narrator is asking us a question." speech="" keys="." threshold="" play="B97" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Right, so we need to end the narrator's question with a question mark." speech="" keys="." threshold="" play="A131" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the question mark. # Question marks are used to signal questions or inquiries." speech="" keys="." threshold="" play="A127" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer, even if you're not sure." speech="" keys="." threshold="" play="A128" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the correct punctuation mark is?" speech="" keys="." threshold="" play="A129" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the period." speech="" keys="." threshold="" play="B94" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm going to go with the question mark." speech="" keys="." threshold="" play="B95" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of these is the correct punctuation mark?" speech="" keys="." threshold="" play="_user_,A130" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I choose the same as _user_." speech="" keys="." threshold="" play="B96,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="In this part, it seems like the narrator is asking us a question." speech="" keys="." threshold="" play="B97" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Right, so we need to end the narrator's question with a question mark." speech="" keys="." threshold="" play="A131" />
           </Answers>
         </Question>
       </Questions>
@@ -388,17 +389,17 @@
     </TutoringPack>
     <TutoringPack name="TPD7">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="See the below comic." speech="" media="" play="A132">
+        <Question id="1" agent="Cristina" text="See the below comic." speech="" media="" play="A132">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the apostrophee. Apostrophees are used to show possession in this case." speech="" keys="." threshold="" play="A133" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Remember to click on an answer." speech="" keys="." threshold="" play="A134" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these punctuation mark tells us whose Dad needs help?" speech="" keys="." threshold="" play="A135" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the comma." speech="" keys="." threshold="" play="B98" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think elipsees is the right answer." speech="" keys="." threshold="" play="B99" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, please tell us which punctuation mark indicates whose Dad needs helps." speech="" keys="." threshold="" play="_user_,A136" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="_user_ is smart, I agree with them." speech="" keys="." threshold="" play="_user_,B100" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I see there is an apostrophe s after Amy." speech="" keys="." threshold="" play="B101" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="This lets us know that it is Alan and Amy's Dad who needs help." speech="" keys="." threshold="" play="A137" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the apostrophee. # Apostrophees are used to show possession in this case." speech="" keys="." threshold="" play="A133" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember to click on an answer." speech="" keys="." threshold="" play="A134" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these punctuation mark tells us whose Dad needs help?" speech="" keys="." threshold="" play="A135" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the comma." speech="" keys="." threshold="" play="B98" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think elipsees is the right answer." speech="" keys="." threshold="" play="B99" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, please tell us which punctuation mark indicates whose Dad needs helps." speech="" keys="." threshold="" play="_user_,A136" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_ is smart, I agree with them." speech="" keys="." threshold="" play="_user_,B100" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I see there is an apostrophe s after Amy." speech="" keys="." threshold="" play="B101" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="This lets us know that it is Alan and Amy's Dad who needs help." speech="" keys="." threshold="" play="A137" />
           </Answers>
         </Question>
       </Questions>
@@ -407,17 +408,17 @@
     </TutoringPack>
     <TutoringPack name="TPD8">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this part of the comic." speech="" media="" play="A138">
+        <Question id="1" agent="Cristina" text="Take a look at this part of the comic." speech="" media="" play="A138">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the exclamation mark. We use this to mark that something is emphatically stated." speech="" keys="." threshold="" play="A139" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please tell us the correct punctuation mark for the blank." speech="" keys="." threshold="" play="A140" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A141" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the exclamation mark." speech="" keys="." threshold="" play="B102" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the parentheses." speech="" keys="." threshold="" play="B103" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A142" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to go with the same answer as _user_." speech="" keys="." threshold="" play="B104,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="OK, so Amy seems outraged by the rubber chicken." speech="" keys="." threshold="" play="B105" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Right. So,  you would use the exclamation mark to match her emotion." speech="" keys="." threshold="" play="A143" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the exclamation mark. # We use this to mark that something is emphatically stated." speech="" keys="." threshold="" play="A139" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please tell us the correct punctuation mark for the blank." speech="" keys="." threshold="" play="A140" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell me which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A141" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the exclamation mark." speech="" keys="." threshold="" play="B102" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the parentheses." speech="" keys="." threshold="" play="B103" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A142" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to go with the same answer as _user_." speech="" keys="." threshold="" play="B104,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="OK, so Amy seems outraged by the rubber chicken." speech="" keys="." threshold="" play="B105" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Right. # So,  you would use the exclamation mark to match her emotion." speech="" keys="." threshold="" play="A143" />
           </Answers>
         </Question>
       </Questions>
@@ -426,17 +427,17 @@
     </TutoringPack>
     <TutoringPack name="TPD9">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this part of the comic." speech="" media="" play="A144">
+        <Question id="1" agent="Cristina" text="Take a look at this part of the comic." speech="" media="" play="A144">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the period. Remember, periods are used to end a sentence with a full stop." speech="" keys="." threshold="" play="A145" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please tell us the correct punctuation mark for the blank." speech="" keys="." threshold="" play="A146" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A147" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the period." speech="" keys="." threshold="" play="B106" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the elipsees." speech="" keys="." threshold="" play="B107" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A148" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to go with the same answer as _user_." speech="" keys="." threshold="" play="B108,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So, You are right is a complete sentence." speech="" keys="." threshold="" play="B109" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Exactly, so we can put a period for a full stop after that sentence and move on to the next thought." speech="" keys="." threshold="" play="A149" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the period. # Remember, periods are used to end a sentence with a full stop." speech="" keys="." threshold="" play="A145" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please tell us the correct punctuation mark for the blank." speech="" keys="." threshold="" play="A146" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell me which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A147" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the period." speech="" keys="." threshold="" play="B106" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the elipsees." speech="" keys="." threshold="" play="B107" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click on an answer, even if you're not sure." speech="" keys="." threshold="" play="A148" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to go with the same answer as _user_." speech="" keys="." threshold="" play="B108,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="So, You are right is a complete sentence." speech="" keys="." threshold="" play="B109" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Exactly, so we can put a period for a full stop after that sentence and move on to the next thought." speech="" keys="." threshold="" play="A149" />
           </Answers>
         </Question>
       </Questions>
@@ -445,17 +446,17 @@
     </TutoringPack>
     <TutoringPack name="TPDa">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this part of the comic." speech="" media="" play="A150">
+        <Question id="1" agent="Cristina" text="Read this part of the comic." speech="" media="" play="A150">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the question mark. Remember question marks signal questions!" speech="" keys="." threshold="" play="A151" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please tell us the correct punctuation mark." speech="" keys="." threshold="" play="A152" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me what the correct punctuation mark is?" speech="" keys="." threshold="" play="_user_,A153" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The answer is the question mark." speech="" keys="." threshold="" play="B110" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The answer is the period." speech="" keys="." threshold="" play="B111" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click an answer, please!" speech="" keys="." threshold="" play="A154" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to pick the same answer as _user_." speech="" keys="." threshold="" play="B112,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="ComputerTutor, I forgot what parentheses do, can you remind me?" speech="" keys="." threshold="" play="B113" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Sure, ComputerStudent1. They signal additional information such as definitions of words, or what acronyms stand for. Let's move on." speech="" keys="." threshold="" play="A155" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the question mark. # Remember question marks signal questions!" speech="" keys="." threshold="" play="A151" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please tell us the correct punctuation mark." speech="" keys="." threshold="" play="A152" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell me what the correct punctuation mark is?" speech="" keys="." threshold="" play="_user_,A153" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The answer is the question mark." speech="" keys="." threshold="" play="B110" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The answer is the period." speech="" keys="." threshold="" play="B111" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click an answer, please!" speech="" keys="." threshold="" play="A154" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to pick the same answer as _user_." speech="" keys="." threshold="" play="B112,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Cristina, I forgot what parentheses do, can you remind me?" speech="" keys="." threshold="" play="B113" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Sure, Jordan. # They signal additional information such as definitions of words, or what acronyms stand for. # Let's move on." speech="" keys="." threshold="" play="A155" />
           </Answers>
         </Question>
       </Questions>
@@ -464,17 +465,17 @@
     </TutoringPack>
     <TutoringPack name="TPDb">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="On to the next part of the comic." speech="" media="" play="A156">
+        <Question id="1" agent="Cristina" text="On to the next part of the comic." speech="" media="" play="A156">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the exclamation point." speech="" keys="." threshold="" play="A157" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A158" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A159" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It's the exclamation point." speech="" keys="." threshold="" play="B114" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="It's the colon." speech="" keys="." threshold="" play="B115" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Remember, you must click an answer or I can't tell what you're thinking." speech="" keys="." threshold="" play="A160" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I agree with _user_ this time." speech="" keys="." threshold="" play="B116,_user_,B117" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="My favorite! Exclamation point!" speech="" keys="." threshold="" play="B118" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Haha. Yes, ComputerStudent1. Very exciting." speech="" keys="." threshold="" play="A161" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the exclamation point." speech="" keys="." threshold="" play="A157" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A158" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, can you tell me which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A159" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="It's the exclamation point." speech="" keys="." threshold="" play="B114" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="It's the colon." speech="" keys="." threshold="" play="B115" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember, you must click an answer or I can't tell what you're thinking." speech="" keys="." threshold="" play="A160" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I agree with _user_ this time." speech="" keys="." threshold="" play="B116,_user_,B117" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="My favorite! # Exclamation point!" speech="" keys="." threshold="" play="B118" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Haha. # Yes, Jordan. # Very exciting." speech="" keys="." threshold="" play="A161" />
           </Answers>
         </Question>
       </Questions>
@@ -483,17 +484,17 @@
     </TutoringPack>
     <TutoringPack name="TPDc">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Here is the next part of the comic." speech="" media="" play="A162">
+        <Question id="1" agent="Cristina" text="Here is the next part of the comic." speech="" media="" play="A162">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the elipsees. Elipsees signal an incomplete thought," speech="" keys="." threshold="" play="A163" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A164" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, I bet you know which punctuation mark fits in this blank!" speech="" keys="." threshold="" play="_user_,A165" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The elipsees!" speech="" keys="." threshold="" play="B119" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The dash!" speech="" keys="." threshold="" play="B120" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A166" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I am thinking _user_ is right." speech="" keys="." threshold="" play="B121,_user_,B122" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Haha. That guy is so funny! The elipsees make me wonder what he is thinking!" speech="" keys="." threshold="" play="B123" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Exactly, ComputerStudent1!" speech="" keys="." threshold="" play="A167" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the elipsees. # Elipsees signal an incomplete thought," speech="" keys="." threshold="" play="A163" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A164" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, I bet you know which punctuation mark fits in this blank!" speech="" keys="." threshold="" play="_user_,A165" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="The elipsees!" speech="" keys="." threshold="" play="B119" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="The dash!" speech="" keys="." threshold="" play="B120" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A166" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I am thinking _user_ is right." speech="" keys="." threshold="" play="B121,_user_,B122" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Haha. # That guy is so funny! # The elipsees make me wonder what he is thinking!" speech="" keys="." threshold="" play="B123" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Exactly, Jordan!" speech="" keys="." threshold="" play="A167" />
           </Answers>
         </Question>
       </Questions>
@@ -502,17 +503,17 @@
     </TutoringPack>
     <TutoringPack name="TPE1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read the text in this comic. Remember, you need to fill in the blank in this question." speech="" media="" play="A168">
+        <Question id="1" agent="Cristina" text="Read the text in this comic. # Remember, you need to fill in the blank in this question." speech="" media="" play="A168">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is parentheses. Parentheses give us additional information. In this case, they tell us that it is Amy's twenty sixth birthday." speech="" keys="." threshold="" play="A169" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please remember to click an answer, even if you're not sure." speech="" keys="." threshold="" play="A170" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which punctuation mark tells us which birthday Amy is celebrating?" speech="" keys="." threshold="" play="A171" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the correct answer is the slash." speech="" keys="." threshold="" play="B124" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It's the parentheses." speech="" keys="." threshold="" play="B125" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which punctuation mark tells us which birthday Amy is celebrating?" speech="" keys="." threshold="" play="_user_,A172" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I am going to choose the same answer as _user_." speech="" keys="." threshold="" play="B126,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Happy birthday Amy! I love to celebrate, i'm the life of the party. I think they should start the party with the cake." speech="" keys="." threshold="" play="B127" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's see what happens." speech="" keys="." threshold="" play="A173" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is parentheses. # Parentheses give us additional information. # In this case, they tell us that it is Amy's twenty sixth birthday." speech="" keys="." threshold="" play="A169" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click an answer, even if you're not sure." speech="" keys="." threshold="" play="A170" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which punctuation mark tells us which birthday Amy is celebrating?" speech="" keys="." threshold="" play="A171" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think the correct answer is the slash." speech="" keys="." threshold="" play="B124" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="It's the parentheses." speech="" keys="." threshold="" play="B125" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which punctuation mark tells us which birthday Amy is celebrating?" speech="" keys="." threshold="" play="_user_,A172" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I am going to choose the same answer as _user_." speech="" keys="." threshold="" play="B126,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Happy birthday Amy! # I love to celebrate, i'm the life of the party. # I think they should start the party with the cake." speech="" keys="." threshold="" play="B127" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Let's see what happens." speech="" keys="." threshold="" play="A173" />
           </Answers>
         </Question>
       </Questions>
@@ -521,17 +522,17 @@
     </TutoringPack>
     <TutoringPack name="TPE2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this comic." speech="" media="" play="A174">
+        <Question id="1" agent="Cristina" text="Read this comic." speech="" media="" play="A174">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the quotation marks." speech="" keys="." threshold="." play="A175" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="A176" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A177" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the quotation marks." speech="" keys="." threshold="" play="B128" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the colon." speech="" keys="." threshold="" play="B129" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" play="A178" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B130,_user_,B131" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Quotations signal speech, right, ComputerTutor?" speech="" keys="." threshold="" play="B132" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That is correct ComputerStudent1! In this case, Alan is quoting Amy." speech="" keys="." threshold="" play="A179" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the quotation marks." speech="" keys="." threshold="." play="A175" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="A176" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A177" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the quotation marks." speech="" keys="." threshold="" play="B128" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the colon." speech="" keys="." threshold="" play="B129" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click on an answer!" speech="" keys="." threshold="" play="A178" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B130,_user_,B131" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Quotations signal speech, right, Cristina?" speech="" keys="." threshold="" play="B132" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That is correct Jordan! # In this case, Alan is quoting Amy." speech="" keys="." threshold="" play="A179" />
           </Answers>
         </Question>
       </Questions>
@@ -540,17 +541,17 @@
     </TutoringPack>
     <TutoringPack name="TPE3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="On to the next part of the comic." speech="" media="" play="A180">
+        <Question id="1" agent="Cristina" text="On to the next part of the comic." speech="" media="" play="A180">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the comma. This comma adds a pause between two ideas in the same sentence." speech="" keys="." threshold="" play="A181" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="A182" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the correct punctuation mark for this blank?" speech="" keys="." threshold="" play="_user_,A183" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the comma." speech="" keys="." threshold="" play="B133" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the dash." speech="" keys="." threshold="" play="B134" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" play="A184" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B135,_user_,B136" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think Amy is right, everything is better on a full stomach. Bring on the food." speech="" keys="." threshold="" play="B137" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Agreed! Let's move on." speech="" keys="." threshold="" play="A185" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the comma. # This comma adds a pause between two ideas in the same sentence." speech="" keys="." threshold="" play="A181" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please fill in the correct punctuation mark." speech="" keys="." threshold="" play="A182" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, what is the correct punctuation mark for this blank?" speech="" keys="." threshold="" play="_user_,A183" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the comma." speech="" keys="." threshold="" play="B133" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the dash." speech="" keys="." threshold="" play="B134" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" play="A184" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I think _user_ is right." speech="" keys="." threshold="" play="B135,_user_,B136" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I think Amy is right, everything is better on a full stomach. # Bring on the food." speech="" keys="." threshold="" play="B137" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Agreed! # Let's move on." speech="" keys="." threshold="" play="A185" />
           </Answers>
         </Question>
       </Questions>
@@ -559,17 +560,17 @@
     </TutoringPack>
     <TutoringPack name="TPE4">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="See the next part of the comic below." speech="" media="" play="A186">
+        <Question id="1" agent="Cristina" text="See the next part of the comic below." speech="" media="" play="A186">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the slash. ComputerStudent1, do you remember what this slash is used for?" speech="" keys="." threshold="" play="A187" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please click on the punctuation mark that correctly fills in the blank." speech="" keys="." threshold="" play="A188" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A189" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am going to go with the slash." speech="" keys="." threshold="" play="B138" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am going to go with the period." speech="" keys="." threshold="" play="B139" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A190" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B140,_user_,B141" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think it is used for alternate words. Kind of like choices." speech="" keys="." threshold="" play="B142" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! Any of the words separated by slashes can work in the sentence.It just depends on the situation. Let's move on." speech="" keys="." threshold="" play="A191" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the slash. # Jordan, do you remember what this slash is used for?" speech="" keys="." threshold="" play="A187" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please click on the punctuation mark that correctly fills in the blank." speech="" keys="." threshold="" play="A188" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A189" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I am going to go with the slash." speech="" keys="." threshold="" play="B138" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I am going to go with the period." speech="" keys="." threshold="" play="B139" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A190" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going to have to agree with _user_ on this one." speech="" keys="." threshold="" play="B140,_user_,B141" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I think it is used for alternate words. # Kind of like choices." speech="" keys="." threshold="" play="B142" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's right! # Any of the words separated by slashes can work in the sentence. # It just depends on the situation. # Let's move on." speech="" keys="." threshold="" play="A191" />
           </Answers>
         </Question>
       </Questions>
@@ -578,17 +579,17 @@
     </TutoringPack>
     <TutoringPack name="TPE5">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Here is the next piece of the comic." speech="" media="" play="A192">
+        <Question id="1" agent="Cristina" text="Here is the next piece of the comic." speech="" media="" play="A192">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the question mark." speech="" keys="." threshold="" play="A193" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what punctuation park correctly completes this sentence?" speech="" keys="." threshold="" play="A194" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these punctuation marks correctly completes this sentence?" speech="" keys="." threshold="" play="_user_,A195" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's a question mark." speech="" keys="." threshold="" play="B143" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the dash." speech="" keys="." threshold="" play="B144" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please remember to click an answer." speech="" keys="." threshold="" play="A196" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I am thinking along the same lines as _user_, I think. I have to agree." speech="" keys="." threshold="" play="B145,_user_,B146" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Question marks are the easiest punctuation mark, I think." speech="" keys="." threshold="" play="B147" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Well, that is a matter of opinion, ComputerStudent1. It does make it easier that they only have one function." speech="" keys="." threshold="" play="A197" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the question mark." speech="" keys="." threshold="" play="A193" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what punctuation park correctly completes this sentence?" speech="" keys="." threshold="" play="A194" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which of these punctuation marks correctly completes this sentence?" speech="" keys="." threshold="" play="_user_,A195" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's a question mark." speech="" keys="." threshold="" play="B143" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the dash." speech="" keys="." threshold="" play="B144" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please remember to click an answer." speech="" keys="." threshold="" play="A196" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I am thinking along the same lines as _user_, I think. # I have to agree." speech="" keys="." threshold="" play="B145,_user_,B146" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Question marks are the easiest punctuation mark, I think." speech="" keys="." threshold="" play="B147" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Well, that is a matter of opinion, Jordan. # It does make it easier that they only have one function." speech="" keys="." threshold="" play="A197" />
           </Answers>
         </Question>
       </Questions>
@@ -597,17 +598,17 @@
     </TutoringPack>
     <TutoringPack name="TPE6">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Read this part of the comic." speech="" media="" play="A198">
+        <Question id="1" agent="Cristina" text="Read this part of the comic." speech="" media="" play="A198">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the exclamation point. ComputerStudent1, this one is your favorite, why do we use an exclamation point here?" speech="" keys="." threshold="" play="A199" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A200" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the exclamation mark." speech="" keys="." threshold="" play="B148" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the parentheses." speech="" keys="." threshold="" play="B149" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A201" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Remember, you have to click an answer or I don't know what you're thinking!" speech="" keys="." threshold="" play="A202" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I'm going with the same answer as _user_." speech="" keys="." threshold="" play="B150,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Because Amy is showing excitement and emotion or strong feelings." speech="" keys="." threshold="" play="B151" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Great! You have gotten the hang of exclamation points!" speech="" keys="." threshold="" play="A203" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the exclamation point. # Jordan, this one is your favorite, why do we use an exclamation point here?" speech="" keys="." threshold="" play="A199" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which of these punctuation marks correctly fills in the blank?" speech="" keys="." threshold="" play="A200" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the exclamation mark." speech="" keys="." threshold="" play="B148" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the parentheses." speech="" keys="." threshold="" play="B149" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which punctuation mark correctly fills in the blank?" speech="" keys="." threshold="" play="_user_,A201" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Remember, you have to click an answer or I don't know what you're thinking!" speech="" keys="." threshold="" play="A202" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I'm going with the same answer as _user_." speech="" keys="." threshold="" play="B150,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Because Amy is showing excitement and emotion or strong feelings." speech="" keys="." threshold="" play="B151" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Great! # You have gotten the hang of exclamation points!" speech="" keys="." threshold="" play="A203" />
           </Answers>
         </Question>
       </Questions>
@@ -616,17 +617,17 @@
     </TutoringPack>
     <TutoringPack name="TPE7">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Let's move on to this part of the comic." speech="" media="" play="A204">
+        <Question id="1" agent="Cristina" text="Let's move on to this part of the comic." speech="" media="" play="A204">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the colon. ComputerStudent1, why do we use a colon here?" speech="" keys="." threshold="" play="A205" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what punctuation mark tells us whose party is being thrown?" speech="" keys="." threshold="" play="A206" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which punctuation mark should go after rescue?" speech="" keys="." threshold="" play="_user_,A207" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's the colon." speech="" keys="." threshold="" play="B152" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's the quotation mark." speech="" keys="." threshold="" play="B153" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer, even if you're not sure." speech="" keys="." threshold="" play="A208" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I choose the same answer as _user_." speech="" keys="." threshold="" play="B154,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think it's because it's telling us that there is an explanation. " speech="" keys="." threshold="" play="B155" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! Colons tell us that there is an explanation or a list! Let's move on." speech="" keys="." threshold="" play="A209" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the colon. # Jordan, why do we use a colon here?" speech="" keys="." threshold="" play="A205" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what punctuation mark tells us whose party is being thrown?" speech="" keys="." threshold="" play="A206" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_, which punctuation mark should go after rescue?" speech="" keys="." threshold="" play="_user_,A207" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I think it's the colon." speech="" keys="." threshold="" play="B152" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it's the quotation mark." speech="" keys="." threshold="" play="B153" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer, even if you're not sure." speech="" keys="." threshold="" play="A208" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I choose the same answer as _user_." speech="" keys="." threshold="" play="B154,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="I think it's because it's telling us that there is an explanation." speech="" keys="." threshold="" play="B155" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="That's right! # Colons tell us that there is an explanation or a list! # Let's move on." speech="" keys="." threshold="" play="A209" />
           </Answers>
         </Question>
       </Questions>
@@ -635,17 +636,17 @@
     </TutoringPack>
     <TutoringPack name="TPE8">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Here is the last part of the comic." speech="" media="" play="A210">
+        <Question id="1" agent="Cristina" text="Here is the last part of the comic." speech="" media="" play="A210">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is the ellipsis. Remember, elipsees tell us that the thought is incomplete." speech="" keys="." threshold="" play="A211" />
-            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A212" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, please tell us what you think the correct answer is." speech="" keys="." threshold="" play="A213" />
-            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is the quotation marks." speech="" keys="." threshold="" play="B156" />
-            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm going to bet on the ellipsis." speech="" keys="." threshold="" play="B157" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_,  Which punctuation mark finishes the description of the scene in the yellow box. " speech="" keys="." threshold="" play="_user_,A214" />
-            <Answer name="AgreeswithUser" agent="ComputerStudent1" type="AgreeswithUser" text="I choose the same answer as _user_." speech="" keys="." threshold="" play="B158,_user_" />
-            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Right! I bet he let her win because it's her birthday." speech="" keys="." threshold="" play="B159" />
-            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Like her dad says, we may never know..." speech="" keys="." threshold="" play="A215" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The correct answer is the ellipsis. # Remember, elipsees tell us that the thought is incomplete." speech="" keys="." threshold="" play="A211" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please click an answer." speech="" keys="." threshold="" play="A212" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, please tell us what you think the correct answer is." speech="" keys="." threshold="" play="A213" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I think it is the quotation marks." speech="" keys="." threshold="" play="B156" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I'm going to bet on the ellipsis." speech="" keys="." threshold="" play="B157" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="_user_,  Which punctuation mark finishes the description of the scene in the yellow box." speech="" keys="." threshold="" play="_user_,A214" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="I choose the same answer as _user_." speech="" keys="." threshold="" play="B158,_user_" />
+            <Answer name="JordanExplanation" agent="Jordan" type="JordanExplanation" text="Right! # I bet he let her win because it's her birthday." speech="" keys="." threshold="" play="B159" />
+            <Answer name="CristinaMoveOn" agent="Cristina" type="CristinaMoveOn" text="Like her dad says, we may never know." speech="" keys="." threshold="" play="A215" />
           </Answers>
         </Question>
       </Questions>
@@ -733,26 +734,26 @@
       <Action agent="System" act="SetStatus" data="Start2" id="1" />
       <Action agent="System" act="GetRule" data="" id="2" />
     </Rule>
-    <Rule name="CristinaAskQJC" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+    <Rule name="CristinaAskQJC" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="25" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="5" />
       <Action agent="System" act="WaitForEvent" data="100" id="6" />
     </Rule>
-    <Rule name="CristinaAskQJI" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+    <Rule name="CristinaAskQJI" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="25" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="4" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="5" />
       <Action agent="System" act="WaitForEvent" data="100" id="6" />
     </Rule>
-    <Rule name="CristinaAskQ" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="3" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="AskUser" id="3" />
       <Action agent="System" act="WaitForEvent" data="60" id="4" />
     </Rule>
     <Rule name="CorrectJC" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
@@ -770,82 +771,82 @@
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
       <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
-    <Rule name="CristinaAskedFJC" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+    <Rule name="CristinaAskedFJC" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
-    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordan" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordan" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
-    <Rule name="CristinaAskedJC" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
+    <Rule name="CristinaAskedJC" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanCorrect" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="6" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="7" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="6" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
-    <Rule name="CristinaAskedJI" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
+    <Rule name="CristinaAskedJI" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency="50" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordan" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="6" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="7" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserNegativeFeedbackToJordan" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="6" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="7" />
       <Action agent="System" act="SetStatus" data="GoBack" id="8" />
       <Action agent="System" act="GetRule" data="" id="9" />
     </Rule>
     <Rule name="IncorrectFJI" status="UserAnswer1" response="" event="Incorrect" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="IncorrectFJC" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="" frequency="50" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToUserPositiveFeedbackToJordan" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToUserPositiveFeedbackToJordan" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
-      <Action agent="ComputerStudent1" act="Answer" data="AgreeswithUser" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
+      <Action agent="Jordan" act="Answer" data="AgreeswithUser" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="6" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="5" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="6" />
       <Action agent="System" act="SetStatus" data="GoBack" id="7" />
       <Action agent="System" act="GetRule" data="" id="8" />
     </Rule>
     <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="ComputerTutor" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="Blank1" status="UserAnswer1" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
-      <Action agent="ComputerTutor" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="Cristina" act="Answer" data="BlankPrompt" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
     <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
@@ -853,31 +854,32 @@
       <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
       <Action agent="System" act="Wait" data="5" id="3" />
     </Rule>
-    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="5" />
       <Action agent="System" act="SetStatus" data="GoBack" id="6" />
-      <Action agent="System" act="GetRule" data="" id="7" />
+      <Action agent="System" act="GetRule" data="" id="20" />
     </Rule>
     <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
-      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
-      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="5" />
-      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="0" />
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="Answer" data="JordanExplanation" id="5" />
+      <Action agent="Cristina" act="Answer" data="CristinaMoveOn" id="6" />
       <Action agent="System" act="WaitForEvent" data="60" id="7" />
     </Rule>
     <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">

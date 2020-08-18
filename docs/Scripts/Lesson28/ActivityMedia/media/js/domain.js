@@ -1,1 +1,0 @@
-var document.domain = location.host;

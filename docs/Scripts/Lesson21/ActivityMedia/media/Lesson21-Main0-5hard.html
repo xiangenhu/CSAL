@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 
-		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-		
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+
 		<!--load jScrollPane libraries and CSS-->
 		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
-		
+
 		<style type="text/css" id="page-css">
 			body
 			{
@@ -42,9 +41,9 @@
 				color: white;
 				font-family: 'Raleway', Verdana, 'Times New Roman';
 				width: 800px;
-				font-size: 24px;
+				font-size: 26px;
 				text-align: center;
-				padding: 8px 0px;
+				padding: 10px 0px;
 				border-bottom: 5px dashed white;
 				margin: 0px auto 4px auto;
 				position: fixed;
@@ -99,9 +98,9 @@
 		</style>
 		<script type="text/javascript" id="sourcecode">
 		//*******************************************************
-				var currentItem = -1;
-				var numItems = 1;
-				var $scrollElement;			
+					var currentItem = -1;
+				var numItems = 0;
+				var $scrollElement;
 				var questionBoxArray = [];
 				var numQuestionBoxes = 1;
 				var selectedAnswer = "";
@@ -110,17 +109,16 @@
 				var strId = "";
 				var numCorrect=0;
 				var numIncorrect=0;
-				
 				var clickCount=0;
-			
-				function sound_clicked() 
+
+				function sound_clicked()
 			{// return parent.PlaySound('clicked0.wav');
 			}
 
-			function sound_incorrect() 
+			function sound_incorrect()
 			{// return parent.PlaySound('incorrect0.wav');
 			}
-			
+
 			function sound_correct()
 			{// return parent.PlaySound('success0.wav');
 			}
@@ -128,106 +126,107 @@
 
 		var $scrollElement;
 			$(document).ready(function()
-			{	
-			
-				$("#fadeBody").fadeIn(1000);
-			
-				//reports to the parent program that the media page html has loaded		
+			{
+
 				parent.GetWorldEvent("MediaLoaded");
-			
+
 				//lock the buttons
 				Lock();
-				
+
 				//create scroll pane element
 				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
-				
+
 				var api = $scrollElement.data('jsp');
-				
-				//ScrollToId($scrollElement, "b1");
+
+				ScrollToId($scrollElement, "b1");
 			});
-			
-			function ScrollToId($scrollElement, id)
-			{
-				//searches document to find the first instance of an element id that matches the id parameter 
-				//and calls a function to get the position of that element
-				var scrollTarget = document.getElementById(id);
-				var rect = scrollTarget.getBoundingClientRect();
-				
-				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
-				var api = $scrollElement.data('jsp');
-				
-				api.scrollToY(rect.top-190);
-			}
-			
+
 			function GetItem()
 			{
 				if(currentItem < numItems)
 				{
-				
-					numCorrect=0;
-					clickCount=0;
 					++currentItem;
-					
+
 					return parent.GetWorldEvent("Continue");
 				}
 				else
 				{
-				
-				
+
+
 					return parent.GetWorldEvent("Stop");
 				}
 			}
-			
+
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+
+				api.scrollToY(rect.top-190);
+			}
+
 			function Lock()
 			{
 				//unbinds click function and hover
 				$( ".mybutton" ).unbind("click");
 				$( ".mybutton" ).unbind("mouseover");
 				$( ".mybutton" ).unbind("mouseout");
-				
+
 				//sets disabled mouse cursor
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
-				
+
 				//sets disabled colors WITH animation
 				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
-			
+
 			function ShowMediaAnswer()
 			{
-				
+
 					selectedAnswer;
 					isSelected = true;
-					
-					
+
+
 						//if an answer has been selected compare see if it is equal to the correct answer
-						if( numCorrect==4 )
+						if( numCorrect==1 )
 						{
+						// sound_correct();
+						parent.PlaySound('success0.wav');
+
 							$("#b4").animate({backgroundColor: "green", color: "white"}, 1000);
 						}
-						else if(numCorrect<4)
+						else if(numCorrect<1)
 						{
+
 							$("#b4").animate({backgroundColor: "green", color: "white"}, 1000);
 							//play the correct answer sound
-							parent.PlaySound('success0.wav');
+							// parent.PlaySound('success0.wav');
+							parent.PlaySound('incorrect0.wav');
+
 						}
 						isSelected = false;
-					
-					
+
+
 					//highlight the correct answer green
 					$("#b4").animate({backgroundColor: "green", color: "white"}, 1000);
-				
+
 			}
-			
-			
+
+
 			function Unlock()
 			{
 				numCorrect=0;
 				clickCount=0;
+
 				//this section determines the font size for the click animation used in the clickFunc function below
 				var butFontSize = $( ".mybutton" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
 				var butAnimSize = butFontSizeRaw - 1 + "px";
-				
+
 				var clickFunc = function()
 				{
 				    clickCount++;
@@ -244,47 +243,46 @@
 					//$( this ).toggle( "explode" );
 					//play appropriate sound
 					if (userAnswer == "Correct")
-					{ 
-					numIncorrect++;
-					parent.PlaySound('incorrect0.wav');
-				
-					//sound_clicked();
-					//strId+="1";
-					//parent.GetWorldEvent(strId);
-					//parent.GetWorldEvent(strId.length.toString());
-					}
-					else if(userAnswer == "Incorrect")
-					{ 
+					{
 					numCorrect++;
 					parent.PlaySound('clicked0.wav');
-					//sound_incorrect(); 
+					//sound_clicked();
+					//	strId+="1";
+					//parent.GetWorldEvent(strId);
+					//parent.GetWorldEvent(strId.length);
 					}
-					
+					else if(userAnswer == "Incorrect")
+					{
+					numIncorrect++;
+					parent.PlaySound('incorrect0.wav');
+					//sound_incorrect();
+					}
+
 					//animate button click
 					//$(this).animate({fontSize: butAnimSize}, 75);
 					//$(this).animate({fontSize: butFontSize}, 600);
-					
+
 					//lock buttons
 					//Lock();
-					
+
 					//set selection color and report answer to ASAT
-					
-					$(this).css("text-decoration","line-through");
+
+					//$(this).css("text-decoration","line-through");
 					$( this ).unbind("mouseover");
 				 $( this ).unbind("mouseout");
 				 $( this ).unbind("click");
-				 
-				 if(clickCount>=4 && numCorrect==4)
+
+				  if(clickCount>=1 && numCorrect==1)
 				 {
 				 strId++;
 				 userAnswer="Correct";
 				 //parent.GetWorldEvent(userAnswer);
 				 parent.GetWorldEvent("userAnswer_Correct_"+userSelectedValue);
-				 sound_clicked();			
+				 sound_clicked();
 					Lock();
-				 
+
 				 }
-				 else if(clickCount>=4 && numCorrect<4)
+				 else if(clickCount>=1 && numCorrect<1)
 				 {
 				   userAnswer="Incorrect";
 				   //parent.GetWorldEvent(userAnswer);
@@ -292,41 +290,91 @@
 				   sound_incorrect();
 				    Lock();
 				 }
+
 					//$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
 					//parent.GetWorldEvent(numCorrect);
-					
+					//parent.GetWorldEvent(userAnswer);
 				};
-				
+
 				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
 				{ $(this).animate({backgroundColor:  "#edff73"}, 300); });
 				$( ".mybutton" ).mouseout(function()
 				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
-				
+
 				//animates unlocking via font color & background color
-				$(".mybutton").css("text-decoration","none");
 			  $(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
-				
+
 				//bind the clickFunc above to any ".mybutton"
 				$(".mybutton").bind( "click", clickFunc );
 			}
-			
-			
+
+
 			function Lock()
 			{
 				//unbinds click function and hover
 				$( ".mybutton" ).unbind("click");
 				$( ".mybutton" ).unbind("mouseover");
 				$( ".mybutton" ).unbind("mouseout");
-				
+
 				//sets disabled mouse cursor
 				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
-				
+
 				//sets disabled colors WITH animation
 				//$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
 			}
-			
+
+
+
+			function Uunlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+					 parent.PlaySound('clicked0.wav');
+					}
+					else {
+					 parent.PlaySound('incorrect0.wav');
+					}
+
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+
+					//lock buttons
+					Lock();
+
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
+
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+
 			function Start()
 			{
 				$("#fadeBody").fadeIn(600);
@@ -335,15 +383,15 @@
 				GetRequest();
 				Lock();
 				//parent.GetWorldEvent("MediaLoaded");
-			}	
-			
-			function GetRequest() 
+			}
+
+			function GetRequest()
 			{
-			   var url = location.search; 
+			   var url = location.search;
 			   var idName = new Array();
-			   if (url.indexOf("?") != -1) 
-			   { 
-				   str = url.substr(1); 
+			   if (url.indexOf("?") != -1)
+			   {
+				   str = url.substr(1);
 					strs = str.split("=");
 					strId = strs[1];
 					//strId= parseInt(strId, 10);
@@ -354,63 +402,10 @@
 					//return idName[idName.length-2];
 			   }
 			}
-			
-			
-			
-			function Uunlock()
-			{
-				//this section determines the font size for the click animation used in the clickFunc function below
-				var butFontSize = $( ".mybutton" ).css( "font-size" );
-				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
-				var butAnimSize = butFontSizeRaw - 2 + "px";
-				
-				var clickFunc = function()
-				{
-					//store the user's answer
-					userAnswer = $(this).attr("value");
-					userSelectedItem = $(this).attr("id");
-					
-					//play appropriate sound
-					if (userAnswer == "Correct")
-					{
-					strId+="1";
-					//parent.PlaySound('clicked0.wav'); 
-					parent.GetWorldEvent(strId.length.toString());
-					
-					}
-					else {
-					 //parent.PlaySound('incorrect0.wav');
-					}
-					
-					//animate button click
-					$(this).animate({fontSize: butAnimSize}, 75);
-					$(this).animate({fontSize: butFontSize}, 600);
-					
-					//lock buttons
-					Lock();
-					
-					//set selection color and report answer to ASAT
-					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
-					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
-				};
-				
-				//this sets the hover animation & cursor for buttons
-				$( ".mybutton" ).mouseover(function()
-				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
-				$( ".mybutton" ).mouseout(function()
-				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
-				$( ".mybutton" ).css( 'cursor', 'pointer' );
-				
-				//animates unlocking via font color & background color
-				$(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
-				
-				//bind the clickFunc above to any ".mybutton"
-				$(".mybutton").bind( "click", clickFunc );
-			}
-			
+
 			function GetMediaEvent(data)
 			{
-				if (data == "AskQ") 
+				if (data == "AskQ")
 				{
 				parent.GetWorldEvent("Cristina");
 				}
@@ -425,7 +420,7 @@
 					parent.nextPage("media/"+"Lesson21-Main0-6hard.html?id="+strId);
 					//parent.GetWorldEvent("Cristina");
 				}
-				else if (data == "Difficulty") 
+				else if (data == "Difficulty")
 				{
 					parent.GetWorldEvent("Hard");
 				}
@@ -433,29 +428,44 @@
 		</script>
 	</head>
 	<body  onload="Start()">
-		<div id="fadeBody">
 		<div id="instructBox">
-			Eliminate 4 sentences that <span style="text-decoration: underline;">do NOT support</span> the good summary below.
+			Click on the sentence in the passage that can be a cause of diabetes.
 			<br>
-			<span class="highlight">
-				"There are several types of diabetes that can develop during different time frames and for different reasons."
-			</span>
+
 		</div>
 		<div id="textbox" class="scroll-pane">
 			<div id="mainText">
 				<div id="mainTextHead">
 					Diabetes
 				</div>
-				
-				
-				<div id="para2" class="para">
-				<span class="indent"></span><span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;1&nbsp;</span> With diabetes your body cannot move this sugar into muscle, fat, or liver cells and this is caused by two things.</span> <span class="mybutton" id="b2" value="Incorrect"><span class="num">&nbsp;2&nbsp;</span> . Either the pancreas, the organ that makes insulin, does not make enough insulin or your cells do not respond to insulin normally.</span> 
-				
-				<div id="para2" class="para">
-				<span class="indent"></span><span class="mybutton" id="b3" value="Incorrect"><span class="num">&nbsp;3&nbsp;</span> There are several symptoms that occur with diabetes such as, fatigue, blurry vision, weight loss, and excess thirst. If you or anyone you may know has any of these symptoms, contact a doctor as soon as possible.</span> <span class="mybutton" id="b4" value="Correct"><span class="num">&nbsp;4&nbsp;</span>There are two types of diabetes: Type 1 can happen at any age. It develops over a slow period of time, and there is no prevention for it. Type 2 normally happens in adulthood, is caused by high rates of obesity, and can be prevented with a healthy active lifestyle that includes diet and exercise.</span> <span class="mybutton" id="b5" value="Incorrect"><span class="num">&nbsp;5&nbsp;</span> Diabetes can cause harmful health complications over the years such as kidney problems, heart attacks, eye problems, and body sores.</span> 
+				<div id="para1" class="para">
+					<span class="indent"></span>Many people have heard of diabetes but very few understand where it may come from or what may cause it. Having diabetes simply means that someone has high levels of sugar in their blood and it usually is a lifelong disease. Insulin is a hormone produced in the body that controls blood sugar. Diabetes can be caused by too little insulin, or resistance to insulin. When food is consumed and broken down in the body it is used for energy which changes it to sugar. With diabetes your body cannot move this sugar into muscle, fat, or liver cells and this is caused by two things.
 				</div>
+
+				<div id="para2" class="para">
+					<span class="indent"></span>Either the pancreas, the organ that makes insulin, does not make enough insulin or your cells do not respond to insulin normally.
+
+					<span class="mybutton" id="b1" value="Incorrect">
+						<span class="num">&nbsp;1&nbsp;</span>
+						There are several symptoms that occur with diabetes such as, fatigue, blurry vision, weight loss, and excess thirst.
+					</span>
+					<span class="mybutton" id="b2" value="Incorrect">
+						<span class="num">&nbsp;2&nbsp;</span>
+						If you or anyone you may know has any of these symptoms, contact a doctor as soon as possible.
+					</span>
+					<span class="mybutton" id="b3" value="Incorrect">
+						<span class="num">&nbsp;3&nbsp;</span>
+						There are two types of diabetes: Type 1 can happen at any age. It develops over a slow period of time, and there is no prevention for it.
+					</span>
+					<span class="mybutton" id="b4" value="Correct">
+						<span class="num">&nbsp;4&nbsp;</span>
+						Type 2 normally happens in adulthood, is caused by high rates of obesity, and can be prevented with a healthy active lifestyle that includes diet and exercise.
+					</span>
+					Diabetes can cause harmful health complications over the years such as kidney problems, heart attacks, eye problems, and body sores.
+				</div>
+
+
 			</div>
 		</div>
-		</div>
 	</body>
-</html>
+	</html>

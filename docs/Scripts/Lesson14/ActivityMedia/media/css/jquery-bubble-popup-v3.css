@@ -1,7 +1,7 @@
 /*
 
 	jQuery Bubble Popup v.3.0
-	https://www.maxvergelli.com/jquery-bubble-popup/
+	http://www.maxvergelli.com/jquery-bubble-popup/
 	
 	Copyright (c) 2012 Max Vergelli
 	

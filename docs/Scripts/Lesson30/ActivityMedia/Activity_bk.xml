@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="Um... _user_ I don't think that's the right answer." speech="" play="B3,_user_,B4" />
+        <Item text="Um... _user_ I don't think that was the right answer. " speech="" play="B5,_user_,B6" />
+        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B7" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B8" />
+        <Item text="_user_ You got it!" speech="" play="_user_,B9" />
+        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B10" />
+        <Item text="_user_ I agree" speech="" play="_user_,B11" />
+        <Item text="_user_ , yes. That's right." speech="" play="_user_,B12" />
+        <Item text="_user_ good job!" speech="" play="_user_,B13" />
+        <Item text="_user_ I agree with you" speech="" play="_user_,B14" />
+        <Item text="_user_ , I agree with your answer" speech="" play="_user_,B15" />
+        <Item text="_user_ , nice work. That's it." speech="" play="_user_,B16" />
+        <Item text="_user_, excellent work." speech="" play="_user_,B17" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="NegativeFeedbacktoUser">
+        <Item text="sorry. that wasn't what I was looking for." speech="" play="A1" />
+        <Item text="Well, not quite, That wasn't the right choice." speech="" play="A2" />
+        <Item text="it looks like you picked the wrong answer." speech="" play="A3" />
+        <Item text="unfortunately that wasn't the best answer." speech="" play="A4" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Good job. You are both correct." speech="" play="A5" />
+        <Item text="Phenomenal work you two. Way to go on getting it right." speech="" play="A6" />
+        <Item text="Great answer, both of you. You got it right." speech="" play="A7" />
+        <Item text="Yes, that's correct. Smooth move you two." speech="" play="A8" />
+        <Item text="You both got it right. Excellent work." speech="" play="A9" />
+        <Item text="You are both right. Way to go." speech="" play="A10" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="Jordan, you didn't pick the correct answer." speech="" play="A11" />
+        <Item text="Jordan, you actually got that question wrong." speech="" play="A12" />
+        <Item text="Jordan, that's not right." speech="" play="A13" />
+        <Item text="Jordan, you gave an incorrect answer." speech="" play="A14" />
+        <Item text="Jordan, I disagree" speech="" play="A15" />
+        <Item text="Sorry, Jordan, I disagree." speech="" play="A16" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoUser">
+        <Item text="Great job." speech="" play="A17" />
+        <Item text="Good. That is right." speech="" play="A18" />
+        <Item text="You are correct." speech="" play="A19" />
+        <Item text="You got it right." speech="" play="A20" />
+        <Item text="great. You answered correctly." speech="" play="A21" />
+        <Item text="Your answer makes sense" speech=" " play="A22" />
+        <Item text="Exactly. You are right." speech="" play="A23" />
+        <Item text="I agree with you." speech="" play="A24" />
+        <Item text="You answered correctly. " speech="" play="A25" />
+        <Item text="I agree." speech="" play="A26" />
+        <Item text="You got it right." speech="" play="A27" />
+        <Item text="Good work." speech="" play="A28" />
+        <Item text="Well done." speech="" play="A29" />
+        <Item text="your decision makes sense." speech="" play="A30" />
+        <Item text="I agree" speech="" play="A31" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="Well, actually, that is not what I was looking for." speech="" play="A32" />
+        <Item text="sorry, but you are not correct." speech="" play="A33" />
+        <Item text="Oh sorry, that isn't what I was looking for" speech="" play="A34" />
+        <Item text="Not exactly, good try" speech="" play="A35" />
+        <Item text="Well, that wasn't what I was thinking. Here is the best choice in green" speech="W " play="A36" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry you two that wasn't what I was looking for." speech="" play="A37" />
+        <Item text="Unfortunately neither of you gave the correct answer. " speech="" play="A38" />
+        <Item text="Sorry. Neither of you gave me the answer that I was looking for." speech="" play="A39" />
+        <Item text="Sorry you two. That wasn't right. " speech="" play="A40" />
+        <Item text="Not quite. You both got that one incorrect. " speech="" play="A41" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok _user_ here is the answer." speech="" play="A42,_user_,A43" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A44" />
+      </SpeechCan>
+      <SpeechCan name="JordanPositiveFeedback">
+        <Item text="Jordan, Wonderful. You answered the question correctly." speech="" play="A45" />
+        <Item text="Jordan, You rock. That's right." speech="" play="A46" />
+        <Item text="Jordan, That's right." speech="" play="A47" />
+        <Item text="Jordan, great work. You got it right." speech="" play="A48" />
+        <Item text="Jordan was right." speech="" play="A49" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A50" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A51" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, Welcome back. How are you? Today we will be helping Jordan with some new documents. " speech="" media="media\Lesson30-IntroTitle.html" play="_user_,A52" />
+      <Item id="2" agent="Jordan" text="Cristina, I don't know much about documents. How do I know if something I am reading is a document?" speech="" play="B18" />
+      <Item id="3" agent="Cristina" text="Jordan, I thought you would never ask. A document is a piece of written, printed, or electronic matter that provides information, evidence, or serves as an official record. # I think we should look at a couple of examples before we get started on today's activity." speech="" media="media\L30-Opening1.html" play="A53" />
+      <Item id="4" agent="Jordan" text="Ok I think I get it. So a document kind of keeps track of information, like a written record of some sort. " speech="" play="B19" />
+      <Item id="5" agent="Cristina" text="That's right. There are a few key things to remember about documents. First, documents provide information, this example utility bill gives information about how much energy was used over the course of a payment period. # Second, the purpose of documents is to inform.  It informs us about the date that an action must be performed. Some documents require action to be taken. In this case, the action is the payment due August fifteenth.  # The total amount due shows how much needs to be paid by that date." speech="" play="A54" />
+      <Item id="6" agent="Jordan" text="What about this receipt? I feel like a receipt provides information and is informative, but it doesn't require an action. " speech="" media="media\L30-Opening2.html" play="B20" />
+      <Item id="7" agent="Cristina" text="That's true Jordan. Not all documents will require action. This example shows a receipt. A receipt informs you about items that were purchased. # Its purpose is to help you remember by giving a record of when, where and what items were purchased as well as how the items were purchased." speech="" play="A55" />
+      <Item id="8" agent="Jordan" text="One more question. What about documents we fill out, like on the computer? I ordered a swimsuit through the internet and i had to fill out a bunch of information, like my shorts size and my address." speech="" play="B21" />
+      <Item id="9" agent="Cristina" text="Right. The point of filling out documents is usually to give information to other people. In your case, the person sending you the swimsuit needed to know and what size of suit to send and where to send it." speech="" play="A56" />
+      <Item id="8" agent="Jordan" text="OK, I get it. From what you have said, I think a resume would be a type of document. # I just finished my first resume. I found a job listing that I really want to apply for but I want to make sure that I did my resume correctly first. _user_, will you look over it with me?" speech="" play="B22,_user_,B23" />
+      <Item id="9" agent="Cristina" text="Great idea, Jordan. A resume is a very important type of document. It gives information to potential employers about your skills and experience. # _user_, could you help Jordan out? Please read over Jordan's resume and press continue at the bottom of the page to move on to the rest of the activity." speech="" media="media\Lesson30(M)-0-0.html" play="A57,_user_,A58" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text=" Let's keep practicing." speech="" play="A59" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, thanks so much for all your help! I learned a lot from you. I was wondering if you could help me with one more document?" speech="" play="_user_,B24" />
+      <Item id="2" agent="Cristina" text="_user_, yes, let's take a look at this document for Jordan. When you are done, please press continue at the bottom." speech="" play="_user_,A60" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Jordan" text=" I am learning a lot today!" speech="" play="B25" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's go to the next question. " speech="" play="A61" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope you learned more about documents and the important pieces needed to read, complete, and  them. Jordan, I hope you can get your documents in order now." speech="" media="media\L30Close.html" play="A62" />
+      <Item id="2" agent="Jordan" text="I think I can, yes. _user_ you really helped me today! Thank you so much! See you next time. " speech="" play="B26,_user_,B27" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going you two." speech="" play="A63" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Alright. Let's move on. " speech="" play="A64" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, can I first ask you, what is the purpose of a resume?" speech="" media="" play="_user_,B28">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this document is to provide a summary of skills, abilities, and accomplishments." speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, you want to effectively communicate what makes you best for the job. Unless your hobbies are related to the job, a resume should not describe your hobbies. Please try again." speech="" keys="any" threshold="" test="" play="A66" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm cleared up on what the purpose of a resume is now. So it's not to get a date. I guess i can use the Internet for that. Thanks." speech="" keys="any" threshold="" test="" play="B29" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="_user_, based on my resume, which job position do you think would best fit my work experience?" speech="" media="" play="_user_,B30">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="While Jordan can certainly apply for any of these positions, his resume best reflects his experience as a sever. The best choice here is fine dining server. " speech="" keys="any" threshold="" test="" play="A67" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please read carefully under Jordan's experience section. Try again." speech="" keys="any" threshold="" test="" play="A68" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Great! I was thinking maybe a fine dining server best suits my experience too!" speech="" keys="any" threshold="" test="" play="B31" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, which section on this resume do you think I should put my goals? Choose one of the highlighted sections, either objective, core qualifications, or experience." speech="" media="" play="_user_,B32">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan's goals are best reflected in the Objective section of the resume. The purpose here is to tell a potential employer what it is you want to do. " speech="" keys="any" threshold="" test="" play="A69" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a clue, we are looking for where Jordan lists what he wants to do. Please try again." speech="" keys="any" threshold="" test="" play="A70" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I will remember that objective is where I need to summarize my goals. Thanks." speech="" keys="any" threshold="" test="" play="B33" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="4" agent="Cristina" text="_user_, could you help Jordan fill in the objective for his resume? He needs to fill in the blank with an appropriate word or phrase. Please type your answer in the box below." speech="" media="" play="_user_,A71">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="The best answer is server. According to Jordan's brief description of his past work experience, he has the most experience as a server." speech="" keys="serv|wait|staff" threshold="0.7" test="" play="A72" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="A better answer could be something like server, waiter, or staff." speech="" keys="carwasher" threshold="0.2" test="" play="A73" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I will remember to put server down in there." speech="" keys="any" threshold="" test="" play="B34" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Server">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="server" speech="" keys="\b(serv\w*|wait\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A74" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)&#xD;&#xA;plates | (RegEx=0, LSA=0)" play="A75" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="Remember, we are look for the kind of job Jordan would like to get. Type the best answer below." speech="" media="" play="A76">
+              <Answers>
+                <Answer name="Good Answer" agent="Cristina" type="Good" text="Alright. " speech="" keys="serv|wait|staff" threshold="0.7" test="" play="A77" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for. The best answer would be something like server or waiter. " speech="" keys="doctor" threshold="0.2" test="" play="A78" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="_user_, What do you think about the email address that I provided, should I change to a different one to look more professional and easier for people to remember?" speech="" media="" play="_user_,B35">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="jordan dot smith 03 at c net dot com is the best email to use. It is best to avoid email addresses with your nickname, hobby, pet's name or any other personal information besides your name. " speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="A good rule of thumb is not to use your nickname or hobby in the address. Why don't you give it another try?" speech="" keys="any" threshold="" test="" play="A80" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yeah, I think having my name in the email address makes perfect sense. " speech="" keys="any" threshold="" test="" play="B36" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="_user_, I want to mention that I have some experience with graphic design, which section do you think I should put that down? Please select one of the highlighted sections." speech="" media="" play="_user_,B37">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Any skill should be in the core qualification section, even if they are not directly relevant to the job Jordan will apply for, just in case they end up being important." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint: which section lists Jordan's skills?" speech="" keys="any" threshold="" test="" play="A82" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see. So skills should be in the core qualification section, and work experience that's directly related to the job I'm applying for will be in the experience section, got it!" speech="" keys="any" threshold="" test="" play="B38" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_, I'm thinking maybe I shouldn't be putting all of my skills on this resume, just the relevant ones, which of these skills do you think I should just leave out? Can you select one of the highlighted skills that you think i should remove?" speech="" media="" play="_user_,B39">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="the best answer is exceptional video gaming abilities. Though Jordan does have these skills, they are not the same type of skills as the restaurant and customer service oriented ones in this section. # The other skills listed are much more relevant to a serving job. " speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="A good thing to consider for this question is what do the other skills have in common. # How will they relate to his objective? Let's give it one more try. Which does not fit? Choose one of the highlighted answers." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm actually quite proud of my video game talent, but yeah maybe I should just leave it out. I will think about it." speech="" keys="any" threshold="" test="" play="B40" />
+          </Answers>
+        </Question>
+        <Question id="8" agent="Cristina" text="Which highlighted Core Qualification does not fit with Jordan's other skills?" speech="" media="" play="A85">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is exceptional video gaming abilities. Though Jordan does have these skills, they are not the same type of skills as the restaurant and customer service oriented ones in this section. # The others listed are much more relevant to a serving job. " speech="" keys="any" threshold="" play="A86" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer" speech="" keys="any" threshold="" play="A87" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="I think there is a better answer. Think about the types of skills Jordan has listed in this section, which one is least like the others?" speech="" keys="any" threshold="" play="A88" />
+            <Answer name="AskJordan" agent="Jordan" type="AskJordan" text="Jordan, you listed many skills in this section? Which of these you listed isn't really like the others?" speech="" keys="any" threshold="" play="B41" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="What do you think is the best answer?" speech="" keys="any" threshold="" play="A89" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I would have to say my exceptional video gaming abilities." speech="" keys="any" threshold="" play="B42" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I made this resume but it beats me!" speech="" keys="any" threshold="" play="B43" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think that you're dead on!" speech="" keys="any" threshold="" play="_user_,B44" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="8" agent="Cristina" text="Now let's look at the experience section, Jordan has listed washing as a task he completed at his previous position with Clark's Restaurant. # Let us clarify this, according to his resume, what kind of washing has Jordan had experiences in? Please try typing in an answer that makes sense." speech="" media="" play="A90">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Jordan's experience lists his work as a dishwasher. That is the best answer." speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.5" test="" play="A91" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Since Jordan has served in a restaurant, washing dishes would be the most reasonable interpretation." speech="" keys="carwasher" threshold="" test="" play="A92" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I guess I should clarify this. Just putting down washing may be rather vague. Thanks" speech="" keys="any" threshold="" test="" play="B45" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="2" text="Dishwasher">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="dishwasher" speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A93" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)&#xD;&#xA;plates | (RegEx=0, LSA=0)" play="A94" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="Think about what kind of washing Jordan could do in a restaurant. What do you think the best answer might be? Try typing in your answer again." speech="" media="" play="A95">
+              <Answers>
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="dishwasher" speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.5" test="" play="A96" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="" play="A97" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="9" agent="Jordan" text="_user_, should I include all of the following in my resume? Could you tell me which one I should maybe leave out?" speech="" media="" play="_user_,B46">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is acceptable to list hobbies if they are relevant to the job you're applying for. And contact information is necessary for potential employers to get in touch with you. # But religious affiliations is rather personal, it's best to leave that one out if it's not directly relevant." speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, which one of these is considered more personal or private than the others? Please try again." speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes I'm not really that shy about my religious affiliations, but I can see why it's probably best to leave that one out." speech="" keys="any" threshold="" test="" play="B47" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, I just got this in my mail, can you tell me what kind of document is this?" speech="" media="" play="_user_,B48">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This is a credit card statement with the amount of money that Jordan owes." speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, there are dollar amounts on there and itemized activity, what type of document best fit these?" speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it! I always get these confused with my car insurance for some reason. " speech="" keys="any" threshold="" test="" play="B49" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="_user_, can you remind me what is the purpose of a credit card statement?" speech="" media="" play="_user_,B50">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This document is intended to give a record of purchases and payments. It gives the card holder a summary of how much the card has been used during the billing period, as well as the amount that is due for that billing cycle.  " speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about why you would need a statement for bills, please try again." speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes now that I think about it, having an itemized record is very helpful, even if it's quite annoying to always get these in the mail." speech="" keys="any" threshold="" test="" play="B51" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, I guess I need to pay my bill now. Which of the highlighted dates tells me when my payment is due?" speech="" media="" play="_user_,B52">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan should refer to the section titled account information. Here we can find the payment due date. This shows Jordan will need to pay his bill by November 23rd." speech="" keys="any" threshold="" test="" play="A104" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Be careful, Jordan is asking for a specific date when his payment would be due, please try again." speech="" keys="ads" threshold="" test="" play="A105" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it. For some reason I always thought the due date should be under payment information, but I guess now I know the correct place to look for due dates, thanks again. " speech="" keys="any" threshold="" test="" play="B53" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="_user_, can you tell me how much money I have left on this credit card to spend? Would it be the amount next to new purchases, credit line, or credit available? Please choose one for me." speech="" media="" play="_user_,B54">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The credit available line shows the amount Jordan currently has available on his credit card to spend on his card. # His credit available is one ninety five dollars and eight cents. And that's the maximum amount he can spend on this card right now." speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember, we are looking for the amount Jordan still has that he can spend. Please try again." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I always confuse this with the other two, but now I think I get it. New purchases are what I have spent so far, and credit line is what I can spend total. # The amount I have left to spend would be credit line subtracting new purchases which would be one ninety five and eight cents, got it." speech="" keys="any" threshold="" test="" play="B55" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="_user_, I'm checking my bill now, can you point out to me which day I did the most spending? please choose one for me." speech="" media="" play="_user_,B56">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan's largest purchase was at Grocery World on October 20th. We can find this information by comparing the amounts of the other purchases in this section. He spent a total of fifty dollars and thirty two cents on that date." speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try to compare the different amounts and choose the largest one. Try again." speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="yeah I think I may have over spent a little on that day. Thanks I needed to check that." speech="" keys="any" threshold="" test="" play="B57" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="_user_, I also remembered that I might need to pay some interest for my cash advances, can you show me where I can locate my interest rate for that?" speech="" media="" play="_user_,B58">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We can refer to finance charge summary to locate Jordan's interest rate. If we look at the other sections, there is no other place that outlines interest rates for cash advances. " speech="" keys="any" threshold="" test="" play="A110" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, interest rates are in percentages, please try again. " speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes it is a bummer that it doesn't specifically say interest rate on there, just rate so it's confusing. But I will remember that rates would be in percentages and look for that section. " speech="" keys="any" threshold="" test="" play="B59" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_, can you then let me know how much interest I would need to pay on my cash advances annually?" speech="" media="" play="_user_,B60">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If we look at the same finance charge summary as in the previous question, and find the annual percentage rate on the second column, we find that the interest Jordan will actually pay is 11.28 percent. " speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Jordan needs to know the annual rate he would need to pay, look carefully and try again." speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Wow my percentage rate seems higher than I previously thought. Good thing that I checked!" speech="" keys="any" threshold="" test="" play="B61" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="_user_, I heard from my credit card company that I don't need to pay the full amount but just the minimum amount, can you tell me what is minimum amount that I would need to pay?" speech="" media="" play="_user_,B62">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you refer back to payment information or the balance summary, you will find that Jordan will need to pay a minimum amount of eighteen dollars. This is listed next to minimum amount due. " speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Be careful to look for the minimum amount due for Jordan. Please try again." speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Oh I just found out that although I won't be charged if I just pay that eighteen dollars, my interest would go up if I don't pay the full amount. # These credit cards companies are tricky! You would end up owing them quite a lot of money if you are not careful! Thanks for helping me out again." speech="" keys="any" threshold="" test="" play="B63" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, I just got this document in my mail, can you tell me what the purpose of it is?" speech="" media="" play="_user_,B64">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This document intends to show who is a part of the contract and what it is for. In this case, it is for a rental agreement. " speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look for keywords in the document for its purpose, please try again." speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Ah, so a rental agreement will lay out every contracted agreement between the landlord and the renter, this would be very informative. " speech="" keys="any" threshold="" test="" play="B65" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="_user_, can you tell me, based on this rental agreement, how long can my buddy Nicholas and I rent this house?" speech="" media="" play="_user_,B66">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan and Nicholas are renting this property for one year. We can find this information in the first paragraph of the document. Their arrangement will begin in November 2019 and end in November 2019," speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, look under terms and try to find the date and deduce the length of rent from there. Please try again." speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Ah I see now, we are renting per month for 12 months, that's one year. I will keep that in mind." speech="" keys="any" threshold="" test="" play="B67" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, can you let me know who the land lord is? Please choose a name so I can see, thanks." speech="" media="" play="_user_,B68">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Oscar Miller is the owner of the house and in turn this makes him the landlord. The first sentence of this document outlines the roles of all the persons involved in this agreement. " speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Try searching for the keyword of land lord and find the name from there. Please try again." speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Okay, Oscar Miller, I wrote that in my notebook." speech="" keys="any" threshold="" test="" play="B69" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="_user_, I called Mr. Miller and he told me that I would have to pay a total of 1300 for the first month, I didn't get his explanation but he said to look for it in the rental agreement. # Can you tell me why I have to pay such a big amount? I thought I only had to pay six hundred and fifty. " speech="" media="" play="_user_,B70">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="They have to pay a security deposit of six hundred and fifty dollars plus the first month's rent of six hundred and fifty dollars, which totals to thirteen hundred dollars. # If we refer to section two labeled payments, we can find this information. " speech="" keys="any" threshold="" test="" play="A122" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, try look for the section that talks about payments. It should explain the amounts. Please try again." speech="" keys="any" threshold="" test="" play="A123" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Wow that's a lot. I hope I get that deposit back eventually, because I may be short on money for this." speech="" keys="any" threshold="" test="" play="B71" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="Mr. Miller said something about warning me not to give him a bad check. _user_, what does this rental agreement say will happen if i give him a bad check? Choose an answer below." speech="" media="" play="B72,_user_,B73">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="As stated under section three on late charge, Mr. Miller will handle a bad check as unpaid rent. And he would charge Jordan with additional twenty five dollars fee for the bad check. " speech="`" keys="any" threshold="" test="" play="A124" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, look for the section on any additional charges that Jordan could potentially run into. Please try again." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="That's harsh, I will be sure to check my bank balance that I have enough money for the check." speech="" keys="any" threshold="" test="" play="B74" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="_user_, I don't know if I can get enough money in time, do you know what would happens neither one of us can pay the rent by the fifth day of the month?" speech="" media="" play="_user_,B75">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to the section on late charges, failing to pay by the time stated would result in a late fee of thirty two dollars and fifty cents, which will be added to rent. " speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try to look at the section on late charges, read it carefully and please try again." speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Geez, I will have to talk to my buddy Nick about getting that payment in on time." speech="" keys="any" threshold="" test="" play="B76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_, I'm thinking maybe I can find a third housemate to split up the rent, can you tell me if the rental agreement said anything about more than two people living in the house, and if so what does it say?" speech="" media="" play="_user_,B77">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to the section labeled occupants, Jordan and Nicholas can have more than two people living with them but only if it does not exceed 15 days," speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, take a look at the section labeled occupants. Please try again." speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="That might work but I will have to talk to that third person about moving in temporarily and just pay his share of the rent for fifteen days. Thanks for letting me know." speech="" keys="any" threshold="" test="" play="B78" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="_user_, now I have to think about other fees for renting this house, do you know what services are included in the rent, does it pay utilities by any chance?" speech="" media="" play="_user_,B79">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In section nine on property maintenance, it states that the landlord will provide paid maintenance and repair. In section four, utilities, it states that the tenants are responsible for paying the utilities and for the trash pickup. " speech="" keys="any" threshold="" test="" play="A130" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at the section on utilities, read it carefully and try again." speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see, what a bummer. But at least the landlord is willing to pay for repairs. That would really be unfortunate if we had to pay for that too!" speech="" keys="any" threshold="" test="" play="B80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH9">
+      <Questions>
+        <Question id="9" agent="Jordan" text="_user_, what about pets? I do have a pet gold fish, can I keep him or is there a fee for that too?" speech="" media="" play="_user_,B81">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In section six on pets, Jordan will be able to keep his pet fish if he obtain a written consent from the Mr. Miller the owner. # And he would also need to pay an additional two hundred and fifty dollars deposit. And an extra twenty five dollars will also be added to his rent each month." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at the section on pet ownership. Read it carefully and please try again." speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm beginning to regret finding this place now. Maybe we will have to look elsewhere if it's not too late. Or I will have to give my gold fish away. " speech="" keys="any" threshold="" test="" play="B82" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH92">
+      <Questions>
+        <Question id="11" agent="Jordan" text="_user_, my buddy Nick just called and he asks if we can make any changes to the house, can you let me know?" speech="" media="" play="_user_,B83">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to section nine on alterations, no changes can be made to this house without consent. Jordan and Nicholas will need permission from Mr. Miller to change anything from the yard and landscaping to just painting the walls. " speech="" keys="any" threshold="" test="" play="A134" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at section nine. Read it carefully and try again." speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see, that makes sense, I will let him know. Thanks again." speech="" keys="any" threshold="" test="" play="B84" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="Read" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\L30Hard.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="MediumStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="SecondStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoadedEasyorHard" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="MediumStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="SecondStop" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPage2" status="LoadPage2" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoadedE" status="PageLoadedEasyorHard" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoadedH" status="PageLoadedEasyorHard" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPH" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="6000" id="3" />
+    </Rule>
+    <Rule name="CristinaAskTyping" status="AskQ" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="10000" id="3" />
+    </Rule>
+    <Rule name="CorrectT" status="UserAnswerT" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedTCorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="IncorrectT" status="UserAnswerT" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedTIncorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CorrectJordanAsked" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedJordanCorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="QAskedJordanCorrect" status="QAskedJordanCorrect" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectJordanAsked" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="1" />
+      <Action agent="System" act="SetStatus" data="JordanAskedUserAnswer2" id="2" />
+      <Action agent="System" act="WaitForEvent" data="50000" id="3" />
+    </Rule>
+    <Rule name="JordanAskedUser2Correct" status="JordanAskedUserAnswer2" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="JordanAskedUser2Incorrect" status="JordanAskedUserAnswer2" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CAskedIncorrect" status="QAskedTIncorrect" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="Answer" data="Bad" id="2" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CAskedCorrect" status="QAskedTCorrect" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition0" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Easy-E0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition0" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Difficult-D0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedEasy" status="Transition0" response="" event="MainPageLoaded2" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedDifficult" status="Transition0" response="" event="MainPageLoaded3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

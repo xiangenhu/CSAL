@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
       <SpeechCan name="PositiveFeedback">
         <Item text="That's what I think too." speech=" " play="B1" />
         <Item text="_user_, i'll go with your answer since I'm not sure about this one." speech="" play="_user_,B2" />
-        <Item text="That sounds right to me, but I don't really know. " speech="" play="B3" />
+        <Item text="That sounds right to me, but I don't really know." speech="" play="B3" />
         <Item text="_user_, I think you're right." speech="" play="_user_,B4" />
         <Item text="_user_, I am going to agree with you on this one." speech="" play="_user_,B5" />
       </SpeechCan>
@@ -18,14 +18,14 @@
       </SpeechCan>
       <SpeechCan name="PromptStart">
         <Item text="I think the answer is something like this." speech=" " play="B11" />
-        <Item text="I think I know a part of the answer. " speech=" " play="B12" />
+        <Item text="I think I know a part of the answer." speech=" " play="B12" />
       </SpeechCan>
       <SpeechCan name="Pump">
         <Item text="And can you tell me more?" speech=" " play="B13" />
         <Item text="What else?" speech=" " play="B14" />
         <Item text="Anything else?" speech=" " play="B15" />
         <Item text="Is there anything else about that?" speech=" " play="B16" />
-        <Item text="Alright. Could you elaborate on that a little?" speech=" " play="B17" />
+        <Item text="Alright. # Could you elaborate on that a little?" speech=" " play="B17" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
         <Item text="I'm not so sure about that." speech=" " play="B18" />
@@ -40,64 +40,64 @@
       <SpeechCan name="MetaCogRsp">
         <Item text="_user_, I bet you can tell me something." speech=" " play="_user_,B24" />
         <Item text="Please give it a try." speech=" " play="B25" />
-        <Item text="Could you try to give me an answer? I really need your help." speech=" " play="B26" />
+        <Item text="Could you try to give me an answer? # I really need your help." speech=" " play="B26" />
       </SpeechCan>
       <SpeechCan name="HintStart">
         <Item text="I have a question." speech=" " play="B27" />
         <Item text="Maybe you can help me." speech=" " play="B28" />
       </SpeechCan>
     </Agent>
-    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="" displayName="Cristina">
       <SpeechCan name="PositiveFeedback">
         <Item text="_user_, Yeah, that's right." speech=" " play="_user_,A1" />
         <Item text="_user_, Great." speech=" " play="_user_,A2" />
-        <Item text="_user_, Nice job ." speech=" " play="_user_,A3" />
-        <Item text="_user_, Perfect ." speech=" " play="_user_,A4" />
-        <Item text="_user_, Good answer, ." speech=" " play="_user_,A5" />
-        <Item text="_user_, Good job ." speech=" " play="_user_,A6" />
-        <Item text="_user_, Good, ." speech=" " play="_user_,A7" />
-        <Item text="_user_, Right, . Nice job." speech=" " play="_user_,A8" />
-        <Item text="_user_, Excellent, ." speech=" " play="_user_,A9" />
-        <Item text="_user_, Brilliant, ." speech=" " play="_user_,A10" />
+        <Item text="_user_, Nice job." speech=" " play="_user_,A3" />
+        <Item text="_user_, Perfect." speech=" " play="_user_,A4" />
+        <Item text="_user_, Good answer,." speech=" " play="_user_,A5" />
+        <Item text="_user_, Good job." speech=" " play="_user_,A6" />
+        <Item text="_user_, Good,." speech=" " play="_user_,A7" />
+        <Item text="_user_, Right,. # Nice job." speech=" " play="_user_,A8" />
+        <Item text="_user_, Excellent,." speech=" " play="_user_,A9" />
+        <Item text="_user_, Brilliant,." speech=" " play="_user_,A10" />
         <Item text="_user_, Great job." speech="" play="_user_,A11" />
-        <Item text="_user_, Right. super work." speech="" play="_user_,A12" />
+        <Item text="_user_, Right. # super work." speech="" play="_user_,A12" />
         <Item text="_user_, Awesome job." speech="" play="_user_,A13" />
         <Item text="_user_, you are doing great." speech="" play="_user_,A14" />
-        <Item text="_user_, nice, thats right. Great job." speech="" play="_user_,A15" />
+        <Item text="_user_, nice, thats right. # Great job." speech="" play="_user_,A15" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToJordan">
-        <Item text="ComputerStudent1, Yeah, that's right." speech=" " play="A16" />
-        <Item text="ComputerStudent1, Great." speech=" " play="A17" />
-        <Item text="ComputerStudent1, Nice job ." speech=" " play="A18" />
-        <Item text="ComputerStudent1, Perfect ." speech=" " play="A19" />
-        <Item text="ComputerStudent1, Good answer, ." speech=" " play="A20" />
-        <Item text="ComputerStudent1, Good job ." speech=" " play="A21" />
-        <Item text="ComputerStudent1, Good, ." speech=" " play="A22" />
-        <Item text="ComputerStudent1, Right, . Nice job." speech=" " play="A23" />
-        <Item text="ComputerStudent1, Excellent, ." speech=" " play="A24" />
-        <Item text="ComputerStudent1, Brilliant, ." speech=" " play="A25" />
-        <Item text="ComputerStudent1, Great job." speech="" play="A26" />
-        <Item text="ComputerStudent1, Right. super work." speech="" play="A27" />
-        <Item text="ComputerStudent1, Awesome job." speech="" play="A28" />
-        <Item text="ComputerStudent1, you are doing great." speech="" play="A29" />
-        <Item text="ComputerStudent1, nice, thats right. Great job." speech="" play="A30" />
+        <Item text="Jordan, Yeah, that's right." speech=" " play="A16" />
+        <Item text="Jordan, Great." speech=" " play="A17" />
+        <Item text="Jordan, Nice job." speech=" " play="A18" />
+        <Item text="Jordan, Perfect." speech=" " play="A19" />
+        <Item text="Jordan, Good answer,." speech=" " play="A20" />
+        <Item text="Jordan, Good job." speech=" " play="A21" />
+        <Item text="Jordan, Good,." speech=" " play="A22" />
+        <Item text="Jordan, Right,. # Nice job." speech=" " play="A23" />
+        <Item text="Jordan, Excellent,." speech=" " play="A24" />
+        <Item text="Jordan, Brilliant,." speech=" " play="A25" />
+        <Item text="Jordan, Great job." speech="" play="A26" />
+        <Item text="Jordan, Right. # super work." speech="" play="A27" />
+        <Item text="Jordan, Awesome job." speech="" play="A28" />
+        <Item text="Jordan, you are doing great." speech="" play="A29" />
+        <Item text="Jordan, nice, thats right. # Great job." speech="" play="A30" />
       </SpeechCan>
       <SpeechCan name="PositiveFeedbackToBoth">
-        <Item text="Yes, that's right. Great job you two." speech=" " play="A31" />
-        <Item text="You both got it right. Nice work." speech=" " play="A32" />
-        <Item text="Nice job. You both answered correctly this time." speech=" " play="A33" />
-        <Item text="Perfect. You were both correct. ." speech=" " play="A34" />
-        <Item text="Both of you gave the right answer. Excellent work." speech=" " play="A35" />
-        <Item text="Looks like you both chose the correct answer. Good job ." speech=" " play="A36" />
+        <Item text="Yes, that's right. # Great job you two." speech=" " play="A31" />
+        <Item text="You both got it right. # Nice work." speech=" " play="A32" />
+        <Item text="Nice job. # You both answered correctly this time." speech=" " play="A33" />
+        <Item text="Perfect. # You were both correct." speech=" " play="A34" />
+        <Item text="Both of you gave the right answer. # Excellent work." speech=" " play="A35" />
+        <Item text="Looks like you both chose the correct answer. # Good job." speech=" " play="A36" />
         <Item text="Good, you both got it right." speech=" " play="A37" />
-        <Item text="That's right. Nice job, both of you." speech=" " play="A38" />
-        <Item text="That's correct. Excellent you two. " speech=" " play="A39" />
+        <Item text="That's right. # Nice job, both of you." speech=" " play="A38" />
+        <Item text="That's correct. # Excellent you two." speech=" " play="A39" />
         <Item text="Brilliant, you both selected the correct answer." speech=" " play="A40" />
-        <Item text="Great job, thats the right answer. You both understood that one." speech="" play="A41" />
-        <Item text="Exactly you two. super work." speech="" play="A42" />
-        <Item text="Awesome job. You both gave me the right answer." speech="" play="A43" />
-        <Item text="You two are doing great. That was the correct response." speech="" play="A44" />
-        <Item text="nice, thats right. Great job you two." speech="" play="A45" />
+        <Item text="Great job, thats the right answer. # You both understood that one." speech="" play="A41" />
+        <Item text="Exactly you two. # super work." speech="" play="A42" />
+        <Item text="Awesome job. # You both gave me the right answer." speech="" play="A43" />
+        <Item text="You two are doing great. # That was the correct response." speech="" play="A44" />
+        <Item text="nice, thats right. # Great job you two." speech="" play="A45" />
       </SpeechCan>
       <SpeechCan name="MetaComRsp">
         <Item text="Once again." speech=" " play="A46" />
@@ -123,33 +123,33 @@
         <Item text="Do you need more time to think about it?" speech=" " play="A62" />
       </SpeechCan>
       <SpeechCan name="Pump">
-        <Item text="_user_, don't forget to press an answer. Try it again." speech=" " play="_user_,A63" />
+        <Item text="_user_, don't forget to press an answer. # Try it again." speech=" " play="_user_,A63" />
         <Item text="_user_, Please give it a try." speech=" " play="_user_,A64" />
         <Item text="_user_, this one can be tricky, but give it another try." speech=" " play="_user_,A65" />
-        <Item text="_user_, don't forget to press one of the answers. Try it again." speech=" " play="_user_,A66" />
-        <Item text="_user_, Please give it a try ." speech=" " play="_user_,A67" />
-        <Item text="_user_, remember if you don't press, I don't know what your answer is. Please give it another try." speech=" " play="_user_,A68" />
-        <Item text="_user_, you didn't press an answer. Can you press one now?" speech=" " play="_user_,A69" />
+        <Item text="_user_, don't forget to press one of the answers. # Try it again." speech=" " play="_user_,A66" />
+        <Item text="_user_, Please give it a try." speech=" " play="_user_,A67" />
+        <Item text="_user_, remember if you don't press, I don't know what your answer is. # Please give it another try." speech=" " play="_user_,A68" />
+        <Item text="_user_, you didn't press an answer. # Can you press one now?" speech=" " play="_user_,A69" />
         <Item text="_user_, please give it a try, even if you're not sure." speech=" " play="_user_,A70" />
         <Item text="_user_, please choose one of the answers." speech="" play="_user_,A71" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToJordan">
-        <Item text="ComputerStudent1, No. That's incorrect." speech=" " play="A72" />
-        <Item text="ComputerStudent1, that is wrong." speech="" play="A73" />
-        <Item text="ComputerStudent1, that's not right." speech="" play="A74" />
-        <Item text="ComputerStudent1, That's wrong." speech="" play="A75" />
+        <Item text="Jordan, No. # That's incorrect." speech=" " play="A72" />
+        <Item text="Jordan, that is wrong." speech="" play="A73" />
+        <Item text="Jordan, that's not right." speech="" play="A74" />
+        <Item text="Jordan, That's wrong." speech="" play="A75" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="_user_, No. That's incorrect." speech=" " play="_user_,A76" />
+        <Item text="_user_, No. # That's incorrect." speech=" " play="_user_,A76" />
         <Item text="_user_, that is wrong." speech="" play="_user_,A77" />
         <Item text="_user_, that's not right." speech="" play="_user_,A78" />
         <Item text="_user_, That's wrong." speech="" play="_user_,A79" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedbackToBoth">
-        <Item text="Sorry you two. That's incorrect." speech=" " play="A80" />
+        <Item text="Sorry you two. # That's incorrect." speech=" " play="A80" />
         <Item text="It looks like both of you got that one wrong." speech="" play="A81" />
         <Item text="Neither of you gave the correct response this time." speech="" play="A82" />
-        <Item text="No, sorry. You both chose incorrectly this time." speech="" play="A83" />
+        <Item text="No, sorry. # You both chose incorrectly this time." speech="" play="A83" />
       </SpeechCan>
       <SpeechCan name="NeutralFeedback">
         <Item text="Alright." speech=" " play="A84" />
@@ -161,7 +161,7 @@
         <Item text="Come on, I'm sure you can tell me something." speech=" " play="A88" />
         <Item text="I bet you have something to say that could answer at least part of the question." speech=" " play="A89" />
         <Item text="Come on, give me what you know, and we'll go from there." speech=" " play="A90" />
-        <Item text="Could you at least try to give me an answer? That way, we'll have something as a starting place to work from." speech=" " play="A91" />
+        <Item text="Could you at least try to give me an answer? # That way, we'll have something as a starting place to work from." speech=" " play="A91" />
         <Item text="If you give me some answer, we can start building from there." speech=" " play="A92" />
         <Item text="Try to answer, so that we have a starting point from which to build." speech=" " play="A93" />
         <Item text="If you give me some sort of an answer, we can at least start from there and build." speech=" " play="A94" />
@@ -172,7 +172,7 @@
       <SpeechCan name="HintStart">
         <Item text="This might help." speech=" " play="A96" />
         <Item text="Consider this." speech=" " play="A97" />
-        <Item text="Think about this. " speech=" " play="A98" />
+        <Item text="Think about this." speech=" " play="A98" />
         <Item text="Look at it this way." speech=" " play="A99" />
         <Item text="Let me help you a little." speech=" " play="A100" />
         <Item text="Let's try this together." speech=" " play="A101" />
@@ -196,74 +196,74 @@
   </SpeechActs>
   <RigidPacks>
     <RigidPack name="Opening1" usedIn="">
-      <Item id="1" agent="ComputerStudent1" text="Hi. I'm ComputerStudent1, and i'm very excited to start the lesson today." speech="Hi. I'm ComputerStudent1, and i'm very excited to start the lesson today." media="media\IntroTitle.html" play="B29" />
-      <Item id="2" agent="ComputerTutor" text="_user_ and ComputerStudent1, Welcome. I am ComputerTutor. I will be your instructor for todays activities." speech="_user_ and ComputerStudent1, Welcome. I am ComputerTutor. I will be your instructor for todays activities." play="_user_,A103" />
-      <Item id="3" agent="ComputerStudent1" text="_user_, Hey there. Hope you're ready for a great lesson! ComputerTutor, what are we doing today?" speech="_user_, Hey there. Hope you're ready for a great lesson! ComputerTutor, what are we doing today?" play="_user_,B30" />
-      <Item id="4" agent="ComputerTutor" text="Today, we are going to look at advertisements that use nonliteral language, We will follow the steps of the clarifying strategy to help us understand what the writer is saying." speech="Today, we are going to look at advertisements that use nonliteral langwidge, We will follow the steps of the clarifying strategy to help us understand what the writer is saying." media="media\Lesson10Close.html" play="A104" />
-      <Item id="5" agent="ComputerStudent1" text="_user_, i don't know how you feel about nonliteral language, but this sounds a bit overwhelming. I hope you can help me through this lesson. It should be useful. I see adds and commercials every day and sometimes I have no idea what in the world they are talking about. After this lesson maybe i will understand these things better." speech="_user_, i don't know how you feel about nonliteral langwidge but this sounds a bit overwhelming. I hope you can help me through this lesson. It should be useful. I see adds and commercials every day and sometimes I have no idea what in the world they are talking about. After this lesson maybe i will understand these things better." play="_user_,B31" />
-      <Item id="6" agent="ComputerTutor" text="ComputerStudent1 it won't be that bad and you are right. it will be very useful. _user_ , I think you will be a big help to ComputerStudent1 and I hope you will learn some things as well.  Alright , let's look at the first add." speech="ComputerStudent1 it won't be that bad and you are right. it will be very useful.  _user_, I think you will be a big help to ComputerStudent1 and I hope you will learn some things as well.  Alright , let's look at the first add." play="A105,_user_,A106" />
+      <Item id="1" agent="Jordan" text="Hi. I'm Jordan, and i'm very excited to start the lesson today." speech="Hi. # I'm Jordan, and i'm very excited to start the lesson today." media="media\IntroTitle.html" play="B29" />
+      <Item id="2" agent="Cristina" text="_user_ and Jordan, Welcome. I am Cristina. I will be your instructor for todays activities." speech="_user_ and Jordan, Welcome. # I am Cristina. # I will be your instructor for todays activities." play="_user_,A103" />
+      <Item id="3" agent="Jordan" text="_user_, Hey there. Hope you're ready for a great lesson! Cristina, what are we doing today?" speech="_user_, Hey there. # Hope you're ready for a great lesson! # Cristina, what are we doing today?" play="_user_,B30" />
+      <Item id="4" agent="Cristina" text="Today, we are going to look at advertisements that use nonliteral language, We will follow the steps of the clarifying strategy to help us understand what the writer is saying." speech="Today, we are going to look at advertisements that use nonliteral langwidge, # We will follow the steps of the clarifying strategy to help us understand what the writer is saying." media="media\Lesson10Close.html" play="A104" />
+      <Item id="5" agent="Jordan" text="_user_, i don't know how you feel about nonliteral language, but this sounds a bit overwhelming. I hope you can help me through this lesson. It should be useful. # I see adds and commercials every day and sometimes I have no idea what in the world they are talking about. After this lesson maybe i will understand these things better." speech="_user_, i don't know how you feel about nonliteral langwidge but this sounds a bit overwhelming. # I hope you can help me through this lesson. # It should be useful. # I see adds and commercials every day and sometimes I have no idea what in the world they are talking about. # After this lesson maybe i will understand these things better." play="_user_,B31" />
+      <Item id="6" agent="Cristina" text="Jordan it won't be that bad and you are right. it will be very useful. _user_ , I think you will be a big help to Jordan and I hope you will learn some things as well.  # Alright , let's look at the first add." speech="Jordan it won't be that bad and you are right. # it will be very useful. # _user_, I think you will be a big help to Jordan and I hope you will learn some things as well. # Alright , let's look at the first add." play="A105,_user_,A106" />
     </RigidPack>
     <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Looks like that is all the time we have for this activity. Non-literal language can be tricky but you got all the way through.  thank you so much for all your hard work. " speech="" media="media\Lesson10Close.html" play="A107" />
-      <Item id="2" agent="ComputerStudent1" text="_user_, that wasn't too bad. I think we did pretty well. You carried most of the weight today , so the credit goes to you." speech="" play="_user_,B32" />
-      <Item id="3" agent="ComputerTutor" text="Just remember to think about your clarifying strategy whenever you run into a word or phrase that is difficult to understand. The words or phrase may be a piece of non literal language and you may need to use your strategy to figure out the meaning." speech="" play="A108" />
-      <Item id="4" agent="ComputerStudent1" text="ComputerTutor, thanks. I will think about it. Bye." speech="" play="B33" />
+      <Item id="1" agent="Cristina" text="Looks like that is all the time we have for this activity. # Non-literal language can be tricky but you got all the way through. # thank you so much for all your hard work." speech="" media="media\Lesson10Close.html" play="A107" />
+      <Item id="2" agent="Jordan" text="_user_, that wasn't too bad. # I think we did pretty well. # You carried most of the weight today , so the credit goes to you." speech="" play="_user_,B32" />
+      <Item id="3" agent="Cristina" text="Just remember to think about your clarifying strategy whenever you run into a word or phrase that is difficult to understand. # The words or phrase may be a piece of non literal language and you may need to use your strategy to figure out the meaning." speech="" play="A108" />
+      <Item id="4" agent="Jordan" text="Cristina, thanks. # I will think about it. # Bye." speech="" play="B33" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TP1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," media="media\AdPerky.html" play="A109">
+        <Question id="1" agent="Cristina" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. # When you think you are ready, press on the advertisement to view the first question," media="media\AdPerky.html" play="A109">
           <Answers>
-            <Answer name="GoodAnswerByTutor" agent="ComputerTutor" type="Good" text="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. People cannot actually be turned off the way lights are turned off. The language here is non-literal and is used to help describe the effects of the pill." speech="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. People cannot actually be turned off the way lights are turned off. The langwidge here is non-literal and is used to help describe the effects of the pill." keys="good|ideal|correct, answer, tutor" threshold="" play="A110" />
-            <Answer name="GoodAnswerByStudent" agent="ComputerStudent1" type="Good" text="I think the first answer is the right one. Take one at night, be out like a light." speech="I think the first answer is the right one." keys="good|ideal, answer, student" threshold="" play="B34" />
-            <Answer name="BadAnswerByTutor" agent="ComputerStudent1" type="Bad" text="I think the third answer is right. Limited Time Offer." speech="I think the second answer is right." keys="bad|wrong|incorrect, answer, student" threshold="" play="B35" />
-            <Answer name="IrrelevantAnswerByStudent" agent="ComputerStudent1" type="Irrelevant" text="I have no idea." speech="I have no idea." keys="irrelevant, answer, student" threshold="" play="B36" />
+            <Answer name="GoodAnswerByTutor" agent="Cristina" type="Good" text="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. # People cannot actually be turned off the way lights are turned off. The language here is non-literal and is used to help describe the effects of the pill." speech="The correct answer is, take one at night, be out like a light. # This phrase does not make sense when you read it literally. # People cannot actually be turned off the way lights are turned off. # The langwidge here is non-literal and is used to help describe the effects of the pill." keys="good|ideal|correct, answer, tutor" threshold="" play="A110" />
+            <Answer name="GoodAnswerByStudent" agent="Jordan" type="Good" text="I think the first answer is the right one. Take one at night, be out like a light." speech="I think the first answer is the right one." keys="good|ideal, answer, student" threshold="" play="B34" />
+            <Answer name="BadAnswerByTutor" agent="Jordan" type="Bad" text="I think the third answer is right. Limited Time Offer." speech="I think the second answer is right." keys="bad|wrong|incorrect, answer, student" threshold="" play="B35" />
+            <Answer name="IrrelevantAnswerByStudent" agent="Jordan" type="Irrelevant" text="I have no idea." speech="I have no idea." keys="irrelevant, answer, student" threshold="" play="B36" />
           </Answers>
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready to answer the question, press the ex in the upper right hand corner to make the ad smaller. Which part of this advertisement uses nonliteral langwidge? press the correct answer." media="" play="A111">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. # Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready to answer the question, press the ex in the upper right hand corner to make the ad smaller. # Which part of this advertisement uses nonliteral langwidge? # press the correct answer." media="" play="A111">
           <Answers>
-            <Answer name="TutorGood" agent="ComputerTutor" type="Good" text="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. People cannot actually be turned off the way lights are turned off. The language here is non-literal and is used to help describe the effects of the pill." speech="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. People cannot actually be turned off the way lights are turned off. The langwidge here is non-literal and is used to help describe the effects of the pill." keys="placeholder" threshold="" play="A112" />
-            <Answer name="StudentGood" agent="ComputerStudent1" type="Good" text="I think the first answer is the right one. Take one at night, be out like a light." speech="I think the first answer is the right one. Take one at night, be out like a light." keys="placeholder" threshold="" play="B37" />
-            <Answer name="StudentBad" agent="ComputerStudent1" type="Bad" text="I think the third answer is right. Limited Time Offer." speech="I think the third answer is right. Limited Time Offer." keys="placeholder" threshold="" play="B38" />
+            <Answer name="TutorGood" agent="Cristina" type="Good" text="The correct answer is, take one at night, be out like a light. This phrase does not make sense when you read it literally. # People cannot actually be turned off the way lights are turned off. The language here is non-literal and is used to help describe the effects of the pill." speech="The correct answer is, take one at night, be out like a light. # This phrase does not make sense when you read it literally. # People cannot actually be turned off the way lights are turned off. # The langwidge here is non-literal and is used to help describe the effects of the pill." keys="placeholder" threshold="" play="A112" />
+            <Answer name="StudentGood" agent="Jordan" type="Good" text="I think the first answer is the right one. Take one at night, be out like a light." speech="I think the first answer is the right one. # Take one at night, be out like a light." keys="placeholder" threshold="" play="B37" />
+            <Answer name="StudentBad" agent="Jordan" type="Bad" text="I think the third answer is right. Limited Time Offer." speech="I think the third answer is right. # Limited Time Offer." keys="placeholder" threshold="" play="B38" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer." speech="Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer." media="" play="A113,_user_,A114">
+        <Question id="3" agent="Cristina" text="Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer." speech="Here is a follow up question about this slogan. # _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. # press the correct answer." media="" play="A113,_user_,A114">
           <Answers>
-            <Answer name="TutorGood" agent="ComputerTutor" type="Good" text="There is a comparison being made in this slogan. Similes are a type of nonliteral language that make comparisons using, like, or, as. This phrase uses the word, like, so this is a simile." speech="There is a comparison being made in this slogan. Similes are a type of nonliteral langwidge that make comparisons using, like, or, as. This phrase uses the word, like, so this is a simile." keys="good" threshold="" play="A115" />
-            <Answer name="StudentGood" agent="ComputerStudent1" type="Good" text="I think there is a comparison being made." speech="I think there is a comparison being made." keys="good" threshold="" play="B39" />
-            <Answer name="StudentBad" agent="ComputerStudent1" type="Bad" text="I don't think there's a comparison." speech="I don't think there's a comparison." keys="bad" threshold="" play="B40" />
+            <Answer name="TutorGood" agent="Cristina" type="Good" text="There is a comparison being made in this slogan. Similes are a type of nonliteral language that make comparisons using, like, or, as. This phrase uses the word, like, so this is a simile." speech="There is a comparison being made in this slogan. # Similes are a type of nonliteral langwidge that make comparisons using, like, or, as. # This phrase uses the word, like, so this is a simile." keys="good" threshold="" play="A115" />
+            <Answer name="StudentGood" agent="Jordan" type="Good" text="I think there is a comparison being made." speech="I think there is a comparison being made." keys="good" threshold="" play="B39" />
+            <Answer name="StudentBad" agent="Jordan" type="Bad" text="I don't think there's a comparison." speech="I don't think there's a comparison." keys="bad" threshold="" play="B40" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="Why is the writer comparing the reader and a light. _user_, Please press the correct response." speech="Why is the writer comparing the reader and a light. _user_, Please press the correct response." media="" play="A116,_user_,A117">
+        <Question id="5" agent="Cristina" text="Why is the writer comparing the reader and a light. _user_, Please press the correct response." speech="Why is the writer comparing the reader and a light. # _user_, Please press the correct response." media="" play="A116,_user_,A117">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The writer is making this comparison to describe the effects of the pill to the reader. The writer is trying to suggest that if you take this pill, you will fall asleep instantly, the way a light turns off instantly when a switch is pressed. " speech="The writer is making this comparison to describe the effects of the pill to the reader. The writer is trying to suggest that if you take this pill, you will fall asleep instantly, the way a light turns off instantly when a switch is pressed." keys="good" threshold="" play="A118" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the writer is describing the effects." speech="I think the writer is describing the effects." keys="good" threshold="" play="B41" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the writer is describing the color of the pill." speech="I think the writer is describing the color of the pill." keys="bad" threshold="" play="B42" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The writer is making this comparison to describe the effects of the pill to the reader. The writer is trying to suggest that if you take this pill, you will fall asleep instantly, the way a light turns off instantly when a switch is pressed. " speech="The writer is making this comparison to describe the effects of the pill to the reader. # The writer is trying to suggest that if you take this pill, you will fall asleep instantly, the way a light turns off instantly when a switch is pressed." keys="good" threshold="" play="A118" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the writer is describing the effects." speech="I think the writer is describing the effects." keys="good" threshold="" play="B41" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the writer is describing the color of the pill." speech="I think the writer is describing the color of the pill." keys="bad" threshold="" play="B42" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="What is the intended meaning of the phrase, out like a light. press the correct response." speech="What is the intended meaning of the phrase, out like a light. press the correct response." media="" play="A119">
+        <Question id="6" agent="Cristina" text="What is the intended meaning of the phrase, out like a light. press the correct response." speech="What is the intended meaning of the phrase, out like a light. # press the correct response." media="" play="A119">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of this simile is, to fall asleep quickly. The writer is using the way a light turns from on to off in an instant to suggest that the pill will help you fall asleep with a similar speed." speech="The intended meaning of this simile is, to fall asleep quickly. The writer is using the way a light turns from on to off in an instant to suggest that the pill will help you fall asleep with a similar speed." keys="placeholder" threshold="" play="A120" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the answer is, to fall asleep quickly." speech="I think the answer is, to fall asleep quickly." keys="placeholder" threshold="" play="B43" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the answer is, to turn the light off." speech="I think the answer is, to turn the light off." keys="placeholder" threshold="" play="B44" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of this simile is, to fall asleep quickly. The writer is using the way a light turns from on to off in an instant to suggest that the pill will help you fall asleep with a similar speed." speech="The intended meaning of this simile is, to fall asleep quickly. # The writer is using the way a light turns from on to off in an instant to suggest that the pill will help you fall asleep with a similar speed." keys="placeholder" threshold="" play="A120" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the answer is, to fall asleep quickly." speech="I think the answer is, to fall asleep quickly." keys="placeholder" threshold="" play="B43" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the answer is, to turn the light off." speech="I think the answer is, to turn the light off." keys="placeholder" threshold="" play="B44" />
           </Answers>
         </Question>
-        <Question id="7" agent="ComputerTutor" text="Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response." speech="Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response." media="" play="A121,_user_,A122">
+        <Question id="7" agent="Cristina" text="Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response." speech="Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. # _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? # press the correct response." media="" play="A121,_user_,A122">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The correct replacement is, take one at night to fall asleep quickly. As was hinted at in the previous questions, the writer is using the non-literal phrase to paint a picture of how fast your brain and body will shut off after taking the pill. In other words, the ad suggests if you take a pill, you will fall asleep quickly. Now we will move on to the next advertisement." speech="The correct replacement is, take one at night to fall asleep quickly. As was hinted at in the previous questions, the writer is using the non-literal phrase to paint a picture of how fast your brain and body will shut off after taking the pill. In other words, the ad suggests if you take a pill, you will fall asleep quickly. Now we will move on to the next advertisement." keys="placeholder" threshold="" play="A123" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="The answer is, take one at night to fall asleep quickly, I think," speech="The answer is, take one at night to fall asleep quickly, I think," keys="placeholder" threshold="" play="B45" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the answer is take one at night and fall asleep with the light on." speech="I think the answer is take one at night and fall asleep with the light on." keys="Placeholder" threshold="" play="B46" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The correct replacement is, take one at night to fall asleep quickly. As was hinted at in the previous questions, the writer is using the non-literal phrase to paint a picture of how fast your brain and body will shut off after taking the pill. # In other words, the ad suggests if you take a pill, you will fall asleep quickly. Now we will move on to the next advertisement." speech="The correct replacement is, take one at night to fall asleep quickly. # As was hinted at in the previous questions, the writer is using the non-literal phrase to paint a picture of how fast your brain and body will shut off after taking the pill. # In other words, the ad suggests if you take a pill, you will fall asleep quickly. # Now we will move on to the next advertisement." keys="placeholder" threshold="" play="A123" />
+            <Answer name="SG" agent="Jordan" type="Good" text="The answer is, take one at night to fall asleep quickly, I think," speech="The answer is, take one at night to fall asleep quickly, I think," keys="placeholder" threshold="" play="B45" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the answer is take one at night and fall asleep with the light on." speech="I think the answer is take one at night and fall asleep with the light on." keys="Placeholder" threshold="" play="B46" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="This is the first expectation.">
           <Answers>
-            <Answer name="GoodExpAnswerByTutor" agent="ComputerTutor" type="Good" text="This is a good answer by the tutor to the first expectation." speech="" keys="good, answer, first, expectation, tutor" threshold="" play="A124" />
-            <Answer name="GoodExpAnswerByStudent" agent="ComputerStudent1" type="Good" text="This is a good answer by the student agent to the first expectation." speech="" keys="good, answer, first, expectation, student" threshold="" play="B47" />
-            <Answer name="BadExpAnswerByStudent" agent="ComputerStudent1" type="Bad" text="This is a bad answer to the first expectation by the student agent." speech="" keys="bad, answer, first, expectation, student" threshold="" play="B48" />
-            <Answer name="IrrelevantExpAnswerByStudent" agent="ComputerStudent1" type="Irrelevant" text="This is an irrelevant answer to the first expectation by the student." speech="" keys="irrelvant, answer, first, expectation, student" threshold="" play="B49" />
+            <Answer name="GoodExpAnswerByTutor" agent="Cristina" type="Good" text="This is a good answer by the tutor to the first expectation." speech="" keys="good, answer, first, expectation, tutor" threshold="" play="A124" />
+            <Answer name="GoodExpAnswerByStudent" agent="Jordan" type="Good" text="This is a good answer by the student agent to the first expectation." speech="" keys="good, answer, first, expectation, student" threshold="" play="B47" />
+            <Answer name="BadExpAnswerByStudent" agent="Jordan" type="Bad" text="This is a bad answer to the first expectation by the student agent." speech="" keys="bad, answer, first, expectation, student" threshold="" play="B48" />
+            <Answer name="IrrelevantExpAnswerByStudent" agent="Jordan" type="Irrelevant" text="This is an irrelevant answer to the first expectation by the student." speech="" keys="irrelvant, answer, first, expectation, student" threshold="" play="B49" />
           </Answers>
           <Hints>
             <Hint id="1" agent="" text="" speech="" media="">
@@ -280,9 +280,9 @@
       <Misconceptions>
         <Misconception id="1" text="This is the first misconception.">
           <Answers>
-            <Answer name="GoodMiscAnswerByTutor" agent="ComputerTutor" type="Good" text="This is a good answer to the misconception by tutor" speech="" keys="good, answer, misconception,tutor" threshold="" />
-            <Answer name="GoodMiscAnswerByStudent" agent="ComputerStudent1" type="Good" text="This is a good answer to the misconception by student" speech="" keys="good, answer, misconception, student" threshold="" />
-            <Answer name="BadMiscAnswerByStudent" agent="ComputerStudent1" type="Bad" text="This is a bad answer to the misconception by student." speech="" keys="bad, answer, misconception, student" threshold="" />
+            <Answer name="GoodMiscAnswerByTutor" agent="Cristina" type="Good" text="This is a good answer to the misconception by tutor" speech="" keys="good, answer, misconception,tutor" threshold="" />
+            <Answer name="GoodMiscAnswerByStudent" agent="Jordan" type="Good" text="This is a good answer to the misconception by student" speech="" keys="good, answer, misconception, student" threshold="" />
+            <Answer name="BadMiscAnswerByStudent" agent="Jordan" type="Bad" text="This is a bad answer to the misconception by student." speech="" keys="bad, answer, misconception, student" threshold="" />
           </Answers>
           <Hints />
           <Prompts />
@@ -291,57 +291,57 @@
     </TutoringPack>
     <TutoringPack name="TP2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," media="media\AdGlasses.html" play="A125">
+        <Question id="1" agent="Cristina" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. # When you think you are ready, press on the advertisement to view the first question," media="media\AdGlasses.html" play="A125">
           <Answers>
-            <Answer name="GoodAnswerByTutor" agent="ComputerTutor" type="Good" text="This is a good answer from Tutor." speech="" keys="good|ideal|correct, answer, tutor" threshold="" play="A126" />
-            <Answer name="GoodAnswerByStudent" agent="ComputerStudent1" type="Good" text="This is a good answer from student." speech="" keys="good|ideal, answer, student" threshold="" play="B50" />
-            <Answer name="BadAnswerByTutor" agent="ComputerStudent1" type="Bad" text="This is a bad answer from student." speech="" keys="bad|wrong|incorrect, answer, student" threshold="" play="B51" />
-            <Answer name="IrrelevantAnswerByStudent" agent="ComputerStudent1" type="Irrelevant" text="This is an irrelevant answer from student." speech="" keys="irrelevant, answer, student" threshold="" play="B52" />
+            <Answer name="GoodAnswerByTutor" agent="Cristina" type="Good" text="This is a good answer from Tutor." speech="" keys="good|ideal|correct, answer, tutor" threshold="" play="A126" />
+            <Answer name="GoodAnswerByStudent" agent="Jordan" type="Good" text="This is a good answer from student." speech="" keys="good|ideal, answer, student" threshold="" play="B50" />
+            <Answer name="BadAnswerByTutor" agent="Jordan" type="Bad" text="This is a bad answer from student." speech="" keys="bad|wrong|incorrect, answer, student" threshold="" play="B51" />
+            <Answer name="IrrelevantAnswerByStudent" agent="Jordan" type="Irrelevant" text="This is an irrelevant answer from student." speech="" keys="irrelevant, answer, student" threshold="" play="B52" />
           </Answers>
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's first determine which phrase in this advertisement uses nonliteral language. press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question.  _user_, let's first determine which phrase in this advertisement uses nonliteral langwidge. press the correct answer." media="" play="A127,_user_,A128">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # _user_, let's first determine which phrase in this advertisement uses nonliteral language. press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # _user_, let's first determine which phrase in this advertisement uses nonliteral langwidge. # press the correct answer." media="" play="A127,_user_,A128">
           <Answers>
-            <Answer name="TutorGood" agent="ComputerTutor" type="Good" text="The correct answer is the third choice. Blind as a bat? We can fix that. This does not make sense when read literally. The ad is not really asking if you have the same eyesite as a bat, but is using the idea that bats have poor vision to describe bad eyesite." speech="The correct answer is the third choice. Blind as a bat? We can fix that. This does not make sense when red literally. The ad is not really asking if you have the same eyesite as a bat, but is using the idea that bats have poor vision to describe bad eyesite." keys="placeholder" threshold="" play="A129" />
-            <Answer name="StudentGood" agent="ComputerStudent1" type="Good" text="I am going to guess the answer is, blind as a bat? We can fix that." speech="I am going to guess the answer is, blind as a bat? We can fix that." keys="placeholder" threshold="" play="B53" />
-            <Answer name="StudentBad" agent="ComputerStudent1" type="Bad" text="I think the answer is fifty percent off frames this weekend only." speech="I think the answer is fifty percent off frames this weekend only." keys="placeholder" threshold="" play="B54" />
+            <Answer name="TutorGood" agent="Cristina" type="Good" text="The correct answer is the third choice. Blind as a bat? We can fix that. This does not make sense when read literally. # The ad is not really asking if you have the same eyesite as a bat, but is using the idea that bats have poor vision to describe bad eyesite." speech="The correct answer is the third choice. # Blind as a bat? # We can fix that. # This does not make sense when red literally. # The ad is not really asking if you have the same eyesite as a bat, but is using the idea that bats have poor vision to describe bad eyesite." keys="placeholder" threshold="" play="A129" />
+            <Answer name="StudentGood" agent="Jordan" type="Good" text="I am going to guess the answer is, blind as a bat? We can fix that." speech="I am going to guess the answer is, blind as a bat? # We can fix that." keys="placeholder" threshold="" play="B53" />
+            <Answer name="StudentBad" agent="Jordan" type="Bad" text="I think the answer is fifty percent off frames this weekend only." speech="I think the answer is fifty percent off frames this weekend only." keys="placeholder" threshold="" play="B54" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer." speech="As we know, non-literal langwidge is sometimes used to make a comparison. _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer." media="" play="A130,_user_,A131">
+        <Question id="3" agent="Cristina" text="As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer." speech="As we know, non-literal langwidge is sometimes used to make a comparison. # _user_, what do you think. # is there a comparison being made in the slogan, blind as a bat, we can fix that. # press the correct answer." media="" play="A130,_user_,A131">
           <Answers>
-            <Answer name="TutorGood" agent="ComputerTutor" type="Good" text="There is a comparison being made in this slogan. Similes are a type of nonliteral language that makes comparisons using, like, or, as. This phrase uses the word, as, so this is a simile. The simile compares the eyesite of a person who needs glasses to the eyesite of bats." speech="There is a comparison being made in this slogan. Similes are a type of nonliteral langwidge that makes comparisons using, like, or, as. This phrase uses the word, as, so this is a simile. The simile compares the eyesite of a person who needs glasses to the eyesite of bats." keys="good" threshold="" play="A132" />
-            <Answer name="StudentGood" agent="ComputerStudent1" type="Good" text="I'm willing to bet this is a comparison." speech="I'm willing to bet this is a comparison." keys="good" threshold="" play="B55" />
-            <Answer name="StudentBad" agent="ComputerStudent1" type="Bad" text="I don't think this is making a comparison." speech="I don't think this is making a comparison." keys="bad" threshold="" play="B56" />
+            <Answer name="TutorGood" agent="Cristina" type="Good" text="There is a comparison being made in this slogan. Similes are a type of nonliteral language that makes comparisons using, like, or, as. # This phrase uses the word, as, so this is a simile. The simile compares the eyesite of a person who needs glasses to the eyesite of bats." speech="There is a comparison being made in this slogan. # Similes are a type of nonliteral langwidge that makes comparisons using, like, or, as. # This phrase uses the word, as, so this is a simile. # The simile compares the eyesite of a person who needs glasses to the eyesite of bats." keys="good" threshold="" play="A132" />
+            <Answer name="StudentGood" agent="Jordan" type="Good" text="I'm willing to bet this is a comparison." speech="I'm willing to bet this is a comparison." keys="good" threshold="" play="B55" />
+            <Answer name="StudentBad" agent="Jordan" type="Bad" text="I don't think this is making a comparison." speech="I don't think this is making a comparison." keys="bad" threshold="" play="B56" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response." speech="_user_, why do  you think the is writer comparing the reader's eyesight and a bat's eyesight. Please press the correct response." media="" play="_user_,A133">
+        <Question id="5" agent="Cristina" text="_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response." speech="_user_, why do  you think the is writer comparing the reader's eyesight and a bat's eyesight. # Please press the correct response." media="" play="_user_,A133">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The writer is making this comparison in order to describe the reader's eyesight. Many people think bats can see in the dark, however they do not see very well at all. So the ad is using the comparison to suggest the reader has poor eyesite." speech="The writer is making this comparison in order to describe the reader's eyesight. Many people think bats can see in the dark, however they do not see very well at all. So the ad is using the comparison to suggest the reader has poor eyesite." keys="good" threshold="" play="A134" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="My guess is that the writer is describing the reader's eyesight." speech="My guess is that the writer is describing the reader's eyesight." keys="good" threshold="" play="B57" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the writer is describing what is fashionable." speech="I think the writer is describing what is fashionable." keys="bad" threshold="" play="B58" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The writer is making this comparison in order to describe the reader's eyesight. Many people think bats can see in the dark, however they do not see very well at all. # So the ad is using the comparison to suggest the reader has poor eyesite." speech="The writer is making this comparison in order to describe the reader's eyesight. # Many people think bats can see in the dark, however they do not see very well at all. # So the ad is using the comparison to suggest the reader has poor eyesite." keys="good" threshold="" play="A134" />
+            <Answer name="SG" agent="Jordan" type="Good" text="My guess is that the writer is describing the reader's eyesight." speech="My guess is that the writer is describing the reader's eyesight." keys="good" threshold="" play="B57" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the writer is describing what is fashionable." speech="I think the writer is describing what is fashionable." keys="bad" threshold="" play="B58" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response." speech="_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response." media="" play="_user_,A135">
+        <Question id="6" agent="Cristina" text="_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response." speech="_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. # press the correct response." media="" play="_user_,A135">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of this simile is to say that someone has bad eyesight, or someone can not see very well. By comparing the eyesite of a bat to the eyesite of a reader, the ad suggests that the reader has bad eyesite." speech="The intended meaning of this simile is to say that someone has bad eyesight, or someone can not see very well. By comparing the eyesite of a bat to the eyesite of a reader, the ad suggests that the reader has bad eyesite." keys="placeholder" threshold="" play="A136" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the correct answer is, to have bad eyesight." speech="I think the correct answer is, to have bad eyesight." keys="placeholder" threshold="" play="B59" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the correct answer is to see bats everywhere." speech="I think the correct answer is to see bats everywhere." keys="placeholder" threshold="" play="B60" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of this simile is to say that someone has bad eyesight, or someone can not see very well. # By comparing the eyesite of a bat to the eyesite of a reader, the ad suggests that the reader has bad eyesite." speech="The intended meaning of this simile is to say that someone has bad eyesight, or someone can not see very well. # By comparing the eyesite of a bat to the eyesite of a reader, the ad suggests that the reader has bad eyesite." keys="placeholder" threshold="" play="A136" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the correct answer is, to have bad eyesight." speech="I think the correct answer is, to have bad eyesight." keys="placeholder" threshold="" play="B59" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the correct answer is to see bats everywhere." speech="I think the correct answer is to see bats everywhere." keys="placeholder" threshold="" play="B60" />
           </Answers>
         </Question>
-        <Question id="7" agent="ComputerTutor" text="If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response." speech="If we wanted to replace the nonliteral language, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response." media="" play="A137,_user_,A138">
+        <Question id="7" agent="Cristina" text="If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response." speech="If we wanted to replace the nonliteral language, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? # _user_, press the correct response." media="" play="A137,_user_,A138">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The slogan that appropriately replaces the nonliteral language is, have bad eyesight? We can sell you glasses. We already saw that the phrase, blind as a bat, suggests that the reader has bad eyesite. The second part of the slogan, we can fix that, suggests the store sells glasses that will fix the bad vision." speech="The slogan that appropriately replaces the nonliteral langwidge is, have bad eyesight. We can sell you glasses. We already saw that the phrase, blind as a bat, suggests that the reader has bad eyesite. The second part of the slogan, we can fix that, suggests the store sells glasses that will fix the bad vision." keys="placeholder" threshold="" play="A139" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I bet the right answer is, have bad eyesight? We can sell you glasses." speech="I bet the right answer is, have bad eyesight? We can sell you glasses." keys="placeholder" threshold="" play="B61" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I bet the right answer is need to repair your glasses? We can do it." speech="I bet the right answer is need to repair your glasses? We can do it." keys="placeholder" threshold="" play="B62" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The slogan that appropriately replaces the nonliteral language is, have bad eyesight? We can sell you glasses. We already saw that the phrase, blind as a bat, suggests that the reader has bad eyesite. # The second part of the slogan, we can fix that, suggests the store sells glasses that will fix the bad vision." speech="The slogan that appropriately replaces the nonliteral langwidge is, have bad eyesight. # We can sell you glasses. # We already saw that the phrase, blind as a bat, suggests that the reader has bad eyesite. # The second part of the slogan, we can fix that, suggests the store sells glasses that will fix the bad vision." keys="placeholder" threshold="" play="A139" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I bet the right answer is, have bad eyesight? We can sell you glasses." speech="I bet the right answer is, have bad eyesight? # We can sell you glasses." keys="placeholder" threshold="" play="B61" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I bet the right answer is need to repair your glasses? We can do it." speech="I bet the right answer is need to repair your glasses? # We can do it." keys="placeholder" threshold="" play="B62" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
         <Expectation id="1" text="This is the first expectation.">
           <Answers>
-            <Answer name="GoodExpAnswerByTutor" agent="ComputerTutor" type="Good" text="This is a good answer by the tutor to the first expectation." speech="" keys="good, answer, first, expectation, tutor" threshold="" play="A140" />
-            <Answer name="GoodExpAnswerByStudent" agent="ComputerStudent1" type="Good" text="This is a good answer by the student agent to the first expectation." speech="" keys="good, answer, first, expectation, student" threshold="" play="B63" />
-            <Answer name="BadExpAnswerByStudent" agent="ComputerStudent1" type="Bad" text="This is a bad answer to the first expectation by the student agent." speech="" keys="bad, answer, first, expectation, student" threshold="" play="B64" />
-            <Answer name="IrrelevantExpAnswerByStudent" agent="ComputerStudent1" type="Irrelevant" text="This is an irrelevant answer to the first expectation by the student." speech="" keys="irrelvant, answer, first, expectation, student" threshold="" play="B65" />
+            <Answer name="GoodExpAnswerByTutor" agent="Cristina" type="Good" text="This is a good answer by the tutor to the first expectation." speech="" keys="good, answer, first, expectation, tutor" threshold="" play="A140" />
+            <Answer name="GoodExpAnswerByStudent" agent="Jordan" type="Good" text="This is a good answer by the student agent to the first expectation." speech="" keys="good, answer, first, expectation, student" threshold="" play="B63" />
+            <Answer name="BadExpAnswerByStudent" agent="Jordan" type="Bad" text="This is a bad answer to the first expectation by the student agent." speech="" keys="bad, answer, first, expectation, student" threshold="" play="B64" />
+            <Answer name="IrrelevantExpAnswerByStudent" agent="Jordan" type="Irrelevant" text="This is an irrelevant answer to the first expectation by the student." speech="" keys="irrelvant, answer, first, expectation, student" threshold="" play="B65" />
           </Answers>
           <Hints>
             <Hint id="1" agent="" text="" speech="" media="">
@@ -358,9 +358,9 @@
       <Misconceptions>
         <Misconception id="1" text="This is the first misconception.">
           <Answers>
-            <Answer name="GoodMiscAnswerByTutor" agent="ComputerTutor" type="Good" text="This is a good answer to the misconception by tutor" speech="" keys="good, answer, misconception,tutor" threshold="" />
-            <Answer name="GoodMiscAnswerByStudent" agent="ComputerStudent1" type="Good" text="This is a good answer to the misconception by student" speech="" keys="good, answer, misconception, student" threshold="" />
-            <Answer name="BadMiscAnswerByStudent" agent="ComputerStudent1" type="Bad" text="This is a bad answer to the misconception by student." speech="" keys="bad, answer, misconception, student" threshold="" />
+            <Answer name="GoodMiscAnswerByTutor" agent="Cristina" type="Good" text="This is a good answer to the misconception by tutor" speech="" keys="good, answer, misconception,tutor" threshold="" />
+            <Answer name="GoodMiscAnswerByStudent" agent="Jordan" type="Good" text="This is a good answer to the misconception by student" speech="" keys="good, answer, misconception, student" threshold="" />
+            <Answer name="BadMiscAnswerByStudent" agent="Jordan" type="Bad" text="This is a bad answer to the misconception by student." speech="" keys="bad, answer, misconception, student" threshold="" />
           </Answers>
           <Hints />
           <Prompts />
@@ -369,44 +369,44 @@
     </TutoringPack>
     <TutoringPack name="TP3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this next advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. When you think you are ready, press on the image to see the first question," media="media\AdOrganize.html" play="A141">
+        <Question id="1" agent="Cristina" text="Take a look at this next advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. # When you think you are ready, press on the image to see the first question," media="media\AdOrganize.html" play="A141">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="asdf" speech="asdf" keys="asdf" threshold="" play="A142" />
+            <Answer name="TG" agent="Cristina" type="Good" text="asdf" speech="asdf" keys="asdf" threshold="" play="A142" />
           </Answers>
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner. This will make the ad smaller and then you can answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer." media="" play="A143,_user_,A144">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready, press the ex in the upper right hand corner. # This will make the ad smaller and then you can answer the question. # As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. # _user_, press the correct answer." media="" play="A143,_user_,A144">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The nonliteral language used in this advertisement is, it will keep you on the ball. This phrase does not make sense when taken literally. Standing or being on top of a ball has actually nothing to do with this book. Rather, the phrase, it will keep you on the ball, makes sense only if we think about it in terms of the idea behind the book and context clues." speech="The nonliteral langwidge used in this advertisement is, it will keep you on the ball. This phrase does not make sense when taken literally. Standing or being on top of a ball has actually nothing to do with this book. Rather, the phrase, it will keep you on the ball, makes sense only if we think about it in terms of the idea behind the book and context clues." keys="placeholder" threshold="" play="A145" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I am thinking it is the third choice, it will keep you on the ball." speech="I am thinking it is the third choice, it will keep you on the ball." keys="placehold" threshold="" play="B66" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I am thinking it is the second choice, a book on how to get stuff done." speech="I am thinking it is the second choice, a book on how to get stuff done." keys="placeholder" threshold="" play="B67" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The nonliteral language used in this advertisement is, it will keep you on the ball. This phrase does not make sense when taken literally. Standing or being on top of a ball has actually nothing to do with this book. # Rather, the phrase, it will keep you on the ball, makes sense only if we think about it in terms of the idea behind the book and context clues." speech="The nonliteral langwidge used in this advertisement is, it will keep you on the ball. # This phrase does not make sense when taken literally. # Standing or being on top of a ball has actually nothing to do with this book. # Rather, the phrase, it will keep you on the ball, makes sense only if we think about it in terms of the idea behind the book and context clues." keys="placeholder" threshold="" play="A145" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I am thinking it is the third choice, it will keep you on the ball." speech="I am thinking it is the third choice, it will keep you on the ball." keys="placehold" threshold="" play="B66" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I am thinking it is the second choice, a book on how to get stuff done." speech="I am thinking it is the second choice, a book on how to get stuff done." keys="placeholder" threshold="" play="B67" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." speech="Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." media="" play="A146">
+        <Question id="3" agent="Cristina" text="Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." speech="Is there a comparison being made in the slogan, it will keep you on the ball. # press the correct answer." media="" play="A146">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="In this slogan, there is no comparison being made. Comparisons typically use words such as like or as. Idioms are a type of nonliteral language that does not make comparisons. This means that this is an idiom." speech="In this slogan, there is no comparison being made. Comparisons often use words such as like or as. Idioms are a type of nonliteral langwidge that does not make comparisons. This means that this is an idiom." keys="placeholder" threshold="" play="A147" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I don't think theres a comparison here." speech="I don't think theres a comparison here." keys="placeholder" threshold="" play="B68" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think there is a comparison here." speech="I think there is a comparison here." keys="placeholder" threshold="" play="B69" />
+            <Answer name="TG" agent="Cristina" type="Good" text="In this slogan, there is no comparison being made. Comparisons typically use words such as like or as. Idioms are a type of nonliteral language that does not make comparisons. This means that this is an idiom." speech="In this slogan, there is no comparison being made. # Comparisons often use words such as like or as. # Idioms are a type of nonliteral langwidge that does not make comparisons. # This means that this is an idiom." keys="placeholder" threshold="" play="A147" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I don't think theres a comparison here." speech="I don't think theres a comparison here." keys="placeholder" threshold="" play="B68" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think there is a comparison here." speech="I think there is a comparison here." keys="placeholder" threshold="" play="B69" />
           </Answers>
         </Question>
-        <Question id="4" agent="ComputerTutor" text="Why is the writer using this nonliteral language? Please press the correct response below." speech="Why is the writer using this nonliteral langwidge, it will keep you on the ball. Please press the correct response below." media="" play="A148">
+        <Question id="4" agent="Cristina" text="Why is the writer using this nonliteral language? Please press the correct response below." speech="Why is the writer using this nonliteral langwidge, it will keep you on the ball. # Please press the correct response below." media="" play="A148">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The writer is using this idiom to describe the purpose of this book. Just as other text in the ad such as, get organized, and, get stuff done, help describe the purpose of the book, the phrase, keep you on the ball, also describes the book's purpose." speech="The writer is using this idiom to describe the purpose of this book. Just as other text in the ad such as, get organized, and, get stuff done, help describe the purpose of the book, the phrase, keep you on the ball, also describes the book's purpose." keys="placeholder" threshold="" play="A149" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the right answer is to describe the purpose of the book." speech="I think the right answer is to describe the purpose of the book." keys="placeholder" threshold="" play="B70" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the right answer is to explain how to read the book." speech="I think the right answer is to explain how to read the book." keys="placeholder" threshold="" play="B71" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The writer is using this idiom to describe the purpose of this book. Just as other text in the ad such as, get organized, and, get stuff done, help describe the purpose of the book, the phrase, keep you on the ball, also describes the book's purpose." speech="The writer is using this idiom to describe the purpose of this book. # Just as other text in the ad such as, get organized, and, get stuff done, help describe the purpose of the book, the phrase, keep you on the ball, also describes the book's purpose." keys="placeholder" threshold="" play="A149" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the right answer is to describe the purpose of the book." speech="I think the right answer is to describe the purpose of the book." keys="placeholder" threshold="" play="B70" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the right answer is to explain how to read the book." speech="I think the right answer is to explain how to read the book." keys="placeholder" threshold="" play="B71" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="What is the intended meaning of this idiom? press the correct response." speech="What is the intended meaning of this idiom, it will keep you on the ball. press the correct response." media="" play="A150">
+        <Question id="5" agent="Cristina" text="What is the intended meaning of this idiom? press the correct response." speech="What is the intended meaning of this idiom, it will keep you on the ball. # press the correct response." media="" play="A150">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of this idiom is, to stay up to date on tasks. We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. So the phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished" speech="The intended meaning of this idiom is, to stay up to date on tasks.  We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. So the phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished" keys="placeholder" threshold="" play="A151" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the right one is to stay up to date on tasks." speech="I think the right one is to stay up to date on tasks." keys="placeholder" threshold="" play="B72" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I am thinking the right one is to not put the book down." speech="I am thinking the right one is to not put the book down." keys="placeholder" threshold="" play="B73" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of this idiom is, to stay up to date on tasks. We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. # So the phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished" speech="The intended meaning of this idiom is, to stay up to date on tasks. # We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. # So the phrase, keep you on the ball, means something similar. # Basically, it means to be more attentive and knowledgeable so you can get things accomplished" keys="placeholder" threshold="" play="A151" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the right one is to stay up to date on tasks." speech="I think the right one is to stay up to date on tasks." keys="placeholder" threshold="" play="B72" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I am thinking the right one is to not put the book down." speech="I am thinking the right one is to not put the book down." keys="placeholder" threshold="" play="B73" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="Which of these is a good replacement for the nonliteral language? Please press the correct response below." speech="Which of these is a good replacement for the nonliteral langwidge, it will keep you on the ball. Please press the correct response below." media="" play="A152">
+        <Question id="6" agent="Cristina" text="Which of these is a good replacement for the nonliteral language? Please press the correct response below." speech="Which of these is a good replacement for the nonliteral langwidge, it will keep you on the ball. # Please press the correct response below." media="" play="A152">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The appropriate replacement for this idiom is, this book will keep you on task. We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. The phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished. So the replacement, this book will keep you on task, is fitting." speech="The appropriate replacement for this idiom is, this book will keep you on task. We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. The phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished. So the replacement, this book will keep you on task, is fitting." keys="placeholder" threshold="" play="A153" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the right one is, this book will keep you on task." speech="I think the right one is, this book will keep you on task." keys="placeholder" threshold="" play="B74" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the right one is, this book this book has a lot of information." speech="I think the right one is, this book has a lot of information." keys="placeholder" threshold="" play="B75" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The appropriate replacement for this idiom is, this book will keep you on task. We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. # The phrase, keep you on the ball, means something similar. Basically, it means to be more attentive and knowledgeable so you can get things accomplished. So the replacement, this book will keep you on task, is fitting." speech="The appropriate replacement for this idiom is, this book will keep you on task. # We can use the context clues from the phrases, get organized, and, get stuff done, to help us see that book is about how to become better at doing tasks. # The phrase, keep you on the ball, means something similar. # Basically, it means to be more attentive and knowledgeable so you can get things accomplished. # So the replacement, this book will keep you on task, is fitting." keys="placeholder" threshold="" play="A153" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the right one is, this book will keep you on task." speech="I think the right one is, this book will keep you on task." keys="placeholder" threshold="" play="B74" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the right one is, this book this book has a lot of information." speech="I think the right one is, this book has a lot of information." keys="placeholder" threshold="" play="B75" />
           </Answers>
         </Question>
       </Questions>
@@ -415,42 +415,42 @@
     </TutoringPack>
     <TutoringPack name="TP4">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," media="media\AdPotato.html" play="A154">
+        <Question id="1" agent="Cristina" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. # When you think you are ready, press on the advertisement to view the first question," media="media\AdPotato.html" play="A154">
           <Answers />
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? press the correct answer." media="" play="A155">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # Which part of this advertisement uses nonliteral langwidge? # press the correct answer." media="" play="A155">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The part of this advertisement that uses nonliteral language is, the ultimate couch potato remote control. Specifically, the phrase, couch potato, is what we will be looking at. This does not really make sense when taken literally. It only makes sense if we take it non-literally and use context clues to figure out what it means." speech="The part of this advertisement that uses nonliteral langwidge is, the ultimate couch potato remote control. Specifically, the phase, couch potato, is what we will be looking at. This does not really make sense when taken literally. It only makes sense if we take it non-literally and use context clues to figure out what it means." keys="placeholder" threshold="" play="A156" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think its the ultimate couch potato remote control one." speech="I think its the ultimate couch potato remote control one." keys="placeholder" threshold="" play="B76" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the answer is, it does the work so you don't have to." speech="I think the answer is, it does the work so you don't have to." keys="placeholder" threshold="" play="B77" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The part of this advertisement that uses nonliteral language is, the ultimate couch potato remote control. Specifically, the phrase, couch potato, is what we will be looking at. This does not really make sense when taken literally. # It only makes sense if we take it non-literally and use context clues to figure out what it means." speech="The part of this advertisement that uses nonliteral langwidge is, the ultimate couch potato remote control. # Specifically, the phase, couch potato, is what we will be looking at. # This does not really make sense when taken literally. # It only makes sense if we take it non-literally and use context clues to figure out what it means." keys="placeholder" threshold="" play="A156" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think its the ultimate couch potato remote control one." speech="I think its the ultimate couch potato remote control one." keys="placeholder" threshold="" play="B76" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the answer is, it does the work so you don't have to." speech="I think the answer is, it does the work so you don't have to." keys="placeholder" threshold="" play="B77" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="Is there a comparison being made in the phrase, couch potato? press the correct answer." speech="Is there a comparison being made in the phrase, couch potato. press the correct answer." media="" play="A157">
+        <Question id="3" agent="Cristina" text="Is there a comparison being made in the phrase, couch potato? press the correct answer." speech="Is there a comparison being made in the phrase, couch potato. # press the correct answer." media="" play="A157">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="In the phrase, couch potato, there is no comparison being made. Idioms are a type of nonliteral language that does not make comparisons.That means that this is an idiom." speech="In the phrase, couch potato, there is no comparison being made. Idioms are a type of nonliteral langwidge that does not make comparisons.That means that this is an idiom." keys="placeholder" threshold="" play="A158" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think there's no comparison in this." speech="I think there's no comparison in this." keys="placeholder" threshold="" play="B78" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think there is a comparison being made in this." speech="I think there is a comparison being made in this." keys="placeholder" threshold="" play="B79" />
+            <Answer name="TG" agent="Cristina" type="Good" text="In the phrase, couch potato, there is no comparison being made. Idioms are a type of nonliteral language that does not make comparisons.That means that this is an idiom." speech="In the phrase, couch potato, there is no comparison being made. # Idioms are a type of nonliteral langwidge that does not make comparisons. # That means that this is an idiom." keys="placeholder" threshold="" play="A158" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think there's no comparison in this." speech="I think there's no comparison in this." keys="placeholder" threshold="" play="B78" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think there is a comparison being made in this." speech="I think there is a comparison being made in this." keys="placeholder" threshold="" play="B79" />
           </Answers>
         </Question>
-        <Question id="4" agent="ComputerTutor" text="Why is the writer using this nonliteral language? Please press the correct response below." speech="Why is the writer using this nonliteral langwidge? Please press the correct response below." media="" play="A159">
+        <Question id="4" agent="Cristina" text="Why is the writer using this nonliteral language? Please press the correct response below." speech="Why is the writer using this nonliteral langwidge? # Please press the correct response below." media="" play="A159">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The writer is using this idiom to talk about the benefits of buying the remote. We know this is an advertisement for a remote, and the writer is using the idiom to describe who would really like this remote." speech="The writer is using this idiom to talk about the benefits of buying the remote. We know this is an advertisement for a remote, and the writer is using the idiom to describe who would really like this remote." keys="placeholder" threshold="" play="A160" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the last answer is right. To describe the benefits of the remote." speech="I think the last answer is right. To describe the benefits of the remote." keys="placeholder" threshold="" play="B80" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the writer is explaining the cost of the remote." speech="I think the writer is explaining the cost of the remote." keys="placeholder" threshold="" play="B81" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The writer is using this idiom to talk about the benefits of buying the remote. We know this is an advertisement for a remote, and the writer is using the idiom to describe who would really like this remote." speech="The writer is using this idiom to talk about the benefits of buying the remote. # We know this is an advertisement for a remote, and the writer is using the idiom to describe who would really like this remote." keys="placeholder" threshold="" play="A160" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the last answer is right. To describe the benefits of the remote." speech="I think the last answer is right. # To describe the benefits of the remote." keys="placeholder" threshold="" play="B80" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the writer is explaining the cost of the remote." speech="I think the writer is explaining the cost of the remote." keys="placeholder" threshold="" play="B81" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="What is the intended meaning of couch potato? Please press the correct answer below." speech="What is the intended meaning of couch potato. Please press the correct answer below." media="" play="A161">
+        <Question id="5" agent="Cristina" text="What is the intended meaning of couch potato? Please press the correct answer below." speech="What is the intended meaning of couch potato. # Please press the correct answer below." media="" play="A161">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of couch potato is to stay seated. The phrase, couch potato, is generally used to describe someone who sits on the couch all day and hardly moves. That is, someone who watches tv show after tv show with out getting up." speech="The intended meaning of couch potato is to stay seated. The phrase, couch potato, is generally used to describe someone who sits on the couch all day and hardly moves. That is, someone who watches tee vee show after tee vee show with out getting up." keys="placeholder" threshold="" play="A162" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think it is the first choice, to stay seated." speech="I think it is the first choice, to stay seated." keys="placeholder" threshold="" play="B82" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think it is the second choice, to eat while sitting." speech="I think it is the second choice, to eat while sitting." keys="placeholder" threshold="" play="B83" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of couch potato is to stay seated. The phrase, couch potato, is generally used to describe someone who sits on the couch all day and hardly moves. # That is, someone who watches tv show after tv show with out getting up." speech="The intended meaning of couch potato is to stay seated. # The phrase, couch potato, is generally used to describe someone who sits on the couch all day and hardly moves. # That is, someone who watches tee vee show after tee vee show with out getting up." keys="placeholder" threshold="" play="A162" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think it is the first choice, to stay seated." speech="I think it is the first choice, to stay seated." keys="placeholder" threshold="" play="B82" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think it is the second choice, to eat while sitting." speech="I think it is the second choice, to eat while sitting." keys="placeholder" threshold="" play="B83" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, the ultimate couch potato remote control. Please press the correct response." media="" play="A163">
+        <Question id="6" agent="Cristina" text="Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, the ultimate couch potato remote control. # Please press the correct response." media="" play="A163">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="Since the non-literal phrase is couch potato, we need a phrase that means the same thing. Couch potato means sitting on the couch for long periods of time. So the best phrase to replace couch potato would be you can stay seated while watching TV with this remote." speech="Since the non-literal phrase is couch potato, we need a phrase that means the same thing. Couch potato means sitting on the couch for long periods of time. So the best phrase to replace couch potato would be you can stay seated while watching TV with this remote." keys="placeholder" threshold="" play="A164" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I bet its the third choice, you can stay seated while watching TV with this remote." speech="I bet its the third choice, you can stay seated while watching TV with this remote." keys="placeholder" threshold="" play="B84" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I bet it's the first choice, this remote allows you to eat while watching TV." speech="I bet it's the first choice, this remote allows you to eat while watching TV." keys="placeholder" threshold="" play="B85" />
+            <Answer name="TG" agent="Cristina" type="Good" text="Since the non-literal phrase is couch potato, we need a phrase that means the same thing. Couch potato means sitting on the couch for long periods of time. # So the best phrase to replace couch potato would be you can stay seated while watching TV with this remote." speech="Since the non-literal phrase is couch potato, we need a phrase that means the same thing. # Couch potato means sitting on the couch for long periods of time. # So the best phrase to replace couch potato would be you can stay seated while watching TV with this remote." keys="placeholder" threshold="" play="A164" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I bet its the third choice, you can stay seated while watching TV with this remote." speech="I bet its the third choice, you can stay seated while watching TV with this remote." keys="placeholder" threshold="" play="B84" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I bet it's the first choice, this remote allows you to eat while watching TV." speech="I bet it's the first choice, this remote allows you to eat while watching TV." keys="placeholder" threshold="" play="B85" />
           </Answers>
         </Question>
       </Questions>
@@ -459,42 +459,42 @@
     </TutoringPack>
     <TutoringPack name="TP5">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," media="media\NewAdSpa.html" play="A165">
+        <Question id="1" agent="Cristina" text="Take a look at this advertisement. When you think you are ready, press on the advertisement to view the first question," speech="Take a look at this advertisement. # When you think you are ready, press on the advertisement to view the first question," media="media\NewAdSpa.html" play="A165">
           <Answers />
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral langwidge. press the correct answer." media="" play="A166,_user_,A167">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # _user_, let's start out exploring this ad the same way as the others. # Let's determine which part of this advertisement uses nonliteral langwidge. # press the correct answer." media="" play="A166,_user_,A167">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The part of this advertisement that uses nonliteral language is, on cloud nine day spa. We will specifically look at the phrase, on cloud nine. When read literally, this does not really make sense. We will need to use context clues to figure out what cloud nine means in this ad." speech="The part of this advertisement that uses nonliteral langwidge is, on cloud nine day spa. We will specifically look at the phrase, on cloud nine. When red literally, this does not really make sense. We will need to use context clues to figure out what cloud nine means in this ad." keys="placeholder" threshold="" play="A168" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think the nonliteral language is, on cloud nine day spa." speech="I think the nonliteral langwidge is, on cloud nine day spa." keys="placeholder" threshold="" play="B86" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think the nonliteral language is, seaweed wrap." speech="I think the nonliteral langwidge is, seeweed wrap." keys="placeholder" threshold="" play="B87" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The part of this advertisement that uses nonliteral language is, on cloud nine day spa. We will specifically look at the phrase, on cloud nine. # When read literally, this does not really make sense. We will need to use context clues to figure out what cloud nine means in this ad." speech="The part of this advertisement that uses nonliteral langwidge is, on cloud nine day spa. # We will specifically look at the phrase, on cloud nine. # When red literally, this does not really make sense. # We will need to use context clues to figure out what cloud nine means in this ad." keys="placeholder" threshold="" play="A168" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think the nonliteral language is, on cloud nine day spa." speech="I think the nonliteral langwidge is, on cloud nine day spa." keys="placeholder" threshold="" play="B86" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think the nonliteral language is, seaweed wrap." speech="I think the nonliteral langwidge is, seeweed wrap." keys="placeholder" threshold="" play="B87" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="Is a comparison being made in the phrase, on cloud nine? Please press yes or no." speech="Is a comparison being made in the phrase, on cloud nine. Please press an answer." media="" play="A169">
+        <Question id="3" agent="Cristina" text="Is a comparison being made in the phrase, on cloud nine? Please press yes or no." speech="Is a comparison being made in the phrase, on cloud nine. # Please press an answer." media="" play="A169">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="There is no comparison being made in the phrase, on cloud nine. We do not see any comparison words such as, like, or, as, so this is a clue there is not a comparison being made. We do know that idioms do not make comparisons. This means that this phrase is an idiom." speech="There is no comparison being made in the phrase, on cloud nine. We do not see any comparison words such as, like, or, as, so this is a clue there is not a comparison being made. We do know that idioms do not make comparisons. This means that this phrase is an idiom." keys="placeholder" threshold="" play="A170" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think there's no comparison in this one." speech="I think there's no comparison in this one." keys="placeholder" threshold="" play="B88" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think there is a comparison in this one." speech="I think there is a comparison in this one." keys="placeholder" threshold="" play="B89" />
+            <Answer name="TG" agent="Cristina" type="Good" text="There is no comparison being made in the phrase, on cloud nine. We do not see any comparison words such as, like, or, as, so this is a clue there is not a comparison being made. # We do know that idioms do not make comparisons. This means that this phrase is an idiom." speech="There is no comparison being made in the phrase, on cloud nine. # We do not see any comparison words such as, like, or, as, so this is a clue there is not a comparison being made. # We do know that idioms do not make comparisons. # This means that this phrase is an idiom." keys="placeholder" threshold="" play="A170" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think there's no comparison in this one." speech="I think there's no comparison in this one." keys="placeholder" threshold="" play="B88" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think there is a comparison in this one." speech="I think there is a comparison in this one." keys="placeholder" threshold="" play="B89" />
           </Answers>
         </Question>
-        <Question id="4" agent="ComputerTutor" text="Why is the writer using this nonliteral language? Please press the correct response." speech="Why is the writer using this nonliteral langwidge? Please press the correct response." media="" play="A171">
+        <Question id="4" agent="Cristina" text="Why is the writer using this nonliteral language? Please press the correct response." speech="Why is the writer using this nonliteral langwidge? # Please press the correct response." media="" play="A171">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The writer is using this idiom to describe the purpose of the spa. The phrase, on cloud nine, comes right before the text, day spa, so we can guess it is being used to describe the spa. In other words, on cloud nine helps the writer convey how the spa will make someone feel if they go to it." speech="The writer is using this idiom to describe the purpose of the spa. The phrase, on cloud nine, comes right before the text, day spa, so we can guess it is being used to describe the spa. In other words, on cloud nine helps the writer convey how the spa will make someone feel if they go to it." keys="placeholder" threshold="" play="A172" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I am going to guess its the last answer, to describe the purpose of the spa." speech="I am going to guess its the last answer, to describe the purpose of the spa." keys="placeholder" threshold="" play="B90" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I am going to guess its the second answer, to describe who runs the spa." speech="I am going to guess its the second answer, to describe who runs the spa." keys="placeholder" threshold="" play="B91" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The writer is using this idiom to describe the purpose of the spa. The phrase, on cloud nine, comes right before the text, day spa, so we can guess it is being used to describe the spa. # In other words, on cloud nine helps the writer convey how the spa will make someone feel if they go to it." speech="The writer is using this idiom to describe the purpose of the spa. # The phrase, on cloud nine, comes right before the text, day spa, so we can guess it is being used to describe the spa. # In other words, on cloud nine helps the writer convey how the spa will make someone feel if they go to it." keys="placeholder" threshold="" play="A172" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I am going to guess its the last answer, to describe the purpose of the spa." speech="I am going to guess its the last answer, to describe the purpose of the spa." keys="placeholder" threshold="" play="B90" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I am going to guess its the second answer, to describe who runs the spa." speech="I am going to guess its the second answer, to describe who runs the spa." keys="placeholder" threshold="" play="B91" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="What is the intended meaning of this nonliteral language, on cloud nine? press the correct response." speech="What is the intended meaning of this nonliteral langwidge, on cloud nine. press the correct response." media="" play="A173">
+        <Question id="5" agent="Cristina" text="What is the intended meaning of this nonliteral language, on cloud nine? press the correct response." speech="What is the intended meaning of this nonliteral langwidge, on cloud nine. # press the correct response." media="" play="A173">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of this idiom is, to feel very good. Although people may go to a spa to feel healthier, the ad does not mention anything about nutrition or exercise or health. So the meaning is not to feel healthy. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. This indicates the spa wants people to think it is affordable, not very expensive. In general, spas are places people go to relax and feel peaceful. This indicates that the phrase, on cloud nine, means to feel good." speech="The intended meaning of this idiom is, to feel very good. Although people may go to a spa to feel healthier, the ad does not mention anything about nutrition or exercise or health. So the meaning is not to feel healthy. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. This indicates the spa wants people to think it is affordable, not very expensive. In general, spas are places people go to relax and feel peaceful. This indicates that the phrase, on cloud nine, means to feel good." keys="placeholder" threshold="" play="A174" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="My guess is the first choice, to feel good." speech="My guess is the first choice, to feel good." keys="placeholder" threshold="" play="B92" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="My guess is the third choice, to be very expensive." speech="My guess is the third choice, to be very expensive." keys="placeholder" threshold="" play="B93" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of this idiom is, to feel very good. Although people may go to a spa to feel healthier, the ad does not mention anything about nutrition or exercise or health. # So the meaning is not to feel healthy. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. # This indicates the spa wants people to think it is affordable, not very expensive. In general, spas are places people go to relax and feel peaceful. # This indicates that the phrase, on cloud nine, means to feel good." speech="The intended meaning of this idiom is, to feel very good. # Although people may go to a spa to feel healthier, the ad does not mention anything about nutrition or exercise or health. # So the meaning is not to feel healthy. # We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. # This indicates the spa wants people to think it is affordable, not very expensive. # In general, spas are places people go to relax and feel peaceful. # This indicates that the phrase, on cloud nine, means to feel good." keys="placeholder" threshold="" play="A174" />
+            <Answer name="SG" agent="Jordan" type="Good" text="My guess is the first choice, to feel good." speech="My guess is the first choice, to feel good." keys="placeholder" threshold="" play="B92" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="My guess is the third choice, to be very expensive." speech="My guess is the third choice, to be very expensive." keys="placeholder" threshold="" play="B93" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="Which of these is a good replacement for the nonliteral language? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, on cloud nine. Please press the correct response." media="" play="A175">
+        <Question id="6" agent="Cristina" text="Which of these is a good replacement for the nonliteral language? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, on cloud nine. # Please press the correct response." media="" play="A175">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The appropriate replacement for, on cloud nine, is, this spa will make you feel good. The ad does not mention anything about being outside or in nature besides the word cloud, but we know the word cloud is part of the non-literal phrase and is not likely to mean cloud in the typical sense. So we would not replace the phrase with, you will feel like you're outside. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. This indicates the spa wants people to think it is affordable, so the phrase, this spa costs a lot, is not a good replacement. In general, spas are places people go to relax and feel peaceful. This indicates that the phrase, on cloud nine, can be replaced with the phrase, to feel good." speech="The appropriate replacement for, on cloud nine, is, this spa will make you feel good. The ad does not mention anything about being outside or in nature besides the word cloud, but we know the word cloud is part of the non-literal phrase and is not likely to mean cloud in the typical sense. So we would not replace the phrase with, you will feel like you're outside. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. This indicates the spa wants people to think it is affordable, so the phrase, this spa costs a lot, is not a good replacement. In general, spas are places people go to relax and feel peaceful. This indicates that the phrase, on cloud nine, can be replaced with the phrase, to feel good" keys="placeholder" threshold="" play="A176" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think its the first choice, this spa will make you feel good." speech="I think its the first choice, this spa will make you feel very good." keys="placeholder" threshold="" play="B94" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think its the second choice, you will feel like you are outside." speech="I think its the second choice, you will feel like you are outside." keys="placeholder" threshold="" play="B95" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The appropriate replacement for, on cloud nine, is, this spa will make you feel good. # The ad does not mention anything about being outside or in nature besides the word cloud, but we know the word cloud is part of the non-literal phrase and is not likely to mean cloud in the typical sense. # So we would not replace the phrase with, you will feel like you're outside. We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. # This indicates the spa wants people to think it is affordable, so the phrase, this spa costs a lot, is not a good replacement. # In general, spas are places people go to relax and feel peaceful. This indicates that the phrase, on cloud nine, can be replaced with the phrase, to feel good." speech="The appropriate replacement for, on cloud nine, is, this spa will make you feel good. # The ad does not mention anything about being outside or in nature besides the word cloud, but we know the word cloud is part of the non-literal phrase and is not likely to mean cloud in the typical sense. # So we would not replace the phrase with, you will feel like you're outside. # We also see the ad is offering deals on visits to the spa, like 50 percent off seaweed wraps. # This indicates the spa wants people to think it is affordable, so the phrase, this spa costs a lot, is not a good replacement. # In general, spas are places people go to relax and feel peaceful. # This indicates that the phrase, on cloud nine, can be replaced with the phrase, to feel good" keys="placeholder" threshold="" play="A176" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think its the first choice, this spa will make you feel good." speech="I think its the first choice, this spa will make you feel very good." keys="placeholder" threshold="" play="B94" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think its the second choice, you will feel like you are outside." speech="I think its the second choice, you will feel like you are outside." keys="placeholder" threshold="" play="B95" />
           </Answers>
         </Question>
       </Questions>
@@ -503,42 +503,42 @@
     </TutoringPack>
     <TutoringPack name="TP6">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Let's move on. Here is the last advertisement we will consider. Take a look at it. When you think you are ready, press on the advertisement to view the first question," speech="Let's move on. Here is the last advertisement we will consider. Take a look at it. When you think you are ready, press on the advertisement to view the first question," media="media\AdTea.html" play="A177">
+        <Question id="1" agent="Cristina" text="Let's move on. Here is the last advertisement we will consider. Take a look at it. When you think you are ready, press on the advertisement to view the first question," speech="Let's move on. # Here is the last advertisement we will consider. # Take a look at it. # When you think you are ready, press on the advertisement to view the first question," media="media\AdTea.html" play="A177">
           <Answers />
         </Question>
-        <Question id="2" agent="ComputerTutor" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral langwidge? press the correct answer." media="" play="A178">
+        <Question id="2" agent="Cristina" text="If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # Which part of this advertisement uses nonliteral language? press the correct answer." speech="If you need to look at the image again, press on the advertisement to make it bigger. # When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. # Which part of this advertisement uses nonliteral langwidge? # press the correct answer." media="" play="A178">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The part of this advertisement that uses nonliteral language is, one sip and you're in heaven. When read literally, it does not make sense. We know that a sip of tea does not actually put us in heaven. Rather, it is a phrase the writer is using to describe the tea." speech="The part of this advertisement that uses nonliteral langwidge is, one sip and you're in heaven. When red literally, it does not make sense. We know that a sip of tea does not actually put us in heaven. Rather, it is a phrase the writer is using to describe the tee." keys="placeholder" threshold="" play="A179" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I bet its the last choice, one sip and you're in heaven." speech="I bet its the last choice, one sip and you're in heaven." keys="placeholder" threshold="" play="B96" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I bet its the first choice, international tea company." speech="I bet its the first choice, international tea company." keys="placeholder" threshold="" play="B97" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The part of this advertisement that uses nonliteral language is, one sip and you're in heaven. When read literally, it does not make sense. # We know that a sip of tea does not actually put us in heaven. Rather, it is a phrase the writer is using to describe the tea." speech="The part of this advertisement that uses nonliteral langwidge is, one sip and you're in heaven. # When red literally, it does not make sense. # We know that a sip of tea does not actually put us in heaven. # Rather, it is a phrase the writer is using to describe the tee." keys="placeholder" threshold="" play="A179" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I bet its the last choice, one sip and you're in heaven." speech="I bet its the last choice, one sip and you're in heaven." keys="placeholder" threshold="" play="B96" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I bet its the first choice, international tea company." speech="I bet its the first choice, international tea company." keys="placeholder" threshold="" play="B97" />
           </Answers>
         </Question>
-        <Question id="3" agent="ComputerTutor" text="Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no." speech="Is there a comparison being made in the slogan, one sip and you're in heaven. Please press a response." media="" play="A180">
+        <Question id="3" agent="Cristina" text="Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no." speech="Is there a comparison being made in the slogan, one sip and you're in heaven. # Please press a response." media="" play="A180">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="There is a comparison being made in this slogan even though we do not see the words like or as being used. Metaphors are a type of nonliteral language that makes comparisons without using like or as, and so this slogan is a metaphor. The ad is comparing the feeling you get from tasting the tea to the feeling you get from being in heaven." speech="There is a comparison being made in this slogan even though we do not see the words like or as being used. Metaphors are a type of nonliteral langwidge that makes comparisons without using like or as, and so this slogan is a metaphor.  The ad is comparing the feeling you get from tasting the tee to the feeling you get from being in heaven." keys="placeholder" threshold="" play="A181" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think there is a comparison here." speech="I think there is a comparison here." keys="placeholder" threshold="" play="B98" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I don't think there is a comparison here." speech="I don't think there is a comparison here." keys="placeholder" threshold="" play="B99" />
+            <Answer name="TG" agent="Cristina" type="Good" text="There is a comparison being made in this slogan even though we do not see the words like or as being used. # Metaphors are a type of nonliteral language that makes comparisons without using like or as, and so this slogan is a metaphor. # The ad is comparing the feeling you get from tasting the tea to the feeling you get from being in heaven." speech="There is a comparison being made in this slogan even though we do not see the words like or as being used. # Metaphors are a type of nonliteral langwidge that makes comparisons without using like or as, and so this slogan is a metaphor. # The ad is comparing the feeling you get from tasting the tee to the feeling you get from being in heaven." keys="placeholder" threshold="" play="A181" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think there is a comparison here." speech="I think there is a comparison here." keys="placeholder" threshold="" play="B98" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I don't think there is a comparison here." speech="I don't think there is a comparison here." keys="placeholder" threshold="" play="B99" />
           </Answers>
         </Question>
-        <Question id="5" agent="ComputerTutor" text="Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response." speech="Why is the writer comparing a sip of tee and being in heaven. Please press the correct response." media="" play="A182">
+        <Question id="5" agent="Cristina" text="Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response." speech="Why is the writer comparing a sip of tee and being in heaven. # Please press the correct response." media="" play="A182">
           <Answers>
-            <Answer name="TG" play="A183" text="Here, the writer compares a sip of tea to being in heaven to describe how drinking the tea makes the reader feel. The writer is assuming that people have an idea of what being in heaven feels like and is using this to explain the effects of the tea." agent="ComputerTutor" threshold="" keys="placeholder" type="Good" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think its the second answer, to describe how the tea makes the reader feel." speech="I think its the second answer, to describe how the tea makes the reader feel." keys="placeholder" threshold="" play="B100" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think its the third answer, to describe how to make tea." speech="I think its the third answer, to describe how to make tea." keys="placeholder" threshold="" play="B101" />
+            <Answer name="TG" play="A183" text="Here, the writer compares a sip of tea to being in heaven to describe how drinking the tea makes the reader feel. # The writer is assuming that people have an idea of what being in heaven feels like and is using this to explain the effects of the tea." agent="Cristina" threshold="" keys="placeholder" type="Good" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think its the second answer, to describe how the tea makes the reader feel." speech="I think its the second answer, to describe how the tea makes the reader feel." keys="placeholder" threshold="" play="B100" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think its the third answer, to describe how to make tea." speech="I think its the third answer, to describe how to make tea." keys="placeholder" threshold="" play="B101" />
           </Answers>
         </Question>
-        <Question id="6" agent="ComputerTutor" text="What is the intended meaning of, one sip and you're in heaven? Please press the correct response." speech="What is the intended meaning of, one sip and you're in heaven. Please press the correct response." media="" play="A184">
+        <Question id="6" agent="Cristina" text="What is the intended meaning of, one sip and you're in heaven? Please press the correct response." speech="What is the intended meaning of, one sip and you're in heaven. # Please press the correct response." media="" play="A184">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="The intended meaning of this metaphor is, to make you feel very happy and relaxed. Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel." speech="The intended meaning of this metaphor is, to make you feel very happy and relaxed. Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel." keys="placeholder" threshold="" play="A185" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I think its the second choice, to make you feel very happy and relaxed." speech="I think its the second choice, to make you feel very happy and relaxed." keys="placeholder" threshold="" play="B102" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I think its the third choice, to make you leave your house." speech="I think its the third choice, to make you leave your house." keys="placeholder" threshold="" play="B103" />
+            <Answer name="TG" agent="Cristina" type="Good" text="The intended meaning of this metaphor is, to make you feel very happy and relaxed. Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel." speech="The intended meaning of this metaphor is, to make you feel very happy and relaxed. # Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel." keys="placeholder" threshold="" play="A185" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I think its the second choice, to make you feel very happy and relaxed." speech="I think its the second choice, to make you feel very happy and relaxed." keys="placeholder" threshold="" play="B102" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I think its the third choice, to make you leave your house." speech="I think its the third choice, to make you leave your house." keys="placeholder" threshold="" play="B103" />
           </Answers>
         </Question>
-        <Question id="7" agent="ComputerTutor" text="Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, one sip and your in heaven. Please press the correct response." media="" play="A186">
+        <Question id="7" agent="Cristina" text="Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response." speech="Which of these is a good replacement for the nonliteral langwidge, one sip and your in heaven. # Please press the correct response." media="" play="A186">
           <Answers>
-            <Answer name="TG" agent="ComputerTutor" type="Good" text="Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel. Therefore, the appropriate replacement is, this tea makes you feel very happy and relaxed." speech="Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel. Therefore, the appropriate replacement is, this tea makes you feel very happy and relaxed." keys="placeholder" threshold="" play="A187" />
-            <Answer name="SG" agent="ComputerStudent1" type="Good" text="I am willing to bet its the second answer, drinking this tea makes you feel very happy and relaxed." speech="I am willing to bet its the second answer, drinking this tea makes you feel very happy and relaxed." keys="placeholder" threshold="" play="B104" />
-            <Answer name="SB" agent="ComputerStudent1" type="Bad" text="I am willing to bet its the third answer, this tea is from all over the world." speech="I am willing to bet its the third answer, this tea is from all over the world." keys="placeholder" threshold="" play="B105" />
+            <Answer name="TG" agent="Cristina" type="Good" text="Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel. # Therefore, the appropriate replacement is, this tea makes you feel very happy and relaxed." speech="Since the writer is comparing a sip or tea and heaven, we know the writer is trying to convey that the tea will make you feel positive and good- all the ways heaven would make you feel. # Therefore, the appropriate replacement is, this tea makes you feel very happy and relaxed." keys="placeholder" threshold="" play="A187" />
+            <Answer name="SG" agent="Jordan" type="Good" text="I am willing to bet its the second answer, drinking this tea makes you feel very happy and relaxed." speech="I am willing to bet its the second answer, drinking this tea makes you feel very happy and relaxed." keys="placeholder" threshold="" play="B104" />
+            <Answer name="SB" agent="Jordan" type="Bad" text="I am willing to bet its the third answer, this tea is from all over the world." speech="I am willing to bet its the third answer, this tea is from all over the world." keys="placeholder" threshold="" play="B105" />
           </Answers>
         </Question>
       </Questions>
@@ -555,7 +555,7 @@
     </Rule>
     <Rule name="Tutoring" status="GetTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="AskMainQuestion. To LoadMedia">
       <Action agent="System" act="SetStatus" data="LoadMedia" id="1" />
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
       <Action agent="System" act="WaitForEvent" data="5" id="3" />
     </Rule>
     <Rule name="MainPage" status="LoadMedia" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="Main page loaded. A img pops up. Waiting for user to press. To WaitToLeaveMainPage">
@@ -564,7 +564,7 @@
     </Rule>
     <Rule name="LeaveMainPage" status="LoadMedia" response="" event="LeaveMainPage" hasItem="" priority="" frequency="" description="Page loaded and img pressed. To StartItem">
       <Action agent="System" act="SetStatus" data="StartItem" id="1" />
-      <Action agent="ComputerTutor" act="GetRule" data="" id="2" />
+      <Action agent="Cristina" act="GetRule" data="" id="2" />
     </Rule>
     <Rule name="LeaveMainPage1" status="WaitToLeaveMainPage" response="" event="LeaveMainPage" hasItem="" priority="1" frequency="img pressed. To StartItem rule." description="">
       <Action agent="System" act="SetStatus" data="StartItem" id="1" />
@@ -574,103 +574,105 @@
       <Action agent="System" act="SetStatus" data="StartItem" id="1" />
       <Action agent="System" act="GetMediaItem" data="" id="2" />
       <Action agent="System" act="ShowMediaItem" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="20" />
     </Rule>
     <Rule name="StartItem" status="StartItem" response="" event="" hasItem="" priority="" frequency="" description="AskMainQuestion for each item and wait. To WaitForAnswer">
-      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="1" />
       <Action agent="System" act="SetStatus" data="WaitForAnswer" id="2" />
       <Action agent="System" act="WaitForEvent" data="30" id="3" />
     </Rule>
     <Rule name="CorrectJC" status="WaitForAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="both correct, positive feedback, good answer. To next item.">
-      <Action agent="ComputerStudent1" act="GiveFeedback" data="PositiveFeedback" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToBoth" id="2" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="4" />
+      <Action agent="Cristina" act="Answer" data="Good" id="4" />
       <Action agent="System" act="SetStatus" data="GetItem" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="CorrectJI" status="WaitForAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="user correct, jordan incorrect, eedback, good answer. To next item.">
-      <Action agent="ComputerStudent1" act="Answer" data="Bad" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="3" />
+      <Action agent="Jordan" act="Answer" data="Bad" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedback" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
+      <Action agent="Cristina" act="Answer" data="Good" id="5" />
       <Action agent="System" act="SetStatus" data="GetItem" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="IncorrectJC" status="WaitForAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="user incorrect, jordan correct. feedback, correct answer. To next item.">
-      <Action agent="ComputerStudent1" act="Answer" data="Good" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="3" />
+      <Action agent="Jordan" act="Answer" data="Good" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="3" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
+      <Action agent="Cristina" act="Answer" data="Good" id="5" />
       <Action agent="System" act="SetStatus" data="GetItem" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="IncorrectJI" status="WaitForAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="user incorrect, jordan correct. feedback, correct answer. To next item.">
-      <Action agent="ComputerStudent1" act="Answer" data="Bad" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
+      <Action agent="Jordan" act="Answer" data="Bad" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToBoth" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="4" />
+      <Action agent="Cristina" act="Answer" data="Good" id="4" />
       <Action agent="System" act="SetStatus" data="GetItem" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="unsureJC" status="WaitForAnswer" response="" event="unsure" hasItem="" priority="1" frequency="" description="user unsure, jordan correct.  feedback, correct answer. To next item.">
-      <Action agent="ComputerStudent1" act="Answer" data="Good" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
+      <Action agent="Jordan" act="Answer" data="Good" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToJordan" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="5" />
+      <Action agent="Cristina" act="Answer" data="Good" id="5" />
       <Action agent="System" act="SetStatus" data="GetItem" id="6" />
       <Action agent="System" act="GetRule" data="" id="7" />
     </Rule>
     <Rule name="unsureJI" status="WaitForAnswer" response="" event="unsure" hasItem="" priority="1" frequency="" description="user unsure, jordan incorrect.  feedback, correct answer. To next item.">
-      <Action agent="ComputerStudent1" act="Answer" data="Bad" id="1" />
-      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
+      <Action agent="Jordan" act="Answer" data="Bad" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbackToJordan" id="2" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="4" />
+      <Action agent="Cristina" act="Answer" data="Good" id="4" />
       <Action agent="System" act="SetStatus" data="GetItem" id="5" />
       <Action agent="System" act="GetRule" data="" id="6" />
     </Rule>
     <Rule name="Blank" status="WaitForAnswer" response="" event="" hasItem="" priority="2" frequency="" description="Otherwise rule. Pump and to WaitForAnswer1 rule.">
-      <Action agent="ComputerTutor" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="Pump" id="1" />
       <Action agent="System" act="SetStatus" data="WaitForAnswer1" id="2" />
       <Action agent="System" act="WaitForEvent" data="30" id="3" />
     </Rule>
     <Rule name="Correct1" status="WaitForAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="" description="Pumped answer correct. Positve feedback, correct answer. To next item.">
-      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="PositiveFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="SetStatus" data="GetItem" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="Incorrect1" status="WaitForAnswer1" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="Pumped answer incorrect, neutral feedback, correct answer. To next item.">
-      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="SetStatus" data="GetItem" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="unsure1" status="WaitForAnswer1" response="" event="unsure" hasItem="" priority="1" frequency="" description="Pumped answer unsure, neutral feedback, correct answer. To next item.">
-      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="SetStatus" data="GetItem" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="Blank1" status="WaitForAnswer1" response="" event="" hasItem="" priority="2" frequency="" description="Otherwise rule for pump. To next item.">
-      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="NeutralFeedback" id="1" />
       <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
-      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="Cristina" act="Answer" data="Good" id="3" />
       <Action agent="System" act="SetStatus" data="GetItem" id="4" />
       <Action agent="System" act="GetRule" data="" id="5" />
     </Rule>
     <Rule name="GetItem" status="GetItem" response="" event="" hasItem="" priority="" frequency="" description="Check if there is more item. To nextitem rules.">
       <Action agent="System" act="SetStatus" data="NextItem" id="1" />
       <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="5" id="3" />
     </Rule>
     <Rule name="HasItem" status="NextItem" response="" event="Continue" hasItem="" priority="1" frequency="" description="There is next item. Show item. To StartItem rule.">
       <Action agent="System" act="ShowMediaItem" data="" id="1" />
       <Action agent="System" act="SetStatus" data="StartItem" id="2" />
-      <Action agent="System" act="GetRule" data="" id="3" />
+      <Action agent="System" act="GetRule" data="" id="20" />
     </Rule>
     <Rule name="NoMoreItem" status="NextItem" response="" event="Stop" hasItem="" priority="2" frequency="" description="Item on the page finished. Go to next tutoring pack.">
       <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
@@ -680,6 +682,7 @@
     <Rule name="Closing" status="GetTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
       <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
       <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="20" />
     </Rule>
     <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="End" data="" id="2" />

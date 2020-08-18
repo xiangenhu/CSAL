@@ -1,104 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-		
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<!--CHANGE TITLE HERE, ONLY VIEWABLE IN BROWSER THOUGH-->
+		<title>L9Activity_Opening</title>
 		<style>
-			.bold{font-weight: bold;}
 			body
 			{
-				background-color: #eefdfd;
+				/*----PLEASE USE ONE OF THESE FONTS, DELETE ONE IF YOU DONT LIKE IT----*/
+				/*MUST ADD NEW GOOGLE FONT HERE IF INCLUDED - SEE BELOW*/
+				font-family: 'Muli', Tahoma, 'Lucida Sans', Serif;
+				
+				/*-----CHANGE FONT SIZE HERE-----*/
+				font-size: 30px;
+				
+				/*----CHANGE 'NONE' TO 'BOLD' IF YOU WANT BOLD TEXT----*/
+				font-weight: none;
+				/*---------------------------------------------------------------------*/
+				
+				background-image:url('TabletBkgd.png');
+				background-repeat:no-repeat;
+				background-position:center-top;
 				overflow: hidden;
-				position: relative;
+			}
+			.qheader
+			{
+				/*----CHANGES HOW FAR THE TEXT IS FROM THE TOP OF THE TABLET----*/
+				padding-top:10px;
+				/*--------------------------------------------------------------*/
+				
+				margin-left: auto;
+				margin-right: auto;
+			}
+			img
+			{
+				/*  ADJUST IMAGE SIZE HERE */
+				height: 450px;
+			}
+			.question
+			{
+				/*----CHANGES HOW FAR THE BKGD IMG & TEXT ARE FROM THE TOP OF THE TABLET----*/
+				margin-top: -80px;
+				
+				/* -------------------------------*/
+				/*  NO NEED TO EDIT BETWEEN LINES */
+				/* -------------------------------*/
+				width: 715px;
+				height: 567px;
 				text-align: center;
-				font-family: Lora, Verdana, 'Times New Roman';
-			}
-			.chart
-			{
-				margin: 20px 0px;
-				width: 100%;
-			}
-			#lessonFocus
-			{
-				background-color: #FFFF39;
-				border: 2px solid white;
-			}
-			.heading
-			{
-				width: 90%;
-				margin: 10px auto;
-				padding: 10px 20px;
-				border-radius: 12px;
-				font-size: 40px;
-			}
-			#heading1 { background-color: #f26565; }
-			#heading2 { background-color: #6ae16d; }
-			#heading3 { background-color: #397cf6; }
-			.subHead
-			{
-				font-size: 24px;
-			}
-			.miniHeadContainer
-			{
-				width: 98%;
-				margin: 10px 0px;
-				padding: 10px;
-			}
-			.miniHead
-			{
-				background-color: #FFFF9B;
-				width: 29%;
-				height: 70px;
-				line-height: 35px;
-				vertical-align: top;
-				font-size: 23px;
-				display: inline-block;
-				border-radius: 12px;
-				padding: 5px 1%;
-				margin: 0px 3px;
-			}
-			#miniHead2
-			{
-				font-size: 28px;
-				line-height: 70px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				/* -------------------------------*/
 			}
 		</style>
+
 		<script>
-			$(document).ready(function()
-			{				
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
 				
-			});
+				return window.external.GetWorldEvent(results);
+			}
 		</script>
+
 	</head>
+
 	<body>
-		<div class="chart">
-			<div id="heading1" class="heading">
-				<span class="bold">Stop and Label</span>
-				<div class="subHead">the source of confusion</div>
+		<!-- IMPORT DIFFERENT GOOGLE FONTS HERE, SPACES BECOME +'s -->
+		<!-- http://www.google.com/fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+		
+		<div class="question" style="">
+			<br><br>
+			<div class="qheader" style="margin-left:0px;">
 			
-				<div class="miniHeadContainer">
-					<div class="bold miniHead" id="lessonFocus">
-						Multiple Meaning<br>Words
-					</div>
-					<div class="miniHead" id="miniHead2">
-						Pronouns
-					</div>
-					<div class="miniHead">
-						Nonliteral<br>Language
-					</div>
-				</div>
+			<!-- CHANGE IMAGE HERE  -->
+			<img src="L9Activity_Opening.png">
+			
+			<!--  EDIT DISTANCE BETWEEN IMAGE & TEXT HERE  -->
+			<span style="font-size:16px;"><br><br></span>
+			
+			<!-- EDIT THE MAIN TEXT HERE  -->
+				
+	
 			</div>
-			<div id="heading2" class="heading">
-				<span class="bold">Reread and Clarify</span>
-				<div class="subHead">with clarifying questions</div>
-			</div>
-			<div id="heading3" class="heading">
-				<span class="bold">Replace and Check</span>
-				<div class="subHead">to make sense</div>
-			</div>
+			<br><br>
 		</div>
 	</body>
 </html>
+
+
+
+

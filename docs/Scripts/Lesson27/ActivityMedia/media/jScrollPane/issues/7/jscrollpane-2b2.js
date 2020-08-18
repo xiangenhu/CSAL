@@ -1,6 +1,6 @@
 /*!
  * jScrollPane - v2.0.0beta2 - 2010-08-19
- * https://jscrollpane.kelvinluck.com/
+ * http://jscrollpane.kelvinluck.com/
  *
  * Copyright (c) 2010 Kelvin Luck
  * Dual licensed under the MIT or GPL licenses.
@@ -10,28 +10,28 @@
 //
 // *Version: 2.0.0beta2, Last updated: 2010-08-19*
 //
-// Project Home - https://jscrollpane.kelvinluck.com/
-// GitHub       - https://github.com/vitch/jScrollPane
-// Source       - https://github.com/vitch/jScrollPane/raw/master/script/jquery.jscrollpane.js
-// (Minified)   - https://github.com/vitch/jScrollPane/raw/master/script/jquery.jscrollpane.min.js
+// Project Home - http://jscrollpane.kelvinluck.com/
+// GitHub       - http://github.com/vitch/jScrollPane
+// Source       - http://github.com/vitch/jScrollPane/raw/master/script/jquery.jscrollpane.js
+// (Minified)   - http://github.com/vitch/jScrollPane/raw/master/script/jquery.jscrollpane.min.js
 //
 // About: License
 //
 // Copyright (c) 2010 Kelvin Luck
 // Dual licensed under the MIT or GPL Version 2 licenses.
-// https://jscrollpane.kelvinluck.com/MIT-LICENSE.txt
-// https://jscrollpane.kelvinluck.com/GPL-LICENSE.txt
+// http://jscrollpane.kelvinluck.com/MIT-LICENSE.txt
+// http://jscrollpane.kelvinluck.com/GPL-LICENSE.txt
 //
 // About: Examples
 //
 // All examples and demos are available through the jScrollPane example site at:
-// https://jscrollpane.kelvinluck.com/
+// http://jscrollpane.kelvinluck.com/
 //
 // About: Support and Testing
 //
 // This plugin is tested on the browsers below and has been found to work reliably on them. If you run
 // into a problem on one of the supported browsers then please visit the support section on the jScrollPane
-// website (https://jscrollpane.kelvinluck.com/) for more information on getting support. You are also
+// website (http://jscrollpane.kelvinluck.com/) for more information on getting support. You are also
 // welcome to fork the project on GitHub if you can contribute a fix for a given issue.
 //
 // jQuery Versions - 1.4.2

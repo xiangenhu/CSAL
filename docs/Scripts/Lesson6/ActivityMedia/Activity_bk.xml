@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="awesome job. You got it right." speech="" play="B1" />
+        <Item text="super work. You got it right." speech="" play="B2" />
+        <Item text="great job! You got it right. Thanks for helping me." speech="" play="B3" />
+        <Item text="you answered correctly! Awesome job!" speech="" play="B4" />
+        <Item text="amazing work. You're good at this! You picked the right answer." speech="" play="B5" />
+        <Item text="great job! you got that one right." speech="" play="B6" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackUs">
+        <Item text="yes! We answered the question right! Great job!" speech="" play="B7" />
+        <Item text="We did it! We answered the question correctly!" speech="" play="B8" />
+        <Item text="great job. we answered the question correctly!" speech="" play="B9" />
+        <Item text="yes! we both picked the correct answer!" speech="" play="B10" />
+        <Item text="we both picked the right answer!" speech="" play="B11" />
+        <Item text="were awesome. we picked the same answer! And it was right!" speech="" play="B12" />
+        <Item text="were awesome we picked the same answer! And it was correct!" speech="" play="B13" />
+        <Item text="Amazing! We both answered correctly!" speech="" play="B14" />
+        <Item text="Sweet. We answered correctly! Great job!" speech="" play="B15" />
+        <Item text="We answered the question correctly! This is great!" speech="" play="B16" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B17" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_,  try to answer the question." speech="" play="_user_,B18" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="Um...  I don't think that's the right answer. Can you try again?" speech="" play="B19" />
+        <Item text="Um... Can you try a different answer? I don't think that was the right one. " speech="" play="B20" />
+        <Item text="Try again.  I don't think that was the right answer." speech="" play="B21" />
+        <Item text="I don't think that was right! Try a different answer." speech="" play="B22" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUser">
+        <Item text="_user_, you answered correctly! good job!" speech="" play="_user_,B23" />
+        <Item text="_user_, you got the right definition." speech="" play="_user_,B24" />
+        <Item text="_user_, Looks like you answered correctly. awesome job!" speech="" play="_user_,B25" />
+        <Item text="_user_, Great ! You answered correctly! " speech="" play="_user_,B26" />
+        <Item text="_user_, thanks. You picked the right definition for the word I didn't understand." speech="" play="_user_,B27" />
+        <Item text="_user_, Awesome! I guess you chose the right answer. " speech="" play="_user_,B28" />
+        <Item text="_user_, Amazing job! You picked the right definition!" speech="" play="_user_,B29" />
+        <Item text="_user_, good job! You picked the right definition." speech="" play="_user_,B30" />
+        <Item text="_user_, Wow,  you picked the right definition. I'm impressed." speech="" play="_user_,B31" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok, here is the correct answer." speech="" play="A1" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="That's right. great job!" speech="" play="A2" />
+        <Item text="Amazing! You answered the question correctly." speech="" play="A3" />
+        <Item text="you are doing an amazing job. You answered the question correctly." speech="" play="A4" />
+        <Item text="Wonderful! You answered the question correctly." speech="" play="A5" />
+        <Item text="you are doing a great job. You answered correctly." speech="" play="A6" />
+        <Item text="Perfect! You answered the question correctly." speech="" play="A7" />
+        <Item text="Great! You answered correctly." speech="" play="A8" />
+        <Item text="you picked the right answer, great work." speech="" play="A9" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToBoth">
+        <Item text="Great job both of you!" speech="" play="A10" />
+        <Item text="You both did great. Keep it up." speech="" play="A11" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="sorry. that wasn't the right definition." speech="" play="A12" />
+        <Item text="The definition you chose was not correct." speech="" play="A13" />
+        <Item text="Sorry, it Looks like you picked the wrong definition." speech="" play="A14" />
+        <Item text="Your answer was not correct." speech="" play="A15" />
+      </SpeechCan>
+      <SpeechCan name="ThatsRightJordan">
+        <Item text="Jordan, that's right." speech="" play="A16" />
+        <Item text="Jordan, yes. Thats right." speech="" play="A17" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_,  try your best and answer the question." speech="" play="_user_,A18" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUserOnly">
+        <Item text="_user_, You selected the correct answer, good job!" speech="" play="_user_,A19" />
+        <Item text="_user_, You answered correctly. Keep up the good work!" speech="" play="_user_,A20" />
+        <Item text="_user_, Great job!" speech="" play="_user_,A21" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackUserNotJordan">
+        <Item text="Jordan, sorry that was the right answer. _user_, good job!" speech="" play="A22,_user_,A23" />
+        <Item text="Jordan, no, that was correct. _user_ you selected the correct definition. Good job! " speech="" play="A24,_user_,A25" />
+        <Item text="No Sorry Jordan, that was right. _user_, great job!" speech="" play="A26,_user_,A27" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="sorry Jordan, that was not right." speech="" play="A28" />
+        <Item text="Jordan you were actually incorrect." speech="" play="A29" />
+        <Item text="Jordan you were not correct!" speech="" play="A30" />
+        <Item text="Jordan you were not right." speech="" play="A31" />
+        <Item text="Jordan you were wrong." speech="" play="A32" />
+        <Item text="Sorry Jordan that wasn't right." speech="" play="A33" />
+        <Item text="Jordan that's not right." speech="" play="A34" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_ , did you need more time clicking?" speech="" play="_user_,A35" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Opening1.4" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B32" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence." speech="" play="A36" />
+	  <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition9999" usedIn="">
+      <Item id="1" agent="Cristina" text="Ok, let's go on to the next word." speech="" play="A37" />
+    </RigidPack>
+    <RigidPack name="Opening1.2" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B33" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence." speech="" play="A38" />
+	    <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="OpeningB" usedIn="">
+      <Item id="1" agent="Cristina" text="Next you have to create your own definition for the word based on the context clues. # This definition can be as short or as long as you'd like. just as long as it helps you define the word you don't know." speech="" play="A39" />
+    </RigidPack>
+    <RigidPack name="Opening1.1" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, this next article is about Earth! I'm having trouble with a few words in this article too. I hope you don't mind helping me again!" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B34" />
+      <Item id="2" agent="Cristina" text="When helping Jordan define words, Keep in mind our flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence. " speech="" play="A40" />
+	   <Item id="3" agent="Cristina" text="Go ahead and read the article and click to continue when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="Jordan" text="I have another word to define." speech="" play="B35" />
+      <Item id="2" agent="Cristina" text="Great! Let's keep going then!" speech="" play="A41" />
+    </RigidPack>
+    <RigidPack name="Opening12" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B36" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence." speech="" play="A42" />
+	   <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="Jordan" text="ok everyone,  after this next word I only have one more I'd like defined for this article!" speech="" play="B37" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Cristina" text="good. seems like you both understand that one. Let's move on. Jordan, Which word do you have highlighted next?" speech="" play="A43" />
+      <Item id="2" agent="Jordan" text="I will show you. hold on... let me find it." speech="" play="B38" />
+    </RigidPack>
+    <RigidPack name="OpeningA" usedIn="">
+      <Item id="1" agent="Cristina" text="Jordan, yes. Take a look at this chart that describes steps to defining words you don't know." speech="" play="A44" />
+      <Item id="2" agent="Cristina" text="Step 1 shows us that we have to find context clues. You do this by looking for words or phrases in the surrounding sentences in a passage. " speech="" play="A45" />
+	   <Item id="3" agent="Cristina" text="You can find words that have similar or different meanings that will help you figure out the definition of the word you don't know. " speech="" play="" />
+      <Item id="4" agent="Jordan" text="So context clues are kind of like little hints that guide us to the possible definition of a word! Got it!" speech="" play="B39" />
+      <Item id="5" agent="Cristina" text="In this activity if you are struggling with finding context clues, # I will help you by flashing certain context clues in the passage to help you figure out the definition. " speech="" play="A46" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, hi. How are you today!?" speech="" media="media/Lesson6-IntroTitle.html " play="_user_,A47" />
+      <Item id="2" agent="Jordan" text="Cristina, hey. We are doing great! Recently, I have been really interested in space. # I found a few articles, but I am having trouble understanding some of the words. Can you two help me with the ones I don't know?" speech="" play="B40" />
+      <Item id="3" agent="Cristina" text="Sure. Today we can try defining words by looking at context clues in the text." speech="" play="A48" />
+      <Item id="4" agent="Jordan" text="Cristina, can you explain?" speech="" play="B41" />
+    </RigidPack>
+    <RigidPack name="Transition99999999" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_, you are doing a great job helping Jordan define words. I hope you are having fun helping him." speech="" play="_user_,A49" />
+      <Item id="2" agent="Jordan" text="Yes, Thank you ! You are a huge help! Here is another word." speech="" play="B42" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="This is great. I'm so happy that you are helping Jordan define new words . Let's keep going." speech="" play="A50" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Jordan, do you feel like you are learning how to use context clues to define new words?" speech="" play="A51" />
+      <Item id="2" agent="Jordan" text="I think so but it's too soon to tell. I'd like to show both of you more words and practice defining them." speech="" play="B43" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text="Jordan what is the next word you need help with?" speech="" play="A52" />
+      <Item id="2" agent="Jordan" text="Oh.Let me find it. I'll show you in one second." speech="" play="B44" />
+    </RigidPack>
+    <RigidPack name="Opening1.32" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B45" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence." speech="" play="A53" />
+	   <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="A53" />
+    </RigidPack>
+    <RigidPack name="Transition99999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_,  you are  really helping Jordan by defining the words for him." speech="" play="_user_,A54" />
+      <Item id="2" agent="Jordan" text="Yeah. Thanks so much. This is helping a lot." speech="" play="B46" />
+    </RigidPack>
+    <RigidPack name="Transition999" usedIn="">
+      <Item id="1" agent="Jordan" text="I have a second word I need defined !" speech="" play="B47" />
+      <Item id="2" agent="Cristina" text="Let's see it!" speech="" play="A55" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B48" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence. " speech="" play="A56" />
+	   <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition9999999999" usedIn="">
+      <Item id="1" agent="Jordan" text="ok. I have only a few more words that I need help with! We are close to the bottom of the article!" speech="" play="B49" />
+    </RigidPack>
+    <RigidPack name="Transition" usedIn="">
+      <Item id="1" agent="Jordan" text="Cristina, What does the word untidy mean anyway?" speech="" play="B50" />
+      <Item id="2" agent="Cristina" text="The word untidy means that something is messy." speech="" play="A57" />
+      <Item id="3" agent="Jordan" text="Got it! So for example, my room is untidy because there are clothes all over the ground and candy wrappers and stuff, Also i never make my bed." speech="" play="B51" />
+      <Item id="4" agent="Cristina" text="Exactly! Now let's see another word you are having trouble defining." speech="" play="A58" />
+    </RigidPack>
+    <RigidPack name="Opening1.5" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B52" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. # finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence." speech="" play="A59" />
+	   <Item id="3" agent="Cristina" text="Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition999999999" usedIn="">
+      <Item id="1" agent="Jordan" text="Let's keep going, I have another word. " speech="" play="B53" />
+      <Item id="2" agent="Cristina" text="Ok great. By going through all of the words that Jordan does not know we are gaining a better understanding for the article and the topic of the article." speech="" play="A60" />
+    </RigidPack>
+    <RigidPack name="Transition99" usedIn="">
+      <Item id="1" agent="Jordan" text="That's the last word for the Galaxies article you guys!" speech="" play="B54" />
+      <Item id="2" agent="Cristina" text="Jordan, let's see your second article!" speech="" play="A61" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This next article is about Black Holes! I hope you can still help me with the hard words !" speech="" media="media/Lesson6-Main1-0.html" play="_user_,B55" />
+      <Item id="2" agent="Cristina" text="You will be doing the same thing you did in the last article. Remember to use context clues to help you define the words that are highlighted." speech="" play="A62" />
+      <Item id="3" agent="Jordan" text="Cristina, What are Black Holes?" speech="" play="B56" />
+      <Item id="4" agent="Cristina" text="Jordan, The article will be able to explain this better than I can,  but Black Holes are stars that have exploded. # Once this happens their gravity is so strong that they suck up everything that is near them!" speech="" play="A63" />
+      <Item id="5" agent="Jordan" text="Wow! I think the idea of them is a little scary, but I want to know more. let's read the article. Press continue at the bottom of the page when you are done reading." speech="" play="B57" />
+    </RigidPack>
+    <RigidPack name="Transition999999" usedIn="">
+      <Item id="1" agent="Jordan" text="I have another word I need help with, I have it highlighted, let me show you!" speech="" play="B58" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_,  its great that you are helping Jordan. This way both of you have practice with defining words you may not know." speech="" play="_user_,A64" />
+      <Item id="2" agent="Jordan" text="Right! This is helping a lot... thanks! I have another word I need help with." speech="" play="B59" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope you enjoyed this lesson with me!" speech="" play="A65" />
+      <Item id="2" agent="Jordan" text="I definitely did. We learned how to identify context clues and how to define words we don't know with the help of context clues." speech="" play="B60" />
+      <Item id="3" agent="Cristina" text="You did great. To recap, let's look at the flow chart. first we find context clues,next we create our own definition." speech="" play="A66" />
+	   <Item id="4" agent="Cristina" text="from there we replace our definition in the sentence to see if it makes sense, then if it does make sense, we got the definition! If not, we have to start over at step one. " speech="" play="" />
+      <Item id="5" agent="Jordan" text="This lesson has really helped me learn how to define words I'm having trouble with. I will try to remember these steps. " speech="" play="B61" />
+      <Item id="6" agent="Cristina" text="Always try to think about these steps when you two are facing a tough word that has to be defined." speech="" play="A67" />
+      <Item id="7" agent="Jordan" text="We will. I enjoyed this lesson! See you later!" speech="" play="B62" />
+      <Item id="8" agent="Cristina" text="Good bye have a great day!" speech="" play="A68" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going. Jordan, you said you had one final word for this article highlighted." speech="" play="A69" />
+      <Item id="2" agent="Jordan" text="Yes! I'll show you. Like i said, it's  the last word for this article on galaxies." speech="" play="B63" />
+    </RigidPack>
+    <RigidPack name="OpeningC" usedIn="">
+      <Item id="1" agent="Cristina" text="Now, in step 3 you replace the word you don't know with the definition you created in step 2. " speech="" play="A70" />
+    </RigidPack>
+    <RigidPack name="OpeningD" usedIn="">
+      <Item id="1" agent="Cristina" text="Finally, In step 4, You ask yourself, does my definition of the word make sense in the sentence? If it does, then you got it. You just defined a word you didn't know. # But if it doesn't, then go back to step one until your definition fits the sentence" speech="" play="A71" />
+      <Item id="2" agent="Jordan" text="Ok. That makes sense. I'd like some practice with these steps! Let's get started!" speech="" play="B64" />
+      <Item id="3" agent="Cristina" text="_user_,  now you will help jordan define words he doesn't know by using context clues and the steps we just learned. here is the first article, it is about galaxies. # When you are finished, please press the continue button at the bottom of the passage." speech="" media="media/Lesson6-Main0-0.html" play="_user_,A72" />
+    </RigidPack>
+    <RigidPack name="Opening1.3" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, This article is about Earth! I'm having trouble again with a few words in this article. # I hope you don't mind helping me again !" speech="" media="media/Lesson6-Main2-0.html" play="_user_,B65" />
+      <Item id="2" agent="Cristina" text="when helping Jordan define words, Keep in mind the flow chart with the 4 steps. " speech="" play="A73" />
+	  <Item id="3" agent="Cristina" text="finding context clues, creating a definition, replacing the word with our definition, and seeing if our definition makes sense in the sentence. G" speech="" play="" />
+	  <Item id="4" agent="Cristina" text=" Go ahead and read the article and press the continue button at the bottom of the screen when you are finished." speech="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition9999999" usedIn="">
+      <Item id="1" agent="Jordan" text="I have another word highlighted !" speech="" play="B66" />
+    </RigidPack>
+    <RigidPack name="Transition999999999999" usedIn="">
+      <Item id="1" agent="Jordan" text="Guess what!? Here is the last word I need help with! " speech="" play="B67" />
+      <Item id="2" agent="Cristina" text="Let's see the last word." speech="" play="A74" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, can you help me define the highlighted word? The word is sprawling... select one of the answer choices below." speech="" media="" play="_user_,B68">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Sprawling means to cover a large area in an untidy way. So, here we learn that galaxies cover large areas of the universe and they can appear untidy." speech="" keys="any" threshold="" test="" play="A75" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Ok, let's look at the context clues, countless. # If there are countless numbers of stars that cannot be counted, Will these stars cover a small area or will they cover large areas? # Use this hint to define the word sprawling. Please give  this question another try and choose an answer below. " speech="" keys="any" threshold="" test="" play="A76" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking a definition? Try again now!" speech="" keys="any" threshold="" test="" play="_user_,B69" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="sprawling means to cover a large area in an untidy way. # So, here we learn that galaxies cover large areas of the universe and they can appear untidy." speech="" keys="any" threshold="" test="" play="A77" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you agree with this definition of sprawling?" speech="" keys="any" threshold="" test="" play="A78" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't know, I thought sprawling meant to injure your body. " speech="" keys="any" threshold="" test="" play="B70" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="It sounds right to me." speech="" keys="any" threshold="" test="" play="B71" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I thought this was the correct answer! An example is a forest, A forest is sprawling because it covers a large area!" speech="" keys="any" threshold="" test="" play="B72" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. I get it. So for example a forest is sprawling because it covers a large area just like a galaxy!" speech="" keys="any" threshold="" test="" play="B73" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see how i was wrong. I thought sprawling meant injure yourself because sprawl rhymes with fall." speech="" keys="any" threshold="" test="" play="B74" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Here is another word I'm having trouble with. The word is consist, _user_, can you pick the best definition below?" speech="" media="" play="B75,_user_,B76">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word consist means to be made or formed from two or more things. So for example the Milky Way Galaxy is made of a flat disk and spiral arms." speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Take a look at the context clues that are shown here. Try to refer to the phrase includes stars, planets, dust, and gas. # All of these things create a galaxy, so what is the definition of the word consist? choose an answer below." speech="" keys="any" threshold="" test="" play="A80" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,  did you need more time picking a definition for consist. Try again" speech="" keys="any" threshold="" test="" play="_user_,B77" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word consist means to be made or formed from two or more things. So the Milky Way Galaxy is made of a flat disk and spiral arms." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think of this choice?" speech="" keys="any" threshold="" test="" play="A82" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text=" I don't know, that does not sound right to me." speech="" keys="any" threshold="" test="" play="B78" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this is the correct definition of consist." speech="" keys="any" threshold="" test="" play="B79" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="So that's what that means when people ask, what did your day consist of! They are asking what was my day made up of. I thought so." speech="" keys="any" threshold="" test="" play="B80" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. I think I understand. So consist means to be made up of something, so for example a pizza consists of cheese and dough. That means a pizza is made up of cheese and dough!" speech="" keys="any" threshold="" test="" play="B81" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Ok. that answer makes sense. So consist means to be made of something, like a car is made up of an engine and tires." speech="" keys="any" threshold="" test="" play="B82" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ ,this word is bulging. Can you help me define it? Select from the answers below." speech="" media="" play="_user_,B83">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Bulging means that something looks larger and rounder or fuller than normal. # So the Milky Way Galaxy is made up of or consists of a flat disk that has a large and round center with spiral arms. " speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's take a look at the context clues shown here. Try to use the word flat to get the definition of bulging. # The word flat is the opposite of the word bulging. Give this question another shot. Press on an answer below." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="user_ did you need more time picking a definition? Try again by clicking on an option below." speech="" keys="any" threshold="" test="" play="B84" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Bulging means that something looks larger and rounder or fuller than normal. # So, the Milky Way Galaxy is made up of or consists of a flat disk that has a large and round center with spiral arms." speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think about this answer?" speech="" keys="any" threshold="" test="" play="A86" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think that is the right definition!" speech="" keys="any" threshold="" test="" play="B85" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, Great you picked the right definition! So for example my backpack bulges when it is too full of stuff." speech="" keys="any" threshold="" test="" play="_user_,B86" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="Cristina I don't think this answer is right." speech="" keys="any" threshold="" test="" play="B87" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="That makes sense. So something bulges when it is too full or large, like my backpack when I pack too much stuff in it." speech="" keys="any" threshold="" test="" play="B88" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see! Something bulges, like my backpack, when it is fuller than normal." speech="" keys="any" threshold="" test="" play="B89" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="here is another word I’m having trouble defining. The word is galactic. _user_, can you help me? Pick from the answers below." speech="" media="" play="B90,_user_,B91">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" Galactic can be defined by the enormous size of an object. Galaxies consist of stars, planets, dust, and gas. # All of which rotate around the enormous center in a regular manner!" speech="" keys="any" threshold="" test="" play="A87" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's look at the word bulging. This is a word Jordan had trouble with earlier but we found out that it means to look larger or fuller. # Like the word bulging, the word galactic is being used to describe the center of galaxies. # So we can guess the word galactic means something similar to large and full. # Use this hint to define the word galactic. Press one of the answers below." speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking the definition of galactic. Can you try?" speech="" keys="any" threshold="" test="" play="_user_,B92" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="galactic can be defined by the enormous size of an object. # Galaxies consist of stars, planets, dust, and gas all of which rotate around the enormous center in a regular manner." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree with this definition?" speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Yes I agree!" speech="" keys="any" threshold="" test="" play="B93" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="It does not sound right to me. Is it wrong?" speech="" keys="any" threshold="" test="" play="B94" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew that was the right definition! A galactic book means that the book is enormous! I think I'm understanding it." speech="" keys="any" threshold="" test="" play="B95" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So when my mother says there is a galactic sale at the mall, she means there is an enormous sale! ok, now I get it." speech="" keys="any" threshold="" test="" play="B96" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh I see! So for example if something is galactic it is enormous. A galactic building is an enormous building." speech="" keys="any" threshold="" test="" play="B97" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Ok here is another word I'm unsure of. The word is distinctive. _user_, Can you define it for me? Pick one of the choices below." speech="" media="" play="B98,_user_,B99">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Distinctive means that something is easy to recognize or see because it is different from other things around it. # The spinning motion caused by the rotating of the matter in the galaxy causes the disk to take on a recognizable spiral shape. # The spiral shape is different from the other shapes seen in the galaxy." speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Refer to the context clues shown here.  The entire sentence provides clues for the definition... # if the spinning motion causes the matter to look like a pinwheel, and nothing else looks like this, then the pinwheel shape is... # Choose an answer below." speech="" keys="any" threshold="" test="" play="A92" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking the definition for the word distinctive? I really need your help! Can you help me now? " speech="" keys="any" threshold="" test="" play="_user_,B100" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="distinctive means that something is easy to recognize or see because it is different from other things around it. # The spinning motion caused by the rotating of the matter in the galaxy causes the disk to take on a recognizable spiral shape. # The spiral shape is different from the other shapes seen in the galaxy." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree or disagree with this definition for distinctive?" speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree with this definition!" speech="" keys="any" threshold="" test="" play="B101" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="Is it wrong?" speech="" keys="any" threshold="" test="" play="B102" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see. So something is distinctive when it looks different, like an 18 wheeler. # 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing." speech="" keys="any" threshold="" test="" play="B103" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I thought that was the right answer! So something is distinctive if it stands out or looks different, like an 18 wheeler. # 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing." speech="" keys="any" threshold="" test="" play="B104" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see. So something is distinctive if it stands out or is different like an 18 wheeler. # 18 wheelers are distinctive trucks because they are larger and different than the smaller cars we are used to seeing." speech="" keys="any" threshold="" test="" play="B105" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="ok. I found the next word I need help with. It's elongated! I don’t know what this word means! _user_, do you know what elongated means? Pick an answer from below." speech="" media="" play="B106,_user_,B107">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Elongated refers to something that is longer or thinner than usual. Elliptical galaxies may be circular or so thin that they look like a cigar. # A cigar looks like an elongated circle because it looks like a stretched out circle that thins out on each end." speech="" keys="any" threshold="" test="" play="A95" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="_user_,  refer to the context clues shown. The word elongated is related to the word stretch! Please pick the definition for elongated." speech="" keys="any" threshold="" test="" play="_user_,A96" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking out the definition? Can you try please?" speech="" keys="any" threshold="" test="" play="_user_,B108" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="elongated refers to something that is longer or thinner than usual. Elliptical galaxies may be circular or so thin that they look like a cigar!" speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think of the definition that was chosen?" speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this is the right definition for the word elongated. The word long is in it therefore I would think it would mean longer or thinner." speech="" keys="any" threshold="" test="" play="B109" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think this isn't the right definition." speech="" keys="any" threshold="" test="" play="B110" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew this was the correct definition. So stretching your muscles can make them elongated or longer and soon you will be flexible." speech="" keys="any" threshold="" test="" play="B111" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So if someone stretches their muscles, this elongates them or makes them longer. I think I understand the definition now. " speech="" keys="any" threshold="" test="" play="B112" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="_user_, I guess you picked the right answer after all! To elongate a muscle means to stretch it out or make it longer. Now I understand the definition." speech="" keys="any" threshold="" test="" play="_user_,B113" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, here is another word I don't understand. The word is interstellar. Can you select the correct definition from the ones given below?" speech="" media="" play="_user_,B114">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Interstellar matter can be referred to as matter that is found between the stars." speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="elliptical galaxies and what they are made up of can help you to define the word interstellar. These types of galaxies contain little dust and older stars. # These things are considered interstellar matter. Give it another try. Choose from the answers provided." speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time trying to find the definition of interstellar? Try clicking a definition below." speech="" keys="any" threshold="" test="" play="_user_,B115" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="interstellar matter can be referred to as matter that is found between the stars." speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think of this answer Jordan?" speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this answer is right!" speech="" keys="any" threshold="" test="" play="B116" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="So a spaceship would be interstellar because it floats between the stars and planets. I think I got it now." speech="" keys="any" threshold="" test="" play="B117" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I can't say if that is the right definition. I'm not really sure." speech="" keys="any" threshold="" test="" play="B118" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So something is interstellar if it is between stars, like a spaceship!" speech="" keys="any" threshold="" test="" play="B119" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see. So something is interstellar if it is between stars, like a spaceship!" speech="" keys="any" threshold="" test="" play="B120" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, The word, associations, is giving me a hard time. Can you define it for me? Please press on one of the answers shown below." speech="" media="" play="_user_,B121">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The definition for associations is an organization of objects, in this case, an organization of galaxies" speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the context clues shown here. The words in the highlighted phrase, groups, clusters and superclusters, all describe number of things placed together. # Can you guess what the definition is now? Press on an answer." speech="" keys="any" threshold="" test="" play="A104" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,  did you need more time selecting the definition of associations. Me too. Let's try now. " speech="" keys="any" threshold="" test="" play="_user_,B122" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the definition for associations is an organization of objects, in this case, an organization of galaxies." speech="" keys="any" threshold="" test="" play="A105" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, What do you think about this definition?" speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think that is a good answer. I think its correct." speech="" keys="any" threshold="" test="" play="B123" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I had a feeling this was the right definition! So an organization of objects, like a collection of stars." speech="" keys="any" threshold="" test="" play="B124" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="Is it wrong?" speech="" keys="any" threshold="" test="" play="B125" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see. So A collection or organization of cars would be considered an association of cars." speech="" keys="any" threshold="" test="" play="B126" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh ok, that answer makes sense. So an organization of stars as well as galaxies can be found in space." speech="" keys="any" threshold="" test="" play="B127" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ this word I highlighted is interact. Can you pick the definition of the word? Press an answer for me please." speech="" media="" play="_user_,B128">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Interact refers to things that have an effect on each other. Galaxies in such groups often effect each other." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="refer to the context clues shown here. The word, interact, can be related to the word, together. If things are together then what do they do? # Please try again. Pick the definition for the word interact." speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time selecting the definition for the word interact. Will you help me now? " speech="" keys="any" threshold="" test="" play="_user_,B129" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="interact refers to things that have an effect on each other. Galaxies in such groups often effect each other." speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think of this answer?" speech="" keys="any" threshold="" test="" play="A110" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think that's the right answer." speech="" keys="any" threshold="" test="" play="B130" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't think that's the right answer. When I hear interact I think of acting but there's no answer option for acting below." speech="" keys="any" threshold="" test="" play="B131" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew we picked the right answer! Two things that interact with each other would be the moon and the earth because they rotate around each other!" speech="" keys="any" threshold="" test="" play="B132" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So things interact when they effect each other, like the moon effecting the earth and the earth effecting the moon." speech="" keys="any" threshold="" test="" play="B133" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I was wrong! Interact doesn't mean to act or acting. It just sounds like it." speech="" keys="any" threshold="" test="" play="B134" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA99">
+      <Questions>
+        <Question id="1" agent="Jordan" text="the last word I highlighted for this article is the word merge. I don't understand what this word means. _user_, Can you help me? Choose from one of the answers below." speech="" media="" play="B135,_user_,B136">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="When galaxies merge together they combine or join together." speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="here are a few context clues. Refer to them when trying to select the definition for the word merge. Can you try again to answer the question." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,  did you need more time selecting the definition of the word merge. Me too. Let's try now!" speech="" keys="any" threshold="" test="" play="_user_,B137" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="when galaxies merge together they combine or join together. The word merge means when two or more things combine or join together." speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="JordanAnswer" agent="Jordan" type="JordanAnswer" text="ok. I got it. So the word merge means two or more things coming together." speech="" keys="any" threshold="" test="" play="B138" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree with that answer?" speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Sounds right to me." speech="" keys="any" threshold="" test="" play="B139" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't know, I don't think it sounds right." speech="" keys="any" threshold="" test="" play="B140" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see so when things merge they come together, like when lanes merge while you are driving." speech="" keys="any" threshold="" test="" play="B141" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="When things merge they come together, like when lanes merge on the expressway they are coming together to form one lane." speech="" keys="any" threshold="" test="" play="B142" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew that was the right definition for merge. An example of something that merges together would be lanes on the expressway. # Like galaxies, these lanes combine together to make one lane." speech="" keys="any" threshold="" test="" play="B143" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, here is the first word I had trouble with! The word is collapsing. Can you pick the right choice from the answers below?" speech="" media="" play="_user_,B144">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="the word collapsing refers to an object that falls in towards itself. A star burning the last of its fuel may fall in towards itself." speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's refer to the context clues here. These phrases will give you a clue to the definition for the word collapsing. Try again to pick the right answer. " speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time defining collapsing? Give it a shot!" speech="" keys="any" threshold="" test="" play="_user_,B145" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word collapsing refers to an object that falls in towards itself. A star burning the last of its fuel may fall in towards itself." speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think of that answer?" speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this is the right answer." speech="" keys="any" threshold="" test="" play="B146" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I honestly don't know if this is correct.  But if i had to choose i would say it's a different answer." speech="" keys="any" threshold="" test="" play="B147" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see. so when you collapse over something that means the same thing as you falling over something." speech="" keys="any" threshold="" test="" play="B148" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great job! So the definition of collapsing you picked was right, it means to fall down. Like when I collapse or fall down by accident." speech="" keys="any" threshold="" test="" play="B149" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh I think I understand. So when I collapse, that means that I've fallen down. All of this is starting to make sense!" speech="" keys="any" threshold="" test="" play="B150" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Here is the second word. The word is relatively. _user_, can you define it for me? Pick from the answers below." speech="" media="" play="B151,_user_,B152">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Relatively can mean comparing two or more objects. Black holes formed by the collapse of individual stars are very small. # So relatively small means that compared to other things around it that are larger, it is very small." speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="ok. Let's look at the context clues in the sentence here. It says that black holes formed by the collapse of individual stars are relatively small, but really dense. # This means black holes are somewhat small compared to other things around it. What could the word relatively mean? # Give this question another try by selecting a choice from below." speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time defining relatively? Give it another shot!" speech="" keys="any" threshold="" test="" play="_user_,B153" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The word relatively can mean comparing two or more objects. Black holes formed by the collapse of individual stars are very small. So relatively small means that compared to other things around it that are larger, it is very small." speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree with this answer?" speech="" keys="any" threshold="" test="" play="A122" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I think I get it. So you use relatively when you want to compare one thing to another. # Flowers smell relatively better than dirt, that means that overall flowers smell better then dirt." speech="" keys="any" threshold="" test="" play="B154" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this is the correct definition!" speech="" keys="any" threshold="" test="" play="B155" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't know, it doesn't sound right to me." speech="" keys="any" threshold="" test="" play="B156" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="So relatively is used to compare things. So for example how flowers smell relatively better than dirt. All that means is overall flowers smell better then dirt. Thanks!" speech="" keys="any" threshold="" test="" play="B157" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Looks like I was wrong. Relatively is used when you compare things, so like comparing flowers to dirt, flowers smell relatively better than dirt, meaning flowers smell better overall when compared to dirt." speech="" keys="any" threshold="" test="" play="B158" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="I highlighted the word dense. I really don't understand what dense means. _user_, can you define it? Choose from the answers below." speech="" media="" play="B159,_user_,B160">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Dense refers to alot of things that are closely put together." speech="" keys="any" threshold="" test="" play="A123" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's use the context clues in the passage here. The word packs should give you a clue to the definition of the word dense. When you are ready, try again to pick the correct definition." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking the definition for the word dense? Please pick a definition below. " speech="" keys="any" threshold="" test="" play="_user_,B161" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word dense refers to a lot of things that are closely put together." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I get the feeling that this is the wrong option." speech="" keys="any" threshold="" test="" play="B162" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Do you think this is the right definition for the word dense?" speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Yes I do!" speech="" keys="any" threshold="" test="" play="B163" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Awesome! So when people say they have a dense book, that means that there is a lot of pages in the book." speech="" keys="any" threshold="" test="" play="B164" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I thought you picked the wrong definition! So for stars to be dense, that means they have a lot of material that is close together." speech="" keys="any" threshold="" test="" play="B165" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand. so for stars to be dense that means they have a lot of materials like gas and dust that are really close together." speech="" keys="any" threshold="" test="" play="B166" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Ok. I found it , the word is consume!  _user_, I need your help. Tell me the meaning of consume by selecting a definition from below." speech="" media="" play="B167,_user_,B168">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="to consume means to use something up. Thus, Black Holes use up the dust and gas from the galaxy." speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="ok.  look at the context clues here. The words growing, around, dust and gas can be clues for finding the definition of the word consume. # Try again. Press on an answer choice." speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,  did you need more time picking the definition for the word consume. Let's try one of the definitions." speech="" keys="any" threshold="" test="" play="_user_,B169" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="To consume means to use up something. So for example, Black Holes use up the dust and gas from the galaxy." speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So black holes consume or use up dust from the galaxy just like humans when we consume or use up food for energy." speech="" keys="any" threshold="" test="" play="B170" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think about this answer?" speech="" keys="any" threshold="" test="" play="A130" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this answer is correct!" speech="" keys="any" threshold="" test="" play="B171" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="no, I feel like it's not right." speech="" keys="any" threshold="" test="" play="B172" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="ok. it looks like I was wrong, black holes consume or use up dust from the galaxy like us when we consume or use up food for energy." speech="" keys="any" threshold="" test="" play="B173" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew this was the right choice. So black holes consume or use up dust from the galaxy like us when we consume or use up food for energy." speech="" keys="any" threshold="" test="" play="B174" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Here is the word. It is populate. Can you try to define populate for me? _user_, pick an answer below." speech="" media="" play="B175,_user_,B176">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Populate means that something fills, or is present in an area. Small black holes are present in the universe." speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="here are a few clues that can help you define the word populate. The word dominate means to be take over or have more of. # So if there are more supermassive black holes than small black holes, these two types of black  holes make up the universe. # Use this clue to define populate. Press an answer choice below." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time defining the word populate? Let's just try one of these definitions!" speech="" keys="any" threshold="" test="" play="_user_,B177" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Populate means that something lives in an area. Small black holes live in the universe." speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I feel like it was the wrong answer." speech="" keys="any" threshold="" test="" play="B178" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you think that's the correct definition?" speech="" keys="any" threshold="" test="" play="A134" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I actually think that's the right answer." speech="" keys="any" threshold="" test="" play="B179" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see. So black holes populate the universe just like people when they populate a city." speech="" keys="any" threshold="" test="" play="B180" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So black holes populate the universe just like people populate a city." speech="" keys="any" threshold="" test="" play="B181" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, Great job! I knew you picked the right definition. So black holes populate the universe just like people who populate cities." speech="" keys="any" threshold="" test="" play="_user_,B182" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, another word I don't recognize is spawn. Can you define it for me? It would help a lot! Please pick one of the answers listed below." speech="" media="" play="_user_,B183">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="to spawn means to cause something to be produced or exist." speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="your choice was correct! Great! So to spawn means to produce, so when a group of tomatoes are spawned that means they were produced." speech="" keys="any" threshold="" test="" play="B184" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to define the word spawn. I'm not sure of the answer, can you try one?" speech="" keys="any" threshold="" test="" play="_user_,B185" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's look at the clues here! Look at the word formed, the word form is related to the word spawn. # Try again. Choose from the answers below." speech="" keys="any" threshold="" test="" play="A136" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="to spawn means to cause something to be produced or exists." speech="" keys="any" threshold="" test="" play="A137" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. I see. so when a group of tomatoes are spawned that means they were produced." speech="" keys="any" threshold="" test="" play="B186" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="It doesn't sound right to me. " speech="" keys="any" threshold="" test="" play="B187" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree" speech="" keys="any" threshold="" test="" play="B188" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think Jordan?" speech="" keys="any" threshold="" test="" play="A138" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="oh ok. So spawn means to produce, like when a group of tomatoes are spawned that means they were produced." speech="" keys="any" threshold="" test="" play="B189" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, here is another word that I’m having trouble understanding. The word is plentiful. Can you define it for me? Press on an answer from below." speech="" media="" play="_user_,B190">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Plentiful means to have a lot available.There is a lot of matter available in the center of the galaxies." speech="" keys="any" threshold="" test="" play="A139" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="refer to the context clues in the passage. Since there are dust and gas easily gathered in the galaxy that means there must be a lot of this available. # Use this clue to define the word plentiful. Choose from the answers below." speech="" keys="any" threshold="" test="" play="A140" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, did you need more time picking the definition? I really need your help, can you try please?" speech="" keys="any" threshold="" test="" play="_user_,B191" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Plentiful means to have a lot of something available. There is a lot of matter available in the center of the galaxies." speech="" keys="any" threshold="" test="" play="A141" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree?" speech="" keys="any" threshold="" test="" play="A142" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't think this is right." speech="" keys="any" threshold="" test="" play="B192" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree with this definition." speech="" keys="any" threshold="" test="" play="B193" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great job! So, when dust is plentiful I sneeze, because this means that there is alot of available dust!" speech="" keys="any" threshold="" test="" play="B194" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Right. I understand. So plentiful means to have alot. When dust is plentiful I sneeze, because there is alot of available dust." speech="" keys="any" threshold="" test="" play="B195" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Sorry, I guess that was the right answer!  Something is plentiful when there is a lot of it." speech="" keys="any" threshold="" test="" play="B196" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, can you help me define the word enormous. This might be the toughest word for me! Please select from the answers below." speech="" media="" play="_user_,B197">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word enormous means extremely large. If there is a lot of material available in the center of the galaxies then they grow to be extremely large." speech="" keys="any" threshold="" test="" play="A143" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Refer to the clue here. The words grow and plentiful can give you more insight into the definition of the word enormous. # The word grow and enormous can be used to describe what something does or is. Pick the correct definition for enormous." speech="" keys="any" threshold="" test="" play="A144" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ ,did you need more time defining enormous? Give it a shot!" speech="" keys="any" threshold="" test="" play="_user_,B198" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The word enormous means extremely large. If there is a lot of material available in the center of the galaxies then they grow to be extremely large." speech="" keys="any" threshold="" test="" play="A145" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, Do you agree with this answer?" speech="" keys="any" threshold="" test="" play="A146" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="It doesn't sound right to me." speech="" keys="any" threshold="" test="" play="B199" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree with this definition!" speech="" keys="any" threshold="" test="" play="B200" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great job! So enormous means to be extremely large, like the sun, the sun is enormous or extremely large." speech="" keys="any" threshold="" test="" play="B201" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. That answer makes sense. I think I get it now. So the sun is enormous, because it is extremely large!" speech="" keys="any" threshold="" test="" play="B202" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="_user_, Okay so you were right! So enormous means really extremely large, so the sun is enormous because it is really large." speech="" keys="any" threshold="" test="" play="_user_,B203" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="I need help defining the word observational. _user_, Can you help me! Please choose from the answer options below." speech="" media="" play="B204,_user_,B205">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Observational describes the process of watching something carefully and learning from it. If scientists cannot see black holes they cannot learn from them." speech="" keys="any" threshold="" test="" play="A147" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="the word observational is similar in meaning to the word, see, in the passage. If scientists can’t see black holes then they can’t learn from them. # Please pick the definition for the word observational. Choose from the answers below." speech="" keys="any" threshold="" test="" play="A148" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, did you need more time picking definition of observational? I'm not sure either. Let's just give one of the answers a try?" speech="" keys="any" threshold="" test="" play="_user_,B206" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word observational. Observational refers to the something is be carefully watched and learned from. If scientists cannot see black holes they cannot learn from them." speech="" keys="any" threshold="" test="" play="A149" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think if this answer?" speech="" keys="any" threshold="" test="" play="A150" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think it is wrong for some reason." speech="" keys="any" threshold="" test="" play="B207" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree!" speech="" keys="any" threshold="" test="" play="B208" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So If you do not watch carefully how someone plays an instrument you cannot learn how to play yourself. I got the idea! " speech="" keys="any" threshold="" test="" play="B209" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text=" I knew that was the correct answer! So observational means to watch and learn from something. # If you cannot see how someone plays an instrument you cannot learn how to play yourself." speech="" keys="any" threshold="" test="" play="B210" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess I was wrong but now i get it. So If you do not carefully observe or watch how someone plays an instrument you cannot learn how to play yourself. I get the idea." speech="" keys="any" threshold="" test="" play="B211" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD99">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Ok, finally. Here is the last word I'm having trouble with. it’s the word emitted. _user_, can you help me define it? Pick one of the answers below." speech="" media="" play="B212,_user_,B213">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" to emit means to release or make. So radiation is released as dust and gas are drawn into the dense black holes." speech="" keys="any" threshold="" test="" play="A151" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's again use context clues to help us. We know that as dust and gas are drawn into black holes, radiation is emitted. # Use this information to define the word emitted. Please choose an answer below." speech="" keys="any" threshold="" test="" play="A152" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the definition for the word emit? I really need your help! Can you give it another shot! " speech="" keys="any" threshold="" test="" play="_user_,B214" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="to emit means to release or make. So radiation that is released as dust and gas are drawn into the dense black holes." speech="" keys="any" threshold="" test="" play="A153" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Do you think the right definition was selected for emit?" speech="" keys="any" threshold="" test="" play="A154" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree" speech="" keys="any" threshold="" test="" play="B215" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I feel like it's not the right answer." speech="" keys="any" threshold="" test="" play="B216" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see so to emit something means to release it. So a blow dryer emits heat and a light bulb emits light." speech="" keys="any" threshold="" test="" play="B217" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great! So emit means to release like a blow dryer emits heat and a light bulb emits light." speech="" keys="any" threshold="" test="" play="B218" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess you were right correct. Emit means to release like a blow dryer emits heat and a light bulb emits light." speech="" keys="any" threshold="" test="" play="B219" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Ok. here is the first word I need help with! The word is orbits. _user_, can you press on the correct answer from the choices below?" speech="" media="" play="B220,_user_,B221">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="the word orbit refers to something that goes around an object. # In this case our Earth orbits the sun meaning it goes around in a circular journey around the sun." speech="" keys="any" threshold="" test="" play="A155" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's look at a clue to define the word orbit. You know the Earth goes around the sun at 93 million miles on average. # This path that earth takes is called an orbit. So, now, can you tell me what the word orbit means? Choose from the options below." speech="" keys="any" threshold="" test="" play="A156" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, did you need more time defining the word orbit. I'm not sure either. Let's just give one of the answers a try?" speech="" keys="any" threshold="" test="" play="_user_,B222" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The word orbit refers to something that goes around an object. In this case our Earth orbits the sun meaning it goes around in a circular journey around the sun." speech="" keys="any" threshold="" test="" play="A157" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree?" speech="" keys="any" threshold="" test="" play="A158" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="It doesn't sound right to me." speech="" keys="any" threshold="" test="" play="B223" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Yes I do." speech="" keys="any" threshold="" test="" play="B224" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now! So orbits means to go around something, like how the moon goes around the earth, it orbits the earth." speech="" keys="any" threshold="" test="" play="B225" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Ok, that answer makes sense. I get it now. So when the moon orbits the earth it goes around it. Got it!" speech="" keys="any" threshold="" test="" play="B226" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, great job! So orbits means to go around something. like how the moon goes around the earth, it orbits the earth." speech="" keys="any" threshold="" test="" play="_user_,B227" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Another word i need help with is, convenient. _user_, can you define it for me by choosing from the answers below?" speech="" media="" play="B228,_user_,B229">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word convenient means easy to use or suits your plans. Since it is easy to compare other orbits to Earth distance is referred to as one astronomical unit." speech="" keys="any" threshold="" test="" play="A159" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="the context clue says compare other orbits to Earth's orbit. Would it be easier or harder to compare other orbits to Earth's orbit?  # Would it be easier or harder to compare orbits from Mars to other orbits? No, because we are not on Mars. Use this clue as a hint to defining the word convenient. # Try again to pick the correct choice from below." speech="" keys="any" threshold="" test="" play="A160" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_, did you need more time to pick the definition of the word convenient. Go ahead and give it a shot! I really need your help with this one." speech="" keys="any" threshold="" test="" play="_user_,B230" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word convenient means easy to use or suits your plans. # Since it is easy to compare other orbits to Earth distance is referred to as one astronomical unit." speech="" keys="any" threshold="" test="" play="A161" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree?" speech="" keys="any" threshold="" test="" play="A162" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="no I think it's wrong but I don't know why. " speech="" keys="any" threshold="" test="" play="B231" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree!" speech="" keys="any" threshold="" test="" play="B232" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew you had it. So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of." speech="" keys="any" threshold="" test="" play="B233" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. I understand. So convenient means something is easy to use. # So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of." speech="" keys="any" threshold="" test="" play="B234" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh I thought you picked the wrong definition. So being easy to use is what convenient means. # So is that why some stores are called convenient stores, you can find things easily and they have almost anything you could think of." speech="" keys="any" threshold="" test="" play="B235" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, I'm not sure about the word normally, Can you help me define it? Please tell me which of the answer choices below is correct by selecting it." speech="" media="" play="_user_,B236">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The word normally means usually or regularly. We usually or regularly mean 24 hours when we say the word day." speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="When we refer to a day we normally mean 24 hours. What is the definition of the word normally based on the sentence? " speech="" keys="any" threshold="" test="" play="A164" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_,did you need more time to pick the definition of the word normally. I need your help with this one." speech="" keys="any" threshold="" test="" play="_user_,B237" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The word normally means usually or regularly. We usually or regularly mean 24 hours when we say the word day." speech="" keys="any" threshold="" test="" play="A165" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I honestly don't know but it doesn't sound right." speech="" keys="any" threshold="" test="" play="B238" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you this is the right answer?" speech="" keys="any" threshold="" test="" play="A166" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_, I think you picked the right definition for the word." speech="" keys="any" threshold="" test="" play="_user_,B239" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="that was great! So saying I normally say hello to others means I usually say hello to people." speech="" keys="any" threshold="" test="" play="B240" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now, so normally can mean usually, So saying I normally say hello to others means I usually say hello to people. " speech="" keys="any" threshold="" test="" play="B241" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Gotcha, so you did pick the right definition for the word normally. So saying I normally say hello to others means I usually say hello to people." speech="" keys="any" threshold="" test="" play="B242" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Here is another word that troubles me. It's terrestrial. _user_, can you define it for me? Press an answer choice below." speech="" media="" play="B243,_user_,B244">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="the word terrestrial means that something is related to Earth." speech="" keys="any" threshold="" test="" play="A167" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="The context clue shown here is the phrase, there are other planets listed that have similar properties to Earth. # What does the word terrestrial mean? Try again to pick the right answer from below. " speech="" keys="any" threshold="" test="" play="A168" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? I'm sure we can figure it out!" speech="" keys="any" threshold="" test="" play="_user_,B245" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the word terrestrial means that something is related to Earth. " speech="" keys="any" threshold="" test="" play="A169" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it! So it means something that is related to Earth." speech="" keys="any" threshold="" test="" play="B246" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree with this answer!" speech="" keys="any" threshold="" test="" play="B247" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I do not agree with this answer, I think it's something else." speech="" keys="any" threshold="" test="" play="B248" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great job ! So terrestrial is something from earth, so we are terrestrials because we live on earth. " speech="" keys="any" threshold="" test="" play="B249" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="looks like I was wrong ! sorry. So terrestrial is something from earth. so we are terrestrials because we live on earth. " speech="" keys="any" threshold="" test="" play="B250" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree or disagree with that answer?" speech="" keys="any" threshold="" test="" play="A170" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="Jordan" text="organisms is another word i dont know. _user_, can you help me define organisms? Choose from the answers below." speech="" media="" play="B251,_user_,B252">
+          <Answers>
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to define organisms? Try your best! I really need your help with this!" speech="" keys="any" threshold="" test="" play="_user_,B253" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="since Earth is the only known planet to support organisms, what does this clue tell you about the definition for the word organism. Pick from the answer options below. " speech="" keys="any" threshold="" test="" play="A171" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The word organism refers to something that is living such as humans or animals. Earth is the only known planet to have living things." speech="" keys="any" threshold="" test="" play="A172" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="  The word organism refers to something that is living such as humans or animals. Earth is the only known planet to have living things." speech="" keys="any" threshold="" test="" play="A173" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I feel like this is wrong." speech="" keys="any" threshold="" test="" play="B254" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think about this answer?" speech="" keys="any" threshold="" test="" play="A174" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I was totally wrong. so people are organisms because we are living things." speech="" keys="any" threshold="" test="" play="B255" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree with this answer!" speech="" keys="any" threshold="" test="" play="B256" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, I had a feeling you picked the right definition. Awesome! so people are organisms because we are living things." speech="" keys="any" threshold="" test="" play="_user_,B257" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Ok, now i think I understand. so organisms are living things, so people are organisms because we are living things." speech="" keys="any" threshold="" test="" play="B258" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, here is another word i don't know. The word is flourish. Can you define it? Pick a definition below." speech="" media="" play="_user_,B259">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="To flourish means to grow or develop. They have found creatures that have grown and developed successfully in an environment." speech="" keys="any" threshold="" test="" play="A175" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's take a look at the context clue here. The word flourish is related to the idea of scientists discovering new creatures that were successfully living in an environment for years. # Please use this information to choose the definition of the word flourish from below." speech="" keys="any" threshold="" test="" play="A176" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time defining flourish? give it a try." speech="" keys="any" threshold="" test="" play="_user_,B260" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="To flourish means to grow or develop. They have found creatures that have grown and developed successfully in an environment." speech="" keys="any" threshold="" test="" play="A177" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you agree with this definition?" speech="" keys="any" threshold="" test="" play="A178" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree!" speech="" keys="any" threshold="" test="" play="B261" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think this is the wrong answer but I'm not sure." speech="" keys="any" threshold="" test="" play="B262" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="So flourish means to grow or develop. Like flowers! They grow!" speech="" keys="any" threshold="" test="" play="B263" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Awesome that was the right definition for flourish. So flourish means to grow or develop. Like flowers! They grow!" speech="" keys="any" threshold="" test="" play="B264" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand. So flourish means to grow or develop. Like flowers! They grow!" speech="" keys="any" threshold="" test="" play="B265" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Another word I'm having trouble defining is barren. _user_, can you define it for me? Please pick the correct definition below." speech="" media="" play="B266,_user_,B267">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="To be barren means to not produce crops or life. So a planet that is barren has no life on it." speech="" keys="any" threshold="" test="" play="A179" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="the word contrast tells us that the other planets are different from Earth and they are different in the way that they are lifeless. # The word lifeless can be related to the word barren. Define the word barren. Choose from the answers below." speech="" keys="any" threshold="" test="" play="A180" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking a definition for barren? Can you try for me please?" speech="" keys="any" threshold="" test="" play="_user_,B268" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="To be barren means to not produce crops or life. So a planet that is barren has no life on it." speech="" keys="any" threshold="" test="" play="A181" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, do you think the definition is correct." speech="" keys="any" threshold="" test="" play="A182" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Great. Now I see! So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there" speech="" keys="any" threshold="" test="" play="B269" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the definition is correct!" speech="" keys="any" threshold="" test="" play="B270" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the definition is wrong for some reason." speech="" keys="any" threshold="" test="" play="B271" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Now I understand. So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there" speech="" keys="any" threshold="" test="" play="B272" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew that was the right answer ! So land can be barren when there is not life! So the desert may be considered barren because people cannot live out there" speech="" keys="any" threshold="" test="" play="B273" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="How about this word? The word is abundance. What does abundance mean? _user_, please help me by choosing the right definition from below." speech="" media="" play="B274,_user_,B275">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Abundance means having a large amount. Since 70 percent of the earth is water, there is an abundance of water on Earth. There is a large amount of water on Earth." speech="" keys="any" threshold="" test="" play="A183" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Ok, let's use the context clues shown here and try to define the word abundance. Can you give it another try? Choose an answer below." speech="" keys="any" threshold="" test="" play="A184" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to define the word abundance? I'm not sure either. Let's just give one of the answers a try?" speech="" keys="any" threshold="" test="" play="_user_,B276" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Abundance means having a large amount. Since 70 percent of the earth is water, there is an abundance of water on Earth. There is a large amount of water on Earth." speech="" keys="any" threshold="" test="" play="A185" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, Do you agree with this?" speech="" keys="any" threshold="" test="" play="A186" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I feel like it's not the right answer." speech="" keys="any" threshold="" test="" play="B277" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I agree!" speech="" keys="any" threshold="" test="" play="B278" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="So when something is abundant there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes." speech="" keys="any" threshold="" test="" play="B279" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand. So when something is abundant, there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes." speech="" keys="any" threshold="" test="" play="B280" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Ok. So when something is abundant there is a large amount. So to have an abundance of cupcakes means I have a large amount of cupcakes." speech="" keys="any" threshold="" test="" play="B281" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="Jordan" text="Now I need help defining the word essential. _user_, Can you choose the right definition for essential from the choices below?" speech="" media="" play="B282,_user_,B283">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Essential means to be very important and necessary." speech="" keys="any" threshold="" test="" play="A187" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Let's again refer to the context clues. Please try to define the word essential. Pick an answer below." speech="" keys="any" threshold="" test="" play="A188" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to define essential? I'm not sure either. Let's just give one of the answers a try?" speech="" keys="any" threshold="" test="" play="_user_,B284" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Essential means to be very important and necessary." speech="" keys="any" threshold="" test="" play="A189" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, Do you agree with the definition selected?" speech="" keys="any" threshold="" test="" play="A190" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="now I understand. When something is essential it is very important and necessary. So water is very essential or important for people to drink." speech="" keys="any" threshold="" test="" play="B285" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Yes I agree!" speech="" keys="any" threshold="" test="" play="B286" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="It doesn't sound right to me." speech="" keys="any" threshold="" test="" play="B287" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I got it. so When something is essential it is very important and necessary. So water is very essential or important for people to drink." speech="" keys="any" threshold="" test="" play="B288" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="ok. now i see. So When something is essential it is very important and necessary. So water is very essential or important for people to drink." speech="" keys="any" threshold="" test="" play="B289" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE99">
+      <Questions>
+        <Question id="1" agent="Jordan" text="I really can't believe we are already on the last word that i need help with. I'm a little sad, but i'll be ok.  # _user_, can you define the word partially for me please! Pick an answer below." speech="" media="" play="B290,_user_,B291">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Partially means to be incomplete. So Earth’s atmosphere has a protective layer that almost blocks UV radiation ." speech="" keys="any" threshold="" test="" play="A191" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="here are the context clues that can help you define the word partially. Define the word partially based on the clues, and choose an answer below. " speech="" keys="any" threshold="" test="" play="A192" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the definition for the word partially? Could you give it a shot?" speech="" keys="any" threshold="" test="" play="_user_,B292" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="Partially means to be incomplete. So Earth’s atmosphere has a protective layer that almost blocks UV radiation." speech="" keys="any" threshold="" test="" play="A193" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="What do you think of the definition that was selected?" speech="" keys="any" threshold="" test="" play="A194" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now! So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely." speech="" keys="any" threshold="" test="" play="B293" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think that definition is the correct one." speech="" keys="any" threshold="" test="" play="B294" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I have a feeling that it's not the right answer." speech="" keys="any" threshold="" test="" play="B295" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh shoot. I was totally wrong! So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely." speech="" keys="any" threshold="" test="" play="B296" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, I knew you got it. So partially means something is not complete. So when people say to partially fill up your gas tank that means to fill it up but not completely." speech="" keys="any" threshold="" test="" play="_user_,B297" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage2" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage3" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson6-MainIntro.html" id="2" />
+      <Action agent="System" act="SetStatus" data="StartPageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="StartPageLoaded" status="StartPageLoaded" response="" event="StartPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="GetMediaEvent" data="Animation1" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningA" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="Animation2" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningB" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="Animation3" id="5" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningC" id="6" />
+      <Action agent="System" act="GetMediaEvent" data="Animation4" id="7" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningD" id="8" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson6-Main0-1medium.html" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="DoneReading3" status="DoneReading" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson6-Main0-1easy.html" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson6-Main0-1hard.html" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson6_Medium.mp3" id="2" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="LoadPage2" status="LoadPage2" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson6_hard.mp3" id="2" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="LoadPage3" status="LoadPage3" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson6_easy.mp3" id="2" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="End" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQUserAnswerFirst" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="LastPageLoaded" status="PageLoaded" response="" event="End" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+	  <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="NextArticle2" status="PageLoaded" response="" event="Page1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="NextArticle" status="PageLoaded" response="" event="Page" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAskedMediumCorrectUserFirstCorrect" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedHardCorrectUserFirstCorrect" status="QAsked" response="" event="JordanHard" hasItem="" priority="" frequency=".16" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedEasyCorrectUserFirstCorrect" status="QAsked" response="" event="JordanEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedMediumUnderstandUserFirstCorrect" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".5" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="ThatsRightJordan" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedHardUnderstandUserFirstCorrect" status="QAsked" response="" event="JordanHard" hasItem="" priority="" frequency=".16" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedEasyUnderstandUserFirstCorrect" status="QAsked" response="" event="JordanEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="4" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedMediumICUserCorrectFirst" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".3" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedHardICUserFirstCorrect" status="QAsked" response="" event="JordanHard" hasItem="" priority="" frequency=".16" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedHardNoFeedback" status="QAsked" response="" event="JordanHard" hasItem="" priority="" frequency=".5" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAskedEasyICUserFirstCorrect" status="QAsked" response="" event="JordanEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="GlowHint" id="3" />
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="4" />
+      <Action agent="System" act="WaitForEvent" data="60" id="5" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="GlowHint" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2HardNoFeedback" status="QAsked2" response="" event="JordanHard" hasItem="" priority="" frequency=".5" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAsked21Hard" status="QAsked2" response="" event="JordanHard" hasItem="" priority="" frequency=".16" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatsRightJordan" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAsked21Easy" status="QAsked2" response="" event="JordanEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatsRightJordan" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="JordanAsked21Medium" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatsRightJordan" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+	    <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

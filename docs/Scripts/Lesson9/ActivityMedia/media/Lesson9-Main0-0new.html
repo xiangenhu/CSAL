@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+	<head><script src="../../../../js/common.js" type="text/javascript"></script>
+		<title>CSAL Media</title>
 
 		
 		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 		
 		<!--load jScrollPane libraries and CSS-->
@@ -140,6 +140,10 @@
 				questionNum=data;
 				idScroll=data;
 				
+			}
+			function getProgressBarValue()
+			{
+				parent.setProgress(questionNum*5);
 			}
 			function GetItem()
 			{
@@ -537,7 +541,7 @@
 				</div>
 				
 				<div id="para3" class="para">
-				<span class="indent"></span>  Before <span id="5" class="s5 s6">the nurse</span> checks them out, <span  id="Correct5" value="Correct"  class="s5 s6">Kim</span> and Ben talk with the doctor.  <span  id="Correct6" value="Correct" class="s5 s6">The doctor</span> reminds <span  id="a5" >her</span> to eat healthy foods and drink lots of water. <span  id="a6" >She</span> also explains that Kim needs to take a daily vitamin. <span   class="s7">Good foods, water and vitamins</span> keep <span  id="Correct8" value="Correct"  class="s8">the baby</span> and mom healthy. <span class="s7">The doctor</span> explains <span  id="Correct7" value="Correct"  class="s7 s8">the harmful effects</span> of smoking, drinking alcohol and using drugs during pregnancy. <span   id="a7" >They</span> could harm the baby's <span  class="s8">health</span>. The doctor also tells Kim and Ben what to expect as <span  id="a8" >it</span> <span id="7">grows.</span> 
+				<span class="indent"></span>  Before <span id="5" class="s5 s6">the nurse</span> checks them out, <span  id="Correct5" value="Correct"  class="s5 s6">Kim</span> and Ben talk with the doctor.  <span  id="Correct6" value="Correct" class="s5 s6">The doctor</span> reminds <span  id="a5" >her</span> to eat healthy foods and drink lots of water. <span  id="a6" >She</span> also explains that Kim needs to take a daily vitamin. <span   class="s7">Good foods, water and vitamins</span> keep <span  id="Correct8" value="Correct"  class="s8">the baby</span> and mom healthy. <span class="s7">The doctor</span> explains the harmful effects of <span  id="Correct7" value="Correct"  class="s7 s8">smoking, drinking alcohol and using drugs</span> during pregnancy. <span   id="a7" >They</span> could harm the baby's <span  class="s8">health</span>. The doctor also tells Kim and Ben what to expect as <span  id="a8" >it</span> <span id="7">grows.</span> 
 				</div>
 				
 				<div id="para4" class="para">

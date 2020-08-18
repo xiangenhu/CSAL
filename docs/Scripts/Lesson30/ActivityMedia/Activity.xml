@@ -1,126 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AutoTutorScript>
   <Agents>
-    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
-      <SpeechCan name="DisagreeWithUser">
-        <Item text="I disagree." speech="" play="B1" />
-        <Item text="I don't know if that's right." speech="" play="B2" />
-        <Item text="_user_, I disagree with your answer. " speech="" play="_user_,B3" />
-      </SpeechCan>
-      <SpeechCan name="PositiveFeedback">
-        <Item text="Awesome _user_! You got it right!" speech="Awesome _user_! You got it right!" play="B4,_user_,B5" />
-        <Item text="Super _user_! You got the question right!" speech="Super _user_! You got the question right!" play="B6,_user_,B7" />
-        <Item text="Great job _user_! You answered right! Thanks for helping me so much!" speech="Great job _user_! You answered right! Thanks for helping me so much!" play="B8,_user_,B9" />
-        <Item text="You answered right _user_!Awesome job!" speech="You answered right _user_!Awesome job!" play="B10,_user_,B11" />
-        <Item text="Amazing _user_! You're good at this! You picked the right answer." speech="Amazing _user_! You're good at this! You picked the right answer." play="B12,_user_,B13" />
-        <Item text="Great job _user_!" speech="Great job _user_!" play="B14,_user_" />
-      </SpeechCan>
-      <SpeechCan name="PositiveFeedbackUs">
-        <Item text="_user_! We answered the question right! Great job!" speech="" play="_user_,B15" />
-        <Item text="We did it _user_! We answered the question correctly." speech="" play="B16,_user_,B17" />
-        <Item text="Great _user_! We answered the question correctly!" speech="" play="B18,_user_,B19" />
-        <Item text="_user_ we both picked the correct answer!" speech="" play="_user_,B20" />
-        <Item text="_user_ we both picked the right answer!" speech="" play="_user_,B21" />
-        <Item text="Awesome _user_ we picked the same answer! And it was right!" speech="" play="B22,_user_,B23" />
-        <Item text="Awesome _user_ we picked the same answer! And it was correct!" speech="" play="B24,_user_,B25" />
-        <Item text="Amazing _user_! We both answered correctly!" speech="" play="B26,_user_,B27" />
-        <Item text="Sweet _user_! We answered correctly! Great job!" speech="" play="B28,_user_,B29" />
-        <Item text="This is great! We both answered the question correctly _user_!" speech="" play="B30,_user_" />
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,B31" />
-      </SpeechCan>
-      <SpeechCan name="Pump">
-        <Item text="_user_ try to answer the question." speech="_user_ try to answer the question." play="_user_,B32" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
       </SpeechCan>
       <SpeechCan name="NegativeFeedback">
-        <Item text="Um... _user_ I don't think that's the right answer." speech="Um... _user_ I don't think that's the right answer." play="B33,_user_,B34" />
-        <Item text="Um... _user_ I don't think that was the right answer. " speech="Um... _user_ I don't think that was the right answer. " play="B35,_user_,B36" />
-        <Item text="Try again _user_ I don't think that was the right answer." speech="Try again _user_ I don't think that was the right answer." play="B37,_user_,B38" />
-        <Item text="_user_ I don't think that was right!" speech="" play="_user_,B39" />
+        <Item text="Um. # _user_ I don't think that's the right answer." speech="" play="B3,_user_,B4" />
+        <Item text="Um. # _user_ I don't think that was the right answer." speech="" play="B5,_user_,B6" />
+        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B7" />
       </SpeechCan>
-      <SpeechCan name="PositiveFeedbackToUser">
-        <Item text="_user_ you answered correctly! I will try to answer correctly next time!" speech="" play="_user_,B40" />
-        <Item text="_user_ you got the question correct! " speech="" play="_user_,B41" />
-        <Item text="_user_ you answered correctly awesome job!" speech="" play="_user_,B42" />
-        <Item text="Great _user_! You answered correctly! " speech="" play="B43,_user_,B44" />
-        <Item text="Great _user_! You answered the question right! " speech="" play="B45,_user_,B46" />
-        <Item text="Awesome _user_! You answered right!! HaHa" speech="" play="B47,_user_,B48" />
-        <Item text="Amazing job _user_! You answered the question right! " speech="" play="B49,_user_,B50" />
-        <Item text="Aw _user_ you answered correctly! Keep it up!" speech="" play="B51,_user_,B52" />
-        <Item text="Keep up the great work _user_! You answered the question right! " speech="" play="B53,_user_,B54" />
-      </SpeechCan>
-      <SpeechCan name="AgreesWithUser">
-        <Item text="_user_, I agree." speech="" play="_user_,B55" />
-        <Item text="I agree." speech="" play="B56" />
-        <Item text="_user_, I agree with your answer." speech="" play="_user_,B57" />
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_ Good! # You got it right!" speech="" play="_user_,B8" />
+        <Item text="_user_ You got it!" speech="" play="_user_,B9" />
+        <Item text="_user_ Great job! # You answered right!" speech="" play="_user_,B10" />
+        <Item text="_user_ I agree" speech="" play="_user_,B11" />
+        <Item text="_user_ , yes. # That's right." speech="" play="_user_,B12" />
+        <Item text="_user_ good job!" speech="" play="_user_,B13" />
+        <Item text="_user_ I agree with you" speech="" play="_user_,B14" />
+        <Item text="_user_ , I agree with your answer" speech="" play="_user_,B15" />
+        <Item text="_user_ , nice work. # That's it." speech="" play="_user_,B16" />
+        <Item text="_user_, excellent work." speech="" play="_user_,B17" />
       </SpeechCan>
     </Agent>
-    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
-      <SpeechCan name="NeutralFeedback">
-        <Item text="_user_, Ok,  here is the answer." speech="Ok _user_ here is the answer." play="A1,_user_,A2" />
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="NegativeFeedbacktoUser">
+        <Item text="sorry. # that wasn't what I was looking for." speech="" play="A1" />
+        <Item text="Well, not quite, That wasn't the right choice." speech="" play="A2" />
+        <Item text="it looks like you picked the wrong answer." speech="" play="A3" />
+        <Item text="unfortunately that wasn't the best answer." speech="" play="A4" />
       </SpeechCan>
-      <SpeechCan name="PositiveFeedback">
-        <Item text="_user_, Great job!" speech="Great job _user_!" play="A3,_user_" />
-        <Item text="_user_ you are on a roll! You answered the question correctly." speech="_user_ you are on a roll! You answered the question correctly." play="_user_,A4" />
-        <Item text=" _user_, Wonderful! You answered the question correctly." speech="Wonderful _user_! You answered the question correctly." play="A5,_user_,A6" />
-        <Item text="_user_, You answered correctly." speech="_user_ you are doing so well! You answered correctly." play="_user_,A7" />
-        <Item text="_user_ great! You answered correctly." speech="_user_ great! You answered correctly." play="_user_,A8" />
-        <Item text="_user_ you picked the right answer!" speech="_user_ you picked the right answer!" play="_user_,A9" />
-      </SpeechCan>
-      <SpeechCan name="PositiveFeedbackToBoth">
-        <Item text="You guys did great! You both picked the right answer" speech="" play="A10" />
-        <Item text="You guys did great! You both picked the correct answer" speech="" play="A11" />
-        <Item text="Both of you answered the question correctly!" speech="" play="A12" />
-        <Item text="Great job you two! You guys picked the correct answer!" speech="" play="A13" />
-        <Item text="Perfect! You both answered the question correctly!" speech="" play="A14" />
-        <Item text="Both of you picked the right answer! Keep it up!" speech="" play="A15" />
-      </SpeechCan>
-      <SpeechCan name="NegativeFeedbackToBoth">
-        <Item text="Sorry you two, that wasn't the right answer." speech="" play="A16" />
-        <Item text="Sorry, you both got that one wrong." speech="" play="A17" />
-        <Item text="Sorry, both of you are incorrect." speech="" play="A18" />
-      </SpeechCan>
-      <SpeechCan name="NegativeFeedback">
-        <Item text="_user_, sorry! that wasn't the right answer." speech="" play="_user_,A19" />
-        <Item text="_user_  Your answer choice was not correct." speech="" play="_user_,A20" />
-        <Item text="_user_, Whoops! Looks like you picked the wrong answer " speech="" play="_user_,A21" />
-        <Item text="_user_ Your answer was not correct." speech="" play="_user_,A22" />
-      </SpeechCan>
-      <SpeechCan name="JordanPositiveFeedback">
-        <Item text="ComputerStudent1, you were right!" speech="" play="A23" />
-        <Item text="ComputerStudent1, you got that one right!" speech="" play="A24" />
-        <Item text="ComputerStudent1, you were correct!" speech="" play="A25" />
-      </SpeechCan>
-      <SpeechCan name="Pump">
-        <Item text="_user_ try your best and answer the question." speech="_user_ try your best and answer the question." play="_user_,A26" />
-      </SpeechCan>
-      <SpeechCan name="PositiveFeedbackToUserOnly">
-        <Item text="_user_ you did an amazing job!" speech="" play="_user_,A27" />
-        <Item text="_user_ you did a great job! You answered the question correctly! Keep up the good work!" speech="" play="_user_,A28" />
-        <Item text="_user_ you did a great job!" speech="" play="_user_,A29" />
-        <Item text="_user_ keep up the good work! You are on a roll!" speech="" play="_user_,A30" />
-        <Item text="_user_ you are on a roll!" speech="" play="_user_,A31" />
-        <Item text="_user_ great job!" speech="" play="_user_,A32" />
-      </SpeechCan>
-      <SpeechCan name="PositiveFeedbackUserNotJordan">
-        <Item text="_user_ you did great! Sorry ComputerStudent1 you didn't pick the correct answer!" speech="" play="_user_,A33" />
-        <Item text="_user_ you did an amazing job answering the question! ComputerStudent1 you didn't do so well! Try again!" speech="" play="_user_,A34" />
-        <Item text="_user_ you did great! ComputerStudent1 try again okay?" speech="" play="_user_,A35" />
-        <Item text="_user_ keep it up! You are doing great! ComputerStudent1 sorry you didn't picked the right answer!" speech="" play="_user_,A36" />
-        <Item text="_user_ keep it up! You are doing great! ComputerStudent1 try again next time!" speech="" play="_user_,A37" />
-        <Item text="_user_ you answered correctly! ComputerStudent1 try to answer the next question correctly!" speech="" play="_user_,A38" />
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Good job. # You are both correct." speech="" play="A5" />
+        <Item text="Phenomenal work you two. # Way to go on getting it right." speech="" play="A6" />
+        <Item text="Great answer, both of you. # You got it right." speech="" play="A7" />
+        <Item text="Yes, that's correct. # Smooth move you two." speech="" play="A8" />
+        <Item text="You both got it right. # Excellent work." speech="" play="A9" />
+        <Item text="You are both right. # Way to go." speech="" play="A10" />
       </SpeechCan>
       <SpeechCan name="JordanNegativeFeedback">
-        <Item text="ComputerStudent1 you didn't pick the correct answer!" speech="ComputerStudent1 you didn't pick the correct answer!" play="A39" />
-        <Item text="ComputerStudent1 you actually got that question wrong!" speech="ComputerStudent1 you actually got that question wrong!" play="A40" />
-        <Item text="ComputerStudent1 that's not right!" speech="ComputerStudent1 that's not right!" play="A41" />
-        <Item text="ComputerStudent1 you gave an incorrect answer." speech="ComputerStudent1 you gave an incorrect answer!" play="A42" />
-        <Item text="ComputerStudent1 you were wrong." speech="ComputerStudent1 you were wrong." play="A43" />
-        <Item text="ComputerStudent1, sorry that's not right." speech="Sorry ComputerStudent1 that's not right." play="A44" />
+        <Item text="Jordan, you didn't pick the correct answer." speech="" play="A11" />
+        <Item text="Jordan, you actually got that question wrong." speech="" play="A12" />
+        <Item text="Jordan, that's not right." speech="" play="A13" />
+        <Item text="Jordan, you gave an incorrect answer." speech="" play="A14" />
+        <Item text="Jordan, I disagree" speech="" play="A15" />
+        <Item text="Sorry, Jordan, I disagree." speech="" play="A16" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoUser">
+        <Item text="Great job." speech="" play="A17" />
+        <Item text="Good. # That is right." speech="" play="A18" />
+        <Item text="You are correct." speech="" play="A19" />
+        <Item text="You got it right." speech="" play="A20" />
+        <Item text="great. # You answered correctly." speech="" play="A21" />
+        <Item text="Your answer makes sense" speech=" " play="A22" />
+        <Item text="Exactly. # You are right." speech="" play="A23" />
+        <Item text="I agree with you." speech="" play="A24" />
+        <Item text="You answered correctly." speech="" play="A25" />
+        <Item text="I agree." speech="" play="A26" />
+        <Item text="You got it right." speech="" play="A27" />
+        <Item text="Good work." speech="" play="A28" />
+        <Item text="Well done." speech="" play="A29" />
+        <Item text="your decision makes sense." speech="" play="A30" />
+        <Item text="I agree" speech="" play="A31" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="Well, actually, that is not what I was looking for." speech="" play="A32" />
+        <Item text="sorry, but you are not correct." speech="" play="A33" />
+        <Item text="Oh sorry, that isn't what I was looking for" speech="" play="A34" />
+        <Item text="Not exactly, good try" speech="" play="A35" />
+        <Item text="Well, that wasn't what I was thinking. Here is the best choice in green" speech="W" play="A36" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry you two that wasn't what I was looking for." speech="" play="A37" />
+        <Item text="Unfortunately neither of you gave the correct answer." speech="" play="A38" />
+        <Item text="Sorry. # Neither of you gave me the answer that I was looking for." speech="" play="A39" />
+        <Item text="Sorry you two. # That wasn't right." speech="" play="A40" />
+        <Item text="Not quite. # You both got that one incorrect." speech="" play="A41" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok _user_ here is the answer." speech="" play="A42,_user_,A43" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A44" />
+      </SpeechCan>
+      <SpeechCan name="JordanPositiveFeedback">
+        <Item text="Jordan, Wonderful. # You answered the question correctly." speech="" play="A45" />
+        <Item text="Jordan, You rock. # That's right." speech="" play="A46" />
+        <Item text="Jordan, That's right." speech="" play="A47" />
+        <Item text="Jordan, great work. # You got it right." speech="" play="A48" />
+        <Item text="Jordan was right." speech="" play="A49" />
       </SpeechCan>
       <SpeechCan name="MoreTime">
-        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A45" />
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A50" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A51" />
       </SpeechCan>
     </Agent>
   </Agents>
@@ -170,98 +145,51 @@
     <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
   </SpeechActs>
   <RigidPacks>
-    <RigidPack name="Transition3" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, I'm glad you are being so considerate to your dad." speech="" play="A46" />
-    </RigidPack>
-    <RigidPack name="Transition7" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Here is another question." speech="" play="A47" />
-    </RigidPack>
     <RigidPack name="Opening1" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, great job getting through the first artical. Here is the second article! When you are finished please click continue so we can practice more on cause and effect texts." speech="" media="media/Lesson21-Main1-0.html" play="_user_,A48" />
-    </RigidPack>
-    <RigidPack name="Transition9999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Here is another question you two." speech="" play="A49" />
-    </RigidPack>
-    <RigidPack name="Closing" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="I hope you guys enjoyed this lesson with me!" speech="" play="A50" />
-      <Item id="2" agent="ComputerStudent1" text="We did ComputerTutor! We learned about cause and effect." speech="" play="B58" />
-      <Item id="3" agent="ComputerTutor" text="Yes you guys did! Here is a recap of the articles you went  in today's lesson!" speech="" play="A51" />
-      <Item id="4" agent="ComputerStudent1" text="Great! So I'm guessing that this chart shows us the causes and effects in the two articles we went through today!" speech="" play="B59" />
-      <Item id="5" agent="ComputerTutor" text="Yes jordan! that is right! this chart shows the causes and effects of the articles that we covered today!" speech="" play="A52" />
-      <Item id="6" agent="ComputerStudent1" text="Thanks ComputerTutor! _user_! Have a great day! See you later!" speech="" play="B60,_user_,B61" />
-    </RigidPack>
-    <RigidPack name="Transition4" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="I hope you are enjoying the article. " speech="" play="A53" />
-    </RigidPack>
-    <RigidPack name="Transition999999999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Let's keep going you two!" speech="" play="A54" />
-    </RigidPack>
-    <RigidPack name="Transition" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Let us go on." speech="" play="A55" />
-    </RigidPack>
-    <RigidPack name="Transition6" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Let us keep going." speech="" play="A56" />
-    </RigidPack>
-    <RigidPack name="Transition2" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="I hope these questions are helping you two." speech="" play="A57" />
-    </RigidPack>
-    <RigidPack name="Transition9999999999999" usedIn="">
-      <Item id="1" agent="ComputerStudent1" text="These questions are really helping ComputerTutor! Thanks! Let's keep going!" speech="" play="B62" />
+      <Item id="1" agent="Cristina" text="_user_ and Jordan, Welcome back. # How are you? # Today we will be helping Jordan with some new documents." speech="" media="media\Lesson30-IntroTitle.html" play="_user_,A52" />
+      <Item id="2" agent="Jordan" text="Cristina, I don't know much about documents. # How do I know if something I am reading is a document?" speech="" play="B18" />
+      <Item id="3" agent="Cristina" text="Jordan, I thought you would never ask. # A document is a piece of written, printed, or electronic matter that provides information, evidence, or serves as an official record. # I think we should look at a couple of examples before we get started on today's activity." speech="" media="media\L30-Opening1.html" play="A53" />
+      <Item id="4" agent="Jordan" text="Ok I think I get it. # So a document kind of keeps track of information, like a written record of some sort." speech="" play="B19" />
+      <Item id="5" agent="Cristina" text="That's right. # There are a few key things to remember about documents. # First, documents provide information, this example utility bill gives information about how much energy was used over the course of a payment period. # Second, the purpose of documents is to inform. # It informs us about the date that an action must be performed. # Some documents require action to be taken. # In this case, the action is the payment due August fifteenth. # The total amount due shows how much needs to be paid by that date." speech="" play="A54" />
+      <Item id="6" agent="Jordan" text="What about this receipt? # I feel like a receipt provides information and is informative, but it doesn't require an action." speech="" media="media\L30-Opening2.html" play="B20" />
+      <Item id="7" agent="Cristina" text="That's true Jordan. # Not all documents will require action. # This example shows a receipt. # A receipt informs you about items that were purchased. # Its purpose is to help you remember by giving a record of when, where and what items were purchased as well as how the items were purchased." speech="" play="A55" />
+      <Item id="8" agent="Jordan" text="One more question. # What about documents we fill out, like on the computer? # I ordered a swimsuit through the internet and i had to fill out a bunch of information, like my shorts size and my address." speech="" play="B21" />
+      <Item id="9" agent="Cristina" text="Right. # The point of filling out documents is usually to give information to other people. # In your case, the person sending you the swimsuit needed to know and what size of suit to send and where to send it." speech="" play="A56" />
+      <Item id="8" agent="Jordan" text="OK, I get it. # From what you have said, I think a resume would be a type of document. # I just finished my first resume. # I found a job listing that I really want to apply for but I want to make sure that I did my resume correctly first. # _user_, will you look over it with me?" speech="" play="B22,_user_,B23" />
+      <Item id="9" agent="Cristina" text="Great idea, Jordan. # A resume is a very important type of document. # It gives information to potential employers about your skills and experience. # _user_, could you help Jordan out? # Please read over Jordan's resume and press continue at the bottom of the page to move on to the rest of the activity." speech="" media="media\Lesson30(M)-0-0.html" play="A57,_user_,A58" />
     </RigidPack>
     <RigidPack name="Transition1" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Let's continue you two!" speech="" play="A58" />
+      <Item id="1" agent="Cristina" text="Let's keep practicing." speech="" play="A59" />
     </RigidPack>
-    <RigidPack name="Transition99999999999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Here is another question!" speech="" play="A59" />
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="Jordan" text="_user_, thanks so much for all your help! # I learned a lot from you. # I was wondering if you could help me with one more document?" speech="" play="_user_,B24" />
+      <Item id="2" agent="Cristina" text="_user_, yes, let's take a look at this document for Jordan. # When you are done, please press continue at the bottom." speech="" play="_user_,A60" />
     </RigidPack>
-    <RigidPack name="Transition999999999999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="OK." speech="" play="A60" />
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Jordan" text="I am learning a lot today!" speech="" play="B25" />
     </RigidPack>
-    <RigidPack name="Transition9999999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="I have a few more questions for you guys!" speech="" play="A61" />
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's go to the next question." speech="" play="A61" />
     </RigidPack>
-    <RigidPack name="Transition8" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="You two are doing great! Keep it up!" speech="" play="A62" />
-    </RigidPack>
-    <RigidPack name="Transition9999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Let us move on. " speech="" play="A63" />
-    </RigidPack>
-    <RigidPack name="Opening2" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, great job getting through the first artical. Here is the second article! When you are finished please click continue so we can practice more on cause and effect texts." speech="" media="media/Lesson21-Main2-0.html" play="_user_,A64" />
-    </RigidPack>
-    <RigidPack name="Opening" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, Hi! How are you two today?" speech="" media="media/Lesson21-IntroTitle.html " play="_user_,A65" />
-      <Item id="2" agent="ComputerStudent1" text="ComputerTutor, We're great! What will we be doing today?" speech="" play="B63" />
-      <Item id="3" agent="ComputerTutor" text="Today you two will be reading texts on cause and effect!" speech="" play="A66" />
-      <Item id="4" agent="ComputerStudent1" text=" ComputerTutor, Can you explain what cause and effect is before we start?" speech="" play="B64" />
-      <Item id="5" agent="ComputerTutor" text="Yes! A cause is something or some event that results in an event taking place... which is an effect. As you can see here an effect can have many causes." speech="" media="media/Lesson21-Intro0-2.html" play="A67" />
-      <Item id="6" agent="ComputerTutor" text="On this chart, you can see that there can be one cause that leads to many effects!" speech="" media="media/Lesson21-Intro0-1.html" play="A68" />
-      <Item id="7" agent="ComputerStudent1" text="This looks a bit confusing. _user_, I would probably need your help on this. " speech="" play="B65,_user_,B66" />
-      <Item id="8" agent="ComputerTutor" text="  _user_ and ComputerStudent1, please read the article and click continue when you are done reading." speech="  _user_ and ComputerStudent1, please reed the article and click continue when you are done reading." media="media/Lesson21-Main0-0.html" play="_user_,A69" />
-    </RigidPack>
-    <RigidPack name="Transition999999" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="Here is the second question you guys!" speech="" play="A70" />
-    </RigidPack>
-    <RigidPack name="Transition99" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="OK." speech="" play="A71" />
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope you learned more about documents and the important pieces needed to read, complete, and  them. # Jordan, I hope you can get your documents in order now." speech="" media="media\L30Close.html" play="A62" />
+      <Item id="2" agent="Jordan" text="I think I can, yes. # _user_ you really helped me today! # Thank you so much! # See you next time." speech="" play="B26,_user_,B27" />
     </RigidPack>
     <RigidPack name="Transition5" usedIn="">
-      <Item id="1" agent="ComputerTutor" text="OK." speech="" play="A72" />
+      <Item id="1" agent="Cristina" text="Let's keep going you two." speech="" play="A63" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Alright. # Let's move on." speech="" play="A64" />
     </RigidPack>
   </RigidPacks>
   <TutoringPacks>
     <TutoringPack name="TPA1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, let me ask you, what is the topic of the article?" speech="" media="" play="A73">
+        <Question id="1" agent="Jordan" text="_user_, can I first ask you, what is the purpose of a resume?" speech="" media="" play="_user_,B28">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of the article is exercising." speech="" keys="any" threshold="" test="" play="A74" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Please try again, look for context clues within the article and in the title. Can you tell me what the topic of the article is?" speech="" keys="any" threshold="" test="" play="A75" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What do you think the topic of the article is?" speech="" keys="any" threshold="" test="" play="_user_,B67" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, do you agree with ComputerStudent1? Please choose from one of the options that gives you the topic." speech="" keys="adf" threshold="" test="" play="_user_,A76" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I think the topic of the article is sports! " speech="" keys="any" threshold="" test="" play="B68" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I think the topic of the article is skydiving! " speech="" keys="asdf" threshold="" test="" play="B69" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I think the topic of the article is exercising." speech="" keys="any" threshold="" test="" play="B70" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see I was wrong. _user_, thanks for helping me out" speech="" keys="any" threshold="" test="" play="B71,_user_,B72" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The purpose of this document is to provide a summary of skills, abilities, and accomplishments." speech="" keys="any" threshold="" test="" play="A65" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, you want to effectively communicate what makes you best for the job. # Unless your hobbies are related to the job, a resume should not describe your hobbies. # Please try again." speech="" keys="any" threshold="" test="" play="A66" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm cleared up on what the purpose of a resume is now. # So it's not to get a date. # I guess i can use the Internet for that. # Thanks." speech="" keys="any" threshold="" test="" play="B29" />
           </Answers>
         </Question>
       </Questions>
@@ -270,16 +198,11 @@
     </TutoringPack>
     <TutoringPack name="TPA2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, according to the highlighted sentence, what is one effect of exercising?" speech="" media="" play="_user_,A77">
+        <Question id="2" agent="Jordan" text="_user_, based on my resume, which job position do you think would best fit my work experience?" speech="" media="" play="_user_,B30">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The effect being presented in the sentence is exercising can help control weight." speech="" keys="any" threshold="" test="" play="A78" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint. The effect is what happens as a result of exercising. _user_, please try again, what is the overall effect being presented in the highlighted sentence?" speech="" keys="any" threshold="" test="" play="A79,_user_,A80" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ come on and try! I know you can do it! What is the effect being presented in the highlighted sentence?" speech="" keys="any" threshold="" test="" play="_user_,B73" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the effect being presented is?" speech="" keys="any" threshold="" test="" play="A81" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think the effect is time consuming." speech="" keys="any" threshold="" test="" play="B74" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think the effect is a positive impact on your life." speech="" keys="asdf" threshold="" test="" play="B75" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think the effect from exercise is it controls weight." speech="" keys="any" threshold="" test="" play="B76" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I understand now! The effect from exercise is that it controls weight." speech="" keys="any" threshold="" test="" play="B77" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="While Jordan can certainly apply for any of these positions, his resume best reflects his experience as a sever. # The best choice here is fine dining server." speech="" keys="any" threshold="" test="" play="A67" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please read carefully under Jordan's experience section. # Try again." speech="" keys="any" threshold="" test="" play="A68" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Great! # I was thinking maybe a fine dining server best suits my experience too!" speech="" keys="any" threshold="" test="" play="B31" />
           </Answers>
         </Question>
       </Questions>
@@ -288,16 +211,11 @@
     </TutoringPack>
     <TutoringPack name="TPA3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, according to the text, diet and exercising are important in a healthy lifestyle. Could you point out one sentence from the text that supports this statement?" speech="" media="" play="A82">
+        <Question id="3" agent="Jordan" text="_user_, which section on this resume do you think I should put my goals? # Choose one of the highlighted sections, either objective, core qualifications, or experience." speech="" media="" play="_user_,B32">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The sentence in the text, exercising increases muscle and reduces fat in your body, supports the notion that exercising is important for health. Muscle increase and reduce fat will keep your body in good shape." speech="" keys="any" threshold="" test="" play="A83" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about which of the sentences characterizes being healthy, please try again." speech="" keys="any" threshold="" test="" play="A84" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_,  go ahead and try to answer the question! Get rid of all of the sentences that do not support the good summary below by clicking on the sentences in the text." speech="" keys="any" threshold="" test="" play="_user_,B78" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think? Which sentence supports the highlighted statement? Please choose one." speech="" keys="any" threshold="" test="" play="_user_,A85" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I think the first sentence supports the statement." speech="" keys="any" threshold="" test="" play="B79" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I think the third sentence supports the statement." speech="" keys="asdf" threshold="" test="" play="B80" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I think the fourth sentence supports the statement" speech="" keys="asdf" threshold="" test="" play="B81" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see now how the first sentence supports the statement. _user_, thanks again." speech="" keys="any" threshold="" test="" play="B82,_user_,B83" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan's goals are best reflected in the Objective section of the resume. # The purpose here is to tell a potential employer what it is you want to do." speech="" keys="any" threshold="" test="" play="A69" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a clue, we are looking for where Jordan lists what he wants to do. # Please try again." speech="" keys="any" threshold="" test="" play="A70" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I will remember that objective is where I need to summarize my goals. # Thanks." speech="" keys="any" threshold="" test="" play="B33" />
           </Answers>
         </Question>
       </Questions>
@@ -306,25 +224,40 @@
     </TutoringPack>
     <TutoringPack name="TPA4">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, I just remembered, my dad doesn't exercise and he needs to know the effects of exercising. Could you click on one of the sentences from the text that points to the effect of exercising?" speech="" media="" play="_user_,B84">
+        <Question id="4" agent="Cristina" text="_user_, could you help Jordan fill in the objective for his resume? # He needs to fill in the blank with an appropriate word or phrase. # Please type your answer in the box below." speech="" media="" play="_user_,A71">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Both sentence 2 and sentence 4 points to the effect of exercising. According to the text, the effects of exercising include weight control and prevention of health problems." speech="" keys="any" threshold="" test="" play="A86" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about what we have learned so far regarding the effects of exercising. Please try again," speech="" keys="any" threshold="" test="" play="A87" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ all you have to do is click on the sentences that are not effects of exercising." speech="" keys="any" threshold="" test="" play="_user_,B85" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I'm copy pasting these in my email to my dad. Thanks for helping me out!" speech="" keys="any" threshold="" test="" play="B86" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="The best answer is server. # According to Jordan's brief description of his past work experience, he has the most experience as a server." speech="" keys="serv|wait|staff" threshold="0.7" test="" play="A72" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="A better answer could be something like server, waiter, or staff." speech="" keys="carwasher" threshold="0.2" test="" play="A73" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I will remember to put server down in there." speech="" keys="any" threshold="" test="" play="B34" />
           </Answers>
         </Question>
       </Questions>
-      <Expectations />
+      <Expectations>
+        <Expectation id="1" text="Server">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="server" speech="" keys="\b(serv\w*|wait\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A74" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)&#xD;&#xA;plates | (RegEx=0, LSA=0)" play="A75" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="Remember, we are look for the kind of job Jordan would like to get. # Type the best answer below." speech="" media="" play="A76">
+              <Answers>
+                <Answer name="Good Answer" agent="Cristina" type="Good" text="Alright." speech="" keys="serv|wait|staff" threshold="0.7" test="" play="A77" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Oh that isn't quite what I was looking for. # The best answer would be something like server or waiter." speech="" keys="doctor" threshold="0.2" test="" play="A78" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
       <Misconceptions />
     </TutoringPack>
     <TutoringPack name="TPA5">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, I have some difficulty understanding these two highlighted sentences in terms of cause and effect, can you help me out? Which of the options is the correct cause and effect based on the sentences?" speech="" media="" play="_user_,B87">
+        <Question id="5" agent="Jordan" text="_user_, What do you think about the email address that I provided, should I change to a different one to look more professional and easier for people to remember?" speech="" media="" play="_user_,B35">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The sentences is trying to say that exercising is the cause that will produce the effect of weight control. " speech="" keys="aasdf" threshold="" test="" play="A88" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Please read the sentences carefully regarding what they say about the cause and effect. Please try again." speech="" keys="adsf" threshold="" test="" play="A89" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Ah I see. Exercising is the cause, weight control is the effect, and the effect comes about through burning calories. It was the second sentence that threw me off. Thanks again." speech="" keys="ads" threshold="" test="" play="B88" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="jordan dot smith 03 at c net dot com is the best email to use. # It is best to avoid email addresses with your nickname, hobby, pet's name or any other personal information besides your name." speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="A good rule of thumb is not to use your nickname or hobby in the address. # Why don't you give it another try?" speech="" keys="any" threshold="" test="" play="A80" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yeah, I think having my name in the email address makes perfect sense." speech="" keys="any" threshold="" test="" play="B36" />
           </Answers>
         </Question>
       </Questions>
@@ -333,12 +266,11 @@
     </TutoringPack>
     <TutoringPack name="TPA6">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, my mom has a bad diet and I'd like to tell her the effects. Could you tell me what are the effects of having a bad diet based on the text? Please choose an answer." speech="" media="" play="_user_,B89">
+        <Question id="6" agent="Jordan" text="_user_, I want to mention that I have some experience with graphic design, which section do you think I should put that down? # Please select one of the highlighted sections." speech="" media="" play="_user_,B37">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Unproductive workout is an effect of having bad diet." speech="" keys="any" threshold="" test="" play="A90" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text=" in the article it states that having a healthy dieit is as important as exercise itself. What are the effects of having a bad diet? Please try again." speech="" keys="any" threshold="" test="" play="A91" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text=" did you need more time to answer the question? Try your best! What are the effects of having a bad diet? I'd like to tell my mom." speech="" keys="any" threshold="" test="" play="B90" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see! I will go tell my mom now so hopefully she'll change her diet to a more healthy one. " speech="" keys="any" threshold="" test="" play="B91" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Any skill should be in the core qualification section, even if they are not directly relevant to the job Jordan will apply for, just in case they end up being important." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint: which section lists Jordan's skills?" speech="" keys="any" threshold="" test="" play="A82" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see. # So skills should be in the core qualification section, and work experience that's directly related to the job I'm applying for will be in the experience section, got it!" speech="" keys="any" threshold="" test="" play="B38" />
           </Answers>
         </Question>
       </Questions>
@@ -347,16 +279,23 @@
     </TutoringPack>
     <TutoringPack name="TPA7">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, I think there is one last effect of exercising that we haven't covered yet. Based on the text, which of these is another effect of exercising?" speech="" media="" play="_user_,A92">
+        <Question id="7" agent="Jordan" text="_user_, I'm thinking maybe I shouldn't be putting all of my skills on this resume, just the relevant ones, which of these skills do you think I should just leave out? # Can you select one of the highlighted skills that you think i should remove?" speech="" media="" play="_user_,B39">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Less energy is not a effect of exercising. In fact, exercising does the opposite, it gives you more energy." speech="" keys="any" threshold="" test="" play="A93" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint. According to the text, exercising not only helps you physically. What is an effect of exercising? Please try again." speech="" keys="any" threshold="" test="" play="A94" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_, did you need more time to answer the question? Try your best! Which answer option is not caused by exercising?" speech="" keys="any" threshold="" test="" play="_user_,B92" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think?" speech="" keys="asdf" threshold="" test="" play="A95" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="Happier mood is an effect of exercising." speech="" keys="asdf" threshold="" test="" play="B93" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I'm not sure, maybe less energy is an effect of exercising?" speech="" keys="asdf" threshold="" test="" play="B94" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I'm not sure, maybe bad diet is an effect of exercising?" speech="" keys="adsf" threshold="" test="" play="B95" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Oh! I understand now! Exercising will bring you happier mood! That's the effect!" speech="" keys="any" threshold="" test="" play="B96" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="the best answer is exceptional video gaming abilities. # Though Jordan does have these skills, they are not the same type of skills as the restaurant and customer service oriented ones in this section. # The other skills listed are much more relevant to a serving job." speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="A good thing to consider for this question is what do the other skills have in common. # How will they relate to his objective? # Let's give it one more try. # Which does not fit? # Choose one of the highlighted answers." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm actually quite proud of my video game talent, but yeah maybe I should just leave it out. # I will think about it." speech="" keys="any" threshold="" test="" play="B40" />
+          </Answers>
+        </Question>
+        <Question id="8" agent="Cristina" text="Which highlighted Core Qualification does not fit with Jordan's other skills?" speech="" media="" play="A85">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best answer is exceptional video gaming abilities. # Though Jordan does have these skills, they are not the same type of skills as the restaurant and customer service oriented ones in this section. # The others listed are much more relevant to a serving job." speech="" keys="any" threshold="" play="A86" />
+            <Answer name="BlankPrompt" agent="Cristina" type="BlankPrompt" text="Please select an answer" speech="" keys="any" threshold="" play="A87" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="I think there is a better answer. # Think about the types of skills Jordan has listed in this section, which one is least like the others?" speech="" keys="any" threshold="" play="A88" />
+            <Answer name="AskJordan" agent="Jordan" type="AskJordan" text="Jordan, you listed many skills in this section? # Which of these you listed isn't really like the others?" speech="" keys="any" threshold="" play="B41" />
+            <Answer name="AskUser" agent="Cristina" type="AskUser" text="What do you think is the best answer?" speech="" keys="any" threshold="" play="A89" />
+            <Answer name="JordanCorrect" agent="Jordan" type="JordanCorrect" text="I would have to say my exceptional video gaming abilities." speech="" keys="any" threshold="" play="B42" />
+            <Answer name="JordanIncorrect" agent="Jordan" type="JordanIncorrect" text="I made this resume but it beats me!" speech="" keys="any" threshold="" play="B43" />
+            <Answer name="AgreeswithUser" agent="Jordan" type="AgreeswithUser" text="_user_, I think that you're dead on!" speech="" keys="any" threshold="" play="_user_,B44" />
           </Answers>
         </Question>
       </Questions>
@@ -365,174 +304,40 @@
     </TutoringPack>
     <TutoringPack name="TPA8">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, the highlighted sentence shows some effects of exercising. According to this sentence, which of the following is correct?" speech="" media="" play="A96">
+        <Question id="8" agent="Cristina" text="Now let's look at the experience section, Jordan has listed washing as a task he completed at his previous position with Clark's Restaurant. # Let us clarify this, according to his resume, what kind of washing has Jordan had experiences in? # Please try typing in an answer that makes sense." speech="" media="" play="A90">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The sentence mentions that exercising can help prevent cancers such as colon and breast cancer." speech="" keys="any" threshold="" test="" play="A97" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about what we have discussed so far regarding effects of exercising, please try again." speech="" keys="any" threshold="" test="" play="A98" />
-            <Answer name="BlankPrompt" agent="ComputerStudent1" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try your best! What is the effect being presented in the highlighted sentence?" speech="" keys="any" threshold="" test="" play="_user_,B97" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="The sentence says that exercising can help prevent certain types of cancer." speech="" keys="any" threshold="" test="" play="B98" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="The sentence says exercising can lead to health problems." speech="" keys="any" threshold="" test="" play="B99" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I guess I misread. The sentence was trying to say, among other things, exercising can help prevent certain types of cancer." speech="" keys="any" threshold="" test="" play="B100" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="The sentence says exercising can lead to negative mood" speech="" keys="any" threshold="" test="" play="B101" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think about ComputerStudent1's answer? Why don't you try it too. Please pick one." speech="" keys="adf" threshold="" test="" play="_user_,A99" />
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="Jordan's experience lists his work as a dishwasher. # That is the best answer." speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.5" test="" play="A91" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="Since Jordan has served in a restaurant, washing dishes would be the most reasonable interpretation." speech="" keys="carwasher" threshold="" test="" play="A92" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I guess I should clarify this. # Just putting down washing may be rather vague. # Thanks" speech="" keys="any" threshold="" test="" play="B45" />
           </Answers>
         </Question>
       </Questions>
-      <Expectations />
+      <Expectations>
+        <Expectation id="2" text="Dishwasher">
+          <Answers>
+            <Answer name="GoodAnswer" agent="Cristina" type="Good" text="dishwasher" speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.7" test="chelsea jones | (RegEx=1, LSA=0.502)&#xD;&#xA;chalsy jones | (RegEx=1, LSA=0.135)" play="A93" />
+            <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="communication skills | (RegEx=0, LSA=0)&#xD;&#xA;plates | (RegEx=0, LSA=0)" play="A94" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Cristina" text="Think about what kind of washing Jordan could do in a restaurant. # What do you think the best answer might be? # Try typing in your answer again." speech="" media="" play="A95">
+              <Answers>
+                <Answer name="GoodAnswer" agent="Cristina" type="Good" text="dishwasher" speech="" keys="\b(dish\w*|plat\w*|bowl\w*|cup\w*|glass?\w*)\b" threshold="0.5" test="" play="A96" />
+                <Answer name="BadAnswer" agent="Cristina" type="Bad" text="carwasher" speech="" keys="carwasher" threshold="0.2" test="" play="A97" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
       <Misconceptions />
     </TutoringPack>
     <TutoringPack name="TPA9">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, look at this highlighted sentence. Based on this sentence, which of the following is true?" speech="" media="" play="_user_,A100">
+        <Question id="9" agent="Jordan" text="_user_, should I include all of the following in my resume? # Could you tell me which one I should maybe leave out?" speech="" media="" play="_user_,B46">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The sentence emphasizes that exercise needs to be combined with proper diet to get the effect of positive changes in your body." speech="" keys="asdf" threshold="" test="" play="A101" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Please read the sentence carefully and try again." speech="" keys="adf" threshold="" test="" play="A102" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="The sentence is saying positive changes in your body are effects of both exercise and proper diet." speech="" keys="adsf" threshold="" test="" play="B102" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="The sentence is saying positive changes in your body are effects of exercise alone." speech="" keys="adf" threshold="" test="" play="B103" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="The sentence is saying positive changes in your body are effects of proper diet alone." speech="" keys="adf" threshold="" test="" play="B104" />
-            <Answer name="AskJordan" agent="ComputerStudent1" type="AskJordan" text="ComputerStudent1, which one would you choose based on the highlighted sentence?" speech="" keys="asdf" threshold="" test="" play="B105" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see, the sentence is saying  positive changes in your body are effects of both exercise and proper diet." speech="" keys="adf" threshold="" test="" play="B106" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPA99">
-      <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_ here is another sentence that I'm a bit confused about what is the cause and what is the effect. Can you pick out the correct answer for me?" speech="" media="" play="_user_,B107">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The sentence states that exercising can make you feel more relaxed, as well as giving you happier mood." speech="" keys="any" threshold="" test="" play="A103" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Pay attention to what is the cause and what is the effect in this sentence. Remember we've talked about that a single cause can have multiple effects, you are just looking for one cause and effect, please try again." speech="" keys="any" threshold="" test="" play="A104" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I understand now that the cause is exercising and one of the effect is feeling more relaxed. Thanks." speech="" keys="any" threshold="" test="" play="B108" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD1">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, why don't you go first this time? What is the topic of the article?" speech="" media="" play="_user_,A105">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of the article is the causes of diabetes." speech="" keys="any" threshold="" test="" play="A106" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Please try again. Take a look at the title, the visual cue, and some of the words in the article as a guide. What do you think is the topic of the article?" speech="" keys="any" threshold="" test="" play="A107" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the topic of the article is?" speech="" keys="any" threshold="" test="" play="A108" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think the topic of the article is causes of diabetes." speech="" keys="any" threshold="" test="" play="B109" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think the topic of the article is Effects of Diabetes." speech="" keys="any" threshold="" test="" play="B110" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think the topic of the article is problems associated with health." speech="" keys="asdf" threshold="" test="" play="B111" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I understand now the topic of the article is causes of diabetes." speech="" keys="any" threshold="" test="" play="B112" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD2">
-      <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, I need your help again, both of my grandparents have diabetes. I saw here in the sentence highlighted that it talks about the causes of diabetes. Can you tell me a cause of diabetes?" speech="" media="" play="_user_,B113">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The article talked about two causes of diabetes, either the pancreas does not make enough insulin or your cells do not respond to insulin normally." speech="" keys="any" threshold="" test="" play="A109" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint, take a look at the sentence after the highlighted sentence. Please give it another try!" speech="" keys="any" threshold="" test="" play="A110" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Thanks so much, I will let my grandparents know the causes of diabetes. " speech="" keys="any" threshold="" test="" play="B114" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD3">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, can you pick out the sentence in the text that describes an effect of having diabetes?" speech="" media="" play="A111">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This sentence shows the effects of having diabetes by stating symptoms that occur because of diabetes. Symptoms are signs of a disease." speech="" keys="any" threshold="" test="" play="A112" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Effects of diabetes would be what would happen to your body because of diabetes. Please try again." speech="" keys="any" threshold="" test="" play="A113" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I think the fourth sentence states the effects of diabetes." speech="" keys="any" threshold="" test="" play="B115" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which sentence do you think is an effect of diabetes?" speech="" keys="any" threshold="" test="" play="_user_,A114" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I think the first sentence states the effects of diabetes." speech="" keys="any" threshold="" test="" play="B116" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I think the third sentence states the effects of diabetes." speech="" keys="asdf" threshold="" test="" play="B117" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I got it now. When it comes to a disease like diabetes symptoms would tell you about its effects." speech="" keys="any" threshold="" test="" play="B118" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD6">
-      <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_ what can be a cause of type 2 diabetes. That's what my grandma has. Can you click on the sentence in the text that shows this information." speech="" media="" play="_user_,B119">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Sentence number four talked about one cause of type 2 diabetes, which is obesity. " speech="" keys="any" threshold="" test="" play="A115" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint, look for the keyword cause in the sentences!" speech="" keys="any" threshold="" test="" play="A116" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see now! The cause of type 2 diabetes is high rates of obesity and it can be prevented with a healthy lifestyle like exercising. I will let my grandma know! Thanks again!" speech="" keys="any" threshold="" test="" play="B120" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD7">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, please refresh for us. Based on the text, what is the effect of insulin not being produced or absorbed properly in the body?" speech="" media="" play="A117">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The effect of insulin not being produced or absorbed properly in the body is diabetes." speech="" keys="any" threshold="" test="" play="A118" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint. If the cause is insulin not being properly stored, what is the effect?" speech="" keys="any" threshold="" test="" play="A119" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the correct answer is?" speech="" keys="any" threshold="" test="" play="_user_,A120" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I remember it's diabetes. " speech="" keys="any" threshold="" test="" play="B121" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="Is it eye problems? I saw that in the article." speech="" keys="any" threshold="" test="" play="B122" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="Is it obesity? I saw that in the article." speech="" keys="any" threshold="" test="" play="B123" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I understand now.That makes sense because the topic of the article is diabetes." speech="" keys="any" threshold="" test="" play="B124" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD8">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, why don't you refresh for us this time. How can the functioning of the pancreas cause diabetes?" speech="" media="" play="_user_,A121">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text=" The pancreas is responsible to making insulin. So if it doesn't make enough insulin that will cause diabetes." speech="" keys="any" threshold="" test="" play="A122" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about what does the pancreas do for the body. Please try again." speech="" keys="any" threshold="" test="" play="A123" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how do you think the pancreas causes diabetes?" speech="" keys="any" threshold="" test="" play="A124" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="It does not make enough insulin." speech="" keys="any" threshold="" test="" play="B125" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="It does not respond to insulin properly." speech="" keys="any" threshold="" test="" play="B126" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="It does not move sugar to cells in your body." speech="" keys="any" threshold="" test="" play="B127" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="So the pancreas causes diabetes by not making enough insulin. Thanks I'll remember that." speech="" keys="any" threshold="" test="" play="B128" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD9">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, perhaps you should answer this one. What is recommended if you believe you have diabetes?" speech="" media="" play="A125">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="If you have diabetes, it is recommended that you see a doctor. " speech="" keys="any" threshold="" test="" play="A126" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Please read the article carefully and try again." speech="" keys="any" threshold="" test="" play="A127" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think?" speech="" keys="any" threshold="" test="" play="_user_,A128" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="Contact a doctor. Right?" speech="" keys="any" threshold="" test="" play="B129" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I would do anything." speech="" keys="any" threshold="" test="" play="B130" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I will keep in mind that contacting a doctor is the first thing you should do if you have diabetes." speech="" keys="any" threshold="" test="" play="B131" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I would eat less sugary foods." speech="" keys="any" threshold="" test="" play="B132" />
-          </Answers>
-        </Question>
-      </Questions>
-      <Expectations />
-      <Misconceptions />
-    </TutoringPack>
-    <TutoringPack name="TPD99">
-      <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, here is a summary statement on diabetes, which of the sentences in the text would be a supporting sentence for this statement? Please click one." speech="" media="" play="_user_,A129">
-          <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The second sentence is a supporting sentence as it is a part of the information that describes what happens when insulin is not functioning appropriately, it would result in high blood sugar." speech="" keys="any" threshold="" test="" play="A130" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here is a hint. What actually happens to the body when insulin is not functioning well? Please try again." speech="" keys="any" threshold="" test="" play="A131" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which sentence do you think is a supporting sentence for the summary statement on diabetes?" speech="" keys="any" threshold="" test="" play="A132" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think the second sentence is a supporting sentence for that statement." speech="" keys="any" threshold="" test="" play="B133" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think the first sentence is a supporting sentence for that statement." speech="" keys="any" threshold="" test="" play="B134" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see, the second sentence talked about high blood sugar, which happens when insulin lost control of blood sugar. " speech="" keys="any" threshold="" test="" play="B135" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think the third sentence is a supporting sentence for that statement." speech="" keys="any" threshold="" test="" play="B136" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="It is acceptable to list hobbies if they are relevant to the job you're applying for. # And contact information is necessary for potential employers to get in touch with you. # But religious affiliations is rather personal, it's best to leave that one out if it's not directly relevant." speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, which one of these is considered more personal or private than the others? # Please try again." speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes I'm not really that shy about my religious affiliations, but I can see why it's probably best to leave that one out." speech="" keys="any" threshold="" test="" play="B47" />
           </Answers>
         </Question>
       </Questions>
@@ -541,15 +346,11 @@
     </TutoringPack>
     <TutoringPack name="TPE1">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, why don't you go first this time? What is the topic of the article?" speech="" media="" play="_user_,A133">
+        <Question id="1" agent="Jordan" text="_user_, I just got this in my mail, can you tell me what kind of document is this?" speech="" media="" play="_user_,B48">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text=" The topic of the article is the effects of smoking." speech="" keys="any" threshold="" test="" play="A134" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text=" look for text signals within the article to find out what the topic of the article is. Please try again." speech="" keys="any" threshold="" test="" play="A135" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1 what do you think the topic of the article is?" speech="" keys="any" threshold="" test="" play="A136" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think the topic of the article is Heart disease." speech="" keys="any" threshold="" test="" play="B137" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think the topic of the article is problems associated with health." speech="" keys="asdf" threshold="" test="" play="B138" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think the topic of the article is the effect of smoking" speech="" keys="any" threshold="" test="" play="B139" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see. So the topic is the effects of smoking, thanks." speech="" keys="any" threshold="" test="" play="B140" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This is a credit card statement with the amount of money that Jordan owes." speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, there are dollar amounts on there and itemized activity, what type of document best fit these?" speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it! # I always get these confused with my car insurance for some reason." speech="" keys="any" threshold="" test="" play="B49" />
           </Answers>
         </Question>
       </Questions>
@@ -558,15 +359,11 @@
     </TutoringPack>
     <TutoringPack name="TPE2">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, take a look at this highlighted sentence in the text. Please identify the cause and the effect in this sentence." speech="" media="" play="A137">
+        <Question id="2" agent="Jordan" text="_user_, can you remind me what is the purpose of a credit card statement?" speech="" media="" play="_user_,B50">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The cause mentioned in this sentence is smoking, and the effect would be death from many types of cancer. The sentence also mentioned other effects from smoking, such as heart disease and stroke." speech="" keys="any" threshold="" test="" play="A138" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read carefully, which in the sentence comes first and which comes second. Hope this will help. Please try again." speech="" keys="any" threshold="" test="" play="A139" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you identify the cause and the effect from this highlighted sentence?" speech="" keys="any" threshold="" test="" play="_user_,A140" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I think the cause is quitting smoking, the effect is having a stroke" speech="" keys="any" threshold="" test="" play="B141" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I think the cause is death, the effect is smoking" speech="" keys="asdf" threshold="" test="" play="B142" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I think the cause is smoking, the effect is certain deaths from cancer" speech="" keys="any" threshold="" test="" play="B143" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="So the sentence is trying to say that smoking is a leading cause of death from cancer, among other diseases. But I'm relieved to find that it can be avoided." speech="" keys="any" threshold="" test="" play="B144" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This document is intended to give a record of purchases and payments. # It gives the card holder a summary of how much the card has been used during the billing period, as well as the amount that is due for that billing cycle." speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Think about why you would need a statement for bills, please try again." speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes now that I think about it, having an itemized record is very helpful, even if it's quite annoying to always get these in the mail." speech="" keys="any" threshold="" test="" play="B51" />
           </Answers>
         </Question>
       </Questions>
@@ -575,15 +372,11 @@
     </TutoringPack>
     <TutoringPack name="TPE3">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_, here is a highlighted statement. Which of the sentences in the text supports this statement? Please choose one." speech="" media="" play="_user_,A141">
+        <Question id="3" agent="Jordan" text="_user_, I guess I need to pay my bill now. # Which of the highlighted dates tells me when my payment is due?" speech="" media="" play="_user_,B52">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This sentence supports the statement by talking about the various types of cancers smoking will cause" speech="" keys="adsf" threshold="" test="" play="A142" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Here's a hint, which sentence talked about smoking causing cancer?" speech="" keys="asdf" threshold="" test="" play="A143" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which sentence would you choose?" speech="" keys="adsf" threshold="" test="" play="A144" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think sentence number one supports that statement." speech="" keys="asd" threshold="" test="" play="B145" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think sentence number two supports that statement." speech="" keys="asdf" threshold="" test="" play="B146" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think sentence number three supports that statement." speech="" keys="asdf" threshold="" test="" play="B147" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Ah I got it. Sentence number two pointed out all the cancers smoking can cause, that expanded on what this highlighted statement says." speech="" keys="asdf" threshold="" test="" play="B148" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan should refer to the section titled account information. # Here we can find the payment due date. # This shows Jordan will need to pay his bill by November 23rd." speech="" keys="any" threshold="" test="" play="A104" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Be careful, Jordan is asking for a specific date when his payment would be due, please try again." speech="" keys="ads" threshold="" test="" play="A105" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it. # For some reason I always thought the due date should be under payment information, but I guess now I know the correct place to look for due dates, thanks again." speech="" keys="any" threshold="" test="" play="B53" />
           </Answers>
         </Question>
       </Questions>
@@ -592,11 +385,11 @@
     </TutoringPack>
     <TutoringPack name="TPE4">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, I have a friend who smokes and I'd like to tell them about the effect of smoking. Can you remind me again which of these is an effect of smoking according to the text?" speech="" media="" play="_user_,B149">
+        <Question id="4" agent="Jordan" text="_user_, can you tell me how much money I have left on this credit card to spend? # Would it be the amount next to new purchases, credit line, or credit available? # Please choose one for me." speech="" media="" play="_user_,B54">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="To remind again, other than cancer, smoking can also cause heart disease." speech="" keys="any" threshold="" test="" play="A145" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about what we talked about last time, please try again." speech="" keys="any" threshold="" test="" play="A146" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Got it! Heart disease is also a cause of smoking, as well as cancer. Thanks so much." speech="" keys="any" threshold="" test="" play="B150" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The credit available line shows the amount Jordan currently has available on his credit card to spend on his card. # His credit available is one ninety five dollars and eight cents. # And that's the maximum amount he can spend on this card right now." speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember, we are looking for the amount Jordan still has that he can spend. # Please try again." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I always confuse this with the other two, but now I think I get it. # New purchases are what I have spent so far, and credit line is what I can spend total. # The amount I have left to spend would be credit line subtracting new purchases which would be one ninety five and eight cents, got it." speech="" keys="any" threshold="" test="" play="B55" />
           </Answers>
         </Question>
       </Questions>
@@ -605,11 +398,11 @@
     </TutoringPack>
     <TutoringPack name="TPE5">
       <Questions>
-        <Question id="1" agent="ComputerStudent1" text="_user_, just to make sure again, could you please point out the sentence regarding the effect of smoking from what we've just talked about?" speech="" media="" play="_user_,B151">
+        <Question id="5" agent="Jordan" text="_user_, I'm checking my bill now, can you point out to me which day I did the most spending? # please choose one for me." speech="" media="" play="_user_,B56">
           <Answers>
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Give it another try." speech="" keys="any" threshold="" test="" play="A147" />
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The last sentence of the paragraph mentions that smoking also causes heart disease. " speech="" keys="any" threshold="" test="" play="A148" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Ah, there it is, the last sentence of the paragraph. Thanks again. " speech="" keys="any" threshold="" test="" play="B152" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan's largest purchase was at Grocery World on October 20th. # We can find this information by comparing the amounts of the other purchases in this section. # He spent a total of fifty dollars and thirty two cents on that date." speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try to compare the different amounts and choose the largest one. # Try again." speech="" keys="any" threshold="" test="" play="A109" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="yeah I think I may have over spent a little on that day. # Thanks I needed to check that." speech="" keys="any" threshold="" test="" play="B57" />
           </Answers>
         </Question>
       </Questions>
@@ -618,15 +411,11 @@
     </TutoringPack>
     <TutoringPack name="TPE6">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="_user_ here is a highlighted sentence. Can you identify the cause and the effect for us?" speech="" media="" play="_user_,A149">
+        <Question id="6" agent="Jordan" text="_user_, I also remembered that I might need to pay some interest for my cash advances, can you show me where I can locate my interest rate for that?" speech="" media="" play="_user_,B58">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="From the sentence, smoking is the cause, and premature is the effect." speech="" keys="any" threshold="" test="" play="A150" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read the sentence carefully and think about which comes first and which comes after. Please try again." speech="" keys="any" threshold="" test="" play="A151" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think?" speech="" keys="any" threshold="" test="" play="A152" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="I think smoking is the cause, premature death is the effect." speech="" keys="any" threshold="" test="" play="B153" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="I think smoking is the cause, contacting a doctor is the effect." speech="" keys="any" threshold="" test="" play="B154" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="I think illnesses is the cause, smoking is the effect." speech="" keys="any" threshold="" test="" play="B155" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I see, so smoking can also cause premature death. We really shouldn't do it!" speech="" keys="any" threshold="" test="" play="B156" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="We can refer to finance charge summary to locate Jordan's interest rate. # If we look at the other sections, there is no other place that outlines interest rates for cash advances." speech="" keys="any" threshold="" test="" play="A110" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, interest rates are in percentages, please try again." speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Yes it is a bummer that it doesn't specifically say interest rate on there, just rate so it's confusing. # But I will remember that rates would be in percentages and look for that section." speech="" keys="any" threshold="" test="" play="B59" />
           </Answers>
         </Question>
       </Questions>
@@ -635,32 +424,154 @@
     </TutoringPack>
     <TutoringPack name="TPE7">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="ComputerStudent1, somewhere in the text it summarizes the cause and the effects of the topic. See if you can point it out." speech="" media="" play="A153">
+        <Question id="7" agent="Jordan" text="_user_, can you then let me know how much interest I would need to pay on my cash advances annually?" speech="" media="" play="_user_,B60">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The second sentence of the article summarized that smoking is the cause and the effects are it harms nearly every organ in your body." speech="" keys="any" threshold="" test="" play="A154" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about what comes first and what comes after it again. Please try again." speech="" keys="any" threshold="" test="" play="A155" />
-            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think?" speech="" keys="any" threshold="" test="" play="_user_,A156" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="Great, I got it now!" speech="" keys="any" threshold="" test="" play="B157" />
-            <Answer name="JordanFirstGood" agent="ComputerStudent1" type="JordanFirstGood" text="I think the sentence, smoking harms nearly every organ in your body and it hurts your health, summarizes the cause and the effects in the text." speech="" keys="any" threshold="" test="" play="B158" />
-            <Answer name="JordanFirstBad1" agent="ComputerStudent1" type="JordanFirstBad1" text="I think the sentence, millions of Americans have health problems that are caused by smoking, summarizes the cause and the effects in the text." speech="" keys="any" threshold="" test="" play="B159" />
-            <Answer name="JordanFirstBad2" agent="ComputerStudent1" type="JordanFirstBad2" text="I think the sentence, smoking is a leading cause of cancer and death from cancer, summarizes the cause and the effects in the text." speech="" keys="any" threshold="" test="" play="B160" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If we look at the same finance charge summary as in the previous question, and find the annual percentage rate on the second column, we find that the interest Jordan will actually pay is 11. # 28 percent." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Jordan needs to know the annual rate he would need to pay, look carefully and try again." speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Wow my percentage rate seems higher than I previously thought. # Good thing that I checked!" speech="" keys="any" threshold="" test="" play="B61" />
           </Answers>
         </Question>
       </Questions>
       <Expectations />
       <Misconceptions />
     </TutoringPack>
-    <TutoringPack name="TPE9">
+    <TutoringPack name="TPE8">
       <Questions>
-        <Question id="1" agent="ComputerTutor" text="Okay you two, just one last question on this! _user_, according to the text, what is a cause of lung cancer?" speech="" media="" play="A157,_user_,A158">
+        <Question id="8" agent="Jordan" text="_user_, I heard from my credit card company that I don't need to pay the full amount but just the minimum amount, can you tell me what is minimum amount that I would need to pay?" speech="" media="" play="_user_,B62">
           <Answers>
-            <Answer name="Correct" agent="ComputerTutor" type="Correct" text=" Smoking can be the cause of lung cancer." speech="" keys="any" threshold="" test="" play="A159" />
-            <Answer name="JordanUnderstand" agent="ComputerStudent1" type="JordanUnderstand" text="I did also read elsewhere that lung cancer is often caused by smoking. Good call." speech="" keys="any" threshold="" test="" play="B161" />
-            <Answer name="JordanSecondBad2" agent="ComputerStudent1" type="JordanSecondBad2" text="Is it premature death?" speech="" keys="any" threshold="" test="" play="B162" />
-            <Answer name="JordanSecondBad1" agent="ComputerStudent1" type="JordanSecondBad1" text="Is it stroke?" speech="" keys="any" threshold="" test="" play="B163" />
-            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="It's not a trick question! Try again." speech="" keys="any" threshold="" test="" play="A160" />
-            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you say?" speech="" keys="any" threshold="" test="" play="A161" />
-            <Answer name="JordanSecondGood" agent="ComputerStudent1" type="JordanSecondGood" text="Smoking! That was easy!" speech="" keys="any" threshold="" test="" play="B164" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text="If you refer back to payment information or the balance summary, you will find that Jordan will need to pay a minimum amount of eighteen dollars. # This is listed next to minimum amount due." speech="" keys="any" threshold="" test="" play="A114" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Be careful to look for the minimum amount due for Jordan. # Please try again." speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Oh I just found out that although I won't be charged if I just pay that eighteen dollars, my interest would go up if I don't pay the full amount. # These credit cards companies are tricky! # You would end up owing them quite a lot of money if you are not careful! # Thanks for helping me out again." speech="" keys="any" threshold="" test="" play="B63" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH1">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, I just got this document in my mail, can you tell me what the purpose of it is?" speech="" media="" play="_user_,B64">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="This document intends to show who is a part of the contract and what it is for. # In this case, it is for a rental agreement." speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look for keywords in the document for its purpose, please try again." speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Ah, so a rental agreement will lay out every contracted agreement between the landlord and the renter, this would be very informative." speech="" keys="any" threshold="" test="" play="B65" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH2">
+      <Questions>
+        <Question id="2" agent="Jordan" text="_user_, can you tell me, based on this rental agreement, how long can my buddy Nicholas and I rent this house?" speech="" media="" play="_user_,B66">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Jordan and Nicholas are renting this property for one year. # We can find this information in the first paragraph of the document. # Their arrangement will begin in November 2019 and end in November 2019," speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, look under terms and try to find the date and deduce the length of rent from there. # Please try again." speech="" keys="any" threshold="" test="" play="A119" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Ah I see now, we are renting per month for 12 months, that's one year. # I will keep that in mind." speech="" keys="any" threshold="" test="" play="B67" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH3">
+      <Questions>
+        <Question id="3" agent="Jordan" text="_user_, can you let me know who the land lord is? # Please choose a name so I can see, thanks." speech="" media="" play="_user_,B68">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Oscar Miller is the owner of the house and in turn this makes him the landlord. # The first sentence of this document outlines the roles of all the persons involved in this agreement." speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Try searching for the keyword of land lord and find the name from there. # Please try again." speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Okay, Oscar Miller, I wrote that in my notebook." speech="" keys="any" threshold="" test="" play="B69" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH4">
+      <Questions>
+        <Question id="4" agent="Jordan" text="_user_, I called Mr. # Miller and he told me that I would have to pay a total of 1300 for the first month, I didn't get his explanation but he said to look for it in the rental agreement. # Can you tell me why I have to pay such a big amount? # I thought I only had to pay six hundred and fifty." speech="" media="" play="_user_,B70">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="They have to pay a security deposit of six hundred and fifty dollars plus the first month's rent of six hundred and fifty dollars, which totals to thirteen hundred dollars. # If we refer to section two labeled payments, we can find this information." speech="" keys="any" threshold="" test="" play="A122" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, try look for the section that talks about payments. # It should explain the amounts. # Please try again." speech="" keys="any" threshold="" test="" play="A123" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Wow that's a lot. # I hope I get that deposit back eventually, because I may be short on money for this." speech="" keys="any" threshold="" test="" play="B71" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH5">
+      <Questions>
+        <Question id="5" agent="Jordan" text="Mr. # Miller said something about warning me not to give him a bad check. # _user_, what does this rental agreement say will happen if i give him a bad check? # Choose an answer below." speech="" media="" play="B72,_user_,B73">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="As stated under section three on late charge, Mr. Miller will handle a bad check as unpaid rent. And he would charge Jordan with additional twenty five dollars fee for the bad check. " speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, look for the section on any additional charges that Jordan could potentially run into. # Please try again." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="That's harsh, I will be sure to check my bank balance that I have enough money for the check." speech="" keys="any" threshold="" test="" play="B74" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH6">
+      <Questions>
+        <Question id="6" agent="Jordan" text="_user_, I don't know if I can get enough money in time, do you know what would happens neither one of us can pay the rent by the fifth day of the month?" speech="" media="" play="_user_,B75">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to the section on late charges, failing to pay by the time stated would result in a late fee of thirty two dollars and fifty cents, which will be added to rent." speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Please try to look at the section on late charges, read it carefully and please try again." speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Geez, I will have to talk to my buddy Nick about getting that payment in on time." speech="" keys="any" threshold="" test="" play="B76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH7">
+      <Questions>
+        <Question id="7" agent="Jordan" text="_user_, I'm thinking maybe I can find a third housemate to split up the rent, can you tell me if the rental agreement said anything about more than two people living in the house, and if so what does it say?" speech="" media="" play="_user_,B77">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to the section labeled occupants, Jordan and Nicholas can have more than two people living with them but only if it does not exceed 15 days," speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Here's a hint, take a look at the section labeled occupants. # Please try again." speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="That might work but I will have to talk to that third person about moving in temporarily and just pay his share of the rent for fifteen days. # Thanks for letting me know." speech="" keys="any" threshold="" test="" play="B78" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH8">
+      <Questions>
+        <Question id="8" agent="Jordan" text="_user_, now I have to think about other fees for renting this house, do you know what services are included in the rent, does it pay utilities by any chance?" speech="" media="" play="_user_,B79">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In section nine on property maintenance, it states that the landlord will provide paid maintenance and repair. # In section four, utilities, it states that the tenants are responsible for paying the utilities and for the trash pickup." speech="" keys="any" threshold="" test="" play="A130" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at the section on utilities, read it carefully and try again." speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see, what a bummer. # But at least the landlord is willing to pay for repairs. # That would really be unfortunate if we had to pay for that too!" speech="" keys="any" threshold="" test="" play="B80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH9">
+      <Questions>
+        <Question id="9" agent="Jordan" text="_user_, what about pets? # I do have a pet gold fish, can I keep him or is there a fee for that too?" speech="" media="" play="_user_,B81">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="In section six on pets, Jordan will be able to keep his pet fish if he obtain a written consent from the Mr. # Miller the owner. # And he would also need to pay an additional two hundred and fifty dollars deposit. # And an extra twenty five dollars will also be added to his rent each month." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at the section on pet ownership. # Read it carefully and please try again." speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I'm beginning to regret finding this place now. # Maybe we will have to look elsewhere if it's not too late. # Or I will have to give my gold fish away." speech="" keys="any" threshold="" test="" play="B82" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPH92">
+      <Questions>
+        <Question id="11" agent="Jordan" text="_user_, my buddy Nick just called and he asks if we can make any changes to the house, can you let me know?" speech="" media="" play="_user_,B83">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="According to section nine on alterations, no changes can be made to this house without consent. # Jordan and Nicholas will need permission from Mr. # Miller to change anything from the yard and landscaping to just painting the walls." speech="" keys="any" threshold="" test="" play="A134" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Look at section nine. # Read it carefully and try again." speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see, that makes sense, I will let him know. # Thanks again." speech="" keys="any" threshold="" test="" play="B84" />
           </Answers>
         </Question>
       </Questions>
@@ -669,54 +580,50 @@
     </TutoringPack>
   </TutoringPacks>
   <Rules>
-    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="1" />
-      <Action agent="System" act="SetStatus" data="LoadPage3" id="2" />
-      <Action agent="System" act="Wait" data="5" id="3" />
-    </Rule>
-    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
-      <Action agent="System" act="SetStatus" data="LoadPage2" id="2" />
-      <Action agent="System" act="Wait" data="5" id="3" />
-    </Rule>
     <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
-      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
       <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
       <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="Read" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\L30Hard.mp3" id="2" />
+      <Action agent="System" act="SetStatus" data="Read" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
     </Rule>
     <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
       <Action agent="System" act="WaitForEvent" data="300" id="2" />
     </Rule>
-    <Rule name="DoneReading1" status="DoneReading" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+    <Rule name="DoneReading1" status="DoneReading" response="" event="MediumStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="HideAudioButton" data="" id="1" />
-      <Action agent="System" act="ShowMedia" data="media\Lesson21-Main0-1medium.html" id="2" />
-      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
-      <Action agent="System" act="Wait" data="5" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
     </Rule>
-    <Rule name="DoneReading3" status="DoneReading" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+    <Rule name="DoneReading2" status="DoneReading" response="" event="SecondStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="HideAudioButton" data="" id="1" />
-      <Action agent="System" act="ShowMedia" data="media\Lesson21-Main0-1easy.html" id="2" />
-      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
-      <Action agent="System" act="Wait" data="5" id="4" />
-    </Rule>
-    <Rule name="DoneReading2" status="DoneReading" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
-      <Action agent="System" act="HideAudioButton" data="" id="1" />
-      <Action agent="System" act="ShowMedia" data="media\Lesson21-Main0-1hard.html" id="2" />
-      <Action agent="System" act="SetStatus" data="PageLoaded" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="SetStatus" data="PageLoadedEasyorHard" id="3" />
       <Action agent="System" act="Wait" data="5" id="4" />
     </Rule>
     <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
       <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
-      <Action agent="ComputerTutor" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
       <Action agent="System" act="WaitForEvent" data="60" id="3" />
     </Rule>
-    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="MediumStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
       <Action agent="System" act="HideAudioButton" data="" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="SecondStop" hasItem="" priority="1" frequency="" description="">
       <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
       <Action agent="System" act="HideAudioButton" data="" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
@@ -726,9 +633,183 @@
       <Action agent="System" act="PlayAudio" data="" id="2" />
       <Action agent="System" act="WaitForEvent" data="30" id="3" />
     </Rule>
-    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+    <Rule name="LoadPage2" status="LoadPage2" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
       <Action agent="System" act="SetStatus" data="Read" id="1" />
-      <Action agent="System" act="ShowAudioButton" data="media\L21Exercise.mp3" id="2" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
       <Action agent="System" act="GetRule" data="" id="3" />
     </Rule>
-    <Rule nam
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoadedE" status="PageLoadedEasyorHard" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoadedH" status="PageLoadedEasyorHard" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPH" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="6000" id="3" />
+    </Rule>
+    <Rule name="CristinaAskTyping" status="AskQ" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="10000" id="3" />
+    </Rule>
+    <Rule name="CorrectT" status="UserAnswerT" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedTCorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="IncorrectT" status="UserAnswerT" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedTIncorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CorrectJordanAsked" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedJordanCorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="QAskedJordanCorrect" status="QAskedJordanCorrect" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="IncorrectJordanAsked" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="1" />
+      <Action agent="System" act="SetStatus" data="JordanAskedUserAnswer2" id="2" />
+      <Action agent="System" act="WaitForEvent" data="50000" id="3" />
+    </Rule>
+    <Rule name="JordanAskedUser2Correct" status="JordanAskedUserAnswer2" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="JordanAskedUser2Incorrect" status="JordanAskedUserAnswer2" response="" event="Incorrect" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CAskedIncorrect" status="QAskedTIncorrect" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="Answer" data="Bad" id="2" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CAskedCorrect" status="QAskedTCorrect" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="Cristina" act="Answer" data="Good" id="2" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition0" response="" event="MediaLoadedEasy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Easy-E0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition0" response="" event="MediaLoadedDifficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Difficult-D0" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedEasy" status="Transition0" response="" event="MainPageLoaded2" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TransitionMediaLoadedDifficult" status="Transition0" response="" event="MainPageLoaded3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

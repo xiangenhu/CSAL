@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="You make this look easy. " speech="" play="B1" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="" firstName="Cristina" lastName="Valdez" displayName="Cristina">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Way to go!" speech="" play="A1" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+    <RigidPack name="QRP3" usedIn="">
+      <Item id="1" agent="Cristina" text="In some of the lessons, you will need to scroll through a passage. " speech="" media="media/Background.html" play="A2" />
+      <Item id="2" agent="Jordan" text="I think I've done that before." speech="" play="B2" />
+    </RigidPack>
+    <RigidPack name="RP4" usedIn="">
+      <Item id="1" agent="Cristina" text="Use the backspace key if you need to erase anything that you have typed by mistake." speech="" play="A3" />
+      <Item id="2" agent="Jordan" text="Good to know! I make mistakes a lot. " speech="" play="B3" />
+    </RigidPack>
+    <RigidPack name="RP1" usedIn="">
+      <Item id="1" agent="Cristina" text="Hello. Welcome to AutoTutor. My name is Cristina Valdez and I will be your instructor." speech="Hello. Welcome to Autotutor. My name is Cristina Valdez and I will be your instructor." media="media/Lesson0-IntroTitle.html" play="A4" />
+      <Item id="2" agent="Jordan" text="Hi! I'm Jordan and I will be learning with you." speech="" play="B4" />
+      <Item id="3" agent="Cristina" text="Thanks for beginning Autotutor. Autotutor is designed to help you with strategies in reading comprehension." speech="Autotutor is designed to help you with strategies in reading comprehension." media="" play="A5" />
+      <Item id="4" agent="Jordan" text="Great! I am happy you have decided to join me in learning to be a better reader." speech="" play="B5" />
+      <Item id="5" agent="Cristina" text="You will need to type on a keyboard when using this program. Let's watch the following video to see a demonstration." speech="" media="media/Background.html" play="A6" />
+    </RigidPack>
+    <RigidPack name="RPA" usedIn="">
+      <Item id="1" agent="Cristina" text="Or, you can click the scroll button at the bottom of the passage." speech="" play="A7" />
+      <Item id="2" agent="Jordan" text="I see." speech="" play="B6" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="It is time to get started on the lessons. " speech="" play="A8" media="media/Lesson0-IntroTitle.html" />
+      <Item id="2" agent="Jordan" text="Will the lessons have instructions to help us know what to do?" speech="" play="B7" />
+      <Item id="3" agent="Cristina" text="Yes, Jordan. Before each activity, I will give you instructions. You can also watch the Review Videos to get a reminder about the topics that will be covered in the activities." speech="" play="A9" />
+      <Item id="4" agent="Jordan" text="Great - let's get to it, _user_!" speech="" play="B8,_user_" />
+    </RigidPack>
+    <RigidPack name="QRP2" usedIn="">
+      <Item id="1" agent="Cristina" text="Look at the page below. Most of the questions in the lessons will have multiple answer buttons like the screen you see here." speech="" media="media/TrainingMedia1.html" play="A10" />
+      <Item id="2" agent="Jordan" text="So, when the buttons unlock, we will click a button like _user_ did on the last page?" speech="" play="B9,_user_,B10" />
+      <Item id="3" agent="Cristina" text="That's right, Jordan. You will select an answer and the button will change color to show that you selected it. You will then find out if your answer was correct or incorrect." speech="" play="A11" />
+    </RigidPack>
+    <RigidPack name="QRP4" usedIn="">
+      <Item id="1" agent="Cristina" text="In the video below, you can see another user scrolling through a passage. You can drag the scroll bar on the right to move through the passage. Remember that after you click the scroll bar, you must continue to press down on the mouse as you drag the bar up and down." speech="" play="A12" />
+      <Item id="2" agent="Jordan" text="That seems familiar." speech="" play="B11" />
+    </RigidPack>
+    <RigidPack name="RP3" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's watch a user type their name." speech="" play="A13" />
+    </RigidPack>
+    <RigidPack name="RP5" usedIn="">
+      <Item id="1" agent="Cristina" text="You can press Enter on the keyboard to submit what you have typed." speech="" play="A14" />
+    </RigidPack>
+    <RigidPack name="RP6" usedIn="">
+      <Item id="1" agent="Cristina" text="Buttons in the program will be locked when Jordan and I are talking to you. " speech="" media="media/TrainingMedia0.html" play="A15" />
+      <Item id="2" agent="Jordan" text="How will we know when the buttons are unlocked?" speech="" play="B12" />
+      <Item id="3" agent="Cristina" text="When a button is unlocked, you will be able to move the mouse over the answer options and the buttons will change color. You can click on them to select your answer." speech="" play="A16" />
+      <Item id="4" agent="Jordan" text="I think I get it. Can you show me how to do this?" speech="" play="B13" />
+    </RigidPack>
+    <RigidPack name="RP2" usedIn="">
+      <Item id="1" agent="Cristina" text="You probably are using a keyboard that looks similar to this one. While using this program, you may need to type your name or type to respond to a question." speech="" play="A17" />
+    </RigidPack>
+    <RigidPack name="QRP1" usedIn="">
+      <Item id="1" agent="Cristina" text="Before we go any further, tell us which name you selected previously from the list of names. We will call you by this name throughout the lessons." speech="" play="A18" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TP1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Right now, the button is locked. Try clicking the button when it unlocks." speech="" media="media/TrainingMedia0.html" play="A19">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great! Notice when you click the button, it locks again to secure your answer. " speech="" keys="na" threshold="" play="A20" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="Type the name you selected and it will appear in the box below. Press enter when you are done." speech="" media="media/loginPage.html" play="A21">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Great _user_!" speech="" keys="na" threshold="" play="A22,_user_" />
+            <Answer name="JordanQuestion" agent="Jordan" type="JordanQuestion" text="Let's see what else we will need to do to complete the lessons." speech="" keys="na" threshold="" play="B14" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, please click one of the answers below when the buttons unlock." speech="" media="media/TrainingMedia1.html" play="_user_,A23">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="As you just heard, there is a noise that plays when you are correct. The button will also turn green. " speech="" keys="na" threshold="" play="A24" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="How do we know if we are right?" speech="" keys="na" threshold="" play="B15" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TP4">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, read the text below and practice scrolling. Press Click Here to Continue at the bottom of the passage when you are finished." speech="" media="media/TrainingMedia2.html" play="_user_,A25">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Nice work!" speech="" keys="na" threshold="" play="A26" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="RP1" id="1" />
+      <Action agent="System" act="SetStatus" data="KeyboardIntro" id="2" />
+	   <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="Keyboard" status="KeyboardIntro" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="KeyboardIntro1" id="1" />
+      <Action agent="System" act="PauseAt" data="12" id="2" />
+      <Action agent="System" act="ShowMedia" data="TypingVideoApril2014.mp4" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="RP2" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Keyboard1" status="KeyboardIntro1" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="KeyboardIntro2" id="1" />
+      <Action agent="System" act="PauseAt" data="23" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="RP3" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Keyboard2" status="KeyboardIntro2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="KeyboardIntro3" id="1" />
+      <Action agent="System" act="PauseAt" data="28" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="RP4" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Keyboard3" status="KeyboardIntro3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="KeyboardIntro4" id="1" />
+      <Action agent="System" act="PauseAt" data="900000" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="RP5" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="Keyboard4" status="KeyboardIntro4" response="" event="VideoEnd" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="RP6" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="2" />
+	   <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TP" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="ClosingtoSystem" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+	   <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+	<Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="End" data="" id="1" />
+    </Rule>
+    <Rule name="HasTP" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="NoTP" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadMedia" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+	   <Action agent="System" act="GetRule" data="" id="20" />
+    </Rule>
+    <Rule name="LoadMedia" status="LoadMedia" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="System" act="WaitForEvent" data="90" id="2" />
+    </Rule>
+    <Rule name="Stop1" status="UserAnswer" response="" event="Stop1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="ScrollVideo" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="QRP3" id="4" />
+      <Action agent="System" act="PauseAt" data="9000" id="5" />
+      <Action agent="System" act="ShowMedia" data="Lesson0Scroll.mp4" id="6" />
+      <Action agent="System" act="DeliverRigidPack" data="QRP4" id="7" />
+      <Action agent="System" act="Wait" data="5" id="8" />
+    </Rule>
+    <Rule name="ScrollVideo" status="ScrollVideo" response="" event="VideoEnd" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Stop" status="UserAnswer" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="CristinaAsked" status="QAsked" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanQuestion" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaExplain" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="2" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="3" />
+      <Action agent="Jordan" act="Answer" data="JordanQuestion" id="4" />
+      <Action agent="Cristina" act="Answer" data="CristinaExplain" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="Cristina" act="Answer" data="Correct" id="1" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Transition" status="Transition" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="QRP" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

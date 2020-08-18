@@ -1,0 +1,1142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="Jordan" gender="Male" title="Student" firstName="Jordan" lastName="" displayName="Jordan">
+      <SpeechCan name="PositiveFeedback">
+        <Item text=" _user_, You got it right!" speech="" play="_user_,B1" />
+        <Item text="_user_, You got the question right!" speech="" play="_user_,B2" />
+        <Item text=" _user_, You answered right! Thanks for helping me so much!" speech="" play="_user_,B3" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackUs">
+        <Item text="_user_, We answered the question right! " speech="" play="_user_,B4" />
+        <Item text=" _user_, We did it. We answered the question correctly." speech="" play="_user_,B5" />
+        <Item text="_user_! We answered the question correctly!" speech="" play="_user_,B6" />
+        <Item text="_user_ we both picked the correct answer!" speech="" play="_user_,B7" />
+        <Item text="_user_ we both picked the right answer!" speech="" play="_user_,B8" />
+        <Item text=" _user_ we picked the same answer! And it was right!" speech="" play="_user_,B9" />
+        <Item text=" _user_ we picked the same answer! And it was correct!" speech="" play="_user_,B10" />
+        <Item text=" _user_! We both answered correctly!" speech="" play="_user_,B11" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B12" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="" play="_user_,B13" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text=" _user_ I don't think that's the right answer." speech="" play="_user_,B14" />
+        <Item text=" _user_ I don't think that was the right answer. " speech="" play="_user_,B15" />
+        <Item text=" _user_, Try again. I don't think that was the right answer." speech="" play="_user_,B16" />
+        <Item text="_user_ I don't think that was right!" speech="" play="_user_,B17" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUser">
+        <Item text="_user_ you answered correctly! Awesome job!" speech="" play="_user_,B18" />
+        <Item text="_user_ you got the question correct! " speech="" play="_user_,B19" />
+        <Item text="_user_ you answered correctly awesome job!" speech="" play="_user_,B20" />
+        <Item text="_user_! You answered correctly! " speech="" play="_user_,B21" />
+        <Item text=" _user_! You answered the question right! " speech="" play="_user_,B22" />
+        <Item text="_user_, You answered right!! " speech="" play="_user_,B23" />
+        <Item text="_user_, You answered the question right! " speech="" play="_user_,B24" />
+        <Item text=" _user_, you answered correctly! Keep it up!" speech="" play="_user_,B25" />
+        <Item text=" _user_, You answered the question right! Keep up the great work" speech="" play="_user_,B26" />
+        <Item text="_user_ you are doing great! Keep it up!" speech="" play="_user_,B27" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Cristina" gender="Female" title="Teacher" firstName="Cristina" lastName="" displayName="Cristina">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, you answered correctly." speech="" play="_user_,A1" />
+        <Item text="_user_, I agree with your answer." speech="" play="_user_,A2" />
+        <Item text="_user_You answered correctly." speech="" play="_user_,A3" />
+        <Item text=" _user_, You answered the question correctly" speech="" play="_user_,A4" />
+        <Item text="_user_ great answer!" speech="" play="_user_,A5" />
+        <Item text="_user_,  you picked the right answer!" speech="" play="_user_,A6" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToBoth">
+        <Item text="You both picked the right answer. Great job." speech="" play="A7" />
+        <Item text="You both did great! " speech="" play="A8" />
+        <Item text="Both of you answered the question correctly!" speech="" play="A9" />
+        <Item text="Great job! You picked the correct answer!" speech="" play="A10" />
+        <Item text=" Nice work! You both answered the question correctly!" speech="" play="A11" />
+        <Item text="Both of you picked the right answer! Keep it up!" speech="" play="A12" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackToUserOnly">
+        <Item text="_user_  You answered the question correctly! Keep up the good work!" speech="" play="_user_,A13" />
+        <Item text="_user_ you did a great job!" speech="" play="_user_,A14" />
+        <Item text="_user_ that's right." speech="" play="_user_,A15" />
+        <Item text="_user_ great job!" speech="" play="_user_,A16" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="Jordan, you didn't pick the correct answer!" speech="" play="A17" />
+        <Item text="Jordan, you actually got that question wrong!" speech="" play="A18" />
+        <Item text="Jordan, that's not right!" speech="" play="A19" />
+        <Item text="Jordan, you gave an incorrect answer." speech="" play="A20" />
+        <Item text="Jordan, you were wrong." speech="" play="A21" />
+        <Item text="Jordan, sorry that's not right." speech="" play="A22" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_ did you need more time clicking?" speech="" play="_user_,A23" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="" play="_user_,A24" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_ sorry! that wasn't the right answer." speech="" play="_user_,A25" />
+        <Item text="_user_  Your answer choice was not correct." speech="" play="_user_,A26" />
+        <Item text="_user_, Looks like you picked the wrong answer  " speech="" play="_user_,A27" />
+        <Item text="_user_ Your answer was not correct." speech="" play="_user_,A28" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="_user_, here is the answer." speech="" play="_user_,A29" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackUserNotJordan">
+        <Item text="Jordan, sorry, you didn't pick the correct answer! _user_ you did great! " speech="" play="A30,_user_,A31" />
+        <Item text=" Jordan, you didn't get it. You'll get the hang of it! _user_, you were right!" speech="" play="A32,_user_,A33" />
+        <Item text=" Jordan sorry, you were not correct. _user_ You answered correctly," speech="" play="A34,_user_,A35" />
+        <Item text="Jordan sorry you didn't pick the right answer! _user_ You are doing great! keep it up! " speech="" play="A36,_user_,A37" />
+      </SpeechCan>
+      <SpeechCan name="ThatIsRightJordan">
+        <Item text="Jordan, that's right." speech="" play="A38" />
+        <Item text="Jordan, you got it." speech="" play="A39" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question." speech="" play="A40" />
+    </RigidPack>
+    <RigidPack name="Transition999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going!" speech="" play="A41" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going." speech="" play="A42" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan You are half way through the lesson! As we saw in the first section, text signals help us make predictions. " speech="" media="media/Lesson1-Intro0-3.html " play="_user_,A43" />
+      <Item id="2" agent="Jordan" text="We have to make sure the text signals make sense together! So if something is off, it may be a sign that there should be another cue there." speech="" play="B28" />
+      <Item id="3" agent="Cristina" text="In this section you will be asked to find titles,subtitles, print and visual cues and make predictions about what you see. # Take a look at this book cover! # The title is located at the top, the visual cue of the babies in the middle and the subtitle the twins survival guide at the bottom." speech="" play="A44" />
+      <Item id="4" agent="Jordan" text="The visual cue of the babies matches the subtitle but a picture of a burning building or dog would not. I get it!" speech="" play="B29" />
+      <Item id="5" agent="Cristina" text="_user_, once you are comfortable with this idea of making sure the text signals make sense together, and with these sections of the book, click continue to keeo going." speech="" play="_user_,A45" />
+    </RigidPack>
+    <RigidPack name="Transition9999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question." speech="" play="A46" />
+    </RigidPack>
+    <RigidPack name="Transition999" usedIn="">
+      <Item id="1" agent="Cristina" text="ok. Here is another question!" speech="" play="A47" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_, Here is the last question for this section!" speech="" play="_user_,A48" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope you guys enjoyed this lesson with me!" speech="" play="A49" />
+      <Item id="2" agent="Jordan" text=" Cristina, We did! We learned how to identify text signals and make predictions." speech="" play="B30" />
+      <Item id="3" agent="Cristina" text="Jordan,Yes you did! You did so well with the text signals you just named. # Take a look at this recap of the sections so you have a final idea of title, subtitle, and visual cue." speech="" media="media/Lesson1-Closing0-1.html" play="A50" />
+      <Item id="4" agent="Jordan" text="Cristina, Thanks ! # So, we learned that the text signals can provide us with more information when we try to make a prediction about a book or sign's topic and these text signals are shown below." speech="" play="B31" />
+      <Item id="5" agent="Cristina" text="Yes you did learn that! In later lessons you two will use this skill to help you make tougher predictions." speech="" play="A51" />
+      <Item id="6" agent="Jordan" text="_user_, Great! So we have to remember  that text signals are very important and they help us make predictions." speech="" play="_user_,B32" />
+      <Item id="7" agent="Cristina" text="_user_  and Jordan You got it ! I hope to see you soon! Have a great day!" speech="" play="_user_,A52" />
+      <Item id="8" agent="Jordan" text="good bye. See you next time." speech="" play="B33" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope the lesson is helping you identify titles and subtitles, print and visual cues. " speech="" play="A53" />
+    </RigidPack>
+    <RigidPack name="Transition999999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the last question, Let's finish strong!" speech="" play="A54" />
+    </RigidPack>
+    <RigidPack name="Transition9999999999" usedIn="">
+      <Item id="1" agent="Cristina" text=" you guys are doing great with predictions and spotting your text signals. Let's keep going." speech="" play="A55" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="Cristina" text="I hope these questions are helping you." speech="" play="A56" />
+    </RigidPack>
+    <RigidPack name="Transition99999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="I have two more questions for you. Let's take a look now." speech="" play="A57" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="Cristina" text=" Here are more questions!" speech="" play="A58" />
+    </RigidPack>
+    <RigidPack name="Transition" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question!" speech="" play="A59" />
+    </RigidPack>
+    <RigidPack name="Transition9999999999999" usedIn="">
+      <Item id="1" agent="Cristina" text="You did a great job with the questions!" speech="" play="A60" />
+    </RigidPack>
+    <RigidPack name="Opening2" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ and Jordan! You are half way through the lesson! Here is more practice with identifying print and visual cues. # As you can see this book cover is similar to the example cover we saw in the beginning of the lesson about Back Pain." speech="" media="media/Lesson1-Intro0-2.html " play="_user_,A61" />
+	   <Item id="2" agent="Cristina" text="Remember the title, What do do when you're having two, and it gives us general information about the book, # the visual cue of the babies supports the title, and subtitle,the twins survival guide, give more detailed information about the book. # When you are ready, click continue." speech="" media=" " play="" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Cristina" text="_user_ Hi. I'm happy you are joining us for this lesson! # My name is Cristina and I will be your tutor throughout this program. " speech="" media="media/Lesson1-IntroTitle.html " play="_user_,A62" />
+      <Item id="2" agent="Jordan" text="_user_, hello! I'm Jordan! I will be here learning with you!# I'm happy you are here to learn with me." speech="" play="_user_,B34" />
+      <Item id="3" agent="Cristina" text="In this lesson we will show you how to identify print and visual cues, titles and subtitles.# Also, how to make predictions using these signals. " speech="" play="A63" />
+      <Item id="4" agent="Jordan" text="Cristina, Can you explain what these text signals are?" speech="" play="B35" />
+      <Item id="5" agent="Cristina" text="Yes. Take a look at this book. You can see the title of the book,  Ending Back Pain; in green. # the visual cue of a person suffering from back pain is in yellow. and the subtitle of the book is in blue." speech="" media="media/Lesson1-IntroBack.html " play="A64" />
+      <Item id="6" agent="Jordan" text="I got it. # So the title gives us general information, the visual cue is related to the topic of the book, and the subtitle shows us more information about the topic. # Can we get started?" speech="" play="B36" />
+      <Item id="7" agent="Cristina" text="Yes, lets start. But first, I should tell you that as we go along in the lessons, you may notice that two buttons appear at the bottom left of your screen. " speech="" media="media/Lesson1-Intro0-1.html " play="A65" />
+	   <Item id="8" agent="Cristina" text="These are a repeat button and a video button. You can press the repeat button if you need to hear something again. # You can press the video button if you would like to review the video that highlights the lessons main points. " speech="" media="" play="" />
+	    <Item id="9" agent="Cristina" text="now, I think we are ready. For this activity you will need to select the print cues or visual cues that complete the book cover or street sign. " speech="" media="" play="" />
+		 <Item id="10" agent="Cristina" text="From there you will have to make predictions about the material. # Let's look over the current book cover and take note of the different text signals. # When you are ready, please click on the continue button to start the activity." speech="" media="" play="" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going!" speech="" play="A66" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question!" speech="" play="A67" />
+    </RigidPack>
+    <RigidPack name="Transition9999" usedIn="">
+      <Item id="1" agent="Cristina" text="Let's keep going with these questions." speech="" play="A68" />
+    </RigidPack>
+    <RigidPack name="Transition999999" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is another question. Let's keep it up!" speech="" play="A69" />
+    </RigidPack>
+    <RigidPack name="Transition99" usedIn="">
+      <Item id="1" agent="Cristina" text="Here is the next section of the lesson!" speech="" play="A70" />
+    </RigidPack>
+    <RigidPack name="Transition99999999" usedIn="">
+      <Item id="1" agent="Jordan" text="Cristina, I think you have more questions for us!" speech="" play="B37" />
+      <Item id="2" agent="Cristina" text="Jordan, Yes I do. Here is another." speech="" play="A71" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="Cristina" text=" _user_, which of the following title options would you predict to be the best title, based on other cues on the book cover? # Click on the multiple choice options to the right to determine an answer. The title of the book is not shown." speech="" media="" itemDif="" play="_user_,A72">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The book title that matches the other cues are Come to Me Softly." speech="" keys="any" threshold="" test="" play="A73" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Remember that a title reveals the general information about the topic of a book. # Look at the couple on the cover for help! Can you pick the title of the book that fits the other cues?" speech="" keys="any" threshold="" test="" play="A74" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question!? Try to pick the title that matches the other cues." speech="" keys="any" threshold="" test="" play="_user_,B38" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="the title of the book that is appropriate for the cover is Come to Me Softly. " speech="" keys="any" threshold="" test="" play="A75" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think the title of the cover is?" speech="" keys="any" threshold="" test="" play="A76" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title of the book is 12 Breathing Techniques because they are breathing on each other!" speech="" keys="any" threshold="" test="" play="B39" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_, I think you picked the right answer. # Come to Me softly is the right title because of the couple on the cover." speech="" keys="any" threshold="" test="" play="_user_,B40" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yeah! I knew we picked the right answer! # It is Come to Me softly. The couple on the cover gives the answer away!" speech="" keys="any" threshold="" test="" play="B41" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see, I was wrong. I thought the answer was 12 Breathing techniques because it looked like they were doing CPR." speech="" keys="any" threshold="" test="" play="B42" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now, The title of the book is Come to Me softly. This is supported by the couple on the cover. " speech="" keys="any" threshold="" test="" play="B43" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_, Can you predict what the topic or main idea of the book is?  the topic or main idea is an overall message of the book." speech="" media="" itemDif="" play="_user_,A77">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The best prediction for the book is a couple dealing with each other's past and loving each other. # This is given away by the subtitle on the cover!" speech="" keys="any" threshold="" test="" play="A78" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Really take a look at the subtitle on the cover for help. It says her love changed everything, expect his past. # You can get the right answer by looking there." speech="" keys="any" threshold="" test="" play="A79" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick a prediction? Try again by clicking on an answer." speech="" keys="any" threshold="" test="" play="_user_,B44" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The prediction of the book is a couple dealing with each other's past and loving each other. # This is based on the visual and print cues. This can be seen in the subtitle. " speech="" keys="any" threshold="" test="" play="A80" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you predict the book is about?" speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the best prediction is finding nature and looking for love! Because the couple is looking at each other." speech="" keys="any" threshold="" test="" play="B45" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text=" _user_ I agree with you! " speech="" keys="any" threshold="" test="" play="_user_,B46" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="That makes sense because the couple on the cover seem like they're in love." speech="" keys="any" threshold="" test="" play="B47" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="_user_, now I understand.  your prediction really matches the picture of the couple on the cover." speech="" keys="any" threshold="" test="" play="_user_,B48" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I get it now! So the message that you picked seems to match the couple on the book cover." speech="" keys="any" threshold="" test="" play="B49" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ based on the cues on the cover, can you predict which event may occur in the book?" speech="" media="" itemDif="0.1" play="_user_,A82">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The couple will go through hardships. # By looking at the couple on the cover and seeing the subtitle of the book you can see that their relationship will be tested." speech="" keys="any" threshold="" test="" play="A83" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="Take a look at the book's print and visual cues. Mainly the subtitle that says her love changed everything except his past. # This information can reveal additional information about what may occur in the story." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick a prediction? Try your best! Pick one now." speech="" keys="any" threshold="" test="" play="_user_,B50" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The best prediction for what may occur in the book is that the couple will go through hardships. # This information is found on the book's cover by looking at the couple and the subtitle." speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think is the best prediction for what may occur in the book?" speech="" keys="any" threshold="" test="" play="A86" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="Cristina I think this is correct." speech="" keys="any" threshold="" test="" play="B51" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_ I completely agree with you ! This prediction is the best because of the couple on the cover. # Oh! and also the subtitle. All of these things are hints to the prediction." speech="" keys="any" threshold="" test="" play="_user_,B52" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="_user_ and Cristina, I actually dont think this is the right prediction to pick. # this prediction isn't supported by any visual or print cues on the book cover." speech="" keys="any" threshold="" test="" play="_user_,B53" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I get it. So because of the visual cue of the couple on the cover and the subtitle this is the best prediction." speech="" keys="any" threshold="" test="" play="B54" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see! So I was wrong! The prediction that's shown is the best one because it matches the couple on the cover. Got it!" speech="" keys="any" threshold="" test="" play="B55" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ the title is missing here like the first question we did, can you click on the best title that matches the other cues on the book cover?" speech="" media="" itemDif="" play="_user_,B56">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The title that matches the other cues are Lincoln's Boys. There is a picture of president Lincoln on the cover along with two other men." speech="" keys="any" threshold="" test="" play="A87" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" you can use the visual cues of the men on the cover, and the subtitle that says John Hay, John Nicolay, and the war for Lincoln's image found on the cover to help you pick the most appropriate title." speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the best title for the book? Try again now!" speech="" keys="any" threshold="" test="" play="_user_,B57" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best title for the book that matches the visual cues are Lincoln's Boys. # There is a picture of President Lincoln on the cover of the book." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title of the book should be?" speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I think you picked the best title, Lincoln's Boys because there is a picture of Lincoln on the cover along with two other men. " speech="" keys="any" threshold="" test="" play="_user_,B58" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title of the book should be history of india but i'm not sure why." speech="" keys="any" threshold="" test="" play="B59" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_ I knew the title of the book was Lincoln's Boys! great job on your answer." speech="" keys="any" threshold="" test="" play="_user_,B60" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now! So the title Lincoln's boys fits best with picture of Lincoln on the cover!" speech="" keys="any" threshold="" test="" play="B61" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh I see! _user_ did pick the right title for the book. There's a picture of Lincoln on the cover" speech="" keys="any" threshold="" test="" play="B62,_user_,B63" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ can you help me predict the overall topic or idea of the book? I'm not sure what it is!" speech="" media="" itemDif="" play="_user_,B64">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="A view into Lincoln's presidency from the view point of his close friends fits as the most appropriate prediction! # This can be seen from the picture of lincoln and his friends on the cover." speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="when you make a prediction keep in mind that title Lincoln's Boys, the subtitle John Hay John Nicolay, the war for Lincoln's image, and the picture of the men on the cover. # This will give you more information into what the book is about." speech="" keys="any" threshold="" test="" play="A92" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the best prediction for the book? Try again now!" speech="" keys="any" threshold="" test="" play="_user_,B65" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="A view into Lincoln's presidency from the view point of this close friends fits as the most appropriate prediction! # This can be seen from the picture of lincoln and his friends on the cover." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, which prediction do you think is the best prediction for the message of the book?" speech="" keys="any" threshold="" test="" play="A94" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the best prediction is the one that talks about Lincoln's presidency and how it is explained through his close friends. # I got this idea from the picture of Lincoln and his friends on the cover." speech="" keys="any" threshold="" test="" play="B66" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the best prediction is the one that talks about a view into American history regarding slavery # because I see a picture of lincoln and I know he abolished slavery." speech="" keys="any" threshold="" test="" play="B67" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now. So the best prediction is the one about his presidency from the view points of his friends! # His friends are on the cover with him." speech="" keys="any" threshold="" test="" play="B68" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text=" His friends are on the cover with him and they tell the story about his presidency." speech="" keys="any" threshold="" test="" play="B69" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see now. So the best prediction is about Lincoln's presidency and not the history of American Slavery like I thought before." speech="" keys="any" threshold="" test="" play="B70" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ here is a street sign. This is kind of like the book covers where we pick the best title that fits the other cues on the cover. # Can you pick the best title for the street sign?" speech="" media="" itemDif="" play="_user_,B71">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="Pedestrian crossing is the most appropriate title." speech="" keys="any" threshold="" test="" play="A95" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the visual cue of the people walking! Base your answer choice on the visual cue of the sign." speech="" keys="any" threshold="" test="" play="A96" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the title for the sign? Try again now! " speech="" keys="any" threshold="" test="" play="_user_,B72" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the appropriate title for this sign is Pedestrian crossing. # The other options are not supported by the visual cue of the people walking across the road." speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title of the sign is?" speech="" keys="any" threshold="" test="" play="A98" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I agree with you! Pedestrian crossing is the best! # Because they look like adults crossing the road. And Pedestrians means people crossing a road." speech="" keys="any" threshold="" test="" play="_user_,B73" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the best title for the sign is school zone. # Because they look like teachers and they might be going to teach children." speech="" keys="any" threshold="" test="" play="B74" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew we picked the right answer! The most appropriate title for the sign is pedestrian crossing! # The other answers don't go along with the visual cue." speech="" keys="any" threshold="" test="" play="B75" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now. So the best title is pedestrian crossing and not school zone because it doesn't show children crossing the road!" speech="" keys="any" threshold="" test="" play="B76" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="_user_, I guess you were right! So the most appropriate title is pedestrian crossing and not school zone because there are no children crossing the road." speech="" keys="any" threshold="" test="" play="_user_,B77" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ which text cue would be appropriate for the sign? This means, which word below goes well with the rest of the sign." speech="" media="" itemDif="" play="_user_,A99">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The most appropriate text cue for the sign would be the word SLOW. " speech="" keys="any" threshold="" test="" play="A100" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" use the print cue that says pedestrian crossing and visual cue of the people walking across a road to help you pick the best text cue to complete the sign." speech="" keys="any" threshold="" test="" play="A101" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need some more time to pick a text cue that would fit with the sign? Try again now!" speech="" keys="any" threshold="" test="" play="_user_,B78" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best text cue that would be appropriate for the sign is the word slow because this is a pedestrian cross walk and walkers have to be safe." speech="" keys="any" threshold="" test="" play="A102" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan which text cue do you think is most appropriate?" speech="" keys="any" threshold="" test="" play="A103" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I also think this is the best text cue to include on the sign because it's a street and drivers have to drive slow. Right?" speech="" keys="any" threshold="" test="" play="B79" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Right! The word slow is the best for this sign!" speech="" keys="any" threshold="" test="" play="B80" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I'd have to say that the text cue that should be included would be stop now! If drivers see pedestrians they have to stop!" speech="" keys="any" threshold="" test="" play="B81" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Oh. ok. I understand! So the best word would be slow! Because drivers have to drive slowly near pedestrians." speech="" keys="any" threshold="" test="" play="B82" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see now! So the best text cue that fits the sign is the word slow and stop! Drivers have to drive slow but they don't have to stop!" speech="" keys="any" threshold="" test="" play="B83" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ can you predict what the sign is telling you to do? Use the context clues on the sign for help." speech="" media="" itemDif="" play="_user_,A104">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" This sign is telling us to drive slow because pedestrians are crossing the road." speech="" keys="any" threshold="" test="" play="A105" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" try to tie together everything you see on the sign here! # Look at the people crossing the road, the word slow, and the main phrase pedestrian crossing! # Tie all of this together to make a prediction." speech="" keys="any" threshold="" test="" play="A106" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to predict what the sign is telling us to do? Try again here!" speech="" keys="any" threshold="" test="" play="_user_,B84" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the sign is telling us to drive slow because pedestrians are crossing the road. This is the best prediction for the sign's purpose." speech="" keys="any" threshold="" test="" play="A107" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the sign is telling us to do?" speech="" keys="any" threshold="" test="" play="A108" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the sign is telling us to drive slow because people are crossing the street. # We don't want to cause accidents!" speech="" keys="any" threshold="" test="" play="B85" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="we picked the best answer! The sign is telling us to drive slow because people could be crossing the road." speech="" keys="any" threshold="" test="" play="B86" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the sign is telling us that this is a pedestrian walk way only and no cars are allowed to enter. I think that is what this sign is telling us! But then again, I don't know." speech="" keys="any" threshold="" test="" play="B87" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="now I see. So the sign is telling us to drive slow and look out for pedestrians crossing the street. We want to keep everyone safe on the roads and on the sidewalks!" speech="" keys="any" threshold="" test="" play="B88" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess I wasn't right. So the sign is telling us to drive slow and not that this is a pedestrian only walk way. We just have to be careful when we drive." speech="" keys="any" threshold="" test="" play="B89" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ here is a completed sign, you won't have to pick the best text cues for this one. But you will have to predict what the sign is trying to tell us." speech="" media="" itemDif="" play="_user_,A109">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the best prediction for the sign is to use caution when driving near a railroad crossing." speech="" keys="any" threshold="" test="" play="A110" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="This sign is found near railroads and can help drivers stay safe. The R R means Railroad, and the Big x you see in the middle of the sign means crossing. # When you put it together it means railroad crossing. Make a prediction about the sign based on what I just told you." speech="" keys="any" threshold="" test="" play="A111" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to make a prediction about the sign? Try it now!" speech="" keys="any" threshold="" test="" play="_user_,B90" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best prediction for the sign is to use caution when driving over a railroad." speech="" keys="any" threshold="" test="" play="A112" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the sign is trying to tell us?" speech="" keys="any" threshold="" test="" play="A113" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this sign is telling us to drive slowly so we can be safe near a railroad. # We don't want to get into an accident!" speech="" keys="any" threshold="" test="" play="B91" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the sign is telling us to yield to other drivers when driving on the highway. I think it's important to share the road." speech="" keys="any" threshold="" test="" play="B92" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it! So the sign is saying that we need to be careful when driving near railroads because trains can come at any time. # We have to be alert!" speech="" keys="any" threshold="" test="" play="B93" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand. The sign is telling us to be careful near railroads. # I see why that is important! We need to be aware of trains coming." speech="" keys="any" threshold="" test="" play="B94" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Okay! I was wrong! So the sign isn't telling us what I thought! # We have to be safe when driving near train tracks! And this sign tells us that." speech="" keys="any" threshold="" test="" play="B95" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA99">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ at which location will this sign most likely be found? That is, predict where this sign can be found." speech="" media="" itemDif="" play="_user_,A114">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" this sign can be found on the highway. This sign helps drivers drive safer! # If you merge over you can let someone else move into your lane! this can prevent accidents!" speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" this sign is a familiar sign that can be found on city streets and where else? It's most popular in this one location. # This sign means that while driving you must move over to another lane because this one is coming to an end. Based on this can you pick a location now?" speech="" keys="any" threshold="" test="" play="A116" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick an answer? Try again here." speech="" keys="any" threshold="" test="" play="_user_,B96" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the sign is most likely found on the highway! It helps prevent accidents by telling drivers they must move over because the lane that they are driving in is ending." speech="" keys="any" threshold="" test="" play="A117" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan where do you think this sign can be found?" speech="" keys="any" threshold="" test="" play="A118" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think this sign can be found on the highway! I saw it once when driving to my grandma's house. " speech="" keys="any" threshold="" test="" play="B97" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think this sign can be found at a business office. I think I've seen this sign at an office downtown." speech="" keys="any" threshold="" test="" play="B98" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="oh. ok. I see. So the sign does not belong at a business office but on the highway! That's the sign I saw driving to my grandma's house the other day! Got it!" speech="" keys="any" threshold="" test="" play="B99" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Okay. So the sign is most likely found on the highway while driving." speech="" keys="any" threshold="" test="" play="B100" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yes! This sign can be found on the highway! I don't think many people pay attention to this sign! " speech="" keys="any" threshold="" test="" play="B101" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ does this title match the visual cues on the book cover? Click on the answer options to the right to select your answer." speech="" media="" itemDif="" play="_user_,A119">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The title does match the visual cues on the book's cover. " speech="" keys="any" threshold="" test="" play="A120" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the visual cue of the fruit on the cover. # Does the fruit match up with the title, The Juice Lady's Guide to juicing for health? " speech="" keys="any" threshold="" test="" play="A121" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try again here. Does the title match the visual cue shown?" speech="" keys="any" threshold="" test="" play="_user_,B102" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the title does in fact match the visual cue of the fruit shown on the book cover." speech="" keys="any" threshold="" test="" play="A122" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you believe the title matches the visual cue?" speech="" keys="any" threshold="" test="" play="A123" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the title matches the fruit on the cover. " speech="" keys="any" threshold="" test="" play="B103" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't think the title matches the fruit on the cover. They are talking about juice and I see fruit." speech="" keys="any" threshold="" test="" play="B104" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. I get it. So the title about juicing does match the fruit on the cover " speech="" keys="any" threshold="" test="" play="B105" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Great! I knew the title about juicing matched the fruit! " speech="" keys="any" threshold="" test="" play="B106" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh ok. I see now.The title actually matches the fruit! # I thought the title didn't match because I didn't see juice I only saw fruit!" speech="" keys="any" threshold="" test="" play="B107" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ predict the overall message or idea of the book by clicking on the best answer option to the right." speech="" media="" itemDif="" play="_user_,B108">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" It teaches people how to juice with fruit and how juicing may prevent diseases." speech="" keys="any" threshold="" test="" play="A124" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" use the visual cue of the fruit, the subtitle stating that the book is a guide to the prevention and treatment of common diseases, and the title stating juicing for health to help you figure out the best prediction for the book." speech="" keys="any" threshold="" test="" play="A125" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking the best prediction!? Go ahead and try again!" speech="" keys="any" threshold="" test="" play="_user_,B109" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best prediction for the book is the prediction that states the book serves as a guide to showing people how to juice with fruits and prevent diseases. # Juicing means that you can make your very own fresh juice using fruits." speech="" keys="any" threshold="" test="" play="A126" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the book is about?" speech="" keys="any" threshold="" test="" play="A127" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="So the book is about showing people how to juice with fruit and prevent diseases. # Juicing is when you take your own fruit and you run it through a machine that squeezes all of the juice out! Then you have fresh juice! I'd like to try that!" speech="" keys="any" threshold="" test="" play="B110" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I think you picked the right prediction! Because when juicing you can use fruit to make juice and it can help prevent diseases." speech="" keys="any" threshold="" test="" play="_user_,B111" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the book is about helping people cook with whole foods because I see fruit on the cover." speech="" keys="any" threshold="" test="" play="B112" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text=" So the book is definitely about juicing with fruit and preventing diseases." speech="" keys="any" threshold="" test="" play="B113" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh I thought it was about helping people cook with whole foods! I guess it's about showing people the health benefits of juicing." speech="" keys="any" threshold="" test="" play="B114" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, how are the visual images related to the subtitle of this book?" speech="" media="" itemDif="" play="_user_,B115">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" We know airplanes were used in world war two, and the subtitle talks about world war two." speech="" keys="any" threshold="" test="" play="A128" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the subtitle that says an incredible true story of combat and chivalry in the war-torn skies of world war two. How does what I just read relate to the visual cue of the two the planes on the cover?" speech="" keys="any" threshold="" test="" play="A129" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need a few more seconds to answer the question? That's okay try again now." speech="" keys="any" threshold="" test="" play="_user_,B116" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the visual cue of the plane is related to the subtitle on the cover." speech="" keys="any" threshold="" test="" play="A130" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I don't think the plane has anything to do with the subtitle of the book. # It says something about chivalry and I would expect to see something about having good manners on the cover. # My grandma always told me to be chivalrous, which i think means to have good manners." speech="" keys="any" threshold="" test="" play="B117" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you think the visual cue matches the title and subtitle?" speech="" keys="any" threshold="" test="" play="A131" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the plane matches the other text signals on the cover." speech="" keys="any" threshold="" test="" play="B118" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yes! we picked the right answer. So the plane does have something to do with the subtitle." speech="" keys="any" threshold="" test="" play="B119" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="oh ok. Someone having good manners wouldn't be the most appropriate visual cue to use and a plane is the best visual cue because it has something to do with the text signals on the cover." speech="" keys="any" threshold="" test="" play="B120" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now! The visual cue of the plane is related to the subtitle since planes were used in world war two and the subtitle mentions that war." speech="" keys="any" threshold="" test="" play="B121" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ using the visual cue, title, and subtitle, can you predict the message of the book?" speech="" media="" itemDif="" play="_user_,B122">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The book is about fighter planes and pilots in world war two." speech="" keys="any" threshold="" test="" play="A132" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" be mindful of the visual cue of the two planes, the title a higher calling, and the subtitle about it! # Tie all of this information together in order to make a good prediction about the book." speech="" keys="any" threshold="" test="" play="A133" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to figure out the prediction? That's okay try again here!" speech="" keys="any" threshold="" test="" play="_user_,B123" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best prediction for the book is a fighter and pilots in world war two." speech="" keys="any" threshold="" test="" play="A134" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now! So this prediction ties in with all of the text signals on the book's cover." speech="" keys="any" threshold="" test="" play="B124" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the book is about?" speech="" keys="any" threshold="" test="" play="A135" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I believe it may be about fighter planes and pilots in world war two." speech="" keys="any" threshold="" test="" play="B125" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I'm not sure. but I think it's about the creation of planes in america." speech="" keys="any" threshold="" test="" play="B126" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="ok. now I see. the book is about fighter planes and pilots in world war two because there is a plane, two pilots, and the subtitle shows us this is during world war two." speech="" keys="any" threshold="" test="" play="B127" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it! The book is about fighter planes and pilots in world war two because there is a plane, two pilots, and the subtitle shows us this is during world war two." speech="" keys="any" threshold="" test="" play="B128" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ how do the visual cues relate to the title of the book?" speech="" media="" itemDif="" play="_user_,A136">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the title of studying and applying physics to the real world does not match the visual cue of the well on the cover." speech="" keys="any" threshold="" test="" play="A137" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the visual cue of the well and the title, studying and applying physics to the real world. # Does this title support the picture of the well on the cover?" speech="" keys="any" threshold="" test="" play="A138" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try again now!" speech="" keys="any" threshold="" test="" play="_user_,B129" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the title of studying and applying physics does not match the visual cue of the well." speech="" keys="any" threshold="" test="" play="A139" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the studying and applying physics title matches the well. I'm not sure why but I think I'm right." speech="" keys="any" threshold="" test="" play="B130" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you think the title matches the visual cue?" speech="" keys="any" threshold="" test="" play="A140" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="The title doesn't match the visual cue of the well on the cover." speech="" keys="any" threshold="" test="" play="B131" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I wasn't actually sure of my answer. So the title of the book doesn't match the well on the cover." speech="" keys="any" threshold="" test="" play="B132" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Okay! I understand! The title of studying and applying physics doesn't match the picture of the well because it is unrelated to the well." speech="" keys="any" threshold="" test="" play="B133" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it! " speech="" keys="any" threshold="" test="" play="B134" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ can you predict the title of the book for me based on the visual cue?" speech="" media="" itemDif="" play="_user_,B135">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the best title for the cover based on the visual cue would be Aunt Dimity and the Wishing Well because it supports the well on the cover." speech="" keys="any" threshold="" test="" play="A141" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" look at the well on the cover. Try to make the best prediction as to what the title of the book is based on the well you see." speech="" keys="any" threshold="" test="" play="A142" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time finding the title? Try to answer the question now." speech="" keys="any" threshold="" test="" play="_user_,B136" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best predicted title for the book cover is Aunt Dimity and the Wishing Well. # This is because it supports the visual cue of the well on the cover." speech="" keys="any" threshold="" test="" play="A143" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title of the book cover is?" speech="" keys="any" threshold="" test="" play="A144" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now. So the best predicted title of the book is Aunt Dimity and the Wishing Well because this supports the visual cue." speech="" keys="any" threshold="" test="" play="B137" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_  I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B138" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title of the book is Discovering the past because the well looks old like it may be from the past." speech="" keys="any" threshold="" test="" play="B139" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew we picked the right answer. The title supports the picture of the well on the cover." speech="" keys="any" threshold="" test="" play="B140" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Okay. I understand." speech="" keys="any" threshold="" test="" play="B141" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ does the subtitle match the text signals that are on the book cover?" speech="" media="" itemDif="" play="_user_,A145">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the subtitle a how to for adult sewing does not support the visual cues on the cover. There is nothing related to sewing shown on the cover. # Therefore, it does not support any of the text signals on the book." speech="" keys="any" threshold="" test="" play="A146" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a good look at the visual cues of the light tower in the background and then look at the subtitle, A how to for adult sewing. # Does this visual cue support the idea of sewing adult clothing? Use this clue to answer the question." speech="" keys="any" threshold="" test="" play="A147" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text=" did you need more time to answer the question? Try again and see if the subtitle matches the text signals." speech="" keys="any" threshold="" test="" play="B142" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the subtitle entitled a how to for adult sewing does not support the visual cues on the cover. # therefore, it does not support any of the text signals on the book." speech="" keys="any" threshold="" test="" play="A148" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan do you think the subtitle matches the context clues?" speech="" keys="any" threshold="" test="" play="A149" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the subtitle does support only the title, the age of edison." speech="" keys="any" threshold="" test="" play="B143" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I agree with you!" speech="" keys="any" threshold="" test="" play="_user_,B144" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Got it! the subtitle, a how to for adult sewing does not match up with the other text signals on the cover. " speech="" keys="any" threshold="" test="" play="B145" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now. The subtitle does not match the text signals on the cover at all." speech="" keys="any" threshold="" test="" play="B146" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I got the answer wrong! I thought the subtitle supported only the title, the age of edison, but if it doesn't support one part of the cover then it doesn't support the entire cover." speech="" keys="any" threshold="" test="" play="B147" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_  Since we know that. A how to for adult sewing is the wrong subtitle, it has been removed!... try to predict what the real subtitle is based on the text signals you see here." speech="" media="" itemDif="" play="_user_,A150">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the best predicted subtitle for the book cover is electric light and the invention of modern america. # this supports the other text signals on the cover." speech="" keys="any" threshold="" test="" play="A151" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the visual cue of the light tower and connect this with the right subtitle from the answer options on the right!" speech="" keys="any" threshold="" test="" play="A152" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? Try again!" speech="" keys="any" threshold="" test="" play="_user_,B148" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the best predicted subtitle is electric light and invention of modern america. this supports all of the text signals on the cover." speech="" keys="any" threshold="" test="" play="A153" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the subtitle is for the book cover?" speech="" keys="any" threshold="" test="" play="A154" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the subtitle is finding the darkness Cristina. because the book has a dark blue cover." speech="" keys="any" threshold="" test="" play="B149" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I agree with you. I see electricity and light and this subtitle supports what I see." speech="" keys="any" threshold="" test="" play="_user_,B150" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yes! We got it right." speech="" keys="any" threshold="" test="" play="B151" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="_user_ So the subtitle that you picked is the right one because it supports the other text signals on the cover and we have to make sure that all of the text signals make sense. Got it!" speech="" keys="any" threshold="" test="" play="_user_,B152" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="oh ok. I answered wrong! So the right subtitle is shown in green and is not my original answer. I understand." speech="" keys="any" threshold="" test="" play="B153" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ pick the visual cue that matches the print cues on the book cover." speech="" media="" itemDif="" play="_user_,A155">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The dragon is the best visual cue that matches the title. this matches the other cues on the book cover because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. # the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described. " speech="" keys="any" threshold="" test="" play="A156" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at the title and the other cues of the princess and wizards and try to pick the best visual cue." speech="" keys="any" threshold="" test="" play="A157" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick the best visual cue? Try again!" speech="" keys="any" threshold="" test="" play="_user_,B154" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The dragon is the best visual cue that matches the title. # this matches the other cues on the book because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. # the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described. " speech="" keys="any" threshold="" test="" play="A158" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the best visual cue is for the book title?" speech="" keys="any" threshold="" test="" play="A159" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the best visual cue for the cover is the visual cue of the knight. Because I see a sword on the cover." speech="" keys="any" threshold="" test="" play="B155" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the best visual cue for the book cover is the visual cue of the dragon because I see all the other make believe characters." speech="" keys="any" threshold="" test="" play="B156" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Okay! Now I see! So the best visual cue for the book cover is the dragon because it matches the other cues." speech="" keys="any" threshold="" test="" play="B157" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_  we got this. I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B158" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess I was wrong. # I thought the visual cue of the knight was the best for the title but it is actually the dragon because the title is called dragon princess. # You need a dragon if you are talking about a dragon princess. the visual cue has to support the title and this one does." speech="" keys="any" threshold="" test="" play="B159" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD99">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ please predict the book's overall message based on the text signals you see on the cover." speech="" media="" itemDif="" play="_user_,A160">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" the best prediction for the book is that the dragon slayer must save a princess. This is supported by the text signals on the cover. The other options do not quite support the entire book cover. " speech="" keys="any" threshold="" test="" play="A161" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="when making a prediction remember to look at everything on the cover!  # Use the picture of the dragon, the princess, and the two wizards. # All of this information from the visual cue can be used to help you make a prediction. Now give it a shot and pick the best prediction." speech="" keys="any" threshold="" test="" play="A162" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to predict what the book is about? Try again now." speech="" keys="any" threshold="" test="" play="_user_,B160" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The dragon is the best visual cue that matches the title. # This matches the other cues on the book because there are fairy tale like creatures on the cover, we have a princess, two wizards, and a sword. # the dragon, which is a make believe fire breathing animal matches the fairy tale creatures I just described. " speech="" keys="any" threshold="" test="" play="A163" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the book is about?" speech="" keys="any" threshold="" test="" play="A164" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I believe that the book is about he dragon slayer who must save a princess." speech="" keys="any" threshold="" test="" play="B161" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think it is about a king who leaves his throne. I don't know why someone would do that when they are a King, gosh!" speech="" keys="any" threshold="" test="" play="B162" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see! because this prediction is supported by the text signals on the cover. That is what makes it the best prediction." speech="" keys="any" threshold="" test="" play="B163" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, we got this right!" speech="" keys="any" threshold="" test="" play="_user_,B164" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Okay! I see I was wrong! My prediction was wrong because the cover does not show a king leaving his throne, there is no king on the book cover anyway! # So a dragon slayer saving a princess is the best option." speech="" keys="any" threshold="" test="" play="B165" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ can you click on the book's title for me? you can do this by Clicking on the sections of the book in the middle of the screen! This will allow you to select your answer!" speech="" media="" itemDif="" play="_user_,A165">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The title is Tower Lord! this is a fantasy book about a warrior who has to fight off enemies." speech="" keys="any" threshold="" test="" play="A166" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" try to remember that a title gives you general information regarding the book. # which section gives you general information about the book? Click on the title of the book now." speech="" keys="any" threshold="" test="" play="A167" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to click on the title of the book?" speech="" keys="any" threshold="" test="" play="_user_,B166" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the title of the book is Tower Lord. It is shown here! this is a fantasy book about a warrior who has to fight off enemies." speech="" keys="any" threshold="" test="" play="A168" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title of the book is?" speech="" keys="any" threshold="" test="" play="A169" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title of the book is anthony ryan." speech="" keys="any" threshold="" test="" play="B167" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the title of the book is tower lord." speech="" keys="any" threshold="" test="" play="B168" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I see now so the title is Tower Lord. This shows some information about the book." speech="" keys="any" threshold="" test="" play="B169" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I get it now! So the title is actually tower lord and not anthony ryan, that's the author's name!" speech="" keys="any" threshold="" test="" play="B170" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, we got it. " speech="" keys="any" threshold="" test="" play="_user_,B171" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ can you click on the visual cue of the book's cover? Remember to click on the book on the screen to pick an answer." speech="" media="" itemDif="" play="_user_,A170">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" The visual cue is the man drawing a bow. this also supports what the book is about. # remember I said that is was about a man fighting off enemies and to do this he will need a weapon and he uses a bow and arrow." speech="" keys="any" threshold="" test="" play="A171" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" remember that the visual cue is a photo that reveals more supporting information about the book. Click on the photo that is on the cover." speech="" keys="any" threshold="" test="" play="A172" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to click on the visual cue? Try again!" speech="" keys="any" threshold="" test="" play="_user_,B172" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The visual cue is the man drawing a bow. # this also supports what the book is about, remember I said that is was about a man fighting off enemies and to do this he will need a weapon and he uses a bow and arrow." speech="" keys="any" threshold="" test="" play="A173" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="any" threshold="" test="" play="A174" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I disagree. I'd say it's tower lord because that was the answer to the previous question. " speech="" keys="any" threshold="" test="" play="B173" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B174" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="So this is the visual cue on the cover because it is a picture" speech="" keys="any" threshold="" test="" play="B175" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Oh so the man with a bow and arrow is the cue and it supports what the book is about." speech="" keys="any" threshold="" test="" play="B176" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess I was wrong. The picture is the visual cue." speech="" keys="any" threshold="" test="" play="B177" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ please click on the title of the book for me." speech="" media="" itemDif="" play="_user_,A175">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" The title reads The new rules of running. this book is about helping people learn how to run faster and longer." speech="" keys="any" threshold="" test="" play="A176" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" the title should reveal general information about the book. It should tell you what the book may be about. Click on the section of the book that gives you a general idea about the book." speech="" keys="any" threshold="" test="" play="A177" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time picking the title out? Try now!" speech="" keys="any" threshold="" test="" play="_user_,B178" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The title reads The new rules of running. this book is about helping people learn how to run faster and longer." speech="" keys="any" threshold="" test="" play="A178" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title of the book is five steps to run faster and longer for life. that seems about right to me!" speech="" keys="any" threshold="" test="" play="B179" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title of the book is?" speech="" keys="any" threshold="" test="" play="A179" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_, I think your answer is the correct one." speech="" keys="any" threshold="" test="" play="_user_,B180" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it! so the the new rules of running is the title of the book." speech="" keys="any" threshold="" test="" play="B181" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok. that makes sense, the title of the book is the new rules of running. # and this shows us that the book is about teaching people how to run! It's a guide for readers!" speech="" keys="any" threshold="" test="" play="B182" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="So what I thought before was wrong. That was actually a different text signal and not the title." speech="" keys="any" threshold="" test="" play="B183" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ can you click on the book's subtitle for me!? This would help me a lot." speech="" media="" itemDif="" play="_user_,B184">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" The subtitle is five steps to run faster and longer for life. This supports the other text signals and shows what the book is about." speech="" keys="any" threshold="" test="" play="A180" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="a subtitle gives a little more information about the book that goes along with the title, which is the new rules of running! # So what could the subtitle be?" speech="" keys="any" threshold="" test="" play="A181" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time clicking on the subtitle of the book? Try now." speech="" keys="any" threshold="" test="" play="_user_,B185" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The subtitle is five steps to run faster and longer for life. This supports the other text signals and shows what the book is about." speech="" keys="any" threshold="" test="" play="A182" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Got it! So the subtitle of the book is five steps to run faster and longer for life. This supports the title!" speech="" keys="any" threshold="" test="" play="B186" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_, I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B187" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the subtitle is vijay vad." speech="" keys="any" threshold="" test="" play="B188" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Got it. The subtitle backs up the title, the new rules of running." speech="" keys="any" threshold="" test="" play="B189" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh wait. Vijay Vad is the author's name. That's not the subtitle." speech="" keys="any" threshold="" test="" play="B190" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the subtitle of the book is?" speech="" keys="any" threshold="" test="" play="A183" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ can you click on the title of the book for me?" speech="" media="" itemDif="" play="_user_,A184">
+          <Answers>
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick a title? Pick one now." speech="" keys="any" threshold="" test="" play="_user_,B191" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" a title gives general overall information about the book! It should give you an overall idea of what to expect when you read. # click on the title of the book." speech="" keys="any" threshold="" test="" play="A185" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the title of the book is Lord of the Flies. # This is another fantasy book where the main character thinks a shell is magical" speech="" keys="any" threshold="" test="" play="A186" />
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" It's Lord of the Flies. This is another fantasy book where the main character thinks a shell is magicial" speech="" keys="any" threshold="" test="" play="A187" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text=" I actually think it's william golding." speech="" keys="any" threshold="" test="" play="B192" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan, what do you think?" speech="" keys="any" threshold="" test="" play="A188" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I guess I was wrong, William golding is the author." speech="" keys="any" threshold="" test="" play="B193" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_ I agree with you. Lord of the flies." speech="" keys="any" threshold="" test="" play="_user_,B194" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it." speech="" keys="any" threshold="" test="" play="B195" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I get it. so the title of the book is Lord of the flies. This gives us general information about the book!" speech="" keys="any" threshold="" test="" play="B196" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ now click on the visual cue for the same book cover." speech="" media="" itemDif="" play="_user_,A189">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The shell is the visual cue on the cover." speech="" keys="any" threshold="" test="" play="A190" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" keep in mind that a visual cue is a cue that can be a drawing, picture, or photo. all of this will be related to the book and title, Lord of the flies. # click on the visual cue now." speech="" keys="any" threshold="" test="" play="A191" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to click on the visual cue? Try again!" speech="" keys="any" threshold="" test="" play="_user_,B197" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text=" the visual cue is the seashell on the sand." speech="" keys="any" threshold="" test="" play="A192" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the visual cue is on the cover?" speech="" keys="any" threshold="" test="" play="A193" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the visual cue is the seashell on the front cover." speech="" keys="any" threshold="" test="" play="B198" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the visual cue is lord of the flies because it's the title." speech="" keys="any" threshold="" test="" play="B199" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I got it now. Lord of the flies is the title that's not a visual cue! The visual cue is the shell." speech="" keys="any" threshold="" test="" play="B200" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew it. It was the shell." speech="" keys="any" threshold="" test="" play="B201" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="ok, now I understand. The visual cue is of the seashell on the beach because a visual cue has to be a photo, picture, or drawing." speech="" keys="any" threshold="" test="" play="B202" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_ here is another book cover. Can you click on the visual cue for me!?" speech="" media="" itemDif="" play="_user_,B203">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The mixture of fruit is the visual cue. this supports what the book is about. # Which is teaching people how to juice with fruits and showing the health benefits of juicing. # If you don't know what juicing is it's when you take fruit or a vegetable and you squeeze it to make fresh juice of your own." speech="" keys="any" threshold="" test="" play="A194" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text="a visual cue reveals more about the book's message by displaying a drawing or picture. Pick the visual cue on the cover." speech="" keys="any" threshold="" test="" play="A195" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question? try again now." speech="" keys="any" threshold="" test="" play="_user_,B204" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The mixture of fruit is the visual cue. this supports what the book is about. # Which is teaching people how to juice with fruits and showing the health benefits of juicing. # If you don't know what juicing is it's when you take fruit or a vegetable and you squeeze it to make fresh juice of your own." speech="" keys="any" threshold="" test="" play="A196" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the visual cue on the cover is?" speech="" keys="any" threshold="" test="" play="A197" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="Great I see now. so the visual cue is the bunch of fruit on the cover and this matches everything else on the cover." speech="" keys="any" threshold="" test="" play="B205" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the mixture of fruit is the visual cue." speech="" keys="any" threshold="" test="" play="B206" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the visual cue is the juice lady's guide to juicing for health, that tells us more information about the book." speech="" keys="any" threshold="" test="" play="B207" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="oh ok. I understand. so the visual cue is the mixture of fruit and this supports the idea or message of the book. # what I Picked before was the wrong cue." speech="" keys="any" threshold="" test="" play="B208" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="I knew we picked the right answer ! It's the fruit on the cover." speech="" keys="any" threshold="" test="" play="B209" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="Jordan" text="_user_, can you now click on the title of the book for us?" speech="" media="" itemDif="" play="_user_,B210">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The title of the book is the juice lady's guide to juicing for health." speech="" keys="any" threshold="" test="" play="A198" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" the title of a book gives the gist of the overall book. it is also supported by the visual cue of the fruit we just spoke about. What section on the cover gives the gist of the book?" speech="" keys="any" threshold="" test="" play="A199" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to answer the question. try again by picking the title of the cover." speech="" keys="any" threshold="" test="" play="_user_,B211" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The title of the book is the juice lady's guide to juicing for health." speech="" keys="any" threshold="" test="" play="A200" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the title is?" speech="" keys="any" threshold="" test="" play="A201" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the title isn't on the book cover! I just don't see it!" speech="" keys="any" threshold="" test="" play="B212" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="the Juice lady's guide to juicing for health is the title." speech="" keys="any" threshold="" test="" play="B213" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="I see now that I was wrong! I thought there was no title but there actually is a title." speech="" keys="any" threshold="" test="" play="B214" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now! So the title of the book is the juice lady's guide to juicing for health." speech="" keys="any" threshold="" test="" play="B215" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yes! I knew that was the right title! we clicked on the right section of the book." speech="" keys="any" threshold="" test="" play="B216" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ this question is different from the other questions we did in this section. Here you will have to predict what you think the sign is telling you to do. # Click on an answer option to the right." speech="" media="" itemDif="" play="_user_,A202">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text="The sign is telling you that you will be fined 100 to 500 dollars for parking in a handicap spot." speech="" keys="any" threshold="" test="" play="A203" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" in order to make a prediction based on your decision of the word penalty, tow away zone, and 100-500 dollar fine. # What do you think this sign is telling us? " speech="" keys="any" threshold="" test="" play="A204" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to pick a prediction? Try again now." speech="" keys="any" threshold="" test="" play="_user_,B217" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="The sign is telling you that you will be fined 100 to 500 dollars for parking in a handicap spot." speech="" keys="any" threshold="" test="" play="A205" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the prediction of the sign is?" speech="" keys="any" threshold="" test="" play="A206" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand now. so the prediction is that you will be fined 100 to 500 dollars if you park in a handicap spot. # I've seen these signs in every parking lot. I'm sure you have too." speech="" keys="any" threshold="" test="" play="B218" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="_user_, I agree with you." speech="" keys="any" threshold="" test="" play="_user_,B219" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the prediction is that I can park where I would like. I like the sound of that!" speech="" keys="any" threshold="" test="" play="B220" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="_user_, I knew that I answered the question right. I just needed a little help with this one." speech="" keys="any" threshold="" test="" play="_user_,B221" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Oh ok! I see now! we can't park anywhere that's not what the sign is telling us! I was wrong." speech="" keys="any" threshold="" test="" play="B222" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE99">
+      <Questions>
+        <Question id="1" agent="Cristina" text="_user_ this question is like the one right before it! Can you predict what this sign is telling us to do? I'd like to know." speech="" media="" itemDif="0.1" play="_user_,A207">
+          <Answers>
+            <Answer name="Correct" agent="Cristina" type="Correct" text=" By law you are required to wear your seat belt. # This is the best prediction and best overall for your safety, this will keep you safe while driving and you will not get a pulled over by the police." speech="" keys="any" threshold="" test="" play="A208" />
+            <Answer name="IncorrectPrompt" agent="Cristina" type="IncorrectPrompt" text=" take a look at all of the print cues. they say buckle up it's the law, and the visual cues of the seat belt and hands help with making a prediction." speech="" keys="any" threshold="" test="" play="A209" />
+            <Answer name="BlankPrompt" agent="Jordan" type="BlankPrompt" text="_user_ did you need more time to make a prediction? Try again now" speech="" keys="any" threshold="" test="" play="_user_,B223" />
+            <Answer name="Assertion" agent="Cristina" type="Assertion" text="By law you are required to wear your seat belt. # This is the best prediction and best overall for your safety, this will keep you safe while driving and you will not get a pulled over by the police." speech="" keys="any" threshold="" test="" play="A210" />
+            <Answer name="AskJordan" agent="Cristina" type="AskJordan" text="Jordan what do you think the sign is telling us?" speech="" keys="any" threshold="" test="" play="A211" />
+            <Answer name="JordanUnderstand" agent="Jordan" type="JordanUnderstand" text="I understand, the sign is telling us that we have to wear our seatbelts. I want to stay safe while driving." speech="" keys="any" threshold="" test="" play="B224" />
+            <Answer name="JordanAgree" agent="Jordan" type="JordanAgree" text="I think the sign is telling us that we are required to wear seat belts." speech="" keys="any" threshold="" test="" play="B225" />
+            <Answer name="JordanDisagree" agent="Jordan" type="JordanDisagree" text="I think the sign is telling us that it is not safe to wear a seat belt they can hurt your shoulder while driving or sitting in the car. right?" speech="" keys="any" threshold="" test="" play="B226" />
+            <Answer name="JordanAnswerUnderstand" agent="Jordan" type="JordanAnswerUnderstand" text="Seems I was completely wrong. So the sign is telling us to wear seat belts. not that they aren't safe. # Who cares if they hurt they keep us from harming ourselves." speech="" keys="any" threshold="" test="" play="B227" />
+            <Answer name="JordanAnswerAgree" agent="Jordan" type="JordanAnswerAgree" text="Yes! I knew that we got it right!" speech="" keys="any" threshold="" test="" play="B228" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening2" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMedia" data="media/Lesson1-Medium0-1.html" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="DoneReading3" status="DoneReading" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMedia" data="media/Lesson1-Easy0-1.html" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMedia" data="media/Lesson1-Hard0-0.html" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="30" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="WaitForEvent" data="5" id="3" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="End" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="Jordan" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Jordan" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="Cristina" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="Cristina" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="LastPageLoaded" status="PageLoaded" response="" event="End" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="PageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NextArticle2" status="PageLoaded" response="" event="Page" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start3" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="NextArticle" status="PageLoaded" response="" event="Page1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAsked3" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatIsRightJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="GiveFeedback" data="PositiveFeedbackToUser" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAsked1" status="QAsked" response="" event="Jordan" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAsked1" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAsked3" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked" response="" event="Cristina" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatIsRightJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
+      <Action agent="Cristina" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="Jordan" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked11" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="GiveFeedback" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAsked31" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAsked21" status="QAsked2" response="" event="Jordan" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatIsRightJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CristinaAsked11" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanDisagree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackUserNotJordan" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerUnderstand" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAsked31" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency=".4" description="">
+      <Action agent="Cristina" act="Answer" data="AskJordan" id="1" />
+      <Action agent="Jordan" act="Answer" data="JordanAgree" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToBoth" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="Jordan" act="Answer" data="JordanAnswerAgree" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAsked21" status="QAsked2" response="" event="Cristina" hasItem="" priority="" frequency=".2" description="">
+      <Action agent="Jordan" act="Answer" data="JordanUnderstand" id="1" />
+      <Action agent="Cristina" act="CannedExpression" data="ThatIsRightJordan" id="2" />
+      <Action agent="Cristina" act="GiveFeedback" data="PositiveFeedbackToUserOnly" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="Cristina" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="Cristina" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="Cristina" act="Answer" data="Assertion" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

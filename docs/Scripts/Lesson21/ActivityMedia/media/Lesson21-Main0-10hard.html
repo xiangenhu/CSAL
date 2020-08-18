@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CSAL Media</title> <script> document.domain = location.host;</script>
+<head><script src="../../../../js/common.js" type="text/javascript"></script>
+	<title>CSAL Media</title>
+	
 
+	<!--load Google fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
-		<!--load Google fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+	<!--load jQuery libraries-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 
-		<!--load jQuery libraries-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+	<!--load jScrollPane libraries and CSS-->
+	<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+	<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
 
-		<!--load jScrollPane libraries and CSS-->
-		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
-		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
-		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
-
-		<style type="text/css" id="page-css">
-			body
-			{
-				background-image:url('L21Background2.png');
-				background-repeat: no-repeat;
-				background-size: cover;
-				overflow: hidden;
-				margin: 0px;
-				font-family: 'Arimo', Verdana, 'Times New Roman';
-				cursor: default;
-			}
-			.scroll-pane
-			{
-				overflow: auto;
-				height: 366px;
-				width: 798px;
-				margin-top: 126px;
-			}
-			#instructBox
-			{
-				background-color: #424242;
-				color: white;
-				font-family: 'Raleway', Verdana, 'Times New Roman';
-				width: 800px;
-				font-size: 22px;
-				text-align: center;
-				padding: 10px 0px;
-				border-bottom: 5px dashed white;
-				margin: 0px auto 4px auto;
-				position: fixed;
-				top: 0;
-			}
-			#mainText
-			{
-				font-size: 24px;
-				padding: 15px 10px 15px 20px;
-				line-height: 32px;
-			}
-			#mainTextHead
-			{
-				font-family: 'Playball', Verdana, 'Times New Roman';
-				font-size: 38px;
-				margin: 10px 0px 10px 0px;
-				font-weight: bold;
-				text-decoration: underline;
-				text-align: center;
-			}
-			.mybutton
-			{
-				font-size: 25px;
-				font-weight: normal;
-				line-height: 34px;
-				margin: 10px auto 20px auto;
-				text-decoration: none;
-				border: none;
-				position: relative;
-				text-align: center;
-				padding: 2px 6px;
-				outline: none;
-				border-radius: 6px;
-			}
-			.num
-			{
-				height: 24px;
-				font-size: 22px;
-				border-radius: 10px;
-				background-color: #d8d8d8;
-			}
-			.indent { margin: 0px 25px; }
-			.para { margin: 15px 0px; }
-			.highlight
-			{
-				background-color: #ffeb43;
-				border-radius: 10px;
-				padding: 0px 6px;
-				font-weight: bold;
-				color: #212121;
-			}
-		</style>
-		<script type="text/javascript" id="sourcecode">
+	<style type="text/css" id="page-css">
+	body
+	{
+		background-image:url('L21Background2.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		margin: 0px;
+		font-family: 'Arimo', Verdana, 'Times New Roman';
+		cursor: default;
+	}
+	.scroll-pane
+	{
+		overflow: auto;
+		height: 366px;
+		width: 798px;
+		margin-top: 126px;
+	}
+	#instructBox
+	{
+		background-color: #424242;
+		color: white;
+		font-family: 'Raleway', Verdana, 'Times New Roman';
+		width: 800px;
+		font-size: 22px;
+		text-align: center;
+		padding: 10px 0px;
+		border-bottom: 5px dashed white;
+		margin: 0px auto 4px auto;
+		position: fixed;
+		top: 0;
+	}
+	#mainText
+	{
+		font-size: 24px;
+		padding: 15px 10px 15px 20px;
+		line-height: 32px;
+	}
+	#mainTextHead
+	{
+		font-family: 'Playball', Verdana, 'Times New Roman';
+		font-size: 38px;
+		margin: 10px 0px 10px 0px;
+		font-weight: bold;
+		text-decoration: underline;
+		text-align: center;
+	}
+	.mybutton
+	{
+		font-size: 25px;
+		font-weight: normal;
+		line-height: 34px;
+		margin: 10px auto 20px auto;
+		text-decoration: none;
+		border: none;
+		position: relative;
+		text-align: center;
+		padding: 2px 6px;
+		outline: none;
+		border-radius: 6px;
+	}
+	.num
+	{
+		height: 24px;
+		font-size: 22px;
+		border-radius: 10px;
+		background-color: #d8d8d8;
+	}
+	.indent { margin: 0px 25px; }
+	.para { margin: 15px 0px; }
+	.highlight
+	{
+		background-color: #ffeb43;
+		border-radius: 10px;
+		padding: 0px 6px;
+		font-weight: bold;
+		color: #212121;
+	}
+</style>
+<script type="text/javascript" id="sourcecode">
 		//*******************************************************
-					var currentItem = -1;
-				var numItems = 0;
-				var $scrollElement;
-				var questionBoxArray = [];
-				var numQuestionBoxes = 1;
-				var selectedAnswer = "";
-				var isSelected = false
-				var userAnswer = "";
-				var strId = "";
-				var numCorrect=0;
-				var numIncorrect=0;
-				var clickCount=0;
+		var currentItem = -1;
+		var numItems = 0;
+		var $scrollElement;
+		var questionBoxArray = [];
+		var numQuestionBoxes = 1;
+		var selectedAnswer = "";
+		var isSelected = false
+		var userAnswer = "";
+		var strId = "";
+		var numCorrect=0;
+		var numIncorrect=0;
+		var clickCount=0;
 
-				function sound_clicked()
+		function sound_clicked()
 			{// return parent.PlaySound('clicked0.wav');
-			}
+		}
 
-			function sound_incorrect()
+		function sound_incorrect()
 			{// return parent.PlaySound('incorrect0.wav');
-			}
+		}
 
-			function sound_correct()
+		function sound_correct()
 			{// return parent.PlaySound('success0.wav');
-			}
+		}
 
 
 		var $scrollElement;
-			$(document).ready(function()
-			{
+		$(document).ready(function()
+		{
 
-				parent.GetWorldEvent("MediaLoaded");
+			parent.GetWorldEvent("MediaLoaded");
 
 				//lock the buttons
 				Lock();
@@ -142,24 +142,24 @@
 				ScrollToId($scrollElement, "b1");
 			});
 
-			function GetItem()
+		function GetItem()
+		{
+			if(currentItem < numItems)
 			{
-				if(currentItem < numItems)
-				{
-					++currentItem;
+				++currentItem;
 
-					return parent.GetWorldEvent("Continue");
-				}
-				else
-				{
-
-
-					return parent.GetWorldEvent("Stop");
-				}
+				return parent.GetWorldEvent("Continue");
 			}
-
-			function ScrollToId($scrollElement, id)
+			else
 			{
+
+
+				return parent.GetWorldEvent("Stop");
+			}
+		}
+
+		function ScrollToId($scrollElement, id)
+		{
 				//searches document to find the first instance of an element id that matches the id parameter
 				//and calls a function to get the position of that element
 				var scrollTarget = document.getElementById(id);
@@ -188,24 +188,20 @@
 			function ShowMediaAnswer()
 			{
 
-					selectedAnswer;
-					isSelected = true;
+				selectedAnswer;
+				isSelected = true;
 
 
 						//if an answer has been selected compare see if it is equal to the correct answer
 						if( numCorrect == 1 )
 						{
 							parent.PlaySound('success0.wav');
-							// $("#b1").animate({backgroundColor: "green", color: "white"}, 1000);
-							$("#b2").animate({backgroundColor: "green", color: "white"}, 1000);
-							// $("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
+							$("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
 
 						}
 						else if(numCorrect < 1)
 						{
-							// $("#b1").animate({backgroundColor: "green", color: "white"}, 1000);
-							$("#b2").animate({backgroundColor: "green", color: "white"}, 1000);
-							// $("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
+							$("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
 
 							//play the correct answer sound
 
@@ -214,17 +210,15 @@
 
 
 					//highlight the correct answer green
-							// $("#b1").animate({backgroundColor: "green", color: "white"}, 1000);
-							$("#b2").animate({backgroundColor: "green", color: "white"}, 1000);
-							// $("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
+							$("#b3").animate({backgroundColor: "green", color: "white"}, 1000);
 
-			}
+						}
 
 
-			function Unlock()
-			{
-				numCorrect=0;
-				clickCount=0;
+						function Unlock()
+						{
+							numCorrect=0;
+							clickCount=0;
 				//this section determines the font size for the click animation used in the clickFunc function below
 				var butFontSize = $( ".mybutton" ).css( "font-size" );
 				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
@@ -232,7 +226,7 @@
 
 				var clickFunc = function()
 				{
-				    clickCount++;
+					clickCount++;
 					//store the user's answer
 					userAnswer = $(this).attr("value");
 					selectedID=$(this).attr("id");
@@ -247,19 +241,19 @@
 					//play appropriate sound
 					if (userAnswer == "Correct")
 					{
-					numCorrect++;
-					parent.PlaySound('clicked0.wav');
+						numCorrect++;
+						parent.PlaySound('clicked0.wav');
 					//sound_clicked();
 					//	strId+="1";
 					//parent.GetWorldEvent(strId);
 					//parent.GetWorldEvent(strId.length.toString());
-					}
-					else if(userAnswer == "Incorrect")
-					{
+				}
+				else if(userAnswer == "Incorrect")
+				{
 					numIncorrect++;
 					parent.PlaySound('incorrect0.wav');
 					//sound_incorrect();
-					}
+				}
 
 					//animate button click
 					//$(this).animate({fontSize: butAnimSize}, 75);
@@ -272,31 +266,31 @@
 
 					//$(this).css("text-decoration","line-through");
 					$( this ).unbind("mouseover");
-				 $( this ).unbind("mouseout");
-				 $( this ).unbind("click");
+					$( this ).unbind("mouseout");
+					$( this ).unbind("click");
 
 				  // if(clickCount>=3 && numCorrect==3)
 				  if(clickCount>=1 && numCorrect==1)
-				 {
-				 strId++;
-				 userAnswer="Correct";
+				  {
+				  	strId++;
+				  	userAnswer="Correct";
 				 //parent.GetWorldEvent(userAnswer);
 				 parent.GetWorldEvent("userAnswer_Correct_"+userSelectedValue);
 
 				 sound_clicked();
-					Lock();
+				 Lock();
 
-				 }
+				}
 				 // else if(clickCount>=3 && numCorrect<3)
 				 else if(clickCount >= 1 && numCorrect < 1)
 				 {
-				   userAnswer="Incorrect";
+				 	userAnswer="Incorrect";
 				   //parent.GetWorldEvent(userAnswer);
 				   parent.GetWorldEvent("userAnswer_Incorrect_"+userSelectedValue);
 
 				   sound_incorrect();
-				    Lock();
-				 }
+				   Lock();
+				}
 
 					//$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
 					//parent.GetWorldEvent(numCorrect);
@@ -305,13 +299,13 @@
 
 				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
-				{ $(this).animate({backgroundColor:  "#edff73"}, 300); });
+					{ $(this).animate({backgroundColor:  "#edff73"}, 300); });
 				$( ".mybutton" ).mouseout(function()
-				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
+					{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
 
 				//animates unlocking via font color & background color
-			  $(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
+				$(".mybutton").animate({backgroundColor: "#74aac7", color: "#212121"}, 1000);
 
 				//bind the clickFunc above to any ".mybutton"
 				$(".mybutton").bind( "click", clickFunc );
@@ -371,9 +365,9 @@
 
 				//this sets the hover animation & cursor for buttons
 				$( ".mybutton" ).mouseover(function()
-				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+					{ $(this).animate({backgroundColor: "#edff73"}, 300); });
 				$( ".mybutton" ).mouseout(function()
-				{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
+					{ $(this).animate({backgroundColor: "#74aac7"}, 300); });
 				$( ".mybutton" ).css( 'cursor', 'pointer' );
 
 				//animates unlocking via font color & background color
@@ -395,11 +389,11 @@
 
 			function GetRequest()
 			{
-			   var url = location.search;
-			   var idName = new Array();
-			   if (url.indexOf("?") != -1)
-			   {
-				   str = url.substr(1);
+				var url = location.search;
+				var idName = new Array();
+				if (url.indexOf("?") != -1)
+				{
+					str = url.substr(1);
 					strs = str.split("=");
 					strId = strs[1];
 					//strId= parseInt(strId, 10);
@@ -408,18 +402,18 @@
 					//parent.GetWorldEvent(strId);
 					//idName=strId.split("&");
 					//return idName[idName.length-2];
-			   }
+				}
 			}
 
 			function GetMediaEvent(data)
 			{
 				if (data == "AskQ")
 				{
-				parent.GetWorldEvent("Cristina");
+					parent.GetWorldEvent("Cristina");
 				}
 				else if (data == "ThisQ")
 				{
-				parent.GetWorldEvent("Cristina");
+					parent.GetWorldEvent("Cristina");
 				}
 				else if(data == "NextPage")
 				{
@@ -437,11 +431,11 @@
 	</head>
 	<body  onload="Start()">
 		<div id="instructBox">
-			Click on a supporting sentence for the summary statement below on diabetes.
+			Click on the sentence that contains the two causes of diabetes.
 			<br>
-			<span class="highlight">
+<!-- 			<span class="highlight">
 				Many are affected by diabetes but very few understand it. Diabetes is a lifelong disease that results from insulin not functioning appropriately.
-			</span>
+			</span> -->
 		</div>
 		<div id="textbox" class="scroll-pane">
 			<div id="mainText">
@@ -449,18 +443,30 @@
 					Diabetes
 				</div>
 				<div id="para1" class="para">
-				<span class="indent"></span><span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;1&nbsp;</span>Many people have heard of diabetes but very few understand where it may come from or what may cause it.</span><span class="mybutton" id="b2" value="Correct"><span class="num">&nbsp;2&nbsp;</span>Having diabetes simply means that someone has high levels of sugar in their blood and it usually is a lifelong disease.</span> Insulin is a hormone produced in the body that controls blood sugar. Diabetes can be caused by too little insulin, or resistance to insulin. <span class="mybutton" id="b3" value="Incorrect"><span class="num">&nbsp;3&nbsp;</span>When food is consumed and broken down in the body it is used for energy which then changes it to sugar.</span> With diabetes your body cannot move this sugar into muscle, fat, or liver cells and this is caused by two things.
-				</div>
+					<span class="indent"></span>
+					<span class="mybutton" id="b1" value="Incorrect"
+					><span class="num">&nbsp;1&nbsp;</span>
+					Many people have heard of diabetes but very few understand where it may come from or what may cause it.
+				</span>
+				<span class="mybutton" id="b2" value="Incorrect">
+					<span class="num">&nbsp;2&nbsp;</span>
+					Having diabetes simply means that someone has high levels of sugar in their blood and it usually is a lifelong disease. Insulin is a hormone produced in the body that controls blood sugar.
+				</span>
+				<span class="mybutton" id="b3" value="Correct">
+					<span class="num">&nbsp;3&nbsp;</span>
+					Diabetes can be caused by too little insulin, or resistance to insulin.
+				</span>
+				<span class="mybutton" id="b4" value="Incorrect">
+					<span class="num">&nbsp;4&nbsp;</span>
+					When food is consumed and broken down in the body it is used for energy which then changes it to sugar.
+				</span>
+				With diabetes your body cannot move this sugar into muscle, fat, or liver cells and this is caused by two things.
+			</div>
 
-				<div id="para2" class="para">
+			<div id="para2" class="para">
 				Either the pancreas, the organ that makes insulin, does not make enough insulin or your cells do not respond to insulin normally. There are several symptoms that occur with diabetes such as, fatigue, blurry vision, weight loss, and excess thirst. If you or anyone you may know has any of these symptoms, contact a doctor as soon as possible. There are two types of diabetes: Type 1 can happen at any age. It develops over a slow period of time, and there is no prevention for it. Type 2 normally happens in adulthood, is caused by high rates of obesity, and can be prevented with a healthy active lifestyle that includes diet and exercise. Diabetes can cause harmful health complications over the years such as kidney problems, heart attacks, eye problems, and body sores.
-				</div>
-
-
-
-
-
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
 </html>
