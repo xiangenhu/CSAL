@@ -176,6 +176,25 @@ $(document).ready(function() {
 		}else{
 			$("#CloseCaption").css("background-color", "black");
 		}
+		
+		xAPIPostEnding(qs("UID",""),
+					qs("SName",""),
+					0.56,
+				    true,
+				    0,
+					1,
+					location.href,
+					"completed","easy");
+					
+		xAPIPostEnding(qs("UID",""),
+					qs("SName",""),
+					0.3,
+				    false,
+				    0,
+					1,
+					location.href,
+					"failed","Hard") 
+		
 	});
 	
 	

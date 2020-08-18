@@ -338,13 +338,13 @@
 		        console.log(Performance)
 		        if (getBranch == "Easy" && Performance >= 0.747) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else if (getBranch == "Hard" && Performance >= 0.733) {
 		            //pass
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -365,10 +365,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum > 18) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -389,10 +389,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum > 21) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -413,10 +413,10 @@
 		        console.log(Performance)
 		        if (Performance >= 0.7) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -438,10 +438,10 @@
 		        if (getBranch == "Hard") {
 		            if (countCrrectNum >= 13) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -449,10 +449,10 @@
 		        } else {
 		            if (countCrrectNum >= 13) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -477,10 +477,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum >= 17) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -501,10 +501,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum > 13) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -512,10 +512,10 @@
 		       
 		        if (lesson18CountTotalAnswerTimes < 23 && lesson18score>=3000) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 				 lesson18score=0;
@@ -538,10 +538,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum > 14) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -563,10 +563,10 @@
 		        if (getBranch == "Hard") {
 		            if (countCrrectNum >= 8) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -574,10 +574,10 @@
 		        } else {
 		            if (countCrrectNum >= 8) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -602,10 +602,10 @@
 		        if (getBranch == "Hard") { //medium to hard?
 		            if (countCrrectNum >= 12) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -613,10 +613,10 @@
 		        } else { // medium to easy? 
 		            if (countCrrectNum >= 15) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -641,10 +641,10 @@
 		        if (getBranch == "Hard") { //medium to hard?
 		            if (countCrrectNum >= 8) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -652,10 +652,10 @@
 		        } else { // medium to easy? 
 		            if (countCrrectNum >= 8) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -684,10 +684,10 @@
 		        if (getBranch == "Hard") {
 		            if (countCrrectNum >= 13) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -695,10 +695,10 @@
 		        } else {
 		            if (countCrrectNum >= 14) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -722,10 +722,10 @@
 		        
 		            if (countCrrectNum >= 4) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -746,10 +746,10 @@
 		        console.log(Performance)
 		        if (Performance >= 0.75) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -766,10 +766,10 @@
 		        console.log(Performance)
 		        if (Performance >= 0.82) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -791,10 +791,10 @@
 		        console.log(Performance)
 		        if (countCrrectNum > 8) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        }
 
@@ -815,10 +815,10 @@
 		        console.log(Performance)
 				 if (countCrrectNum > 5) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        } 
 			} else if (lessonID == "lesson33"){
@@ -838,10 +838,10 @@
 		        console.log(Performance)
 				console.log("Correct: " + countCrrectNum); 
 				 if (countCrrectNum >= 4) {
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        } 
 			} else if (lessonID == "lesson12"){
@@ -861,10 +861,10 @@
 		        console.log(Performance)
 				 if (countCrrectNum >= 9) {
 
-		            userPerformancePage("pass");
+		            userPerformancePage("pass",Performance,0,1,getBranch);
 		        } else {
 		            //no pass
-		            userPerformancePage("Failed");
+		            userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		        } 
 			} 
@@ -886,10 +886,10 @@
 		        if (getBranch == "Hard") {
 		            if (countCrrectNum >= 16) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -897,10 +897,10 @@
 		        } else {
 		            if (countCrrectNum >= 12) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -926,10 +926,10 @@
 		        if (getBranch == "Hard") {
 		            if (countCrrectNum >= 14) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -937,10 +937,10 @@
 		        } else {
 		            if (countCrrectNum >= 12) {
 
-		                userPerformancePage("pass");
+		                userPerformancePage("pass",Performance,0,1,getBranch);
 		            } else {
 		                //no pass
-		                userPerformancePage("Failed");
+		                userPerformancePage("Failed",Performance,0,1,getBranch);
 
 		            }
 
@@ -953,16 +953,29 @@
 
 		}
 
-		function userPerformancePage(result) {
+		function userPerformancePage(result,rawScore,min,max,TextLevel) {
+			var finalresult=(result == "pass");
 		    if (result == "pass") {
 		        $("#mainFrame").attr("src", "resources/endingpage.html?userPerformance=Passed");
-
+			xAPIPostEnding(qs("UID",""),
+					qs("SName",""),
+					0.56,
+				    finalresult,
+				    0,
+					1,
+					location.href,
+					"completed",TextLevel);
 		    } else if (result == "Failed") {
 		        $("#mainFrame").attr("src", "resources/endingpage.html?userPerformance=Failed");
-
+				xAPIPostEnding(qs("UID",""),
+					qs("SName",""),
+					rawScore,
+				    finalresult,
+				    min,
+					Max,
+					location.href,
+					"failed",TextLevel)
 		    }
-
-
 		}
 
 		function NewSetProgress(num) {
