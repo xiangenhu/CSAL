@@ -10,6 +10,7 @@ var scriptFolderURL = qs("DURL",domainURL)+"/Scripts/";
 var MediaFolderURL = qs("MURL",domainURL)+"/Scripts/";
 
 var talkingheadLoaded = false;
+var CaptionOn=(qs("CaptionOn","0")==1);
 var agentBusy = false;
 var lessonRecovery = false;
 $(document).ready(function() {
@@ -204,34 +205,27 @@ function clearDisplayArea() {
 }
 
 function appendTextToDisplayArea(data) {
-	if (qs("CaptionOn","1")=="1"){
-		$("#speechArea").append(data + "\n\n");
-		var textarea = document.getElementById('speechArea');
-		textarea.scrollTop = textarea.scrollHeight;
-		
-		$("#caption").show();
-		var displayText=data.split("#").join(" ");
-		displayText= displayText.split(":").join(": ")
-		$("#caption").append(displayText + "\n");
-		var textarea = document.getElementById('caption');
-		textarea.scrollTop = textarea.scrollHeight;
-		var name1="Cristina:";
-		var name2="Jordan:";
-		if (displayText.indexOf(name1)>=0){
-			$("#caption1").show();
-		   $("#caption1").html(displayText.split(name1).join(""));
-		   var textarea1 = document.getElementById('caption1');
-		   textarea1.scrollTop = textarea1.scrollHeight;
-		}else if (displayText.indexOf(name2)>=0){
-			$("#caption2").show();
-		   $("#caption2").html(displayText.split(name2).join(""));
-		   var textarea2 = document.getElementById('caption2');
-		   textarea2.scrollTop = textarea2.scrollHeight;
-		}
-		
-	}else{
-		$("#caption").hide();
+	$("#speechArea").append(data + "\n\n");
+	var textarea = document.getElementById('speechArea');
+	textarea.scrollTop = textarea.scrollHeight;
+	
+	var displayText=data.split("#").join(" ");
+	displayText= displayText.split(":").join(": ")
+	$("#caption").append(displayText + "\n");
+	var textarea = document.getElementById('caption');
+	textarea.scrollTop = textarea.scrollHeight;
+	var name1="Cristina:";
+	var name2="Jordan:";
+	if (displayText.indexOf(name1)>=0){
+	   $("#caption1").html(displayText.split(name1).join(""));
+	   var textarea1 = document.getElementById('caption1');
+	   textarea1.scrollTop = textarea1.scrollHeight;
+	}else if (displayText.indexOf(name2)>=0){
+	   $("#caption2").html(displayText.split(name2).join(""));
+	   var textarea2 = document.getElementById('caption2');
+	   textarea2.scrollTop = textarea2.scrollHeight;
 	}
+		
 	
 }
 
@@ -276,6 +270,20 @@ function ShowRepeatButton() {
     }
 
 }
+
+function showCC(showOn){
+	if (showOn){
+			$("#caption").show();
+			$("#caption1").show();
+			$("#caption2").show();
+		}else{
+			$("#caption").hide();
+			$("#caption1").hide();
+			$("#caption2").hide();
+		}
+}
+
+
 
 function HideRepeatButton() {
     $("#repeat").css('visibility', 'hidden');

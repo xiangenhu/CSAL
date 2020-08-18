@@ -142,6 +142,7 @@ talkingheadOn="true";
 }
 $(document).ready(function() {
 	loadAgent();
+	showCC(false);
 	$("#repeat").click(function() {
 	if(talkingheadUsing=="Play")
 	{
@@ -165,6 +166,18 @@ $(document).ready(function() {
 	   
 
 	});
+	
+	
+	$("#CloseCaption").click(function() {
+		CaptionOn=!CaptionOn;
+		showCC(CaptionOn);
+		if (CaptionOn){
+			 $("#CloseCaption").css("background-color", "green");
+		}else{
+			$("#CloseCaption").css("background-color", "black");
+		}
+	});
+	
 	
 	$("#btNext").click(function() {
 	SpeakRepeatList=[];
@@ -239,6 +252,7 @@ document.getElementById('agentsLarge').style.height = "97px";
 	$("#caption").hide();
 	allLessonsInfoObj = getLessonsConfig()
 	getLessonInfo();
+	$("#CloseCaption").css('visibility', 'visible');
 }
 function repeatSpeakList()
 {

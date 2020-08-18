@@ -40,28 +40,53 @@
 			display:none;
 		}
 		#caption1{	
-			width: 200px;
+			width: 250px;
 			height: 45px;
 			border: small blue solid;
 			border-radius: 10px;
 			background-color: lightBlue;
 			display:none;
 			left:0px;
-			top:50px;
+			top:30px;			
+	        opacity:0.95;
 			position:absolute;
 		}
 		#caption2{	
-			width: 200px;
+			width: 250px;
 			height: 45px;
 			border: small blue solid;
 			border-radius: 10px;
 			background-color: lightBlue;
 			display:none;
 			right:0px;
-			top:50px;
+			top:30px;
+	        opacity:0.75;
 			position:absolute;
 		}
 
+	#CloseCaption {
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 80px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-top: 485px;
+		margin-left: 650px;
+		float: left;
+		border-radius: 7px;
+		opacity:0.75;
+		border: 1px solid white;
+		cursor: pointer;
+		
+	}
+
+	#CloseCaption:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
     </style>
 </head>
 
@@ -94,6 +119,8 @@
             <img src="images/HomeButton.png" width="40" height="40" />
         </div>
         <div id="repeat">Repeat</div>
+		
+	    <div id="CloseCaption">CC</div>
 
         <div id="btReplayVideo"> Play Video</div>
         <div id="btNext"> Next </div>
