@@ -30,15 +30,21 @@ body {
   overflow: hidden;
 }
 .center3 {
-  margin: auto;
   width: 500px;
+  top:60px;
+  left:50%;
+  margin-left:-250px;   /* negative half of width above */
   border: 3px solid #73AD21;
   padding: 10px;
+  position:absolute;
 }
 .center1 {
-  margin: auto;
-  width: 500px;
   padding: 10px;
+  top:60px;
+  width: 500px;
+  left:50%;
+  margin-left:-250px;   /* negative half of width above */
+  position:absolute;
 }
 .block {
     height:100px;
@@ -46,7 +52,11 @@ body {
     text-align:left;
 }
 .center2 {
-    margin:auto;
+  top:240px;
+  left:50%;
+  width:100;
+  margin-left:-50px;   /* negative half of width above */
+  position:absolute;
 }
 .overlay {
   position: fixed;
@@ -74,7 +84,7 @@ body {
  <button onclick="start()" class="center3"><h3>Please wait until you see the agents and then click on the Next button below to proceed.</h3></button> 
  <!--button onclick="start()" class="center3"><h3>The site is currently under maintenance.</h3></button--> 
 </div>
- <div class="block center2">
+ <div class="center2">
 	<button id="start" class="cupid-green" align="center" onclick="start()">Next</button>
 	 </div>
 	 </div>
