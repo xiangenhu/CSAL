@@ -407,3 +407,15 @@ body {
 	position: absolute;
 	top:50px;
 }
+#caption{
+	display: block;
+	position:absolute;
+	background:lightBlue; 
+	border-radius: 10px 10px 10px 10px;
+	bottom:10px;
+	width:600px;  /* adjust as per your needs */
+	height:100;   /* adjust as per your needs */
+	left:50%;
+	margin-left:-300px;   /* negative half of width above */
+	z-index: 100;
+}
