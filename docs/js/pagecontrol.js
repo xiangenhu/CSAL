@@ -129,7 +129,7 @@ function mainpageInit() {
     } else if (uname == undefined ) {
         $("#mainFrame").attr("src", "resources/csal/startPage.html");
     } else {
-        $("#mainFrame").attr("src", "resources/csal/CSALscreenPage.html");
+        $("#mainFrame").attr("src", "resources/csal/CSALScreenPage.html");
     }
 		
 		
