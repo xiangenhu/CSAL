@@ -180,6 +180,23 @@ $(document).ready(function() {
 	});
 	
 	
+	
+	
+	$("#MuteBtn").click(function() {
+		var VarTHWin=document.getElementById("agentsLarge");
+		var vid = VarTHWin.contentWindow.MuteAudio();
+	if (vid){
+		$("#MuteBtn").html('Unmute');
+		showCC(vid);
+		$("#CloseCaption").css("background-color", "green");
+	}else{
+		$("#MuteBtn").html('Mute');
+		$("#CloseCaption").css("background-color", "black");
+		showCC(vid);
+	}
+	});
+	
+	
 	$("#btNext").click(function() {
 	SpeakRepeatList=[];
 		nextButtonStatus = false;
