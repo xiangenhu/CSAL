@@ -249,11 +249,11 @@ document.getElementById('agentsLarge').style.height = "97px";
  var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
 	$("#home").hide();
+	$("#CloseCaption").show();
+	$("#MuteBtn").show();
 	$("#displayArea").hide();
-	$("#caption").hide();
-	allLessonsInfoObj = getLessonsConfig()
+	allLessonsInfoObj = getLessonsConfig();
 	getLessonInfo();
-	$("#CloseCaption").css('visibility', 'visible');
 }
 function repeatSpeakList()
 {
