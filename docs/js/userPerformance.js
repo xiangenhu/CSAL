@@ -959,10 +959,10 @@
 		        $("#mainFrame").attr("src", "resources/endingpage.html?userPerformance=Passed");
 			xAPIPostEnding(qs("UID",""),
 					qs("SName",""),
-					0.56,
+					rawScore,
 				    finalresult,
-				    0,
-					1,
+				    min,
+					max,
 					location.href,
 					"completed",TextLevel);
 		    } else if (result == "Failed") {
@@ -972,7 +972,7 @@
 					rawScore,
 				    finalresult,
 				    min,
-					Max,
+					max,
 					location.href,
 					"failed",TextLevel)
 		    }
