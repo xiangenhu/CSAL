@@ -37,6 +37,9 @@ var isQuestionPageAfterFirst=false;
 var isFirstTimer=true;
 var talkingheadUsing="Speak2";
 var SpeakRepeatList = [];
+var currentPageInfor;
+var currentJSON;
+var longAction=[];
 function setCurrentLessonInfo(lessonID) {
 
 	for (var i in allLessonsInfoObj) {
@@ -180,6 +183,27 @@ $(document).ready(function() {
 	});
 	
 	
+	$("#PauseBtn").click(function() {
+		var buttonFaceValue=$("#PauseBtn").text();
+		if  (buttonFaceValue=="Pause"){ 
+			$("#PauseBtn").html("Continue");
+			$("#FeedBackBtn").show();
+			StopTimer();
+		}else{
+			$("#FeedBackBtn").hide();
+			StartTimer();
+		}
+		
+	});
+	
+	
+	$("#FeedBackBtn").click(function() {
+		var URL="https://docs.google.com/forms/d/e/1FAIpQLSernYryLw1pTzWprJ3qn8Nxxl3RhtP2W6Sv2rpCRIvEv8TpXw/viewform?usp=pp_url&entry.183686984=";
+		var optionText=JSON.stringify(currentPageInfor)
+		window.open(URL+optionText);
+	});
+	
+	
 	
 	
 	$("#MuteBtn").click(function() {
@@ -316,6 +340,7 @@ function LoadLesson(lessonID) {
 
 	}
 	replayVideoTimes = 0;
+	currentJSON=acePostjson;
 	Post(acePostjson);
 	checkLessonConfig(lessonID, 1);
 
@@ -372,6 +397,7 @@ function runActions() {
 	}
 	idleTime = 0;
 	maxIdle = 0;
+	
 	if (actions.length != 0) {
 		var act = actions[0].Act;
 		var agent = actions[0].Agent;
@@ -379,6 +405,17 @@ function runActions() {
 		var agentNum;
 		var isSpeakingSegments = false;
 		console.log(actions[0]);
+		
+		var RecordObj={Act:act,Agent:agent,Data:data.split("#").join("")};
+		
+		longAction.push(JSON.stringify(RecordObj));
+		var FeedbackHistry=parseInt(qs("FeedbackHistoryLength","5"));
+		if (longAction.length>FeedbackHistry){
+			longAction.splice(0,1);
+		}
+		
+		currentPageInfor={ACEPostjson:currentJSON,PastAFewACEActions:longAction,CurrentACEAction:RecordObj};	
+		
 		if (agent != "Cristina" && agent != "Jordan" && agent != "System") {
 			return;
 		} else if (agent == "Cristina") {
@@ -637,6 +674,7 @@ function runActions() {
 			default:
 				break;
 		}
+		
 		if(!isSpeakingSegments) actions.splice(0, 1); // remove the current action except when there are more segments to speak
 
 	} else if (actions.length == 0 && vidplayerBusy == false && PutStatus == false) {
@@ -649,6 +687,7 @@ function runActions() {
 
 			return;
 		}
+		longAction=[];
 		var acePutjson = {};
 		setPresentationHistoryObj();
 		var PresentationIDObjStr = JSON.stringify(PresentationIDObj);
@@ -699,6 +738,8 @@ function runActions() {
 var timer;
 
 function StartTimer() {
+	$("#PauseBtn").show();
+	$("#PauseBtn").html("Pause");
 	timer = setInterval(function() {
 		runActions()
 	}, 100);
