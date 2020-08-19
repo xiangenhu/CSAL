@@ -64,23 +64,23 @@
 			position:absolute;
 		}
 
-	#CloseCaption {
+	#CloseCaption{
 		font-family: Lato, Verdana, 'Times New Roman';
 		font-size: 20px;
 		background-color: #333;
 		color: white;
 		width: 80px;
 		height: 30px;
-		line-height: 30px;
 		text-align: center;
-		margin-top: 485px;
-		margin-left: 650px;
-		float: left;
+		margin-top: 150px;
+		margin-left: 825px;
 		border-radius: 7px;
 		opacity:0.75;
 		border: 1px solid white;
 		cursor: pointer;
-		
+		position:absolute;		
+        z-index: 40;
+		display:none;
 	}
 
 	#CloseCaption:hover {
@@ -115,7 +115,10 @@
 </head>
 
 <body>
-    <div id="containerNoImg">
+    <div id="containerNoImg"
+	    <div id="CloseCaption">CC</div>
+	<div id="MuteBtn">Mute</div>
+	
         <!--div id="controlButton">
             <div id="bttalkingheadSwitch" class="mybutton" onclick="talkingheadSwitchControl()">+</div>
             <div id="btDiaplayAreaSwitch" class="mybutton" onclick="diaplayAreahControl()">+</div>
@@ -143,8 +146,6 @@
             <img src="images/HomeButton.png" width="40" height="40" />
         </div>
         <div id="repeat">Repeat</div>
-		
-	    <div id="CloseCaption">CC</div>
 
         <div id="btReplayVideo"> Play Video</div>
         <div id="btNext"> Next </div>
