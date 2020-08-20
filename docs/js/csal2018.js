@@ -93,7 +93,7 @@ talkingheadOn="true";
 		sessionStorage.setItem("UID", URLParams.UID);
 		var getParaList = URLParams.UID.split("_")
 		var uname = getParaList[getParaList.length - 1];
-		sessionStorage.setItem("uname", uname);
+		sessionStorage.setItem("uname", URLParams.SName);
 
 	} else {
 		sessionStorage.setItem("UID", "autotutor_default_visitor");
@@ -444,7 +444,7 @@ function runActions() {
 				break;
 			case "Display":
 			
-			    var getUserName = qs("SName","John");
+			    var getUserName =sessionStorage.getItem("uname");
 				if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data >= "60") {
 					getQuestionName = data.replace(getUserName, "_user_");
 				}else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
