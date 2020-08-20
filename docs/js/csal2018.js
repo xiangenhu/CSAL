@@ -443,19 +443,14 @@ function runActions() {
 
 				break;
 			case "Display":
+			
+			    var getUserName = qs("SName","John");
 				if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data >= "60") {
-//					var getUserName = sessionStorage.getItem("uname");
-					var getUserName = qs("SName","John");
-					
 					getQuestionName = data.replace(getUserName, "_user_");
-					console.log(getQuestionName);
-				}
-				else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
-					var getUserName = sessionStorage.getItem("uname");
+				}else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
 					getQuestionName = data.replace(getUserName, "_user_");
-					console.log(getQuestionName);
 				}
-
+				console.log(getQuestionName);
 				appendTextToDisplayArea(data);
 
 
