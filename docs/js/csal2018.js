@@ -444,7 +444,9 @@ function runActions() {
 				break;
 			case "Display":
 				if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data >= "60") {
-					var getUserName = sessionStorage.getItem("uname");
+//					var getUserName = sessionStorage.getItem("uname");
+					var getUserName = qs("SName","John");
+					
 					getQuestionName = data.replace(getUserName, "_user_");
 					console.log(getQuestionName);
 				}
