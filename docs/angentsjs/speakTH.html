@@ -48,7 +48,7 @@ body {
   padding: 0px;
   top:60px;
   width: 440px;
-  left:200px;
+  left:50px;
   position:absolute;
 }
 .block {
@@ -76,6 +76,12 @@ body {
   cursor: pointer;
   display:none;
 }
+#startbtn{
+width:200px;
+left:100px;
+top:300px;
+}
+
 		</style>
 		
 </head>
@@ -83,18 +89,7 @@ body {
 <audio id="audio"></audio> 
 
 <div id="talkingHeads" style="height:120px;"></div>
-<!--div id="overlay" class="overlay"></div-->
-<div id="temp">
-<div class="center1">	
- <button onclick="start()" class="center3"><h3>Please click [next] when you are ready.</h3></button> 
- <!--button onclick="start()" class="center3"><h3>The site is currently under maintenance.</h3></button--> 
-</div>
- <div class="center2">
-	<button id="start" class="cupid-green" align="center" onclick="start()">Next</button>
-	 </div>
-	 </div>
-</div>
-
+<button id="startbtn" class="cupid-green" onclick="start()">Click Here to Start</button>
 <script>
 var thLoaded=false;
 var thBusy=false;
@@ -200,7 +195,6 @@ msSpeakQueued(C3,Words,"");
         }
 
 </script>
-<p align="center">
-<button onclick="TestSpeech('I am not ready.... I am working very hard to get ready for the ITS 2018 tutorial!<bigsmile/>')" style="display:none">Click here to Ask Me</button> </p>
+
 </body>
 </html>
