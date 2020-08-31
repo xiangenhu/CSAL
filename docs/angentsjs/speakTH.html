@@ -88,8 +88,6 @@ top:300px;
 <body onload="onLoad()" bgcolor="#99ffff">
 <audio id="audio"></audio> 
 
-<div id="talkingHeads" style="height:120px;"></div>
-<button id="startbtn" class="cupid-green" onclick="start()">Click Here to Start</button>
 <script>
 var thLoaded=false;
 var thBusy=false;
@@ -107,6 +105,7 @@ function start()
 	//document.getElementById("overlay").style.display="block";
 	parent.getAgentMessage("start");
 	$("#talkingHeads").show();
+	$("#startbtn").hide();
 }
 function TestSpeech(Words){
 	
@@ -195,6 +194,7 @@ msSpeakQueued(C3,Words,"");
         }
 
 </script>
-
+<div id="talkingHeads" style="height:120px;"></div>
+<button id="startbtn" class="cupid-green" onclick="start()">Click Here to Start</button>
 </body>
 </html>
