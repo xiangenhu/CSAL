@@ -87,7 +87,7 @@ body {
 <!--div id="overlay" class="overlay"></div-->
 <div id="temp">
 <div class="center1">	
- <button onclick="start()" class="center3"><h3>Please wait until you see the agents and then click on the Next button below to proceed.</h3></button> 
+ <button onclick="start()" class="center3"><h3>Please click [next] when you are ready.</h3></button> 
  <!--button onclick="start()" class="center3"><h3>The site is currently under maintenance.</h3></button--> 
 </div>
  <div class="center2">
@@ -102,6 +102,7 @@ var thBusy=false;
 function onLoad() {
 	
 	loadCharas()
+	$("#talkingHeads").hide();
 	
 }
 function start()
@@ -111,6 +112,7 @@ function start()
 //	document.getElementById("talkingHeads").style.height="120px";
 	//document.getElementById("overlay").style.display="block";
 	parent.getAgentMessage("start");
+	$("#talkingHeads").show();
 }
 function TestSpeech(Words){
 	
