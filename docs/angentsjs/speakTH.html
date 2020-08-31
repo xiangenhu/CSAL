@@ -79,7 +79,7 @@ body {
 #startbtn{
 width:200px;
 height:200px;
-left:320px;
+left:170px;
 top:250px;
 border-radius: 50%;
 font-size: 45px;
@@ -108,9 +108,9 @@ function start()
 //    x.style.display = "none";
 //	document.getElementById("talkingHeads").style.height="120px";
 	//document.getElementById("overlay").style.display="block";
-	parent.getAgentMessage("start");
 	$("#talkingHeads").show();
 	$("#startbtn").hide();
+	parent.getAgentMessage("start");
 }
 function TestSpeech(Words){
 	
