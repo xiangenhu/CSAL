@@ -95,7 +95,7 @@ function LoadChara(id,character,format,voice){
 }
 
 
-function loadCharas(){
+function loadCharasMy(){
 	var Avatars = document.getElementById("talkingHeads");
 	var s = '<table align="center" width="600px"><tr>';
 	if (C1.length>1){

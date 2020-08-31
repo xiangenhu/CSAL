@@ -4,8 +4,8 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<script>document.domain =location.host; </script>
-<script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script>
+<script>document.domain =location.host; </script><!-- 
+<script src="https://xiangenhu.github.io/skoplayer/js/varDefNew.js"></script> -->
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery.min.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-1.12.4.js"></script>
 	<script src="https://xiangenhu.github.io/skoplayer/js/jquery-ui.js"></script>	
@@ -79,10 +79,11 @@ body {
 #startbtn{
 width:200px;
 height:200px;
-left:200px;
-top:400px;
+left:320px;
+top:250px;
 border-radius: 50%;
 font-size: 45px;
+position:absolute;
 }
 
 		</style>
@@ -91,15 +92,14 @@ font-size: 45px;
 <body onload="onLoad()" bgcolor="#99ffff">
 <audio id="audio"></audio> 
 
-<div id="talkingHeads" style="height:120px;"></div>
 <button id="startbtn" class="cupid-green" onclick="start()">Start</button>
+<div id="talkingHeads" style="height:120px;"></div>
 <script>
 var thLoaded=false;
 var thBusy=false;
 function onLoad() {
-	
-	loadCharas()
 	$("#talkingHeads").hide();
+	loadCharasMy()
 	
 }
 function start()
