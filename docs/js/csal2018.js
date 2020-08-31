@@ -282,11 +282,11 @@ var x2 = $(window).width();
 	if (x2 < 1400) {
 		$("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
 	}
-document.getElementById('mainscreen').style.display="block";
-document.getElementById('containerNoImg').style.backgroundImage = "url(../images/TabletFrame2.png)";
-document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
-document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
-document.getElementById('agentsLarge').style.height = "97px";
+	document.getElementById('mainscreen').style.display="block";
+	document.getElementById('containerNoImg').style.backgroundImage = "url(../images/TabletFrame2.png)";
+	document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
+	document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
+	document.getElementById('agentsLarge').style.height = "97px";
  var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
 	$("#home").hide();
