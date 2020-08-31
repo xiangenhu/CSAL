@@ -4,28 +4,24 @@
 }
 
 #containerNoImg {
-	display:none;
     width: 840px;
     height: 690px;
     background-color: white;
     margin: 0 auto;
-	position: absolute;
     margin-top: -55px;
-	top:160px;
     border: medium white solid;
     border-radius: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+    background-color: white;
 }
-#container{
-    width: 1024px;
-    height: 740px;
+#container {
+    width: 840px;
+    height: 690px;
     background-color: white;
     margin: 0 auto;
     margin-top: -55px;
     border: medium white solid;
     border-radius: 5px;
-    background: url(images/TabletFrame2.png) no-repeat center top;
+    background: url(../images/TabletFrame2.png) no-repeat center bottom;
     background-color: white;
 }
 div#controlButton{
@@ -84,22 +80,11 @@ left: 11%;
 
 }
 
-#debuggingBtn{
-	display:none;
-	bottom:20px;
-	left:0px;
-	width:100%;
-	text-align:center;
-    position: absolute;
-	background-color: LightGrey;
-	
-}
-
 #readText {
     width: 30px;
     height: 30px;
     background-color: black;
-    top: -30px;
+       top: -30px;
     margin-right: 280px;
     cursor: pointer;
     position: relative;
@@ -221,6 +206,7 @@ left: 11%;
     margin-left: 699px;
     position: absolute;
 }
+
 .scoreDisplayName {
     border: 5px;
     width: 89px;
@@ -251,6 +237,19 @@ left: 11%;
     margin: 4px 0px 5px -22px;
     vertical-align: top;
     background-color: #d0d0d0;
+}
+
+#caption{
+	display: block;
+	position:absolute;
+	background:lightBlue; 
+	border-radius: 10px 10px 10px 10px;
+	bottom:10px;
+	width:600px;  /* adjust as per your needs */
+	height:100;   /* adjust as per your needs */
+	left:50%;
+	margin-left:-300px;   /* negative half of width above */
+	z-index: 100;
 }
 
 .progressbar {
@@ -356,54 +355,136 @@ left: 11%;
     font-size: 16px;
     cursor: pointer;
 }
-canvas {
-    width: 130px;
-}
+		#caption{	
+			width: 800px;
+			height: 100px;
+			margin: 0 auto;
+			border: medium blue solid;
+			border-radius: 10px;
+			background-color: lightBlue;
+			bottom:10px;
+			left:50%;
+			margin-left:-400px;
+			display:none;
+		}
+		#caption1{	
+			width: 250px;
+			height: 45px;
+			border: small blue solid;
+			border-radius: 10px;
+			background-color: lightBlue;
+			display:none;
+			left:0px;
+			top:30px;			
+	        opacity:0.95;
+			position:absolute;
+		}
+		#caption2{	
+			width: 250px;
+			height: 45px;
+			border: small blue solid;
+			border-radius: 10px;
+			background-color: lightBlue;
+			display:none;
+			right:0px;
+			top:30px;
+	        opacity:0.75;
+			position:absolute;
+		}
 
-body {
-  overflow: hidden;
-}
-.center3 {
-  margin: auto;
-  width: 95%;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-.center1 {
-  margin: auto;
-  width: 95%;
-  padding: 10px;
-}
-.block {
-    height:100px;
-    width:180;
-    text-align:left;
-}
-.center2 {
-    margin:auto;
-}
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 2px;
-  top: 99;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  z-index: 2;
-  cursor: pointer;
-  display:none;
-}
-#StartingBtn{
-	margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#mainscreen{
-	position: absolute;
-	top:50px;
-}
+	#CloseCaption{
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 80px;
+		height: 30px;
+		text-align: center;
+		margin-top: 150px;
+		margin-left: 825px;
+		border-radius: 7px;
+		opacity:0.75;
+		border: 1px solid white;
+		cursor: pointer;
+		position:absolute;		
+        z-index: 40;
+		display:none;
+	}
+
+	#CloseCaption:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
+	#MuteBtn{
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 80px;
+		height: 30px;
+		text-align: center;
+		margin-top: 150px;
+		margin-left: 100px;
+		border-radius: 7px;
+		opacity:0.75;
+		border: 1px solid white;
+		cursor: pointer;
+		position:absolute;		
+        z-index: 40;
+		display:none;
+	}
+
+	#MuteBtn:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
+	
+	
+	#PauseBtn{
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-top: 695px;
+		margin-left: 460px;
+		position:absolute;	
+		border-radius: 7px;
+		border: 1px solid white;
+		cursor: pointer;
+        z-index: 40;
+		display:none;
+	}
+
+	#PauseBtn:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
+	
+	#FeedBackBtn{
+		font-family: Lato, Verdana, 'Times New Roman';
+		font-size: 20px;
+		background-color: #333;
+		color: white;
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-top: 695px;
+		margin-left: 570px;
+		position:absolute;	
+		border-radius: 7px;
+		border: 1px solid white;
+		cursor: pointer;
+        z-index: 40;
+		display:none;
+	}
+
+	#FeedBackBtn:hover {
+		color: #f8ffca;
+		border: 1px solid #f8ffca;
+	}
+
