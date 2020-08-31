@@ -78,9 +78,8 @@ body {
 }
 #startbtn{
 width:200px;
-left:0px;
-top:200px;
-position:absolute
+left:100px;
+top:300px;
 }
 
 		</style>
@@ -89,6 +88,8 @@ position:absolute
 <body onload="onLoad()" bgcolor="#99ffff">
 <audio id="audio"></audio> 
 
+<div id="talkingHeads" style="height:120px;"></div>
+<button id="startbtn" class="cupid-green" onclick="start()">Click Here to Start</button>
 <script>
 var thLoaded=false;
 var thBusy=false;
@@ -195,7 +196,6 @@ msSpeakQueued(C3,Words,"");
         }
 
 </script>
-<div id="talkingHeads" style="height:120px;"></div>
-<button id="startbtn" class="cupid-green" onclick="start()">Click Here to Start</button>
+
 </body>
 </html>
