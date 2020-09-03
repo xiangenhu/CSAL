@@ -1,4 +1,4 @@
-		var TotalScoreArr = [];
+r		var TotalScoreArr = [];
 		var lesson18score=0;
 		var lesson18CountTotalAnswerTimes=0;
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
@@ -348,7 +348,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson2") {
+		    } 
+			else if (lessonID == "lesson2") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -372,7 +373,8 @@
 
 		        }
 
-		    }else if (lessonID == "lesson4") {
+		    }
+			else if (lessonID == "lesson4") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -396,7 +398,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson6") {
+		    }
+			else if (lessonID == "lesson6") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -420,7 +423,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson7") {
+		    }
+			else if (lessonID == "lesson7") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -460,7 +464,8 @@
 		        }
 
 
-		    } else if (lessonID == "lesson9") {
+		    } 
+			else if (lessonID == "lesson9") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -484,7 +489,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson10") {
+		    } 
+			else if (lessonID == "lesson10") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -508,7 +514,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson18") {
+		    } 
+			else if (lessonID == "lesson18") {
 		       
 		        if (lesson18CountTotalAnswerTimes < 23 && lesson18score>=3000) {
 
@@ -521,7 +528,8 @@
 				 lesson18score=0;
 				 lesson18CountTotalAnswerTimes=0;
 
-		    } else if (lessonID == "lesson20") {
+		    } 
+			else if (lessonID == "lesson20") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -545,7 +553,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson22") {
+		    } 
+			else if (lessonID == "lesson22") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -584,7 +593,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson24") {
+		    } 
+			else if (lessonID == "lesson24") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -623,7 +633,8 @@
 
 		        }
 
-		     } else if (lessonID == "lesson16") {
+		     } 
+			else if (lessonID == "lesson16") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -662,7 +673,8 @@
 
 		        }
 
-		    }  else if (lessonID == "lesson25") {
+		    }  
+			else if (lessonID == "lesson25") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -705,7 +717,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson27") {
+		    } 
+			else if (lessonID == "lesson27") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -729,7 +742,8 @@
 
 		            }
 
-		    } else if (lessonID == "lesson29") {
+		    } 
+			else if (lessonID == "lesson29") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -753,7 +767,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson8") {
+		    } 
+			else if (lessonID == "lesson8") {
 		        var countPerformance = 0;
 		        for (var i in TotalScoreArr) {
 		            if (TotalScoreArr[i].userAnswer == "Correct") {
@@ -821,7 +836,8 @@
 		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
 
 		        } 
-			} else if (lessonID == "lesson33"){
+			}
+			else if (lessonID == "lesson33"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -844,7 +860,8 @@
 		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
 
 		        } 
-			} else if (lessonID == "lesson12"){
+			}
+			else if (lessonID == "lesson12"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {
@@ -908,7 +925,8 @@
 		        }
 
 
-		    } 	else if (lessonID == "lesson30") {
+		    }
+			else if (lessonID == "lesson30") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {

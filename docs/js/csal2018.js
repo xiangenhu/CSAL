@@ -40,6 +40,8 @@ var SpeakRepeatList = [];
 var currentPageInfor;
 var currentJSON;
 var longAction=[];
+
+
 function setCurrentLessonInfo(lessonID) {
 
 	for (var i in allLessonsInfoObj) {
@@ -385,7 +387,8 @@ function setProgressValue(currentMediaUrl) {
 
 
 function runActions() {
-	if (agentBusy == true) {
+	
+	if (AgentBusyNow() == true) {
 		return;
 	}
 	if (nextButtonStatus == true) {

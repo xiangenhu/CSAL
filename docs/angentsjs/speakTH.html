@@ -19,6 +19,11 @@
 			document.getElementById("audio").muted=!document.getElementById("audio").muted;
 			return document.getElementById("audio").muted;
 		}
+	
+		function agentBusyNow(){
+			var audio = document.getElementById("audio");
+			return !audio.paused
+		}
 	</script>
 
 	

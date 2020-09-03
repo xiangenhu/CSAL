@@ -12,7 +12,14 @@ var MediaFolderURL = qs("MURL",domainURL)+"/Scripts/";
 var talkingheadLoaded = false;
 var CaptionOn=(qs("CaptionOn","0")==1);
 var agentBusy = false;
+
+function AgentBusyNow(){
+		var VarTHWin=document.getElementById("agentsLarge");
+		var vid = VarTHWin.contentWindow.agentBusyNow();
+}
+
 var lessonRecovery = false;
+
 $(document).ready(function() {
     getSystemConfig();
     InitTalkingHead();
