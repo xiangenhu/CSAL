@@ -41,6 +41,10 @@ var currentPageInfor;
 var currentJSON;
 var longAction=[];
 
+function AgentBusyNow(){
+		var VarTHWin=document.getElementById("agentsLarge");
+		var vid = VarTHWin.contentWindow.agentBusyNow();
+}
 
 function setCurrentLessonInfo(lessonID) {
 
@@ -388,7 +392,7 @@ function setProgressValue(currentMediaUrl) {
 
 function runActions() {
 	
-	if (AgentBusyNow() == true) {
+	if (agentBusyNow() == true) {
 		return;
 	}
 	if (nextButtonStatus == true) {
