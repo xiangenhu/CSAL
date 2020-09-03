@@ -1,4 +1,4 @@
-r		var TotalScoreArr = [];
+		var TotalScoreArr = [];
 		var lesson18score=0;
 		var lesson18CountTotalAnswerTimes=0;
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
