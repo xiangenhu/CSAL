@@ -392,7 +392,7 @@ function setProgressValue(currentMediaUrl) {
 
 function runActions() {
 	
-	if (AgentBusyNow() == true) {
+	if (AgentBusyNow()) {
 		return;
 	}
 	if (nextButtonStatus == true) {
