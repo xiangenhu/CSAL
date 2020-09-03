@@ -14,9 +14,8 @@ var CaptionOn=(qs("CaptionOn","0")==1);
 var agentBusy = false;
 
 function AgentBusyNow(){
-    	return agentBusy;
 		var VarTHWin=document.getElementById("agentsLarge");
-		var vid = VarTHWin.contentWindow.agentBusyNow();
+		return VarTHWin.contentWindow.agentBusyNow();
 }
 
 var lessonRecovery = false;
