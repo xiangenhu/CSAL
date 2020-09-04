@@ -13,6 +13,12 @@ var talkingheadLoaded = false;
 var CaptionOn=(qs("CaptionOn","0")==1);
 var agentBusy = false;
 
+
+
+
+
+
+
 function AgentBusyNow(){
 		if (!agentBusy){
 			return agentBusy

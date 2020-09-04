@@ -41,6 +41,11 @@ var currentPageInfor;
 var currentJSON;
 var longAction=[];
 
+
+var time_in_Day;
+var time_in_hours;
+var time_in_min;
+
 function AgentBusyNow(){
 		var VarTHWin=document.getElementById("agentsLarge");
 		var vid = VarTHWin.contentWindow.agentBusyNow();
@@ -149,6 +154,13 @@ talkingheadOn="true";
 
 
 }
+
+$(document).ready(function() {
+	Learner=sessionStorage.getItem("UID");
+	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start")
+});
+
+
 $(document).ready(function() {
 	loadAgent();
 	showCC(false);
@@ -337,6 +349,7 @@ function LoadLesson(lessonID) {
 	acePostjson.ScriptURL = currentScripturl;
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
+	
 	if (lessonID == "lesson0" || lessonID == "lesson00") {
 		// acePostjson.ID = sessionStorage.getItem("GUID");
 		acePostjson.ID = sessionStorage.getItem("UID");
@@ -345,6 +358,7 @@ function LoadLesson(lessonID) {
 		acePostjson.ID = sessionStorage.getItem("UID");
 
 	}
+	
 	replayVideoTimes = 0;
 	currentJSON=acePostjson;
 	Post(acePostjson);
@@ -523,7 +537,7 @@ function runActions() {
 				break;
 			case "ShowMedia":
 				if (data.includes(".html") == true) {
-
+					CurrentMedia=actions[0];
 					showMedia(data); // Calling the showMedia function to load the HTML page in the main IFRAME
 				} else if (data.includes("mp4") == true) {
 					var datasplit = data.split("/");
@@ -725,6 +739,7 @@ function runActions() {
 
 		}
 		console.log(acePutjson);
+		
 		Put(acePutjson);
 		PutStatus = true;
 		StopTimer();
@@ -1312,3 +1327,165 @@ function startRecover(recoveryActions, lessonID, PresentationHistory) {
 	StartTimer();
 	checkLessonConfig(lessonID, PresentationHistory.progressBarValue);
 }
+
+function getLastResponse(lrsURL,LRSusername,LRSpassword,Averb){
+	var verbID;
+	var datasqlstringObj;
+	var datasqlstring;
+	
+	// for ver starting by actor 
+	verbID=xAPIVerbBase+Averb;
+	datasqlstringObj={$and:[
+	{"object.mbox":LearnerID.mbox},
+	{"actor.mbox":LessonID.mbox},
+	{"verb.id":verbID}]};
+	
+	var secondquery={$and:[{$sort:{"statement.timestamp":1}},{$limit:1}]};
+	
+	
+	datasqlstring="query="+JSON.stringify({$and:[datasqlstringObj,secondquery]});
+	
+	
+	
+	console.log(datasqlstring);
+	$.ajax
+		({
+		  type: "GET",
+		  url: lrsURL+"/statements/search",
+		  dataType: 'json',
+		  headers: {
+			"Authorization": "Basic " + btoa(LRSusername+":"+LRSpassword)
+		  },
+		  data:datasqlstring,
+		  success: function (data){
+			  if (data.length>1){
+				    var statement=data[data.length-1];
+					var extID=xAPIVerbBase+"CSAL/Data";
+					var DataObj=statement.context.extensions[extID];
+					lastACEResponse=DataObj.data.response;
+			}
+		}
+	})
+}
+
+
+
+function getLastActiveRecordNew(lrsURL,LRSusername,LRSpassword,Averb){
+	var verbID;
+	var datasqlstringObj;
+	var datasqlstring;
+	
+	// for ver starting by actor 
+	verbID=xAPIVerbBase+Averb;
+	datasqlstringObj={$and:[
+	{"actor.mbox":LearnerID.mbox},
+	{"object.mbox":LessonID.mbox},
+	{"verb.id":verbID}]};
+	var secondquery=[
+	                  {"$match":{
+						  "$and":[
+							{"actor.mbox":LearnerID.mbox},
+							{"object.mbox":LessonID.mbox},
+							{"verb.id":verbID}
+							]
+						}
+					  },					
+					  {"$sort":{
+						  "statement.timestamp":-1
+						  }},
+						  {"$limit":1
+						  }
+					];
+	
+	datasqlstring="pipeline="+JSON.stringify(secondquery);
+	
+	console.log(datasqlstring);
+	$.ajax
+		({
+		  type: "POST",
+		  url: lrsURL+"/statements/aggregate",
+		  dataType: 'json',
+		  headers: {
+			"Authorization": "Basic " + btoa(LRSusername+":"+LRSpassword)
+		  },
+		  body:secondquery,
+		  success: function (data){
+			  if (data.length>0){
+				  if (Averb!="start"){
+					learnerStatus[Averb]=data[data.length-1].timestamp; 
+					if (Averb=="action"){
+					   var statement=data[data.length-1];
+					   var extID=xAPIVerbBase+"CSAL/Data";
+					   var DataObj=statement.context.extensions[extID];
+					   console.log(JSON.stringify(DataObj.data.input));
+					   lastACEjson=DataObj.data.input;
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"completed"); 
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"failed");
+					   }
+				  }else{
+					   learnerStatus[Averb]=data[0].timestamp;
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"action");
+					   getLastResponse(lrsURL,LRSusername,LRSpassword,"response")
+				  }
+		   }else{
+			   learnerStatus[Averb]="NA";
+			   console.log("Status:"+JSON.stringify(learnerStatus));
+		   }
+		}});
+}
+
+
+
+function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
+	var verbID;
+	var datasqlstringObj;
+	var datasqlstring;
+	
+	// for ver starting by actor 
+	verbID=xAPIVerbBase+Averb;
+	datasqlstringObj={$and:[
+	{"actor.mbox":LearnerID.mbox},
+	{"object.mbox":LessonID.mbox},
+	{"verb.id":verbID}]};
+	var secondquery={$and:[{$sort:{"statement.timestamp":1}},{$limit:1}]};
+	
+	datasqlstring="query="+JSON.stringify({$and:[datasqlstringObj,secondquery]});
+	datasqlstring="query="+JSON.stringify(datasqlstringObj)+"&limit=1";
+	
+	console.log(datasqlstring);
+	$.ajax
+		({
+		  type: "GET",
+		  url: lrsURL+"/statements/search",
+		  dataType: 'json',
+		  headers: {
+			"Authorization": "Basic " + btoa(LRSusername+":"+LRSpassword)
+		  },
+		  data:datasqlstring,
+		  success: function (data){
+			  if (data.length>0){
+				  if (Averb!="start"){
+					learnerStatus[Averb]=data[data.length-1].timestamp; 
+					if (Averb=="action"){
+					   var statement=data[data.length-1];
+					   var extID=xAPIVerbBase+"CSAL/Data";
+					   var DataObj=statement.context.extensions[extID];
+					   console.log(JSON.stringify(DataObj.data.input));
+					   lastACEjson=DataObj.data.input;
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"completed"); 
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"failed");
+					   }
+				  }else{
+					   learnerStatus[Averb]=data[0].timestamp;
+					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"action");
+					   getLastResponse(lrsURL,LRSusername,LRSpassword,"response")
+				  }
+		   }else{
+			   learnerStatus[Averb]="NA";
+			   console.log("Status:"+JSON.stringify(learnerStatus));
+		   }
+		}});
+}
+
+
+
