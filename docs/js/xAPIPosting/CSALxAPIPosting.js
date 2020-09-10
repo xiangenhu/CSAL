@@ -53,18 +53,9 @@ function UpdateTotalScore(){
 	
 }
 function CompileScroe(PresentationHistory){
-	var QuestLevel="";
-	QuestLevel=PresentationHistory.questionLevel;
-	if (QuestLevel.trim()==""){
-		if (PresentationHistory.userAnswer=="Correct"){
-			accumlateScore.TA.success= accumlateScore.TA.success+1;
-			totalScore.TA.success=totalScore.TA.success+1;
-		} else {
-			accumlateScore.TA.failure= accumlateScore.TA.failure+1;
-			totalScore.TA.failure=totalScore.TA.failure+1;
-		}
-	}else{
-		var scoreLabel=QuestLevel.trim();
+	
+	var QuestLevel=PresentationHistory.questionLevel;
+	var scoreLabel=QuestLevel.trim();
 		if (QuestLevel.indexOf("L1")==0) {
 			scoreLabel="Easy";
 		}
@@ -74,22 +65,30 @@ function CompileScroe(PresentationHistory){
 		if (QuestLevel.indexOf("L3")==0) {
 			scoreLabel="Hard";
 		}
-		var userAnswer=PresentationHistory.userAnswer;
-		if (PresentationHistory.newUserPerfomaceLog.length>0){
-			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
-		}
-		
-		
-			if (userAnswer=="Correct"){
-				accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
-				totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
-			} else {
-				accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
-				totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
-			}
-			
-		return userAnswer;
+	
+	var userAnswer=PresentationHistory.userAnswer;
+	if (PresentationHistory.newUserPerfomaceLog.length>0){
+		userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 	}
+	
+	if (scoreLabel==""){
+		if (userAnswer=="Correct"){
+			accumlateScore.TA.success= accumlateScore.TA.success+1;
+			totalScore.TA.success=totalScore.TA.success+1;
+		} else {
+			accumlateScore.TA.failure= accumlateScore.TA.failure+1;
+			totalScore.TA.failure=totalScore.TA.failure+1;
+		}
+	}else{
+		if (userAnswer=="Correct"){
+			accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
+			totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
+		} else {
+			accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
+			totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
+		}	
+	}
+	return userAnswer;
 }	
 				
 var LessonID={mbox:"mailto:"+SKOGuid+"@csal.memphis.edu",
