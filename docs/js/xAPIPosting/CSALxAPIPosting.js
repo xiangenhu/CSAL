@@ -78,6 +78,8 @@ function CompileScroe(PresentationHistory){
 		if (PresentationHistory.newUserPerfomaceLog.length>0){
 			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 		}
+		
+		
 			if (userAnswer=="Correct"){
 				accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
 				totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
@@ -85,6 +87,8 @@ function CompileScroe(PresentationHistory){
 				accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
 				totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
 			}
+			
+		return userAnswer;
 	}
 }	
 				
@@ -133,14 +137,17 @@ function ComposewithContextActivities(AnActor,
 	}
 	var exturl=ITProfile+"CSAL/Data";
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
-	var resultsSuccess=(PresentationHistory.userAnswer=="Correct");
+	
+	var Answer=CompileScroe(PresentationHistory);
+	
+	var resultsSuccess=(Answer=="Correct");
 	
 	var resultExt={};
 	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory;
 	if (last_action==PresentationHistory.userSelectedItem){
 		return null;
 	}
-	CompileScroe(PresentationHistory);
+	
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore}
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
 	var contextObj={"contextActivities":contextActivities,"extensions":Extdata.extensions};
