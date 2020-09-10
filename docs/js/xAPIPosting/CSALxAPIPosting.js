@@ -53,9 +53,13 @@ function UpdateTotalScore(){
 	
 }
 function CompileScroe(PresentationHistory){
-	
+	if (PresentationHistory.userAnswer==null){
+		return ""
+	}
 	var QuestLevel="";
-	QuestLevel=PresentationHistory.questionLevel;
+	if (PresentationHistory.questionLevel!=null){
+		QuestLevel=PresentationHistory.questionLevel;
+	}
 	var scoreLabel=QuestLevel.trim();
 		if (QuestLevel.indexOf("L1")==0) {
 			scoreLabel="Easy";
@@ -68,7 +72,9 @@ function CompileScroe(PresentationHistory){
 		}
 	
 	var userAnswer="";
-	userAnswer=PresentationHistory.userAnswer;
+	if (PresentationHistory.userAnswer!=null){
+		userAnswer=PresentationHistory.userAnswer;
+	}
 	if (PresentationHistory.newUserPerfomaceLog.length>0){
 		userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 	}
@@ -92,6 +98,7 @@ function CompileScroe(PresentationHistory){
 	}
 	return userAnswer;
 }	
+	
 				
 var LessonID={mbox:"mailto:"+SKOGuid+"@csal.memphis.edu",
 				 name:SKOTitle,
