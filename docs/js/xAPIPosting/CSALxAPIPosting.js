@@ -141,7 +141,7 @@ function ComposewithContextActivities(AnActor,
 	
 	
 	if (PresentationHistory==null) {
-		return
+		return null;
 	}
 	
 	var Answer=CompileScroe(PresentationHistory);
