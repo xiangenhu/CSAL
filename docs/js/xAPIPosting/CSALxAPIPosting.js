@@ -148,6 +148,9 @@ function ComposewithContextActivities(AnActor,
 	var exturl=ITProfile+"CSAL/Data";
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
 	
+	if (last_action==PresentationHistory.userSelectedItem){
+		return null;
+	}
 	
 	if (PresentationHistory==null) {
 		return null;
@@ -159,9 +162,6 @@ function ComposewithContextActivities(AnActor,
 	
 	var resultExt={};
 	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory;
-	if (last_action==PresentationHistory.userSelectedItem){
-		return null;
-	}
 	
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore}
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
@@ -283,26 +283,6 @@ function AceResponse(Data,averb){
 	var data=Data;
 	var ResultObj={};
 		
-	 /* "result": {
-        "score": {
-            "scaled": 0.95,
-            "raw": 95,
-            "min": 0,
-            "max": 100
-        },
-        "success": true,
-        "completion": true,
-        "response": "this is the response",
-        "duration": "PT5H4M",
-        "extensions": {
-            "http://ext.com/key": "value"
-        }
-    }, */
-	/* var Extdata={
-			extensions: {
-				"https://app.skoonline.org/ITSProfile/CSAL/Data": data
-			}
-	} */
 	var Extdata={};
 	var extObj={};
 	var theStr=ITProfile+"CSAL/Data";
