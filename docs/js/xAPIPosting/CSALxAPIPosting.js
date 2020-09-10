@@ -160,8 +160,14 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 			success: function (data){
 				  if (data.statements.length>0){
 				  var statementGot=data.statements[0];
-				  var TheResult=statementGot.result.extensions["https://app.skoonline.org/ITSProfile/CSAL/Result"];
-				  if (TheResult.Score.total!=null){
+				  if (statementGot.result==null){
+					  return;
+				  }
+				  if (statementGot.result.extensions==null){
+					  return;
+				  }
+					var TheResult=statementGot.result.extensions["https://app.skoonline.org/ITSProfile/CSAL/Result"];
+					if (TheResult.Score.total!=null){
 //					console.log(JSON.stringify(TheResult.Score.total));
 					totalScore=TheResult.Score.total;
 				  }
