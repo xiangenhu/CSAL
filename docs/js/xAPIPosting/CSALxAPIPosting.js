@@ -75,8 +75,10 @@ function CompileScroe(PresentationHistory){
 	if (PresentationHistory.userAnswer!=null){
 		userAnswer=PresentationHistory.userAnswer;
 	}
-	if (PresentationHistory.newUserPerfomaceLog.length>0){
-		userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
+	if (PresentationHistory.newUserPerfomaceLog!=null){
+		if (PresentationHistory.newUserPerfomaceLog.length>0){
+			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
+		}
 	}
 	
 	if (scoreLabel==""){
