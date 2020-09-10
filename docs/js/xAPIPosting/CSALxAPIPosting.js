@@ -74,13 +74,17 @@ function CompileScroe(PresentationHistory){
 		if (QuestLevel.indexOf("L3")==0) {
 			scoreLabel="Hard";
 		}
-		if (PresentationHistory.userAnswer=="Correct"){
-			accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
-			totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
-		} else {
-			accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
-			totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
+		var userAnswer=PresentationHistory.userAnswer;
+		if (PresentationHistory.newUserPerfomaceLog.length>0){
+			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 		}
+			if (userAnswer=="Correct"){
+				accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
+				totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
+			} else {
+				accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
+				totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
+			}
 	}
 }	
 				
