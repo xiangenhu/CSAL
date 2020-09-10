@@ -1470,11 +1470,13 @@ function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
 					if (Averb=="action"){
 					   var statement=data[data.length-1];
 					   var extID=xAPIVerbBase+"CSAL/Data";
-					   var DataObj=statement.context.extensions[extID];
-					   console.log(JSON.stringify(DataObj.data.input));
-					   lastACEjson=DataObj.data.input;
-					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"completed"); 
-					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"failed");
+					   if (statement.context!=null){
+						   var DataObj=statement.context.extensions[extID];
+						   console.log(JSON.stringify(DataObj.data.input));
+						   lastACEjson=DataObj.data.input;
+						   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"completed"); 
+						   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"failed");
+						}
 					   }
 				  }else{
 					   learnerStatus[Averb]=data[0].timestamp;
