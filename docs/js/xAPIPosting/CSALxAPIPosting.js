@@ -65,13 +65,13 @@ function CompileScroe(PresentationHistory){
 		}
 	}else{
 		var scoreLabel=QuestLevel.trim();
-		QuestLevel.indexOf("L1")==0{
+		if (QuestLevel.indexOf("L1")==0) {
 			scoreLabel="Easy";
 		}
-		QuestLevel.indexOf("L2")==0{
+		if(QuestLevel.indexOf("L2")==0) {
 			scoreLabel="Medium";
 		}
-		QuestLevel.indexOf("L3")==0{
+		if (QuestLevel.indexOf("L3")==0) {
 			scoreLabel="Hard";
 		}
 		if (PresentationHistory.userAnswer=="Correct"){
