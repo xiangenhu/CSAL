@@ -157,7 +157,8 @@ talkingheadOn="true";
 
 $(document).ready(function() {
 	Learner=sessionStorage.getItem("UID");
-	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start")
+	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
+	GetSCORE(LRSURL,LRSLogin,LRSPassword);
 });
 
 

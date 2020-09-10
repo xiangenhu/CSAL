@@ -4,7 +4,6 @@ var actions;
 var PutStatus=false;
 var LastData;
 var latency={};
-
 function insertMdeda(media,list){
 	if (qs("startReturn","0")=="0") return;
 	if (list==null) return;
@@ -73,8 +72,10 @@ function Put(acePutjson) {
 			latency.duration=latency.finish-latency.start;
 			
 			insertMdeda(CurrentMedia,data.ACEActions);
-			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
+			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
+			
 			xAPIPostOther(Data,"action");
+			
 			LastData=data;
         },
         error: function(xhr, textStatus, errorThrown) {
