@@ -54,7 +54,8 @@ function UpdateTotalScore(){
 }
 function CompileScroe(PresentationHistory){
 	
-	var QuestLevel=PresentationHistory.questionLevel;
+	var QuestLevel="";
+	QuestLevel=PresentationHistory.questionLevel;
 	var scoreLabel=QuestLevel.trim();
 		if (QuestLevel.indexOf("L1")==0) {
 			scoreLabel="Easy";
@@ -66,7 +67,8 @@ function CompileScroe(PresentationHistory){
 			scoreLabel="Hard";
 		}
 	
-	var userAnswer=PresentationHistory.userAnswer;
+	var userAnswer="";
+	userAnswer=PresentationHistory.userAnswer;
 	if (PresentationHistory.newUserPerfomaceLog.length>0){
 		userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 	}
@@ -136,6 +138,11 @@ function ComposewithContextActivities(AnActor,
 	}
 	var exturl=ITProfile+"CSAL/Data";
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
+	
+	
+	if (PresentationHistory==null) {
+		return
+	}
 	
 	var Answer=CompileScroe(PresentationHistory);
 	
