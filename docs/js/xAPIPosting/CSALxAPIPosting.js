@@ -64,12 +64,22 @@ function CompileScroe(PresentationHistory){
 			totalScore.TA.failure=totalScore.TA.failure+1;
 		}
 	}else{
+		var scoreLabel=QuestLevel.trim();
+		QuestLevel.indexOf("L1")==0{
+			scoreLabel="Easy";
+		}
+		QuestLevel.indexOf("L2")==0{
+			scoreLabel="Medium";
+		}
+		QuestLevel.indexOf("L3")==0{
+			scoreLabel="Hard";
+		}
 		if (PresentationHistory.userAnswer=="Correct"){
-			accumlateScore[QuestLevel.trim()].success= accumlateScore[QuestLevel.trim()].success+1;
-			totalScore[QuestLevel.trim()].success= totalScore[QuestLevel.trim()].success+1;
+			accumlateScore[scoreLabel].success= accumlateScore[scoreLabel].success+1;
+			totalScore[scoreLabel].success= totalScore[scoreLabel].success+1;
 		} else {
-			accumlateScore[QuestLevel.trim()].failure=accumlateScore[QuestLevel.trim()].failure+1;
-			totalScore[QuestLevel.trim()].failure=totalScore[QuestLevel.trim()].failure+1;
+			accumlateScore[scoreLabel].failure=accumlateScore[scoreLabel].failure+1;
+			totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
 		}
 	}
 }	
