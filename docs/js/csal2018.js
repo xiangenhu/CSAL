@@ -159,8 +159,14 @@ $(document).ready(function() {
 	Learner=sessionStorage.getItem("UID");
 	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
 	GetSCORE(LRSURL,LRSLogin,LRSPassword);
-	$( "#runningstatus" ).mouseover(function() {
-	  $("runningstatus").html("here");
+	
+	$("#runningstatus" ).mousedown(function() {
+	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
+	  $("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
+	});
+	
+	$("#runningstatus" ).mouseup(function() {
+	  $("#runningstatus").html("<center>Click to see your internet connection status.</center>");
 	});
 });
 
