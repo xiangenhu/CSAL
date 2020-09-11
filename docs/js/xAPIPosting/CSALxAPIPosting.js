@@ -33,7 +33,7 @@ var user=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")))
 var fullname=decodeURIComponent(qs("fullname",qs("SName","John Doe")));
 var SKOGuid=qs("guid",SKOTitle);
 
-var allowedTextLevels=["Hard","Medium","Easy","Final"];
+var allowedTextLevels=["Hard","Medium","Easy","Final",""];
 
 var LearnerID={mbox:"mailto:"+user,
 				 name:fullname,
