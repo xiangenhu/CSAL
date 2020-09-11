@@ -223,8 +223,8 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 					if (TheResult.Score.total!=null){
 //					console.log(JSON.stringify(TheResult.Score.total));
 					totalScore=TheResult.Score.total;
-					if (totalScore.Final==null){
-						totalScore.Final=0;
+					if (totalScore.Final.success==null){
+						totalScore.Final={"success":0,"failure":0}
 					}
 				  }
 				}
