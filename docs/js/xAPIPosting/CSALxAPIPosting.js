@@ -70,6 +70,15 @@ function CompileScroe(PresentationHistory){
 		if (QuestLevel.indexOf("L3")==0) {
 			scoreLabel="Hard";
 		}
+		if (QuestLevel.indexOf("TPM0")==0) {
+			scoreLabel="Easy";
+		}
+		if (QuestLevel.indexOf("TPM1")==0) {
+			scoreLabel="Medium";
+		}
+		if (QuestLevel.indexOf("TPM2")==0) {
+			scoreLabel="Hard";
+		}
 	
 	var userAnswer="";
 	if (PresentationHistory.userAnswer!=null){
