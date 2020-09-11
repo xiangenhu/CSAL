@@ -1,11 +1,19 @@
+
+#runningstatus{
+	bottom:0px;
+	width:100%;
+	left:0px;
+	height:30px
+}
+
 @CHARSET "ISO-8859-1"; body {
     background-color: #fefefe;
     overflow: auto;
 }
 
 #containerNoImg {
-    width: 840px;
-    height: 690px;
+    width: 1024px;
+    height: 740px;
     background-color: white;
     margin: 0 auto;
     margin-top: -55px;
@@ -14,8 +22,8 @@
     background-color: white;
 }
 #container {
-    width: 840px;
-    height: 690px;
+    width: 1024px;
+    height: 740px;
     background-color: white;
     margin: 0 auto;
     margin-top: -55px;
@@ -30,14 +38,14 @@ div#controlButton{
 	cursor: pointer;
 }
 #agents {
-    width: 600px;
+    width: 630px;
     height: 100px;
     margin: 43px 190px;
     border-bottom-style: none;
     border: 0px;
 }
 #agentsLarge {
-    width: 600px;
+    width: 630px;
     height: 600px;
     margin: 43px 190px;
     border-bottom-style: none;
@@ -487,4 +495,5 @@ left: 11%;
 		color: #f8ffca;
 		border: 1px solid #f8ffca;
 	}
+
 
