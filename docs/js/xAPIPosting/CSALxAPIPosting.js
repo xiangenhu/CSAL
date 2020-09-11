@@ -32,7 +32,7 @@ var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
 var user=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
 var fullname=decodeURIComponent(qs("fullname",qs("SName","John Doe")));
 var SKOGuid=qs("guid",SKOTitle);
-
+var allowedTextLevels=["Hard","Medium","Easy","Final"];
 var LearnerID={mbox:"mailto:"+user,
 				 name:fullname,
 				 objectType:"Agent"
@@ -89,8 +89,8 @@ function CompileScroe(PresentationHistory){
 			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 		}
 	}
-	
-	if ((scoreLabel!="")||(scoreLabel!="Hard")||(scoreLabel!="Medium")||(scoreLabel!="Easy")){
+	var inLabel=allowedTextLevels.includes(scoreLabel);
+	if (inLabel==false){
 		alert("Please take a picture of the screen and send to Dr. Hu. Error message "+scoreLabel);
 		scoreLabel="";
 	}
