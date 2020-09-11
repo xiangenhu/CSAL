@@ -1481,7 +1481,7 @@ function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
 				  }else{
 					   learnerStatus[Averb]=data[0].timestamp;
 					   getLastActiveRecord(lrsURL,LRSusername,LRSpassword,"action");
-					   getLastResponse(lrsURL,LRSusername,LRSpassword,"response")
+//					   getLastResponse(lrsURL,LRSusername,LRSpassword,"response")
 				  }
 		   }else{
 			   learnerStatus[Averb]="NA";

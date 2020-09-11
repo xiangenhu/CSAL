@@ -13,9 +13,9 @@
 var last_action="";
 
 var started=false;
-var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0}};
+var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
 
-var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0}};
+var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
 
 var ITProfile=qs("ITProfile","https://app.skoonline.org/ITSProfile/");
 var LRSURL=qs("lrs","https://record.x-in-y.com/csalexclusive/xapi/");
@@ -89,6 +89,12 @@ function CompileScroe(PresentationHistory){
 			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 		}
 	}
+	
+	if ((scoreLabel!="")||(scoreLabel!="Hard")||(scoreLabel!="Medium")||(scoreLabel!="Easy")){
+		alert("Please take a picture of the screen and send to Dr. Hu. Error message "+scoreLabel);
+		scoreLabel="";
+	}
+	
 	
 	if (scoreLabel==""){
 		if (userAnswer=="Correct"){
