@@ -166,6 +166,10 @@ function ComposewithContextActivities(AnActor,
 	var exturl=ITProfile+"CSAL/Data";
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
 	
+	if (PresentationHistory.userSelectedItem==""){
+		return null;
+	}
+	
 	if ((last_action==PresentationHistory.userSelectedItem)&&(last_questionID==PresentationHistory.questionID)){
 		return null;
 	}
