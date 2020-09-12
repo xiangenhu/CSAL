@@ -87,11 +87,11 @@ function CompileScroe(PresentationHistory){
 	if (PresentationHistory.userAnswer!=null){
 		userAnswer=PresentationHistory.userAnswer;
 	}
-	if (PresentationHistory.newUserPerfomaceLog!=null){
+	/* if (PresentationHistory.newUserPerfomaceLog!=null){
 		if (PresentationHistory.newUserPerfomaceLog.length>0){
 			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
 		}
-	}
+	} */
 	var inLabel=allowedTextLevels.includes(scoreLabel);
 	if (inLabel==false){
 		alert("Please take a picture of the screen and send to Dr. Hu. Error message "+scoreLabel);
