@@ -11,6 +11,7 @@
 		return defaultstr;
 }
 var last_action="";
+var last_questionID=""
 
 var started=false;
 var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
@@ -165,7 +166,7 @@ function ComposewithContextActivities(AnActor,
 	var exturl=ITProfile+"CSAL/Data";
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
 	
-	if (last_action==PresentationHistory.userSelectedItem){
+	if ((last_action==PresentationHistory.userSelectedItem)&&(last_questionID==PresentationHistory.questionID)){
 		return null;
 	}
 	
@@ -192,6 +193,7 @@ function ComposewithContextActivities(AnActor,
 		context:contextObj
 		};
 		last_action=PresentationHistory.userSelectedItem;
+		last_questionID=PresentationHistory.questionID;
 	return parts;
 	}
 
