@@ -461,14 +461,14 @@ function xAPIPostEnding(ActorMbox,
         },
         "success": Result 
 	}
-	/* var Extdata={
-		extensions: {
-			"https://app.skoonline.org/ITSProfile/CSAL/Data": data
-		}
-	}	 */
+	
 	
 	var Extdata={};
-	Extdata.extensions[ITProfile+"CSAL/Data"]=data;
+	var extObj={};
+	var theStr=ITProfile+"CSAL/Data";
+	extObj[theStr]=data;
+	Extdata.extensions=extObj;
+	
 	var statements=Compose(AnActor,
 							verbObj,
 							ResultObj,
