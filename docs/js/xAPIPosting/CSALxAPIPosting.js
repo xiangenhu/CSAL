@@ -201,6 +201,77 @@ function ComposewithContextActivities(AnActor,
 	return parts;
 	}
 
+function GetReport(lrsURL,LRSusername,LRSpassword){
+	var queryObj={$and:[
+	{"actor.mbox":LearnerID.mbox},
+	{"verb.id":xAPIVerbBase+"action"},{$or:[{"result.success":true},{"result.success":false}]}
+	]};
+	var datasqlstring="actor="+JSON.stringify(queryObj)+"&limit=1&sort=1";
+	var queryStrForSearch="actor="+JSON.stringify({"mbox":LearnerID.mbox})+"&verb="+xAPIVerbBase+"action&limit=1";
+	$.ajax ({
+			  type: "GET",
+			  url: lrsURL+"statements",
+			  dataType: 'json',
+			  headers: {
+				"Authorization": "Basic " + btoa(LRSusername+":"+LRSpassword)
+			  },
+			data:queryStrForSearch,
+			success: function (data){
+				  if (data.statements.length>0){
+				  var statementGot=data.statements[0];
+				  if (statementGot.result==null){
+					  return;
+				  }
+				  if (statementGot.result.extensions==null){
+					  return;
+				  }
+				  
+				  var htmlstr="<table align='center' width='100%' height='80%'><tr>";
+				    htmlstr=htmlstr+"<td colspan='4'><H2>Your Scores</H2></td></tr>";
+				  
+				  htmlstr=htmlstr+"<tr><td><b>Text Level</b></td><td>Hard</td><td>Medium</td><td>Easy</td></tr>";
+				    htmlstr=htmlstr+"<td colspan='4'><hr/></td></tr>";
+				  
+				  var TheResult=statementGot.result.extensions["https://app.skoonline.org/ITSProfile/CSAL/Result"];
+				  				 
+				  var The_CurrentScore=accumlateScore;
+				  htmlstr=htmlstr+"<tr><td><b>This lesson</b></td>";
+				  
+				  var hardTotal=The_CurrentScore.Hard.success+The_CurrentScore.Hard.failure;				  
+				  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
+				  
+				  var medianTotal=The_CurrentScore.Medium.success+The_CurrentScore.Medium.failure;
+				  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
+				  
+				  
+				  var easyTotal=The_CurrentScore.Easy.success+The_CurrentScore.Easy.failure;
+				   htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
+				  
+				    htmlstr=htmlstr+"<tr><td colspan='4'> </td></tr>";
+				    htmlstr=htmlstr+"<tr><td colspan='4'> </td></tr>";
+				  if (TheResult.Score.total!=null){
+				     var The_CurrentScore=TheResult.Score.total;
+					  htmlstr=htmlstr+"<tr><td><b>All Lessons</b></td>";
+					  
+					  var hardTotal=The_CurrentScore.Hard.success+The_CurrentScore.Hard.failure;				  
+					  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
+					  
+					  var medianTotal=The_CurrentScore.Medium.success+The_CurrentScore.Medium.failure;
+					  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
+					  
+					  
+					  var easyTotal=The_CurrentScore.Easy.success+The_CurrentScore.Easy.failure;
+					   htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
+				  }
+				  htmlstr=htmlstr+"</tr></table>"
+				  $("#ScorePanel").html(htmlstr);
+				}
+				
+				
+			}
+	});
+}
+
 function GetSCORE(lrsURL,LRSusername,LRSpassword){
 	var queryObj={$and:[
 	{"actor.mbox":LearnerID.mbox},

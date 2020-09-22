@@ -73,8 +73,11 @@ function Put(acePutjson) {
 			
 			insertMdeda(CurrentMedia,data.ACEActions);
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
-			
+			if (nextbtnClicked){
+				nextbtnClicked=false;
+			}else{
 			xAPIPostOther(Data,"action");
+			}
 			
 			LastData=data;
         },

@@ -40,6 +40,7 @@ var SpeakRepeatList = [];
 var currentPageInfor;
 var currentJSON;
 var longAction=[];
+var nextbtnClicked=false;
 
 
 var time_in_Day;
@@ -216,14 +217,25 @@ $(document).ready(function() {
 		if  (buttonFaceValue=="Pause"){ 
 			$("#PauseBtn").html("Continue");
 			$("#FeedBackBtn").show();
+			$("#ScoreBtn").show();
 			StopTimer();
 		}else{
 			$("#FeedBackBtn").hide();
+			$("#ScoreBtn").hide();
 			StartTimer();
 		}
 		
 	});
 	
+	
+	$("#ScoreBtn").click(function() {
+		$("#ScorePanel").slideToggle("slow",function(){
+			if ($("#ScorePanel").is(":visible")){
+			GetReport(LRSURL,LRSLogin,LRSPassword);
+			}
+		})
+		
+	});
 	
 	$("#FeedBackBtn").click(function() {
 		var URL="https://docs.google.com/forms/d/e/1FAIpQLSernYryLw1pTzWprJ3qn8Nxxl3RhtP2W6Sv2rpCRIvEv8TpXw/viewform?usp=pp_url&entry.183686984=";
@@ -250,7 +262,11 @@ $(document).ready(function() {
 	
 	
 	$("#btNext").click(function() {
-	SpeakRepeatList=[];
+		//added by xhu
+		userSelectedItem="";
+		//added by xhu
+		SpeakRepeatList=[];
+		nextbtnClicked=true;
 		nextButtonStatus = false;
 		HideRepeatButton();
 		HidePlayVideoButton()
@@ -311,7 +327,7 @@ var x2 = $(window).width();
 		$("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
 	}
 	document.getElementById('mainscreen').style.display="block";
-	document.getElementById('containerNoImg').style.backgroundImage = "url(../images/TabletFrame2.png)";
+	document.getElementById('containerNoImg').style.backgroundImage = "url(images/TabletFrame2.png)";
 	document.getElementById('containerNoImg').style.backgroundPosition="center bottom";
 	document.getElementById('containerNoImg').style.backgroundRepeat = "no-repeat";
 	document.getElementById('agentsLarge').style.height = "97px";

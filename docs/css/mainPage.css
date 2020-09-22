@@ -31,7 +31,7 @@
     margin-top: -55px;
     border: medium white solid;
     border-radius: 5px;
-    background: url(../images/TabletFrame2.png) no-repeat center bottom;
+    background: url(images/TabletFrame2.png) no-repeat center bottom;
     background-color: white;
 }
 div#controlButton{
@@ -64,11 +64,19 @@ div#controlButton{
 	}
 
 #displayScoreBoard {
-left: 11%;
+    left: 11%;
     top: 284px;
     position: relative;
 
 }
+
+#displayScoreBoard1{
+    left: 11%;
+    top: 284px;
+    position: relative;
+
+}
+
 
 #mainFrame {
     width: 799px;
@@ -448,31 +456,73 @@ left: 11%;
 		color: #f8ffca;
 		border: 1px solid #f8ffca;
 	}
-	
-	
-	#PauseBtn{
-		font-family: Lato, Verdana, 'Times New Roman';
-		font-size: 20px;
-		background-color: #333;
-		color: white;
-		width: 100px;
-		height: 30px;
-		line-height: 30px;
-		text-align: center;
-		margin-top: 695px;
-		margin-left: 460px;
-		position:absolute;	
-		border-radius: 7px;
-		border: 1px solid white;
-		cursor: pointer;
-        z-index: 40;
-		display:none;
-	}
 
-	#PauseBtn:hover {
-		color: #f8ffca;
-		border: 1px solid #f8ffca;
-	}
+#ScorePanel{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	width: 800px;
+	height: 340px;
+	opacity:0.95;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 340px;
+	margin-left:110px;
+	position:absolute;	
+	border-radius: 7px;
+	border: 1px solid white;
+	z-index: 40;
+	display:none;
+}
+
+#ScoreBtn{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 695px;
+	margin-left: 350px;
+	position:absolute;	
+	border-radius: 7px;
+	border: 1px solid white;
+	cursor: pointer;
+	z-index: 40;
+	display:none;
+}	
+
+#ScoreBtn:hover {
+	color: #f8ffca;
+	border: 1px solid #f8ffca;
+}
+	
+#PauseBtn{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 695px;
+	margin-left: 460px;
+	position:absolute;	
+	border-radius: 7px;
+	border: 1px solid white;
+	cursor: pointer;
+	z-index: 40;
+	display:none;
+}
+
+#PauseBtn:hover {
+	color: #f8ffca;
+	border: 1px solid #f8ffca;
+}
 	
 	#FeedBackBtn{
 		font-family: Lato, Verdana, 'Times New Roman';
