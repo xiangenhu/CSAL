@@ -232,6 +232,9 @@ $(document).ready(function() {
 		$("#ScorePanel").slideToggle("slow",function(){
 			if ($("#ScorePanel").is(":visible")){
 			GetReport(LRSURL,LRSLogin,LRSPassword);
+			$("#PauseBtn").hide();
+			}else{
+				$("#PauseBtn").show();
 			}
 		})
 		
