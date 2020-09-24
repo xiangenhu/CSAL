@@ -55,6 +55,7 @@ function UpdateTotalScore(){
 	
 	
 }
+
 function CompileScroe(PresentationHistory){
 	if (PresentationHistory.userAnswer==null){
 		return ""
@@ -201,6 +202,85 @@ function ComposewithContextActivities(AnActor,
 	return parts;
 	}
 
+function calculateAllScores(response){
+	var i;
+	var AllHard="";
+	var AllMedium="";
+	var AllEasy="";
+	var Sumall;
+    var ThetotalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
+	for (i=0;i<response.length-1;i++){
+		if (response[i].lastScore!=null){
+			
+			ThetotalScore.Hard.success=ThetotalScore.Hard.success+response[i].lastScore.Hard.success;
+			ThetotalScore.Hard.failure=ThetotalScore.Hard.failure+response[i].lastScore.Hard.failure;
+			
+			ThetotalScore.Medium.success=ThetotalScore.Medium.success+response[i].lastScore.Medium.success;
+			ThetotalScore.Medium.failure=ThetotalScore.Medium.failure+response[i].lastScore.Medium.failure;
+			
+			
+			ThetotalScore.Easy.success=ThetotalScore.Easy.success+response[i].lastScore.Easy.success;
+			ThetotalScore.Easy.failure=ThetotalScore.Easy.failure+response[i].lastScore.Easy.failure;
+			
+		}
+	}
+	Sumall=ThetotalScore.Hard.success+ThetotalScore.Hard.failure;
+	AllHard= ThetotalScore.Hard.success.toString()+" of "+Sumall.toString();
+	$("#AllHard").html(AllHard);
+	
+	Sumall=ThetotalScore.Medium.success+ThetotalScore.Medium.failure;
+	AllMedium= ThetotalScore.Medium.success.toString()+" of "+Sumall.toString();
+	$("#AllMedium").html(AllMedium);
+	
+	
+	Sumall=ThetotalScore.Easy.success+ThetotalScore.Easy.failure;
+	AllEasy= ThetotalScore.Easy.success.toString()+" of "+Sumall.toString();
+	$("#AllEasy").html(AllEasy);
+}
+
+
+function GetAllScores(lrsURL,LRSusername,LRSpassword){
+	var queryBody=[
+			{"$match": {
+				"$and":[
+							{"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}
+						]
+						}
+				},					
+				{"$sort":{"statement.timestamp":-1
+						}
+					},            
+				{"$project":{
+					 "agent":"$statement.actor.mbox",
+					 "Ext":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"
+				}},
+				{"$project":{
+					"agent":"$agent",
+					 "Score":"$Ext.Score.total"
+				}},
+			   {"$group":{
+				   "_id":"$agent",
+				   "lastScore":{"$first":"$Score"}
+			   }}    
+
+		]
+			var settings = {
+		   "url": lrsURL+"statements/aggregate",
+		   "method": "POST",
+		   "timeout": 0,
+		   "headers": {
+			"Authorization": "Basic "+ btoa(LRSusername+":"+LRSpassword),
+			"Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify(queryBody),
+		};
+		
+	$.ajax(settings).done(function (response){ 
+	calculateAllScores(response);
+	})	
+}
+
+
 function GetReport(lrsURL,LRSusername,LRSpassword){
 	var queryObj={$and:[
 	{"actor.mbox":LearnerID.mbox},
@@ -229,42 +309,47 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 				  var htmlstr="<table align='center' width='100%' height='80%'><tr>";
 				    htmlstr=htmlstr+"<td colspan='4'><H2>Your Scores</H2></td></tr>";
 				  
-				  htmlstr=htmlstr+"<tr><td><b>Text Level</b></td><td>Hard</td><td>Medium</td><td>Easy</td></tr>";
+				  htmlstr=htmlstr+"<tr><td><b>Question Difficulty Level</b></td><td>Hard<br/>(correct)</td><td>Medium<br/>(correct)</td><td>Easy<br/>(correct)</td></tr>";
 				    htmlstr=htmlstr+"<td colspan='4'><hr/></td></tr>";
 				  
 				  var TheResult=statementGot.result.extensions["https://app.skoonline.org/ITSProfile/CSAL/Result"];
 				  				 
 				  var The_CurrentScore=accumlateScore;
-				  htmlstr=htmlstr+"<tr><td><b>This lesson</b></td>";
+				  htmlstr=htmlstr+"<tr><td><b>Your score in this lesson</b></td>";
 				  
 				  var hardTotal=The_CurrentScore.Hard.success+The_CurrentScore.Hard.failure;				  
-				  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
+				  htmlstr=htmlstr+"<td>"+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
 				  
 				  var medianTotal=The_CurrentScore.Medium.success+The_CurrentScore.Medium.failure;
-				  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
+				  htmlstr=htmlstr+"<td>"+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
 				  
 				  
 				  var easyTotal=The_CurrentScore.Easy.success+The_CurrentScore.Easy.failure;
-				   htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
+				   htmlstr=htmlstr+"<td>"+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
 				  
-				    htmlstr=htmlstr+"<tr><td colspan='4'> </td></tr>";
+				    htmlstr=htmlstr+"<tr/><tr><td colspan='4'> </td></tr>";
 				    htmlstr=htmlstr+"<tr><td colspan='4'> </td></tr>";
 				  if (TheResult.Score.total!=null){
 				     var The_CurrentScore=TheResult.Score.total;
-					  htmlstr=htmlstr+"<tr><td><b>All Lessons</b></td>";
+					  htmlstr=htmlstr+"<td><b>Your score in all lessons</b></td>";
 					  
 					  var hardTotal=The_CurrentScore.Hard.success+The_CurrentScore.Hard.failure;				  
-					  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
+					  htmlstr=htmlstr+"<td>"+The_CurrentScore.Hard.success.toString()+" of "+hardTotal.toString()+"</td>";
 					  
 					  var medianTotal=The_CurrentScore.Medium.success+The_CurrentScore.Medium.failure;
-					  htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
+					  htmlstr=htmlstr+"<td>"+The_CurrentScore.Medium.success.toString()+" of "+medianTotal.toString()+"</td>";
 					  
 					  
 					  var easyTotal=The_CurrentScore.Easy.success+The_CurrentScore.Easy.failure;
-					   htmlstr=htmlstr+"<td> # correct: "+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
+					   htmlstr=htmlstr+"<td>"+The_CurrentScore.Easy.success.toString()+" of "+easyTotal.toString()+"</td>";
 				  }
+				  
+				  htmlstr=htmlstr+"<tr/><tr><td colspan='4'> </td></tr>";
+				  htmlstr=htmlstr+"<tr><td colspan='4'> </td></tr>";
+				  htmlstr=htmlstr+"<tr><td><b>Scores from all others students <br/> for all lessons</b></td><td><div id='AllHard'></td><td><div id='AllMedium'></td><td><div id='AllEasy'></td></tr>"
 				  htmlstr=htmlstr+"</tr></table>"
 				  $("#ScorePanel").html(htmlstr);
+				  GetAllScores(LRSURL,LRSLogin,LRSPassword);
 				}
 				
 				
