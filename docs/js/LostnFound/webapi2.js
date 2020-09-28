@@ -19,9 +19,7 @@ function Post(acePostjson) {
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
             Put(acePostjson);
-
         } else {
-
             alert("Post Error");
 			return;
         }

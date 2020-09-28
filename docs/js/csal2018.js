@@ -42,6 +42,7 @@ var currentJSON;
 var longAction=[];
 var nextbtnClicked=false;
 
+var InputFound;
 
 var time_in_Day;
 var time_in_hours;
@@ -160,6 +161,9 @@ $(document).ready(function() {
 	Learner=sessionStorage.getItem("UID");
 	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
 	GetSCORE(LRSURL,LRSLogin,LRSPassword);
+	if (AllowFastForwarding){
+		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
+	}
 	
 	$("#runningstatus" ).mousedown(function() {
 	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
@@ -431,10 +435,56 @@ function setProgressValue(currentMediaUrl) {
 
 }
 
+function ConstructJSONandSubmitAfteActionisDone(InputJSON){
+	var acePutjson = {};
+	if (InputJSON==null){
+		longAction=[];
+		setPresentationHistoryObj();
+		var PresentationIDObjStr = JSON.stringify(PresentationIDObj);
+		var PresentationHistoryObjStr = JSON.stringify(PresentationHistoryObj);
+		
+		acePutjson.PresentationID = PresentationIDObjStr;
+		acePutjson.PresentationHistory = PresentationHistoryObjStr;
+		
+		if(PresentationHistoryObj.userSelectedItem=="I'm not sure.")
+		{
+			mediaActions="unsure";
+		}
+		if (currentLessonID != "lesson0") {
+
+
+		   if(mediaActions=="userInputTrue")
+			{
+			mediaActions="";
+			}
+			acePutjson.ID = sessionStorage.getItem("UID");
+			acePutjson.Text = userInput;
+			acePutjson.Event = mediaActions;
+
+		} else if (currentLessonID == "lesson0" || currentLessonID != "lesson00") {
+			//acePutjson.ID = sessionStorage.getItem("GUID");
+			acePutjson.ID = sessionStorage.getItem("UID");
+			acePutjson.Text = userInput;
+			acePutjson.Event = mediaActions;
+		}
+		console.log(acePutjson);
+		return acePutjson;
+	}else{
+		return InputJSON;
+	}
+}
+
+
+function findCurrentPoint(actions){
+	
+	
+}
 
 
 function runActions() {
-	
+	if (AllowFastForwarding){
+		InputFound=findCurrentPoint(actions);
+	}
 	if (agentBusy==true) {
 		return;
 	}
@@ -734,42 +784,7 @@ function runActions() {
 
 			return;
 		}
-		longAction=[];
-		var acePutjson = {};
-		setPresentationHistoryObj();
-		var PresentationIDObjStr = JSON.stringify(PresentationIDObj);
-		var PresentationHistoryObjStr = JSON.stringify(PresentationHistoryObj);
-		acePutjson.PresentationID = PresentationIDObjStr;
-		acePutjson.PresentationHistory = PresentationHistoryObjStr;
-		if(PresentationHistoryObj.userSelectedItem=="I'm not sure.")
-		{
-			mediaActions="unsure";
-		}
-		
-		if (currentLessonID != "lesson0") {
-
-
-		   if(mediaActions=="userInputTrue")
-			{
-			mediaActions="";
-			}
-			acePutjson.ID = sessionStorage.getItem("UID");
-			acePutjson.Text = userInput;
-			acePutjson.Event = mediaActions;
-
-
-
-		} else if (currentLessonID == "lesson0" || currentLessonID != "lesson00") {
-			//acePutjson.ID = sessionStorage.getItem("GUID");
-			acePutjson.ID = sessionStorage.getItem("UID");
-			acePutjson.Text = userInput;
-			acePutjson.Event = mediaActions;
-
-
-		}
-		console.log(acePutjson);
-		
-		Put(acePutjson);
+		Put(ConstructJSONandSubmitAfteActionisDone(null));
 		PutStatus = true;
 		StopTimer();
 		mediaActions = "";
@@ -779,7 +794,6 @@ function runActions() {
 		waitForMediaResponse = false;
 		repeatList = [];
 		SpeakRepeatList=[];
-
 	}
 
 }

@@ -14,6 +14,36 @@ function insertMdeda(media,list){
 		}
 	}
 }
+var lastAceAction={};
+
+function LastAction(data){
+	lastAceAction={};
+	var askWait=false;
+	if (data.ACEActions==null){
+		return;
+	}
+	var waitType="";
+	if (data.ACEActions.length>0){
+		var i;
+		for (i=0; i<data.ACEActions.length;i++){
+			var theaction=data.ACEActions[i];
+			if ((theaction.Agent=="System")&&(theaction.Act=="Display")){
+				lastAceAction=theaction;
+			}
+			if ((theaction.Agent=="System")&&((theaction.Act=="Wait")||(theaction.Act=="WaitForEvent"))){
+				askWait=true;
+				waitType=theaction.Act;
+				
+			}
+		}
+	}
+	if (askWait){
+		lastAceAction.waitType=waitType;
+		return;
+	}else{
+		lastAceAction={};
+	}
+}
 
 function Post(acePostjson) {
     var content = acePostjson;
@@ -27,9 +57,17 @@ function Post(acePostjson) {
         success: function(data) {
 		 	latency.finish=new Date();
 			latency.duration=latency.finish-latency.start;
+			
 			var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
+			
+			if (lastAceAction.Agent!=null){
+				var pairData={"data":lastAceAction,"input":acePostjson};
+				AceResponse(pairData,"interaction");
+			}
+			
 			xAPIPostStart(Data,"start"); 
 			LastData=data;
+			LastAction(data);
         }
     }).done(function(data) {
 		latency.finish=new Date();
@@ -37,7 +75,11 @@ function Post(acePostjson) {
 		
 		insertMdeda(CurrentMedia,data.ACEActions);
 		
-		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}}
+		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
+		
+		
+		LastData=data;
+		LastAction(data);
 		AceResponse(Data,"response");
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
@@ -54,12 +96,6 @@ function Post(acePostjson) {
 
 function Put(acePutjson) { 
 	var content = acePutjson;
-	if (qs("startReturn","0")=="1"){
-		if (lastACEjson!=null){
-			content=lastACEjson;
-			lastACEjson=null;
-		} 
-	}
     var method = "PUT";
     webAPImethod = method;
 	latency.start=new Date();
@@ -73,13 +109,19 @@ function Put(acePutjson) {
 			
 			insertMdeda(CurrentMedia,data.ACEActions);
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
-			if (nextbtnClicked){
-				nextbtnClicked=false;
-			}else{
-			xAPIPostOther(Data,"action");
-			}
 			
+			xAPIPostOther(Data,"action"); //this record what is done
+			//
+			// need to record action data pair:
+			
+		    if (lastAceAction.Agent!=null){
+				var pairData={"data":lastAceAction,"input":acePutjson};
+				AceResponse(pairData,"interaction");
+			}
+			// lastdata and inputjson
+			//
 			LastData=data;
+			LastAction(data);
         },
         error: function(xhr, textStatus, errorThrown) {
             errorMessage = xhr + "\n" + textStatus + "\n" + errorThrown;
@@ -99,6 +141,7 @@ function Put(acePutjson) {
 		}
 		
 		LastData=data;
+		LastAction(data);
 		latency.finish=new Date();
 		latency.duration=latency.finish-latency.start;
 		
@@ -106,6 +149,8 @@ function Put(acePutjson) {
 		
 		
 		var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
+		
+		
 		AceResponse(Data,"response");
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {

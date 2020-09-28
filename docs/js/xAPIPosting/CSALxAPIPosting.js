@@ -19,9 +19,9 @@ var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"fail
 var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
 
 var ITProfile=qs("ITProfile","https://app.skoonline.org/ITSProfile/");
-var LRSURL=qs("lrs","https://record.x-in-y.com/csalexclusive/xapi/");
-var LRSLogin=qs("lrslogin","asaiga");
-var LRSPassword=qs("lrspassword","padkep");
+var LRSURL=qs("lrs","https://record.x-in-y.com/csalalt/xapi/");
+var LRSLogin=qs("lrslogin","riszug");
+var LRSPassword=qs("lrspassword","tudimo");
 
 var xAPIVerbBase=qs("verbbase",ITProfile);
 
@@ -36,11 +36,18 @@ var SKOGuid=qs("guid",SKOTitle);
 
 var allowedTextLevels=["Hard","Medium","Easy","Final",""];
 
+var InteractionHistory;
+
+var AllowFastForwarding=(qs("AllowFastForwarding","1")=="1");
+
+var lastStartingTime;
+var lastActionTime;
+
 var LearnerID={mbox:"mailto:"+user,
 				 name:fullname,
 				 objectType:"Agent"
 				};
-				
+					
 
 function UpdateTotalScore(){
 	totalScore.Hard.failure=totalScore.Hard.failure+accumlateScore.Hard.failure;
@@ -54,6 +61,9 @@ function UpdateTotalScore(){
 	totalScore.TA.success=totalScore.TA.success+accumlateScore.TA.success;
 	
 	
+}
+
+function GetInteractionHistory(){
 }
 
 function CompileScroe(PresentationHistory){
@@ -165,6 +175,7 @@ function ComposewithContextActivities(AnActor,
 		contextActivities={grouping:[{id:SKOSchool},{id:sessionID}]};
 	}
 	var exturl=ITProfile+"CSAL/Data";
+	
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
 	
 	if (PresentationHistory.userSelectedItem==""){
@@ -184,7 +195,9 @@ function ComposewithContextActivities(AnActor,
 	var resultsSuccess=(Answer=="Correct");
 	
 	var resultExt={};
-	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory;
+//	PresentationHistory.input=Extdata.extensions[exturl].data.input;
+	
+	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory; 
 	
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore}
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
@@ -209,7 +222,7 @@ function calculateAllScores(response){
 	var AllEasy="";
 	var Sumall;
     var ThetotalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
-	for (i=0;i<response.length-1;i++){
+	for (i=0;i<response.length;i++){
 		if (response[i].lastScore!=null){
 			
 			ThetotalScore.Hard.success=ThetotalScore.Hard.success+response[i].lastScore.Hard.success;
@@ -240,30 +253,7 @@ function calculateAllScores(response){
 
 
 function GetAllScores(lrsURL,LRSusername,LRSpassword){
-	var queryBody=[
-			{"$match": {
-				"$and":[
-							{"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}
-						]
-						}
-				},					
-				{"$sort":{"statement.timestamp":-1
-						}
-					},            
-				{"$project":{
-					 "agent":"$statement.actor.mbox",
-					 "Ext":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"
-				}},
-				{"$project":{
-					"agent":"$agent",
-					 "Score":"$Ext.Score.total"
-				}},
-			   {"$group":{
-				   "_id":"$agent",
-				   "lastScore":{"$first":"$Score"}
-			   }}    
-
-		]
+	var queryBody=AllScoreJSON;
 			var settings = {
 		   "url": lrsURL+"statements/aggregate",
 		   "method": "POST",
@@ -278,6 +268,82 @@ function GetAllScores(lrsURL,LRSusername,LRSpassword){
 	$.ajax(settings).done(function (response){ 
 	calculateAllScores(response);
 	})	
+}
+
+function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
+	var queryBody=GetLastActionJSON(LearnerID.mbox,LessonID.mbox);
+			var settings = {
+		   "url": lrsURL+"statements/aggregate",
+		   "method": "POST",
+		   "timeout": 0,
+		   "headers": {
+			"Authorization": "Basic "+ btoa(LRSusername+":"+LRSpassword),
+			"Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify(queryBody),
+		};
+		
+	$.ajax(settings).done(function (response){ 
+	//GetALLActions(lrsURL,LRSusername,LRSpassword);
+	if (response.length>0){
+	LastActionTime=response[0].time;
+	console.log(LastActionTime);
+	}
+	})
+}
+
+
+function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
+	
+	var queryBody=GetLastStartingTime(LearnerID.mbox,LessonID.mbox);
+			var settings = {
+		   "url": lrsURL+"statements/aggregate",
+		   "method": "POST",
+		   "timeout": 0,
+		   "headers": {
+			"Authorization": "Basic "+ btoa(LRSusername+":"+LRSpassword),
+			"Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify(queryBody),
+		};
+		
+	$.ajax(settings).done(function (response){ 
+	//GetALLActions(lrsURL,LRSusername,LRSpassword);
+	if (response.length>0){
+	lastStartingTime=response[0].time;
+	console.log(lastStartingTime);
+	GetALLActions(lrsURL,LRSusername,LRSpassword,lastStartingTime);
+	}
+	})
+	
+}
+
+
+function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
+		var queryBody=GetInteractionHistorxAPIJSON(LearnerID.mbox,LessonID.mbox,atimestamp);
+			var settings = {
+		   "url": lrsURL+"statements/aggregate",
+		   "method": "POST",
+		   "timeout": 0,
+		   "headers": {
+			"Authorization": "Basic "+ btoa(LRSusername+":"+LRSpassword),
+			"Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify(queryBody),
+		};
+		
+	$.ajax(settings).done(function (response){ 
+	if (response.length>0){
+		var startdateStr=new Date(atimestamp);
+		lastActionTime=response[response.length-1].time;
+		var enddateStr=new Date(lastActionTime);
+		InteractionHistory=response;
+		var htmlstr="My record show that You started the lesson at "+startdateStr+" you stopped the lesson at "+enddateStr;
+		$("#RepayPanel").html(htmlstr);
+		$("#RepayPanel").show();
+		console.log(InteractionHistory);
+		}
+	})		
 }
 
 
@@ -508,7 +574,7 @@ function xAPIPostOther(acePostjson,averb){
 		}else{
 			ResultObj={success:true,
 			response:data.userSelectedItem,
-		     extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
+		    extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
 		}
 		var Extdata={}
 		}
