@@ -36,7 +36,7 @@ var SKOGuid=qs("guid",SKOTitle);
 
 var allowedTextLevels=["Hard","Medium","Easy","Final",""];
 
-var InteractionHistory;
+var InteractionHistory=[];
 
 var AllowFastForwarding=(qs("AllowFastForwarding","1")=="1");
 
@@ -63,8 +63,7 @@ function UpdateTotalScore(){
 	
 }
 
-function GetInteractionHistory(){
-}
+
 
 function CompileScroe(PresentationHistory){
 	if (PresentationHistory.userAnswer==null){
@@ -334,14 +333,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		
 	$.ajax(settings).done(function (response){ 
 	if (response.length>0){
-		var startdateStr=new Date(atimestamp);
-		lastActionTime=response[response.length-1].time;
-		var enddateStr=new Date(lastActionTime);
 		InteractionHistory=response;
-		var htmlstr="My record show that You started the lesson at "+startdateStr+" you stopped the lesson at "+enddateStr;
-		$("#RepayPanel").html(htmlstr);
-		$("#RepayPanel").show();
-		console.log(InteractionHistory);
 		}
 	})		
 }
@@ -474,7 +466,7 @@ function Compose(AnActor,
 		context:{"contextActivities":contextActivities,"extensions":Extdata.extensions}
 		};
 		timestamp:(new Date()).toISOString();
-	console.log(JSON.stringify(parts));
+//	console.log(JSON.stringify(parts));
 	return parts;
 	}
 
@@ -536,8 +528,8 @@ function AceResponse(Data,averb){
 	var theStr=ITProfile+"CSAL/Data";
 	extObj[theStr]=data;
 	Extdata.extensions=extObj;
-	console.log("===");
-	console.log(JSON.stringify(data));
+//	console.log("===");
+//	console.log(JSON.stringify(data));
 		var statements=Compose(AnActor,
 								verbObj,
 								ResultObj,
@@ -606,7 +598,7 @@ function xAPIPostOther(acePostjson,averb){
 							Extdata);
 	}
 if (statements!=null){
-	console.log(JSON.stringify(statements));
+//	console.log(JSON.stringify(statements));
 	ADL.XAPIWrapper.sendStatement(statements);
    }
 }

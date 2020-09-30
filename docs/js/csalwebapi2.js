@@ -37,6 +37,7 @@ function LastAction(data){
 			}
 		}
 	}
+	lastAceAction.msg=TheMsg;
 	if (askWait){
 		lastAceAction.waitType=waitType;
 		return;
@@ -64,7 +65,6 @@ function Post(acePostjson) {
 				var pairData={"data":lastAceAction,"input":acePostjson};
 				AceResponse(pairData,"interaction");
 			}
-			
 			xAPIPostStart(Data,"start"); 
 			LastData=data;
 			LastAction(data);
@@ -76,11 +76,10 @@ function Post(acePostjson) {
 		insertMdeda(CurrentMedia,data.ACEActions);
 		
 		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
-		
-		
 		LastData=data;
 		LastAction(data);
 		AceResponse(Data,"response");
+		
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
             Put(acePostjson);
@@ -106,20 +105,13 @@ function Put(acePutjson) {
         success: function(data) {
 			latency.finish=new Date();
 			latency.duration=latency.finish-latency.start;
-			
 			insertMdeda(CurrentMedia,data.ACEActions);
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
-			
-			xAPIPostOther(Data,"action"); //this record what is done
-			//
-			// need to record action data pair:
-			
-		    if (lastAceAction.Agent!=null){
+			xAPIPostOther(Data,"action"); 
+			if (lastAceAction.Agent!=null){
 				var pairData={"data":lastAceAction,"input":acePutjson};
 				AceResponse(pairData,"interaction");
 			}
-			// lastdata and inputjson
-			//
 			LastData=data;
 			LastAction(data);
         },
@@ -132,14 +124,13 @@ function Put(acePutjson) {
     }).done(function(data) {
         var errorInfo = GetRuleError(data);
         var actionsError = GetActions(data);
-		console.log(actions);
-		console.log("=============");
+//		console.log(actions);
+//		console.log("=============");
 		
 		if (lastACEResponse!=null){
 			actions=lastACEResponse.ACEActions;
 			lastACEResponse=null;
 		}
-		
 		LastData=data;
 		LastAction(data);
 		latency.finish=new Date();
@@ -147,11 +138,10 @@ function Put(acePutjson) {
 		
 	    insertMdeda(CurrentMedia,data.ACEActions);
 		
-		
 		var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
-		
-		
 		AceResponse(Data,"response");
+		
+		
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {
            

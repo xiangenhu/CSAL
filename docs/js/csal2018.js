@@ -42,11 +42,15 @@ var currentJSON;
 var longAction=[];
 var nextbtnClicked=false;
 
+var listofMessage=[];
+
 var InputFound;
 
 var time_in_Day;
 var time_in_hours;
 var time_in_min;
+
+var TheMsg="";
 
 function AgentBusyNow(){
 		var VarTHWin=document.getElementById("agentsLarge");
@@ -467,7 +471,7 @@ function ConstructJSONandSubmitAfteActionisDone(InputJSON){
 			acePutjson.Text = userInput;
 			acePutjson.Event = mediaActions;
 		}
-		console.log(acePutjson);
+//		console.log(acePutjson);
 		return acePutjson;
 	}else{
 		return InputJSON;
@@ -475,16 +479,23 @@ function ConstructJSONandSubmitAfteActionisDone(InputJSON){
 }
 
 
-function findCurrentPoint(actions){
-	
-	
+function findCurrentPoint(){
+	var i;
+	var j;
+	for (i=0;i<actions.length;i++){
+		for (j=0;j<InteractionHistory.length;j++) {
+			if (actions[i].Data==InteractionHistory[j].data.Data){
+				var InputGot=InteractionHistory[j].input;
+				InteractionHistory.splice(j, 1);
+				return InputGot;
+			}
+		}
+	}
+	return null;
 }
 
 
 function runActions() {
-	if (AllowFastForwarding){
-		InputFound=findCurrentPoint(actions);
-	}
 	if (agentBusy==true) {
 		return;
 	}
@@ -495,16 +506,18 @@ function runActions() {
 	if (idleTime < maxIdle && mediaActions == "") {
 		return;
 	}
+	
 	idleTime = 0;
 	maxIdle = 0;
 	
 	if (actions.length != 0) {
+		
 		var act = actions[0].Act;
 		var agent = actions[0].Agent;
 		var data = actions[0].Data;
 		var agentNum;
 		var isSpeakingSegments = false;
-		console.log(actions[0]);
+//		console.log(actions[0]);
 		
 		var RecordObj={Act:act,Agent:agent,Data:data.split("#").join("")};
 		
@@ -550,7 +563,7 @@ function runActions() {
 				}else if (actions[actions.length - 1].Act == "WaitForEvent" && actions[actions.length - 1].Data == "30" && currentLessonID=="lesson10") {
 					getQuestionName = data.replace(getUserName, "_user_");
 				}
-				console.log(getQuestionName);
+//				console.log(getQuestionName);
 				appendTextToDisplayArea(data);
 
 
@@ -559,57 +572,52 @@ function runActions() {
 				var uname = sessionStorage.getItem("uname");
 				data = data.replace("_user_",uname);
 				data = agentNum + ":" + data;
-
-				//AngentSpeak(data);
 				break;
 			case "Play":
-				if(talkingheadUsing=="Play")
-				{
-					 playList = setPlayList(agentNum, data);
-
-					repeatList = repeatList.concat(playList);
-					AngentPlay(playList);
+			    if (InteractionHistory.lengt==0){
+					if(talkingheadUsing=="Play")
+					{
+						playList = setPlayList(agentNum, data);
+						repeatList = repeatList.concat(playList);
+						AngentPlay(playList);
+					}
 				}
 				   
-
-				//console.log(agentNum,data, "Play");
 				break;
 			case "Speak2":
 				if(talkingheadUsing=="Speak2")
 				{
-					agentBusy = true;
-					var SName = sessionStorage.getItem("SName");
-					data = data.replace("_user_,", "#"+SName+"#");
-					data = data.replace("_user_!", "#"+SName+"#");
-					data = data.replace("_user_.", "#"+SName+"#");
-					data = data.replace("_user_?", "#"+SName+"#");
-					data = data.replace("_user_", "#"+SName+"#");
-					var segments = data.split('#');
-					data = agentNum + ":" + segments[0];
-					var mergedSegments = "";
-					var nseg;
-					for(nseg = 1;nseg<segments.length;nseg++)
-					{
-						var segment = segments[nseg].trim();
-						if(segment=="")continue;
-						if(isPunctuation(segment) )continue;
-						
-						mergedSegments +=segments[nseg]+"#";
+					if (InteractionHistory.length==0){
+						agentBusy = true;
+						var SName = sessionStorage.getItem("SName");
+						data = data.replace("_user_,", "#"+SName+"#");
+						data = data.replace("_user_!", "#"+SName+"#");
+						data = data.replace("_user_.", "#"+SName+"#");
+						data = data.replace("_user_?", "#"+SName+"#");
+						data = data.replace("_user_", "#"+SName+"#");
+						var segments = data.split('#');
+						data = agentNum + ":" + segments[0];
+						var mergedSegments = "";
+						var nseg;
+						for(nseg = 1;nseg<segments.length;nseg++)
+						{
+							var segment = segments[nseg].trim();
+							if(segment=="")continue;
+							if(isPunctuation(segment) )continue;
+							
+							mergedSegments +=segments[nseg]+"#";
+						}
+						if(mergedSegments!="")
+						{
+						 actions[0].Data=mergedSegments;
+						isSpeakingSegments = true;
+						}
+						Speak2(data);
+						 //SpeakRepeatList.push(data);
+						 addRepeatSpeech(data);
 					}
-					if(mergedSegments!="")
-					{
-					 actions[0].Data=mergedSegments;
-					isSpeakingSegments = true;
-					}
-					Speak2(data);
-					 //SpeakRepeatList.push(data);
-					 addRepeatSpeech(data);
-					 
-					  
 				}
 				   
-
-				//console.log(agentNum,data, "Play");
 				break;
 			case "SpeakLater":
 
@@ -635,10 +643,9 @@ function runActions() {
 			case "Wait":
 				maxIdle = parseInt(data) * 10;
 				waitForMediaResponse = true;
+				waitForMediaResponse = (InteractionHistory.length==0);
 				break;
-
 			case "WaitForEvent":
-
 				if (data > 6) {
 					repeatTimes = 0;
 					if(SpeakRepeatList.length>0)
@@ -646,6 +653,7 @@ function runActions() {
 					ShowPlayVideoButton();
 					document.getElementById('mainFrame').contentWindow.Unlock();
 					waitForUserResponse = true;
+				//	waitForUserResponse = (InteractionHistory.length==0);
 					var d = new Date();
 					talkingHeadSpeechEndTimestamp = d.getTime();					
 					if (mediaActions != "") {
@@ -654,15 +662,13 @@ function runActions() {
 					userSpendTimeCounting();
 					var List = currentMediaUrl.split("?");
 					var pageNameList = List[0].split("/");
-					if(pageNameList[pageNameList.length-1]=="L18-MainPage.html")
-					{
+					if(pageNameList[pageNameList.length-1]=="L18-MainPage.html"){
 					waitForUserResponse = false;
 					}
 				}
 				maxIdle = parseInt(data) * 10;
-
+			//	GetWorldEvent("Stop1");
 				break;
-
 			case "WaitForInput":
 				repeatTimes = 0;
 				if(SpeakRepeatList.length>0)
@@ -670,6 +676,7 @@ function runActions() {
 				ShowPlayVideoButton();
 				ShowTextInputDialog();
 				waitForUserResponse = true;
+			//	waitForUserResponse = (InteractionHistory.length==0);
 				  var d = new Date();
 					talkingHeadSpeechEndTimestamp = d.getTime();
 				userSpendTimeCounting();
@@ -677,6 +684,7 @@ function runActions() {
 				if (mediaActions != "") {
 					mediaActions = "";
 				}
+			//	GetWorldEvent("Stop1");
 				break;
 			case "WaitForMediaInput":
 				repeatTimes = 0;
@@ -684,18 +692,16 @@ function runActions() {
 				ShowRepeatButton();
 				ShowPlayVideoButton();
 				document.getElementById('mainFrame').contentWindow.Unlock();
-				  var d = new Date();
-					talkingHeadSpeechEndTimestamp = d.getTime();
+				var d = new Date();
+				talkingHeadSpeechEndTimestamp = d.getTime();
 				waitForUserResponse = true;
 				countingSpendTime = true;
-				
 				userSpendTimeCounting();
 				maxIdle = parseInt(data) * 10;
 				if (mediaActions != "") {
 					mediaActions = "";
 				}
 				break;
-
 			case "WaitForNothing":
 				maxIdle = 5;
 				waitForUserResponse = false;
@@ -722,29 +728,24 @@ function runActions() {
 				audioPath = "";
 				break;
 			case "GetMediaMessage":
-
 				break;
 			case "GetMediaEvent":
-			waitForMediaResponse = true;		 
+			waitForMediaResponse = true;	
+         //   waitForMediaResponse = (InteractionHistory.length==0);			
 				InvokeScript(act, data);
-
 				break;
-
 			case "GetMediaFeedback":
 				getMediaFeedBackData = data;
 				document.getElementById('mainFrame').contentWindow.GetMediaFeedback(data);
 				getMediaFeedBack = true;
 				break;
 			case "GetMediaSpeech":
-
 				break;
 			case "ShowMediaAnswer":
 				document.getElementById('mainFrame').contentWindow.ShowMediaAnswer();
 				break;
-
 			case "End":
-			if (currentLessonID == "lesson10") 
-			   {
+			if (currentLessonID == "lesson10") {
 				setProgress(100);
 				}			 
 				showEndingPage();
@@ -755,36 +756,31 @@ function runActions() {
 				if(data=="NextPage")
 				{
 					ShowNextButton();
-					
 					nextButtonStatus = true;
 					ShowButtonAndWait=true;
 					if (currentLessonID == "Lesson9")
 					{
-						//document.getElementById('mainFrame').contentWindow[GetProgressBarValue]();
 						InvokeScript("getProgressBarValue", "");
-						//setProgress(progressValue9);
 					}
 				
 				}
-			   
 				break;	  
 			default:
 				break;
 		}
-		
 		if(!isSpeakingSegments) actions.splice(0, 1); // remove the current action except when there are more segments to speak
-
-	} else if (actions.length == 0 && vidplayerBusy == false && PutStatus == false) {
-
+	} else if (actions.length == 0 && vidplayerBusy == false && PutStatus == false) {	
 		if (mediaActions == "" && waitForUserResponse == true) {
-
 			return;
 		}
 		if (mediaActions == "" && waitForMediaResponse == true) {
-
 			return;
 		}
-		Put(ConstructJSONandSubmitAfteActionisDone(null));
+		var inputjs=ConstructJSONandSubmitAfteActionisDone(null);
+		var savedinput=findCurrentPoint();
+		
+		Put(inputjs);
+		
 		PutStatus = true;
 		StopTimer();
 		mediaActions = "";
@@ -1074,6 +1070,9 @@ function getAgentMessage(msg)
 }
 
   function GetWorldEvent(msg) {
+	 listofMessage.push(msg);
+	 TheMsg=msg;
+	 console.log(msg);
 	var msgType = typeof msg;
 	idleTime = 0;
 	maxIdle = 0;
@@ -1304,7 +1303,7 @@ function setPresentationHistoryObj() {
 
 			}
 
-			console.log(getMediaObj[i].questionID);
+//			console.log(getMediaObj[i].questionID);
 
 		}
 
