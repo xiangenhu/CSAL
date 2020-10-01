@@ -84,10 +84,12 @@ function GetInteractionHistorxAPIJSON(learnermbox,lessonmbox,atimestamp){
                 }
             },
         {"$project":
-            {"contextExt":"$statement.context.extensions.https://app.skoonline.org/ITSProfile/CSAL/Data"}
+            {"contextExt":"$statement.context.extensions.https://app.skoonline.org/ITSProfile/CSAL/Data",
+			"time":"$statement.timestamp"}
         },
          {"$project":
             {
+				"time":"$time",
                 "data":"$contextExt.data",
                 "msg":"$contextExt.msg",
 				"CurrentMedia":"$contextExt.CurrentMedia"

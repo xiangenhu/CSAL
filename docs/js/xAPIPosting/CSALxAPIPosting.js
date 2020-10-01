@@ -19,9 +19,9 @@ var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"fail
 var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
 
 var ITProfile=qs("ITProfile","https://app.skoonline.org/ITSProfile/");
-var LRSURL=qs("lrs","https://record.x-in-y.com/csalalt/xapi/");
-var LRSLogin=qs("lrslogin","riszug");
-var LRSPassword=qs("lrspassword","tudimo");
+var LRSURL=qs("lrs","https://record.x-in-y.com/csalexclusive/xapi/");
+var LRSLogin=qs("lrslogin","asaiga");
+var LRSPassword=qs("lrspassword","padkep");
 
 var xAPIVerbBase=qs("verbbase",ITProfile);
 
@@ -318,6 +318,75 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 }
 
 
+
+function ToodayVoice() {
+  var d = new Date();
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var say="Today is "+ weekday[d.getDay()]+", "+ months[d.getMonth()]+" "+d.getDate();
+  return say;
+}
+
+function DateString(dateStr){
+	var d = new Date(dateStr);
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var say=weekday[d.getDay()]+", "+ months[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();
+  return say;
+}
+
+
+function Greetings(){
+	var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet =' Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+	
+	return greet;
+}
+
+function GetDuration(t2,t1){
+	var date1=new Date(t1);
+	var date2=new Date(t2);
+	var duration=date2-date1;
+	var time_in_Day=Math.floor((duration)/(1000*60*60*24));
+	var time_in_hours=Math.floor((duration)/(1000*60*60));
+	var time_in_min=Math.floor((duration)/(1000*60));
+	return time_in_min.toString()+" minutes";
+	}
+	
+function moveforward(){
+	if (document.getElementById('startover').checked){
+		InteractionHistory=[];
+		$("#myMessage").hide();
+	}else if (document.getElementById('continue').checked){
+		$("#myMessage").hide();
+	}else{
+		alert(fullname.split(' ')[0]+", Need to make your mind!");
+	}
+}
+
 function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		var queryBody=GetInteractionHistorxAPIJSON(LearnerID.mbox,LessonID.mbox,atimestamp);
 			var settings = {
@@ -334,6 +403,17 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 	$.ajax(settings).done(function (response){ 
 	if (response.length>0){
 		InteractionHistory=response;
+		var html='';
+		var starting=DateString(atimestamp);
+		var ending=DateString(InteractionHistory[InteractionHistory.length-1].time);
+		if (starting==ending){
+			ending=" the same day";
+		}
+		var timemin=GetDuration(InteractionHistory[InteractionHistory.length-1].time,atimestamp)
+		html=html+"  My record shows that you started this lesson eariler. It was "+starting+". You stopped on "+ ending+" "+"for the total of "+timemin;
+		var footer="What do you want to do next? <ul><li>Start over from the start. <input type='radio' name='choice' id='startover'>  <li>Continue from where you have stopped.<input type='radio' name='choice' id='continue' ></ul>"+"<p align='right'><button onclick='moveforward()'> Move forward </button><p/>";
+		
+		OpenModal(fullname.split(' ')[0]+ ", "+Greetings()+" and Welcome Back!",footer,html);   
 		}
 	})		
 }

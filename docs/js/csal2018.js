@@ -54,6 +54,10 @@ var TheMsg="";
 
 var currenthtml="";
 
+function FastForward(){
+	
+}
+
 function AgentBusyNow(){
 		var VarTHWin=document.getElementById("agentsLarge");
 		var vid = VarTHWin.contentWindow.agentBusyNow();
@@ -199,6 +203,9 @@ $(document).ready(function() {
 $(document).ready(function() {
 	loadAgent();
 	showCC(false);
+	
+	
+
 	$("#repeat").click(function() {
 	if(talkingheadUsing=="Play")
 	{
@@ -219,8 +226,6 @@ $(document).ready(function() {
 		repeatStatus = true;
 		 repeatSpeakList();	
 	}
-	   
-
 	});
 	
 	
@@ -824,9 +829,13 @@ var timer;
 function StartTimer() {
 	$("#PauseBtn").show();
 	$("#PauseBtn").html("Pause");
+	var interval=100;
+	if (InteractionHistory.length!=0){
+		interval=1;
+	}
 	timer = setInterval(function() {
-		runActions()
-	}, 100);
+		runActions();
+	}, interval);
 }
 
 function StopTimer() {
