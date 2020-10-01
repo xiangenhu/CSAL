@@ -52,7 +52,7 @@ var time_in_min;
 
 var TheMsg="";
 
-var currenthtml="";
+
 
 function FastForward(){
 	
@@ -653,9 +653,13 @@ function runActions() {
 					CurrentMedia=actions[0];
 					showMedia(data); // Calling the showMedia function to load the HTML page in the main IFRAME
 				} else if (data.includes("mp4") == true) {
+					if (InteractionHistory.length==0){
 					var datasplit = data.split("/");
 					var vidId = datasplit[datasplit.length - 1];
 					vidPlayerControl(vidId + ":2");
+					}else{
+					   GetWorldEvent(getRightMsg());
+					}
 				}
 
 				break;
@@ -805,7 +809,9 @@ function runActions() {
 			return;
 		}
 		if (mediaActions == "" && waitForMediaResponse == true) {
+			if (InteractionHistory.length==0){
 			return;
+			}
 		}
 		var inputjs=ConstructJSONandSubmitAfteActionisDone(null);
 		var savedinput=findCurrentPoint();
