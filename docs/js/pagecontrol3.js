@@ -331,9 +331,14 @@ function HidePlayVideoButton() {
 function ShowNextButton() {
     if (NextButtonOn == true) {
         $("#btNext").css('visibility', 'visible');
+		 /* if (InteractionHistory.length!=0){			
+	        $("#btNext").trigger('click');
+			nextButtonStatus = false;
+			runActions();
+			GetWorldEvent(InteractionHistory[0].msg);
+		}  */
     } else {
         HideNextButton()
-
     }
 
 }

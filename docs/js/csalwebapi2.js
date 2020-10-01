@@ -60,12 +60,10 @@ function Post(acePostjson) {
 			latency.duration=latency.finish-latency.start;
 			
 			var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
-			
-			if (lastAceAction.Agent!=null){
-				var pairData={"data":lastAceAction,"input":acePostjson};
-				AceResponse(pairData,"interaction");
-			}
-			xAPIPostStart(Data,"start"); 
+		
+			if (InteractionHistory.length==0){
+				xAPIPostStart(Data,"start");
+			}			
 			LastData=data;
 			LastAction(data);
         }
@@ -78,7 +76,9 @@ function Post(acePostjson) {
 		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
 		LastData=data;
 		LastAction(data);
-		AceResponse(Data,"response");
+		if (InteractionHistory.length==0){
+			AceResponse(Data,"response");
+		}
 		
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
@@ -107,11 +107,13 @@ function Put(acePutjson) {
 			latency.duration=latency.finish-latency.start;
 			insertMdeda(CurrentMedia,data.ACEActions);
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
-			xAPIPostOther(Data,"action"); 
-			if (lastAceAction.Agent!=null){
+			if (InteractionHistory.length==0){
+				xAPIPostOther(Data,"action"); 
+			}
+	/* 	if (InteractionHistory.length==0){
 				var pairData={"data":lastAceAction,"input":acePutjson};
 				AceResponse(pairData,"interaction");
-			}
+			} */
 			LastData=data;
 			LastAction(data);
         },
@@ -137,9 +139,10 @@ function Put(acePutjson) {
 		latency.duration=latency.finish-latency.start;
 		
 	    insertMdeda(CurrentMedia,data.ACEActions);
-		
-		var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
-		AceResponse(Data,"response");
+		if (InteractionHistory.length==0){
+			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
+			AceResponse(Data,"response");
+		}
 		
 		
 		PutStatus=false;

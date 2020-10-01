@@ -80,18 +80,19 @@ function GetInteractionHistorxAPIJSON(learnermbox,lessonmbox,atimestamp){
                 ]
                 }
         },					
-        {"$sort":{"statement.timestamp":-1
+        {"$sort":{"statement.timestamp":1
                 }
-            }, 
-        {"$project":{
-                "context":"$statement.context.extensions.https://app.skoonline.org/ITSProfile/CSAL/Data",
-				"time":"$statement.timestamp",
-        }},
-          {"$project":{
-                "data":"$context.data",
-                "input":"$context.input",
-				"time":"$time"
-        }}    
+            },
+        {"$project":
+            {"contextExt":"$statement.context.extensions.https://app.skoonline.org/ITSProfile/CSAL/Data"}
+        },
+         {"$project":
+            {
+                "data":"$contextExt.data",
+                "msg":"$contextExt.msg",
+				"CurrentMedia":"$contextExt.CurrentMedia"
+            }
+         }
 ]
 return returnJSON;
 }

@@ -52,6 +52,8 @@ var time_in_min;
 
 var TheMsg="";
 
+var currenthtml="";
+
 function AgentBusyNow(){
 		var VarTHWin=document.getElementById("agentsLarge");
 		var vid = VarTHWin.contentWindow.agentBusyNow();
@@ -81,6 +83,20 @@ function setCurrentLessonInfo(lessonID) {
 	return false;
 
 }
+function getRightMsg(){
+	var i;
+	for (i=0;i<InteractionHistory.length;i++){
+		var themsg=InteractionHistory[i].msg;
+		var themedia=InteractionHistory[i].CurrentMedia;
+		if ((themsg!="") && (CurrentMedia.Data==themedia)){
+			InteractionHistory.splice(i,1);
+		//   delete InteractionHistory[i];
+			return themsg		   
+		}
+	}
+	return "";
+}
+
 function addRepeatSpeech(agent_speech)
 {
 	var currentAgent_Speech = agent_speech.split(":");
@@ -500,8 +516,13 @@ function runActions() {
 		return;
 	}
 	if (nextButtonStatus == true) {
-		return;
+		if (InteractionHistory.length==0) {
+			return;
+		}else{
+			$("#btNext").trigger('click');
+		}
 	}
+	
 	idleTime++;
 	if (idleTime < maxIdle && mediaActions == "") {
 		return;
@@ -643,7 +664,6 @@ function runActions() {
 			case "Wait":
 				maxIdle = parseInt(data) * 10;
 				waitForMediaResponse = true;
-				waitForMediaResponse = (InteractionHistory.length==0);
 				break;
 			case "WaitForEvent":
 				if (data > 6) {
@@ -665,9 +685,11 @@ function runActions() {
 					if(pageNameList[pageNameList.length-1]=="L18-MainPage.html"){
 					waitForUserResponse = false;
 					}
+					if (InteractionHistory.length!=0){
+					   GetWorldEvent(getRightMsg());
+					}
 				}
 				maxIdle = parseInt(data) * 10;
-			//	GetWorldEvent("Stop1");
 				break;
 			case "WaitForInput":
 				repeatTimes = 0;
@@ -676,15 +698,16 @@ function runActions() {
 				ShowPlayVideoButton();
 				ShowTextInputDialog();
 				waitForUserResponse = true;
-			//	waitForUserResponse = (InteractionHistory.length==0);
 				  var d = new Date();
 					talkingHeadSpeechEndTimestamp = d.getTime();
 				userSpendTimeCounting();
 				maxIdle = parseInt(data) * 10;
 				if (mediaActions != "") {
 					mediaActions = "";
-				}
-			//	GetWorldEvent("Stop1");
+				} 
+				if (InteractionHistory.length!=0){
+					   GetWorldEvent(getRightMsg());
+					}
 				break;
 			case "WaitForMediaInput":
 				repeatTimes = 0;
@@ -701,6 +724,9 @@ function runActions() {
 				if (mediaActions != "") {
 					mediaActions = "";
 				}
+				if (InteractionHistory.length!=0){
+					   GetWorldEvent(getRightMsg());
+					}
 				break;
 			case "WaitForNothing":
 				maxIdle = 5;
@@ -753,8 +779,7 @@ function runActions() {
 				InitParameters();
 				break;
 			case "ShowButtonAndWait":
-				if(data=="NextPage")
-				{
+				if(data=="NextPage") {
 					ShowNextButton();
 					nextButtonStatus = true;
 					ShowButtonAndWait=true;
@@ -770,6 +795,7 @@ function runActions() {
 		}
 		if(!isSpeakingSegments) actions.splice(0, 1); // remove the current action except when there are more segments to speak
 	} else if (actions.length == 0 && vidplayerBusy == false && PutStatus == false) {	
+	    
 		if (mediaActions == "" && waitForUserResponse == true) {
 			return;
 		}
@@ -1064,15 +1090,18 @@ function askClickNextButton()
 	
 	}
 }
-function getAgentMessage(msg)
-{
+function getAgentMessage(msg){
 	startLesson();
 }
-
   function GetWorldEvent(msg) {
-	 listofMessage.push(msg);
-	 TheMsg=msg;
-	 console.log(msg);
+	 if (InteractionHistory.length==0){
+		var pairData={"data":actions,"msg":msg,"CurrentMedia":CurrentMedia.Data};
+		AceResponse(pairData,"interaction");
+	}else{
+		if (InteractionHistory[0].msg==msg){
+		InteractionHistory.shift();
+		}
+	}
 	var msgType = typeof msg;
 	idleTime = 0;
 	maxIdle = 0;
