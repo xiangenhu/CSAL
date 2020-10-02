@@ -526,12 +526,20 @@ function removemovie(){
 		}
 	}
 }
-
+function stopff(){
+	InteractionHistory=[];
+}
 
 function runActions() {
 	if (InteractionHistory.length!=0){
 		var lastadata=DateString(InteractionHistory[InteractionHistory.length-1].time);
-		var thehtml="<table heigh='100%' width='100%'><tr><td><p/> <p/> <h1><p/>Please Wait ....</h1></td></tr><tr><td><h1>Fast Forwarding to where you have stopped</h1></td></tr><tr><td valign='middle'><h2>("+lastadata+")</h2></td></tr><tr><td> steps remaining: "+InteractionHistory.length.toString()+"</td></tr></table>";
+		var thehtml="<table heigh='100%' width='100%'>";
+		thehtml=thehtml+"<tr><td><p/> <p/> <h1><p/>Please Wait ....</h1></td></tr>";
+		thehtml=thehtml+"<tr><td><h1>Fast Forwarding to where you have stopped</h1></td></tr>";
+		thehtml=thehtml+"<tr><td valign='middle'><h2>("+lastadata+")</h2></td></tr>";
+		thehtml=thehtml+"<tr><td> steps remaining: "+InteractionHistory.length.toString()+"</td></tr>";
+//		thehtml=thehtml+"<tr><td><button id='stopFF' onclick='stopff()'>Stop</button> </td></tr>";
+		thehtml=thehtml+"</table>";
 		$('#TheFastForwardCover').html(thehtml);
 		$('#TheFastForwardCover').show();
 	}else{
