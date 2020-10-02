@@ -406,6 +406,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		var html='';
 		var starting=DateString(atimestamp);
 		var ending=DateString(InteractionHistory[InteractionHistory.length-1].time);
+		LastActionTime=ending;
 		if (starting==ending){
 			ending=" the same day";
 		}

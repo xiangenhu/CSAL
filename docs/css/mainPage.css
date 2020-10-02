@@ -467,6 +467,26 @@ div#controlButton{
 	display:none;
 }
 
+#TheFastForwardCover{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	width: 800px;
+	height: 540px;
+	opacity:0.85;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 190px;
+	margin-left:111px;
+	position:absolute;	
+	border-radius: 7px;
+	z-index: 40;
+	display:none;
+	z-index:16
+}
+
+
 #ScorePanel{
 	font-family: Lato, Verdana, 'Times New Roman';
 	font-size: 20px;
@@ -527,6 +547,7 @@ div#controlButton{
 	cursor: pointer;
 	z-index: 40;
 	display:none;
+	z-index:15
 }
 
 #PauseBtn:hover {
