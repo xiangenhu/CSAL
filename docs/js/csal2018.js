@@ -515,6 +515,18 @@ function findCurrentPoint(){
 	return null;
 }
 
+function removemovie(){
+	if (InteractionHistory.length==0){
+		return;
+	}
+	var i;
+	for (i=actions.length-1;i>0;i--){
+		if (actions[i].Data.indexOf("mp4")>-1){
+			actions.splice(i, 1);
+		}
+	}
+}
+
 
 function runActions() {
 	if (agentBusy==true) {
@@ -535,9 +547,8 @@ function runActions() {
 	
 	idleTime = 0;
 	maxIdle = 0;
-	
 	if (actions.length != 0) {
-		
+//		removemovie();
 		var act = actions[0].Act;
 		var agent = actions[0].Agent;
 		var data = actions[0].Data;
@@ -653,26 +664,29 @@ function runActions() {
 					CurrentMedia=actions[0];
 					showMedia(data); // Calling the showMedia function to load the HTML page in the main IFRAME
 				} else if (data.includes("mp4") == true) {
-					if (InteractionHistory.length==0){
 					var datasplit = data.split("/");
 					var vidId = datasplit[datasplit.length - 1];
 					vidPlayerControl(vidId + ":2");
-					}else{
-					   GetWorldEvent(getRightMsg());
-					}
 				}
-
 				break;
 			case "PauseAt":
-				pauseAtTime = parseInt(data);
+			    pauseAtTime = parseInt(data);
+				if (InteractionHistory.length!=0){
+//				  pauseAtTime=1;
+				}
 				document.getElementById('vid').contentWindow.setPauseTime(pauseAtTime);
 				break;
 			case "PlayNow":
 				document.getElementById('vid').contentWindow.videoPlay();
 				break;
 			case "Wait":
-				maxIdle = parseInt(data) * 10;
-				waitForMediaResponse = true;
+			   if (InteractionHistory.length==0){
+					maxIdle = parseInt(data) * 10;
+					waitForMediaResponse = true; 
+				}else{
+					maxIdle = parseInt(data) ;
+					waitForMediaResponse = false; 
+				}
 				break;
 			case "WaitForEvent":
 				if (data > 6) {
@@ -682,7 +696,6 @@ function runActions() {
 					ShowPlayVideoButton();
 					document.getElementById('mainFrame').contentWindow.Unlock();
 					waitForUserResponse = true;
-				//	waitForUserResponse = (InteractionHistory.length==0);
 					var d = new Date();
 					talkingHeadSpeechEndTimestamp = d.getTime();					
 					if (mediaActions != "") {
@@ -695,10 +708,12 @@ function runActions() {
 					waitForUserResponse = false;
 					}
 					if (InteractionHistory.length!=0){
+						maxIdle = parseInt(data);
 					   GetWorldEvent(getRightMsg());
+					}else{
+						maxIdle = parseInt(data) * 10;
 					}
 				}
-				maxIdle = parseInt(data) * 10;
 				break;
 			case "WaitForInput":
 				repeatTimes = 0;
@@ -765,6 +780,7 @@ function runActions() {
 			case "GetMediaMessage":
 				break;
 			case "GetMediaEvent":
+			
 			waitForMediaResponse = true;	
          //   waitForMediaResponse = (InteractionHistory.length==0);			
 				InvokeScript(act, data);
@@ -815,6 +831,7 @@ function runActions() {
 		}
 		var inputjs=ConstructJSONandSubmitAfteActionisDone(null);
 		var savedinput=findCurrentPoint();
+		
 		
 		Put(inputjs);
 		
@@ -1113,8 +1130,11 @@ function getAgentMessage(msg){
 		var pairData={"data":actions,"msg":msg,"CurrentMedia":CurrentMedia.Data};
 		AceResponse(pairData,"interaction");
 	}else{
+		
 		if (InteractionHistory[0].msg==msg){
 		InteractionHistory.shift();
+		}else{
+//			InteractionHistory.shift();
 		}
 	}
 	var msgType = typeof msg;

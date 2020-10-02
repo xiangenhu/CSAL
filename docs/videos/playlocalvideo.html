@@ -69,6 +69,7 @@ vid.onplaying = function() {
 	  
 };
 
+
 //video end event
 vid.onended = function() {
 	myVideoStateChange(0);
@@ -137,6 +138,13 @@ function videoPause() {
 	}
 }
 
+function endVideo(){
+    vid.play();
+    vid.pause();
+    vid.currentTime = 5000000000;
+    vid.play(); 
+//	parent.getLocalVideoState(0);
+}
 
 //get current  Video State
 function getVideoState() { 
