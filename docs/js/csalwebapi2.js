@@ -16,6 +16,16 @@ function insertMdeda(media,list){
 }
 var lastAceAction={};
 
+
+
+function showwarnings(){
+	  if (latency.duration>parseInt(qs("latencyThreshold","1000"))){
+		  $("#runningstatus").show();
+	  }else{
+		  $("#runningstatus").hide();
+	  }
+}
+
 function LastAction(data){
 	lastAceAction={};
 	var askWait=false;
@@ -58,7 +68,7 @@ function Post(acePostjson) {
         success: function(data) {
 		 	latency.finish=new Date();
 			latency.duration=latency.finish-latency.start;
-			
+			showwarnings();
 			var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
 		
 			if (InteractionHistory.length==0){
@@ -70,7 +80,7 @@ function Post(acePostjson) {
     }).done(function(data) {
 		latency.finish=new Date();
 		latency.duration=latency.finish-latency.start;
-		
+		showwarnings();
 		insertMdeda(CurrentMedia,data.ACEActions);
 		
 		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
@@ -105,6 +115,7 @@ function Put(acePutjson) {
         success: function(data) {
 			latency.finish=new Date();
 			latency.duration=latency.finish-latency.start;
+			showwarnings();
 			insertMdeda(CurrentMedia,data.ACEActions);
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}};
 			if (InteractionHistory.length==0){
@@ -137,6 +148,7 @@ function Put(acePutjson) {
 		LastAction(data);
 		latency.finish=new Date();
 		latency.duration=latency.finish-latency.start;
+		showwarnings();
 		
 	    insertMdeda(CurrentMedia,data.ACEActions);
 		if (InteractionHistory.length==0){

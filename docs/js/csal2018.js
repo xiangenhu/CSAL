@@ -191,11 +191,11 @@ $(document).ready(function() {
 	
 	$("#runningstatus" ).mousedown(function() {
 	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
-	  $("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
+	$("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
 	});
 	
 	$("#runningstatus" ).mouseup(function() {
-	  $("#runningstatus").html("<center>Click to see your internet connection status.</center>");
+	$("#runningstatus").html("<center>Click to see your internet connection status.</center>");
 	});
 });
 
