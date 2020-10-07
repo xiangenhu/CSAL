@@ -565,18 +565,18 @@ function runActions() {
 	idleTime = 0;
 	maxIdle = 0;
 	trialTimes++;
-	if (trialTimes==10){
-		if (backupInteractionHistory.length>1){
+	if (InteractionHistory.length>1){
+		if (trialTimes==10){
 			InteractionHistory=removeLastElement(backupInteractionHistory,1);
 			backupInteractionHistory=removeLastElement(InteractionHistory,0);
-		}else{
-			InteractionHistory=[];
+			talkingheadLoaded=true;
+			GetScript(currentLessonID);
+			trialTimes=0;
+			return;
 		}
-		talkingheadLoaded=true;
-		GetScript(currentLessonID);
-		trialTimes=0;
-		return;
 	}
+	
+	
 	if (actions.length != 0) {
 		trialTimes=0;
 //		removemovie();
