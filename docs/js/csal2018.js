@@ -52,6 +52,7 @@ var time_in_min;
 
 var TheMsg="";
 
+var trialTimes=0;
 
 
 function FastForward(){
@@ -563,7 +564,21 @@ function runActions() {
 	
 	idleTime = 0;
 	maxIdle = 0;
+	trialTimes++;
+	if (trialTimes==10){
+		if (backupInteractionHistory.length>1){
+			InteractionHistory=removeLastElement(backupInteractionHistory,1);
+			backupInteractionHistory=removeLastElement(InteractionHistory,0);
+		}else{
+			InteractionHistory=[];
+		}
+		talkingheadLoaded=true;
+		GetScript(currentLessonID);
+		trialTimes=0;
+		return;
+	}
 	if (actions.length != 0) {
+		trialTimes=0;
 //		removemovie();
 		var act = actions[0].Act;
 		var agent = actions[0].Agent;
@@ -796,10 +811,18 @@ function runActions() {
 			case "GetMediaMessage":
 				break;
 			case "GetMediaEvent":
-			
-			waitForMediaResponse = true;	
-         //   waitForMediaResponse = (InteractionHistory.length==0);			
+				/* 	
+				if (InteractionHistory.length==0){
+				waitForMediaResponse = true;	
 				InvokeScript(act, data);
+				}else{
+					waitForMediaResponse = true;	
+				} */	
+				waitForMediaResponse = true;
+				InvokeScript(act, data);
+				/* if (InteractionHistory.length==0){
+				}else{
+				} */
 				break;
 			case "GetMediaFeedback":
 				getMediaFeedBackData = data;
@@ -870,7 +893,12 @@ function StartTimer() {
 	$("#PauseBtn").html("Pause");
 	var interval=100;
 	if (InteractionHistory.length!=0){
-		interval=1;
+		lessonID=sessionStorage.getItem("LessonID");
+		if (lessonID=="lesson1"){
+		interval=100;
+		}else{
+			interval=1;
+		}
 	}
 	timer = setInterval(function() {
 		runActions();
@@ -1410,7 +1438,12 @@ function endCounting() {
 function InvokeScript(funcName, funcParam) {
 
 	if (funcParam != "") {
-		document.getElementById('mainFrame').contentWindow[funcName](funcParam);
+		try {
+			document.getElementById('mainFrame').contentWindow[funcName](funcParam);
+		}catch(err){
+		}finally{
+			document.getElementById('mainFrame').contentWindow[funcName]();
+		}
 	} else {
 		document.getElementById('mainFrame').contentWindow[funcName]();
 	}

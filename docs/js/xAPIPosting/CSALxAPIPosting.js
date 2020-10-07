@@ -37,6 +37,7 @@ var SKOGuid=qs("guid",SKOTitle);
 var allowedTextLevels=["Hard","Medium","Easy","Final",""];
 
 var InteractionHistory=[];
+var backupInteractionHistory=[];
 
 var AllowFastForwarding=(qs("AllowFastForwarding","1")=="1");
 
@@ -387,6 +388,15 @@ function moveforward(){
 	}
 }
 
+function removeLastElement(anArray,k){
+	var i;
+	var returnArray=[];
+	for (i=0;i<anArray.length-k;i++){
+		returnArray.push(anArray[i])
+	}
+	return returnArray;
+}
+
 function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		var queryBody=GetInteractionHistorxAPIJSON(LearnerID.mbox,LessonID.mbox,atimestamp);
 			var settings = {
@@ -403,6 +413,11 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 	$.ajax(settings).done(function (response){ 
 	if (response.length>0){
 		InteractionHistory=response;
+		backupInteractionHistory=removeLastElement(response,0);
+		
+//		backupInteractionHistory=response;
+//		console.log(InteractionHistory);
+//		console.log(backupInteractionHistory);
 		var html='';
 		var starting=DateString(atimestamp);
 		var ending=DateString(InteractionHistory[InteractionHistory.length-1].time);
