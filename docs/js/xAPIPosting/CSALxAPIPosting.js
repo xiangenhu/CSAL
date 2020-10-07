@@ -175,8 +175,11 @@ function ComposewithContextActivities(AnActor,
 		contextActivities={grouping:[{id:SKOSchool},{id:sessionID}]};
 	}
 	var exturl=ITProfile+"CSAL/Data";
-	
+	if (Extdata.extensions[exturl].data.input.PresentationHistory!=null){
 	var PresentationHistory=JSON.parse(Extdata.extensions[exturl].data.input.PresentationHistory);
+	}else{
+		return null;
+	}
 	
 	if (PresentationHistory.userSelectedItem==""){
 		return null;
