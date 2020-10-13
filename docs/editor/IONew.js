@@ -1,6 +1,18 @@
+function qs(search_for,defaultstr) {
+	var query = window.location.search.substring(1);
+	var parms = query.split('&');
+	
+	for (var i = 0; i<parms.length; i++) {
+		var pos = parms[i].indexOf('=');
+		if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+			return parms[i].substring(pos+1);
+			}
+		}
+		return defaultstr;
+}
 
 var xmlArray=[];
-var ASATLocation="asat.autotutor.org"
+var ASATLocation="asat.autotutor.org";
 
 var savescriptsverbid="http://asat.autotutor.org/saved";
 var theTestSchool=qs("school","https://class.x-in-y.com");
@@ -12,7 +24,7 @@ var Theauthorname=qs("author","xiangenhu");
 var theType=qs("type","ASAT");
 
 var theTagName=qs("tag","SKOSCRIPTS");
-var userEmail=qs("email","");
+var userEmail=qs("email","test@autotutor.org");
 var jsonData = null;
 
 var loadedSKOReadonly=false;
@@ -26,6 +38,15 @@ var inforPanel=["#XMLtree","#Outline","#About","#tree","#CommitChanges"];
 
 var outputXML=document.implementation.createDocument(null, "root");
 var outputXMLstr="";
+
+
+var RetriveSKOObj={
+		guid:SKOGuid,
+		source:"ScriptOnly",
+		return:"scriptContent",
+		authorname:"xiangenhu"
+	};
+
 var typeDef={
     "root" : {
       "icon" : "img/tree_icon.png",
@@ -39,10 +60,51 @@ var typeDef={
       "valid_children" : []
     }
   };
+  
 var Plugins= [
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ];
+  
+
+var asatWrapper; 
+var Datawrapper;
+// Data LRS 
+var LRSURL=qs("lrs","https://record.x-in-y.com/csalexclusive/xapi/");
+var LRSLogin=qs("lrslogin","asaiga");
+var LRSPassword=qs("lrspassword","padkep");
+// Data LRS 
+// ScriptLRS LRS 
+var asatlrs=qs("asatlrs","https://record.x-in-y.com/scripts/xapi/");
+var asatlrslogin=qs("asatlrslogin",'asatScripts');
+var asatlrspassword=qs("asatlrspassword",'asatScripts');
+// ScriptLRS LRS 
+
+function DataLRS(){  // data LRS
+    ADL.launch(function(err, launchdata, xAPIWrapper) {
+	Datawrapper = ADL.XAPIWrapper;
+	Datawrapper.changeConfig({
+			endpoint: LRSURL,
+			user: LRSLogin,
+			password:LRSPassword
+		})
+	console.log("--- content statically configured ---\n", Datawrapper.lrs);
+}, true)
+}
+
+function ScriptLRS(){ //Script storage
+  ADL.launch(function(err, launchdata, xAPIWrapper) {
+	asatWrapper = ADL.XAPIWrapper;
+	asatWrapper.changeConfig({
+			endpoint: asatlrs,
+			user: asatlrslogin,
+			password:asatlrspassword
+		})
+	console.log("--- content statically configured ---\n", asatWrapper.lrs);
+}, true)
+}
+
+  
  
  function S4() {
     return (((1+Math.random())*0x10000)|0).toString(16).substring(1); 
@@ -97,7 +159,7 @@ function xmlToJson(xml) {
 
 function ConnectAndGetScriptsFromSKOServer() {
   RetriveSKOObj.TagName = "SKOSCRIPTS";
-  var url = SKOSchool + "/retrieve?json=" + JSON.stringify(RetriveSKOObj);
+  var url = theTestSchool + "/retrieve?json=" + JSON.stringify(RetriveSKOObj);
   var IDRetrive = new XMLHttpRequest();
   IDRetrive.overrideMimeType('text/xml; charset=utf-8');
   IDRetrive.open('GET', url, true);
@@ -106,14 +168,9 @@ function ConnectAndGetScriptsFromSKOServer() {
     SKOScriptsinJSON = xmlToJson($.parseXML(ScriptsRetrivedToXML));
 	var TheXML=$.parseXML(ScriptsRetrivedToXML);
 	AutoTutorScript=TheXML.getElementsByTagName("AutoTutorScript")[0];
-	if (qs("editing","0")=="1"){
-		 addMenu();
-		 drawTree("#tree",IDRetrive.responseText);
-		$("#editor").show();
-		
-	}else{
-		StartProcessingScripts(SKOScriptsinJSON);
-	}
+	addMenu();
+	drawTree("#tree",IDRetrive.responseText);
+	$("#editor").show();
   }
   IDRetrive.send(null);
 }
@@ -213,8 +270,9 @@ function RetrieveSKOfromLRS(TheEditor){
 
 
 function TestEdited(){
-	DataLRS();
-	GetStarted();
+//	DataLRS();
+//	GetStarted();
+// No need to do this at this time.
 }
 
 
@@ -434,7 +492,7 @@ function UpdateEdited(){
 	outputXMLstr=outputXMLstr.split("&lt;").join("<");
 	outputXMLstr=outputXMLstr.split("&gt;").join(">");
 	outputXMLstr=outputXMLstr.replace(/xmlns="[^"]*"/g,"");
-    ScriptLRS();	
+	
 }
 	
 function JSONtoXML(json) {
@@ -627,6 +685,7 @@ function savesko(){
 
 
 function CommitToScriptLRS(){
+	 ScriptLRS();
 	if (thepermission==null){
 		thepermission=GetSaveOptions();
 	}
