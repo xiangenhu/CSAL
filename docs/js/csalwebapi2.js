@@ -69,7 +69,7 @@ function Post(acePostjson) {
 		 	latency.finish=new Date();
 			latency.duration=latency.finish-latency.start;
 			showwarnings();
-			var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
+			var Data={"latency":latency,"data":{"input":"","response":data}};
 		
 			if (InteractionHistory.length==0){
 				xAPIPostStart(Data,"start");
@@ -83,7 +83,7 @@ function Post(acePostjson) {
 		showwarnings();
 		insertMdeda(CurrentMedia,data.ACEActions);
 		
-		var Data={"latency":latency,"data":{"input":acePostjson,"response":data}};
+		var Data={"latency":latency,"data":{"input":"","response":data}};
 		LastData=data;
 		LastAction(data);
 		if (InteractionHistory.length==0){
@@ -92,6 +92,8 @@ function Post(acePostjson) {
 		
         var errorInfo = GetRuleError(data);
         if (errorInfo == false) {
+		//	acePostjson.ScriptXML=""
+		//	acePostjson.ScriptURL=currentScripturl;
             Put(acePostjson);
         } else {
             alert("Post Error");
@@ -104,6 +106,7 @@ function Post(acePostjson) {
 }
 
 function Put(acePutjson) { 
+    acePutjson.ScriptXML="";
 	var content = acePutjson;
     var method = "PUT";
     webAPImethod = method;

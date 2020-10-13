@@ -28,6 +28,7 @@ var xAPIVerbBase=qs("verbbase",ITProfile);
 var wrapper;
 var SKOSchool="AutoTutorARC:"+qs("client","moodle");
 var sessionID="http://"+qs("ssid","anAICC_sid");
+var TheSchool=qs("school","https://class.x-in-y.com");
 
 var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
 var user=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
@@ -135,7 +136,7 @@ var LessonID={mbox:"mailto:"+SKOGuid+"@csal.memphis.edu",
 				 name:SKOTitle,
 				 objectType:"Agent"
 				};
-
+/* 
  ADL.launch(function(err, launchdata, xAPIWrapper) {
 		if (!err) {
 			wrapper = ADL.XAPIWrapper = xAPIWrapper;
@@ -150,7 +151,7 @@ var LessonID={mbox:"mailto:"+SKOGuid+"@csal.memphis.edu",
 			console.log("--- content statically configured ---\n", wrapper.lrs);
 		}
 	}, true);
-
+ */
 
 function ComposewithContextActivities(AnActor,
                 verbObj,
@@ -538,13 +539,15 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 					  return;
 				  }
 					var TheResult=statementGot.result.extensions["https://app.skoonline.org/ITSProfile/CSAL/Result"];
-					if (TheResult.Score.total!=null){
-//					console.log(JSON.stringify(TheResult.Score.total));
-					totalScore=TheResult.Score.total;
-					if (totalScore.Final.success==null){
-						totalScore.Final={"success":0,"failure":0}
+					if (TheResult!=""){
+						if (TheResult.Score.total!=null){
+	//					console.log(JSON.stringify(TheResult.Score.total));
+						totalScore=TheResult.Score.total;
+						if (totalScore.Final.success==null){
+							totalScore.Final={"success":0,"failure":0}
+						}
+					  }
 					}
-				  }
 				}
 			}
 	});

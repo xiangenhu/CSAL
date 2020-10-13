@@ -14,6 +14,7 @@ var LRSURL=qs("lrs","https://record.x-in-y.com/atarc/xapi/");
 var LRSLogin=qs("lrslogin","sojpen");
 var LRSPassword=qs("lrspassword","zazubz");
 var wrapper;
+var TheSchool=qs("school","https://class.x-in-y.com");
 var SKOSchool="AutoTutorARC:"+qs("client","ProLiteracy");
 var sessionID="http://"+qs("ssid","anAICC_sid");
 var usermail=qs("UID","xhu@memphis.edu");

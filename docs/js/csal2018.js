@@ -181,8 +181,29 @@ talkingheadOn="true";
 
 
 }
-
-$(document).ready(function() {
+function GetStarted(){
+	DataLRS();
+	$("#editor").hide();
+	loadAgent();
+	showCC(false);
+	
+	Learner=sessionStorage.getItem("UID");
+	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
+	GetSCORE(LRSURL,LRSLogin,LRSPassword);
+	if (AllowFastForwarding){
+		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
+	}
+	
+	$("#runningstatus" ).mousedown(function() {
+	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
+	$("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
+	});
+	
+	$("#runningstatus" ).mouseup(function() {
+		$("#runningstatus").html("<center>Click to see your internet connection status.</center>");
+	});
+	
+	
 	Learner=sessionStorage.getItem("UID");
 	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
 	GetSCORE(LRSURL,LRSLogin,LRSPassword);
@@ -198,13 +219,6 @@ $(document).ready(function() {
 	$("#runningstatus" ).mouseup(function() {
 	$("#runningstatus").html("<center>Click to see your internet connection status.</center>");
 	});
-});
-
-
-$(document).ready(function() {
-	loadAgent();
-	showCC(false);
-	
 	
 
 	$("#repeat").click(function() {
@@ -351,8 +365,19 @@ $(document).ready(function() {
 			mediaElement.src = '';
 		}
 	});
+}
 
+
+$(document).ready(function() {
+	if (qs("editing","0")=="1"){
+		onLoad1();
+		return;
+	}else{
+		
+	GetStarted();
+	}
 });
+
 function startLesson()
 {
 var x2 = $(window).width();
@@ -405,7 +430,12 @@ function LoadLesson(lessonID) {
 	setPresentationIDObj(lessonID, currentScripturl);
 
 	var acePostjson = {};
-	acePostjson.ScriptURL = currentScripturl;
+	if (AutoTutorScript!=""){
+		var theScripts=new XMLSerializer().serializeToString(AutoTutorScript);
+		acePostjson.ScriptXML=formatXml(theScripts,'\t');
+	}else{
+		acePostjson.ScriptURL = currentScripturl;
+	}
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	
