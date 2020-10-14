@@ -373,7 +373,6 @@ $(document).ready(function() {
 		onLoad1();
 		return;
 	}else{
-		
 	GetStarted();
 	}
 });
@@ -423,7 +422,13 @@ function LoadLesson(lessonID) {
 	
 	currentScripturl = scriptFolderURL + lessonID + "/ActivityMedia/Activity.xml";
 	if (qs("useGUID","1")==1){
-       currentScripturl = aurl;
+		if (asatLRSExists=="0"){
+          currentScripturl = aurl;
+		}else{
+			guid=qs("guid","");
+			currentScripturl=qs("directscriptLink","https://author.autotutor.org/theeditor.html?fetch=1&guid="+guid+"&Etag=AutoTutorScript");
+		}
+   
 	}
 	
 	currentMediaPath = MediaFolderURL + lessonID + "/ActivityMedia/";
@@ -432,7 +437,8 @@ function LoadLesson(lessonID) {
 	var acePostjson = {};
 	if (AutoTutorScript!=""){
 		var theScripts=new XMLSerializer().serializeToString(AutoTutorScript);
-		acePostjson.ScriptXML=formatXml(theScripts,'\t');
+		//acePostjson.ScriptXML=formatXml(theScripts,'\t');
+		acePostjson.ScriptXML=theScripts;
 	}else{
 		acePostjson.ScriptURL = currentScripturl;
 	}

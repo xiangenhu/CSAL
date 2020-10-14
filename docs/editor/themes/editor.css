@@ -68,3 +68,18 @@
 	height:100%;
 	width:100%;
 }
+#GoogleLoginBtn{
+	top:50%;
+	left:50%;
+	width:70px;  /* adjust as per your needs */
+	height:40px;   /* adjust as per your needs */
+	margin-left:-30px;   /* negative half of width above */
+	margin-top:-20px;   /* negative half of height above */
+	position:absolute;
+	z-index: 1001;
+}
+#authorPic{
+	right:30px;
+	top:40px;
+	position:absolute;
+}

@@ -12,19 +12,21 @@ function qs(search_for,defaultstr) {
 }
 
 var xmlArray=[];
+var asatLRSExists="0";
 var ASATLocation="asat.autotutor.org";
 
 var savescriptsverbid="http://asat.autotutor.org/saved";
-var theTestSchool=qs("school","https://class.x-in-y.com");
 
-var theTestGUID=qs("guid","f86b9c25-859e-4f1a-9371-4890457707b1");
+var theSchool=qs("school","https://class.x-in-y.com");
 
-var Theauthorname=qs("author","xiangenhu");
+var theGUID=qs("guid","f86b9c25-859e-4f1a-9371-4890457707b1");
 
+var Theauthorname=qs("fullname","");
+var exportTag=qs("ETag","AutoTutorScript");
 var theType=qs("type","ASAT");
 
 var theTagName=qs("tag","SKOSCRIPTS");
-var userEmail=qs("email","test@autotutor.org");
+var userEmail=qs("email","");
 var jsonData = null;
 
 var loadedSKOReadonly=false;
@@ -33,15 +35,32 @@ var AutoTutorScript="";
 var theXML="";
 var thepermission;
 var NewGUID="";
-
+var authorImgurl;
 var inforPanel=["#XMLtree","#Outline","#About","#tree","#CommitChanges"];
 
 var outputXML=document.implementation.createDocument(null, "root");
 var outputXMLstr="";
 
+ function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  Theauthorname=profile.getName();
+  authorImgurl=profile.getImageUrl();
+  userEmail= profile.getEmail();
+  AuserxAPI="mailto:"+profile.getEmail();
+  $("#GoogleLoginBtn").hide();
+  onLoad1();
+}
 
 var RetriveSKOObj={
-		guid:SKOGuid,
+		guid:theGUID,
 		source:"ScriptOnly",
 		return:"scriptContent",
 		authorname:"xiangenhu"
@@ -159,7 +178,7 @@ function xmlToJson(xml) {
 
 function ConnectAndGetScriptsFromSKOServer() {
   RetriveSKOObj.TagName = "SKOSCRIPTS";
-  var url = theTestSchool + "/retrieve?json=" + JSON.stringify(RetriveSKOObj);
+  var url = theSchool + "/retrieve?json=" + JSON.stringify(RetriveSKOObj);
   var IDRetrive = new XMLHttpRequest();
   IDRetrive.overrideMimeType('text/xml; charset=utf-8');
   IDRetrive.open('GET', url, true);
@@ -175,6 +194,28 @@ function ConnectAndGetScriptsFromSKOServer() {
   IDRetrive.send(null);
 }
 
+function retriveScriptByID(id){
+	var jsonforID=[
+	{"$match":{"statement.object.mbox":"mailto:"+id+"@asat.autotutor.org"}},{"$sort":{"statement.timestamp":-1}},{"$limit":1}, 
+    {"$project":{"ext":"$statement.result.extensions.http://asat.autotutor.org/scripts"}},
+    {"$project":{"script":"$ext.script"}}
+	]
+	var settings = {
+		"url": qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+"/statements/aggregate",
+		"method": "POST",
+		"timeout": 0,
+		"headers": {
+			"Authorization": "Basic YXNhdFNjcmlwdHM6YXNhdFNjcmlwdHM=",
+			"Content-Type": "application/json"
+			},
+	  "data": JSON.stringify(jsonforID),
+	};
+	$.ajax(settings).done(function (response) {
+	 if (response.length>0){
+		 downloadxml(id+".xml",response[0].script,exportTag);
+	 }
+	});
+}
  
 function RetrieveSKOfromLRS(TheEditor){
 	var jsonStr;
@@ -183,7 +224,7 @@ function RetrieveSKOfromLRS(TheEditor){
 					{"$match": {
 						"$and":[
 									{"statement.verb.id":savescriptsverbid},
-									{"statement.object.mbox":"mailto:"+theTestGUID+"@"+ASATLocation},
+									{"statement.object.mbox":"mailto:"+theGUID+"@"+ASATLocation},
 									{"statement.actor.mbox":"mailto:"+userEmail}
 
 								]
@@ -210,7 +251,7 @@ function RetrieveSKOfromLRS(TheEditor){
 						{"$match": {
 							"$and":[
 										{"statement.verb.id":savescriptsverbid},
-										{"statement.object.mbox":"mailto:"+theTestGUID+"@"+ASATLocation}
+										{"statement.object.mbox":"mailto:"+theGUID+"@"+ASATLocation}
 
 									]
 									}
@@ -255,13 +296,9 @@ function RetrieveSKOfromLRS(TheEditor){
 		 SKOScriptsinJSON = xmlToJson($.parseXML(ScriptsRetrivedToXML));
 		var TheXML=$.parseXML(ScriptsRetrivedToXML);
 		AutoTutorScript=TheXML.getElementsByTagName("AutoTutorScript")[0];
-		if (qs("editing","0")=="1"){
-			addMenu();
-			drawTree("#tree",response[0].script);
-			$("#editor").show();
-		}else{
-			StartProcessingScripts(SKOScriptsinJSON);
-		}
+		addMenu();
+		drawTree("#tree",response[0].script);
+		$("#editor").show();
 	 }else{
 		  ConnectAndGetScriptsFromSKOServer();
 	 }
@@ -269,13 +306,36 @@ function RetrieveSKOfromLRS(TheEditor){
 }
 
 
-function TestEdited(){
-//	DataLRS();
-//	GetStarted();
-// No need to do this at this time.
+
+function downloadxml(theguid,thexml,tagname){ 
+	if (tagname=="SKOSCRIPTS"){
+		var Theelement = document.createElement('a');
+		  Theelement.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(thexml));
+		  Theelement.setAttribute('download', theguid);
+		  Theelement.style.display = 'none';
+		  document.body.appendChild(Theelement);
+		  Theelement.click();
+		  document.body.removeChild(Theelement);
+	}else{
+		var Theelement = document.createElement('a');
+		
+	      var theText=jQuery.parseXML(thexml);
+		  var Thenewcomponent=theText.getElementsByTagName(tagname)[0];
+		  var thexml=new XMLSerializer().serializeToString(Thenewcomponent);
+		  
+		  Theelement.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(thexml));
+		  Theelement.setAttribute('download', theguid);
+		  Theelement.style.display = 'none';
+		  document.body.appendChild(Theelement);
+		  Theelement.click();
+		  document.body.removeChild(Theelement);
+	}
 }
-
-
+function onloadaction(){
+	if (qs("fetch","0")=="1"){
+		retriveScriptByID(theGUID);
+	}
+}
  
  function addMenu(){
 		 var editMenuhtml="<button class='btn' id='viewAboutbtn' onclick='about()'>About</button>";
@@ -283,7 +343,7 @@ function TestEdited(){
 		 editMenuhtml=editMenuhtml+"  <button class='btn' id='viewTreebtn' onclick='viewTree()'>View Tree</button>";
 		 editMenuhtml=editMenuhtml+"  <button class='btn' id='viewXMLbtn' onclick='viewxml()'>View XML</button>";
 		 editMenuhtml=editMenuhtml+"  <button class='btn' id='viewOutline' onclick='viewOutline()'>View Outline</button>";
-		 editMenuhtml=editMenuhtml+"  <button class='btn' id='editorTestbtn' onclick='TestEdited()'>Preview SKO</button>";
+		 editMenuhtml=editMenuhtml+"  <button class='btn' id='editorTestbtn' onclick='TestEdited()'>Test SKO</button>";
 		 editMenuhtml=editMenuhtml+"  <button class='btn' id='editorSavebtn' onclick='CommitToScriptLRS()'>Commit Changes</button>";
 		 editMenuhtml=editMenuhtml+"  <input id='editorSearchInput' value=''></input>";
 		 editMenuhtml=editMenuhtml+"  <button class='btn' id='editorSearchbtn' onclick='SearchStr()'>Search</button>";
@@ -309,13 +369,26 @@ function onLoad1(){
 	$("#editor").show();
 } 
 
+
+
+function TestEdited(){
+	asatLRSExists="1"
+	GetStarted();
+	$("#editor").hide();
+//	Create a link so it can be used to download the script.
+}
+
 function about(){
 //	["#XMLtree","#Outline","#About","#tree"]
-    var html="<ol>";
-	html=html+"<li> School: "+ theTestSchool;
-	html=html+"<li> GUID: "+ theTestGUID;
-	html=html+"<li> Saving: <div id='endpoint'></div>";
-	html=html+"</ol>";
+    var html="<ul>";
+	html=html+"<li> Author: "+Theauthorname;
+	html=html+"<li> Unique Indentification for current SKO (GUID): "+ theGUID;
+	html=html+"<li> Original localtion: "+theSchool;
+	html=html+"<li> Current location: "+asatlrs;
+	html=html+"</ul>";
+	html=html+"<hr/>";
+	html=html+"<div id='YourSKOs'> </div>";
+	html=html+"<img id='authorPic' src='"+authorImgurl+"'</img>"
 	$("#About").html(html);
 	showInfor(2);
 }
@@ -647,8 +720,8 @@ function viewOutline(){
 }
 
 function RetriveSKO(){
-	var guid=theTestGUID;
-	var school=theTestSchool;
+	var guid=theGUID;
+	var school=theSchool;
 	var type="ASAT";
 	var anauthorname=Theauthorname;
 	Retrieve(guid,school,type,anauthorname);
@@ -731,7 +804,7 @@ function CommitToScriptLRS(){
 		}
 	} else {
 		if ( resp.responseText )
-			text = "Script localtion "+asatWrapper.lrs.endpoint+ " Successfully saved " + resp.responseText;
+			text = "Script localtion "+asatWrapper.lrs.endpoint+ " Successfully saved with entry ID" + resp.responseText;
 		else
 			text = thing;
 	}
@@ -745,7 +818,8 @@ function CreateSKO(thepermision,newsko){
 		return;
 	}
 	var actor={
-        "mbox": "mailto:"+userEmail
+        "mbox": "mailto:"+userEmail,
+		"name": Theauthorname
 	}
 	var verb={
         "id": "http://asat.autotutor.org/saved",
@@ -768,7 +842,7 @@ function CreateSKO(thepermision,newsko){
 		NewGUID= GetGUID();
 		theTitle="copy of "+theTitle;
 	}else{
-		NewGUID=theTestGUID;
+		NewGUID=theGUID;
 	}
 	
 	var object={
