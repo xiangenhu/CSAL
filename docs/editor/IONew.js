@@ -290,9 +290,14 @@ function RetrieveSKOfromLRS(TheEditor){
 			 ConnectAndGetScriptsFromSKOServer();
 			 return;
 		 }
-		 ScriptsRetrivedToXML = "<?xml version='1.0' encoding='utf-8'?> \n" + response[0].script;
+		 if (response[0].script.indexOf("<?xml")==-1){
+			ScriptsRetrivedToXML = "<?xml version='1.0' encoding='utf-8'?> \n" + response[0].script;
+		 }else{
+			 ScriptsRetrivedToXML = response[0].script;
+		 }
 		 thepermission=response[0].permission;
 		 loadedSKOReadonly=thepermission.readonly;
+		 var theXML=$.parseXML(ScriptsRetrivedToXML);
 		 SKOScriptsinJSON = xmlToJson($.parseXML(ScriptsRetrivedToXML));
 		var TheXML=$.parseXML(ScriptsRetrivedToXML);
 		AutoTutorScript=TheXML.getElementsByTagName("AutoTutorScript")[0];
