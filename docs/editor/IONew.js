@@ -12,7 +12,7 @@ function qs(search_for,defaultstr) {
 }
 
 var xmlArray=[];
-var asatLRSExists="0";
+var asatLRSExists=qs("asatDirect","0");
 var ASATLocation="asat.autotutor.org";
 
 var savescriptsverbid="http://asat.autotutor.org/saved";
@@ -377,7 +377,6 @@ function onLoad1(){
 
 
 function TestEdited(){
-	asatLRSExists="1"
 	GetStarted();
 	$("#editor").hide();
 //	Create a link so it can be used to download the script.
