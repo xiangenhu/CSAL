@@ -186,8 +186,10 @@ function ConnectAndGetScriptsFromSKOServer() {
   ScriptsRetrivedToXML = "<?xml version='1.0' encoding='utf-8'?> \n" + IDRetrive.responseText;
     SKOScriptsinJSON = xmlToJson($.parseXML(ScriptsRetrivedToXML));
 	var TheXML=$.parseXML(ScriptsRetrivedToXML);
+	processingTree(TheXML);
 	AutoTutorScript=TheXML.getElementsByTagName("AutoTutorScript")[0];
 	addMenu();
+	
 	drawTree("#tree",IDRetrive.responseText);
 	$("#editor").show();
   }
@@ -300,6 +302,7 @@ function RetrieveSKOfromLRS(TheEditor){
 		 var theXML=$.parseXML(ScriptsRetrivedToXML);
 		 SKOScriptsinJSON = xmlToJson($.parseXML(ScriptsRetrivedToXML));
 		var TheXML=$.parseXML(ScriptsRetrivedToXML);
+		processingTree(TheXML);
 		AutoTutorScript=TheXML.getElementsByTagName("AutoTutorScript")[0];
 		addMenu();
 		drawTree("#tree",response[0].script);
@@ -496,6 +499,7 @@ function Retrieve(guid,school,type,anauthorname) {
 	var ISLink=aurl+"?json="+JSON.stringify(retriveObj);
 	 $.get(ISLink, function(data, status){
 		 ScriptsRetrivedToXML="<?xml version='1.0' encoding='utf-8'?> \n" + data;
+		 processingTree(ScriptsRetrivedToXML);
 		 drawTree("#tree",data);
 		});
 		}
@@ -540,13 +544,14 @@ var Thetree;
 
 
 function processingTree(node){
+	return; // do not process
 	if (ignoredTags.includes(node.tagName)) {
 		alert(node.tagName);
 	}else{
 		if (node.childNodes.length>0){
-			for (var i=node.childNodes.length-1;i>0;i--){
+			for (var i=node.childNodes.length-1;i>-1;i--){
 				var thenode=node.childNodes[i];
-				if (ignoredTags.includes(thenode.tagName)){
+				if (ignoredTags.includes(thenode.nodeName)){
 					node.removeChild(thenode);
 				}else {
 					processingTree(thenode);
@@ -564,7 +569,7 @@ function UpdateEdited(){
 	
 	var json =$("#tree").jstree(true).get_json('#', {flat:true});
 	JSONtoXML(json);
-	processingTree(outputXML);
+//	processingTree(outputXML);
 	outputXMLstr=(new XMLSerializer()).serializeToString(outputXML);
 	outputXMLstr=outputXMLstr.split("&lt;").join("<");
 	outputXMLstr=outputXMLstr.split("&gt;").join(">");
@@ -877,18 +882,20 @@ function xml22Json(xmlNode) {
 	var attr="";
 	var cdata="";
 	var CAchildren=[];
+	var i;
 	 if (xmlNode.attributes.length > 0) {
 		  obj["text"]="attributes";
 		  for (var j = 0; j < xmlNode.attributes.length; j++) {
 			var attribute = xmlNode.attributes.item(j);
-			if (!ignoredList.includes(attribute.nodeName)){
-				var attObj={"text":"<b>_"+attribute.nodeName+"</b>","children":[{"text":attribute.nodeValue}]}  
-				CAchildren.push(attObj)
-			}
+			var attObj={"text":"<b>_"+attribute.nodeName+"</b>","children":[{"text":attribute.nodeValue}]}  
+			CAchildren.push(attObj);
 		  }
      }
 	obj["children"]=CAchildren;
 	var avalue="";
+	if (xmlNode.children.length>0){
+		
+	}
     if(xmlNode.firstChild){
 	if(xmlNode.firstChild.nodeType === 3){ 
 		if(xmlNode.firstChild.nodeValue.trim() === ""){
@@ -909,12 +916,8 @@ function xml22Json(xmlNode) {
 		val = xmlNode.nodeName;
 	}
 	
-	var childrenObj = [];
-	if (ignoredTags.includes(xmlNode.nodeName)){
-	//	console.log("Ignored "+xmlNode.nodeName);
-	}else{
-		childrenObj = [...xmlNode.children].map(childNode => xml22Json(childNode))
-	}
+	var childrenObj = childrenObj = [...xmlNode.children].map(childNode => xml22Json(childNode))
+	
 	
 	if (CAchildren.length>0){
 		childrenObj.push(obj)
