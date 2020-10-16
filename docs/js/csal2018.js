@@ -426,7 +426,7 @@ function LoadLesson(lessonID) {
           currentScripturl = aurl;
 		}else{
 			guid=qs("guid","");
-			currentScripturl=qs("directscriptLink","https://author.autotutor.org/theeditor.html?fetch=1&guid="+guid+"&Etag=AutoTutorScript");
+			currentScripturl=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid="+guid+"&tag=AutoTutorScript");
 		}
    
 	}
@@ -435,9 +435,8 @@ function LoadLesson(lessonID) {
 	setPresentationIDObj(lessonID, currentScripturl);
 
 	var acePostjson = {};
-	if (AutoTutorScript!=""){
+	if ((AutoTutorScript!="")&&(qs("useXML","0")=="1")){
 		var theScripts=new XMLSerializer().serializeToString(AutoTutorScript);
-		//acePostjson.ScriptXML=formatXml(theScripts,'\t');
 		acePostjson.ScriptXML=theScripts;
 	}else{
 		acePostjson.ScriptURL = currentScripturl;
