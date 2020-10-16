@@ -397,7 +397,7 @@ function about(){
 	showInfor(2);
 }
 
-var ignoredList=["UID","play","playaction",
+var ignoredList=["UID","playaction",
 				 "Student1Pub","Student2Pub","Student3Pub","TeacherPub",
 				 "S1X","S1Y",
 				 "S2X","S2Y",
