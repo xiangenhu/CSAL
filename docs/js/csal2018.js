@@ -707,7 +707,8 @@ function runActions() {
 				{
 					if (InteractionHistory.length==0){
 						agentBusy = true;
-						var SName = sessionStorage.getItem("SName");
+					//	var SName = sessionStorage.getItem("SName");
+						var SName=GetFullName();
 						data = data.replace("_user_,", "#"+SName+"#");
 						data = data.replace("_user_!", "#"+SName+"#");
 						data = data.replace("_user_.", "#"+SName+"#");
