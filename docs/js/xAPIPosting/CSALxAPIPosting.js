@@ -26,13 +26,33 @@ var LRSPassword=qs("lrspassword","padkep");
 var xAPIVerbBase=qs("verbbase",ITProfile);
 
 var wrapper;
+
 var SKOSchool="AutoTutorARC:"+qs("client","moodle");
 var sessionID="http://"+qs("ssid","anAICC_sid");
 var TheSchool=qs("school","https://class.x-in-y.com");
-
 var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
-var user=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
-var fullname=decodeURIComponent(qs("fullname",qs("SName","John Doe")));
+
+
+function GetEmail(){
+	if (GoogleLogin){
+		return userEmail;
+	}else{
+		return decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
+	}
+}
+var user=GetEmail();
+
+
+
+function GetFullName(){
+	if (GoogleLogin){
+		return Theauthorname;
+	}else{
+		return decodeURIComponent(qs("fullname",qs("SName","John Doe")));
+	}
+}
+var fullname=GetFullName();
+
 var SKOGuid=qs("guid",SKOTitle);
 
 var allowedTextLevels=["Hard","Medium","Easy","Final",""];
