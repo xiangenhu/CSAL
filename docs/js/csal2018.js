@@ -182,6 +182,8 @@ talkingheadOn="true";
 
 }
 function GetStarted(){
+   user=GetEmail();
+   fullname=GetFullName();
 	DataLRS();
 	$("#editor").hide();
 	loadAgent();
