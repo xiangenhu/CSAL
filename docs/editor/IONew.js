@@ -340,6 +340,7 @@ function downloadxml(theguid,thexml,tagname){
 	}
 }
 function onloadaction(){
+	return;
 	if (qs("fetch","0")=="1"){
 		retriveScriptByID(theGUID);
 	}
