@@ -181,25 +181,9 @@ talkingheadOn="true";
 
 
 }
-function GetStarted(){
-   user=GetEmail();
-   fullname=GetFullName();
-   LearnerID={mbox:"mailto:"+user,
-				 name:fullname,
-				 objectType:"Agent"
-				};
-	DataLRS();
-	$("#editor").hide();
-	loadAgent();
-	showCC(false);
-	
-	Learner=sessionStorage.getItem("UID");
-	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
-	GetSCORE(LRSURL,LRSLogin,LRSPassword);
-	if (AllowFastForwarding){
-		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
-	}
-	
+
+function GetTheEventAssigned(){
+		
 	$("#runningstatus" ).mousedown(function() {
 	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
 	$("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
@@ -374,7 +358,30 @@ function GetStarted(){
 }
 
 
+function GetStarted(){
+   user=GetEmail();
+   fullname=GetFullName();
+   LearnerID={mbox:"mailto:"+user,
+				 name:fullname,
+				 objectType:"Agent"
+				};
+	DataLRS();
+	$("#editor").hide();
+	loadAgent();
+	showCC(false);
+	
+	Learner=sessionStorage.getItem("UID");
+	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
+	GetSCORE(LRSURL,LRSLogin,LRSPassword);
+	if (AllowFastForwarding){
+		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
+	}
+	
+}
+
+
 $(document).ready(function() {
+	GetTheEventAssigned();
 	if (qs("editing","0")=="1"){
 		onLoad1();
 		return;
