@@ -114,10 +114,9 @@ function addRepeatSpeech(agent_speech)
 	}
 	SpeakRepeatList.push(agent_speech);
 }
-function loadAgent()
-{
-document.getElementById('agentsLarge').src = "angentsjs/speakTH.html";
-			talkingheadLoaded = true;
+function loadAgent() {
+   document.getElementById('agentsLarge').src = "angentsjs/speakTH.html";
+			talkingheadLoaded = true; 
 			
 }
 function getLessonInfo() {
@@ -252,15 +251,28 @@ function GetTheEventAssigned(){
 			$("#PauseBtn").html("Continue");
 			$("#FeedBackBtn").show();
 			$("#ScoreBtn").show();
+			if (qs("editing","0")=="1"){
+			   $("#EditingBtn").show();
+			}
 			StopTimer();
 		}else{
 			$("#FeedBackBtn").hide();
 			$("#ScoreBtn").hide();
+			if (qs("editing","0")=="1"){
+			   $("#EditingBtn").hide();
+			}
 			StartTimer();
 		}
 		
 	});
 	
+	
+	
+	$("#EditingBtn").click(function() {
+		$("#containerNoImg").hide();
+		$("#editor").show();
+		
+	});
 	
 	$("#ScoreBtn").click(function() {
 		$("#ScorePanel").slideToggle("slow",function(){
@@ -368,8 +380,8 @@ function GetStarted(){
 	DataLRS();
 	$("#editor").hide();
 	loadAgent();
+	$("#containerNoImg").show();
 	showCC(false);
-	
 	Learner=sessionStorage.getItem("UID");
 	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
 	GetSCORE(LRSURL,LRSLogin,LRSPassword);
