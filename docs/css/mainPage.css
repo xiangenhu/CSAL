@@ -580,6 +580,31 @@ div#controlButton{
 	border: 1px solid #f8ffca;
 }
 
+#EditingBtn{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color:Green;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 695px;
+	margin-left: 680px;
+	position:absolute;	
+	border-radius: 7px;
+	border: 1px solid white;
+	cursor: pointer;
+	z-index: 40;
+	display:none;
+}
+
+#EditingBtn:hover {
+	color:yellow;
+	border: 1px solid #f8ffca;
+}
+
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
