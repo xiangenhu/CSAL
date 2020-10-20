@@ -24,7 +24,6 @@ var getMediaFeedBackData;
 var getMediaFeedBack = false;
 var pageStartTimestamp;
 var mediaActions = "";
-//lesson config
 var isHasProgressBar = false;
 var isHasNextButton = false;
 var isHasVideo = false;
@@ -506,7 +505,6 @@ function LoadLesson(lessonID) {
 	replayVideoTimes = 0;
 	currentJSON=acePostjson;
 	Post(acePostjson);
-	theFirstJsonPost=acePostjson;
 	checkLessonConfig(lessonID, 1);
 
 
