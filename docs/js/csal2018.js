@@ -41,7 +41,7 @@ var currentPageInfor;
 var currentJSON;
 var longAction=[];
 var nextbtnClicked=false;
-
+var theFirstJsonPost;
 var listofMessage=[];
 
 var InputFound;
@@ -371,6 +371,10 @@ function GetTheEventAssigned(){
 
 
 function GetStarted(){
+	if (actions!=[]){
+		restart();
+		return;
+	}
    user=GetEmail();
    fullname=GetFullName();
    LearnerID={mbox:"mailto:"+user,
@@ -391,6 +395,22 @@ function GetStarted(){
 	
 }
 
+function restart(){
+	actions=[];
+	DataLRS();
+	$("#editor").hide();
+	$("#containerNoImg").show();
+	showCC(false);
+	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
+	GetSCORE(LRSURL,LRSLogin,LRSPassword);
+	if (AllowFastForwarding){
+		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
+	}
+	var acePostjson = constructFirstJsontoPut(AutoTutorScript,currentScripturl,currentLessonID);
+	Post(acePostjson);
+}
+
+
 
 $(document).ready(function() {
 	GetTheEventAssigned();
@@ -402,8 +422,7 @@ $(document).ready(function() {
 	}
 });
 
-function startLesson()
-{
+function startLesson() {
 var x2 = $(window).width();
 	if (x2 < 1400) {
 		$("#containerNoImg").attr('style', " -ms-zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0px 0; -o-transform: scale(0.8); -o-transform-origin: 0 0; -webkit-transform: scale(0.8); -webkit-transform-origin: 0 0; ");
@@ -433,6 +452,28 @@ function repeatSpeakList()
 	}
 	
 }
+function constructFirstJsontoPut(TheAutoTutorScript,ThecurrentScripturl,ThelessonID){
+	var acePostjson = {};
+	if ((TheAutoTutorScript!="")&&(qs("useXML","0")=="1")){
+		var theScripts=new XMLSerializer().serializeToString(TheAutoTutorScript);
+		acePostjson.ScriptXML=theScripts;
+	}else{
+		acePostjson.ScriptURL = ThecurrentScripturl;
+	}
+	acePostjson.User = sessionStorage.getItem("uname");
+	acePostjson.UseDB = true;
+	
+	if (ThelessonID == "lesson0" || ThelessonID == "lesson00") {
+		// acePostjson.ID = sessionStorage.getItem("GUID");
+		acePostjson.ID = sessionStorage.getItem("UID");
+
+	} else {
+		acePostjson.ID = sessionStorage.getItem("UID");
+
+	}
+	return acePostjson;
+}
+
 function LoadLesson(lessonID) {
 	var loadingPage = "resources/LoadingPage.html";
 	$("#mainFrame").attr("src", loadingPage);
@@ -458,29 +499,14 @@ function LoadLesson(lessonID) {
 	
 	currentMediaPath = MediaFolderURL + lessonID + "/ActivityMedia/";
 	setPresentationIDObj(lessonID, currentScripturl);
-
-	var acePostjson = {};
-	if ((AutoTutorScript!="")&&(qs("useXML","0")=="1")){
-		var theScripts=new XMLSerializer().serializeToString(AutoTutorScript);
-		acePostjson.ScriptXML=theScripts;
-	}else{
-		acePostjson.ScriptURL = currentScripturl;
-	}
-	acePostjson.User = sessionStorage.getItem("uname");
-	acePostjson.UseDB = true;
 	
-	if (lessonID == "lesson0" || lessonID == "lesson00") {
-		// acePostjson.ID = sessionStorage.getItem("GUID");
-		acePostjson.ID = sessionStorage.getItem("UID");
 
-	} else {
-		acePostjson.ID = sessionStorage.getItem("UID");
-
-	}
+	var acePostjson = constructFirstJsontoPut(AutoTutorScript,currentScripturl,lessonID);
 	
 	replayVideoTimes = 0;
 	currentJSON=acePostjson;
 	Post(acePostjson);
+	theFirstJsonPost=acePostjson;
 	checkLessonConfig(lessonID, 1);
 
 
