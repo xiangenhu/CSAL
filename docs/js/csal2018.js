@@ -454,7 +454,7 @@ function repeatSpeakList()
 }
 function constructFirstJsontoPut(TheAutoTutorScript,ThecurrentScripturl,ThelessonID){
 	var acePostjson = {};
-	if ((TheAutoTutorScript!="")&&(qs("useXML","0")=="1")){
+	if (TheAutoTutorScript!=""){
 		var theScripts=new XMLSerializer().serializeToString(TheAutoTutorScript);
 		acePostjson.ScriptXML=theScripts;
 	}else{
