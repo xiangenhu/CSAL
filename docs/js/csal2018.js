@@ -371,7 +371,7 @@ function GetTheEventAssigned(){
 
 
 function GetStarted(){
-	if (actions!=[]){
+	if (actions.length!=0){
 		restart();
 		return;
 	}
