@@ -106,7 +106,7 @@ function Post(acePostjson) {
 }
 
 function Put(acePutjson) { 
-//    acePutjson.ScriptXML="";
+    acePutjson.ScriptXML="";
 	var content = acePutjson;
     var method = "PUT";
     webAPImethod = method;
