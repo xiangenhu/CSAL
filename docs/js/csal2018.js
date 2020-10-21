@@ -54,13 +54,15 @@ var TheMsg="";
 var trialTimes=0;
 
 function getLessonOutline(){
+	var TheLessonID=qs("LessonName","");
+	TheLessonID=TheLessonID.toLowerCase();
 	var Outlinehtml="";
 	var i;
 	var j;
 	var ListOfLessons=systemConfig.lessonsConfig;
 	for (i=0;i<ListOfLessons.length;i++){
 		var theLesson=ListOfLessons[i];
-		if (currentLessonID==theLesson.lessonId){
+		if (TheLessonID==theLesson.lessonId){
 			var html="<ol>";
 			html=html+"<li> Lesson ID:"+theLesson.lessonDes;
 			html=html+"<li> Lesson Name:"+theLesson.lessonName;
