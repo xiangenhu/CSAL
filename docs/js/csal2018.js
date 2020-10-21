@@ -53,6 +53,49 @@ var TheMsg="";
 
 var trialTimes=0;
 
+function getLessonOutline(){
+	var Outlinehtml="";
+	var i;
+	var j;
+	var ListOfLessons=systemConfig.lessonsConfig;
+	for (i=0;i<ListOfLessons.length;i++){
+		var theLesson=ListOfLessons[i];
+		if (currentLessonID==theLesson.lessonId){
+			var html="<ol>";
+			html=html+"<li> Lesson ID:"+theLesson.lessonDes;
+			html=html+"<li> Lesson Name:"+theLesson.lessonName;
+			html=html+"<li> Description:"+theLesson.lessonDes;
+			html=html+"</ol>";
+			return thePageObj;
+		}
+	}
+}
+
+function LeesonOutlines(){
+	var html=[];
+	var i;
+	var j;
+	var ListOfLessons=systemConfig.lessonsConfig;
+	for (i=0;i<ListOfLessons.length;i++){
+		var theLesson=ListOfLessons[i];
+		if (theLesson.pages!=null){
+		var pages=theLesson.pages;
+			for (j=0; j<pages.length;j++ ){
+				var thePageObj=pages[j];
+				thePageObj.lessonId=theLesson.lessonId;
+				thePageObj.lessonname=theLesson.lessonName;
+				thePageObj.lessonDes=theLesson.lessonDes;
+				html.push(JSON.stringify(thePageObj));
+			}
+		}
+	}
+	a = document.createElement('a');
+	a.setAttribute("href", "data:application/xml;charset=utf-8," + html);
+	a.setAttribute("download", "outline");
+	a.click();
+	return html;
+}
+
 
 function FastForward(){
 	
@@ -73,7 +116,6 @@ function setCurrentLessonInfo(lessonID) {
 			sessionStorage.setItem("LessonID", LessonInfo.lessonId);
 			sessionStorage.setItem("LessonInfo", JSON.stringify(LessonInfo));
 			return true;
-
 		} else {
 			sessionStorage.setItem("LessonName", null);
 			sessionStorage.setItem("LessonID", null);
@@ -154,15 +196,6 @@ talkingheadOn="true";
 	} else {
 		sessionStorage.setItem("SName", "User");
 	}
-	/*if (URLParams.talkingheadUsing != undefined) {
-		talkingheadUsing=URLParams.talkingheadUsing;
-		if(talkingheadUsing=="Speak2")
-		{
-			document.getElementById('agents').src = "angentsjs/speakTH.html";
-			talkingheadLoaded = true;
-		}
-
-	}*/
 	if (URLParams.LessonName != undefined) {
 		getScriptFolder = URLParams.LessonName;
 		var lessonStatus = setCurrentLessonInfo(getScriptFolder)
@@ -174,10 +207,6 @@ talkingheadOn="true";
 		}
 
 	}
-	 
-	
-
-
 }
 
 function GetTheEventAssigned(){
