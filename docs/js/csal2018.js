@@ -66,7 +66,7 @@ function getLessonOutline(){
 			html=html+"<li> Lesson Name:"+theLesson.lessonName;
 			html=html+"<li> Description:"+theLesson.lessonDes;
 			html=html+"</ol>";
-			return thePageObj;
+			return html;
 		}
 	}
 }
