@@ -53,6 +53,37 @@ var TheMsg="";
 
 var trialTimes=0;
 
+
+
+
+function DownloadScript(){
+	var url=PointerToTheAutoTutorURL;
+	window.open(url,'window','toolbar=no, menubar=no, resizable=yes');
+}
+
+
+function ÓpenBrowserTest(){
+	var urlvarjson=getUrlVars(location.href);
+	var newHostName=location.pathname;
+	newHostName=newHostName.replace("Edit","");
+    var hostnameandpath=location.protocol+"//"+location.hostname+newHostName;
+	urlvarjson.asatDirect="1";
+	urlvarjson.connected="0";
+	urlvarjson.editing="0";
+	var qvar=JSON.stringify(urlvarjson);
+	qvar=qvar.split('"').join('');
+	qvar=qvar.split(',').join('&');
+	qvar=qvar.split('://').join('$$$');
+	qvar=qvar.split(':').join('=');
+	qvar=qvar.split('$$$').join('://');
+	qvar=qvar.split('}').join('');
+	qvar=qvar.split('{').join('');
+//	var TheURLVariable=new URLSearchParams(urlvarjson).toString();
+    var url=hostnameandpath+"?"+qvar
+	window.open(url,'window','toolbar=no, menubar=no, resizable=yes');
+}
+
+
 function getLessonOutline(){
 	var TheLessonID=qs("LessonName","");
 	TheLessonID=TheLessonID.toLowerCase();
