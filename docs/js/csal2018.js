@@ -53,7 +53,7 @@ var TheMsg="";
 
 var trialTimes=0;
 
-
+var PointerToTheAutoTutorURL=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid=")+qs("guid","")+"&tag=AutoTutorScript";
 
 
 function DownloadScript(){
@@ -557,7 +557,7 @@ function LoadLesson(lessonID) {
           currentScripturl = aurl;
 		}else{
 			guid=qs("guid","");
-			currentScripturl=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid="+guid+"&tag=AutoTutorScript");
+			currentScripturl=PointerToTheAutoTutorURL;
 			
 		}
    
