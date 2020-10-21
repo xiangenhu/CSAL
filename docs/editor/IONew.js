@@ -12,7 +12,7 @@ function qs(search_for,defaultstr) {
 }
 
 var xmlArray=[];
-var asatLRSExists=qs("asatDirect","0");
+var asatLRSExists=qs("asatDirect","1");
 var ASATLocation="asat.autotutor.org";
 
 var savescriptsverbid="http://asat.autotutor.org/saved";

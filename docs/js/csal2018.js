@@ -453,12 +453,16 @@ function repeatSpeakList()
 }
 function constructFirstJsontoPut(TheAutoTutorScript,ThecurrentScripturl,ThelessonID){
 	var acePostjson = {};
-	if (TheAutoTutorScript!=""){
-		var theScripts=new XMLSerializer().serializeToString(TheAutoTutorScript);
-		acePostjson.ScriptXML=theScripts;
-	}else{
-		acePostjson.ScriptURL = ThecurrentScripturl;
-	}
+    acePostjson.ScriptURL = ThecurrentScripturl;
+
+//	if (TheAutoTutorScript!=""){
+//		var theScripts=new XMLSerializer().serializeToString(TheAutoTutorScript);
+//		acePostjson.ScriptXML=theScripts;
+//	}else{
+//		acePostjson.ScriptURL = ThecurrentScripturl;
+//	}
+
+
 	acePostjson.User = sessionStorage.getItem("uname");
 	acePostjson.UseDB = true;
 	
@@ -492,6 +496,7 @@ function LoadLesson(lessonID) {
 		}else{
 			guid=qs("guid","");
 			currentScripturl=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid="+guid+"&tag=AutoTutorScript");
+			
 		}
    
 	}
