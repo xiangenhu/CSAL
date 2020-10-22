@@ -84,6 +84,10 @@ function ÓpenBrowserTest(){
 }
 
 
+function editorCallback(){
+	
+}
+
 function getLessonOutline(){
 	var TheLessonID=qs("LessonName","");
 	TheLessonID=TheLessonID.toLowerCase();
