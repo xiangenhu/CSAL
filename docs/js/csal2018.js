@@ -95,7 +95,7 @@ function getLessonOutline(){
 		var theLesson=ListOfLessons[i];
 		if (TheLessonID==theLesson.lessonId){
 			var html="<ol>";
-			html=html+"<li> Lesson ID:"+theLesson.lessonDes;
+			html=html+"<li> Lesson ID:"+theLesson.lessonId;
 			html=html+"<li> Lesson Name:"+theLesson.lessonName;
 			html=html+"<li> Description:"+theLesson.lessonDes;
 			html=html+"</ol>";
