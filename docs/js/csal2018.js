@@ -43,6 +43,7 @@ var nextbtnClicked=false;
 var theFirstJsonPost;
 var listofMessage=[];
 
+var enableEditing=false;
 var InputFound;
 
 var time_in_Day;
@@ -66,7 +67,7 @@ function ÓpenBrowserTest(){
 	var urlvarjson=getUrlVars(location.href);
 	var newHostName=location.pathname;
 	newHostName=newHostName.replace("Edit","");
-    var hostnameandpath=location.protocol+"//"+location.hostname+newHostName;
+    var hostnameandpath=location.origin+newHostName;
 	urlvarjson.asatDirect="1";
 	urlvarjson.connected="0";
 	urlvarjson.editing="0";
@@ -85,7 +86,11 @@ function ÓpenBrowserTest(){
 
 
 function editorCallback(){
-	
+//	ÓpenBrowserTest();
+//	enableEditing=true;
+//	if (qs("editing","0")=="1"){
+//	$("#editor").hide();
+//	}
 }
 
 function getLessonOutline(){
@@ -103,6 +108,7 @@ function getLessonOutline(){
 			html=html+"<li> Lesson Name:"+theLesson.lessonName;
 			html=html+"<li> Description:"+theLesson.lessonDes;
 			html=html+"</ol>";
+			html=html+"Click here to test current module: <btton onclick=' ÓpenBrowserTest()' class='btn'>Test Current Module</btton>"
 			return html;
 		}
 	}
@@ -316,14 +322,14 @@ function GetTheEventAssigned(){
 			$("#PauseBtn").html("Continue");
 			$("#FeedBackBtn").show();
 			$("#ScoreBtn").show();
-			if (qs("editing","0")=="1"){
+			if (enableEditing){
 			   $("#EditingBtn").show();
 			}
 			StopTimer();
 		}else{
 			$("#FeedBackBtn").hide();
 			$("#ScoreBtn").hide();
-			if (qs("editing","0")=="1"){
+			if (enableEditing){
 			   $("#EditingBtn").hide();
 			}
 			StartTimer();
@@ -334,7 +340,7 @@ function GetTheEventAssigned(){
 	
 	
 	$("#EditingBtn").click(function() {
-		$("#containerNoImg").hide();
+	//	$("#containerNoImg").hide();
 		$("#editor").show();
 		
 	});
