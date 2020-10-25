@@ -123,25 +123,26 @@
 	<div id="runningstatus"><center>Click to see your internet connection status.</center></div>
 	<div id="myMessage" class="modal"></div>
 
-<div id="editor">
-	<table width="100%">
-	<tr><td><div id="editorMenu"></div></td></tr>
-				<tr><td>
-				<div id = "tree"></div>
-				<div id = "XMLtree"></div>
-				<div id = "Outline"><div id="OutlineContent"></div></div>
-				<div id = "About"></div>
-				<div id = "CommitChanges"><div id="Options"></div></div>
-				</td></tr>
-		<tr><td><div id="statusbar"></div></td></tr>
-					</table>
-	</div>	
-<script src="https://author.autotutor.org/editor/ace/ace.js"></script>
-<script>
-    var Theeditor = ace.edit("XMLtree");
-    Theeditor.setTheme("ace/theme/twilight");
-    Theeditor.session.setMode("ace/mode/xml");
-</script>
+    <div id="editor">
+        <table width="100%" height="100%">
+        <tr><td ><div id="editorMenu"></div></td></tr>
+                    <tr ><td height="100%">
+                    <div id = "tree"></div>
+                    <div id = "XMLtree"></div>
+                    <div id = "Outline"><div id="OutlineContent"></div></div>
+                    <div id = "About"></div>
+                    <div id = "CommitChanges"><div id="Options"></div></div>
+                    </td></tr>
+                    <tr><td align="center"><div id="statusbar"></div></td></tr>
+                    </table>
+        </div>
+            
+    <script src="https://author.autotutor.org/editor/ace/ace.js"></script>
+    <script>
+        var Theeditor = ace.edit("XMLtree");
+        Theeditor.setTheme("ace/theme/twilight");
+        Theeditor.session.setMode("ace/mode/xml");
+    </script>
 
 
 </body>
