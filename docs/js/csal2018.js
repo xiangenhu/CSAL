@@ -63,7 +63,7 @@ function DownloadScript(){
 }
 
 
-function ÓpenBrowserTest(){
+function OpenBrowserTest(){
 	var urlvarjson=getUrlVars(location.href);
 	var newHostName=location.pathname;
 	newHostName=newHostName.replace("Edit","");
