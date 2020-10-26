@@ -66,10 +66,10 @@ function DownloadScript(){
 function OpenBrowserTest(){
 	var urlvarjson=getUrlVars(location.href);
 	var newHostName=location.pathname;
-	newHostName=newHostName.replace("Edit","");
+//	newHostName=newHostName.replace("Edit","");
     var hostnameandpath=location.origin+newHostName;
 	urlvarjson.asatDirect="1";
-	urlvarjson.connected="0";
+	urlvarjson.connected="1";
 	urlvarjson.editing="0";
 	var qvar=JSON.stringify(urlvarjson);
 	qvar=qvar.split('"').join('');
@@ -81,7 +81,7 @@ function OpenBrowserTest(){
 	qvar=qvar.split('{').join('');
 //	var TheURLVariable=new URLSearchParams(urlvarjson).toString();
     var url=hostnameandpath+"?"+qvar
-	window.open(url,'window','toolbar=no, menubar=no, resizable=yes');
+	window.open(url,'self');
 }
 
 
