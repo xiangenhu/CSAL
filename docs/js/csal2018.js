@@ -72,6 +72,7 @@ function OpenBrowserTest(){
 	urlvarjson.asatDirect="1";
 	urlvarjson.connected="1";
 	urlvarjson.editing="0";
+	urlvarjson.callback="0";
 	var qvar=JSON.stringify(urlvarjson);
 	qvar=qvar.split('"').join('');
 	qvar=qvar.split(',').join('&');
@@ -93,6 +94,7 @@ function OpenBrowserEditing(){
 	urlvarjson.asatDirect="1";
 	urlvarjson.connected="1";
 	urlvarjson.editing="1";
+	urlvarjson.callback="1";
 	var qvar=JSON.stringify(urlvarjson);
 	qvar=qvar.split('"').join('');
 	qvar=qvar.split(',').join('&');
@@ -108,8 +110,10 @@ function OpenBrowserEditing(){
 
 
 function editorCallback(){
-	if (qs("editing","0")=="0"){
-	OpenBrowserTest();
+	if (qs("callback","0")=="1"){
+		if ((qs("editing","0")=="0")&&(qs("callback","0")=="1")){
+		OpenBrowserTest();
+		}
 	}
 }
 
