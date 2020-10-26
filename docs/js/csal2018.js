@@ -451,9 +451,7 @@ function GetStarted(){
 				 objectType:"Agent"
 				};
 	DataLRS();
-	$("#editor").hide();
 	loadAgent();
-	$("#containerNoImg").show();
 	showCC(false);
 	Learner=sessionStorage.getItem("UID");
 	getLastActiveRecord(LRSURL,LRSLogin,LRSPassword,"start");
@@ -462,6 +460,8 @@ function GetStarted(){
 		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
 	}
 	
+	$("#editor").hide();
+	$("#containerNoImg").show();
 }
 
 function restart(){
