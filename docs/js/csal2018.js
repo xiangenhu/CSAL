@@ -108,7 +108,7 @@ function OpenBrowserEditing(){
 
 
 function editorCallback(){
-	if (!allowediting){
+	if (qs("editing","0")=="0"){
 	OpenBrowserTest();
 	}
 }
