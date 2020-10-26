@@ -86,11 +86,9 @@ function OpenBrowserTest(){
 
 
 function editorCallback(){
-//	ÓpenBrowserTest();
-//	enableEditing=true;
-//	if (qs("editing","0")=="1"){
-//	$("#editor").hide();
-//	}
+	if (!allowediting){
+	OpenBrowserTest();
+	}
 }
 
 function getLessonOutline(){
