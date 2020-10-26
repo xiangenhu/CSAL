@@ -451,8 +451,9 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		var timemin=GetDuration(InteractionHistory[InteractionHistory.length-1].time,atimestamp)
 		html=html+"  My record shows that you started this lesson eariler. It was "+starting+". You stopped on "+ ending+" "+"for the total of "+timemin;
 		var footer="What do you want to do next? <ul><li>Start over from the start. <input type='radio' name='choice' id='startover'>  <li>Continue from where you have stopped.<input type='radio' name='choice' id='continue' ></ul>"+"<p align='right'><button onclick='moveforward()'> Move forward </button><p/>";
-		
-		OpenModal(fullname.split(' ')[0]+ ", "+Greetings()+" and Welcome Back!",footer,html);   
+		if (qs("editing","0")=="0"){
+			OpenModal(fullname.split(' ')[0]+ ", "+Greetings()+" and Welcome Back!",footer,html);   
+		}
 		}
 	})		
 }
