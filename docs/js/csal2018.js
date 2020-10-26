@@ -320,16 +320,14 @@ function GetTheEventAssigned(){
 			$("#PauseBtn").html("Continue");
 			$("#FeedBackBtn").show();
 			$("#ScoreBtn").show();
-			if (enableEditing){
+			if (allowediting){
 			   $("#EditingBtn").show();
 			}
 			StopTimer();
 		}else{
 			$("#FeedBackBtn").hide();
 			$("#ScoreBtn").hide();
-			if (enableEditing){
-			   $("#EditingBtn").hide();
-			}
+			$("#EditingBtn").hide();
 			StartTimer();
 		}
 		
