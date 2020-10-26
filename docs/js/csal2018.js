@@ -163,6 +163,9 @@ function LeesonOutlines(){
 	return html;
 }
 
+function GetRuningEnv(){
+	return urlvarjson=getUrlVars(location.href);
+}
 
 function FastForward(){
 	
