@@ -108,7 +108,7 @@ function getLessonOutline(){
 			html=html+"<li> Lesson Name:"+theLesson.lessonName;
 			html=html+"<li> Description:"+theLesson.lessonDes;
 			html=html+"</ol>";
-			html=html+"Click here to test current module: <btton onclick=' ÓpenBrowserTest()' class='btn'>Test Current Module</btton>"
+			html=html+"Click here to test current module: <btton onclick='OpenBrowserTest()' class='btn'>Test Current Module</btton>"
 			return html;
 		}
 	}
