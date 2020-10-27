@@ -491,9 +491,9 @@ function GetStarted(){
 	if (AllowFastForwarding){
 		GetLastLessonStarting(LRSURL,LRSLogin,LRSPassword);
 	}
-	
 	$("#editor").hide();
 	$("#containerNoImg").show();
+	DebuggingMode=((qs("DEBUGGNG","0")=="1")&&(qs("RuleName","")!=""));
 }
 
 function restart(){
