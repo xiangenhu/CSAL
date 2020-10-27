@@ -498,7 +498,7 @@ function getACEActionAndPlay(ActionName){
 			var j;
 			if (theactions!=null){
 				for (j=0; j<theactions.length;j++){
-					if (theactions[i].Data==ActionName){
+					if (theactions[j].Data==ActionName){
 						actions=theactions;
 						runActions();
 						return;
