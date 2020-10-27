@@ -496,11 +496,13 @@ function getACEActionAndPlay(ActionName){
 		for (i=1; i<response.length;i++){
 			var theactions=response[i].Transactions;
 			var j;
-			for (j=0; j<theactions.length;j++){
-				if (theactions[i].Data==ActionName){
-					actions=theactions;
-					runActions();
-					return;
+			if (theactions!=null){
+				for (j=0; j<theactions.length;j++){
+					if (theactions[i].Data==ActionName){
+						actions=theactions;
+						runActions();
+						return;
+					}
 				}
 			}
 		}
