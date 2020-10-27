@@ -87,6 +87,10 @@ function OpenBrowserTest(){
 }
 
 function OpenBrowserEditing(){
+	$("#PlayerWind").hide();
+	$("#editor").show();
+	return;
+
 	var urlvarjson=getUrlVars(location.href);
 	var newHostName=location.pathname;
 //	newHostName=newHostName.replace("Edit","");
@@ -111,7 +115,7 @@ function OpenBrowserEditing(){
 
 function editorCallback(){
 	if (qs("callback","0")=="1"){
-		if ((qs("editing","0")=="0")&&(qs("callback","0")=="1")){
+		if (qs("editing","0")=="0"){
 		OpenBrowserTest();
 		}
 	}
