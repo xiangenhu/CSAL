@@ -1098,8 +1098,9 @@ function StartTimer() {
 		if (DebuggingMode){
 			getACEActionAndPlay(qs("RuleName",""));
 			DebuggingMode==false;
+		}else{
+			runActions();
 		}
-		runActions();
 	}, interval);
 }
 
