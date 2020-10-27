@@ -390,8 +390,6 @@ function onLoad() {
 			$("#RecordBtn").css("display", "none");
 		}
 	ConnectAndGetScriptsFromSKOServer();
-	DebuggingMode=((qs("DEBUGGNG","0")=="1")&&(qs("RuleName","")!=""));
-	$("#editor").hide();
 }
 
 var iPad = navigator.userAgent.match(/iPad/i);

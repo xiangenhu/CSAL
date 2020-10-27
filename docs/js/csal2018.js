@@ -118,6 +118,8 @@ function editorCallback(){
 		if (qs("editing","0")=="0"){
 		OpenBrowserTest();
 		}
+	}else{
+		$("#editor").hide();
 	}
 }
 
