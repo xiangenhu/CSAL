@@ -501,6 +501,8 @@ function getACEActionAndPlay(ActionName){
 					if (theactions[j].Data==ActionName){
 						actions=theactions;
 						runActions();
+						j=theactions.length;
+						i=response.length;
 						return;
 					}
 				}
