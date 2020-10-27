@@ -391,7 +391,7 @@ function onLoad() {
 		}
 	ConnectAndGetScriptsFromSKOServer();
 	DebuggingMode=((qs("DEBUGGNG","0")=="1")&&(qs("RuleName","")!=""));
-	
+	$("#editor").hide();
 }
 
 var iPad = navigator.userAgent.match(/iPad/i);
