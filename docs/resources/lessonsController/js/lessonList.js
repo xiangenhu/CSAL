@@ -119,7 +119,6 @@ function startLesson() {
             if (isLogin == false) {
                 isTried = true;
             }
-
             return;
         }
 

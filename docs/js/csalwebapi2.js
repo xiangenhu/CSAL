@@ -162,7 +162,6 @@ function Put(acePutjson) {
 		
 		PutStatus=false;
         if (errorInfo == false && actionsError == false) {
-           
 			StartTimer();
         } else {
 
