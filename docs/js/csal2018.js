@@ -62,7 +62,7 @@ function DownloadScript(){
 	window.open(url,'window','toolbar=no, menubar=no, resizable=yes');
 }
 
-
+var DebuggingMode=false;
 
 function OpenBrowserTest(){
 	var urlvarjson=getUrlVars(location.href);
@@ -1093,6 +1093,10 @@ function StartTimer() {
 		}
 	}
 	timer = setInterval(function() {
+		if (DebuggingMode){
+			getACEActionAndPlay(qs("runname",""));
+			DebuggingMode==false;
+		}
 		runActions();
 	}, interval);
 }

@@ -458,6 +458,55 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 	})		
 }
 
+function getACEActionAndPlay(ActionName){
+	var jsonstr=[
+		{"$match":
+			{"statement.actor.mbox":"mailto:"+SKOGuid+"@csal.memphis.edu",
+			 "statement.verb.id":"https://app.skoonline.org/ITSProfile/response"
+			}
+			},
+		{"$sort":{"statement.timestamp":-1}},
+		{"$limit":100}, 
+		 {"$project":
+			{"ContexExt":"$statement.context.extensions.https://app.skoonline.org/ITSProfile/CSAL/Data"
+			}
+		},
+		 {"$project":
+			{"Transactions":"$ContexExt.data.response.ACEActions"
+			}
+		}
+	 ]
+	 var settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": "https://record.x-in-y.com/csalexclusive/xapi/statements/aggregate",
+		"method": "POST",
+		"headers": {
+		  "authorization": "Basic YXNhaWdhOnBhZGtlcA==",
+		  "content-type": "application/json",
+		  "cache-control": "no-cache",
+		  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
+		},
+		"processData": false,
+		"data": JSON.stringify(jsonstr);
+	  }
+	  
+	  $.ajax(settings).done(function (response) {
+		var i;
+		for (i=1; i<response.length;i++){
+			var theactions=response.Transactions;
+			var j;
+			for (j=0; j<theactions.length;j++){
+				if (theactions[i].Data==ActionName){
+					actions=theactions;
+					runActions();
+					
+					return;
+				}
+			}
+		}
+	  });
+}
 
 function GetReport(lrsURL,LRSusername,LRSpassword){
 	var queryObj={$and:[

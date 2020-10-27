@@ -383,6 +383,7 @@ function onLoad() {
 		}else{
 		$('#innerframe').attr('src', qs("url",""));
 		}
+		DebuggingMode=((qs("DEBUGGNG","0")=="1")&&(qs("RuleName","")!=""));
 	  })
 	if (qs("SR","0")!="0"){
 			$("#RecordBtn").css("display", "block");
