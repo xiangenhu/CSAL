@@ -500,7 +500,6 @@ function getACEActionAndPlay(ActionName){
 				if (theactions[i].Data==ActionName){
 					actions=theactions;
 					runActions();
-					
 					return;
 				}
 			}
