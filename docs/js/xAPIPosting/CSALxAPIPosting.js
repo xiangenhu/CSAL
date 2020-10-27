@@ -494,7 +494,7 @@ function getACEActionAndPlay(ActionName){
 	  $.ajax(settings).done(function (response) {
 		var i;
 		for (i=1; i<response.length;i++){
-			var theactions=response.Transactions;
+			var theactions=response[i].Transactions;
 			var j;
 			for (j=0; j<theactions.length;j++){
 				if (theactions[i].Data==ActionName){
