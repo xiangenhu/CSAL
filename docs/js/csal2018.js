@@ -1097,7 +1097,7 @@ function StartTimer() {
 	timer = setInterval(function() {
 		if (DebuggingMode){
 			getACEActionAndPlay(qs("RuleName",""));
-			DebuggingMode==false;
+			DebuggingMode=false;
 		}else{
 			runActions();
 		}
