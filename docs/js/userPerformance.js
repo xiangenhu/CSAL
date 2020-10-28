@@ -821,7 +821,8 @@
 
 		        }
 
-		    } else if (lessonID == "lesson31"){
+			} 
+			else if (lessonID == "lesson31"){
 				var countCrrectNum = 0;
 		        var countFirstNum = 0;
 		        for (var i in TotalScoreArr) {

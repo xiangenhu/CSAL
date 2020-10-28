@@ -54,7 +54,7 @@ var TheMsg="";
 
 var trialTimes=0;
 
-var PointerToTheAutoTutorURL=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid=")+qs("guid","")+"&tag=AutoTutorScript";
+var PointerToTheAutoTutorURL=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid=")+qs("guid","")+"&thelocation="+location.hostname+"&tag=AutoTutorScript";
 
 
 function DownloadScript(){
