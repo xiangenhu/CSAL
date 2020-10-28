@@ -503,7 +503,6 @@ function getACEActionAndPlay(ActionName){
 						runActions();
 						j=theactions.length;
 						i=response.length;
-						return;
 					}
 				}
 			}
