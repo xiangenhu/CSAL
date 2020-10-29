@@ -156,22 +156,6 @@ var LessonID={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
 				 name:SKOTitle,
 				 objectType:"Agent"
 				};
-/* 
- ADL.launch(function(err, launchdata, xAPIWrapper) {
-		if (!err) {
-			wrapper = ADL.XAPIWrapper = xAPIWrapper;
-			console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
-		} else {
-			wrapper = ADL.XAPIWrapper;
-			wrapper.changeConfig({
-				endpoint: LRSURL,
-				user: LRSLogin,
-				password: LRSPassword
-			});
-			console.log("--- content statically configured ---\n", wrapper.lrs);
-		}
-	}, true);
- */
 
 function ComposewithContextActivities(AnActor,
                 verbObj,
