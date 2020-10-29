@@ -461,7 +461,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 function getACEActionAndPlay(ActionName){
 	var jsonstr=[
 		{"$match":
-			{"statement.actor.mbox":"mailto:"+SKOGuid+"@csal.memphis.edu",
+			{"statement.actor.mbox":"mailto:"+SKOGuid+"@"+ASATLocation,
 			 "statement.verb.id":"https://app.skoonline.org/ITSProfile/response"
 			}
 			},
