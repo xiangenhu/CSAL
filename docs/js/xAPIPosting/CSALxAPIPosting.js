@@ -152,7 +152,7 @@ function CompileScroe(PresentationHistory){
 }	
 	
 				
-var LessonID={mbox:"mailto:"+SKOGuid+"@csal.memphis.edu",
+var LessonID={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
 				 name:SKOTitle,
 				 objectType:"Agent"
 				};
