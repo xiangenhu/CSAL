@@ -340,7 +340,7 @@ function GetTheEventAssigned(){
 	$("#CloseCaption").click(function() {
 		CaptionOn=!CaptionOn;
 		showCC(CaptionOn);
-		if (CaptionOn){
+		if (CaptionOn){ 
 			 $("#CloseCaption").css("background-color", "green");
 			if (allowediting){
 				$("#EditingBtn").show();
