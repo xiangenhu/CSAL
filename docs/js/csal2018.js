@@ -342,14 +342,8 @@ function GetTheEventAssigned(){
 		showCC(CaptionOn);
 		if (CaptionOn){ 
 			 $("#CloseCaption").css("background-color", "green");
-			if (allowediting){
-				$("#EditingBtn").show();
-			}
 		}else{
 			$("#CloseCaption").css("background-color", "black");
-			if (allowediting){
-				$("#EditingBtn").hide();
-			}
 		}
 	});
 	
