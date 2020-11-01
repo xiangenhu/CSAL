@@ -114,11 +114,11 @@ function OpenBrowserEditing(){
 
 
 function editorCallback(){
-	if (qs("callback","0")=="1"){
-		if (qs("editing","0")=="0"){
-		OpenBrowserTest();
-		}
+	if (editorFirst=="1"){
+		$("#PlayerWind").hide();
+		$("#editor").show();
 	}else{
+		$("#PlayerWind").show();
 		$("#editor").hide();
 	}
 }
