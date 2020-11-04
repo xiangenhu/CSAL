@@ -442,6 +442,9 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 	})		
 }
 
+
+
+
 function getACEActionAndPlay(ActionName){
 	var jsonstr=[
 		{"$match":
@@ -463,10 +466,10 @@ function getACEActionAndPlay(ActionName){
 	 var settings = {
 		"async": true,
 		"crossDomain": true,
-		"url": "https://record.x-in-y.com/csalexclusive/xapi/statements/aggregate",
+		"url": asatlrs+"/statements/aggregate",
 		"method": "POST",
 		"headers": {
-		  "authorization": "Basic YXNhaWdhOnBhZGtlcA==",
+		  "authorization": "Basic "+TheASATAuthory,
 		  "content-type": "application/json",
 		  "cache-control": "no-cache",
 		  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
