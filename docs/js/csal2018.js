@@ -59,7 +59,7 @@ function URLToBuncer(tag){
 	var scriptQueryObj={
 		"guid":qs("guid",""),
 		"thelocation":ASATLocation=qs("ASATLocation",location.hostname),
-		"theAuthorization":qs("TheASATAuthory","YXNhdFNjcmlwdHM6YXNhdFNjcmlwdHM="),
+		"theAuthorization":qs("TheASATAuthory","VGhlU2NyaXB0c0FjY2VzczpUaGVTY3JpcHRzQWNjZXNz"),
 		"theASTALRS":qs("asatlrs","https://record.x-in-y.com/thescripts/xapi"),
 	}
 	scriptQueryObj.tag=tag;
