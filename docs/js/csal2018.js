@@ -54,11 +54,21 @@ var TheMsg="";
 
 var trialTimes=0;
 
-var PointerToTheAutoTutorURL=qs("directscriptLink","https://asatnodejs.uc.r.appspot.com/generate?guid=")+qs("guid","")+"&thelocation="+location.hostname+"&tag=AutoTutorScript";
+
+function URLToBuncer(tag){
+	var scriptQueryObj={
+		"guid":qs("guid",""),
+		"thelocation":ASATLocation=qs("ASATLocation",location.hostname),
+		"theAuthorization":qs("TheASATAuthory","YXNhdFNjcmlwdHM6YXNhdFNjcmlwdHM="),
+		"theASTALRS":qs("asatlrs","https://record.x-in-y.com/thescripts/xapi"),
+	}
+	scriptQueryObj.tag=tag;
+	return qs("ATSBase","https://asatnodejs.uc.r.appspot.com/generate?json=")+JSON.stringify(scriptQueryObj);
+}
 
 
 function DownloadScript(){
-	var url=PointerToTheAutoTutorURL;
+	var url= URLToBuncer("AutoTutorScript");
 	window.open(url,'window','toolbar=no, menubar=no, resizable=yes');
 }
 
@@ -596,7 +606,7 @@ function LoadLesson(lessonID) {
           currentScripturl = aurl;
 		}else{
 			guid=qs("guid","");
-			currentScripturl=PointerToTheAutoTutorURL;
+			currentScripturl=URLToBuncer("AutoTutorScript");
 			
 		}
    
