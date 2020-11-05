@@ -1,0 +1,261 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link href="css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.6/iconfont.css" rel="stylesheet" type="text/css" />
+
+<title>Lesson List</title>
+
+<style>
+	.newstyle
+	{
+		 cursor:pointer;
+	}
+
+</style>
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/H-ui.js"></script>
+    <script type="text/javascript" src="js/H-ui.admin.js"></script>
+    <script type="text/javascript" src="MainPage.js"></script>
+	<script type="text/javascript" src="aps1.js"></script>
+	<script type="text/javascript" src="gtc1.js"></script>
+	<script type="text/javascript" src="lai1.js"></script>
+	<script type="text/javascript" src="hsc.js"></script>
+	<script type="text/javascript" src="ptp3.js"></script>
+	<script type="text/javascript" src="csal.js"></script>
+	
+
+	
+    <script type="text/javascript">
+var classObj;
+var className;
+$(document).ready(function() {
+$("#LesssonContent").hide();
+$("#ClassesBtns").show();
+
+    $(".btn-success").click(function() {
+		if($(this).attr('id')=="Save" ||$(this).attr('id')=="Cancel" ||$(this).attr('id')=="Save2" ||$(this).attr('id')=="Cancel2")
+		{
+			return;
+		}
+		if($(this).attr('id')=="Refresh" )
+		{
+			return;
+		}
+         className = $(this).attr('id');
+       if(className=="MainPage")
+		{
+			 classObj=MainPage;
+		}
+		else if (className == "gtc1") {
+		   
+            classObj = gtc1;
+           
+        }
+		else if (className == "aps1") {
+		   
+            classObj = aps1;
+           
+        }
+		else if (className == "lai1") {
+            classObj = lai1;
+           
+        }
+		else if (className == "hsc") {
+            classObj = hsc;
+           
+        }
+		else if (className == "ptp3") {
+            classObj = ptp3;
+           
+        }
+		else if (className == "csal") {
+            classObj = csal;
+           
+        }
+		
+	
+		else  {
+           alert("check it");
+        }
+		$("#LesssonContent").show();
+		
+		$("#displayClassName").html("You already selected "+className);
+		$('.btn-success').prop('disabled', true); //TO DISABLED
+		//sets disabled mouse cursor
+		$('.btn-success').css('cursor', 'not-allowed');
+		$('#Save').prop('disabled', false);
+		$('#Save').css('cursor', 'pointer');
+		$('#Cancel').prop('disabled', false);
+		$('#Cancel').css('cursor', 'pointer');
+		$('#Save2').prop('disabled', false);
+		$('#Save2').css('cursor', 'pointer');
+		$('#Cancel2').prop('disabled', false);
+		$('#Cancel2').css('cursor', 'pointer');
+		$('#Refresh').prop('disabled', false);
+		$('#Refresh').css('cursor', 'pointer');
+		
+		displayLessons(classObj);
+    });
+
+
+    $(document).on('click', '.newstyle', function() {
+
+        var Status = $(this).html();
+        var lessonID = $(this).attr('lessonID');
+        var activityName = $(this).attr('activityName');
+        var parentObj = $(this).parent();
+        var parentClassName = parentObj[0].className;
+        if (Status == "Unlocked") {
+            $(this).parents("tr").find("." + parentClassName).html('<span lessonID=' + lessonID +' activityName='+activityName+' class="label label-default radius newstyle">Locked</span>');
+            $(this).remove();
+            Status = "Lock";
+        } else if (Status == "Locked") {
+
+            $(this).parents("tr").find("." + parentClassName).html('<span lessonID=' + lessonID + ' activityName='+activityName+' class="label label-success radius newstyle">Unlocked</span>');
+            $(this).remove();
+            Status = "Unlock";
+        }
+        updateLessonObj(lessonID, activityName, Status);
+    });
+
+
+});
+function displayLessons(classObj)
+{
+  $("#LessonsList tr").remove();
+  $("#LessonsList thead").remove();
+         
+ $("#LessonsList").append(" <thead><th width='100'>Lesson ID</th><th width='200'>Lesson Name</th><th width='200'>activity1</th><th width='200'>activity2</th></thead>");
+            var countNo = 0;
+            for (i = 0; i < classObj.length; i++) {
+                countNo++;
+                var LessonID = classObj[i].lessonId;
+                var LessonName = classObj[i].lessonName;
+                var activity1Status = classObj[i].activity1;
+                var activity2Status = classObj[i].activity2;
+                var activity3Status = classObj[i].activity3;
+                var aa = '<span class="label label-success radius">Active</span>';
+                if (activity1Status == "Unlock" && activity2Status == "Unlock") {
+                    $("#LessonsList").append("<tr align='center'><td>Lesson" + countNo + "</td><td id=" + LessonID + " >" + LessonName + "</td><td class='td-activity1Status'><span lessonID=" + LessonID + " activityName='activity1' class='label label-success radius newstyle'>" + activity1Status + "ed</span></td><td class='td-activity2Status'><span activityName='activity2' lessonID=" + LessonID + " class='label label-success radius newstyle'>" + activity2Status + "ed</span></td></tr>");
+                } else if (activity1Status == "Lock" && activity2Status == "Lock") {
+                    $("#LessonsList").append("<tr align='center'><td id=" + LessonID + " >Lesson" + countNo + "</td><td id=" + LessonID + " >" + LessonName + "</td><td class='td-activity1Status'><span lessonID=" + LessonID + " activityName='activity1' class='label  radius newstyle'>" + activity1Status + "ed</span></td><td class='td-activity2Status'><span lessonID=" + LessonID + " activityName='activity2' class='label  radius newstyle'>" + activity2Status + "ed</span></td></tr>");
+                } else if (activity1Status == "Unlock" && activity2Status == "Lock") {
+                    $("#LessonsList").append("<tr align='center'><td id=" + LessonID + " >Lesson" + countNo + "</td><td id=" + LessonID + " >" + LessonName + "</td><td class='td-activity1Status'><span lessonID=" + LessonID + " activityName='activity1' class='label label-success radius newstyle'>" + activity1Status + "ed</span></td><td class='td-activity2Status'><span lessonID=" + LessonID + "  activityName='activity2' class='label  radius newstyle'>" + activity2Status + "ed</span></td></tr>");
+                } else if (activity1Status == "Lock" && activity2Status == "Unlock") {
+                    $("#LessonsList").append("<tr align='center'><td id=" + LessonID + " >Lesson" + countNo + "</td><td id=" + LessonID + " >" + LessonName + "</td><td class='td-activity1Status'><span lessonID=" + LessonID + " activityName='activity1' class='label  radius newstyle'>" + activity1Status + "ed</span></td><td class='td-activity2Status'><span lessonID=" + LessonID + " activityName='activity2' class='label label-success radius newstyle'>" + activity2Status + "ed</span></td></tr>");
+                }
+            }
+		
+
+}
+function updateLessonObj(lessonID, activityName, Status) {
+    for (i = 0; i < classObj.length; i++) {
+        if (classObj[i].lessonId == lessonID) {
+            if (activityName == "activity1") {
+                classObj[i].activity1 = Status;
+            } else if (activityName == "activity2") {
+                classObj[i].activity2 = Status;
+            }
+        }
+    }
+}
+
+function Save()
+{
+	var content={'className':className,'classInfo':"var "+className+"="+JSON.stringify(classObj)};
+	method = "POST";
+	//Url = 'https://localhost:5237/api/Lessons';
+	//using pilot1 api
+	Url = 'https://ace.autotutor.org/lessonsController/api/Lessons';
+	$.ajax({
+		type: method,
+		url: Url,
+		data: content,
+		success: function (data) {
+		  alert("Save successful!");
+		},
+		error: function (xhr, textStatus, errorThrown) {
+			errorMessage = xhr + "\n" + textStatus + "\n" + errorThrown;
+			alert(errorMessage);
+
+		}
+	}).done(function (data) {
+
+	});
+
+}
+
+function Cancel()
+{
+		location.replace(location.href);
+		$('.btn-success').prop('disabled', false); //TO DISABLED
+		//sets disabled mouse cursor
+		$('.btn-success').css('cursor', 'pointer');
+		$("#LesssonContent").hide();
+		$("#ClassesBtns").show();
+		
+}
+</script> 
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> Class List  <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" id="Refresh" href="javascript:location.replace(location.href);" title="Refresh"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="pd-20">
+<div id="ClassesBtns">
+ <div class="cl pd-5 bg-1 bk-gray mt-20">   
+        <span id="selectItemName">1: Please Select a Class first!</span>
+       
+    </div>
+    <div class="text-c"> 
+		<button name="" id="MainPage" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> MainPage</button>
+		<button name="" id="gtc1" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> gtc1</button>
+		<button name="" id="aps1" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> aps1</button>
+		<button name="" id="lai1" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> lai1</button>
+		<button name="" id="hsc" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> hsc</button>
+		<button name="" id="ptp3" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> ptp3</button>
+		<button name="" id="csal" class="btn btn-success" type="submit"><i class="Hui-iconfont"></i> csal</button>
+		
+		
+	</div>
+	</div>
+	<div id="LesssonContent">
+	 <div class="cl pd-5 bg-1 bk-gray mt-20"> 
+		<span id="displayClassName" style="color:red"></span>	<br> 
+        <span >2:Please  directly  make change(Lock/Unlock) on the table below.</span>
+		
+    </div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20">   
+        
+		<span >3:Please Click the save button to submit the changes.</span>
+		<span class="r"> 
+        <button name="" id="Save" class="btn btn-success" type="submit" onclick="Save()">Save</button>
+		<button name="" id="Cancel" class="btn btn-success" type="submit" onclick="Cancel()">Cancel</button></span>
+    </div>
+	<div class="mt-20">
+        <table id='LessonsList' align="center" border="1" class="table table-border table-bordered table-bg table-hover table-sort dataTable no-footer">
+            <tbody></tbody>
+        </table>
+
+	</div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20">   
+        <span id="selectItemName">Please click the save button to submit!</span><span class="r"> 
+	
+        <button name="" id="Save2" class="btn btn-success" type="submit" onclick="Save()">Save</button>
+		<button name="" id="Cancel2" class="btn btn-success" type="submit" onclick="Cancel()">Cancel</button></span>
+    </div>
+	</div>
+</div>
+
+</body>
+</html>

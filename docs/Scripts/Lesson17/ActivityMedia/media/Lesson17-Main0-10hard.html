@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L17Bkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Sintony', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			#fadeBody {display: none;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			/*.jspHorizontalBar { display: none !important; }*/
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#instructBox
+			{
+				height: 35px;
+				background-color: #e3eaf5;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 770px;
+				font-size: 27px;
+				text-align: center;
+				padding: 20px 5px 10px 5px;
+				border-bottom: 5px dashed #1d3352;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainTextHead
+			{
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 6px;
+				text-align: center;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 24px;
+				width: 690px;
+				margin: 10px 0px 0px 40px;
+				padding: 90px 10px;
+				display: inline-block;
+			}
+			.mybutton
+			{
+				font-size: 22px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				text-decoration: none;
+				border: none;
+				padding: 2px 4px;
+				outline: none;
+				border-radius: 8px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 10px;
+			}
+			
+			.posText2
+			{
+				padding: 2px 8px;
+			}
+			.empty
+			{
+				border-width: 4px;
+				border-style: dashed;
+				border-color: red;
+			}
+			.indent
+			{
+				margin-left: 40px;
+			}
+			.para
+			{
+				margin: 10px 0px;
+			}
+			.num
+			{
+				height: 24px;
+				font-size: 22px;
+				border-radius: 10px;
+				background-color: #d8d8d8;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b3"];
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');
+			}
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');
+			}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');
+			}
+			
+			$(document).ready(function()
+			{	
+				$("#fadeBody").fadeIn(2000);
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//lock the buttons
+				//Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "b1");
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-120);
+			}
+			function GetItem()
+			{ 
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+					userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");  
+					userSelectedValue=userSelectedValue.replace(/<[^>].*?>/g,"");      
+					userSelectedValue=userSelectedValue.replace(/[\t]+/g,"");
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ sound_clicked(); }
+					else { sound_incorrect(); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#6495ED"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #6495ED;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+				parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if(data == "NextPage")
+				{
+					$("#buttonBox").fadeOut(1000);
+					$("#questionText").fadeOut(1000);
+					parent.nextPage("media/"+"Lesson17-Main0-11hard.html");
+					//parent.GetWorldEvent("ComputerTutor");
+				}
+				else if (data == "Difficulty") 
+				{
+					parent.GetWorldEvent("Hard");
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	<div id="fadeBody">
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+					How is job competition among low wage workers? 
+			</div>
+			
+			
+			
+			<div id="mainText">
+				<div id="mainTextHead">
+					Keep It the Same
+					<div id="mainTextHeadSub">
+						Written by Dr. Walker, Department of Economics, University of Antarctica
+					</div>
+				</div>
+				<div id="para1" class="para">
+					<span class="indent"></span>There has been considerable debate about whether the government should raise minimum wage in America.I present to you here a few reasons as to why the government should not raise minimum wage.If employers raised minimum wage, this would in turn increase the cost of products we buy and ultimately increase our federal debt.With our inflation rate as it is, many common items are already almost out of reach for millions of Americans.<span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;1&nbsp;</span>Additionally, those who are currently employed may not want to lose their job just to help someone receive a 2 dollar raise.</span>If this increase takes place, 500,000 more Americans will find themselves unemployed in this economy. <span class="mybutton" id="b3" value="Correct"><span class="num">&nbsp;2&nbsp;</span>Currently, low wage workers have an easier time finding work without the additional competition.</span><span class="mybutton" id="b2" value="Incorrect"><span class="num">&nbsp;3&nbsp;</span>If the wage were to increase, it would be harder to find jobs because the number of unemployed unskilled workers would be so high.</span>Is it worth getting 16.5 million people out of poverty or leaving 500,000 workers unemployed? I think its not worth it at all.
+				</div>
+			</div>
+		</div>
+		
+		</div>
+		</div>
+	</body>
+</html>

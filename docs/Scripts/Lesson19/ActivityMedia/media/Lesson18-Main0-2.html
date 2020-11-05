@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				cursor:default;
+				background-image:url('L18Bkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Lato', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			/*.jspHorizontalBar { display: none !important; }*/
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#instructBox
+			{
+				background-color: #d8daab;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 780px;
+				font-size: 24px;
+				text-align: center;
+				padding: 10px 5px 10px 5px;
+				border-bottom: 5px dashed #8ca728;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainTextHead
+			{
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 6px;
+				text-align: center;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 24px;
+				width: 690px;
+				margin: 10px 0px 0px 40px;
+				padding: 10px 10px;
+				display: inline-block;
+			}
+			.mybutton
+			{
+				font-size: 22px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				text-decoration: none;
+				border: none;
+				padding: 2px 4px;
+				outline: none;
+				border-radius: 8px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 10px;
+			}
+			#textMap
+			{
+				background-color: #2a3c51;
+				font-family: Copse, Verdana, 'Times New Roman';
+				width: 800px;
+				height: 486px;
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				margin: 0px  0px auto;
+				padding: 0px;
+				border: none;
+				display: none;
+			}
+			.textTitleTopicBox
+			{
+				background-color: #ffbf40;
+				color: #835904;
+				width: 45%;
+				height: 112px;
+				margin: 12px 0px 0px 15px;
+				padding: 5px;
+				border: 4px solid #ffbf40;
+				border-radius: 10px;
+				display: inline-block;
+			}
+			#textTopicBox{margin-left: 12px;}
+			#headTitleTopic
+			{
+				font-size: 32px;
+				width: 22%;
+				padding: 40px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#titleEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 30px;
+				width: 70%;
+				height: 92%;
+				margin: 5px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText1 { padding: 15px 5px; }
+			#textMainIdeaBox
+			{
+				background-color: #ff6140;
+				color: #9f3019;
+				width: 94%;
+				height: 92px;
+				margin: 6px 0px 0px 15px;
+				padding: 5px;
+				border-radius: 10px;
+				border: 4px solid #ff6140;
+				display: inline-block;
+			}
+			#headMainIdea
+			{
+				font-size: 32px;
+				width: 16%;
+				padding: 12px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#mainIdeaEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 24px;
+				width: 80%;
+				height: 99%;
+				margin: 1px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.supportEntry
+			{
+				color: #292929;
+				background-color: #62b1d0;
+				font-size: 22px;
+				width: 95%;
+				height: 12%;
+				margin: 6px 0px 0px 15px;
+				border-radius: 10px;
+				border: 4px solid #9be1fc;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText2
+			{
+				padding: 2px 8px;
+			}
+			.empty
+			{
+				border-width: 4px;
+				border-style: dashed;
+				border-color: red;
+			}
+			.indent
+			{
+				margin-left: 40px;
+			}
+			.para
+			{
+				margin: 10px 0px;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b1"];
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{				
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+
+			function GetItem()
+			{ 
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			//the Show & HideTextMap functions should be called automatically by the system when the user is building the text map; this means that the buttons in this file should be removed.
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				$( "#textMap" ).slideDown(1000);
+			}
+			function HideTextMap()
+			{
+				//hide text map
+				$( "#textMap" ).slideUp(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");	
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ sound_clicked(); }
+					else { sound_incorrect(); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#8ca728"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #8ca728;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+				Click on the sentence that is good supporting information.
+			</div>
+			<br><br>
+			<!--THESE TWO BUTTONS SHOULD BE REMOVED. HAVE THE SYSTEM AUTOMATICALLY SHOW THE TEXT MAP WHILE IT IS BUILT-->
+			
+			
+			<div id="mainText">
+				<div id="mainTextHead">
+						Asparagus!
+				</div>
+				<div id="para1" class="para">
+					<span class="indent"></span>Replace this text with the text on asparagus. One thing you want to do is cool the burn. <span class="mybutton" id="b1" value="Correct">Hold the burned area under cool (not cold) running water for 10 or 15 minutes or until the pain subsides.</span> Cover the burn with a sterile gauze bandage. Bandaging keeps air off the burn, reduces pain and protects blistered skin. <span class="mybutton" id="b2" value="Incorrect">Take an over-the-counter pain reliever.</span>
+				</div>
+				<div id="para2" class="para">
+					<span class="indent"></span>Watch for signs of infection, such as increased pain, redness, fever, swelling or oozing. <span class="mybutton" id="b3" value="Incorrect">If infection develops, seek medical help.</span> Don't use ice because it can cause a person's body to become too cold and cause further damage to the wound. Don't apply egg whites, butter or ointments to the burn because they could cause infection. Don't break blisters because they are more vulnerable to infection.
+				</div>
+				<div id="para3" class="para">
+					<span class="indent"></span>Watch for signs of infection, such as increased pain, redness, fever, swelling or oozing. If infection develops, seek medical help. Don't use ice because it can cause a person's body to become too cold and cause further damage to the wound. Don't apply egg whites, butter or ointments to the burn because they could cause infection. Don't break blisters because they are more vulnerable to infection.
+				</div>
+			</div>
+		</div>
+		<div id="textMap">
+			<div class="textTitleTopicBox" id="textTitleBox">
+				<div id="headTitleTopic">Title</div>
+				<div id="titleEntry" data-state="">
+					<div class="posText1">How to Assess a Burn</div>
+				</div>
+			</div>
+			<div class="textTitleTopicBox" id="textTopicBox">
+				<div id="headTitleTopic">Topic</div>
+				<div id="titleEntry" data-state="">
+					<div class="posText1">Medical Treatments</div>
+				</div>
+			</div>
+			<div id="textMainIdeaBox">
+				<div id="headMainIdea">Main<br>Idea</div>
+				<div id="mainIdeaEntry" data-state="">
+					<div class="posText1">
+						Proper assessment and treatment of burns can ensure you heal quickly and with minimal pain.
+					</div>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry1" data-state="">
+				<div class="posText2">
+					<span id="supReplace1">
+						Hold the burned area under cool (not cold) running water for 10 or 15 minutes or until the pain subsides.
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry2" data-state="">
+				<div class="posText2">
+					<span id="supReplace2">
+						Bandaging keeps air off the burn, reduces pain and protects blistered skin.
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry3" data-state="">
+				<div class="posText2">
+					<span id="supReplace3">Don't break blisters because they are more vulnerable to infection.</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

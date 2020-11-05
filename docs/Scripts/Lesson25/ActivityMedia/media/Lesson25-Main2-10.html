@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <style>
+	
+	body
+	{
+		background-image:url('L25Bkgd3.png');
+		background-size: cover;
+		background-repeat:no-repeat;
+		overflow: hidden;
+		width: 790px;
+		height: 472px;
+		cursor: default;
+	}
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	var Media =
+	{
+		pageIdentifier: "MediaLoaded",
+		
+	}
+	
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	
+	$(document).ready(function()
+	{
+		parent.GetWorldEvent("StopFinal");
+	}
+	);
+	
+	
+	
+	
+	
+	
+	/*
+		--------------------------------Helper Functions------------------------------
+	*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	
+	
+	
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	*/
+	
+	function GetItem()
+	{
+		parent.GetWorldEvent("StopFinal");
+	}
+	
+	function GetMediaEvent(data)
+	{	if (data == "Difficulty")
+	{
+		parent.GetWorldEvent("Hard");
+	}	
+	
+	}
+  </script>
+</head>
+<body>
+</body>
+</html>

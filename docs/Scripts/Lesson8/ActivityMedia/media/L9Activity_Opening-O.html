@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>L9ActivityOpening</title>
+
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		
+		<style>
+			body
+			{
+				font-family: 'Muli', Tahoma, 'Lucida Sans', Serif;
+				font-size: 30px;
+				font-weight: none;				
+				background-image:url('TabletBkgd.png');
+				background-repeat:no-repeat;
+				background-position:center-top;
+				overflow: hidden;
+				cursor: default;
+			}
+			.qheader
+			{
+				padding-top:10px;
+				margin: 0px auto;
+			}
+			img
+			{
+				width: 680px;
+				position: relative;
+			}
+			#img1
+			{
+				z-index: 3;
+				position: relative;
+			}
+			#img2
+			{
+				z-index: 2;
+				position: relative;
+				display: none;
+			}
+			#img3
+			{
+				z-index: 1;
+				position: relative;
+				display: none;
+			}
+			#img3, #img2
+			{
+				margin-top: -20px;
+			}
+			.question
+			{
+				width: 715px;
+				height: 567px;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+			}
+		</style>
+
+		<script>
+			function GetMediaEvent(data)
+			{
+				if (data == "reread")
+				{
+					$("#img2").fadeIn(1000);
+				}
+				else if (data == "replace")
+				{
+					$("#img3").fadeIn(1000);
+				}
+			}
+			
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
+				
+				return parent.GetWorldEvent(results);
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div class="question" style="">
+			<div class="qheader">
+				<div id="img1">
+					<img src="L9Activity_Opening1.png">
+				</div>
+				<div id="img2">
+					<img src="L9Activity_Opening2.png">
+				</div>
+				<div id="img3">
+					<img src="L9Activity_Opening3.png">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+

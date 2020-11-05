@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 15 Media</title>
+
+		
+		<link href='https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			.spacer0{height: 10px;}
+			.spacer1{height: 16px;}
+			body
+			{
+				overflow: hidden;
+				background-image:url('CapBkgd.png');
+				background-repeat: no-repeat;
+				cursor: default;
+			}
+			#fadeBody {display: none;}
+			.questionBox
+			{
+				position: fixed;
+				top:0;
+				z-index:1;
+				height: 190px;
+				width: 782px;
+				background-image: url('ClearBkgd2.png');
+				margin: 270px 0px 0px -10px;
+				padding: 10px 10px 20px 10px;
+				border: none;
+				font-family: McLaren, Verdana, 'Times New Roman';
+			}
+			#questionBox1
+			{
+				padding-top: 50px;
+				font-size: 34px;
+			}
+			.questionText
+			{
+				text-align: center;
+				font-size: 29px;
+				padding: 5px;
+				color: white;
+			}
+			#questionText1{display: none;}
+			#questionText2{display: none; font-size: 34px; margin: 5px auto; width: 760px;}
+			#buttonBox
+			{
+				margin-left: 38px;
+				margin-top: 10px;
+				display: none;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: bold;
+				width: 700px;
+				height: 32px;
+				line-height: 32px;
+				margin: 8px 0px;
+				color: #111111;
+				background-color: white;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				border-radius: 12px;
+			}
+			#text
+			{
+				font-size: 23px;
+				margin: 5px auto;
+				font-family: Delius, Verdana, 'Times New Roman';
+				overflow: auto;
+				padding: 0px 25px 5px 25px;
+				line-height: 34px;
+			}
+			#textTitle
+			{
+				font-family: 'Goudy Bookletter 1911', Verdana, 'Times New Roman';
+				text-align: center;
+				font-weight: bold;
+				font-size: 42px;
+			}
+			#author
+			{
+				font-weight: bold;
+				text-align: center;
+				font-size: 20px;
+			}
+			.indent{text-indent: 40px;}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 268px;
+				width: 790px;
+				margin-top: -7px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			.sentenceStyle
+			{
+				font-weight: bold;
+				text-decoration: none;
+				border: none;
+				outline: none;
+				border-radius: 6px;
+				padding: 0px 5px;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+		
+			//-1 to 1 == 2 items
+			var currentItem = -1;
+			var numItems = 1;
+			var $scrollElement;
+			var questionBoxArray = [];
+			var numQuestionBoxes = 2;
+			var correctAnswerArray = ["b3", "sentence2"];
+			var selectedAnswer = "";
+			var isSelected = false
+			var isClickable = true;
+			var buttonClass = ".mybutton";
+			
+			function sound_correct() 
+			{ return parent.PlaySound('success0.wav');	}
+			
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav'); }
+			
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');	}
+			
+			
+			 $(document).ready(function()
+			 {
+				$("#fadeBody").fadeIn(1250);
+				
+				Lock();
+				
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//instantiates a scroll pane object 
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+			}); 
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+				
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					Lock();
+					++currentItem;
+					$("#questionText1").fadeIn(1000);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					$("#buttonBox").fadeIn(750);
+				}
+				else if(currentItem == 1)
+				{
+					buttonClass = ".sentence";
+					$("#buttonBox").fadeOut(500);
+					$("#questionText1").fadeOut(500);
+					$("#questionText2").fadeIn(750);
+					$("#questionBox0").animate({"height": "160px", "marginTop": "300px"}, 1000, function()
+						{
+							$('.scroll-pane').css({"height": "298px"});
+							$('.scroll-pane').jScrollPane({autoReinitialise: true});
+							//$("#questionText2").fadeIn(750);
+							ScrollToId($scrollElement, "sentence0");
+							//
+							$(".sentence").addClass("sentenceStyle");
+						}
+					);
+				}
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( buttonClass ).unbind("click");
+				$( buttonClass ).unbind("mouseover");
+				$( buttonClass ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( buttonClass ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( buttonClass ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( buttonClass ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");
+					
+					selectedAnswer = $(this).attr("id");
+					isSelected = true;
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( buttonClass ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( buttonClass ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( buttonClass ).css( 'cursor', 'pointer' );
+				
+				//changes font color & background color via CSS
+				$( buttonClass ).animate({backgroundColor: "background-color: #edff73;", color: "#212121"}, 500);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$( buttonClass ).bind( "click", clickFunc );
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if(correctAnswerArray[0] != selectedAnswer)
+						{
+							//if the answer is not equal to the correct answer, change the background of the selected answer to red
+							$(questionBoxArray[0] + " #buttonBox #" + selectedAnswer).animate({backgroundColor: "#bc1515", color: "white"}, 1000);
+						}
+						else
+						{
+							sound_correct()
+						}
+						isSelected = false;
+					}
+					//highlight the correct answer green
+					$(questionBoxArray[0] + " #buttonBox #" + correctAnswerArray[0]).animate({backgroundColor: "#1f851f", color: "white"}, 1000);
+				}
+				else if(currentItem == 1)
+				{
+					if(isSelected)
+					{
+						if(correctAnswerArray[1] != selectedAnswer)
+						{
+							$("#"+selectedAnswer).animate({backgroundColor: "#bc1515", color: "white"}, 1000);
+						}
+						else
+						{
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					$("#"+correctAnswerArray[1]).animate({backgroundColor: "#1f851f", color: "white"}, 1000);
+				}
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if(currentItem == 1)
+				{
+					$(".sentence").unbind();
+					$(".sentence").removeClass("sentenceStyle");
+					$(".sentence").animate({"backgroundColor": "transparent", "color": "black"}, 500);
+					$(".sentence").css({"cursor": "default"});
+					$("#questionText2").fadeOut(1000);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="fadeBody">
+		<div id="textbox" class="scroll-pane">
+			<!--each question box gets an id from 0 - N -->
+			<div id="questionBox0" class="questionBox">
+				<div class="questionText" id="questionText1">
+					Why might the writer want to go back to school?
+				</div>
+				<div class="questionText" id="questionText2">
+					Click on the sentence above that supports the statement: 
+					<span style="color: #edff73; font-size: 28px;">
+						"The writer did not learn about computers in high school."
+					</span>
+				</div>
+				<div id="buttonBox">
+					<a class='mybutton' id="b1" value="Incorrect"; href='javascript:void(null)'>The writer knows a lot about computers.</a>
+					
+					<a class='mybutton' id="b2" value="Incorrect"; href='javascript:void(null)'>The writer does not know if he wants to get his GED.</a>
+					
+					<a class='mybutton' id="b3" value="Correct"; href='javascript:void(null)'>The writer did not learn about computers in high school.</a>
+				</div>
+			</div>			
+			
+			<div id="text">
+				<div id="textTitle"></div>
+				<div id="author"></div>
+				<div class="spacer0"></div>
+				<div class="indent" id="para1">
+					<span>
+						<!--each clickable sentence gets an id from 0 - N, a value of correct or incorrect is given to each one-->
+						<span id="sentence0" value="Incorrect" class="sentence">Getting my GED would mean a lot to me.</span>
+						I believe I could accomplish a lot of things with my GED.
+						I could further my education. <span id="sentence1" value="Incorrect" class="sentence">I could get into a career I have wanted since I was 12 years old.</span>
+						That career is working with computers. I used to dream about computers all of the time. 
+						I wanted to program and fix them. I wanted to know everything about them. 
+						<span id="sentence2" value="Correct" class="sentence">When I got to high school, I didn't pay much attention to computers.</span>
+						I cut or was late for many of my classes. I was running around doing everything but going to school. 
+						I didn't think school was important.
+					</span> 
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

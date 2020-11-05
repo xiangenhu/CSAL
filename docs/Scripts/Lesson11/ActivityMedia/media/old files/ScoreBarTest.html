@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Score Bar Test</title>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script> 
+		
+		<style type="text/css" id="page-css">
+			.scoreBar
+			{
+				position: absolute;
+				width: 680px;
+				z-index: 1;
+				top: 10;
+			}
+			.scoreFill
+			{
+				position: relative;
+				z-index: -1;
+				width: 0px;
+				background-color: #00FF00;
+				top: 0;
+				margin: -28px 0px 0px 12px;
+				
+			}
+			.doIt
+			{
+				position: relative;
+				margin-top: 50px;
+			}
+
+		</style>
+		<script type="text/javascript">
+			
+			$(document).ready(function()
+			{	
+				//ex. when the button is clicked, fillBar() is called with #test as the element and 50 as the fillAmount
+				$(".doIt").click(function()
+				{
+					//22.6px = 100pts; 45.2px = 200pts;
+					//68px = 300pts; 90.4px = 400pts;
+					//IF USER GETS 3000 POINTS, THE LESSON IS OVER
+					fillBar("#test", 22.6);
+				}
+				);
+			}
+			);
+			
+			//adds fillAmount to the current width of element and creates width animation based on the result
+			//when passing an element to this function, make sure if element is an id to include a # before the element name and a . if the element is a class
+			//fillAmount should be a positive integer value
+			function fillBar(element, fillAmount)
+			{
+				var newWidth = $(element).width() + fillAmount; //calculate the new width
+				
+				//ensures bar doesn't overflow
+				if (newWidth > 680)	{newWidth = 680;}
+				
+				$(element).animate({width: newWidth}, 500);		//queue the width animation
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<div class="scoreBar">
+			<img src="ScoreBar2.png">
+			<div id="test"class="scoreFill">'</div>
+		</div>
+		
+		<button class="doIt">Fill Bar</button>
+		
+	</body>
+</html>

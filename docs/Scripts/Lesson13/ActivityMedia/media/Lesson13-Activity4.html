@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 13 Media</title>
+
+		
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				//background-color: green;
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+			}
+			#instructBox
+			{
+				background-color: #e8d7ee;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 24px;
+				line-height: 30px;
+				text-align: center;
+				padding: 8px 5px 5px 5px;
+				border-bottom: 6px dotted #b99cc4;
+				margin: 0px auto 0px auto;
+			}
+			#questionBox
+			{
+				width: 760px;
+				background-image: url('ClearBkgd2.png');
+				margin: 10px auto 10px auto;
+				padding: 0px;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 36px;
+				/*line-height: 44px;*/
+				padding: 5px 0px;
+				color: #212121;
+				margin: 0px auto;
+			}
+			#mian
+			{
+				margin: 10px ;
+				left:90px;
+			}
+			.drag1
+			{
+				width: 280px;
+				height: 30px;
+				line-height: 30px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 18px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			.drag2
+			{
+				width: 280px;
+				height: 30px;
+				line-height: 30px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 18px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			.setting
+			{
+				position: absolute;
+				text-decoration: underline;
+				font-family: 'Bubblegum Sans', Raleway, Verdana, 'Times New Roman';
+				font-size: 36px;
+				margin: 10px auto 10px auto;
+				left: 355px;
+				color: #593367;
+			}
+			#dragDiv1
+			{
+				top:295px;
+				left:65px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv2
+			{
+				top:335px;
+				left:65px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv3
+			{
+				top:375px;
+				left:65px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv4
+			{
+				top:415px;
+				left:65px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv10
+			{
+				top:295px;
+				left:405px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv11
+			{
+				top:335px;
+				left:405px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv12
+			{
+				top:375px;
+				left:405px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			#dragDiv13
+			{
+				top:415px;
+				left:405px;
+				width: 320px;
+				height: 36px;
+				line-height: 36px;
+				background-color: #b99cc4;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				text-align: center;
+				color: #212121;
+				cursor: default;
+				position: absolute;
+				font-size: 22px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+			
+			#place{top:265px; left:185px;}
+			#times{top:265px; left:525px;}
+		
+		</style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		 <script type="text/javascript">
+		var flag=1;
+		var flag2=1;
+		var spanX=0;
+		var spanY=0;
+		var divid;
+		var questionNum=0;
+		var UserAnswer;
+		var dragArea="main";
+		var dragAreaID="#main1 div";
+		var slectedItems="";
+		var insertDivId;
+		var idName = new Array();
+		var strId;
+		//var SortArr=["dragDiv1","dragDiv2","dragDiv3","dragDiv4","dragDiv10","dragDiv11","dragDiv12","dragDiv13"];
+		var SortArr=["dragDiv10","dragDiv11","dragDiv12","dragDiv13"];
+		
+		function Start()
+		{	
+			GetRequest();
+			$(".drag1").attr('disabled', true);
+			$(".drag2").attr('disabled', true);
+			parent.GetWorldEvent("DDLoaded");
+		}
+	   
+		function GetItem()
+		{
+			questionNum++;
+			
+			if(questionNum<3)
+			{
+				//dragAreaID="\"#"+dragArea+questionNum+ " div\"";
+				//alert(dragAreaID)
+				parent.GetWorldEvent("Continue");
+			}
+			else
+			{
+				var getPageContent = " It had been an ordinary day. " + "<span>" + $("#character1").html() + "</span>" + " was at home making a sandwich, and " + "<span>" + $("#character2").html() + "</span>" + " was napping at work. Both felt a strange tingling sensation for a few seconds, and then suddenly they appeared " + "<span>" + $("#insert1").html() + " " + $("#insert2").html() + "</span>";
+				
+				slectedItems +=getPageContent + "."
+				
+				parent.nextPage("media/"+"Lesson13-Activity5.html?id="+slectedItems);
+			}
+			
+		}
+		function ShowItem()
+		{
+		Lock();
+		
+		
+		}	
+		function Lock()
+		{
+		if(questionNum==1)
+		{
+		flag=1;
+		$(".drag1").attr('disabled', true);
+		$(".drag2").attr('disabled', true);
+		
+		}
+		if(questionNum==2)
+		{
+		
+		flag2=1;
+		$(".drag1").attr('disabled', true);
+		$(".drag2").attr('disabled', true);
+		}
+		
+		
+		}
+		function Unlock()
+		{
+		if(questionNum==1)
+		{
+		flag=0;
+		$(".drag1").attr('disabled', false);
+		$(".drag2").attr('disabled', true);
+		}
+		if(questionNum==2)
+		{
+		
+		flag2=0;
+		$(".drag1").attr('disabled', true);
+		$(".drag2").attr('disabled', false);
+		}
+		
+		
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				return UserAnswer;
+			
+			}
+			else if (data=="NextPage")
+			{
+			
+				var getPageContent = " It had been an ordinary day. " + "<span>" + $("#character1").html() + "</span>" + " was at home making a sandwich, and " + "<span>" + $("#character2").html() + "</span>" + " was napping at work. Both felt a strange tingling sensation for a few seconds, and then suddenly they appeared " + "<span>" + $("#insert1").html() + " " + $("#insert2").html() + "</span>";
+				
+				slectedItems +=getPageContent+"."
+				
+				parent.nextPage("media/"+"Lesson13-Activity5.html?id="+slectedItems);	
+		
+			}
+			else if (data=="JordanSelect")
+			{
+				var getSelectIndex=Math.floor(Math.random() * SortArr.length )
+				
+				var getSelectName=SortArr[getSelectIndex];
+				
+				var getContent = $("#"+getSelectName).html();
+				questionNum++;
+				insertDivId="insert"+questionNum;
+				$("#"+insertDivId).html(getContent);
+				$("#"+insertDivId).css({"color":"#593367"});
+				$("#"+insertDivId).css({"text-decoration":"none"});
+				//SortArr.splice(getSelectIndex,1)
+				SortArr.splice(jQuery.inArray(getSelectName,SortArr),1); 
+				
+				$("#"+getSelectName).remove();
+				parent.GetWorldEvent("JordanSelect"+questionNum);
+			}
+		}
+		
+		function GetRequest() 
+		{ 
+		    var url = location.search;
+			//alert(url);
+			
+		    if (url.indexOf("?") != -1) 
+		    { 
+			    str = url.substr(1); 
+				strs = str.split("=");
+				strId = strs[1];
+				
+				idName=strId.split("&");
+				slectedItems = idName[2];
+
+				$("#character1").html(idName[0]);
+				$("#character1").css({"color":"#593367"});
+				$("#character1").css({"text-decoration":"none"});
+				$("#character2").html(idName[1]);
+				$("#character2").css({"color":"#593367"});
+				$("#character2").css({"text-decoration":"none"});
+		    }
+		}
+		function ShowMediaAnswer()
+		{	}
+	
+		var main="mian1";
+
+		$(document).ready(function()
+		{
+			$("#main1 div").mouseover(function (e) 
+			{
+				if(flag==0)
+				{
+					var oe=e||window.event;
+					 divid = $(this).attr("id"); //
+					 getContent = $(this).html();
+					var odiv = document.getElementById(divid); //
+					$(this).css("z-index", "100").siblings().css("z-index", "0"); //div????
+					moveDiv(odiv);
+				}
+			});
+		  
+			$("#main2 div").mouseover(function (e) 
+			{
+				if(flag2==0)
+				{
+	
+					var oe=e||window.event;
+					divid = $(this).attr("id"); //
+					getContent = $(this).html();
+					var odiv = document.getElementById(divid); //
+					$(this).css("z-index", "100").siblings().css("z-index", "0"); //div????
+					moveDiv(odiv);
+				}
+			});
+
+	        function moveDiv(obj) 
+			{
+				obj.onmousedown = function (e) 
+				{
+					var oe = e || window.event;
+					var $this = this;
+					
+					insertDivId="insert"+questionNum;
+					
+					var startX = oe.clientX - $this.offsetLeft;
+					var startY = oe.clientY - $this.offsetTop;
+					
+					var DivStartX= $("#"+divid).position().left; 
+					var DivStartY = $("#"+divid).position().top; 
+					
+					var rangeLeft;
+					var rangeTop;
+
+					//obj.className = "on"; //css3
+			
+					document.onmousemove = function (e) 
+					{////??????
+						var oe = e || window.event;
+
+						$this.style.left = oe.clientX - startX + "px";
+						
+						$this.style.top = oe.clientY - startY + "px";
+						rangeLeft=oe.clientX - startX  
+						rangeTop=oe.clientY - startY
+
+						var spanX = $("#"+insertDivId).position().left; 
+						var spanY = $("#"+insertDivId).position().top;
+
+						if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+						{
+							$("#"+insertDivId).css({"color":"green"});
+							$("#"+insertDivId).css({"font-weight":"bold"});
+							$("#"+insertDivId).css({"font-size":"46px"});
+						}
+						else
+						{
+							$("#"+insertDivId).css({"color":"#212121"});
+							$("#"+insertDivId).css({"font-weight":"normal"});
+							$("#"+insertDivId).css({"font-size":"36px"});
+						}
+					
+						//$this.className='pointer';
+					}
+					document.onmouseup = function () 
+					{//??????
+						document.onmousemove = null;
+						document.onmouseup = null;
+						//obj.className = "off"; //css3??????
+						//insertDivId="insert"+questionNum;
+						var spanX = $("#"+insertDivId).position().left ; 
+						var spanY = $("#"+insertDivId).position().top;
+						if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+						{
+							$("#"+insertDivId).html(getContent);
+							$("#"+insertDivId).css({"color":"#593367"});
+							$("#"+insertDivId).css({"text-decoration":"none"});
+							$("#"+insertDivId).css({"font-weight":"normal"});
+							$("#"+insertDivId).css({"font-size":"36px"});
+
+							SortArr.splice(jQuery.inArray(divid,SortArr),1); 
+							
+							$("#"+divid).remove();
+							
+							UserAnswer=getContent;
+							//slectedItems +=getContent+"&"
+							parent.GetWorldEvent("userAnswer_"+"UserAnswer_"+UserAnswer);
+							//parent.GetWorldEvent("UserAnswer");
+							
+							Lock();
+						}
+						else
+						{
+							$this.style.left =DivStartX+ "px";
+							$this.style.top = DivStartY+ "px";
+							//alert(DivStartY);
+							//alert($("#"+divid).offset().top);
+						}
+
+						if ($this.releaseCapture) {//debug??????
+						
+							$this.releaseCapture();
+						}
+					}
+                
+					if ($this.setCapture) 
+					{//debug??????
+						$this.setCapture();
+					}
+				}
+			}
+		});
+</script>
+	</head>
+	<body onload="Start()">
+		<div id="instructBox">
+			Drag and drop an option onto the blank.
+		</div>
+		
+		<div id="questionBox">
+			<div id="questionText">
+				It had been an ordinary day. <span id="character1" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> was at home making a sandwich, and <span id="character2" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> was napping at work.  Both felt a strange tingling sensation for a few seconds, and then suddenly they appeared
+				<span id="insert1" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> <span id="insert2" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>.
+			</div>
+		</div>
+		<div  style="width: 100%; height: 100%; margin: 0 auto;" id="main1">
+		   
+		<span class="setting" id="place">Places</span>
+	 
+		<div class="drag1"  id="dragDiv1" >in the Johnsons' barn</div>
+		<div class="drag1"  id="dragDiv2" >at the Rosedale library</div>
+		<div class="drag1"  id="dragDiv3" >at Vivian's Truck Stop</div>
+		<div class="drag1"  id="dragDiv4" >in the mall parking lot</div>
+		
+		</div>
+		
+		<div  style="width: 100%; height: 100%; margin: 0 auto;" id="main2">
+		<span  class="setting" id="times">Times</span>
+		<div  class="drag2" id="dragDiv10" >during  the summer of 1985</div>
+		<div class="drag2" id="dragDiv11" >an hour ago</div>
+		<div class="drag2" id="dragDiv12" >at 4:00 in the morning</div>
+		<div class="drag2" id="dragDiv13" >on December 31, 1999 </div>
+		
+		</div>
+		
+		
+	</body>
+</html>

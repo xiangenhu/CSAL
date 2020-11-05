@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L7Background1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Nunito', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 432px;
+				width: 798px;
+				margin-top: 51px;
+			}
+			#instructBox
+			{
+				background-color: #f7ffbf;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 800px;
+				font-size: 25px;
+				text-align: center;
+				padding: 10px 0px;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainText
+			{
+				font-size: 24px;
+				padding: 20px 10px 0px 20px;
+				line-height: 38px;
+			}
+			.mainTextHead
+			{
+				font-family: 'Gloria Hallelujah', Verdana, 'Times New Roman';
+				font-size: 48px;
+				margin: 20px auto 40px auto;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.mybutton
+			{
+				font-size: 24px;
+				font-weight: normal;
+				line-height: 50px;
+				margin: 20px auto 30px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				outline: none;
+				border-radius: 12px;
+			}
+			#display1
+			{
+				border-radius: 5px;
+				padding: 0px 4px;
+			}
+			.num
+			{
+				height: 24px;
+				font-size: 22px;
+				border-radius: 20px;
+				background-color: #d8d8d8;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			#para1 { margin-top: 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var $scrollElement;
+			var currentItem = -1;
+			var numItems = 0;
+			var isSelected = false;
+			var itemsArray=["b1","b2","b3"];
+			var score=0;
+			var userSelecteditem="";
+			var clicked;
+			
+			//you can store multiple answers in this array if needed
+			//**************
+			var correctAnswerArray = ["b3"];
+			$(document).ready(function()
+			{				
+				//lock the buttons
+				Lock();
+				$("#display1").animate({backgroundColor: "#3a4dff", color: "white"}, 1000);
+				parent.GetWorldEvent("MediaLoadedEasy");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "b2");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-250);
+			}
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							$( clicked ).animate({backgroundColor: "#da3636", color: "white"}, 1000);
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							parent.PlaySound('success0.wav');
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+					
+				}
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseenter");
+				$( ".mybutton" ).unbind("mouseleave");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("item");
+					userSelected = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelected).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+					userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					clicked = "#" + $(this).attr("id");
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){score++;  parent.PlaySound('clicked0.wav'); }
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedItem);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseenter(function()
+				{ $(this).finish().animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseleave(function()
+				{ $(this).finish().animate({backgroundColor: "#f7ffbf"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#f7ffbf", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				//go to next page
+				else if (data == "NextPage")
+				{	
+				//*********
+				parent.GetWorldEvent("Stop");
+					//parent.nextPage("media/"+"Lesson7-E10.html");
+				}
+				else if(data=="JordanCorrect")
+				{
+					var JordanAnswer = $("#b3").attr("value");
+					$("#b3").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					parent.GetWorldEvent("JordanCorrect");
+				}
+				else if(data=="JordanIncorrect")
+				{
+			
+				itemsArray.splice(jQuery.inArray('b3',itemsArray),1); 
+				var value = parseInt(Math.random() * (itemsArray.length - 1 + 1) + 1);
+  				var JordanAnswerID=itemsArray[value-1];
+				var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+				$("#"+JordanAnswerID).animate({backgroundColor: "blue", color: "white"}, 1000);
+				itemsArray.splice(jQuery.inArray(JordanAnswerID,itemsArray),1); 
+				
+				
+					parent.GetWorldEvent("JordanIncorrect");
+			
+				}
+				else if(data == "Difficulty")
+				{
+					parent.GetWorldEvent("Easy");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="instructBox">
+			Please click the sentence that best relates to the word in blue.
+		</div>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+					<div id="para1" class="para">
+				<span class="indent"></span>Sarah Thomas is hoping to make history. By next season, she could be the NFL's first full-time female referee or ref. It would take the passing of a test regarding what she knows about the sport. The job would often require her to travel to sporting events. She would make sure players follow the rules of the game. 
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>Referees blow a whistle to stop play if a rule is broken Then they explain the  penalty for the player or the team.  Most penalties result in replaying the down and moving the ball toward the rule breaking team's end zone. The NFL has been training Thomas and others. She worked this summer at team training camps. She worked for the Indianapolis Colts and the New Orleans Saints. Thomas has trained at the Saints' camp before. She does "a great job," said Saints head coach Sean Payton. 
+				</div>
+				
+				<div id="para3" class="para">
+				<span class="indent"></span>Thomas is now a finalist in the NFL's training program. She could get the next regular-season spot. That will happen when a current ref leaves the league. There are only a few people in the running. It could be as soon as the 2014 season. But her success did not happen overnight. Thomas has long been on the list to fill a referee position due to her experience. "She was in our  pipeline for a while," said Dean Blandino. He works for the NFL. He is in charge of officials on the field.
+				</div>
+				
+				<div id="para4" class="para">
+				<span class="indent"></span> Thomas played basketball in college. At 23, she became a ref for high school football games. She has worked at the college level for the past eight years. She has been the ref for championship games at both levels. 
+				</div>
+				
+				
+				<div id="para5" class="para">
+				<span class="indent"></span>But it's a big leap to the NFL. Blandino said it's similar to how a player makes it to the NFL. "Getting used to that type of speed is important," he said. Thomas, who is now 40, agrees. "The speed, yes, is there," she said. Both the referees and players are very talented. "These are just (great) athletes on both sides of the ball." It takes strong people to play and control these games. There are many things that a referee needs to be able to do well in the league. Thomas shows a lot of the qualities the NFL looks for in a ref. She is confident. She believes she can do a good job. She knows where to go and what to do at all times. She can also do a lot of duties at once: She still works in sales and has three children. 
+				</div>
+				
+				<div id="para6" class="para">
+				<span class="indent"></span><span class="mybutton" id="b1" item="A" value="Incorrect"><span class="num">&nbsp;1&nbsp;</span> Blandino said the fact that she's a woman is a bonus.</span> She would add to a workplace  that is <span class="mybutton" id="b2" item="B" value="Incorrect"><span class="num">&nbsp;2&nbsp;</span> mostly male</span>. "It's always a positive when there's <span id="display1">diversity</span>," he said. <span class="mybutton" id="b3" item="C" value="Correct"><span class="num">&nbsp;3&nbsp;</span> Having different kinds of employees</span> whether it is by gender, race, education, or just communication style is important to businesses. 
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="That is what I thought!" speech=" " play="B1" />
+        <Item text="I agree!" speech=" " play="B2" />
+        <Item text="Yeah!" speech=" " play="B3" />
+        <Item text="I think so too." speech=" " play="B4" />
+        <Item text="That is my answer." speech=" " play="B5" />
+        <Item text="You look smart." speech=" " play="B6" />
+      </SpeechCan>
+      <SpeechCan name="MetaComRsp">
+        <Item text="Once again." speech=" " play="B7" />
+        <Item text="Once more." speech=" " play="B8" />
+        <Item text="Let me say that again." speech=" " play="B9" />
+        <Item text="Let me repeat." speech=" " play="B10" />
+        <Item text="Okay." speech=" " play="B11" />
+      </SpeechCan>
+      <SpeechCan name="PromptStart">
+        <Item text="I think the answer is something like this." speech=" " play="B12" />
+        <Item text="I think I know a part of the answer. " speech=" " play="B13" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="And can you tell me more?" speech=" " play="B14" />
+        <Item text="What else?" speech=" " play="B15" />
+        <Item text="Anything else?" speech=" " play="B16" />
+        <Item text="Is there anything else about that?" speech=" " play="B17" />
+        <Item text="Alright. Could you elaborate on that a little?" speech=" " play="B18" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="I'm not so sure about that." speech=" " play="B19" />
+        <Item text="I don't think so." speech=" " play="B20" />
+        <Item text="I don't think that is right." speech=" " play="B21" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Okay." speech=" " play="B22" />
+        <Item text="Alright." speech=" " play="B23" />
+        <Item text="OK." speech=" " play="B24" />
+      </SpeechCan>
+      <SpeechCan name="MetaCogRsp">
+        <Item text="Come on, I bet you can tell me something." speech=" " play="B25" />
+        <Item text="ok. Just give me what you know." speech=" " play="B26" />
+        <Item text="Could you try to give me an answer?  I really need your help." speech=" " play="B27" />
+      </SpeechCan>
+      <SpeechCan name="HintStart">
+        <Item text="I have a question." speech=" " play="B28" />
+        <Item text="Maybe you can help me." speech=" " play="B29" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="That is correct!" speech="" play="A1" />
+        <Item text="That's right!" speech="" play="A2" />
+        <Item text="You are correct!" speech="" play="A3" />
+        <Item text="Great, you're right!" speech="" play="A4" />
+        <Item text="Yes! That's it!" speech="" play="A5" />
+        <Item text="You got it!" speech="" play="A6" />
+        <Item text="Great job!" speech="" play="A7" />
+        <Item text="You're correct!" speech="" play="A8" />
+      </SpeechCan>
+      <SpeechCan name="AskJordan">
+        <Item text="ComputerStudent1, can you answer this question?" speech="" play="A9" />
+      </SpeechCan>
+      <SpeechCan name="TooSlow">
+        <Item text="Having trouble deciding? Let me choose one for you." speech="" play="A10" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="That is not right." speech="" play="A11" />
+        <Item text="I'm sorry, that's incorrect." speech="" play="A12" />
+        <Item text="No, that's incorrect." speech="" play="A13" />
+        <Item text="I'm sorry, that's not it." speech="" play="A14" />
+        <Item text="That's not it." speech="" play="A15" />
+        <Item text="That's incorrect." speech="" play="A16" />
+        <Item text="No, that's not correct." speech="" play="A17" />
+        <Item text="I'm sorry, that is not correct." speech="" play="A18" />
+        <Item text="Not quite." speech="" play="A19" />
+        <Item text="No, that's not it." speech="" play="A20" />
+      </SpeechCan>
+      <SpeechCan name="TryAgain">
+        <Item text="Please try again." speech="" play="A21" />
+      </SpeechCan>
+      <SpeechCan name="ChooseQuestion">
+        <Item text="_user_, please choose a question." speech="" play="_user_,A22" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <RigidPacks>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, hi!" speech="" media="media\L11IntroTitle.html" play="_user_,A23" />
+      <Item id="2" agent="ComputerStudent1" text="ComputerTutor, hi. what are we working on today?" speech="ComputerTutor,hi. what are we working on two day?" play="B30" />
+      <Item id="3" agent="ComputerTutor" text="We are going to try a bit of trivia to review the skills we have learned." speech="" play="A24" />
+      <Item id="4" agent="ComputerStudent1" text="Great! What do we need to do?" speech="" play="B31" />
+    </RigidPack>
+    <RigidPack name="Opening1.1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Each category has 4 questions with point values of 100, 200, 300, and 400. The 400 point questions are the most difficult." speech="" play="A25" />
+    </RigidPack>
+    <RigidPack name="Opening1.3" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="You will go back to the main page to pick your next question. After correct answers, the score bar at the top will fill with the amount of points that the question was worth." speech="" play="A26" />
+    </RigidPack>
+    <RigidPack name="Opening1.2" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="How do we pick questions?" speech="" play="B32" />
+      <Item id="2" agent="ComputerTutor" text="Choose a question by clicking on one of the numbers below a category. " speech="" play="A27" />
+      <Item id="3" agent="ComputerStudent1" text="Cool. So, what happens when we click a number?" speech="" play="B33" />
+      <Item id="4" agent="ComputerTutor" text="A question will appear. You can answer a question by clicking on the answer buttons. " speech="" play="A28" />
+      <Item id="5" agent="ComputerStudent1" text="What happens next?" speech="" play="B34" />
+    </RigidPack>
+    <RigidPack name="Opening1.32" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="When you completely fill the bar, you have completed the activity." speech="" play="A29" />
+      <Item id="2" agent="ComputerTutor" text="Questions that you answer correctly will turn green. " speech="" play="A30" />
+    </RigidPack>
+    <RigidPack name="Opening12" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="You see that there are four categories for the questions." speech="" play="A31" />
+      <Item id="2" agent="ComputerTutor" text="Text signals, writer's purpose, using clues, and mixed review. " speech="" play="A32" />
+      <Item id="3" agent="ComputerStudent1" text="I see. So, what are the numbers under each category?" speech="" play="B35" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Wow! It looks like you got all the points needed to finish this lesson. Great job with this activity." speech="" play="A33" />
+      <Item id="2" agent="ComputerStudent1" text="_user_, you were amazing! This was a good chance to practice. " speech="" play="_user_,B36" />
+      <Item id="3" agent="ComputerTutor" text="I'm glad you seem to have learned so much using this program." speech="" play="A34" />
+      <Item id="4" agent="ComputerStudent1" text="_user_ and ComputerTutor, thanks again. See you next time." speech="" play="_user_,B37" />
+    </RigidPack>
+    <RigidPack name="Opening1.4" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="What if we get a question wrong?" speech="" play="B38" />
+      <Item id="2" agent="ComputerTutor" text="If you answer incorrectly, you will see a red border around the question. You are able to click  those questions to try again. " speech="" play="A35" />
+    </RigidPack>
+    <RigidPack name="Opening1.5" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Sweet! Let's try it!" speech="" play="B39" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Here is the game board. " speech="" play="A36" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="Q1.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What type of text signal is displayed in the box below? _user_, Click on your answer." speech="" media="" play="A37,_user_,A38">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose print cue." speech="" keys="any" threshold="" play="B40" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose title or subtitle." speech="" keys="any" threshold="" play="B41" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose visual cue." speech="" keys="any" threshold="" play="B42" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The text signal in the graphic is a visual cue." speech="" keys="any" threshold="" play="A39" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The text signal in the box is a visual cue.  A visual cue is a picture, graph, or image which can help us to understand what we are reading." speech="" keys="any" threshold="" play="A40" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A41" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A42" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's right!" speech="" keys="any" threshold="" play="A43" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q1.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What type of text signal is displayed in the box below?_user_, Click your answer." speech="" media="" play="A44,_user_,A45">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose print cue." speech="" keys="any" threshold="" play="B43" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose title or subtitle." speech="" keys="any" threshold="" play="B44" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose visual cue." speech="" keys="any" threshold="" play="B45" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The text signal in the graphic is a visual cue." speech="" keys="any" threshold="" play="A46" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The text signal in the box is a visual cue.  A visual cue is a picture, graph, or image which can help us to understand what we are reading." speech="" keys="any" threshold="" play="A47" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A48" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A49" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's right!" speech="" keys="any" threshold="" play="A50" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q10.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What does the acronym DMV mean in this sentence? I have to stop by the DMV to renew my driver's license." speech="" media="" play="A51">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's Department of Motor Vehicles." speech="" keys="any" threshold="" play="B46" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's District of Mount Vernon." speech="" keys="any" threshold="" play="B47" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's Division of Multiple Vehicles." speech="" keys="any" threshold="" play="B48" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The acronym DMV means Department of Motor Vehicles." speech="" keys="any" threshold="" play="A52" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The acronym DMV means Department of Motor Vehicles.  The text clue drivers' license in the sentence helps us to choose the correct meaning of DMV." speech="" keys="any" threshold="" play="A53" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is correct!" speech="" keys="any" threshold="" play="A54" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's not it." speech="" keys="any" threshold="" play="A55" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's not it." speech="" keys="any" threshold="" play="A56" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q10.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What does the acronym DMV mean in this sentence? I have to stop by the DMV to renew my driver's license." speech="" media="" play="A57">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's Department of Motor Vehicles." speech="" keys="any" threshold="" play="B49" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's District of Mount Vernon." speech="" keys="any" threshold="" play="B50" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's Division of Multiple Vehicles." speech="" keys="any" threshold="" play="B51" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The acronym DMV means Department of Motor Vehicles." speech="" keys="any" threshold="" play="A58" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The acronym DMV means Department of Motor Vehicles.  The context clue drivers' license in the sentence helps us to choose the correct meaning of DMV." speech="" keys="any" threshold="" play="A59" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That is correct!" speech="" keys="any" threshold="" play="A60" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's not it." speech="" keys="any" threshold="" play="A61" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's not it." speech="" keys="any" threshold="" play="A62" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q11.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What is the meaning of present in this sentence? Danielle brought a present to the party." speech="" media="" play="A63">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Does present mean now, in this moment of time?" speech="" keys="any" threshold="" play="B52" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Does present mean a gift?" speech="" keys="any" threshold="" play="B53" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Does present mean to put on a show or demonstration?" speech="" keys="any" threshold="" play="B54" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The word present in this sentence means a gift." speech="" keys="any" threshold="" play="A64" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The word present in this sentence means a gift.  The context clue party in the sentence helps us to understand that present means a gift." speech="" keys="any" threshold="" play="A65" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not it." speech="" keys="any" threshold="" play="A66" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Yes, that's it!" speech="" keys="any" threshold="" play="A67" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's not it." speech="" keys="any" threshold="" play="A68" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q11.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What is the meaning of present in this sentence? Danielle brought a present to the party." speech="" media="" play="A69">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="Does present mean now, in this moment of time?" speech="" keys="any" threshold="" play="B55" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="Does present mean a gift?" speech="" keys="any" threshold="" play="B56" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="Does present mean to put on a show or demonstration?" speech="" keys="any" threshold="" play="B57" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The word present in this sentence means a gift." speech="" keys="any" threshold="" play="A70" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The word present in this sentence means a gift.  The context clue, party,in the sentence helps us to understand that present means a gift." speech="" keys="any" threshold="" play="A71" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not it." speech="" keys="any" threshold="" play="A72" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Yes, that's it!" speech="" keys="any" threshold="" play="A73" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's not it." speech="" keys="any" threshold="" play="A74" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q12.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What word in the sentence below helps us to define the word Monongahela? Many people think that the Monongahela is the most beautiful river in Pittsburgh." speech="What word in the sentence below helps us to define the word manongguhheeluh? Many people think that the manongguhheeluh is the most beautiful river in Pittsburgh." media="" play="A75">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="The answer is river." speech="" keys="any" threshold="" play="B58" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="The answer is beautiful." speech="" keys="any" threshold="" play="B59" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="The answer is people." speech="" keys="any" threshold="" play="B60" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The word that helps to define Monongahela is the word river." speech="The word that helps to define manongguhheeluh is the word river." keys="any" threshold="" play="A76" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The word that helps to define Monongahela is the word river.  When we replace Monongahela with each one of the answer words, the word river makes the most sense." speech="The word that helps to define manongguhheeluh is the word river.  When we replace manongguhheeluh with each one of the answer words, the word river makes the most sense." keys="any" threshold="" play="A77" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You got it right!" speech="" keys="any" threshold="" play="A78" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A79" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A80" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q12.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What word in the sentence below helps us to define the word Monongahela? Many people think that the Monongahela is the most beautiful river in Pittsburgh." speech="What word in the sentence below helps us to define the word manongguhheeluh? Many people think that the manongguhheeluh is the most beautiful river in Pittsburgh." media="" play="A81">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="The answer is river." speech="" keys="any" threshold="" play="B61" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="The answer is beautiful." speech="" keys="any" threshold="" play="B62" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="The answer is people." speech="" keys="any" threshold="" play="B63" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The word that helps to define Monongahela is the word river." speech="The word that helps to define manongguhheeluh is the word river." keys="any" threshold="" play="A82" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The word that helps to define Monongahela is the word river.  When we replace Monongahela with each one of the answer words, the word river makes the most sense." speech="The word that helps to define manongguhheeluh is the word river.  When we replace manongguhheeluh with each one of the answer words, the word river makes the most sense." keys="any" threshold="" play="A83" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You got it right!" speech="" keys="any" threshold="" play="A84" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A85" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A86" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q13.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Choose what the writer is expressing with this punctuation in the sentence below. Carol's son asked her, Can I invite my friends over when I finish my homework." speech="" media="" play="A87">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think that the writer is asking a question." speech="" keys="any" threshold="" play="B64" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think that the writer is making a statement." speech="" keys="any" threshold="" play="B65" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think that the writer is expressing strong emotion." speech="" keys="any" threshold="" play="B66" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The punctuation mark says that the writer is asking a question." speech="" keys="any" threshold="" play="A88" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The punctuation mark says that the writer is asking a question.  The writer uses  the question mark to show that  Carol's son is asking to invite his friends over." speech="" keys="any" threshold="" play="A89" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You're right!" speech="" keys="any" threshold="" play="A90" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's incorrect." speech="" keys="any" threshold="" play="A91" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's incorrect." speech="" keys="any" threshold="" play="A92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q13.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Choose what the writer is expressing with this punctuation in the sentence below. Carol's son asked her, Can I invite my friends over when I finish my homework." speech="" media="" play="A93">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think that the writer is asking a question." speech="" keys="any" threshold="" play="B67" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think that the writer is making a statement." speech="" keys="any" threshold="" play="B68" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think that the writer is expressing strong emotion." speech="" keys="any" threshold="" play="B69" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The punctuation mark says that the writer is asking a question." speech="" keys="any" threshold="" play="A94" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The punctuation mark says that the writer is asking a question.  The writer uses  the question mark to show that  Carol's son is asking to invite his friends over." speech="" keys="any" threshold="" play="A95" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="You're right!" speech="" keys="any" threshold="" play="A96" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's incorrect." speech="" keys="any" threshold="" play="A97" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's incorrect." speech="" keys="any" threshold="" play="A98" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q14.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What is the metaphor in this sentence? At her banking job Celeste is a machine, but when she gets home she crashes." speech="" media="" play="A99">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose at her banking job." speech="" keys="any" threshold="" play="B70" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose Celeste is a machine." speech="" keys="any" threshold="" play="B71" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose when she gets home she crashes." speech="" keys="any" threshold="" play="B72" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The metaphor in the sentence is Celeste is a machine." speech="" keys="any" threshold="" play="A100" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The metaphor in the sentence is Celeste is a machine. The metaphor means that Celeste works very hard the same way that a computer works very hard and makes no mistakes." speech="" keys="any" threshold="" play="A101" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A102" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's right!" speech="" keys="any" threshold="" play="A103" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A104" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q14.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What is the metaphor in this sentence? At her banking job Celeste is a machine, but when she gets home she crashes." speech="" media="" play="A105">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose at her banking job." speech="" keys="any" threshold="" play="B73" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose Celeste is a machine." speech="" keys="any" threshold="" play="B74" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose when she gets home she crashes." speech="" keys="any" threshold="" play="B75" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The metaphor in the sentence is Celeste is a machine." speech="" keys="any" threshold="" play="A106" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The metaphor in the sentence is Celeste is a machine. The metaphor means that Celeste works very hard the same way that a computer works very hard and makes no mistakes." speech="" keys="any" threshold="" play="A107" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A108" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's right!" speech="" keys="any" threshold="" play="A109" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A110" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q15.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What clarifying question helps us understand the word bear in the sentence below? While fixing her deck, Dominique learns that the beams she is using must be able to bear up to 200 pounds." speech="" media="" play="A111">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think she should ask what is the purpose of the text." speech="" keys="any" threshold="" play="B76" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think she should ask is there a comparison being made." speech="" keys="any" threshold="" play="B77" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think she should choose what are the two or more definitions for this word." speech="" keys="any" threshold="" play="B78" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The clarifying question that Dominique should ask is what are the two or more definitions for this word." speech="" keys="any" threshold="" play="A112" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The clarifying question that Dominique should ask is what are the two or more definitions for this word.  Bear can mean a large animal, but here the word bear means hold. As in, she has to make sure the beams she is using can hold up to 200 pounds." speech="" keys="any" threshold="" play="A113" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Not quite." speech="" keys="any" threshold="" play="A114" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Not quite." speech="" keys="any" threshold="" play="A115" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="You got it!" speech="" keys="any" threshold="" play="A116" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q15.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="What clarifying question helps us understand the word bear in the sentence below? While fixing her deck, Dominique learns that the beams she is using must be able to bear up to 200 pounds." speech="" media="" play="A117">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think she should ask what is the purpose of the text." speech="" keys="any" threshold="" play="B79" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think she should ask is there a comparison being made." speech="" keys="any" threshold="" play="B80" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think she should choose what are the two or more definitions for this word." speech="" keys="any" threshold="" play="B81" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The clarifying question that Dominique should ask is what are the two or more definitions for this word." speech="" keys="any" threshold="" play="A118" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The clarifying question that Dominique should ask is what are the two or more definitions for this word.  Bear can mean a large animal, but here the word bear means hold. As in, she has to make sure the beams she is using can hold up to 200 pounds." speech="" keys="any" threshold="" play="A119" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Not quite." speech="" keys="any" threshold="" play="A120" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Not quite." speech="" keys="any" threshold="" play="A121" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="You got it!" speech="" keys="any" threshold="" play="A122" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q16.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="In the sentence below, a simile is being used to compare which two things? After a cold afternoon building a snowman, Maurice's hands were like icicles." speech="In the sentence below, a simile is being used to compare which two things? After a cold afternoon building a snow man, Mawreese's hands were like icicles." media="" play="A123">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the two things are Maurice and snowman." speech="I think the two things are Maureese and snowman." keys="any" threshold="" play="B82" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the two things are hands and icicles." speech="" keys="any" threshold="" play="B83" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think the two things are hands and cold." speech="" keys="any" threshold="" play="B84" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The two things being compared with a simile are hands and icicles." speech="" keys="any" threshold="" play="A124" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The two things being compared with a simile are hands and icicles. The simile in the sentence is Maurice's hands were like icicles where the word like compares hands and icicles." speech="The two things being compared with a simile are hands and icicles. The simile in the sentence is Mawreese's hands were like icicles where the word like compares hands and icicles." keys="any" threshold="" play="A125" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not correct." speech="" keys="any" threshold="" play="A126" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Right!" speech="" keys="any" threshold="" play="A127" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's not correct." speech="" keys="any" threshold="" play="A128" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q16.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="In the sentence below, a simile is being used to compare which two things? After a cold afternoon building a snowman, Maurice's hands were like icicles." speech="In the sentence below, a simile is being used to compare which two things? After a cold afternoon building a snow man, Mawreese's hands were like icicles." media="" play="A129">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the two things are Maurice and snowman." speech="I think the two things are Maureese and snowman." keys="any" threshold="" play="B85" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the two things are hands and icicles." speech="" keys="any" threshold="" play="B86" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think the two things are hands and cold." speech="" keys="any" threshold="" play="B87" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The two things being compared with a simile are hands and icicles." speech="" keys="any" threshold="" play="A130" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The two things being compared with a simile are hands and icicles. The simile in the sentence is Maurice's hands were like icicles where the word, like, compares hands and icicles." speech="The two things being compared with a simile are hands and icicles. The simile in the sentence is Mawreese's hands were like icicles where the word, like, compares hands and icicles." keys="any" threshold="" play="A131" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not correct." speech="" keys="any" threshold="" play="A132" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Right!" speech="" keys="any" threshold="" play="A133" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That's not correct." speech="" keys="any" threshold="" play="A134" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q2.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The italics, colors, and text size in this text are examples of what." speech="" media="" play="A135">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I guess print cues." speech="" keys="any" threshold="" play="B88" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I guess titles and subtitles." speech="" keys="any" threshold="" play="B89" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I guess visual cues." speech="" keys="any" threshold="" play="B90" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The italics, colors, and text size are examples of print cues." speech="" keys="any" threshold="" play="A136" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The italics, colors, and text size are examples of print cues. In print cues, the text itself is altered by things like red letters, underlining, and large print to highlight information." speech="" keys="any" threshold="" play="A137" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great!" speech="" keys="any" threshold="" play="A138" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No, that's not it." speech="" keys="any" threshold="" play="A139" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that's not it." speech="" keys="any" threshold="" play="A140" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q2.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Fill in the blank. The italics, colors, and text size in this text are examples of what." speech="" media="" play="A141">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I guess print cues." speech="" keys="any" threshold="" play="B91" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I guess titles and subtitles." speech="" keys="any" threshold="" play="B92" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I guess visual cues." speech="" keys="any" threshold="" play="B93" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The italics, colors, and text size are examples of print cues." speech="" keys="any" threshold="" play="A142" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The italics, colors, and text size are examples of print cues. In print cues, the text itself is altered by things like red letters, underlining, and large print to highlight information." speech="" keys="any" threshold="" play="A143" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great!" speech="" keys="any" threshold="" play="A144" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="No, that's not it." speech="" keys="any" threshold="" play="A145" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that's not it." speech="" keys="any" threshold="" play="A146" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q3.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Based on the text signals, what kind of book do you think this is?" speech="" media="" play="A147">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's a baby book." speech="" keys="any" threshold="" play="B94" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's a cookbook." speech="" keys="any" threshold="" play="B95" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's a sketchbook." speech="" keys="any" threshold="" play="B96" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Based on the text signals, this is a cookbook." speech="" keys="any" threshold="" play="A148" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Based on the text signals, this is a cookbook.  The picture is of a donut, and the subtitle is gluten free vegan recipes from donuts to snickerdoodles." speech="" keys="any" threshold="" play="A149" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A150" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You're right!" speech="" keys="any" threshold="" play="A151" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A152" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q3.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Based on the text signals, what kind of book do you think this is?" speech="" media="" play="A153">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's a baby book." speech="" keys="any" threshold="" play="B97" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's a cookbook." speech="" keys="any" threshold="" play="B98" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's a sketchbook." speech="" keys="any" threshold="" play="B99" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Based on the text signals, this is a cookbook." speech="" keys="any" threshold="" play="A154" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Based on the text signals, this is a cookbook.  The picture is of a donut, and the subtitle is gluten free vegan recipes from donuts to snickerdoodles." speech="" keys="any" threshold="" play="A155" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A156" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You're right!" speech="" keys="any" threshold="" play="A157" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A158" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q4.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Use the text signals to help determine which bus station is re-opened." speech="" media="" play="A159">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose Main Street Station" speech="" keys="any" threshold="" play="B100" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose Pape Station." speech="" keys="any" threshold="" play="B101" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose Dawes Station." speech="" keys="any" threshold="" play="B102" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The bus station that is now reopened is Pape Station." speech="" keys="any" threshold="" play="A160" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The bus station that is now reopened is Pape Station.  Based on the text signals, we read both Pape Station Reopened and the sentence Pape Station is now open." speech="" keys="any" threshold="" play="A161" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, that's not it." speech="" keys="any" threshold="" play="A162" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You got it!" speech="" keys="any" threshold="" play="A163" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that's not it." speech="" keys="any" threshold="" play="A164" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q4.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Use the text signals to help determine which bus station is re-opened." speech="" media="" play="A165">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose Main Street Station" speech="" keys="any" threshold="" play="B103" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose Pape Station." speech="" keys="any" threshold="" play="B104" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose Dawes Station." speech="" keys="any" threshold="" play="B105" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The bus station that is now reopened is Pape Station." speech="" keys="any" threshold="" play="A166" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The bus station that is now reopened is Pape Station.  Based on the text signals, we read both Pape Station Reopened and the sentence Pape Station is now open." speech="" keys="any" threshold="" play="A167" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="No, that's not it." speech="" keys="any" threshold="" play="A168" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You got it!" speech="" keys="any" threshold="" play="A169" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="No, that's not it." speech="" keys="any" threshold="" play="A170" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q5.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Click the word below that has an affix." speech="Click the word below that has an ahh fix." media="" play="A171">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it is chance." speech="" keys="any" threshold="" play="B106" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it is friendliest." speech="" keys="any" threshold="" play="B107" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it is grass." speech="" keys="any" threshold="" play="B108" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think it is bottom." speech="" keys="any" threshold="" play="B109" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is friendliest." speech="" keys="any" threshold="" play="A172" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The affixed word below is friendliest. The suffix e-s-t indicates the most, so anyone described as the friendliest is the most friendly person." speech="" keys="any" threshold="" play="A173" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A174" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's right!" speech="" keys="any" threshold="" play="A175" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A176" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A177" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q5.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Ok, let's try this one again. Click the word below that has an affix." speech="Ok, let's try this one again. Click the word below that has an ahh fix." media="" play="A178">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's chance." speech="" keys="any" threshold="" play="B110" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's friendliest." speech="" keys="any" threshold="" play="B111" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's grass." speech="" keys="any" threshold="" play="B112" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think it is bottom." speech="" keys="any" threshold="" play="B113" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is friendliest." speech="" keys="any" threshold="" play="A179" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The affixed word below is friendliest. The suffix e-s-t indicates the most, so anyone described as the friendliest is the most friendly person." speech="" keys="any" threshold="" play="A180" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A181" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That's right!" speech="" keys="any" threshold="" play="A182" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A183" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A184" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q6.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Click the word below that has an affix." speech="Click the word below that has an ahh fix." media="" play="A185">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose the word irrelevant." speech="" keys="any" threshold="" play="B114" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose the word relevant." speech="" keys="any" threshold="" play="B115" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose the word read." speech="" keys="any" threshold="" play="B116" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I choose the word point." speech="" keys="any" threshold="" play="B117" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is irrelevant." speech="" keys="any" threshold="" play="A186" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The affixed word below is irrelevant. The i-r is a prefix that adds the meaning not or opposite of to a word. So, an irrelevant thing is not relevant." speech="" keys="any" threshold="" play="A187" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job!" speech="" keys="any" threshold="" play="A188" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Too bad, that's incorrect." speech="" keys="any" threshold="" play="A189" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Too bad, that's incorrect." speech="" keys="any" threshold="" play="A190" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A191" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q6.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's try this one again. Click the word below that has an affix." speech="Let's try this one again. Click the word below that has an ahh fix." media="" play="A192">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I choose the word irrelevant." speech="" keys="any" threshold="" play="B118" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I choose the word relevant." speech="" keys="any" threshold="" play="B119" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I choose the word read." speech="" keys="any" threshold="" play="B120" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think it is point." speech="" keys="any" threshold="" play="B121" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The affixed word is irrelevant." speech="" keys="any" threshold="" play="A193" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The affixed word below is irrelevant. The i-r is a prefix that adds the meaning not or opposite of to a word. So, an irrelevant thing is not relevant." speech="" keys="any" threshold="" play="A194" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Great job!" speech="" keys="any" threshold="" play="A195" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="Too bad, that's incorrect." speech="" keys="any" threshold="" play="A196" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Too bad, that's incorrect." speech="" keys="any" threshold="" play="A197" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A198" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q7.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Click the word below that is the root of the following example." speech="" media="" play="A199">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the root is pleasing." speech="" keys="any" threshold="" play="B122" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the root is easy." speech="" keys="any" threshold="" play="B123" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think the root is please." speech="" keys="any" threshold="" play="B124" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think the root is sing." speech="" keys="any" threshold="" play="B125" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root of the word displeasing is please." speech="" keys="any" threshold="" play="A200" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The root of the example word is please. The prefix d-i-s means not and the suffix i-n-g means it is currently happening. So, displeasing is something that is not pleasing right now." speech="" keys="any" threshold="" play="A201" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not correct." speech="" keys="any" threshold="" play="A202" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not the correct root." speech="" keys="any" threshold="" play="A203" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="You're right!" speech="" keys="any" threshold="" play="A204" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A205" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q7.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's try this one again. Click the word below that is the root of the following example." speech="" media="" play="A206">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the root is pleasing." speech="" keys="any" threshold="" play="B126" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the root is easy." speech="" keys="any" threshold="" play="B127" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think the root is please." speech="" keys="any" threshold="" play="B128" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think the root is sing." speech="" keys="any" threshold="" play="B129" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root of the word displeasing is please." speech="" keys="any" threshold="" play="A207" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The root of the example word is please. The prefix d-i-s means not and the suffix i-n-g means it is currently happening. So, displeasing is something that is not pleasing right now." speech="" keys="any" threshold="" play="A208" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="That's not correct." speech="" keys="any" threshold="" play="A209" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="That is not the correct root." speech="" keys="any" threshold="" play="A210" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="You're right!" speech="" keys="any" threshold="" play="A211" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A212" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q8.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Click the word below that is the root of the following example." speech="" media="" play="A213">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the root is intre." speech="" keys="any" threshold="" play="B130" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the root is repidly." speech="" keys="any" threshold="" play="B131" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="This is tough. I think it is trep." speech="" keys="any" threshold="" play="B132" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I'm not sure. Maybe the root is trepid." speech="" keys="any" threshold="" play="B133" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root of this word is trepid." speech="" keys="any" threshold="" play="A214" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The root of the example word is trepid. The prefix in means not and the suffix i-n-g indicates that an action is being done a certain way. So, intrepidly means doing something without fear or hesitation." speech="" keys="any" threshold="" play="A215" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A216" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A217" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="That is not the answer I was looking for." speech="" keys="any" threshold="" play="A218" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="Great job!" speech="" keys="any" threshold="" play="A219" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q8.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Alright, let's try again. Click the word below that is the root of the following example." speech="" media="" play="A220">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think the root is intre." speech="" keys="any" threshold="" play="B134" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think the root is trep." speech="" keys="any" threshold="" play="B135" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I'm not sure. Maybe the root is trepid." speech="" keys="any" threshold="" play="B136" />
+            <Answer name="ChooseD" agent="ComputerStudent1" type="ChooseD" text="I think it is bottom." speech="" keys="any" threshold="" play="B137" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The root of this word is trepid." speech="" keys="any" threshold="" play="A221" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="The root of the example word is trepid. The prefix in means not and the suffix i-n-g indicates that an action is being done a certain way. So, intrepidly means doing something without fear or hesitation." speech="" keys="any" threshold="" play="A222" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A223" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A224" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Great job!" speech="" keys="any" threshold="" play="A225" />
+            <Answer name="ResponseD" agent="ComputerTutor" type="ResponseD" text="I'm sorry, that's incorrect." speech="" keys="any" threshold="" play="A226" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q9.1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Which of the following strategies is an example of using context clues?" speech="" media="" play="A227">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's predicting author's purpose." speech="" keys="any" threshold="" play="B138" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's reading the words around a confusing word." speech="" keys="any" threshold="" play="B139" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's using the dictionary." speech="" keys="any" threshold="" play="B140" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Reading the words around a confusing word is an example of using context clues." speech="" keys="any" threshold="" play="A228" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Reading the words around a confusing word is an example of using context clues. When you read the words around a confusing word it can help you to understand the meaning of the confusing word." speech="" keys="any" threshold="" play="A229" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Sorry, that's not it." speech="" keys="any" threshold="" play="A230" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You are correct!" speech="" keys="any" threshold="" play="A231" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry, that's not it." speech="" keys="any" threshold="" play="A232" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Q9.2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Which of the following strategies is an example of using context clues?" speech="" media="" play="A233">
+          <Answers>
+            <Answer name="ChooseA" agent="ComputerStudent1" type="ChooseA" text="I think it's predicting author's purpose." speech="" keys="any" threshold="" play="B141" />
+            <Answer name="ChooseB" agent="ComputerStudent1" type="ChooseB" text="I think it's reading the words around a confusing word." speech="" keys="any" threshold="" play="B142" />
+            <Answer name="ChooseC" agent="ComputerStudent1" type="ChooseC" text="I think it's using the dictionary." speech="" keys="any" threshold="" play="B143" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Reading the words around a confusing word is an example of using context clues." speech="" keys="any" threshold="" play="A234" />
+            <Answer name="FinalAnswer" agent="ComputerTutor" type="Final" text="Reading the words around a confusing word is an example of using context clues. When you read the words around a confusing word it can help you to understand the meaning of the confusing word." speech="" keys="any" threshold="" play="A235" />
+            <Answer name="ResponseA" agent="ComputerTutor" type="ResponseA" text="Sorry, that's not it." speech="" keys="any" threshold="" play="A236" />
+            <Answer name="ResponseB" agent="ComputerTutor" type="ResponseB" text="You are correct!" speech="" keys="any" threshold="" play="A237" />
+            <Answer name="ResponseC" agent="ComputerTutor" type="ResponseC" text="Sorry, that's not it." speech="" keys="any" threshold="" play="A238" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="ShowMainPage" id="2" />
+    </Rule>
+    <Rule name="ShowMainPage" status="ShowMainPage" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMedia" data="media\L11Round1AMainPage.html" id="1" />
+      <Action agent="System" act="SetStatus" data="MainPageLoaded" id="3" />
+      <Action agent="System" act="Wait" data="1" id="4" />
+    </Rule>
+    <Rule name="MainPageLoaded" status="MainPageLoaded" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="2" />
+      <Action agent="System" act="SetStatus" data="GiveIntro" id="3" />
+    </Rule>
+    <Rule name="GiveIntro" status="GiveIntro" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro2" id="1" />
+      <Action agent="System" act="PauseAt" data="19" id="2" />
+      <Action agent="System" act="ShowMedia" data="Lesson11intro3.mp4" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening12" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro2" status="GiveIntro2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro3" id="1" />
+      <Action agent="System" act="PauseAt" data="34" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.1" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro3" status="GiveIntro3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro4" id="1" />
+      <Action agent="System" act="PauseAt" data="63" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.2" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro4" status="GiveIntro4" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro5" id="1" />
+      <Action agent="System" act="PauseAt" data="78" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.3" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro5" status="GiveIntro5" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro6" id="1" />
+      <Action agent="System" act="PauseAt" data="90" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.32" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro6" status="GiveIntro6" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GiveIntro7" id="1" />
+      <Action agent="System" act="PauseAt" data="90000" id="2" />
+      <Action agent="System" act="PlayNow" data="" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.4" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="GiveIntro7" status="GiveIntro7" response="" event="VideoEnd" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1.5" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadQuestion" id="2" />
+    </Rule>
+    <Rule name="ShowMainPageAgain" status="ShowMainPageAgain" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMedia" data="media\L11Round1AMainPage.html" id="1" />
+      <Action agent="System" act="SetStatus" data="MainPageLoadedAgain" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="MainPageLoadedAgain" status="MainPageLoadedAgain" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="LoadQuestion" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadQuestions" status="LoadQuestion" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="ChooseQuestion" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Closing" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="End" data="" id="1" />
+    </Rule>
+    <Rule name="GameOver" status="ChooseQuestion" response="" event="Stop1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="PlayGame" status="ChooseQuestion" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="ChooseQuestion" id="1" />
+      <Action agent="System" act="SetStatus" data="AskQ" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="TooSlow" status="AskQ" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="TooSlow" id="1" />
+      <Action agent="System" act="SetStatus" data="PickRandom" id="2" />
+    </Rule>
+    <Rule name="AskRandom" status="PickRandom" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="CristinaSelectedPage" id="2" />
+      <Action agent="System" act="Wait" data="60" id="3" />
+    </Rule>
+    <Rule name="AskQ1.1" status="AskQ" response="" event="L11Round1AQ1.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q1.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ1.2" status="AskQ" response="" event="L11Round2AQ1.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q1.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ2.1" status="AskQ" response="" event="L11Round1AQ2.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q2.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ2.2" status="AskQ" response="" event="L11Round2AQ2.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q2.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ3.1" status="AskQ" response="" event="L11Round1AQ3.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q3.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ3.2" status="AskQ" response="" event="L11Round2AQ3.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q3.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ4.1" status="AskQ" response="" event="L11Round1AQ4.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q4.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ4.2" status="AskQ" response="" event="L11Round2AQ4.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q4.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ5.1" status="AskQ" response="" event="L11Round1AQ5.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q5.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ5.2" status="AskQ" response="" event="L11Round2AQ5.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q5.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ6.1" status="AskQ" response="" event="L11Round1AQ6.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q6.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ6.2" status="AskQ" response="" event="L11Round2AQ6.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q6.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ7.1" status="AskQ" response="" event="L11Round1AQ7.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q7.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ7.2" status="AskQ" response="" event="L11Round2AQ7.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q7.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ8.1" status="AskQ" response="" event="L11Round1AQ8.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q8.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ8.2" status="AskQ" response="" event="L11Round2AQ8.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q8.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ9.1" status="AskQ" response="" event="L11Round1AQ9.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q9.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ9.2" status="AskQ" response="" event="L11Round2AQ9.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q9.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ10.1" status="AskQ" response="" event="L11Round1AQ10.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q10.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ10.2" status="AskQ" response="" event="L11Round2AQ10.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q10.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ11.1" status="AskQ" response="" event="L11Round1AQ11.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q11.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ11.2" status="AskQ" response="" event="L11Round2AQ11.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q11.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ12.1" status="AskQ" response="" event="L11Round1AQ12.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q12.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ12.2" status="AskQ" response="" event="L11Round2AQ12.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q12.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ13.1" status="AskQ" response="" event="L11Round1AQ13.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q13.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ13.2" status="AskQ" response="" event="L11Round2AQ13.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q13.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ14.1" status="AskQ" response="" event="L11Round1AQ14.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q14.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ14.2" status="AskQ" response="" event="L11Round2AQ14.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q14.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ15.1" status="AskQ" response="" event="L11Round1AQ15.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q15.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ15.2" status="AskQ" response="" event="L11Round2AQ15.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q15.2" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ16.1" status="AskQ" response="" event="L11Round1AQ16.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="GetTutoringPack" data="Q16.1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="UserClick" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="AskQ16.2" status="AskQ" response="" event="L11Round2AQ16.html" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserClick" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="Q16.2" id="2" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="Correct" status="UserClick" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="MainPageLoadedAgain" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="MainPage" id="5" />
+      <Action agent="System" act="Wait" data="5" id="6" />
+    </Rule>
+    <Rule name="Incorrect" status="UserClick" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="System" act="SetStatus" data="GetUserAnswer" id="3" />
+    </Rule>
+    <Rule name="NoAnswer" status="UserClick" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="System" act="SetStatus" data="GetUserAnswer" id="2" />
+    </Rule>
+    <Rule name="GetUserAnswer" status="GetUserAnswer" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswer" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="UserAnswer" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanA" status="JordanAnswer" response="" event="N" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerA" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanB" status="JordanAnswer" response="" event="N" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerB" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanC" status="JordanAnswer" response="" event="N" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerC" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanD" status="JordanAnswer" response="" event="N" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerD" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanB1" status="JordanAnswer" response="" event="A" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerB" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanC1" status="JordanAnswer" response="" event="A" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerC" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanA1" status="JordanAnswer" response="" event="B" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerA" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanD1" status="JordanAnswer" response="" event="D" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerD" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanC2" status="JordanAnswer" response="" event="B" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerC" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanA2" status="JordanAnswer" response="" event="C" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerB" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanB2" status="JordanAnswer" response="" event="C" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerA" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanD2" status="JordanAnswer" response="" event="D" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="JordanAnswerD" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="JordanAnswerA" status="JordanAnswerA" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="ChooseA" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="A" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="ResponseA" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="JordanAnswerB" status="JordanAnswerB" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="ChooseB" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="B" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="ResponseB" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="JordanAnswerC" status="JordanAnswerC" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="ChooseC" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="C" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="ResponseC" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="JordanAnswerD" status="JordanAnswerD" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="ChooseD" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="D" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="ResponseD" id="3" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Final" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MainPageLoadedAgain" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="MainPage" id="2" />
+      <Action agent="System" act="Wait" data="10" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

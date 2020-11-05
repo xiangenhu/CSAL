@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script type="text/javascript" src="js/FileSaver.js"></script>
+<script>
+
+var fileList=[
+"medium-families.html",
+"medium-children.html",
+"medium-babies.html",
+"medium-advice.html",
+"medium-teenagers.html",
+"medium-science.html",
+"medium-real-life-stories.html",
+"medium-other.html",
+"medium-money.html",
+"medium-jobs.html",
+"medium-history.html",
+"medium-health.html",
+"medium-food.html",
+"harder-children.html",
+"harder-babies.html",
+"harder-advice.html",
+"harder-teenagers.html",
+"harder-science.html",
+"harder-real-life-stories.html",
+"harder-other.html",
+"harder-money.html",
+"harder-jobs.html",
+"harder-history.html",
+"harder-health.html",
+"harder-food.html",
+"harder-families.html",
+"easier-teenagers.html",
+"easier-science.html",
+"easier-real-life-stories.html",
+"easier-money.html",
+"easier-made-stories.html",
+"easier-jobs.html",
+"easier-history.html",
+"easier-health.html",
+"easier-food.html",
+"easier-families.html",
+"easier-children.html",
+"easier-babies.html",
+"easier-advice.html"
+]
+var countIndex=0;
+var oldURLs=[];
+var newURLs=[];
+var howManyReplaced=0;
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+				//console.log(allText);
+				for(var i=0; i<oldURLs.length;i++)
+				{
+					var oldUrl=oldURLs[i];
+					oldUrl=oldUrl.replace(/[\r\n]/g,"");
+					var newUrl=newURLs[i];
+					newUrl=newUrl.replace(/[\r\n]/g,"");
+					
+				if(!allText.includes(newUrl))
+				{
+					if(allText.includes(oldUrl))
+					  {
+						allText=replaceURL(allText,oldUrl,newUrl);
+						howManyReplaced++;
+						console.log(howManyReplaced);
+					  }
+				
+				}
+				 
+					
+						
+				}
+              saveFile(file,allText)
+			  
+			   
+            }
+        }
+    }
+    rawFile.send(null);
+}
+function readnewURLs(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+			   newURLs=allText.split("\n");
+            }
+        }
+    }
+    rawFile.send(null);
+}
+function readoldURLs(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+			   oldURLs=allText.split("\n");
+			   
+            }
+        }
+    }
+    rawFile.send(null);
+}
+// replace all of old URLs to new URLs
+function replaceURL(str,replaceWhat,replaceTo){
+    replaceWhat = replaceWhat.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    var re = new RegExp(replaceWhat, 'g');
+    var output=str.replace(re,replaceTo);
+	return output;
+}
+
+function saveFile(T,content)  
+{  
+	countIndex++
+	var blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+	 
+      saveAs(blob, T);
+	  readTextFile(fileList[countIndex]);
+}  
+readoldURLs("oldURLs.txt");
+readnewURLs("newURLs.txt");
+readTextFile(fileList[0]);
+//readTextFile("easier-health.html");
+</script> 
+
+</body>
+</html>

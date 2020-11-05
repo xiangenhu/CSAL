@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSAL</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  
+  <style>
+  	body
+	{
+		background-color: #e4e4e4;
+		overflow: hidden;
+		width: 800px;
+		height: 472px;
+		cursor: default;
+		margin: 0;
+	}
+	.instructBox
+	{
+		background-color: #edff73;
+		color: black;
+		font-family: 'Oxygen', Verdana, 'Times New Roman';
+		width: 790px;
+		height: 100px;
+		font-size: 22px;
+		text-align: center;
+		padding: 5px;
+		border-bottom: 4px dashed #525252;
+		margin: 0px auto 4px auto;	
+		display:none;
+		font-style: italic;
+	}
+	#instructText
+	{
+		width: 760px;
+		margin: 7px auto;
+	}
+	#example
+	{
+		width: 550px
+		display: inline-block;
+	}
+	#example img
+	{
+		width: 570px;
+		margin: 5px 0px 0px 5px;
+		border: 3px solid #424242;
+		display: inline-block;
+		border-radius: 3px;
+	}
+	.button
+	{
+		font-size: 36px;
+		font-family: Raleway, Verdana, 'Times New Roman';
+		font-weight: normal;
+		color: white;
+		width: 180px;
+		height: 180px;
+		line-height: 50px;
+		margin: 70px 0px 0px 5px;
+		text-decoration: none;
+		border: none;
+		position: relative;
+		text-align: center;
+		padding: 8px;
+		display: inline-block;
+		outline: none;
+		border-radius: 20px;
+		box-shadow: 2px 2px 11px #888888;
+		vertical-align: top;
+	}
+	#butText
+	{
+		margin-top: 10px;
+	}
+	.highlight
+	{
+		font-weight: bold;
+		text-decoration: underline;
+	}
+  </style>
+  
+  <script>
+	/*
+	--------------------------------NAMESPACE------------------------------
+	Namespace for all the variables used globally in the program.
+	Should prevent unwanted interactions between local and global variables 
+	Should provide a clear naming convention distinction between global and local variables
+	*/
+	
+	var Media =
+	{
+		pageIdentifier: "TAInstructionLoaded",
+		
+		currentItem: -1,
+		numItems: 0,
+		
+		nextPage: "Lesson3TA.html",	//location of the next page in the current series of pages
+		choice: null
+		
+	}
+	
+	/*
+		--------------------------------MAIN METHOD------------------------------
+		Fist function to be called when the page is loaded
+		Provide any initialization code in this area 
+		Should be used instead of onload and be the designated main method for media pages
+	*/
+	
+	$(document).ready(function()
+	{
+		Lock();
+		
+		$(".button").show("fade", 1000);
+		$(".instructBox").show("fade", 1000);
+		$("#example img").show("fade", 1000);
+		
+		parent.GetWorldEvent(Media.pageIdentifier);
+	}
+	);
+  
+  
+	/*
+		--------------------------------Event Functions------------------------------
+		Any functions triggered by events to designated HTML elements of the media page go here
+	*/  
+	
+	
+	/*
+		When a button is clicked, perform a sound and animation and report the value of that button as the button choice
+	*/
+	function ButtonClick()
+	{
+		Media.choice = $(this).attr("value");
+		parent.GetWorldEvent(Media.choice);
+		
+		$(this).animate({top: "3px"},200).animate({top:"0px"},100);
+		sound_clicked();
+		
+		Lock();
+	}
+	
+	
+	
+	/*
+	--------------------------------CSAL Interface Functions------------------------------
+	
+	
+	Table of Contents
+	1. GetItem
+	2. ShowItem
+	3. ShowMediaAnswer
+	4. GetMediaEvent
+	5. Lock
+	6. Unlock
+	*/	
+	
+	function GetItem()
+	{
+		if(Media.currentItem < Media.numItems)
+		{
+			++Media.currentItem;
+			parent.GetWorldEvent("Continue");
+		}
+		else
+		{
+			parent.GetWorldEvent("Stop");
+		}
+	}
+	
+	function ShowItem()	{if(Media.currentItem == 0)	{}}
+	
+	function ShowMediaAnswer()
+	{
+		return;	//this function currently has no function on this page but is called as part of the ASAT loop for this lesson so needs to be defined
+	}
+	
+	function GetMediaEvent(data)
+	{
+		if(data == "NextPage")
+		{
+			parent.nextPage("media/"+ Media.nextPage);
+		}
+	}
+	/*
+	Enables functionality of any elements that were disabled by the Lock function
+	*/
+	function Unlock()
+	{		
+		$( ".button" ).mouseover(function()
+		{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
+		$( ".button" ).mouseout(function()
+		{ $(this).stop().animate({backgroundColor: "green", color: "white"}, 300); });
+		$( ".button" ).css( 'cursor', 'pointer' );
+		
+		//animates unlocking via font color & background color
+		$(".button").animate({backgroundColor: "green", color: "white", opacity: 1.0}, 1000);
+		
+		//bind the clickFunc above to any ".button"
+		$(".button").on("click", ButtonClick);
+	}
+	
+	/*
+		Disables functionality of any elements that should the user should not interact with until the agents finish speaking
+	*/
+	function Lock()
+	{		
+		$(".button").off();
+		
+		//sets disabled mouse cursor
+		$( ".button" ).css( 'cursor', 'not-allowed' );
+		
+		//sets disabled colors WITH animation
+		$( ".button" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+	}
+	
+	/*
+	Signals ASAT to play a certain sound during certain events such as clicking an answer, etc.
+	*/
+	function sound_clicked() 
+	{ 
+		return parent.PlaySound('clicked0.wav');
+		parent.GetWorldEvent("play clicked");
+	}
+	function sound_incorrect() 
+	{ 
+		return parent.PlaySound('incorrect0.wav');
+		parent.GetWorldEvent("play incorrect");
+	}
+	
+	function sound_correct()
+	{ 
+		return parent.PlaySound('success0.wav');
+		parent.GetWorldEvent("play correct");
+	}
+  </script>
+</head>
+<body>
+	<div class="instructBox">
+		<div id="instructText">
+		<span style="font-weight: bold">Instructions</span>: First, <span class="highlight">read the book cover</span> on the left. Next, <span class="highlight">click the cart</span> on the right that you predict has the author's purpose for writing this text. If you need more information, <span class="highlight">read the book description</span> in the center.
+		</div>
+	</div> 
+	<div id="example">
+		<img src="TAInstruction.png"/>
+		<div id="continueButton" class="button" value="next"><div id="butText">Click<br>HERE to start!</div></div>
+	</div>
+</body>
+</html>

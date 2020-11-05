@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		
+		<meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin">
+		
+		
+		<title>CSAL Name Entry</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+		<script src="csalNameList.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function()
+			{
+				$('#fadeBody').animate({opacity: 0}, 0).css({'background-image': 'url(mainmenubkgd3.jpg'}).animate({opacity: 1}, 2500,
+				function() {
+					$("#menuBkgd").fadeIn(1500);
+					$("#firstName").focus();
+				});
+				
+				$("#firstName").keyup(function(event){
+					if(event.keyCode == 13){ $("#submit").click(); }
+				});
+				
+				$("#submit").click(function(){					
+					if( $("#firstName").val().length == 0 )
+					{
+						parent.PlaySound('incorrect0.wav');
+						$("#firstName").focus();
+					}
+					else
+					{
+						var getName=$("#firstName").val();
+						var isExisit=$.inArray(getName, availableTags);
+						
+						if(isExisit!=-1)
+						{
+							parent.PlaySound('clicked0.wav');
+					
+							$("#fadeBody").fadeOut(800, function()
+							{
+								submitName(isExisit);
+							});
+						}
+						else 
+						{
+							parent.PlaySound('incorrect0.wav');
+							$("#firstName").focus();
+						}
+					}
+					
+					$("#firstName").keyup(function(event){
+						if(event.keyCode == 13){ $("#submit").click(); }
+					});
+				});
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).stop().animate({backgroundColor: "#f8ffca"}, 350); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+			});
+
+			function submitName(index)
+			{			
+				//make results into a string//
+				
+				var name = document.getElementById("firstName").value;
+				var fristName = name.split(" ");
+				sessionStorage.setItem("uname",fristName[0]);
+				//var isExisit=$.inArray(getName, availableTags);
+				var getUID = UID[index].split(":");
+				//var GUID=sessionStorage.getItem("GUID");
+				var GUID="";
+				//sessionStorage.setItem("UID",getUID[0]+"-"+GUID);
+				sessionStorage.setItem("UID",getUID[0]);
+				var strs=getUID[1].split(" ");
+				
+				if(getUID.length==2)
+				{
+				sessionStorage.setItem("SID",strs[strs.length-1]);
+				//parent.sayHi(sessionStorage.getItem("uname"));
+				}
+				else if(getUID.length==3)
+				{
+					
+					sessionStorage.setItem("SID",getUID[2]);
+					
+				}
+
+				//alert(sessionStorage.getItem("uname"));
+				
+				//var id = document.getElementById("id").value;
+				//window.external.GetName(name);
+				//window.external.GetId(name);
+				window.location = "CSALScreenPage.html";
+			}
+			
+			function isNumber(evt) {
+				evt = (evt) ? evt : window.event;
+				var charCode = (evt.which) ? evt.which : evt.keyCode;
+				if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+					alert("Phone number consists of only numbers");
+					return false;
+				}
+				return true;
+			}
+			
+			$(function() {
+				
+				$( "#firstName" ).autocomplete({
+				  source: availableTags
+				});
+			  });
+		</script>
+		<style>
+			body
+			{
+				font-family: 'Source Sans Pro', 'Verdana', 'Times New Roman';
+				margin: 0px;
+				overflow: hidden;
+				cursor: default;
+			}
+			#fadeBody
+			{
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				width: 800px;
+				height: 490px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: -100;
+				overflow: hidden;
+			}
+			input
+			{
+				text-align: center;
+				text-transform: capitalize;
+			}
+
+			#firstName
+			{
+				display: block;
+				margin: 0px auto;
+				padding: 10px 0px;
+				width: 90%;
+				font-size: 28px;
+				border-radius: 4px;
+			}
+			ul
+			{
+				max-height: 170px;
+				overflow: scroll;
+				overflow-x: hidden;
+			}
+			
+			#menuBkgd
+			{
+				background-color: #303030;
+				background: rgba(48, 48, 48, .85);
+				width: 50%;
+				height: 500px;
+				margin: -1px 20px 0px 0px;
+				padding-top: 0px;
+				display: none;
+				float: right;
+			}
+			.logo
+			{
+				color: white;
+				text-align: center;
+			}
+			#logo
+			{
+				
+				font-size: 90px;
+				letter-spacing: 2px;
+				margin: 10px 0px 0px 0px;
+			}
+			#logoSub
+			{
+				font-size: 20px;
+				margin: 0px 0px 30px 0px;
+				text-align: center;
+			}
+			
+			#instruct
+			{
+				color: white;
+				font-size: 22px;
+				width: 90%;
+				margin: 0px auto;
+				text-align: center;
+			}
+			
+			#buttonBox
+			{
+				margin: 40px auto;
+				width: 100%;
+				
+			}
+			.mybutton
+			{
+				background-color: #eee;
+				color: #303030;
+				width: 65%;
+				text-align: center;
+				font-size: 34px;
+				text-indent: 0px;
+				margin: 40px auto 0px auto;
+				font-weight: normal;
+				border-radius: 10px;
+				padding: 20px 30px;
+				focus: none;
+				outline: 0;
+				border: none;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fadeBody">
+			<div id="menuBkgd">
+				<div id="logo" class="logo">
+					CSAL
+				</div>
+				
+				<div id="instruct">
+					1. Type your first name in below.
+					<br>
+					2. Click your name in the list.
+					<br>
+					3. Click Login.
+				</div>
+				
+				<div id="buttonBox">				
+					<input type="text" id="firstName" name="firstName" autofocus="autofocus">
+			
+					<div class="mybutton" id="submit" name="submit" value="Enter">
+						Login
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 11 Media</title>
+		<meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				//background-color: green;
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+			}
+			
+			#questionBox
+			{
+				width: 740px;
+				background-image: url('ClearBkgd2.png');
+				margin: 10px auto 10px auto;
+				padding: 0px;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+			}
+			#title
+			{
+				text-align: center;
+				font-size: 34px;
+				padding: 5px;
+				color: #212121;
+				margin: auto;
+			}
+			#questionText
+			{
+				text-align: left;
+				text-indent: 50px;
+				font-size: 24px;
+				padding: 1px;
+				color: #212121;
+				margin: auto;
+			}
+			#mian
+			{
+				margin: 10px ;
+				
+			}
+			
+		</style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		 
+		var flag=1;
+		var spanX=0;
+		var spanY=0;
+		var divid;
+		var questionNum=0;
+		var UserAnswer;
+	
+		function Start()
+		{	
+		var data=GetRequest();
+		
+		$("#questionText").html(data)
+		
+		$("span").css({"color":"#593367"});
+		parent.GetWorldEvent("Activity11Loaded");
+		}
+		
+		function GetRequest() 
+		{ 
+		
+		   var url = location.search; 
+		   var idName = new Array();
+		   if (url.indexOf("?") != -1) 
+		   { 
+				str = url.substr(1); 
+				strs = str.split("=");
+				//strId = strs[1];
+				strId = strs[1].replace(/%20/g, " ");
+				strId = strId.replace(/%3C/g, "<");
+				strId = strId.replace(/%3E/g, ">");
+				strId = strId.replace(/%27/g, " ");
+				strId = strId.replace(/%22/g, "\"");
+							
+				return strId;
+				//idName=strId.split("&");
+				//return idName[3];
+		   }
+		}
+		
+		function GetMediaEvent(data)
+		{
+			if (data == "Title")
+			{
+				var title = prompt("Title your story: ");
+				$("#title").html(title);
+				
+				parent.GetWorldEvent("Titled");
+			}
+		}
+
+	</script>
+	</head>
+	<body onload="Start()">
+		
+		<div id="questionBox">
+			<div id="title"></div>
+			<div id="questionText"></div>
+		</div>
+	
+		
+		
+	</body>
+</html>

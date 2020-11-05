@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 13 Media</title>
+
+		
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		
+		<style>
+			body
+			{
+				background-image:url('PatternBkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				width: 790px;
+				height: 482px;
+				margin: 0px;
+				position: relative;
+			}
+			#instructBox
+			{
+				background-color: #e8d7ee;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 24px;
+				line-height: 30px;
+				text-align: center;
+				padding: 8px 5px 5px 5px;
+				border-bottom: 6px dotted #b99cc4;
+				margin: 0px auto 0px auto;
+			}
+			#questionBox
+			{
+				width: 760px;
+				height: 140px;
+				left: 15px;
+				background-image: url('ClearBkgd2.png');
+				margin: 10px auto 10px auto;
+				padding: 0px;
+				font-family: 'Bubblegum Sans', Verdana, 'Times New Roman';
+				position: absolute;
+				display: table;
+			}
+			#questionText
+			{
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 40px;
+				line-height: 45px;
+				padding: 5px;
+				color: #212121;
+				margin: auto;
+			}
+			#dragDiv1
+			{
+				text-align: center;
+				color: #212121;
+				background-color: #b99cc4;
+				cursor: default;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				line-height: 50px;
+				width: 600px;
+				height: 50px;
+				position: absolute;
+				top: 210px;
+				left: 95px;
+				border-radius: 10px;
+				font-weight: bold;
+			}
+			#dragDiv2
+			{
+				text-align: center;
+				color: #212121;
+				background-color: #b99cc4;
+				cursor: default;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				line-height: 50px;
+				width: 600px;
+				height: 50px;
+				position: absolute;
+				top: 275px;
+				left: 95px;
+				border-radius: 10px;
+				font-weight: bold;
+			}
+			#dragDiv3
+			{
+				text-align: center;
+				color: #212121;
+				background-color: #b99cc4;
+				cursor: default;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				line-height: 50px;
+				width: 600px;
+				height: 50px;
+				position: absolute;
+				top: 340px;
+				left: 95px;
+				border-radius: 10px;
+				font-weight: bold;
+			}
+			#dragDiv4
+			{
+				text-align: center;
+				color: #212121;
+				background-color: #b99cc4;
+				cursor: default;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 24px;
+				line-height: 50px;
+				width: 600px;
+				height: 50px;
+				position: absolute;
+				top: 405px;
+				left: 95px;
+				border-radius: 10px;
+				font-weight: bold;
+			}
+			
+		</style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		 <script type="text/javascript">
+		var flag=1;
+		var spanX=0;
+		var spanY=0;
+		var divid;
+		var questionNum=0;
+		var UserAnswer;
+		var slectedItems="";
+		var insertDivId;
+		var SortArr=["dragDiv1","dragDiv2","dragDiv3","dragDiv4"];
+		
+		function Start()
+		{
+			Lock();
+			//$(".drag").attr('disabled', true);
+			parent.GetWorldEvent("DDLoaded");
+			//GetMediaEvent("JodanSelect")
+		}
+	 
+		function GetItem()
+		{
+			questionNum++;
+			
+			if(questionNum<3)
+			{
+				parent.GetWorldEvent("Continue");
+			}
+			else
+			{
+				var getPageContent="Only the two people involved will ever really know what happened that day, " + "<span>" + $("#insert1").html() + "</span>" + " and " + "<span>" + $("#insert2").html() + "</span>";
+				slectedItems +=  getPageContent + ".";
+				parent.nextPage("media/"+"Lesson13-Activity3.html?id="+slectedItems);	
+			}
+		}
+		
+		function ShowItem(){}	
+		
+		function Lock()
+		{
+			flag=1;
+			$(".drag").attr('disabled', true);
+		}
+		function Unlock()
+		{
+			$(".drag").attr('disabled', false);
+			flag=0;
+		}
+
+		function GetMediaEvent(data)
+		{
+			if (data=="UserAnswer")
+			{
+				//alert(slectedItems)
+				parent.GetWorldEvent(UserAnswer);
+			}
+			else if (data=="NextPage")
+			{
+				var getPageContent="Only the two people involved will ever really know what happened that day, " + "<span>" + $("#insert1").html() + "</span>" + " and " + "<span>" + $("#insert2").html() + "</span>";
+				parent.nextPage("media/"+"Lesson13-Activity3.html?id="+slectedItems);
+			}
+			else if (data=="JordanSelect")
+			{
+				var getSelectIndex = Math.floor(Math.random() * SortArr.length);
+				var getSelectName = SortArr[getSelectIndex];
+				var getContent = $("#"+getSelectName).html();
+				var nameOnly = getContent.split(",");
+				
+				questionNum++;
+				insertDivId="insert"+questionNum;
+				$("#"+insertDivId).html(getContent);
+				$("#"+insertDivId).css({"color":"#593367"});
+				$("#"+insertDivId).css({"text-decoration":"none"});
+				//SortArr.splice(getSelectIndex,1)
+				SortArr.splice(jQuery.inArray(getSelectName,SortArr),1); 
+				
+				slectedItems += nameOnly[0]+"&"
+				
+				$("#"+getSelectName).remove();
+				parent.GetWorldEvent("JordanSelect"+questionNum);
+			}
+		}
+		
+		function ShowMediaAnswer(){}	 
+	 
+		$(document).ready(function()
+		{
+			$("#main div").mouseover(function (e)
+			{
+				var oe=e||window.event;
+				divid = $(this).attr("id");
+				getContent = $(this).html();
+				var odiv = document.getElementById(divid); //div
+				$(this).css("z-index", "100").siblings().css("z-index", "0");
+				moveDiv(odiv);
+			});
+		
+		function moveDiv(obj) 
+		{
+			obj.onmousedown = function (e) 
+			{
+				var oe = e || window.event;
+				var $this = this;
+				
+				insertDivId="insert"+questionNum;
+				var spanX = $("#"+insertDivId).position().left; 
+				var spanY = $("#"+insertDivId).position().top;
+				
+				var startX = oe.clientX - $this.offsetLeft;
+				var startY = oe.clientY - $this.offsetTop;
+				
+				// x- and y-coordinates of top left corner of button
+				var DivStartX = $("#"+divid).offset().left; 
+				var DivStartY = $("#"+divid).offset().top; 
+				var rangeLeft;
+				var rangeTop;
+				
+				if (flag==0)
+				{
+					document.onmousemove = function (e) 
+					{
+						var oe = e || window.event;
+						
+						$this.style.left = oe.clientX - startX + "px";
+						
+						$this.style.top = oe.clientY - startY + "px";
+						rangeLeft=oe.clientX - startX  
+						rangeTop=oe.clientY - startY
+						
+						//var spanX = $("#"+insertDivId).position().left; 
+						//var spanY = $("#"+insertDivId).position().top;
+
+						if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+						{
+							$("#"+insertDivId).css({"color":"green"});
+							$("#"+insertDivId).css({"font-weight":"bold"});
+							$("#"+insertDivId).css({"font-size":"50px"});
+						}
+						else
+						{
+							$("#"+insertDivId).css({"color":"#212121"});
+							$("#"+insertDivId).css({"font-weight":"normal"});
+							$("#"+insertDivId).css({"font-size":"40px"});
+						}
+					}
+				
+					document.onmouseup = function () 
+					{
+						document.onmousemove = null;
+						document.onmouseup = null;
+						
+						if (rangeLeft>spanX-350 && rangeLeft<spanX+350 && rangeTop <spanY+200 && rangeTop>spanY-200)
+						{
+							$("#"+insertDivId).html(getContent);
+							$("#"+insertDivId).css({"color":"#593367"});
+							$("#"+insertDivId).css({"text-decoration":"none"});
+							$("#"+insertDivId).css({"font-weight":"normal"});
+							$("#"+insertDivId).css({"font-size":"40px"});
+						
+							SortArr.splice(jQuery.inArray(divid,SortArr),1); 
+						
+							$("#"+divid).remove();
+
+							UserAnswer=getContent;
+							
+							var characterName = UserAnswer.split(",");
+							
+							slectedItems += characterName[0]+"&";
+							parent.GetWorldEvent("userAnswer_"+"UserAnswer_"+UserAnswer);
+							
+							Lock();
+						}
+						else
+						{
+							$this.style.left = DivStartX + "px";
+							$this.style.top = DivStartY + "px";
+						}
+
+						if ($this.releaseCapture) 
+						{
+							$this.releaseCapture();
+						}
+					}
+                
+					if ($this.setCapture) 
+					{
+						$this.setCapture();
+					}
+				}
+			}
+		}
+	});
+</script>
+	</head>
+	<body onload="Start()">
+		<div id="instructBox">
+			Drag and drop an option onto the blank.
+		</div>
+		
+		<div id="questionBox">
+			<div id="questionText">
+				Only the two people involved   will ever really know what happened that day,  <span id="insert1" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> and <span id="insert2" style="text-decoration: underline;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> .
+			</div>
+		</div>
+		
+		<div  style="width: 100%; height: 100%; margin: 0 auto;" id="main">
+          
+		<div class="drag" id="dragDiv1" >Omar, a well-groomed businessman</div>
+		<div class="drag" id="dragDiv2" >Layla, a sassy waitress</div>
+		<div class="drag" id="dragDiv3" >Caleb, an unemployed TV repairman</div>
+		<div class="drag" id="dragDiv4" >Jada, a lonely unicorn</div>
+		
+	      
+		</div>
+		
+		
+	</body>
+</html>

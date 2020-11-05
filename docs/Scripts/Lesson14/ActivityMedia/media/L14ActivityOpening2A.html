@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>L14ActivityOpening2A</title>
+		
+		
+		<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body
+			{
+				font-family: "Bangers", Verdana, "Times New Roman";
+				background-image:url('OpeningBkgd0.jpg');
+				background-repeat:no-repeat;
+				background-position:center-top;
+				overflow: hidden;
+			}
+			.question
+			{
+				font-size: 120px;
+				width: 700px;
+				text-align: center;
+				margin: 50px auto;
+			}
+			.qLine
+			{
+				margin: 10px auto;
+			}
+			#qLine1
+			{
+				color: #4083ff;
+				letter-spacing: 8px;
+			}
+			#qLine2
+			{
+				font-family: "Courgette", Verdana, "Times New Roman";
+				font-size: 60px;
+				font-weight: bold;
+			}
+			#qLine3
+			{
+				color: #f20000;
+				letter-spacing: 8px;
+			}
+		</style>
+		<script>
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
+				
+				return parent.GetWorldEvent(results);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="question">
+			<div class="qLine" id="qLine1">
+				Protagonist
+			</div>
+			<div class="qLine" id="qLine2">
+				VS.
+			</div>
+			<div class="qLine" id="qLine3">
+				Antagonist
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L24Bkgd1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 252px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainTableHead
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 38px;
+				margin: 15px auto;
+				text-align: center;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			#mainTableDes
+			{
+				font-size: 20px;
+				font-style: italic;
+				text-align: center;
+				padding: 0px 10px 5px 0px;
+			}
+			#mainTable
+			{
+				font-size: 24px;
+				text-align: center;
+				margin: 5px 0px 15px 0px;
+				border-collapse: collapse;
+			}
+			tr:nth-child(even) {background: white;}
+			tr:nth-child(odd) {background:;}
+			TH
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 28px;
+				font-weight: bold;
+				text-align: center;
+			}
+			TD
+			{
+				padding: 8px 6px;
+				width: 200px;
+				border-top: 1px solid black;
+			}
+			.rowHead { background-color: none; }
+			#whatHead { text-align: center; }
+			.name { font-size: 24px; width: 200px; }
+			.what { width: 560px; text-align: left; font-size: 24px;}
+			.definition
+			{
+				color: #c0c0c0;
+				font-size: 14px;
+				font-weight: normal;
+				font-style: italic;
+			}
+			.definition:hover { color: #212121; }
+			.foot
+			{
+				text-align: center;
+				font-weight: bold;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 210px;
+				background-color: #f4fff2;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				border-top: 5px dashed #a5f096;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 24px;
+				padding: 10px 10px 0px 10px;
+				color: #212121;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 700px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 680px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;
+			var questionBoxArray = [];
+			var selectedAnswer = "";
+			var isSelected = false;
+			var userAnswer = "";
+			var score = 0;
+			var itemsArray = ["b1", "b2", "b3"];
+			var correctAnswerArray = ["b2"];
+
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+
+			function GetItem()
+			{
+				if (currentItem < numItems) {
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else {
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+
+			function ShowItem(){
+				if (currentItem == 0)
+				{
+					//
+				}
+			}
+
+			function ShowMediaAnswer(){
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function GetRequest(){
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+			   }
+			}
+		
+			$(document).ready(function()
+			{				
+				GetRequest();
+
+				parent.GetWorldEvent("MediaLoadedHard");
+
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "whatHead");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-0);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					//get user answer's text
+					selectedID=$(this).attr("id");
+					userSelectedValue = document.getElementById(selectedID).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						score++;
+						parent.PlaySound('clicked0.wav');
+					}
+					else { parent.PlaySound('incorrect0.wav'); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#ccecc6"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a5f096"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#a5f096;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Hard");
+				}
+				else if (data == "NextPage")
+				{
+					parent.nextPage("media/"+ "Lesson24-Difficult-7.html");
+				}
+				else if (data == "getScore")
+				{
+					parent.GetWorldEvent(score);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainTableHead">
+				Conflict Resolution in the Workplace
+			</div>
+			<div id="mainTableDes">
+				If an employee has a problem, misunderstanding, or frustration pertaining to the company/business, here is a set of guidelines to follow:
+			</div>
+			<table id="mainTable">
+				<tr>
+					<th id="mainTableHead" colspan="5"></th>
+				</tr>
+				<tr>
+					<th class="name">Areas of Conflict</th>
+					<th class="what" colspan="2">What to do</th>
+				</tr>
+				<tr>
+					<th class="name">General Conduct</th>
+					<td class="what">A) Address the situation with parties involved.</td>
+				</tr>
+				<tr>
+					<th class="name definition">A person's behavior expressed in his or her actions, reactions, or reactions.</th>
+					<td class="what">B) If the previous step does not result in resolution, report conflict to supervisor.</td>
+				</tr>
+				<tr>
+					<th class="name definition"></th>
+					<td class="what">C) If the supervisor is unwilling or unable to help, relay conflict events to Department Head.</td>
+				</tr>
+				<tr>
+					<th class="name">Sexual Harassment</th>
+					<td class="what">A) Report the incident directly to supervisor.</td>
+				</tr>
+				<tr>
+					<th class="name definition">Unwelcome and repeated sexual advances, comments, looks, physical contact, or stereotyping.</th>
+					<td class="what">B) If you do not feel comfortable reporting to your supervisor or if he or she is involved, notify Human Resources.</td>
+				</tr>
+				<tr>
+					<th class="name definition"></th>
+					<td class="what">C) If the circumstances in which you were harassed were physically harmful in nature, take the matter to local law enforcement.</td>
+				</tr>
+				<tr>
+					<th class="name">Conflicts of Interest</th>
+					<td class="what">A) If you feel that you or a coworker are engaging in an action that may be for personal rather than company gain, communicate the facts to your Department Head.</td>
+				</tr>
+				<tr>
+					<th class="name definition">the possibility of a clash between the person's self-interest and professional interest or public interest.</th>
+					<td class="what">B) If you feel like the Department Head does not resolve the issue, talk to Human Resources about your concerns.</td>
+				</tr>
+				<tr>
+					<th class="name">Fraud</th>
+					<td class="what">A) If you suspect that your supervisor is involved in the incident, report to your Department Head.</td>
+				</tr>
+				<tr>
+					<th class="name definition">An act of deceit, hiding the truth, leaving out the truth, or changing the truth to gain unlawful or unfair advantage.</th>
+					<td class="what">B) If a there is a situation in which there is suspicion of fraud in financial records, contact the company Audit Department to verify the information you have.</td>
+				</tr>
+				<tr>
+					<th class="name definition"></th>
+					<td class="what">C) If you are uncomfortable with contacting the Audit Department, set up a meeting with your supervisor or department Head.</td>
+				</tr>
+			</table>
+			<div id="questionBox0" class="questionBox">				
+				<div id="questionText">
+					Frank told Pat 3 times to stop stealing his lunches. What should Frank do if Pat steals again?
+				</div>
+				
+				<div id="buttonBox">
+					<div class='mybutton' id="b1" value="Incorrect">
+						Talk to Pat.
+					</div>
+
+					<div class='mybutton' id="b2" value="Correct">
+						Talk to his supervisor.
+					</div>
+				
+					<div class='mybutton' id="b3" value="Incorrect">
+						Talk to the department head.
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

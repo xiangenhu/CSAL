@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="ComputerStudent1" gender="Male" title="" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+      <SpeechCan name="PumpBlankRemind">
+        <Item text="_user_, I bet you know this." speech="" play="_user_,B1" />
+        <Item text="_user_, try this, please. " speech="" play="_user_,B2" />
+        <Item text="_user_, I bet you can get this. " speech="" play="_user_,B3" />
+        <Item text="_user_, see if you can get this. " speech="" play="_user_,B4" />
+        <Item text="_user_, see if you know this. " speech="" play="_user_,B5" />
+        <Item text="_user_, I bet you know the answer to this. " speech="" play="_user_,B6" />
+        <Item text="_user_, I think you can get this." speech="" play="_user_,B7" />
+        <Item text="_user_, I am sure you can get this. " speech="" play="_user_,B8" />
+      </SpeechCan>
+      <SpeechCan name="SAAudioPump">
+        <Item text="ComputerTutor, I haven't finished reading. I need one or two minutes." speech="" play="B9" />
+        <Item text="ComputerTutor, I haven't finished. I need two more minutes. " speech="" play="B10" />
+        <Item text="ComputerTutor, I need one more minute." speech="" play="B11" />
+      </SpeechCan>
+      <SpeechCan name="JordanDisagree">
+        <Item text="_user_, actually, I don't think that's right. I don't agree with you." speech="" play="_user_,B12" />
+        <Item text="_user_, I would have to disagree. It is incorrect." speech="" play="_user_,B13" />
+        <Item text="_user_, I don't agree. I don't think this answer is right." speech="" play="_user_,B14" />
+        <Item text="_user_, I disagree. I don't think that is correct." speech="" play="_user_,B15" />
+        <Item text="_user_, it is incorrect.I was thinking that it might be something else." speech="" play="_user_,B16" />
+        <Item text="ComputerTutor, the answer that was chosen doesn't seem right to me. I don't agree with this answer." speech="" play="B17" />
+        <Item text="_user_, I don't think that's quite right. Disagree!" speech="" play="_user_,B18" />
+        <Item text="_user_, actually, I would disagree. It is wrong." speech="" play="_user_,B19" />
+        <Item text="_user_, I don't agree. Maybe the correct answer is something different." speech="" play="_user_,B20" />
+      </SpeechCan>
+      <SpeechCan name="JordanAgree">
+        <Item text="ComputerTutor, it is correct. I agree with that answer." speech="" play="B21" />
+        <Item text="ComputerTutor, I agree. I think that is the correct answer too." speech="" play="B22" />
+        <Item text="ComputerTutor, this is what I think too. I agree." speech="" play="B23" />
+        <Item text="ComputerTutor, I agree with that answer. It is correct." speech="" play="B24" />
+        <Item text="ComputerTutor, that is what I would choose. We are in agreement! " speech="" play="B25" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="ComputerTutor" gender="Female" title="" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+      <SpeechCan name="AskJordan">
+        <Item text="ComputerStudent1, which answer do you think is correct?" speech="" play="A1" />
+        <Item text="ComputerStudent1, what is your answer?" speech="" play="A2" />
+        <Item text="ComputerStudent1, your answer, please." speech="" play="A3" />
+        <Item text="ComputerStudent1, what about you? What do you think?" speech="" play="A4" />
+        <Item text="ComputerStudent1, do you have an answer?" speech="" play="A5" />
+        <Item text="ComputerStudent1, could you please tell us your answer?" speech="" play="A6" />
+        <Item text="ComputerStudent1, what is your answer?" speech="" play="A7" />
+        <Item text="ComputerStudent1, your answer, please." speech="" play="A8" />
+        <Item text="ComputerStudent1, it is your turn. What is your answer?" speech="" play="A9" />
+        <Item text="ComputerStudent1, what about you? What do you think?" speech="" play="A10" />
+        <Item text="ComputerStudent1, do you have an answer?" speech="" play="A11" />
+        <Item text="ComputerStudent1, could you please tell us your answer?" speech="" play="A12" />
+      </SpeechCan>
+      <SpeechCan name="RedoInstruction">
+        <Item text="_user_ and ComputerStudent1 , let's do it again." speech="" play="_user_,A13" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToBoth">
+        <Item text="This time you are both incorrect." speech="" play="A14" />
+      </SpeechCan>
+      <SpeechCan name="AskJordanCheck">
+        <Item text="ComputerStudent1, is that right?" speech="" play="A15" />
+        <Item text="ComputerStudent1, is that answer correct?" speech="" play="A16" />
+        <Item text="ComputerStudent1, do you think that answer is correct?" speech="" play="A17" />
+        <Item text="ComputerStudent1, what do you think of that answer?" speech="" play="A18" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToBoth">
+        <Item text="_user_ and ComputerStudent1 Yes, ! Nice job! You are both right!" speech="" play="_user_,A19" />
+      </SpeechCan>
+      <SpeechCan name="ClickToContinue">
+        <Item text="After reading, remember to click to continue." speech="" play="A20" />
+        <Item text="Remember to click to continue after reading." speech="" play="A21" />
+        <Item text="If you finish reading, click to continue to move on." speech="" play="A22" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToBothUserFirst">
+        <Item text="_user_ and ComputerStudent1 , you both got that one correct! Good job!" speech="" play="_user_,A23" />
+        <Item text="_user_ and ComputerStudent1 , you are both right! Great job!" speech="" play="_user_,A24" />
+        <Item text="_user_ and ComputerStudent1 , both of you are correct! Nice job!" speech="" play="_user_,A25" />
+      </SpeechCan>
+      <SpeechCan name="SilenceFeedback">
+        <Item text="ComputerStudent1, Ok, let's see what answer you chose." speech="" play="A26" />
+        <Item text="ComputerStudent1, Alright, let's see what you chose." speech="" play="A27" />
+        <Item text="ComputerStudent1,  let's see whether you agree with this answer." speech="" play="A28" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToBothUserFirst">
+        <Item text="_user_ and ComputerStudent1 , I am sorry, but both of you are incorrect." speech="" play="_user_,A29" />
+        <Item text="_user_ and ComputerStudent1 , you are both wrong." speech="" play="_user_,A30" />
+        <Item text="_user_ and ComputerStudent1 , sorry! you are both incorrect." speech="" play="_user_,A31" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToUser">
+        <Item text="_user_, Good job! You got it." speech="" play="_user_,A32" />
+        <Item text="_user_, you are right! Great job!" speech="" play="_user_,A33" />
+        <Item text="_user_, you are right! That's fantastic!" speech="" play="_user_,A34" />
+        <Item text="_user_, you are correct! Nice job!" speech="" play="_user_,A35" />
+        <Item text="_user_, nice work! You are right!" speech="" play="_user_,A36" />
+        <Item text="_user_, awesome! You are correct!" speech="" play="_user_,A37" />
+        <Item text="_user_, very good! You got it!" speech="" play="_user_,A38" />
+      </SpeechCan>
+      <SpeechCan name="CritisizeAgent">
+        <Item text="ComputerStudent1,Try to be more careful!" speech="" play="A39" />
+        <Item text="ComputerStudent1, Read more closely!" speech="" play="A40" />
+        <Item text="ComputerStudent1, You can't be too careful." speech="" play="A41" />
+        <Item text="ComputerStudent1, that's too careless." speech="" play="A42" />
+        <Item text="ComputerStudent1, You'll get it next time." speech="" play="A43" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToBothUserSecond">
+        <Item text="_user_ and ComputerStudent1 , you both answered this question incorrectly." speech="" play="_user_,A44" />
+        <Item text="_user_ and ComputerStudent1 , Unfortunately, you  are both incorrect this time." speech="" play="_user_,A45" />
+        <Item text="_user_ and ComputerStudent1 , Sorry, you are both incorrect." speech="" play="_user_,A46" />
+      </SpeechCan>
+      <SpeechCan name="PumpBlank">
+        <Item text="_user_, you can do it! Please at least have a try! Let me repeat my question again." speech="" play="_user_,A47" />
+        <Item text="_user_, come on! You can do it! Have a try! I will repeat my question again." speech="" play="_user_,A48" />
+        <Item text="_user_, please give it a try! I belive you have an answer. Now I wil repeat my question again." speech="" play="_user_,A49" />
+        <Item text="_user_, please try it. I'll repeat the question." speech="" play="_user_,A50" />
+        <Item text="_user_, give it a try! I'll say the question again." speech="" play="_user_,A51" />
+        <Item text="_user_, I bet you can come up with an answer for this. Give it a try! I'll repeat the question." speech="" play="_user_,A52" />
+        <Item text="_user_, I'll repeat the question. I bet you know the answer for it! Give it a try!" speech="" play="_user_,A53" />
+        <Item text="_user_, you can do it! Give it a try! I'll say the question again." speech="" play="_user_,A54" />
+        <Item text="_user_, give it a go! I'll repeat the question and I bet you'll know the answer." speech="" play="_user_,A55" />
+        <Item text="_user_, give it a go! I'll repeat the question, first." speech="" play="_user_,A56" />
+      </SpeechCan>
+      <SpeechCan name="NotSure">
+        <Item text="I am not sure I understand you." speech="" play="A57" />
+        <Item text="I couldn't understand you." speech="" play="A58" />
+      </SpeechCan>
+      <SpeechCan name="RepeatQuestion">
+        <Item text="Let me repeat my question again." speech="" play="A59" />
+        <Item text="I'll say the question again." speech="" play="A60" />
+        <Item text="Now I will repeat my question again." speech="" play="A61" />
+        <Item text="I'll repeat the question." speech="" play="A62" />
+        <Item text="I'll repeat the question, first." speech="" play="A63" />
+      </SpeechCan>
+      <SpeechCan name="TryAgain">
+        <Item text="_user_, Please have another try." speech="" play="_user_,A64" />
+        <Item text="_user_, Have another try, please." speech="" play="_user_,A65" />
+        <Item text="_user_, Try again, please." speech="" play="_user_,A66" />
+        <Item text="_user_, Please take another try." speech="" play="_user_,A67" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToAgent">
+        <Item text="ComputerStudent1, you are absolutely correct, good job." speech="" play="A68" />
+        <Item text="ComputerStudent1, you got it right, excellent!" speech="" play="A69" />
+        <Item text="ComputerStudent1, you are right, that's great!" speech="" play="A70" />
+        <Item text="ComputerStudent1, that is correct, well done!" speech="" play="A71" />
+        <Item text="ComputerStudent1, that's right, great job!" speech="" play="A72" />
+        <Item text="ComputerStudent1, right! That is correct!" speech="" play="A73" />
+        <Item text="ComputerStudent1, that's it! Nice job!" speech="" play="A74" />
+        <Item text="ComputerStudent1! That's right!" speech="" play="A75" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgent">
+        <Item text="_user_, great job! You're doing really well! ComputerStudent1, you are wrong." speech="" play="_user_,A76" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgentUserFirst">
+        <Item text="_user_, good job! You are correct. ComputerStudent1, I'm sorry, you didn't get that one right. " speech="" play="_user_,A77" />
+        <Item text="_user_, you are correct. Nicely done! ComputerStudent1, you are wrong! " speech="" play="_user_,A78" />
+        <Item text="_user_,  great! You're right!  ComputerStudent1, you are wrong." speech="" play="_user_,A79" />
+        <Item text="_user_, awesome! That's right! ComputerStudent1, you didn't get it correct this time. " speech="" play="_user_,A80" />
+      </SpeechCan>
+      <SpeechCan name="PositiveToBothUserSecond">
+        <Item text="_user_ and ComputerStudent1 , nice work! You are both right!" speech="" play="_user_,A81" />
+        <Item text="_user_ and ComputerStudent1 , Both of you are correct!" speech="" play="_user_,A82" />
+        <Item text="_user_ and ComputerStudent1 , very good! You both got it!" speech="" play="_user_,A83" />
+      </SpeechCan>
+      <SpeechCan name="NegativeToAgent">
+        <Item text="ComputerStudent1, I am sorry, but you are incorrect." speech="" play="A84" />
+        <Item text="ComputerStudent1, you are wrong." speech="" play="A85" />
+        <Item text="ComputerStudent1, sorry! you are incorrect." speech="" play="A86" />
+        <Item text="ComputerStudent1, well, you answered this question incorrectly." speech="" play="A87" />
+        <Item text=" ComputerStudent1, Unfortunately, you are incorrect this time." speech="" play="A88" />
+        <Item text="ComputerStudent1, unfortunately, you are incorrect." speech="" play="A89" />
+        <Item text="ComputerStudent1, this time you are incorrect" speech="" play="A90" />
+      </SpeechCan>
+      <SpeechCan name="Thanks">
+        <Item text="_user_, thank you! " speech="" play="_user_,A91" />
+        <Item text="_user_, thanks!" speech="" play="_user_,A92" />
+        <Item text="_user_, thank you so much!" speech="" play="_user_,A93" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeAgentUserSecond">
+        <Item text="_user_, nice job! That is correct! ComputerStudent1, you need more practice, you didn't get it right." speech="" play="_user_,A94" />
+        <Item text="_user_, wonderful! That is absolutely correct! ComputerStudent1, your answer is incorrect!" speech="" play="_user_,A95" />
+        <Item text="_user_, Perfect! You got it! ComputerStudent1, sorry, you were incorrect." speech="" play="_user_,A96" />
+        <Item text="_user_, that's it! Nice job! ComputerStudent1, I hate to say this, but you are wrong!" speech="" play="_user_,A97" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok. " speech="" play="A98" />
+        <Item text="Okay." speech="" play="A99" />
+        <Item text="Alright." speech="" play="A100" />
+      </SpeechCan>
+      <SpeechCan name="TAAudioPump">
+        <Item text=" Don't forget to click to continue to the next section." speech="" play="A101" />
+        <Item text="If you've finished, click to continue to answer the question. " speech="" play="A102" />
+        <Item text="Click to continue to move to the next section after finishing." speech="" play="A103" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b(add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion|\bhuh\b)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="ListenToDifficult" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Oh, this is a pretty long activity. Can we do some exercise?" speech="" play="B26" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, doing exercise is good, but now we need to focus. We will have to just read about exercise for now." speech="" play="A104" />
+      <Item id="3" agent="ComputerStudent1" text="ComputerTutor, Cool, I am a great runner!" speech="" play="B27" />
+      <Item id="4" agent="ComputerTutor" text="ComputerStudent1, Glad to hear that." speech="" play="A105" />
+      <Item id="5" agent="ComputerStudent1" text="Like before, can we read to ourselves or listen to the audio?" speech="" play="B28" />
+      <Item id="6" agent="ComputerTutor" text="ComputerStudent1, That's right. Click the green button if you want to hear the audio. Click to continue when you are finished!" speech="" play="A106" />
+    </RigidPack>
+    <RigidPack name="ListenToMedium" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A107" />
+    </RigidPack>
+    <RigidPack name="ClosingDifficult" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, did you find these activities helpful?" speech="" play="A108" />
+      <Item id="2" agent="ComputerStudent1" text="I definitely understand how to compare and contrast information in a text, but I still miss some important words or information." speech="" play="B29" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, That's ok! The more you read, the easier it will be for you to ask yourself good questions about the text that will help you summarize the important information." speech="" media="media\Lesson23-Opening1.html" play="A109" />
+      <Item id="4" agent="ComputerStudent1" text="I think the text maps help me." speech="" media="media\Lesson23-Closing.html" play="B30" />
+      <Item id="5" agent="ComputerTutor" text="That's great. I hope it helps you both. When you read at home, remember to use these strategies for a Compare and Contrast text! See you next time!" speech="" play="A110" />
+    </RigidPack>
+    <RigidPack name="TransitionD6" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Let's see if we can find some similarities between walking and running." speech="" play="A111" />
+      <Item id="2" agent="ComputerStudent1" text="The passage said both walking and running are supposed to be year-round activities." speech="" play="B31" />
+    </RigidPack>
+    <RigidPack name="TransitionE9" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, some phone plans allow you to purchase internet access if the phone is internet capable. Is this something that you need?" speech="" play="A112" />
+    </RigidPack>
+    <RigidPack name="TransitionE6" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, What are some other features that are important to you?" speech="" play="A113" />
+    </RigidPack>
+    <RigidPack name="M1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A114" />
+    </RigidPack>
+    <RigidPack name="TransitionM1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1 , now that we have read the passage, let's compare the careers of Michael ComputerStudent1 and Kobe Bryant." speech="" play="_user_,A115" />
+      <Item id="2" agent="ComputerStudent1" text="I like Kobe more, even though my name is ComputerStudent1 too." speech="" play="B32" />
+      <Item id="3" agent="ComputerTutor" text="Oh! You're too much!" speech="" play="A116" />
+      <Item id="4" agent="ComputerTutor" text="Let's see if we can find some similarities and differences between them." speech="" play="A117" />
+    </RigidPack>
+    <RigidPack name="D1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, what did you think of these activities?" speech="" play="A118" />
+      <Item id="2" agent="ComputerStudent1" text="I think I understand a little more about compare and contrast, but sometimes I miss some important words or information." speech="" play="B33" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, That's ok. The more you read, the easier it will be for you to find the information that you want." speech="" media="media\Lesson23-Opening1.html" play="A119" />
+      <Item id="4" agent="ComputerStudent1" text="This table really helped me to summarize the information that was important to make a decision." speech="" media="media\Lesson23-ClosingEasy.html" play="B34" />
+      <Item id="5" agent="ComputerTutor" text="That's great. When you read at home, remember to use tables like this one to help you stay organized!" speech="" play="A120" />
+    </RigidPack>
+    <RigidPack name="ComputerStudent1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A121" />
+    </RigidPack>
+    <RigidPack name="TransitionM7" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="It seems like a major difference between them is that Kobe is still playing and ComputerStudent1 is retired." speech="" play="B35" />
+      <Item id="2" agent="ComputerTutor" text="That's a good point. Actually, ComputerStudent1 retired three times! He went back to the NBA even after his second retirement." speech="" play="A122" />
+      <Item id="3" agent="ComputerStudent1" text="Why?" speech="" play="B36" />
+      <Item id="4" agent="ComputerTutor" text="_user_,  let's see what answer you found in the reading." speech="" play="_user_,A123" />
+    </RigidPack>
+    <RigidPack name="TransitionE4" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="hey here is something else I need. My boss doesn't like to hear phones ring, so I must keep it on vibrate at work." speech="" play="B37" />
+    </RigidPack>
+    <RigidPack name="Competition" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, what did you think of these activities?" speech="" play="A124" />
+      <Item id="2" agent="ComputerStudent1" text="I think I understand a little more about compare and contrast, but sometimes I miss some important words or information." speech="" play="B38" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, That's ok. The more you read, the easier it will be for you to find the information that you want." speech="" media="media\Lesson23-Opening1.html" play="A125" />
+      <Item id="4" agent="ComputerStudent1" text="This table really helped me to summarize the information that was important to make a decision." speech="" media="media\Lesson23-ClosingEasy.html" play="B39" />
+      <Item id="5" agent="ComputerTutor" text="That's great. When you read at home, remember to use tables like this one to help you stay organized!" speech="" play="A126" />
+    </RigidPack>
+    <RigidPack name="TransitionD5" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="I think I could be a counselor for  physical activity. Let's start with my sister. She wants an exercise plan. " speech="" play="B40" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, let's test your skills. Is there anything we need to consider in making the plan?" speech="" play="A127" />
+      <Item id="3" agent="ComputerStudent1" text="_user_, My sister struggles with being seriously overweight.  we need to figure out which exercise would be the least stressful for her. " speech="" play="_user_,B41" />
+    </RigidPack>
+    <RigidPack name="TransitionE8" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="My wife always tells me I am a good singer. Is it possible to record my songs as ringtones?" speech="" play="B42" />
+      <Item id="2" agent="ComputerTutor" text="_user_,  maybe you can tell us if this is a feature of any of these phones." speech="" play="_user_,A128" />
+    </RigidPack>
+    <RigidPack name="TransitionE5" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="This table makes it easy to compare the different descriptions of all the phones!  I see that the phones have built in cameras. It would be great if I could take videos as well as pictures." speech="" play="B43" />
+    </RigidPack>
+    <RigidPack name="PlayAudioDifficult" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Let's listen to the audio for walking versus running. Follow along in the passage and click to continue when it is done." speech="" media="media\Lesson23Hard.mp3" play="A129" />
+    </RigidPack>
+    <RigidPack name="EOpening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A130" />
+    </RigidPack>
+    <RigidPack name="TransitionD2" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Let's review the differences between walking and running. " speech="" play="A131" />
+      <Item id="2" agent="ComputerStudent1" text="By comparing them, I see that running is more likely to cause an injury." speech="" play="B44" />
+    </RigidPack>
+    <RigidPack name="PlayAudioMedium" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Ok, let's listen to this passage on Kobe versus ComputerStudent1." speech="" media="media\Lesson23Medium.mp3" play="A132" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1 , hello. Happy to see both of you again!" speech="" media="media\Lesson23-IntroTitle.html" play="_user_,A133" />
+      <Item id="2" agent="ComputerStudent1" text="Hi! I think the Compare and Contrast text structure is kind of difficult." speech="" media="media\Lesson23IntroDefine.html" play="B45" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, it can be. Take a look at the apples and oranges here to give you a sense of what it means to read a compare and contrast. In this text structure, we are looking to find what the writer thinks are similarities and differences between two or more things." speech="" play="A134" />
+      <Item id="4" agent="ComputerStudent1" text="OK. So, here an apple and an orange are both fruit, but one is red and the other is orange?" speech="" play="B46" />
+      <Item id="5" agent="ComputerTutor" text="That's a good comparison! Here is another way of thinking about it. The diagram below is called a Venn diagram and it helps us to look at a comparison between two things." speech="" media="media\Lesson23IntroVennD.html" play="A135" />
+      <Item id="6" agent="ComputerStudent1" text="Oh, I see. So, the information that is different about each person is listed as well as the information that is the same. It looks like the information that is the same about Washington and Lincoln is listed in the space where the circles overlap." speech="" media="" play="B47" />
+      <Item id="7" agent="ComputerTutor" text="Right, so we can see that Washington was born in Virginia and Lincoln was born in Kentucky. However, they are both U.S. Presidents!" speech="" play="A136" />
+      <Item id="8" agent="ComputerStudent1" text="I get it. This comparison makes sense." speech="" play="B48" />
+      <Item id="9" agent="ComputerTutor" text="Great! Let's start this activity by reading a passage about Kobe Bryant and Michael ComputerStudent1. We will answer some questions that compare and contrast their careers." speech="" media="media\Lesson23-ReadingMedium.html" play="A137" />
+      <Item id="10" agent="ComputerStudent1" text="Awesome. I love basketball! Kobe is my favorite!" speech="" play="B49" />
+      <Item id="11" agent="ComputerTutor" text="_user_ and ComputerStudent1, I bet you will love today's reading! , read the passage and then click to continue. You can read the passage to yourself or listen to the audio by clicking the green button. " speech="" play="_user_,A138" />
+      <Item id="12" agent="ComputerStudent1" text="_user_, let's take a look!" speech="" play="_user_,B50" />
+    </RigidPack>
+    <RigidPack name="TransitionM6" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="How awful for Michael ComputerStudent1!" speech="" play="B51" />
+      <Item id="2" agent="ComputerTutor" text="Indeed! So that was one difference between Kobe and ComputerStudent1. What is another one?" speech="" play="A139" />
+    </RigidPack>
+    <RigidPack name="TransitionE3" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="I need to use my phone all the time, so I need a phone that has a really good battery." speech="" play="B52" />
+    </RigidPack>
+    <RigidPack name="TransitionD4" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Usually, walking and running are not that different." speech="" play="B53" />
+      <Item id="2" agent="ComputerTutor" text="Right, But one important difference shouldn't be ignored.  let's see whether you catch it or not." speech="" play="A140" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A141" />
+    </RigidPack>
+    <RigidPack name="TransitionD8" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="This chart clearly shows differences and similarities between running and walking." speech="" play="B54" />
+      <Item id="2" agent="ComputerTutor" text="It is easier to compare the information." speech="" play="A142" />
+      <Item id="3" agent="ComputerStudent1" text="Yeah." speech="" play="B55" />
+    </RigidPack>
+    <RigidPack name="User" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="ComputerStudent1 definitely won the Slam Dunk contest, but it wasn't in the article." speech="" play="B56" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, I think you are right, but let's move on to the last question." speech="" play="A143" />
+    </RigidPack>
+    <RigidPack name="Transition" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Sure! You can either read by yourself or listen to the audio by clicking the green button. Be sure to click to continue when you are done." speech="" play="A144" />
+    </RigidPack>
+    <RigidPack name="TransitionM5" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Their average points were pretty close, but did you know people call ComputerStudent1 Air ComputerStudent1?" speech="" play="B57" />
+      <Item id="2" agent="ComputerTutor" text="True, Let's see what other differences we can find between Air ComputerStudent1 and Kobe in the article." speech="" play="A145" />
+    </RigidPack>
+    <RigidPack name="TransitionE2" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Even though the Comet is the cheapest of the three phones, I can't afford to pay $189.99 at one time." speech="" play="B58" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, I understand. I believe some of the phones provide installment plans!" speech="" play="A146" />
+    </RigidPack>
+    <RigidPack name="RigidPacks" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, could you briefly wrap up what we learned today?" speech="" play="A147" />
+      <Item id="2" agent="ComputerStudent1" text="Sure! We learned how to spot similarities and differences in the Compare and Contrast text structure." speech="" media="media\Lesson23-Closing.html" play="B59" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1 perfect. We also learned how some signal words can help us identify a Compare and Contrast text. When we know what type of text we are reading we can begin to know what questions to ask." speech="" media="media\Lesson23-Opening1.html" play="A148" />
+      <Item id="4" agent="ComputerStudent1" text="We used the text map to organize and summarize the important information in the reading." speech="" media="media\Lesson23-Closing.html" play="B60" />
+      <Item id="5" agent="ComputerTutor" text="Right! So when you read at home remember to use these strategies! See you next time!" speech="" play="A149" />
+    </RigidPack>
+    <RigidPack name="TransitionD3" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="My boss, Mr. Johnson needs some help with his exercise plan." speech="" play="B61" />
+      <Item id="2" agent="ComputerTutor" text="Let's see if we can help." speech="" play="A150" />
+    </RigidPack>
+    <RigidPack name="DOpening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, what did you think of these activities?" speech="" play="A151" />
+      <Item id="2" agent="ComputerStudent1" text="I think I understand a little more about compare and contrast, but sometimes I miss some important words or information." speech="" play="B62" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, That's ok. The more you read, the easier it will be for you to find the information that you want." speech="" media="media\Lesson23-Opening1.html" play="A152" />
+      <Item id="4" agent="ComputerStudent1" text="This table really helped me to summarize the information that was important to make a decision." speech="" media="media\Lesson23-ClosingEasy.html" play="B63" />
+      <Item id="5" agent="ComputerTutor" text="That's great. When you read at home, remember to use tables like this one to help you stay organized!" speech="" play="A153" />
+    </RigidPack>
+    <RigidPack name="TransitionEA" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="When we looked at the chart, it was clear to me. But now I am overwhelmed by the information." speech="" play="B64" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, This is normal. No worries. We can make it easier when we summarize the features that you want with check marks in every category for each phone in this table" speech="" play="A154" />
+    </RigidPack>
+    <RigidPack name="TransitionM8" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="ComputerStudent1 seems more famous than Kobe." speech="" play="B65" />
+      <Item id="2" agent="ComputerTutor" text="you have to remember that ComputerStudent1 retired in 2003 and while Kobe just recently retired in 2016.  let's look at the next question." speech="" play="A155" />
+    </RigidPack>
+    <RigidPack name="TransitionD9" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="This seems to summarize this passage." speech="" play="B66" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1! Good observation. Let's compare two summaries." speech="" play="A156" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, could you briefly wrap up what we learned today?" speech="" play="A157" />
+      <Item id="2" agent="ComputerStudent1" text="Sure! We learned how to spot similarities and differences in the Compare and Contrast text structure." speech="" media="media\Lesson23-Closing.html" play="B67" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, perfect. We also learned how some signal words can help us identify a Compare and Contrast text. When we know what type of text we are reading we can begin to know what questions to ask." speech="" media="media\Lesson23-Opening1.html" play="A158" />
+      <Item id="4" agent="ComputerStudent1" text="We used the text map to organize and summarize the important information in the reading." speech="" media="media\Lesson23-Closing.html" play="B68" />
+      <Item id="5" agent="ComputerTutor" text="Right. when you read at home remember to use these strategies! See you next time!" speech="" play="A159" />
+    </RigidPack>
+    <RigidPack name="TransitionD1" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="This passage looks much more difficult." speech="" play="B69" />
+      <Item id="2" agent="ComputerTutor" text=" ComputerStudent1 don't worry. You two can work on the activity together." speech="" play="A160" />
+    </RigidPack>
+    <RigidPack name="TransitionM4" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="There is a lot for us to compare between the two." speech="" play="B70" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, yes. Did you notice the differences in their career scoring?" speech="" play="A161" />
+    </RigidPack>
+    <RigidPack name="TransitionE1" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="hey. I want to buy a new cell phone. I found some information on three that seem pretty decent, but it is hard for me to make a decision!" speech="" play="B71" />
+      <Item id="2" agent="ComputerTutor" text="_user_,  and I could give you a hand with a comparison." speech="" play="_user_,A162" />
+      <Item id="3" agent="ComputerStudent1" text="That would be great. I was just going to go for the cheapest one, but maybe we should look at some other features." speech="" play="B72" />
+    </RigidPack>
+    <RigidPack name="ClosingEasy" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="ComputerStudent1, what did you think of these activities?" speech="" play="A163" />
+      <Item id="2" agent="ComputerStudent1" text="I think I understand a little more about compare and contrast, but sometimes I miss some important words or information." speech="" play="B73" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, That's ok. The more you read, the easier it will be for you to find the information that you want." speech="" media="media\Lesson23-Opening1.html" play="A164" />
+      <Item id="4" agent="ComputerStudent1" text="This table really helped me to summarize the information that was important to make a decision." speech="" media="media\Lesson23-ClosingEasy.html" play="B74" />
+      <Item id="5" agent="ComputerTutor" text="That's great. When you read at home, remember to use tables like this one to help you stay organized!" speech="" play="A165" />
+    </RigidPack>
+    <RigidPack name="TransitionM9" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="ComputerStudent1 definitely won the Slam Dunk contest, but it wasn't in the article." speech="" play="B75" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, I think you are right, but let's move on to the last question." speech="" play="A166" />
+    </RigidPack>
+    <RigidPack name="TransitionD7" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Here is a chart that summarizes the comparison between walking and running in the passage. " speech="" play="A167" />
+    </RigidPack>
+    <RigidPack name="TransitionE7" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="ComputerTutor, I want to have some fun with a new phone! " speech="" play="B76" />
+    </RigidPack>
+    <RigidPack name="TransitionM2" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="I would like to see what difference these two players have." speech="" play="B77" />
+      <Item id="2" agent="ComputerTutor" text="_user_,  let's see whether the you have detected some differences." speech="" play="_user_,A168" />
+    </RigidPack>
+    <RigidPack name="TransitionDA" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="I am curious why the learner thinks this summary is good." speech="" play="B78" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1,good question." speech="" play="A169" />
+    </RigidPack>
+    <RigidPack name="TransitionM3" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Kobe and ComputerStudent1 are both famous shooting guards, but they are not really from the same eras of the sport." speech="" play="B79" />
+      <Item id="2" agent="ComputerTutor" text=" ComputerStudent1,You got it. Did you see that the second paragraph describes Kobe's career?" speech="" play="A170" />
+      <Item id="3" agent="ComputerStudent1" text="Yes and the third paragraph gives us the same information about ComputerStudent1's career. " speech="" play="B80" />
+      <Item id="4" agent="ComputerTutor" text="They are very similar. However, ComputerStudent1 retired with the Wizards and Kobe retired with the Lakers. " speech="" play="A171" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, this paragraph shows some differences between walking and running. Which highlighted sentence has the best comparison?" speech="" media="" itemDif="0.1" play="_user_,A172">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Look closely at the sentences to see which one includes a good comparison between walking and running." speech="" keys="lik" threshold=".9" test="" play="A173" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It seems like both the second and the third answers only mention either walking or running. That is not much of a comparison." speech="" keys="lik" threshold=".9" test="" play="B81" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="The second and third answer options contain separate information about walking and running, but do not directly compare them." speech="" keys="lik" threshold=".9" test="" play="A174" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Only the first answer option includes a comparison between walking and running. It tells us that running has a greater risk of injury. The other two sentences clarify why that is true." speech="" keys="lik" threshold=".9" test="" play="A175" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The first sentence has the best comparison." speech="" keys="lik" threshold=".9" test="" play="A176" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which highlighted sentence has the best comparison?" speech="" keys="lik" threshold=".9" test="" play="_user_,A177" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think it is the first one. I see the key words difference between running and walking." speech="" keys="lik" threshold=".9" test="" play="B82" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe it is the third one. It says that walking is less damaging to the joints." speech="" keys="lik" threshold=".9" test="" play="B83" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="This one talks about running, not walking. So it is not a comparison." speech="This one talks about running, not walking. So it is not a comparison." keys="lik" threshold=".9" test="" play="B84" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="This one talks about walking, not running. So it is not a comparison." speech="" keys="lik" threshold=".9" test="" play="B85" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="This one only talks about running, but it does not mention walking. So it is not a comparison." speech="" keys="lik" threshold=".9" test="" play="A178" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="This sentence describes walking, but it does not mention running. So it is not a comparison." speech="" keys="lik" threshold=".9" test="" play="A179" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="I see. The correct answer should include a comparison between the two in one sentence." speech="" keys="lik" threshold=".9" test="" play="B86" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, what could a runner do on their own to avoid an injury?" speech="" media="" itemDif="0.1" play="_user_,A180">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Find the sentence that mentions how to reduce the risk of injury during running." speech="" keys="lik" threshold=".9" test="" play="A181" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first sentence mentions reducing the risk of injury." speech="" keys="lik" threshold=".9" test="" play="B87" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="In order to get the right shoes, you may need to work with an expert. " speech="" keys="lik" threshold=".9" test="" play="A182" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The second and third answers both mention consulting an expert. A runner could find better surfaces on their own. " speech="" keys="lik" threshold=".9" test="" play="A183" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The risk of injury is reduced if you run on a good surface." speech="" keys="lik" threshold=".9" test="" play="A184" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, what could a runner do on their own to make sure an injury does not occur?" speech="" keys="lik" threshold=".9" test="" play="_user_,A185" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The first sentence seems correct. You can be smart about looking for the best surfaces on your own." speech="" keys="lik" threshold=".9" test="" play="B88" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think I choose the second one. Wearing good shoes may reduce the risk of injury. If I wear comfortable shoes, my feet will not hurt." speech="" keys="lik" threshold=".9" test="" play="B89" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="It can be difficult to know about correct form and technique without the help of a professional. " speech="" keys="lik" threshold=".9" test="" play="B90" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I see that this answer mentions talking to a shoe expert, because you may not know how to find the right kind of shoes on your own. " speech="" keys="lik" threshold=".9" test="" play="B91" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="You may need to consult a professional in order to understand the correct form and technique.  " speech="" keys="lik" threshold=".9" test="" play="A186" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="You may require a shoe expert to explain the proper fit of your running shoes." speech="" keys="lik" threshold=".9" test="" play="A187" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Oh, I shouldn't guess based on my experience rather than from the passage!" speech="" keys="lik" threshold=".9" test="" play="B92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, Mr. Johnson only has an hour to work out every day and he wants to burn more calories. which highlighted sentence could help him choose the best exercise to help him lose weight?" speech="" media="" itemDif="0.1" play="_user_,A188">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="To answer this, we need to find the sentence that describes the difference between running and walking in terms of calorie consumption." speech="" keys="lik" threshold=".9" test="" play="A189" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="You mean burning calories? We need to choose the exercise that burns the most calories in an hour." speech="" keys="lik" threshold=".9" test="" play="B93" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="We need to find a sentence that compares walking to running and tells us which burns more calories in the same amount of time." speech="" keys="lik" threshold=".9" test="" play="A190" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="In the third answer option, you will find that running burns more calories per hour. Mr. Johnson should choose running. " speech="" keys="lik" threshold=".9" test="" play="A191" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Running burns more calories!" speech="" keys="lik" threshold=".9" test="" play="A192" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which highlighted sentence could help him choose between running and walking?" speech="" keys="lik" threshold=".9" test="" play="_user_,A193" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I will choose the third answer, because it specifically compares running to walking on a calories burned per hour basis." speech="" keys="lik" threshold=".9" test="" play="B94" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think it is the first answer option, because when he walks, he can socialize with his friends. This saves him time, and also burns calories." speech="" keys="lik" threshold=".9" test="" play="B95" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I see that this sentence mentions walking is a good beginner exercise, but it does not mention that walking burns more calories." speech="" keys="lik" threshold=".9" test="" play="B96" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I feel like this is a similarity between walking and running. Mr. Johnson needs to choose one, so he needs to see a difference between the two. " speech="" keys="lik" threshold=".9" test="" play="B97" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Notice that this sentence mentions walking is a good beginner exercise, but it does not mention that walking burns more calories than running." speech="" keys="lik" threshold=".9" test="" play="A194" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Please see that this is a similarity between walking and running. Mr. Johnson needs to choose one, so he needs to see a difference between the two. " speech="" keys="lik" threshold=".9" test="" play="A195" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which answer does NOT support the idea that walkers could achieve the same weight loss goals as runners?" speech="" media="" itemDif="0.1" play="_user_,A196">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Walkers need to burn more calories. So what could walkers do?" speech="" keys="lik" threshold=".9" test="" play="A197" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks to me like the second and third sentences give you information about how to burn more calories while walking. " speech="" keys="lik" threshold=".9" test="" play="B98" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="If you look at the second and third sentences, you will see that the both give you information about how to burn more calories while walking. " speech="" keys="lik" threshold=".9" test="" play="A198" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The first sentence encourages you to walk if you like it better, but it does not tell you how to achieve your weight loss goals while walking as compared to running. " speech="" keys="lik" threshold=".9" test="" play="A199" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Walking for a longer period of time will help you achieve a higher number of calories burned. " speech="" keys="lik" threshold=".9" test="" play="A200" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which of the following sentences does NOT list a way in which walkers could achieve the same weight loss goal as runners?" speech="" keys="lik" threshold=".9" test="" play="_user_,A201" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think it is the first sentence, because that one doesn't have any information about walking versus running. " speech="" keys="lik" threshold=".9" test="" play="B99" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe, the second one. I am not sure." speech="" keys="lik" threshold=".9" test="" play="B100" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="It looks like this sentence is telling us you can walk farther in distance." speech="" keys="lik" threshold=".9" test="" play="B101" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I see that this one gives us two suggestions, walking more or eating less. " speech="" keys="lik" threshold=".9" test="" play="B102" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Here it tells us that a walker can make up the difference with distance." speech="" keys="lik" threshold=".9" test="" play="A202" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="In this answer, the passage gives us two ways in which we could achieve the same weight loss goals as runners. " speech="" keys="lik" threshold=".9" test="" play="A203" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which sentence compares running and walking in terms of stress on the body?" speech="" media="" itemDif="0.1" play="_user_,A204">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Jordans sister is overweight, so we need to find some information on what exercise will cause the least amount of stress to her body. " speech="" keys="lik" threshold=".9" test="" play="A205" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I think sentences one and two do not say much about exercise being stressful.  " speech="" keys="lik" threshold=".9" test="" play="B103" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="So, find the sentence that tells you what to do if you are overweight and see what is less stressful, walking or running?" speech="" keys="lik" threshold=".9" test="" play="A206" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The third sentence says that walking is less stressful on the body - especially if you are overweight." speech="" keys="lik" threshold=".9" test="" play="A207" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Walking is less stressful on the body. " speech="" keys="lik" threshold=".9" test="" play="A208" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which sentence can help us decide what is best for Jordans sister?" speech="" keys="lik" threshold=".9" test="" play="_user_,A209" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="According to sentence three, walking is less stressful." speech="" keys="lik" threshold=".9" test="" play="B104" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="From reading the second sentence, I think she could walk or run. People can obtain the same health and fitness benefits by both running and walking." speech="" keys="lik" threshold=".9" test="" play="B105" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I don't think it is this one. This just says you can get more benefit from running in a shorter amount of time. " speech="" keys="lik" threshold=".9" test="" play="B106" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I don't think this sentence says anything about what exercise is easier on the body. " speech="" keys="lik" threshold=".9" test="" play="B107" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="This sentence evaluates running and walking based on the amount of time you have and not on the amount of stress on the body. " speech="" keys="lik" threshold=".9" test="" play="A210" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Both walking and running can improve health. But for this question, you need to consider which one causes less stress on the body." speech="" keys="lik" threshold=".9" test="" play="A211" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which of the highlighted sentences shows another thing that walking and running have in common?" speech="" media="" itemDif="0.1" play="_user_,A212">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Look for a sentence that has a signal word for a similarity. " speech="" keys="lik" threshold=".9" test="" play="A213" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The second sentence says running is more rigorous than walking and the third one says walking is a better exercise for beginners. I think both of those are differences." speech="" keys="lik" threshold=".9" test="" play="B108" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="If you look closely, the second sentence says running is more rigorous than walking whereas the third one says walking is a better exercise for beginners. These are examples of differences. " speech="" keys="lik" threshold=".9" test="" play="A214" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The first sentence shows a similarity between running and walking. Both are social activities." speech="" keys="lik" threshold=".9" test="" play="A215" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Both are social activities!" speech="" keys="lik" threshold=".9" test="" play="A216" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text=" _user_, which of the highlighted sentences shows walking and running have similarities?" speech="" keys="lik" threshold=".9" test="" play="_user_,A217" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I am pretty sure it is the first sentence because it uses the word both. " speech="" keys="lik" threshold=".9" test="" play="B109" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I will choose the third one. Both are good exercises. " speech="" keys="lik" threshold=".9" test="" play="B110" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I think this is actually a difference between walking and running. " speech="" keys="lik" threshold=".9" test="" play="B111" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I guess this is a difference between walking and running. " speech="" keys="lik" threshold=".9" test="" play="B112" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="This sentence describes one of the differences between walking and running. Walking is better for beginners. " speech="" keys="lik" threshold=".9" test="" play="A218" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="This sentence describes one of the differences between walking and running. Running is more effective in a short amount of time. " speech="" keys="lik" threshold=".9" test="" play="A219" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which comparison is not mentioned in the text map?" speech="" media="" itemDif="0.1" play="_user_,A220">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Look at each answer and see if it matches with a piece of information in the chart. " speech="" keys="lik" threshold=".9" test="" play="A221" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I see that the chart mentions injuries. It also says something about calories burned. " speech="" keys="lik" threshold=".9" test="" play="B113" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Tthe chart compares the level of risk of injury. It also compares calories burned. " speech="" keys="lik" threshold=".9" test="" play="A222" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The price of running shoes is not one of the comparisons from the passage." speech="" keys="lik" threshold=".9" test="" play="A223" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="This passage doesn't compare the price of running shoes with that of walking shoes!" speech="" keys="lik" threshold=".9" test="" play="A224" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="__user_, which comparison is not mentioned in the passage?" speech="" keys="lik" threshold=".9" test="" play="A225,_user_,A226" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I don't believe that the shoe prices were compared." speech="" keys="lik" threshold=".9" test="" play="B114" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe it is the third one. The one about running burning more calories." speech="" keys="lik" threshold=".9" test="" play="B115" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="_user_. Let's look at the chart. Does it list anything about calories burned? We need to find the one not mentioned. " speech="" keys="lik" threshold=".9" test="" play="_user_,B116" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_. Let's look at the chart. Does it list anything about which one causes more injuries? We need to find the one not mentioned. " speech="" keys="lik" threshold=".9" test="" play="_user_,B117" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Please look at the chart. Does it list anything about calories burned? You need to find the one not mentioned. " speech="" keys="lik" threshold=".9" test="" play="A227" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Please look at the chart. Does it list anything about which one causes more injuries? You need to find the one not mentioned. " speech="" keys="lik" threshold=".9" test="" play="A228" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Oh, I missed the word NOT." speech="" keys="lik" threshold=".9" test="" play="B118" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which sentence is correct according to the text map?" speech="" media="" itemDif="0.1" play="_user_,A229">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The chart provides a brief summary of our passage. It shows similarities and differences between walking and running.  " speech="" keys="lik" threshold=".9" test="" play="A230" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It seems like you can see the things they have in common in the middle of the chart." speech="" keys="lik" threshold=".9" test="" play="B119" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Based on the chart, running can help reduce more weight than walking. So the second one is not correct." speech="" keys="lik" threshold=".9" test="" play="A231" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The chart doesn't compare diet with walking and running. So the third one is incorrect. The correct statement is the first one. You can see these benefits listed in the middle of the two circles." speech="" keys="lik" threshold=".9" test="" play="A232" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The first statement is correct!" speech="" keys="lik" threshold=".9" test="" play="A233" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which statement is correct according to the chart?" speech="" keys="lik" threshold=".9" test="" play="_user_,A234" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I believe it is the first one because I see those things listed in similarities. " speech="" keys="lik" threshold=".9" test="" play="B120" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I will say it is the second one, because they both help you lose weight. " speech="" keys="lik" threshold=".9" test="" play="B121" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="The chart doesn't compare diet with either walking or running." speech="" keys="lik" threshold=".9" test="" play="B122" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="Based on the chart, running reduces more weight." speech="" keys="lik" threshold=".9" test="" play="B123" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="_user_, Look closely . The chart doesn't compare diet with either walking or running." speech="" keys="lik" threshold=".9" test="" play="_user_,A235" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="_user_, Look closely at the chart , running generally helps you lose more weight than walking. " speech="" keys="lik" threshold=".9" test="" play="_user_,A236" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which answer best sums up this passage based on the text map?" speech="" media="" itemDif="0.1" play="_user_,A237">
+          <Answers />
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPDBadSummary">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, could you please explain why you think this summary is good?" speech="" media="media\Lesson23-TPDBadSummary.html" itemDif="0.1" play="_user_,A238">
+          <Answers>
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="A good summary should contain the main idea of the passage." speech="" keys="main|important|^(?!.*supporting|example|evidence|minor), idea|information" threshold=".7" test="" play="A239" />
+            <Answer name="Bad" agent="ComputerTutor" type="Bad" text="A good summary should contain more than just the supporting information." speech="" keys="supporting|example|evidence|minor|^(?!.* main|important), idea|information" threshold=".7" test="" play="A240" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Since this is a comparison text, a good summary should include an example of a similarity of difference between walking and running in addition to the main idea. " speech="" keys="lik" threshold=".9" test="" play="A241" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="This summary does not contain a main idea. It just lists information from the chart at random. " speech="" keys="lik" threshold=".9" test="" play="B124" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="So this one is a bad summary. The first one is a good summary, because it contains the main idea and an example." speech="" keys="lik" threshold=".9" test="" play="A242" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="A good summary of a comparison text needs to include the main idea and an example of the comparisons that were in the passage." speech="" keys="lik" threshold=".9" test="" play="A243" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why do you think this summary is good?" speech="" keys="lik" threshold=".9" test="" play="_user_,A244" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPDGoodSummary">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, could you please explain why you think this summary is good?" speech="" media="media\Lesson23-TPDGoodSummary.html" itemDif="0.1" play="_user_,A245">
+          <Answers>
+            <Answer name="Good" agent="ComputerTutor" type="Good" text="A good summary should contain the main idea of the passage." speech="" keys="main|important|^(?!.*supporting|example|evidence|minor), idea|information" threshold=".7" test="" play="A246" />
+            <Answer name="Bad" agent="ComputerTutor" type="Bad" text="A good summary should contain more than just the supporting information." speech="" keys="supporting|example|evidence|minor|^(?!.* main|important), idea|information" threshold=".7" test="" play="A247" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Since this is a comparison text, a good summary should include an example of a similarity of difference between walking and running in addition to the main idea." speech="" keys="lik" threshold=".9" test="" play="A248" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="This summary seems to have the main idea and a couple examples of the comparisons in the passage." speech="" keys="lik" threshold=".9" test="" play="B125" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="So this one is a good summary." speech="" keys="lik" threshold=".9" test="" play="A249" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="This summary contains the main idea and an example of a comparison between walking and running." speech="" keys="lik" threshold=".9" test="" play="A250" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why do you think this summary is good?" speech="" keys="lik" threshold=".9" test="" play="_user_,A251" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which phone is the cheapest?" speech="" media="" itemDif="0.1" play="_user_,A252">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Look at the line of the chart that says Price." speech="" keys="lik" threshold=".9" test="" play="A253" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Then, we just need to look at the three numbers, right?" speech="" keys="lik" threshold=".9" test="" play="B126" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Compare the three prices for the phones. " speech="" keys="lik" threshold=".9" test="" play="A254" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The cheapest one is the Comet 300 at $189.99. The most expensive one is the Pulsar 5200. The Fireball 850s is in the middle." speech="" keys="lik" threshold=".9" test="" play="A255" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The Comet 300 is the cheapest at full price!" speech="" keys="lik" threshold=".9" test="" play="A256" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone is the cheapest?" speech="" keys="lik" threshold=".9" test="" play="_user_,A257" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The Comet 300 is the cheapest phone. It is the only one with a price under 200 dollars." speech="" keys="lik" threshold=".9" test="" play="B127" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I'm not sure what the answer is." speech="" keys="lik" threshold=".9" test="" play="B128" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="Are you sure about this? Is the Fireball the cheapest phone?" speech="" keys="lik" threshold=".9" test="" play="B129" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="Are you sure about this? Is the Pulsar the cheapest phone?" speech="" keys="lik" threshold=".9" test="" play="B130" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Let's look closely and compare the three prices. Is the Fireball the cheapest phone?" speech="" keys="lik" threshold=".9" test="" play="A258" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Let's look closely and compare the three prices. Is the Pulsar the cheapest phone?" speech="" keys="lik" threshold=".9" test="" play="A259" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="._user_, ComputerStudent1 can't afford more than $100 per month. which phones can he afford?" speech="" media="" itemDif="0.1" play="_user_,A260">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="First we need to compare the information in the row that says Financing." speech="" keys="lik" threshold=".9" test="" play="A261" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks like the Comet 300 wants a full payment at the time of purchase. That's 189.99." speech="" keys="lik" threshold=".9" test="" play="B131" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="The Comet 300 wants a full payment of 189.99 at the time of purchase." speech="" keys="lik" threshold=".9" test="" play="A262" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="ComputerStudent1, if you buy the Fireball or the Pulsar, you can have a monthly payment lower than 100 dollars." speech="" keys="lik" threshold=".9" test="" play="A263" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Fireball and Pulsar!" speech="" keys="lik" threshold=".9" test="" play="A264" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, can ComputerStudent1 afford any of the phones at this time?" speech="" keys="lik" threshold=".9" test="" play="_user_,A265" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="With the monthly payments, I think I can afford the Fireball or the Pulsar." speech="" keys="lik" threshold=".9" test="" play="B132" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="The Comet is the cheapest phone I think." speech="" keys="lik" threshold=".9" test="" play="B133" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="_user_,  I think we need to find one that allows a monthly payment." speech="" keys="lik" threshold=".9" test="" play="_user_,B134" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="It seems like I might be able to afford one of the phones that lets you pay in installments." speech="" keys="lik" threshold=".9" test="" play="B135" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="It may be too expensive for ComputerStudent1 to try to purchase a phone that requires the full payment at once. Let's look closely at the financing row." speech="" keys="lik" threshold=".9" test="" play="A266" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Let's see if ComputerStudent1 will be able to afford one of the phones with a monthly payment. Let's look closely at the financing row." speech="" keys="lik" threshold=".9" test="" play="A267" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, ComputerStudent1 has many calls each day. Which phone allows him to talk the longest?" speech="" media="" itemDif="0.1" play="_user_,A268">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="If ComputerStudent1 needs to make a lot of calls, we need to find out how much talk time is possible with each phone." speech="" keys="lik" threshold=".9" test="" play="A269" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I see that there is information about talk time in the Battery Life row." speech="" keys="lik" threshold=".9" test="" play="B136" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Actually, ComputerStudent1, the battery life for the comet and Pulsar will last 10 days on standby. It only has 7 or 10 hours of talk time." speech="" keys="lik" threshold=".9" test="" play="A270" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The Fireball gives you up to 13 hours of talk time. That's a lot of conversation!" speech="" keys="lik" threshold=".9" test="" play="A271" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Fireball!" speech="" keys="lik" threshold=".9" test="" play="A272" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone allows ComputerStudent1 to talk the longest?" speech="" keys="lik" threshold=".9" test="" play="_user_,A273" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Oh man! Definitely the Fireball! Its talking time is up to 13 hours!" speech="" keys="lik" threshold=".9" test="" play="B137" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="The Comet has a pretty long talk time. Up to 10 days." speech="" keys="lik" threshold=".9" test="" play="B138" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="_user_, I think the information that we need is in the Battery Life row." speech="" keys="lik" threshold=".9" test="" play="_user_,B139" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I'm not as interested in the amount of standby time. We need to figure out which one has the most talk time!" speech="" keys="lik" threshold=".9" test="" play="B140" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Compare what it says about each phone in the Battery Life row." speech="" keys="lik" threshold=".9" test="" play="A274" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="Let's compare all the phones. I hope we can find one with enough hours of talk time." speech="" keys="lik" threshold=".9" test="" play="A275" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, when ComputerStudent1 is working, he has to set his phone to vibrate. Which phone has this feature?" speech="" media="" itemDif="0.1" play="_user_,A276">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="There is a whole row about vibrate mode. We just need to compare what it says about each phone." speech="" keys="lik" threshold=".9" test="" play="A277" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks like the Comet doesn't have vibrate mode." speech="" keys="lik" threshold=".9" test="" play="B141" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="The comet is the only phone that does not have the ability to be set to vibrate mode." speech="" keys="lik" threshold=".9" test="" play="A278" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The chart says that both the Fireball and the Pulsar can be set to vibrate, as well as silent and ring mode." speech="" keys="lik" threshold=".9" test="" play="A279" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The Fireball 850s and the Pulsar 5200!" speech="" keys="lik" threshold=".9" test="" play="A280" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone can be set to vibrate?" speech="" keys="lik" threshold=".9" test="" play="_user_,A281" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="From the chart, I think the Fireball and the Pulsar can be set to vibrate." speech="" keys="lik" threshold=".9" test="" play="B142" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="_user_, I think the Comet and the Fireball can be set to vibrate." speech="" keys="lik" threshold=".9" test="" play="_user_,B143" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="This is tough. Let's look more closely at the Vibrate Mode row." speech="" keys="lik" threshold=".9" test="" play="B144" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_, I don't want to get in trouble at work , let's look more closely at the Vibrate Mode row." speech="" keys="lik" threshold=".9" test="" play="_user_,B145" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="If you compare the three phones, I believe only one of them says that it does not have vibrate mode." speech="" keys="lik" threshold=".9" test="" play="A282" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="If you compare the three phones, I believe you will see two of them can be set to vibrate, silent, or ring mode." speech="" keys="lik" threshold=".9" test="" play="A283" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, ComputerStudent1 likes to take pictures and videos with his phone. Which phone has these features?" speech="" media="" itemDif="0.1" play="_user_,A284">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="We need to compare the capabilities of each phone in the row marked Camera." speech="" keys="lik" threshold=".9" test="" play="A285" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks to me like all of the phones have a built in digital camera." speech="" keys="lik" threshold=".9" test="" play="B146" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="It is true that every phone has a camera, but one of the phones specifically says it does not have video capability." speech="" keys="lik" threshold=".9" test="" play="A286" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Even though the Pulsar has a high quality camera, it does not have video capability. ComputerStudent1 needs either the Comet or the Fireball to be able to take videos as well as pictures. " speech="" keys="lik" threshold=".9" test="" play="A287" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The comet and the fireball!" speech="" keys="lik" threshold=".9" test="" play="A288" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone would allow ComputerStudent1 to take pictures and videos?" speech="" keys="lik" threshold=".9" test="" play="_user_,A289" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I guess both the Comet and the Fireball have a camera that can take videos. It looks like the Pulsar can't take videos." speech="" keys="lik" threshold=".9" test="" play="B147" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="All of the phones have a camera. Maybe, there isn't a correct answer for this one." speech="" keys="lik" threshold=".9" test="" play="B148" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I'm not sure about this one. Do both the Comet and the Pulsar have video capability?" speech="" keys="lik" threshold=".9" test="" play="B149" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I'm not sure about this one. Do both the Fireball and the Pulsar have video capability?" speech="" keys="lik" threshold=".9" test="" play="B150" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Read the chart carefully. Do both the Comet and the Pulsar have the ability to take videos?" speech="" keys="lik" threshold=".9" test="" play="A290" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Read the chart carefully. Do both the Fireball and the Pulsar have the ability to take videos?" speech="" keys="lik" threshold=".9" test="" play="A291" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Well, that was complicated." speech="" keys="lik" threshold=".9" test="" play="B151" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, I only want to answer calls from people I know.  which phone displays the name and number of callers?" speech="" media="" itemDif="0.1" play="_user_,B152">
+          <Answers>
+            <Answer name="TAExplain" agent="ComputerTutor" type="TAExplain" text="Typically, information about a callers' name and number is known as Caller I D." speech="" keys="lik" threshold=".9" test="" play="A292" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="ComputerTutor, it seems to be that all the phones have this feature. Awesome!" speech="" keys="lik" threshold=".9" test="" play="B153" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="All the phones display the name and number of callers." speech="" keys="lik" threshold=".9" test="" play="A293" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="All of the phones have the feature that ComputerStudent1 wants, but it is important to note in the comparison that Pulsar has additional features." speech="" keys="lik" threshold=".9" test="" play="A294" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="All the phones have caller I D for ComputerStudent1!" speech="" keys="lik" threshold=".9" test="" play="A295" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone displays the name and number of callers?" speech="" keys="lik" threshold=".9" test="" play="_user_,A296" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think all the phones display the phone numbers and names of callers." speech="" keys="lik" threshold=".9" test="" play="B154" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I would guess just the Comet and the Fireball." speech="" keys="lik" threshold=".9" test="" play="B155" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="No hurry. Let's compare all of the descriptions. The Pulsar description is different." speech="" keys="lik" threshold=".9" test="" play="B156" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="I hate answering the phone when I don't know who it is. Let's compare the three phones again." speech="" keys="lik" threshold=".9" test="" play="B157" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="This is important to ComputerStudent1, so let's look at the description for each one again." speech="" keys="lik" threshold=".9" test="" play="A297" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="I don't like answering calls from unknown numbers either! Let's see which phone can provide the feature ComputerStudent1 wants." speech="" keys="lik" threshold=".9" test="" play="A298" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_ which phone allows me to download the most games?" speech="" media="" itemDif="0.1" play="_user_,B158">
+          <Answers>
+            <Answer name="TAExplain" agent="ComputerTutor" type="TAExplain" text="Compare the information in the row labeled downloadable games." speech="" keys="lik" threshold=".9" test="" play="A299" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Oh, I see. It shows the number of games that can be downloaded on each phone." speech="" keys="lik" threshold=".9" test="" play="B159" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="You will see that the Comet and the Pulsar each allow the user 5 games." speech="" keys="lik" threshold=".9" test="" play="A300" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The Fireball is different because it allows the user to download 10 games!" speech="" keys="lik" threshold=".9" test="" play="A301" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The Fireball!" speech="" keys="lik" threshold=".9" test="" play="A302" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone allows ComputerStudent1 to download the most games?" speech="" keys="lik" threshold=".9" test="" play="_user_,A303" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="It looks to me like the Fireball can download 5 more games than the Comet and the Pulsar." speech="" keys="lik" threshold=".9" test="" play="B160" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I'm not sure about this one." speech="" keys="lik" threshold=".9" test="" play="B161" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="Are you sure about this?" speech="" keys="lik" threshold=".9" test="" play="B162" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_,  Let's look at the chart." speech="" keys="lik" threshold=".9" test="" play="_user_,B163" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Look for the phone with the highest number of games that can be downloaded." speech="" keys="lik" threshold=".9" test="" play="A304" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="_user_, Take your time and compare the phones in the chart, ." speech="" keys="lik" threshold=".9" test="" play="_user_,A305" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, I heard that some phones let you record your own ring tone.which phone will let me do that?" speech="" media="" itemDif="0.1" play="_user_,B164">
+          <Answers>
+            <Answer name="TAExplain" agent="ComputerTutor" type="TAExplain" text="In the row marked Ring tones, it looks like all of the phones will give you 10 free ringtones." speech="" keys="lik" threshold=".9" test="" play="A306" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I think customize means that you can make your own ring tone." speech="" keys="lik" threshold=".9" test="" play="B165" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Both Fireball and Pulsar say that you can store up to 100 ring tones." speech="" keys="lik" threshold=".9" test="" play="A307" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Only Pulsar gives you the option to customize with sounds that you record." speech="" keys="lik" threshold=".9" test="" play="A308" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="The Pulsar has this feature!" speech="" keys="lik" threshold=".9" test="" play="A309" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone allows ComputerStudent1 to use his recordings as a ring tone?" speech="" keys="lik" threshold=".9" test="" play="_user_,A310" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Pulsar. It has the option to customize with sounds you record." speech="" keys="lik" threshold=".9" test="" play="B166" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Huh, maybe the Fireball?." speech="" keys="lik" threshold=".9" test="" play="B167" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintB" text="_user_, The Fireball lets you store a ton of ringtones, but I don't think you can customize any." speech="" keys="lik" threshold=".9" test="" play="_user_,B168" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_, we only know that the Comet lets you have 10 free ringtones." speech="" keys="lik" threshold=".9" test="" play="_user_,B169" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintB" text="_user_, The Fireball does not give you the option to customize. Which phone does?" speech="" keys="lik" threshold=".9" test="" play="_user_,A311" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="_user_, The Comet does not give you the option to customize. Which phone does?" speech="" keys="lik" threshold=".9" test="" play="_user_,A312" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, I don't have an internet connection at home.  Which phone provides internet access?" speech="" media="" itemDif="0.1" play="_user_,B170">
+          <Answers>
+            <Answer name="TAExplain" agent="ComputerTutor" type="TAExplain" text="If a phone is internet capable, then you can pay to have internet access through your phone." speech="" keys="lik" threshold=".9" test="" play="A313" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks to me like all of the phones are internet and email capable." speech="" keys="lik" threshold=".9" test="" play="B171" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="All of the phones are capable of offering internet and email access." speech="" keys="lik" threshold=".9" test="" play="A314" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="ComputerStudent1 could purchase internet access through any of the phones!" speech="" keys="lik" threshold=".9" test="" play="A315" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="All of the phones!" speech="" keys="lik" threshold=".9" test="" play="A316" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone could provide internet access?" speech="" keys="lik" threshold=".9" test="" play="_user_,A317" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Looking at the chart, I think all of the phones could do it." speech="" keys="lik" threshold=".9" test="" play="B172" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I am not sure. Maybe just the Comet and the Fireball phones." speech="" keys="lik" threshold=".9" test="" play="B173" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="_user_, Let's look at the row marked Internet, ." speech="" keys="lik" threshold=".9" test="" play="_user_,B174" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_,  let's look at the row marked Internet." speech="" keys="lik" threshold=".9" test="" play="_user_,B175" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="_user_,  compare the information in the row marked Internet to help ComputerStudent1." speech="" keys="lik" threshold=".9" test="" play="_user_,A318" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="_user_,  compare the information in the row marked Internet to help ComputerStudent1." speech="" keys="lik" threshold=".9" test="" play="_user_,A319" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEA">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, which phone is the best fit for me?" speech="" media="" itemDif="0.1" play="_user_,B176">
+          <Answers>
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="When I look at the chart, the Fireball has the most X marks. I think that means it has the most matches to my requirements." speech="" keys="lik" threshold=".9" test="" play="B177" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="TAAnswer" text="ComputerStudent1, That's a good idea. Let us know what you decide. I hope using the chart to make your comparison helped!" speech="" keys="lik" threshold=".9" test="" play="A320" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which phone is the best fit?" speech="" keys="lik" threshold=".9" test="" play="_user_,A321" />
+            <Answer name="JordanAnswer" agent="ComputerStudent1" type="SAAnswer" text="Awesome! The Fireball seems to have most of the features that I wanted. I am excited, but I need to discuss it with my wife and see what she thinks of this model." speech="" keys="lik" threshold=".9" test="" play="B178" />
+            <Answer name="JordanHint" agent="ComputerStudent1" type="SAHint" text="_user_,  please help me make a decision." speech="" keys="lik" threshold=".9" test="" play="_user_,B179" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, click the sentence that shows how Kobe Bryant and Michael ComputerStudent1 are similar." speech="" media="" itemDif="0.1" play="_user_,A322">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Signal words can help us to see the comparison. In the first sentence, use of the word Two signals they have that information in common. In sentence 2, the word Different indicates a contrast." speech="" keys="lik" threshold=".9" test="" play="A323" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The first sentence says Kobe and ComputerStudent1 are two of the greatest shooting guards. I think this is a similarity between them. " speech="" keys="lik" threshold=".9" test="" play="B180" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Actually, the second sentence shows us a difference between them and the next two sentences describe the different eras in which they played." speech="" keys="lik" threshold=".9" test="" play="A324" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The first sentence shows one of their similarities. They are two of the best shooting guards in basketball history." speech="" keys="lik" threshold=".9" test="" play="A325" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Both Kobe and ComputerStudent1 are two of the greatest shooting guards in NBA history." speech="" keys="lik" threshold=".9" test="" play="A326" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which sentence shows a similarity between Kobe and ComputerStudent1?" speech="" keys="lik" threshold=".9" test="" play="_user_,A327" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I think the answer is the first sentence, because it says they are both great shooting guards." speech="" keys="lik" threshold=".9" test="" play="B181" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="Maybe the second sentence shows how they are similar, because it says they played 8 games against each other." speech="" keys="lik" threshold=".9" test="" play="B182" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I think the word different in the second sentence is a signal word. This sentence shows a difference, not a similarity." speech="" keys="lik" threshold=".9" test="" play="B183" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="The third sentence describes the time line for ComputerStudent1's career. The previous sentence has Kobe's. It just seems to show us the difference between them. " speech="" keys="lik" threshold=".9" test="" play="B184" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Look at sentence 2 and see the signal word different. We know that this means the sentence is giving us a difference between them and not a similarity." speech="" keys="lik" threshold=".9" test="" play="A328" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="The third sentence describes the timeline for ComputerStudent1's career. The previous sentence has Kobe's. It is giving us the contrast of the differences between them. " speech="" keys="lik" threshold=".9" test="" play="A329" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Oh. Now I see the signal words and I get it. " speech="" keys="lik" threshold=".9" test="" play="B185" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which sentence shows how Kobe and ComputerStudent1 are different?" speech="" media="" itemDif="0.1" play="_user_,A330">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The first sentence mentions both of them and contains the signal word different. As in, they were part of different eras." speech="" keys="lik" threshold=".9" test="" play="A331" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Oh, I see it. The next two sentences talk about Kobe and ComputerStudent1 separately in detail. " speech="" keys="lik" threshold=".9" test="" play="B186" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="The second sentence gives us more detail about Kobe's career. " speech="" keys="lik" threshold=".9" test="" play="A332" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="Yes. Sentences 2 and 3 support the first sentence with details about their different eras." speech="" keys="lik" threshold=".9" test="" play="A333" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Kobe and ComputerStudent1 were part of different eras." speech="" keys="lik" threshold=".9" test="" play="A334" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which highlighted sentence in the first paragraph shows us a difference between Kobe and ComputerStudent1?" speech="" keys="lik" threshold=".9" test="" play="_user_,A335" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I believe the first answer is correct, because it points out Kobe and ComputerStudent1 were part of different eras." speech="" keys="lik" threshold=".9" test="" play="B187" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think the second sentence is correct. " speech="" keys="lik" threshold=".9" test="" play="B188" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="_user_,  I think this sentence only talks about Kobe. " speech="" keys="lik" threshold=".9" test="" play="_user_,B189" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="This sentence only talks about ComputerStudent1. I don't think it has a comparison here. " speech="" keys="lik" threshold=".9" test="" play="B190" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="There is no contrast in this sentence, because it only mentions the span of Kobe's career." speech="" keys="lik" threshold=".9" test="" play="A336" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="This answer only talks about ComputerStudent1's career. It does not compare ComputerStudent1 and Kobe." speech="" keys="lik" threshold=".9" test="" play="A337" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="You are right. I would have noticed this difference if I had read more carefully! " speech="" keys="lik" threshold=".9" test="" play="B191" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, why did ComputerStudent1 retire in 1993?" speech="" media="" itemDif="0.1" play="_user_,A338">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="The passage mentions ComputerStudent1's foot was broken, but that happened long before his first retirement." speech="" keys="lik" threshold=".9" test="" play="A339" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="The passage does not really say anything that would make us believe that ComputerStudent1 was bored with basketball, so that is probably not the answer." speech="" keys="lik" threshold=".9" test="" play="B192" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Actually, the third answer is incorrect, because the passage does not imply that ComputerStudent1 was bored with basketball. It only states that he decided to sign a baseball contract." speech="" keys="lik" threshold=".9" test="" play="A340" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text=" The passage does record that he retired after the murder of his father. So the first answer is correct." speech="" keys="lik" threshold=".9" test="" play="A341" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="ComputerStudent1's father died. " speech="" keys="lik" threshold=".9" test="" play="A342" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why did ComputerStudent1 retire in 1993?" speech="" keys="lik" threshold=".9" test="" play="_user_,A343" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="The first answer is correct. The passage says that ComputerStudent1 retired after his father was murdered." speech="" keys="lik" threshold=".9" test="" play="B193" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think the third answer might be the right one, because it says he signed another contract." speech="" keys="lik" threshold=".9" test="" play="B194" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="_user_, I think he broke his foot early in his career and not close to retirement. I think there might be a different reason he retired." speech="" keys="lik" threshold=".9" test="" play="_user_,B195" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="ComputerStudent1 did sign another contract, but it I don't think the passage said he was bored with basketball." speech="" keys="lik" threshold=".9" test="" play="B196" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="If you read carefully, you will see that he broke his foot long before his retirement. You need to find an event closer to his retirement." speech="" keys="lik" threshold=".9" test="" play="A344" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="It says that ComputerStudent1 signed a contract with a minor league baseball team, but the passage doesn't specifically say that he was bored." speech="" keys="lik" threshold=".9" test="" play="A345" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="wow. I missed this information! Why does that always happen! " speech="" keys="lik" threshold=".9" test="" play="B197" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which comparison of Kobe and ComputerStudent1's scoring is true?" speech="" media="" itemDif="0.1" play="_user_,A346">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="First, we need to read through the article to see what it says about Kobe's average points per game versus ComputerStudent1's average points per game." speech="" keys="lik" threshold=".9" test="" play="A347" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Kobe's scoring record is described in the second paragraph. ComputerStudent1's record is in the third paragraph." speech="" keys="lik" threshold=".9" test="" play="B198" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="ComputerStudent1, I think you might have confused the two records in your comparison." speech="" keys="lik" threshold=".9" test="" play="A348" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="After comparing the two, you will find ComputerStudent1's average is higher than Kobe's. 28.2 versus 25.5." speech="" keys="lik" threshold=".9" test="" play="A349" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="On average, ComputerStudent1 scored more points per game than Kobe. " speech="" keys="lik" threshold=".9" test="" play="A350" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, who averages more points per game?" speech="" keys="lik" threshold=".9" test="" play="_user_,A351" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I'm pretty sure the second answer is correct, because ComputerStudent1 averaged 28.2 points per game, while Kobe averaged 25.5." speech="" keys="lik" threshold=".9" test="" play="B199" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="It seems to me that the third answer is correct, because it looks like Kobe scored more points than ComputerStudent1 per game." speech="" keys="lik" threshold=".9" test="" play="B200" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_, let's look and see if we can find the exact points per game that they each averaged. Then, we can compare them!" speech="" keys="lik" threshold=".9" test="" play="_user_,B201" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="_user_, let's look and see if we can find the exact points per game that they each averaged. Then, we can compare them!" speech="" keys="lik" threshold=".9" test="" play="_user_,B202" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="If you read carefully, you will find their exact points per game on average." speech="" keys="lik" threshold=".9" test="" play="A352" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="If you read carefully, you will find their exact points per game on average." speech="" keys="lik" threshold=".9" test="" play="A353" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Oh, now I see where I made a mistake. " speech="" keys="lik" threshold=".9" test="" play="B203" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which player was on the cover of Sports Illustrated in his first year pro?" speech="" media="" itemDif="0.1" play="_user_,A354">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="You will find the answer if you read carefully and compare the paragraphs to find the key words sports and illustrated." speech="" keys="lik" threshold=".9" test="" play="A355" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I see it! In the third paragraph about ComputerStudent1, it talks about the cover of Sports Illustrated. " speech="" keys="lik" threshold=".9" test="" play="B204" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="Only the third paragraph about ComputerStudent1's career mentions a Sports Illustrated cover. " speech="" keys="lik" threshold=".9" test="" play="A356" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="ComputerStudent1's picture was on the cover of the magazine in his first professional year." speech="" keys="lik" threshold=".9" test="" play="A357" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="ComputerStudent1's was on the cover of Sports Illustrated in his first professional year. " speech="" keys="lik" threshold=".9" test="" play="A358" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, whose picture was on the cover of Sports Illustrated magazine in his first professional year?" speech="" keys="lik" threshold=".9" test="" play="_user_,A359" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="If you look at the third paragraph about ComputerStudent1, I think it says he was on the cover his first year." speech="" keys="lik" threshold=".9" test="" play="B205" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I'm not sure. I think both of their pictures are on the cover of the magazine." speech="" keys="lik" threshold=".9" test="" play="B206" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="_user_, let's read the second paragraph about Kobe to see whether we can find the magazine name Sports Illustrated. If not, we can move to the third paragraph about ComputerStudent1." speech="" keys="lik" threshold=".9" test="" play="_user_,B207" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="_user_, let's read the second paragraph about Kobe to see whether we can find the magazine name Sports Illustrated. If not, we can move to the third paragraph about ComputerStudent1." speech="" keys="lik" threshold=".9" test="" play="_user_,B208" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="_user_ and ComputerStudent1 , read both the second and third paragraph to see where you can find the magazine name Sports Illustrated. Then you will find your answer." speech="" keys="lik" threshold=".9" test="" play="_user_,A360" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="Read the second paragraph about Kobe to see whether you can find the magazine name Sports Illustrated. If not, move to the third paragraph about ComputerStudent1." speech="" keys="lik" threshold=".9" test="" play="A361" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="The information is there, but the first time I read it, I think I missed it." speech="The information is there, but the first time I red it, I think I missed it." keys="lik" threshold=".9" test="" play="B209" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text=" _user_, Kobe was drafted to the NBA straight from high school. how is this different from ComputerStudent1's career?" speech="" media="" itemDif="0.1" play="_user_,A362">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="To answer this question, we need to read the paragraph about ComputerStudent1's career closely.  We can see that when ComputerStudent1 entered the NBA draft in 1984, he left the University of North Carolina to do it." speech="" keys="lik" threshold=".9" test="" play="A363" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="Also, I'm pretty sure you can't be a doctor of dunking. That's what PHD means, right?." speech="" keys="lik" threshold=".9" test="" play="B210" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="By comparing the paragraphs about Kobe and ComputerStudent1, we can see that Kobe did not go to college, but ComputerStudent1 did." speech="" keys="lik" threshold=".9" test="" play="A364" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The third answer is funny, but because we know that ComputerStudent1 left the University of North Carolina, we know he attended college." speech="" keys="lik" threshold=".9" test="" play="A365" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="ComputerStudent1 attended college at the University of North Carolina. " speech="" keys="lik" threshold=".9" test="" play="A366" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, Kobe went to the NBA from high school. How does this differ from ComputerStudent1's career?" speech="" keys="lik" threshold=".9" test="" play="_user_,A367" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="Well, it says that ComputerStudent1 left the University of North Carolina, so I guess he attended college." speech="" keys="lik" threshold=".9" test="" play="B211" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="It might be the second answer. I don't think Kobe or ComputerStudent1 went to college." speech="" keys="lik" threshold=".9" test="" play="B212" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintC" text="_user_, I thought it said something about ComputerStudent1 attending college in the first sentence of the third paragraph." speech="" keys="lik" threshold=".9" test="" play="_user_,B213" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="So, we know that Kobe was drafted straight from high school. Was ComputerStudent1 also drafted straight from high school?" speech="" keys="lik" threshold=".9" test="" play="B214" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintC" text="Look at the paragraph about ComputerStudent1 and see if it says anything about him attending college." speech="" keys="lik" threshold=".9" test="" play="A368" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="Read the first sentence of the paragraph about ComputerStudent1's career. I think it had some information about when he was drafted." speech="" keys="lik" threshold=".9" test="" play="A369" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="This one is really, really, hard." speech="" keys="lik" threshold=".9" test="" play="B215" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, why did ComputerStudent1 return to the NBA in 2001?" speech="" media="" itemDif="0.1" play="_user_,A370">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="ComputerStudent1 returned to the NBA for a special reason." speech="" keys="lik" threshold=".9" test="" play="A371" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="It looks like he did not need to play for the money, but he wanted to play in order to donate his salary." speech="" keys="lik" threshold=".9" test="" play="B216" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="In the paragraph about ComputerStudent1, it says he wanted to play for charity. This passage does not say anything about ComputerStudent1 and gambling." speech="" keys="lik" threshold=".9" test="" play="A372" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="In the passage, it says that he intended to donate his salary to the September 11 relief efforts. We have to base our answer on the information presented in the passage." speech="" keys="lik" threshold=".9" test="" play="A373" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="He decided to return, so he could donate his salary to charity!" speech="" keys="lik" threshold=".9" test="" play="A374" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, why did ComputerStudent1 return to the NBA in 2001?" speech="" keys="lik" threshold=".9" test="" play="_user_,A375" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I believe it said that he wanted to play, so he could donate his salary." speech="" keys="lik" threshold=".9" test="" play="B217" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think it is the second answer. I heard that ComputerStudent1 gambled and lost a lot of money." speech="" keys="lik" threshold=".9" test="" play="B218" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="The passage does not say that he really wanted to play for the Chicago Bulls in particular." speech="" keys="lik" threshold=".9" test="" play="B219" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="The passage does not say anything about gambling, or debts, so we should probably not choose this one." speech="" keys="lik" threshold=".9" test="" play="B220" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="_user_ and ComputerStudent1 , let's look closely at what is says about Michael ComputerStudent1 signing with the Washington Wizards." speech="" keys="lik" threshold=".9" test="" play="_user_,A376" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text=" the passage does not say anything about gambling or debts. We need to examine the paragraph." speech="" keys="lik" threshold=".9" test="" play="A377" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="It makes sense that we should work with the information given to us." speech="" keys="lik" threshold=".9" test="" play="B221" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM8">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, which comparison of Kobe and ComputerStudent1 is true?" speech="" media="" itemDif="0.1" play="_user_,A378">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="Michael ComputerStudent1 and Kobe Bryant are both incredibly talented basketball players ." speech="" keys="lik" threshold=".9" test="" play="A379" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="ComputerStudent1 was voted an All-Star Starter in his rookie season and Rookie of the Year. We are not told whether Kobe had the same honors. Similarly, the passage says that Kobe won the Slam Dunk Contest and many NBA championships, but it doesn't mention whether ComputerStudent1 did these things as well." speech="" keys="lik" threshold=".9" test="" play="B222" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="We need to choose our answer based on the information about the two players that we can compare from the reading." speech="" keys="lik" threshold=".9" test="" play="A380" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="According to our analysis, the only correct statement that we could make from reading this passage is that they are both famous NBA shooting guards." speech="" keys="lik" threshold=".9" test="" play="A381" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Both players are famous shooting guards from the NBA!" speech="" keys="lik" threshold=".9" test="" play="A382" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, which comparison of Kobe and ComputerStudent1 is true?" speech="" keys="lik" threshold=".9" test="" play="_user_,A383" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="It seems like they are both famous shooting guards. The second answer might be true, but it doesn't say it in the passage." speech="" keys="lik" threshold=".9" test="" play="B223" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think Kobe was as good a player as ComputerStudent1 was when he started. I would think they were both All Star starters?" speech="" keys="lik" threshold=".9" test="" play="B224" />
+            <Answer name="JordanHintB" agent="ComputerStudent1" type="SAHintB" text="I don't think it said that Kobe was an All-Star starter, so we shouldn't guess that one." speech="" keys="lik" threshold=".9" test="" play="B225" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintC" text="I don't remember anything about ComputerStudent1 winning the Slam Dunk Contest or any NBA championships from the passage." speech="" keys="lik" threshold=".9" test="" play="B226" />
+            <Answer name="TAHintB" agent="ComputerTutor" type="TAHintB" text="We need support from the reading for our comparisons. The passage did not say that Kobe was an All Star starter." speech="" keys="lik" threshold=".9" test="" play="A384" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintC" text="If we do not know for certain that ComputerStudent1 won a slam dunk content, or a NBA championship, then we should not choose that answer. We need evidence from the passage to support our comparisons. What can we say for certain?" speech="" keys="lik" threshold=".9" test="" play="A385" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Ok, I should choose my answer based on what I see in the passage." speech="" keys="lik" threshold=".9" test="" play="B227" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPM9">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_, what should be included in a summary of a comparison text?" speech="" media="" itemDif="0.1" play="_user_,A386">
+          <Answers>
+            <Answer name="ExplanationCristina" agent="ComputerTutor" type="TAExplain" text="When you are comparing and contrasting information in a text, it is important to look at both the similarities and the differences between two or more things." speech="" keys="lik" threshold=".9" test="" play="A387" />
+            <Answer name="JordanExplain" agent="ComputerStudent1" type="SAExplain" text="I would have thought that only the differences matter." speech="" keys="lik" threshold=".9" test="" play="B228" />
+            <Answer name="CristinaExplain" agent="ComputerTutor" type="SAIncorTAExplain" text="In order to get all the facts, both similarities and differences can be important to find." speech="" keys="lik" threshold=".9" test="" play="A388" />
+            <Answer name="CorrectCristina" agent="ComputerTutor" type="TACorrectAnswer" text="The best summaries include all the most important information. It can depend on what you want to know from the comparison, but usually you will need both the similarities and the differences." speech="" keys="lik" threshold=".9" test="" play="A389" />
+            <Answer name="RepeatCorrect" agent="ComputerTutor" type="RepeatCor" text="Both similarities and differences." speech="" keys="lik" threshold=".9" test="" play="A390" />
+            <Answer name="RepeatQuestion" agent="ComputerTutor" type="RepeatQ" text="_user_, what should be included in a summary of a comparison text?" speech="" keys="lik" threshold=".9" test="" play="_user_,A391" />
+            <Answer name="JordanCorAnswer" agent="ComputerStudent1" type="JordanCorAnswer" text="I'm not sure. It seems like we would need both to make a good summary." speech="" keys="lik" threshold=".9" test="" play="B229" />
+            <Answer name="JordanIncorAnswer" agent="ComputerStudent1" type="JordanIncorAnswer" text="I think this passage mostly stresses the differences, so I think you just need the differences." speech="" keys="lik" threshold=".9" test="" play="B230" />
+            <Answer name="JordanHintA" agent="ComputerStudent1" type="SAHintA" text="If the passage emphasizes both, I think both similarities and differences should be equally talked about. I don't think we should limit a summary to similarities." speech="" keys="lik" threshold=".9" test="" play="B231" />
+            <Answer name="JordanHintC" agent="ComputerStudent1" type="SAHintB" text="If the passage emphasizes both, I think both similarities and differences should be equally talked about. I don't think we should limit a summary to differences," speech="" keys="lik" threshold=".9" test="" play="B232" />
+            <Answer name="TAHintA" agent="ComputerTutor" type="TAHintA" text="In a summary, you want to include all of the important information." speech="" keys="lik" threshold=".9" test="" play="A392" />
+            <Answer name="TAHintC" agent="ComputerTutor" type="TAHintB" text="_user_ and ComputerStudent1 , you do not want to limit a summary to just the differences in the comparison." speech="" keys="lik" threshold=".9" test="" play="_user_,A393" />
+            <Answer name="JordanAdmitWrong" agent="ComputerStudent1" type="SAAdmitWrong" text="Oh, I guess I can see why that is important in a summary." speech="" keys="lik" threshold=".9" test="" play="B233" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MediaLoadedMedium" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="MediaLoadedMedium" status="MediaLoadedMedium" response="" event="MediaLoadedMedium" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItemAudioMedium" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="HasAudioMedium" status="GetItemAudioMedium" response="" event="Continue" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="ShowItemAudioMedium" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="ClickToContinue" id="3" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson23Medium.mp3" id="4" />
+      <Action agent="System" act="WaitForEvent" data="600" id="5" />
+    </Rule>
+    <Rule name="NoAudioMedium" status="GetItemAudioMedium" response="" event="Stop" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NextPage" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="AudioMediumCon" status="ShowItemAudioMedium" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="AudioMediumAny" status="ShowItemAudioMedium" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AudioPumpMedium" id="1" />
+      <Action agent="System" act="WaitForEvent" data="120" id="2" />
+    </Rule>
+    <Rule name="AudioMediumPumpCon" status="AudioPumpMedium" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="AudioMediumPumpAny" status="AudioPumpMedium" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="PlayAudioMedium" id="2" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="HasAudioDifficulty" status="GetItemAudioDifficulty" response="" event="Continue" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="ShowItemAudioDifficulty" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="ClickToContinue" id="3" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson23Hard.mp3" id="4" />
+      <Action agent="System" act="WaitForEvent" data="10" id="5" />
+    </Rule>
+    <Rule name="NoAudioDifficulty" status="GetItemAudioDifficulty" response="" event="Stop" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NextPage" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="AudioDifficultyCon" status="ShowItemAudioDifficulty" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="AudioDifficultyAny" status="ShowItemAudioDifficulty" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AudioPumpDifficulty" id="1" />
+      <Action agent="System" act="Unlock" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="120" id="3" />
+    </Rule>
+    <Rule name="AudioPumpCon" status="AudioPumpDifficulty" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="AudioPumpAny" status="AudioPumpDifficulty" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="PlayAudioDifficult" id="2" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="4" />
+      <Action agent="System" act="Wait" data="5" id="5" />
+    </Rule>
+    <Rule name="HasTP" status="GetTutoringPack" response="" event="" hasItem="true" priority="1" frequency="" description="">
+      <Action agent="System" act="GetMainQuestion" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetItem" id="2" />
+      <Action agent="System" act="GetMediaItem" data="" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoTP" status="GetTutoringPack" response="" event="" hasItem="false" priority="2" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="MediaLoadedDifficult" status="NextPage" response="" event="ReadingDifficult" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="ListenToDifficult" id="1" />
+      <Action agent="System" act="SetStatus" data="GetItemAudioDifficulty" id="2" />
+      <Action agent="System" act="GetMediaItem" data="" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="TPDifficult" status="NextPage" response="" event="MediaLoadedDifficult" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="TransitionD" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="TPEasy" status="NextPage" response="" event="MediaLoadedEasy" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="TransitionE" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="TPMedium" status="NextPage" response="" event="MediaLoadedMedium" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="TransitionM" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPM" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="TPStopEasy" status="NextPage" response="" event="StopEasy" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="ClosingEasy" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="TPStopDifficulty" status="NextPage" response="" event="StopDifficulty" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="HasItemDifficulty" status="GetItem" response="" event="MediaLoadedDifficult" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="AskMainQuestion" data="" id="3" />
+      <Action agent="System" act="WaitForEvent" data="300" id="4" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="AskMainQuestion" data="" id="3" />
+      <Action agent="System" act="WaitForEvent" data="300" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NextPage" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="CorrectSummary" status="AskQ" response="" event="CorrectSummary" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerStudent1" act="CannedExpression" data="WhyThisSummary" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskUserWhy" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPDGoodSummary" id="3" />
+      <Action agent="System" act="SetStatus" data="AskWhy" id="4" />
+      <Action agent="System" act="GetMainQuestion" data="" id="5" />
+      <Action agent="System" act="AskMainQuestion" data="" id="6" />
+      <Action agent="System" act="WaitForInput" data="300" id="7" />
+    </Rule>
+    <Rule name="IncorrectSummary" status="AskQ" response="" event="IncorrectSummary" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerStudent1" act="CannedExpression" data="WhyThisSummary" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskUserWhy" id="2" />
+      <Action agent="System" act="GetTutoringPack" data="TPDBadSummary" id="3" />
+      <Action agent="System" act="SetStatus" data="AskWhy" id="4" />
+      <Action agent="System" act="GetMainQuestion" data="" id="5" />
+      <Action agent="System" act="AskMainQuestion" data="" id="6" />
+      <Action agent="System" act="WaitForInput" data="300" id="7" />
+    </Rule>
+    <Rule name="AskWhyGood" status="AskWhy" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyBad" status="AskWhy" response="Main-Bad" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyAny" status="AskWhy" response="Any" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyMetaCog" status="AskWhy" response="MetaCog" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="1" />
+      <Action agent="System" act="SetStatus" data="AskWhyAny" id="2" />
+      <Action agent="System" act="WaitForInput" data="" id="3" />
+    </Rule>
+    <Rule name="AskWhyMetaCom" status="AskWhy" response="MetaCom" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="1" />
+      <Action agent="System" act="SetStatus" data="AskWhyAny" id="2" />
+      <Action agent="System" act="WaitForInput" data="" id="3" />
+    </Rule>
+    <Rule name="AskWhyIrrelevant" status="AskWhy" response="Main-Irrelevant" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NotSure" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="2" />
+      <Action agent="System" act="SetStatus" data="AskWhyAny" id="3" />
+      <Action agent="System" act="WaitForInput" data="" id="4" />
+    </Rule>
+    <Rule name="AskWhyBlank" status="AskWhy" response="Blank" event="" hasItem="" priority="3" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpBlank" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="2" />
+      <Action agent="System" act="SetStatus" data="AskWhyAny" id="3" />
+      <Action agent="System" act="WaitForInput" data="" id="4" />
+    </Rule>
+    <Rule name="AskWhyAnyGood" status="AskWhyAny" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyAnyBad" status="AskWhyAny" response="Main-Bad" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyAnyAny" status="AskWhyAny" response="Any" event="" hasItem="" priority="3" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AskWhyAnyAny1" status="AskWhyAny" response="Blank" event="" hasItem="" priority="3" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingDifficult" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="CorrectJordanCorUserFirst" status="AskQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToBothUserFirst" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="4" />
+    </Rule>
+    <Rule name="CorrectJordanInor" status="AskQ" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveUserNegativeAgent" id="4" />
+      <Action agent="System" act="SetStatus" data="SummaryIncor" id="5" />
+    </Rule>
+    <Rule name="UserAnswer" status="AskQ" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Incorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="UserAnswer" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="IncorrectAJordanCor" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="IncorrectAJordanIncorUserFirst" status="Incorrect" response="" event="A" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="IncorrectBJordanCor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="IncorrectBJordanIncor" status="Incorrect" response="" event="B" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="IncorrectCJordanCor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="IncorrectCJordanIncor" status="Incorrect" response="" event="C" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AcceptPhone" status="AskQ" response="" event="Accept" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAAnswer" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TAAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingEasy" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="Any" status="AskQ" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AnyQ" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="PumpBlankRemind" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PumpBlank" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="4" />
+      <Action agent="System" act="Unlock" data="" id="5" />
+      <Action agent="System" act="WaitForEvent" data="120" id="6" />
+    </Rule>
+    <Rule name="AnyQCorrectJordanCor" status="AnyQ" response="" event="Correct" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToBothUserFirst" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="4" />
+    </Rule>
+    <Rule name="AnyQCorrectJordanInor" status="AnyQ" response="" event="Correct" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="1" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveUserNegativeAgentUserFirst" id="4" />
+      <Action agent="System" act="SetStatus" data="SummaryIncor" id="5" />
+    </Rule>
+    <Rule name="AnyQUserAnswer" status="AnyQ" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AnyQIncorrect" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="UserAnswer" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="AnyQIncorrectAJordanCor" status="AnyQIncorrect" response="" event="A" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AnyQIncorrectAJordanIncor" status="AnyQIncorrect" response="" event="A" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintA" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="110" id="9" />
+    </Rule>
+    <Rule name="AnyQIncorrectBJordanCor" status="AnyQIncorrect" response="" event="B" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AnyQIncorrectBJordanIncor" status="AnyQIncorrect" response="" event="B" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintB" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AnyQIncorrectCJordanCor" status="AnyQIncorrect" response="" event="C" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanDisagree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="4" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="TryAgain" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AnyQIncorrectCJordanIncor" status="AnyQIncorrect" response="" event="C" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="System" act="SetStatus" data="HintQ" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordanCheck" id="2" />
+      <Action agent="ComputerStudent1" act="CannedExpression" data="JordanAgree" id="3" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="TAHintC" id="5" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="RepeatQuestion" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="RepeatQ" id="7" />
+      <Action agent="System" act="Unlock" data="" id="8" />
+      <Action agent="System" act="WaitForEvent" data="120" id="9" />
+    </Rule>
+    <Rule name="AnyAcceptPhone" status="AnyQ" response="" event="Accept" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAAnswer" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TAAnswer" id="4" />
+      <Action agent="System" act="DeliverRigidPack" data="ClosingEasy" id="5" />
+      <Action agent="System" act="SetStatus" data="End" id="6" />
+    </Rule>
+    <Rule name="AnyQJordanCor" status="AnyQ" response="" event="" hasItem="" priority="2" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="4" />
+    </Rule>
+    <Rule name="AnyQJordanIncor" status="AnyQ" response="" event="" hasItem="" priority="2" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryIncor" id="4" />
+    </Rule>
+    <Rule name="HintAnyJordanCor" status="HintQ" response="" event="" hasItem="" priority="2" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToAgent" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="4" />
+    </Rule>
+    <Rule name="HintAnyJordanIncor" status="HintQ" response="" event="" hasItem="" priority="2" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorAnswer" id="2" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeToAgent" id="3" />
+      <Action agent="System" act="SetStatus" data="SummaryIncor" id="4" />
+    </Rule>
+    <Rule name="HintCorrect" status="HintQ" response="" event="Correct" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveToUser" id="1" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="2" />
+    </Rule>
+    <Rule name="HintIncorrect" status="HintQ" response="" event="Incorrect" hasItem="" priority="1" frequency="1" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="SummaryCor" id="2" />
+    </Rule>
+    <Rule name="SummaryCor" status="SummaryCor" response="" event="" hasItem="" priority="" frequency="1" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAExplain" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="4" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="5" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="6" />
+      <Action agent="System" act="Wait" data="5" id="7" />
+    </Rule>
+    <Rule name="SummaryIncor" status="SummaryIncor" response="" event="" hasItem="" priority="" frequency="1" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TAExplain" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="SAIncorTAExplain" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="SAAdmitWrong" id="4" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="CritisizeAgent" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="TACorrectAnswer" id="6" />
+      <Action agent="System" act="SetStatus" data="NextPage" id="7" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="8" />
+      <Action agent="System" act="Wait" data="5" id="9" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

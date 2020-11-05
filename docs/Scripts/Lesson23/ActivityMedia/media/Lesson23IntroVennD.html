@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		<style type="text/css">
+			body
+			{
+				font-size: 38px;
+				font-weight: none;
+				font-family: 'Muli', Tahoma, 'Lucida Sans', Serif; 
+				background-color: #F1F5EB;
+				background-repeat:no-repeat; background-position:top-center; overflow: hidden; position: relative; display:inline-block;
+				width: 790px;
+				height: 490px;
+				text-align: center;
+				margin: 0px;
+			}
+			img
+			{
+				margin: 20px;
+				width: 95%;
+			}
+		</style>
+		<script>
+			function autosize()
+			{
+				var imageH, imageW, hDiff, wDiff, newH, newM;
+				
+				imageH=document.getElementById("img1").offsetHeight;
+				imageW=document.getElementById("img1").offsetWidth;
+				
+				if(imageH > 480){hDiff = imageH - 480;} else{hDiff=0}
+				if(imageW > 790){wDiff = imageW - 790;} else{wDiff=0}
+
+				if(wDiff > hDiff){document.getElementById("img1").style.width="700px";
+				newH = imageH=document.getElementById("img1").offsetHeight;}
+				else if(hDiff > wDiff){document.getElementById("img1").style.height="460px"; newH = 460;}
+				else if(hDiff = wDiff){document.getElementById("img1").style.height="460px"; newH = 460;}
+				
+				newM = ((461 - newH)/2);
+				if(newM > 100){newM=newM-30;}
+				newM = newM + "px";
+				document.getElementById("img1").style.marginTop=newM;
+			}
+		</script>
+		<script>
+			function submitAnswer(buttonID)
+			{
+				//make results into a string//
+				var results = buttonID;
+				
+				return parent.GetWorldEvent(results);
+			}
+		</script>
+	</head>
+
+	<body onload="autosize()">		
+		<img src="venn.png" id="img1">
+	</body>
+</html>

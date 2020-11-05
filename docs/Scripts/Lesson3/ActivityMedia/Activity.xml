@@ -1,0 +1,1107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="_user_ try to answer the question." play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="Um... _user_ I don't think that's the right answer." speech="Um... _user_ I don't think that's the right answer." play="B3,_user_,B4" />
+        <Item text="Um... _user_ I don't think that was the right answer. " speech="Um... _user_ I don't think that was the right answer. " play="B5,_user_,B6" />
+        <Item text="_user_, that wasn't the right answer." speech="_user_ I don't think that was the right answer." play="_user_,B7" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Good! _user_! You got it right!" speech="Good! _user_! You got it right!" play="B8,_user_,B9" />
+        <Item text="Super _user_! You got it!" speech="Super _user_! You got the question right!" play="B10,_user_,B11" />
+        <Item text="Great job _user_! You answered right!" speech="Great job _user_! You answered right! Thanks for helping me so much!" play="B12,_user_,B13" />
+        <Item text="You answered correctly _user_! Awesome job!" speech="You answered right _user_!Awesome job!" play="B14,_user_,B15" />
+        <Item text="Amazing _user_, you're doing great!" speech="Amazing _user_! You're good at this! You picked the right answer." play="B16,_user_,B17" />
+        <Item text="Magnificent _user_!" speech="Great job _user_!" play="B18,_user_" />
+        <Item text="Exactly, you nailed it _user_!" speech="" play="B19,_user_" />
+        <Item text="Wow _user_ that's it! " speech="" play="B20,_user_,B21" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="Great job _user_!" speech="Great job _user_!" play="A1,_user_" />
+        <Item text="Good! That is right _user_." speech="Good! That is right _user_." play="A2,_user_" />
+        <Item text="_user_ you are on a roll! You answered the question correctly." speech="_user_ you are on a roll! You answered the question correctly." play="_user_,A3" />
+        <Item text="Wonderful _user_! You answered the question correctly." speech="Wonderful _user_! You answered the question correctly." play="A4,_user_,A5" />
+        <Item text="Yes! _user_  You are correct!" speech="Yes! _user_  You are correct!" play="A6,_user_,A7" />
+        <Item text="Perfect! You got it right _user_!" speech="Perfect! You got it right _user_!" play="A8,_user_" />
+        <Item text="_user_ great! You answered correctly." speech="_user_ great! You answered correctly." play="_user_,A9" />
+        <Item text="Yes! _user_ . You got it right!" speech="Yes! _user_ . You got it right!" play="A10,_user_,A11" />
+        <Item text="Exactly! You are right!" speech="Exactly! You are right!" play="A12" />
+        <Item text="Amazing _user_! You're doing great!" speech="Amazing _user_! You're doing great." play="A13,_user_,A14" />
+        <Item text="Awesome job _user_! You answered correctly! " speech="Awesome job _user_! You answered correctly!" play="A15,_user_,A16" />
+        <Item text="Just superb _user_! You're incredible!" speech="Just superb _user_! You're incredible!" play="A17,_user_,A18" />
+        <Item text="Brillant job _user_! You got it right!" speech="Brilliant Job _user_! You got it right!" play="A19,_user_,A20" />
+        <Item text="Perfect! Good work _user_" speech="Perfect! Good work _user_!" play="A21,_user_" />
+        <Item text="Well done _user_! You're good!" speech="Well done _user_! You're good!" play="A22,_user_,A23" />
+        <Item text="You rock _user_! That's right!" speech="You rock _user_! That's right!" play="A24,_user_,A25" />
+        <Item text="That's correct! You're doing beautifully _user_! " speech="That's correct! You're doing beautifully _user_! " play="A26,_user_" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbackQ1">
+        <Item text="Great!" speech="" play="A27" />
+        <Item text="Very good!" speech="" play="A28" />
+        <Item text="Well done." speech="" play="A29" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="Well, actually, that is not what I was looking for." speech="" play="A30" />
+        <Item text="Whoops! you are not correct. " speech="" play="A31" />
+        <Item text="Oh sorry, that isn't what I was looking for" speech="Oh sorry, that isn't what I was looking for" play="A32" />
+        <Item text="Not exactly, good try" speech="Not exactly, good try" play="A33" />
+        <Item text="Well, that wasn't what I was thinking. Here is the right choice in green" speech="Well,  that wasn't what I was thinking, here is the right choice" play="A34" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Oh rats! Sorry you two that wasn't what I was looking for. " speech="Oh rats! Sorry you two that wasn't what I was looking for. " play="A35" />
+        <Item text="Uh oh _user_ and ComputerStudent1! That wasn't the correct answer. " speech="Uh oh _user_ and ComputerStudent1! That wasn't the correct answer. " play="A36,_user_,A37" />
+        <Item text="Whoops! Netiher of you gave me the answer that I was looking for." speech="Whoops! Neither of you gave me the answer that I was looking for. " play="A38" />
+        <Item text="Sorry you two! That wasn't right. " speech="Sorry you two! That wasn't right! " play="A39" />
+        <Item text="Not quite _user_ and ComputerStudent1! You both got that one incorrect. " speech="Not quite _user_ and ComputerStudent1! You both got that one incorrect. " play="A40,_user_,A41" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="sorry! that wasn't what I was looking for." speech=" sorry! that wasn't what I was looking for." play="A42" />
+        <Item text="Well, not quite, That wasn't the right choice." speech="Well, not quite, That wasn't the right choice." play="A43" />
+        <Item text="Whoops! Looks like you picked the wrong answer _user_. " speech="Whoops! Looks like you picked the wrong answer _user_. " play="A44,_user_" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok _user_ here is the answer." speech="Ok _user_ here is the answer." play="A45,_user_,A46" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_ try your best and answer the question." speech="_user_ try your best and answer the question." play="_user_,A47" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="ComputerStudent1 you didn't pick the correct answer!" speech="ComputerStudent1 you didn't pick the correct answer!" play="A48" />
+        <Item text="ComputerStudent1 you actually got that question wrong!" speech="ComputerStudent1 you actually got that question wrong!" play="A49" />
+        <Item text="ComputerStudent1 that's not right!" speech="ComputerStudent1 that's not right!" play="A50" />
+        <Item text="ComputerStudent1 you gave an incorrect answer." speech="ComputerStudent1 you gave an incorrect answer!" play="A51" />
+        <Item text="ComputerStudent1 you were wrong." speech="ComputerStudent1 you were wrong." play="A52" />
+        <Item text="Sorry ComputerStudent1 that's not right." speech="Sorry ComputerStudent1 that's not right." play="A53" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A54" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A55" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Dynamite! _user_ and ComputerStudent1 you are both correct!" speech="Dynamite! _user and ComputerStudent1 you are both correct. " play="A56" />
+        <Item text="Phenomenal work you two! Way to go on getting it right!" speech="Phenomenal work you two! Way to go on getting it right!" play="A57" />
+        <Item text="Great answer you two! Outstanding work!" speech="Great answer you two! Outstanding work!" play="A58" />
+        <Item text="_user_ and ComputerStudent1 that's correct! Smooth move you two!" speech="_user_ and ComputerStudent1 that's correct! Smooth move you two!" play="_user_,A59" />
+        <Item text="You two rule! That's right!" speech="You two rule! That's right!" play="A60" />
+        <Item text="Excellent work! You are both right!" speech="Excellent work! You are both right!" play="A61" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="OpeningA" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Well, ComputerStudent1, a good example would be a newspaper. A newspaper can inform us about what is going on in the world with articles that include facts." speech="" play="A62" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Hi _user_, Good to see you here today. " speech="" media="media/Lesson3-IntroTitle.html" play="A63,_user_,A64" />
+      <Item id="2" agent="ComputerStudent1" text="Hi again _user_, ComputerTutor what are we doing in this lesson?" speech="" play="B22,_user_,B23" />
+      <Item id="3" agent="ComputerTutor" text="well _user_ and jordan, we are going to be learning about texts with more than one purpose. They are called hybrids." speech="" play="A65,_user_,A66" />
+      <Item id="4" agent="ComputerStudent1" text="What kind of text would be a hybrid, ComputerTutor?" speech="" play="B24" />
+    </RigidPack>
+    <RigidPack name="OpeningB" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="it can also have advertisements that are meant to persuade us to buy something" speech="" play="A67" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="With e-mail and with regular mail, we have tons of people writing us stuff for a variety of reasons. " speech="" play="A68" />
+      <Item id="2" agent="ComputerStudent1" text="Yes - my mailbox is always overflowing!" speech="" play="B25" />
+      <Item id="3" agent="ComputerTutor" text="A lot of that mail has a hybrid of purposes and it can be really useful for us to try to understand the primary purpose for a writer to write something. " speech="" play="A69" />
+      <Item id="4" agent="ComputerStudent1" text="You mean like if it seems informative, but is actually trying to persuade us to buy something. " speech="" play="B26" />
+      <Item id="5" agent="ComputerTutor" text="That way we can decide what we want to keep, to respond to, or to throw away. Let's look at some emails and think about why the writer wrote them!" speech="" play="A70" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_, thanks for joining us. I hope this made sense to you!" speech="" media="media/Lesson3-MainClose.html" play="_user_,A71" />
+      <Item id="2" agent="ComputerStudent1" text="I think I understand. I see that most texts have hybrid purposes. A writer is able to do more than one thing in each text." speech="" play="B27" />
+      <Item id="3" agent="ComputerTutor" text="That's right. It is important for us to see the multiple purposes of the text, so that we can understand what the writer wants us to know, do, or believe. It also shapes the way we respond, especially to emails or letter." speech="" play="A72" />
+      <Item id="4" agent="ComputerStudent1" text="I get that! Thanks, ComputerTutor. See you next time _user_." speech="" play="B28,_user_" />
+    </RigidPack>
+    <RigidPack name="OpeningC" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="and it can have comics that are written to entertain us." speech="" play="A73" />
+      <Item id="2" agent="ComputerStudent1" text="I see. When I think about it like that, I think most texts are hybrids." speech="" play="B29" />
+      <Item id="3" agent="ComputerTutor" text="That is a good point, ComputerStudent1. Most writer's have more than one reason for writing a text." speech="" play="A74" />
+      <Item id="4" agent="ComputerStudent1" text="Maybe it would help to see some examples. " speech="" play="B30" />
+      <Item id="5" agent="ComputerTutor" text="Sure. Today, we are going to look at some websites. Websites are a great example of hybrids. For each website, we will try to decide what the author's purposes are and we will support our predictions with text signals from the website. Let's get started." speech="" media="media/Lesson3-Medium-0.html" play="A75" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_ let's take a look over this website. Press Click Here to Continue when you are done and hopefully we will finish at the same time." speech="" media="" play="_user_,B31">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Now that you and ComputerStudent1 have looked at the website. Let's think about the purpose of the website." speech="" keys="any" threshold="" play="A76" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="We are looking at Friendbook." speech="" media="" play="A77">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this website is socializing online." speech="" keys="any" threshold="" play="A78" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the text is socializing over the internet" speech="" keys="any" threshold="" play="B32" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the topic of this website is online job searching" speech="" keys="any" threshold="" play="B33" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I would say the topic of this website is online dating" speech="" keys="any" threshold="" play="B34" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this website is not online job searching because nowhere on the website does it say that you can use the website to search for jobs " speech="" keys="any" threshold="" play="A79" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this website is not online dating. This is because the website actually does not indicate that it can be used to match people together for the purpose of dating" speech="" keys="any" threshold="" play="A80" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the topic of this website is?" speech="" keys="any" threshold="" play="_user_,A81" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know the topic of this website?" speech="" keys="any" threshold="" play="A82" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B35,_user_,B36" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I also think that Friend book is a site for online dating." speech="" keys="any" threshold="" play="B37" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Since it is a hybrid,  the website Friend book has more than one purpose." speech="" media="" play="A83">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this website are to inform and entertain. A user of FriendBook wants to keep their friends informed about who they are and what they are doing. It also collects facts like birthdays. Additionally, some people use FriendBook as a way to make humorous remarks to entertain friends and family. " speech="" keys="any" threshold="" play="A84" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I don't understand why persuade and inform were not the purposes of friend book" speech="" keys="any" threshold="" play="B38,_user_,B39" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was entertain and persuade" speech="" keys="any" threshold="" play="B40" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this website are to inform and entertain" speech="" keys="any" threshold="" play="B41" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this website are to persuade and inform" speech="" keys="any" threshold="" play="B42" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of this website are to entertain and persuade" speech="" keys="any" threshold="" play="B43" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the website are to persuade and inform" speech="" keys="any" threshold="" play="A85" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of the website are not to entertain and persuade" speech="" keys="any" threshold="" play="A86" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A87" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A88" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the two main purposes are?" speech="" keys="any" threshold="" play="_user_,A89" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think are the author's purposes for this website?" speech="" keys="any" threshold="" play="A90" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="I am not sure I understand. _user_, can you show me which one of the highlighted text signals would let us know that a purpose of this website is to inform?" speech="" media="" play="B44,_user_,B45">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The text signal that says Got an update let everyone know what's up with your own personal update widget tells us that this website is meant to inform people about what is going on in your life. " speech="" keys="any" threshold="" play="A91" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="Not quite. type password here does not tell us that this website is meant to inform us. Many websites require you to create a login I D and a password." speech="" keys="any" threshold="" play="A92" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not exactly, new to friendbook, sign up here does not tell us that this website is meant to inform." speech="" keys="any" threshold="" play="A93" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B46,_user_,B47" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A94" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think it is type password here" speech="" keys="any" threshold="" play="B48" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that it is new to friendbook?  sign up here" speech="" keys="any" threshold="" play="B49" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_ let's take a look at Gurtie's Blog together. Press Click Here to Continue when you are done." speech="" media="" play="_user_,B50">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="OK, _user_ and ComputerStudent1. A blog is like an online journal and anyone can publish one. " speech="" keys="any" threshold="" play="A95,_user_,A96" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's take a look at Gurtie's Blog for Better Sewing." speech="" media="" play="A97">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this website is sewing. " speech="" keys="any" threshold="" play="A98" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the website is sewing" speech="" keys="any" threshold="" play="B51" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the topic of this website is fashion" speech="" keys="any" threshold="" play="B52" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I would say the topic of this website is feminism. It says so in her description." speech="" keys="any" threshold="" play="B53" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="Actually, The topic of this website is not fashion even though the pictures on the website may make you think it is " speech="" keys="any" threshold="" play="A99" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this website is not feminism. Gurtie mentions feminism on the blog, but you can see from the title and her video that the focus is on sewing." speech="" keys="any" threshold="" play="A100" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell what do you think the topic of Gurtie's blog is?" speech="" keys="any" threshold="" play="_user_,A101" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think is the topic of this website?" speech="" keys="any" threshold="" play="A102" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B54,_user_,B55" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I also think that Gurtie's blog is about feminism." speech="" keys="any" threshold="" play="B56" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Now that we know the topic of this website is sewing," speech="" media="" play="A103">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of gurtie's blog are to inform and entertain. Gurtie is informing us about sewing and teaching us how to sew. However, she is also trying to entertain readers with clever videos and other topics." speech="" keys="any" threshold="" play="A104" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I don't understand why persuade and inform were not the purposes of gurtie's blog" speech="" keys="any" threshold="" play="B57,_user_,B58" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was entertain and persuade" speech="" keys="any" threshold="" play="B59" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes gurtie's blog are to inform and entertain" speech="" keys="any" threshold="" play="B60" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of gurtie's blog are to persuade and inform" speech="" keys="any" threshold="" play="B61" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of gurtie's blog are to entertain and persuade" speech="" keys="any" threshold="" play="B62" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of gurtie's blog are to persuade and inform" speech="" keys="any" threshold="" play="A105" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of gurtie's blog are not to entertain and persuade" speech="" keys="any" threshold="" play="A106" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A107" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A108" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, What could be two of the purposes for Gurtie to write the blog?" speech="" keys="any" threshold="" play="_user_,A109" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what are the two main purposes for Gurtie's blog?" speech="" keys="any" threshold="" play="A110" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, maybe you can help me. Can you show me which one of ComputerTutor's highlighted text signals would let us know that one of the purposes for this site is to entertain?" speech="" media="" play="_user_,B63">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="let us talk about sewing feminism and kitties is meant to entertain us. the creator of this sewing blog wants to show the visitors of her blog that her blog is funny and meant to attract readers looking for different things." speech="" keys="any" threshold="" play="A111" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="No, that was not it exactly. Sewing retreat 2014 does not signal to us that the purpose of this website is to entertain." speech="" keys="any" threshold="" play="A112" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not exactly. The picture with the icons does not signal to us that the purpose of this website is to inform. Often websites will have these symbols on them, that you can click on, to share the website with others. by  email, or social media " speech="" keys="any" threshold="" play="A113" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B64,_user_,B65" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A114" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that it is sewing retreat 2014" speech="" keys="any" threshold="" play="B66" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I will guess that the answer is the icons at the bottom of the screen" speech="" keys="any" threshold="" play="B67" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, here is another one. I love dogs - this looks great! Press Click Here to Continue when you are done and we can review it together." speech="" media="" play="_user_,B68">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="_user_ and ComputerStudent1, this website looks different from the other two." speech="" keys="any" threshold="" play="_user_,A115" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPAa">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's examine what the writers of Dog Food Advisor wants us to see." speech="" media="" play="A116">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this website is dog food quality. The site explains the best food for your dog in several categories." speech="" keys="any" threshold="" play="A117" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It seems to me like the topic of this website is dog food quality. " speech="" keys="any" threshold="" play="B69" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="Maybe, the topic is dog food prices. " speech="" keys="any" threshold="" play="B70" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Look at that picture at the top! I think the topic is cute dog breeds!" speech="" keys="any" threshold="" play="B71" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this website is not dog food prices although you can get some of that information here." speech="" keys="any" threshold="" play="A118" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="There is an adorable dog at the top of the website, but the topic of the whole site is not cute dog breeds." speech="" keys="any" threshold="" play="A119" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think the topic of this website is?" speech="" keys="any" threshold="" play="_user_,A120" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me the topic of this website?" speech="" keys="any" threshold="" play="A121" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B72,_user_,B73" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I agree with _user_. The topic of this site probably cute dog breeds." speech="" keys="any" threshold="" play="B74,_user_,B75" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPAb">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="_user_ the website dog food advisor has two main purposes." speech="" media="" play="_user_,A122">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this website are to persuade and inform. On the left side of the website, you can see a list of categories in which you can find information about dog food. However, the site also wants to persuade you that the food that it reviews as the best is the one you should choose for your dog." speech="" keys="any" threshold="" play="A123" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, " speech="" keys="any" threshold="" play="B76,_user_" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was that too" speech="" keys="any" threshold="" play="B77" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purpose of this website is to persuade and inform" speech="" keys="any" threshold="" play="B78" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purpose of this website is to inform and entertain" speech="" keys="any" threshold="" play="B79" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purpose of this website is to entertain and persuade" speech="" keys="any" threshold="" play="B80" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purpose of the website is not to inform and entertain" speech="" keys="any" threshold="" play="A124" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purpose of the website is not to entertain and persuade" speech="" keys="any" threshold="" play="A125" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A126" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A127" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you predict the author's main purposes for writing this website?" speech="" keys="any" threshold="" play="_user_,A128" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think are the author's purposes for this website?" speech="" keys="any" threshold="" play="A129" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPAc">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, ComputerTutor says that one of the main purposes of this hybrid website is to persuade. Can you click on the text signal that would make us think that?" speech="" media="" play="_user_,B81">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="The text signal that says What is the best dog food is the part of this website that signals to us that the website is meant to persuade us. We know from this text signal that the purpose of this website is to convince you that some dog foods are better than others for a variety of reasons." speech="" keys="any" threshold="" play="A130" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the picture of the trophy does not necessarily tell us that the website is meant to persuade us. " speech="" keys="any" threshold="" play="A131" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text=" where to buy does not signal to us that the company is trying to persuade us. That would just give us information on a location to find the recommended food." speech="" keys="any" threshold="" play="A132" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. I thought that _user_ was right. " speech="" keys="any" threshold="" play="B82,_user_,B83" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A133" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that it is the trophy  " speech="" keys="any" threshold="" play="B84" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe it is where to buy" speech="" keys="any" threshold="" play="B85" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD1">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, wow. this is a new one!  let's read over my e-mail together. Press Click Here to Continue when you are done and hopefully we will finish at the same time." speech="" media="" play="_user_,B86">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Thanks, _user_. You get some pretty interesting e-mail, ComputerStudent1. " speech="" keys="any" threshold="" play="A134,_user_,A135" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's see if we can figure out why someone would e-mail ComputerStudent1 from Cat etude dot com." speech="" media="" play="A136">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is cat behavior. The title of the website is a pairing of the words Cat and Attitude. " speech="" keys="any" threshold="" play="A137" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is cat behavior" speech="" keys="any" threshold="" play="B87" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="Well, I think that the topic of this email is cat videos" speech="" keys="any" threshold="" play="B88" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe the topic of this email crazy cats because of the picture" speech="" keys="any" threshold="" play="B89" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not cat videos." speech="" keys="any" threshold="" play="A138" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this email is not crazy cats." speech="" keys="any" threshold="" play="A139" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me the topic of Cat etude?" speech="" keys="any" threshold="" play="_user_,A140" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think the topic of Cat etude is?" speech="" keys="any" threshold="" play="A141" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B90,_user_,B91" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I also think that this e-mail for cat etude is about crazy cats." speech="" keys="any" threshold="" play="B92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Ok, so this is an e-mail that was sent to ComputerStudent1 from a website." speech="" media="" play="A142">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of cat etude are to entertain and inform. The email says that the site includes cat humor and information on cat care." speech="" keys="any" threshold="" play="A143" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of cat etude are to inform and persuade" speech="" keys="any" threshold="" play="B93,_user_,B94" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="What? I thought it was persuade and entertain also" speech="" keys="any" threshold="" play="B95" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to entertain and inform" speech="" keys="any" threshold="" play="B96" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B97" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="B98" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to inform and persuade" speech="" keys="any" threshold="" play="A144" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of the email are not to persuade and entertain" speech="" keys="any" threshold="" play="A145" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A146" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A147" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think are the author's purposes for writing Cat etude?" speech="" keys="any" threshold="" play="_user_,A148" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me what purposes someone might have for writing Cat etude." speech="" keys="any" threshold="" play="A149" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD4">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="I don't think I am clear on this. _user_, Can you show me which one of ComputerTutor's highlighted text signals would let us know that one of the email's purposes is to entertain us?" speech="" media="" play="B99,_user_,B100">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="The picture of the cat is amusing. It lets us know the site is meant to entertain us with humor. " speech="" keys="any" threshold="" play="A150" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="learn about the psychology of cats sounds like the site is meant to inform us about scientific research on cats. " speech="" keys="any" threshold="" play="A151" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not exactly. Come see our website may be meant to persuade us to visit the cat etude website but it does not entertain us " speech="" keys="any" threshold="" play="A152" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B101,_user_,B102" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A153" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I am not sure. Maybe, it is the words Learn about the psychology of cats." speech="" keys="any" threshold="" play="B103" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe it is come see our website " speech="" keys="any" threshold="" play="B104" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that it is the picture of the funny kitty " speech="" keys="any" threshold="" play="B105" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD5">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="ComputerTutor and _user_, I just got this email from my friend, Linda. This might be interesting to look at since I know the writer! _user_ can you let me know when you are done reading it by clicking Click Here to Continue?" speech="" media="" play="B106,_user_,B107,_user_,B108">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="_user_ and ComputerStudent1, even when the author of an e-mail is someone we know,  they still have distinct purposes for writing. " speech="" keys="any" threshold="" play="_user_,A154" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's see what we can learn from this personal e-mail." speech="" media="" play="A155">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is Linda's new home in Toronto. She is describing her new city to ComputerStudent1." speech="" keys="any" threshold="" play="A156" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is Linda's new home in Toronto. It sounds pretty great!" speech="" keys="any" threshold="" play="B109" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I would say that the  topic of this email is Night life  in Toronto" speech="" keys="any" threshold="" play="B110" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Could it be hockey fans? She mentions the Hall of Fame." speech="" keys="any" threshold="" play="B111" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not Night life in Toronto." speech="" keys="any" threshold="" play="A157" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this email is not actually hockey fans." speech="" keys="any" threshold="" play="A158" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think is the topic of Linda's email to ComputerStudent1?" speech="" keys="any" threshold="" play="_user_,A159" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, click on the button that you think best describes the topic of Linda's email." speech="" keys="any" threshold="" play="A160" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B112,_user_,B113" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="_user_'s answer looks right to me. The topic of this e-mail is hockey fans." speech="" keys="any" threshold="" play="_user_,B114" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="So, Linda has moved to Toronto and would like to tell ComputerStudent1 about it." speech="" media="" play="A161">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of Linda's email are to inform and persuade. She is telling ComputerStudent1 about her new city and hopes he will come visit!" speech="" keys="any" threshold="" play="A162" />
+            <Answer name="JordanAgreeWithIncorrect1" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of Linda's email were to entertain and inform" speech="" keys="any" threshold="" play="B115,_user_,B116" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I was thinking persuade and entertain also" speech="" keys="any" threshold="" play="B117" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B118" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to entertain and inform" speech="" keys="any" threshold="" play="B119" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="B120" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to entertain and inform" speech="" keys="any" threshold="" play="A163" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of the email are not to persuade and entertain" speech="" keys="any" threshold="" play="A164" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A165" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A166" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think were Linda's purposes in writing this e-mail to ComputerStudent1." speech="" keys="any" threshold="" play="_user_,A167" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think are the purposes for Linda's email?" speech="" keys="any" threshold="" play="A168" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD8">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="I feel like even though Linda wants to persuade me to call her, it seems like she is mainly informing me about her new life in Toronto. _user_,  Can you show me which one of ComputerTutor's highlighted text signals would prove that Linda's purpose is to inform?" speech="" media="" play="B121,_user_,B122">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="When Linda gives us the information about the Hockey Hall of Fame, she is informing us about the city of Toronto and one of its attractions." speech="" keys="any" threshold="" play="A169" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="Hey stranger is not a text signal that is informative. It is just a greeting." speech="" keys="any" threshold="" play="A170" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not quite. The sentence we could go to the museum of go hiking like we used to do is more persuasive than informative." speech="" keys="any" threshold="" play="A171" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B123,_user_,B124" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A172" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that it is hey stranger " speech="" keys="any" threshold="" play="B125" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe it is we could go to the museum or go hiking like we used to do." speech="" keys="any" threshold="" play="B126" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPD9">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="Oh man, I get these e-mails from Jobs Today all the time. _user_ let's take a look over this email and then maybe you and ComputerTutor can help me understand the point of it. Press Click Here to Continue when you finished reading it." speech="" media="" play="B127,_user_,B128">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Thanks, _user_ and ComputerStudent1. " speech="" keys="any" threshold="" play="A173,_user_,A174" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPDa">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's take a closer look at this e-mail since ComputerStudent1 is getting a lot of mail from them!" speech="" media="" play="A175">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is job searching website. It says they have lots of jobs posted daily!" speech="" keys="any" threshold="" play="A176" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is job searching website" speech="" keys="any" threshold="" play="B129" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I would say that the  topic of this email is building your resume" speech="" keys="any" threshold="" play="B130" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Could it be jobs with good environments?" speech="" keys="any" threshold="" play="B131" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not building your resume." speech="" keys="any" threshold="" play="A177" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this email is not jobs with good environments. The site mentions that they partner with good organizations with stable work environments, but the available jobs is the main point of the site." speech="" keys="any" threshold="" play="A178" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think is the topic of the jobs today dot com website?" speech="" keys="any" threshold="" play="_user_,A179" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me the topic of this website, jobs today dot com?" speech="" keys="any" threshold="" play="A180" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B132,_user_,B133" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I also think that this e-mail is about jobs with good environments." speech="" keys="any" threshold="" play="B134" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPDb">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Jobs Today is a site which offers you access to a lot of job opportunities." speech="" media="" play="A181">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="A182" />
+            <Answer name="JordanAgreeWithIncorrect1" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of the email were to entertain and inform" speech="" keys="any" threshold="" play="B135,_user_,B136" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I was thinking persuade and entertain also" speech="" keys="any" threshold="" play="B137" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B138" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to entertain and inform" speech="" keys="any" threshold="" play="B139" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="B140" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to entertain and inform" speech="" keys="any" threshold="" play="A183" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of the email are not to persuade and entertain" speech="" keys="any" threshold="" play="A184" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A185" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A186" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what could be the author's purposes for writing jobs today dot com. " speech="" keys="any" threshold="" play="_user_,A187" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me what the author's purposes for this website might be?" speech="" keys="any" threshold="" play="A188" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPDc">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user, maybe you can help me. I think Jobs Today wants to persuade me to use their service. Can you click on a text signal in the e-mail that makes it seem mostly persuasive?" speech="" media="" play="B141">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="The text that reads get the job of your dreams . sign up today is persuasive because it is meant to make us think that if we sign up on jobs today dot com today we can immediately find the job we have always wanted. " speech="" keys="any" threshold="" play="A189" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The text jobs today dot com does not signal to us that the purpose of this website is to persuade us. It only shows us the title of the site." speech="" keys="any" threshold="" play="A190" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not exactly. the picture of the city is not persuasive, but it is decorative.  " speech="" keys="any" threshold="" play="A191" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B142,_user_,B143" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A192" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text=" I bet it is jobs today dot com " speech="" keys="any" threshold="" play="B144" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="it could be the picture " speech="" keys="any" threshold="" play="B145" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE1">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, here is the first e-mail in my inbox today. Can we read it together and then talk about it? Press Click Here to Continue when you are done reading." speech="" media="" play="_user_,B146">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="OK, _user_ and ComputerStudent1. " speech="" keys="any" threshold="" play="A193,_user_,A194" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Now, let's try to answer some questions about this email from Soap and Lotion Traders dot net." speech="" media="" play="A195">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is advertising a soap and lotion. They want you to buy it before supplies run out!" speech="" keys="any" threshold="" play="A196" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is advertising soap and lotion" speech="" keys="any" threshold="" play="B147" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="Well, I think that the topic of this email is pear smelling soap which sounds great. " speech="" keys="any" threshold="" play="B148" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe the topic of this email is the science of skin care." speech="" keys="any" threshold="" play="B149" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not pear smelling soap.The picture of the soap bar does say pears, however, that seems to be the brand label and the rest of the email does not specifically talk about the smell of the soap." speech="" keys="any" threshold="" play="A197" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this email is not the science of skin care. Even though the text in the email says that the product is the latest scientific discovery in skin care, the text is not entirely about the science of skin care." speech="" keys="any" threshold="" play="A198" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you tell me the topic of this e-mail?" speech="" keys="any" threshold="" play="_user_,A199" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, do you know what the topic of this e-mail is?" speech="" keys="any" threshold="" play="A200" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B150,_user_,B151" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="It seems like _user_ has the right idea. This e-mail's topic is the science of skin care." speech="" keys="any" threshold="" play="B152,_user_,B153" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="So, we know this e-mail is an advertisement for a website that sells soap and lotion." speech="" media="" play="A201">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="A202" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of soap and lotion traders were to entertain and inform" speech="" keys="any" threshold="" play="B154,_user_,B155" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was to persuade and entertain too" speech="" keys="any" threshold="" play="B156" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B157" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to entertain and inform" speech="" keys="any" threshold="" play="B158" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="B159" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to entertain and inform" speech="" keys="any" threshold="" play="A203" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purposes of the email are not to persuade and entertain" speech="" keys="any" threshold="" play="A204" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A205" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A206" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think an author's purposes for writing this advertisement would be?" speech="" keys="any" threshold="" play="_user_,A207" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what are the author's purposes for writing this e-mail?" speech="" keys="any" threshold="" play="A208" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE4">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="_user_, maybe you can help me. Can you show me which one of ComputerTutor's highlighted text signals would let us know that the primary purpose of this email is to persuade?" speech="" media="" play="_user_,B160">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="the highlighted text... a limited time offer... is meant to persuade us to buy the product by making us think that we need to act on the deal and buy the product as soon as possible... because it won't be available for long. " speech="" keys="any" threshold="" play="A209" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="Not quite. scientific discovery in skin care is not a signal that necessarily is meant to persuade us" speech="" keys="any" threshold="" play="A210" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="the picture of the pears soap is not exactly a persuasive text signal" speech="" keys="any" threshold="" play="A211" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B161,_user_,B162" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_,  please try again." speech="" keys="any" threshold="" play="_user_,A212" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that it is scientific discovery in skin care " speech="" keys="any" threshold="" play="B163" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe it is the picture of the pears soap " speech="" keys="any" threshold="" play="B164" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE5">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="Oh man, I get these e-mails from Domestic Kitty all the time. _user_ let's take a look over this email and then maybe you and ComputerTutor can help me understand the point of it. Press Click Here to Continue when you finished reading it." speech="" media="" play="B165,_user_,B166">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Thanks, _user_ and ComputerStudent1. " speech="" keys="any" threshold="" play="A213,_user_,A214" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's take a closer look at this e-mail since ComputerStudent1 is getting a lot of mail from them!" speech="" media="" play="A215">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is cat training. The email talks about teaching your cat to do the chores that you don't have time to do. " speech="" keys="any" threshold="" play="A216" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is cat training but I don't think my cat could learn all of those tricks" speech="" keys="any" threshold="" play="B167" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="Well, I think that the topic of this email is cats and laundry because of the picture" speech="" keys="any" threshold="" play="B168" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe the topic of this email is cat treats. " speech="" keys="any" threshold="" play="B169" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not kittens and laundry. Even though the picture of the cat using an iron is in the email, the text describes cats helping out with all the household chores." speech="" keys="any" threshold="" play="A217" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Cat Treats are not mentioned anywhere in the e-mail. Although, if they do this housework, it might be a good idea to give them one!" speech="" keys="any" threshold="" play="A218" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think is the topic of Domestic Kitty?" speech="" keys="any" threshold="" play="_user_,A219" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me what the topic of Domestic Kitty is?" speech="" keys="any" threshold="" play="A220" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B170,_user_,B171" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="I also think that this e-mail is about cat treats." speech="" keys="any" threshold="" play="B172" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Domestic Kitty has the right idea. I would love it if my cat could do my ironing!" speech="" media="" play="A221">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="A222" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of domestic kitty are to inform and persuade" speech="" keys="any" threshold="" play="B173,_user_,B174" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was to entertain and inform too" speech="" keys="any" threshold="" play="B175" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to persuade and entertain" speech="" keys="any" threshold="" play="B176" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B177" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purpose of this email is to entertain and inform" speech="" keys="any" threshold="" play="B178" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to inform and persuade" speech="" keys="any" threshold="" play="A223" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purpose of the email is not to inform and persuade" speech="" keys="any" threshold="" play="A224" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A225" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A226" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, as good as the idea sounds, what do you think were the author's purposes in writing Domestic Kitty?" speech="" keys="any" threshold="" play="_user_,A227" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, can you tell me two of the purposes for this website?" speech="" keys="any" threshold="" play="A228" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE8">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="This one is hilarious. It sounds informative, but I think the main purpose is to entertain. _user_, can you click on the text signal that would let us know that one of the purposes of this email is to entertain?" speech="" media="" play="B179,_user_,B180">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="The picture of the cat ironing is meant to signal to us that the email is meant to entertain " speech="" keys="any" threshold="" play="A229" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="Domestic kitty dot com is not a text signal that is meant to show us that the e-mail is entertaining. It is clever, but it is the title of the site." speech="" keys="any" threshold="" play="A230" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The text that says have you ever thought your cat could do more around the house to help out?  does not signal to us that the email is meant to entertain. it is meant to persuade us to go to the site and learn more." speech="" keys="any" threshold="" play="A231" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B181,_user_,B182" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A232" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that it is domestic kitty dot com " speech="" keys="any" threshold="" play="B183" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I really don't know what the right text signal is." speech="" keys="any" threshold="" play="B184" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPE9">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="ComputerTutor and _user_, I just got this email from my friend, Bob. This might be interesting to look at since I know the writer! _user_ can you let me know when you are done reading it by clicking Click Here to Continue?" speech="" media="" play="B185,_user_,B186,_user_,B187">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="_user_ and ComputerStudent1, even when the authors of e-mails are someone we know,  they still have distinct purposes for writing. " speech="" keys="any" threshold="" play="_user_,A233" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEa">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's get a little more information from Bob's email." speech="" media="" play="A234">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this email is bob's birthday party. Lucky for ComputerStudent1 - he is invited." speech="" keys="any" threshold="" play="A235" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic of the email is bob's birthday party" speech="" keys="any" threshold="" play="B188" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="Well, I think that the topic of this email is bob's son's party" speech="" keys="any" threshold="" play="B189" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe the topic of this email is a suprise party for Bob." speech="" keys="any" threshold="" play="B190" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="The topic of this email is not bob's son's birthday party, because his son is not mentioned in the email." speech="" keys="any" threshold="" play="A236" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The topic of this email is not Bob's surprise birthday party. Bob is inviting people so we know it is not a surprise party for him because he knows about it and is organizing it" speech="" keys="any" threshold="" play="A237" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what do you think is the topic of this email to ComputerStudent1 from Bob Smith?" speech="" keys="any" threshold="" play="_user_,A238" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think is the topic of this e-mail from your friend, Bob?" speech="" keys="any" threshold="" play="A239" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="I think _user_ has the right answer here." speech="" keys="any" threshold="" play="B191,_user_,B192" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, _user_. I also think that this e-mail is about Bob's surprise birthday party." speech="" keys="any" threshold="" play="B193,_user_,B194" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEb">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Fantastic! Everyone loves a party." speech="" media="" play="A240">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The purposes of this invitation are to inform and persuade" speech="" keys="any" threshold="" play="A241" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text=" I agreed with _user_, I thought the purposes of the invitation were to entertain and inform" speech="" keys="any" threshold="" play="B195,_user_,B196" />
+            <Answer name="JordanAgreeWithIncorrect2" agent="ComputerStudent1" type="JordanAgreeWithIncorrect2" text="Yeah, I thought the answer was to persuade and entertain too" speech="" keys="any" threshold="" play="B197" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the purposes of this email are to inform and persuade" speech="" keys="any" threshold="" play="B198" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="I think that the purposes of this email are to entertain and inform" speech="" keys="any" threshold="" play="B199" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="I think that the purpose of this email is to persuade and entertain" speech="" keys="any" threshold="" play="B200" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="the purposes of the email are not to entertain and inform" speech="" keys="any" threshold="" play="A242" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="The purpose of the email is not to persuade and entertain" speech="" keys="any" threshold="" play="A243" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_, please try again. Click on another purposes button." speech="" keys="any" threshold="" play="_user_,A244" />
+            <Answer name="FeedbackJordan" agent="ComputerTutor" type="FeedbackJordan" text="ComputerStudent1 was incorrect" speech="" keys="any" threshold="" play="A245" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, can you predict what Bob's purposes were in writing this invitation?" speech="" keys="any" threshold="" play="_user_,A246" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what do you think are the main purposes of Bob's e-mail?" speech="" keys="any" threshold="" play="A247" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPEc">
+      <Questions>
+        <Question id="1" agent="ComputerStudent1" text="So, I know that Bob is trying to persuade us to come to his party, but I think the primary purpose of this e-mail is to inform us about the details of the party. _user_ which of the text signals highlighted below seems like it is meant to inform us?" speech="" media="" play="B201,_user_,B202">
+          <Answers>
+            <Answer name="Correct1" agent="ComputerTutor" type="Correct" text="The highlighted text signal that is most informative is It starts at 8 p m. Now, you know what time to go to the party. Although, Bob clearly wants ComputerStudent1 to come to the party, a major part of the invitation is informative details that let you know what to do and what to expect. " speech="" keys="any" threshold="" play="A248" />
+            <Answer name="UserIncorrect1" agent="ComputerTutor" type="UserIncorrect1" text="you are missing out if you dont come so r s v p, a s a p is a persuasive text signal because it is trying to persuade the reader to come to the party" speech="" keys="any" threshold="" play="A249" />
+            <Answer name="UserIncorrect2" agent="ComputerTutor" type="UserIncorrect2" text="Not exactly. the happy birthday candle picture is not informative.It is just a nice decoration for the invitation." speech="" keys="any" threshold="" play="A250" />
+            <Answer name="JordanAgreeWithIncorrect" agent="ComputerStudent1" type="JordanAgreeWithIncorrect" text="wait. . I thought that _user_ was right. " speech="" keys="any" threshold="" play="B203,_user_,B204" />
+            <Answer name="TryAgainUser" agent="ComputerTutor" type="TryAgainUser" text="_user_ please try again." speech="" keys="any" threshold="" play="_user_,A251" />
+            <Answer name="JordanIncorrect1" agent="ComputerStudent1" type="JordanIncorrect1" text="This is tough. Maybe it is the part where Bob says you are missing out if you don't come so r s v p a s a p." speech="" keys="any" threshold="" play="B205" />
+            <Answer name="JordanIncorrect2" agent="ComputerStudent1" type="JordanIncorrect2" text="Maybe it is the picture with happy birthday in candles" speech="" keys="any" threshold="" play="B206" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson3-MainIntro.html" id="2" />
+      <Action agent="System" act="SetStatus" data="LoadStartPage" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+	<Rule name="StartPageLoaded" status="LoadStartPage" response="" event="PageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="GetMediaEvent" data="Animation1" id="3" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningA" id="4" />
+      <Action agent="System" act="GetMediaEvent" data="Animation2" id="5" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningB" id="6" />
+      <Action agent="System" act="GetMediaEvent" data="Animation3" id="7" />
+      <Action agent="System" act="DeliverRigidPack" data="OpeningC" id="8" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="9" />
+      <Action agent="System" act="Wait" data="5" id="10" />
+    </Rule>
+    <Rule name="LoadPage2" status="LoadPage2" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPE" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPD" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="15" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="CristinaAskQJC" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="20" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQJI1" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="15" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect1" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQJI2" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="15" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect2" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="System" act="WaitForEvent" data="100" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="3" />
+      <Action agent="System" act="WaitForEvent" data="60" id="4" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct1" status="UserAnswer1" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked1" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="CristinaAskedFJC" status="QAsked1" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="CristinaAskedFJI" status="QAsked1" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="CristinaAskedJC" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBoth" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="CristinaAskedJ1" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect1" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="4" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="CristinaAskedJI2" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect2" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="4" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="5" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="6" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="7" />
+      <Action agent="System" act="GetRule" data="" id="8" />
+    </Rule>
+    <Rule name="JordanAsked" status="QAsked" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbackQ1" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="IncorrectFJI1" status="UserAnswer1" response="" event="Incorrect1" hasItem="" priority="1" frequency="33" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect1" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="IncorrectFJI2" status="UserAnswer1" response="" event="Incorrect2" hasItem="" priority="1" frequency="33" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect2" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="Incorrect1FJC" status="UserAnswer1" response="" event="Incorrect1" hasItem="" priority="1" frequency="33" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect1" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="Incorrect2FJC" status="UserAnswer1" response="" event="Incorrect2" hasItem="" priority="1" frequency="33" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect2" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="Incorrect1" status="UserAnswer" response="" event="Incorrect1" hasItem="" priority="1" frequency="34" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAgreeWithIncorrect" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect1" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer" response="" event="Incorrect2" hasItem="" priority="1" frequency="34" description="">
+      <Action agent="ComputerStudent1" act="Answer" data="JordanAgreeWithIncorrect2" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoBoth" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="UserIncorrect2" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="Blank1" status="UserAnswer1" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TryAgainUser" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="TryAgainUser" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="Incorrect21" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="JordanNegativeFeedback" id="3" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="4" />
+      <Action agent="System" act="WaitForEvent" data="60" id="5" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="15" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy" status="Transition" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="E" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="M" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard" status="Transition" response="" event="Difficult" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="D" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionNew" status="Transition0" response="" event="MediaLoadedNew" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

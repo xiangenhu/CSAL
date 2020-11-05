@@ -1,0 +1,1 @@
+var document.domain = "https://ace.autotutor.org";

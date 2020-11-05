@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<style>
+			.bold{font-weight: bold;}
+			body
+			{
+				background-image:url('L28bkgd.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+				font-family: Lato, Verdana, 'Times New Roman';
+				width: 798px;
+				height: 480px;
+			}
+			#warningBox
+			{
+				background-color: #ffc4c4;
+				border: 1px solid black;
+				width: 30%;
+				height: 110%;
+				margin: -10px 0px;
+				display: inline-block;
+			}
+			#bottle
+			{
+				height: 250px;
+			}
+			#warningLabelBox
+			{
+				background-color: white;
+				font-size: 18px;
+				border: 3px solid red;
+				border-radius: 2px;
+				display: block;
+				width: 70%;
+				padding: 10px;
+				vertical-align: top;
+				margin: 8% auto 5% auto;
+			}
+			#questions
+			{
+				width: 65%;
+				height: 90%;
+				margin: 20px 0px;
+				font-size: 30px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.question
+			{
+				font-weight: bold;
+				margin: 20px 0px 5px 0px;
+			}
+			.answer
+			{
+				color: green;
+				margin: 0px 0px 30px 0px;
+				font-size: 26px;
+			}
+		</style>
+		<script>
+			$(document).ready(function()
+			{				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="warningBox">
+			<div id="warningLabelBox" class="bold">
+				Keep out of reach of children! In case of overdose, get medical help or contact a Poison Control Center right away.
+			</div>
+			<img src="MedicineBottle.png" id="bottle">
+			
+		</div>
+		<div id="questions">
+			<div class="question" id="question1">
+				Is this information important?
+			</div>
+			<div class="answer" id="answer1">
+				Yes.
+			</div>
+			<div class="question" id="question2">
+				Why is the writer telling me this information?
+			</div>
+			<div class="answer" id="answer1">
+				This medicine is dangerous to children.
+			</div>
+			<div class="question" id="question3">
+				What are we supposed to take away from this information?
+			</div>
+			<div class="answer" id="answer1">
+				Keep the medicine away from children because it could harm them.
+			</div>
+		</div>
+	</body>
+</html>

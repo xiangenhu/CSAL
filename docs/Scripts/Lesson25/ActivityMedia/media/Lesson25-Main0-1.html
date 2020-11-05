@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L25Bkgd0.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 482px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 25px;
+				padding: 15px 30px 0px 30px;
+				line-height: 30px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Special Elite', Verdana, 'Times New Roman';
+				font-size: 42px;
+				margin: 20px 0px 20px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			#chiliImg
+			{
+				position: relative;
+				float: right;
+				margin: 30px 0px 0px 10px;
+			}
+			.mybutton
+			{
+				font-size: 32px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: normal;
+				width: 700px;
+				height: 50px;
+				line-height: 50px;
+				margin: 10px auto 20px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: block;
+				outline: none;
+				border-radius: 12px;
+				box-shadow: 2px 2px 11px #888888;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			.jspPane {top: -610px;}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+					var $scrollElement;
+					var currentItem = -1;
+					var numItems = 0;
+					var isSelected = false;
+					var tryCount=0;
+					var score=0;
+					var userSelecteditem="";
+			$(document).ready(function()
+			{	
+			parent.GetWorldEvent("EasyLoaded");			
+				//lock the buttons
+				LockSimple();
+				
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000, contentWidth: '0px'});
+			});
+			function Start(){
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000, contentWidth: '0px'});
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function LockSimple()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITHOUT animation
+				$( ".mybutton" ).css( 'backgroundColor', '#474747' );
+				$( ".mybutton" ).css( 'color', 'gray' );
+			}
+			
+			//NOTE! THIS IS NOT THE UNLOCK FUNCTION FOR QUESTIONS WITH A CORRECT OR INCORRECT ANSWER! THIS IS ONLY TO BE USED FOR SOMETHING LIKE A CONTINUE BUTTON.
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//play clicked sound
+					parent.PlaySound('clicked0.wav');
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");	
+					
+					
+					//animate the font size of clicked option
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//lock button and sent Stop call to ASAT
+					Lock();
+					//return parent.GetWorldEvent("Correct");
+					return parent.GetWorldEvent("userAnswer_Correct_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a58870"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #a58870;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					//$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			function ShowMediaAnswer()
+			{
+				/*if(currentItem == 0)
+				{
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+					
+				} */
+				
+				// no answer to show on this page since it's a passage page
+				//$("#" +"b2").animate({backgroundColor: "green", color: "white"}, 1000);
+			}
+			 function GetMediaEvent(data)
+			    {
+					if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+					else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Easy");
+				}	
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else
+				if (data=="NextPage")
+				{
+				// no next page, so it stops here
+				parent.nextPage("media/"+"Lesson25-Main0-2a.html?score="+(score));
+				//window.location="Lesson25-Main0-2a.html?score="+(score);
+				}
+				
+				}
+		</script>
+	</head>
+	<body onload="Start();">
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Hot and Spicy Chili Recipe
+				</div>
+				<div id="para1" class="para">
+					<img src="chili0.png" id="chiliImg">
+					<ul>
+						<li>2 tablespoons olive oil</li>
+						<li>1 cup chopped onion</li>
+						<li>1 cup chopped red bell pepper</li>
+						<li>2 cups chopped tomato</li>
+						<li>2 teaspoons freshly ground black pepper</li>
+						<li>1 teaspoon salt</li>
+						<li>1 teaspoon crushed red chili pepper</li>
+						<li>6 cups chicken broth</li>
+						<li>3 (15-ounce) cans unsalted cannellini beans, rinsed, drained, and divided</li>
+						<li>2 (15-ounce) cans unsalted kidney beans, rinsed, drained, and divided</li>
+						<li>1 cup of spinach</li>
+					</ul>
+					
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>First, heat a large Dutch oven over medium-high heat. Then, add oil to pan; swirl to coat. Then, add onion and 1 cup chopped red bell pepper. Next saut&eacute; 4 minutes. Now, add tomato and 2 teaspoons freshly ground black pepper, 1 teaspoon salt, 1 teaspoon crushed red chilli pepper. After, bring to a boil; cook until liquid is reduced by half (about 1 minute). Next, stir in stock. Also add 1 can kidney beans in a medium bowl. Now, mash. Afterwards, add bean mixture and remaining beans to pan. Then, bring to a simmer. Cook 5 minutes. Finally, add the spinach.
+				</div>
+			<div class='mybutton' id="b1" value="Correct">Click HERE to continue . . .</div>
+			</div>
+			<!--<div class='mybutton' id="b1" value="Correct">Click HERE to continue . . .</div>-->
+		</div>
+	</body>
+</html>

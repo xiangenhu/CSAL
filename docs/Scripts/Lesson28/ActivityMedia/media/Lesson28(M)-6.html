@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L28Bkgd(M).jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.Helper
+			{
+				border-radius: 12px;
+				
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 24px;
+				padding: 15px 30px 0px 30px;
+				line-height: 38px;
+				color: #212121;
+			}
+			#mainTextHead
+			{
+				font-family: 'Bree Serif', Verdana, 'Times New Roman';
+				font-size: 46px;
+				line-height: 56px;
+				margin: 10px 0px 15px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.textImg
+			{
+				border: 2px solid white;
+			}
+			#img1
+			{
+				float: right;
+				margin: 10px 0px 0px 20px;
+				height: 275px;
+			}
+			#img2
+			{
+				float: left;
+				margin: 10px 20px 0px 0px;
+				height: 200px;
+			}
+			#img3
+			{
+				float: right;
+				margin: 10px 0px 0px 20px;
+			}
+			#img4
+			{
+				float: left;
+				margin: 10px 20px 0px 0px;
+				height: 200px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 180px;
+				background-color: #212121;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}		
+			#questionText
+			{
+				text-align: center;
+				font-size: 24px;
+				padding: 10px 10px 0px 10px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 780px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 760px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">
+		   var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;			
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
+					var helpColor = "Purple";
+			var correctAnswer = "#b3";
+		
+			$(document).ready(function()
+			{		
+				Start();
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "Scroll");
+			});
+			
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+			function Start()
+			{
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			
+			function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+			
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					
+				}
+			}
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-67);
+			}
+			
+			
+			
+			
+			function ShowMediaAnswer()
+			{
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				$(".Helper").animate({backgroundColor: helpColor, color: "white"}, 1000);
+				//$(".hideAnswer").animate({backgroundColor: "transparent"}, 300);
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						parent.PlaySound('clicked0.wav'); 
+						strId+="1";
+						//parent.GetWorldEvent(strId.length);
+					}
+					else {
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).stop().animate({backgroundColor: "#edff73", color: "#212121"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).stop().animate({backgroundColor: "white", color: "#212121"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				
+				
+				//go to next page
+				if (data == "NextPage")
+				{	
+				//*********
+					parent.nextPage("media/"+"Lesson28(M)-7.html?id="+strId);
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Medium");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b3").attr("value");
+					$("#b3").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad1")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad2")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				
+				else if(data=="bothAnswer")
+				{
+				  if (userAnswer=="Correct")
+				  {
+					userAnswerCode="C";
+				  }
+				  else if(userAnswer=="Incorrect1")
+				  {
+				  userAnswerCode="I1";
+				  }
+				  else if(userAnswer=="Incorrect2")
+				  {
+				  userAnswerCode="I2";
+				  }
+				   if (JordanAnswer=="Correct")
+				  {
+					JordanAnswerCode="C";
+				  }
+				  else if(JordanAnswer=="Incorrect1")
+				  {
+				  JordanAnswerCode="I1";
+				  }
+				  else if(JordanAnswer=="Incorrect2")
+				  {
+				  JordanAnswerCode="I2";
+				  }
+				  var getScore=userAnswerCode+JordanAnswerCode;
+				  parent.GetWorldEvent(getScore);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<div id="mainTextHead">
+					Historic Drought Drains a Thirsty California
+				</div>
+				
+				<div id="para1" class="para">
+				<span class="indent"></span>A historic drought has broken records across<img src="CaliMap.png" id="img1" class="textImg"> the western U.S. For a long time, there has been very little rain. The thirsty area now includes a dozen states, from southern Texas to the northern Rocky Mountains.
+				</div>
+				
+				<div id="para2" class="para">
+				<span class="indent"></span>That land produces a third of the U.S.'s beef. It produces half of its fruit, vegetables, and wheat. Prices for those products have gone up. California has been hurt the most. There have been no winter rains for three years. Nearly 60 percent of the state is at the highest level of drought. And weather experts say there is no hope that will change very soon.
+				</div>
+				<div id="para3" class="para">
+				<span class="indent"></span>California droughts are not new. They happen every 10 or 20 years. Before modern history, some of them lasted much longer.<img src="DryRiverbed.png" id="img2" class="textImg"> Experts say there were droughts that lasted 50 years. But that was before millions of people lived on the coast. It was before the state's Central Valley grew much of the nation's food.
+				</div>
+				<div id="para4" class="para">
+				<span class="indent"></span>It is now the worst drought in recorded history. A University of California study says it has led to the "greatest water loss ever seen" for the state's farmland.
+				</div>
+				<div id="para5" class="para">
+				<span class="indent"></span>But farmers did not really need a study to tell them that. There is no snow on the tops of the Sierra Nevada mountains. Melting winter snow normally provides much of the water that flows into reservoirs that collect and store water. But there is not enough to release into the canals that carry it to the fields.
+				</div>
+				<div id="para6" class="para">
+				<img src="Overview.png" id="img3" class="textImg"><span class="indent"></span>This year, farmers used wells to get underground water. These stores of water are called aquifers. Now the wells are starting to go dry. Some farmers are waiting six to eight months for drilling companies to dig new ones. <span id="Scroll" class="Helper">In some areas, the aquifers are being used so quickly that the land is sinking. <span style="text-decoration: underline;">It looks like a bowl of cereal after the milk has been taken out.</span></span>
+				</div>
+				<div id="para7" class="para">
+				<span class="indent"></span>The University of California study said the state's aquifers could soon be empty if pumping continues. One of its authors is Richard Howitt. He said the problem is like a "slow-moving train wreck." Damage to the aquifers is serious. Rain or melted snow can fill an empty reservoir in a few years. But it would take decades to fill water storage underground.
+				</div>
+				<div id="para8" class="para">
+				<span class="indent"></span>Farms use 41 percent of the state's water. City water systems use only 9 percent. Some farmers got 75 percent of their normal amount this year. Some got nothing at all. They blame laws that save large amounts of water for the environment. They also blame policies that allow cities to grow in very dry areas.
+				</div>
+				<div id="para9" class="para">
+				<img src="Political.png" id="img4" class="textImg"><span class="indent"></span>Experts and lawmakers are trying to find solutions. One of them might be new reservoirs or other types of water storage. But one thing is clear: There is just not enough water for everybody. All sides will have to work with less.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				What is the author trying to convey in the underlined sentence?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Incorrect1">
+					A. The aquifers are drowning the land.
+				</div>
+				<div class='mybutton' id="b2" value="Incorrect2">
+					B. The farmers use aquifers to feed the land like a milk cereal. 
+				</div>
+			
+				<div class='mybutton' id="b3" value="Correct">
+					C. The land is drying and sinking because aquifers are used too quickly. 
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

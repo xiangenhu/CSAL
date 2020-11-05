@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="ComputerStudent1" gender="Male" title="Student" firstName="ComputerStudent1" lastName="" displayName="ComputerStudent1">
+      <SpeechCan name="Pump">
+        <Item text="_user_ try to answer the question." speech="" play="_user_,B1" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="" play="_user_,B2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_ I don't think that's the right answer." speech="" play="_user_,B3" />
+        <Item text=" _user_, I don't think your  answer was right. " speech="" play="_user_,B4" />
+        <Item text="_user_, that wasn't the right answer." speech="" play="_user_,B5" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_ Good! You got it right!" speech="" play="_user_,B6" />
+        <Item text="_user_ Super! You got it!" speech="" play="_user_,B7" />
+        <Item text=" _user_ Great job! You answered right!" speech="" play="_user_,B8" />
+        <Item text="_user_ You answered correctly! Awesome job!" speech="" play="_user_,B9" />
+        <Item text="_user_ Amazing, you're doing great!" speech="" play="_user_,B10" />
+        <Item text="_user_ Magnificent!" speech="" play="_user_,B11" />
+        <Item text="_user_ Exactly, you nailed it!" speech="" play="_user_,B12" />
+        <Item text="_user_ , Wow, that's it! " speech="" play="_user_,B13" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="ComputerTutor" gender="Female" title="Teacher" firstName="ComputerTutor" lastName="" displayName="ComputerTutor">
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Ok _user_ here is the answer." speech="" play="A1,_user_,A2" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoUser">
+        <Item text="_user_, sorry. that wasn't what I was looking for." speech="" play="_user_,A3" />
+        <Item text="_user_, Well, not quite, That wasn't the right choice." speech="" play="_user_,A4" />
+        <Item text="_user_, it looks like you picked the wrong answer." speech="" play="_user_,A5" />
+        <Item text="_user_, sorry but that wasn't the best answer." speech="" play="_user_,A6" />
+      </SpeechCan>
+      <SpeechCan name="JordanNegativeFeedback">
+        <Item text="ComputerStudent1, you didn't pick the correct answer!" speech="" play="A7" />
+        <Item text="ComputerStudent1, you actually got that question wrong!" speech="" play="A8" />
+        <Item text="ComputerStudent1, that's not right!" speech="" play="A9" />
+        <Item text="ComputerStudent1, you gave an incorrect answer." speech="" play="A10" />
+        <Item text="ComputerStudent1, you were wrong." speech="" play="A11" />
+        <Item text="ComputerStudent1, sorry, that's not right." speech="" play="A12" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackFinal">
+        <Item text="_user_, Well, actually, that is not what I was looking for." speech="" play="_user_,A13" />
+        <Item text="_user_, unfortunately your answer is not correct." speech="" play="_user_,A14" />
+        <Item text="_user_, Oh sorry, that isn't what I was looking for" speech="" play="_user_,A15" />
+        <Item text="_user_, Not exactly, good try" speech="" play="_user_,A16" />
+        <Item text="_user_, Well, that wasn't what I was thinking. Here is the best choice in green" speech="W " play="A17" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoUser">
+        <Item text="_user_ Great job." speech="" play="_user_,A18" />
+        <Item text="_user_, Good. That is right." speech="" play="_user_,A19" />
+        <Item text=" _user_  You are correct." speech="" play="_user_,A20" />
+        <Item text="_user_, Perfect. You got it right." speech="" play="_user_,A21" />
+        <Item text="_user_ great. You answered correctly." speech="" play="_user_,A22" />
+        <Item text=" _user_. You got it right." speech=" " play="_user_,A23" />
+        <Item text="_user_, Exactly. You are right." speech="" play="_user_,A24" />
+        <Item text="_user_, Amazing. You are correct." speech="" play="_user_,A25" />
+        <Item text="_user_, Awesome job. You answered correctly." speech="" play="_user_,A26" />
+        <Item text="_user_, excellent work. You are right." speech="" play="_user_,A27" />
+        <Item text="_user_, Brilliant job. You got it right." speech="" play="_user_,A28" />
+        <Item text="_user_, Perfect. Good work." speech="" play="_user_,A29" />
+        <Item text="_user_, Well done. You are correct." speech="" play="_user_,A30" />
+        <Item text="_user_, That's correct. You're doing beautifully." speech="" play="_user_,A31" />
+        <Item text="_user_, you got it. Keep up the good work." speech="" play="_user_,A32" />
+      </SpeechCan>
+      <SpeechCan name="PostiveFeedbacktoUserT">
+        <Item text="_user_, great job typing. This contains everything that was asked in the question" speech="" play="_user_,A33" />
+      </SpeechCan>
+      <SpeechCan name="JordanPositiveFeedback">
+        <Item text="ComputerStudent1, Wonderful. You answered the question correctly." speech="" play="A34" />
+        <Item text="ComputerStudent1, Amazing. That's right." speech="" play="A35" />
+        <Item text="ComputerStudent1, That's right." speech="" play="A36" />
+        <Item text="ComputerStudent1, great work. You got it right." speech="" play="A37" />
+        <Item text="ComputerStudent1, Awesome work. That's it." speech="" play="A38" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoBoth">
+        <Item text="Sorry you two that wasn't what I was looking for." speech="" play="A39" />
+        <Item text="Sorry but you both answered incorrectly." speech="" play="A40" />
+        <Item text="Unfortunately neither of you gave me the answer that I was looking for." speech="" play="A41" />
+        <Item text="Sorry you two. That wasn't right. " speech="" play="A42" />
+        <Item text="Not quite. You both got that one incorrect. " speech="" play="A43" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbacktoUserT">
+        <Item text="_user_, try typing something that contains everything that was asked in the question" speech="" play="_user_,A44" />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="_user_, try your best and answer the question." speech="" play="_user_,A45" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Great work. you are both correct." speech="" play="A46" />
+        <Item text="Phenomenal work. You are both right." speech="" play="A47" />
+        <Item text="Great answers, both of you. Outstanding work." speech="" play="A48" />
+        <Item text="that's correct. Nice job you two." speech="" play="A49" />
+        <Item text="That's right. You two are doing great." speech="" play="A50" />
+        <Item text="Excellent work. You are both right." speech="" play="A51" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="_user_, if you are having trouble with the passage, feel free to read along with the audio." speech="_user_, if you are having trouble with the passage, feel free to read along with the audio." play="_user_,A52" />
+        <Item text="_user_ If you are having trouble reading the passage, then you can read along with the audio, All you have to do is press the read audio button" speech="_user_ If you are having trouble reading the passage, then you can read along with the audio, by pressing the read audio button" play="_user_,A53" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="Question">(what|how|why|do have|modal|wh|be|should)</SpeechAct>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+    <SpeechAct name="Negation">\b(never|not|nor|neither|'t)\b</SpeechAct>
+    <SpeechAct name="ComparisonKey">\b(differences|similarity(ies)|distinguish|separate|vary|discriminate|contrast|differ|same|different|similar|like|differ|less|related|compare|JJR|tell.*from|between*.())\b</SpeechAct>
+    <SpeechAct name="GoalOrientation">\b(motivation|motives?|reasons?|grounds|principles?|intentions?|consideration|attraction|temptation|charm|pull|incentive|stimulus|aim|ends?|destination|goals?|target|fascination|induces?d?|possess(ed)?(es)?|move[sd]|inspires?d?|prompts|purposes?|seeks?|plans?|contemplate|desire|pursue|aims?|aspire|stimulates?d?|thinking of|rouses|incites?d?|provokes?d?|instigates?d?|encourages?d?|tempts?(ed)?|fascinates?d?|lures?d?)\b</SpeechAct>
+    <SpeechAct name="QuantificationKey">\b(many|amount|number|sum|distance|measurement|length|width|size|height|average|total|approximation)\b</SpeechAct>
+    <SpeechAct name="InterpretationKey">\b(meaning|significance|sense|essence|spirit|suggestions?|interpretations?|explanations?|diagnosis|solution|answer|rendition|translation|commentary|inference|deduction|imply|[Ll]ink|[Cc]omment|[Ee]xplain(ed)?|[Ii]nterpret|[Gg]uess|signify|denote|[Ee]xpress|convey|[Ii]ndicate|declare|involve|affirm|[Ss]tate|construed?|translate|infer(red)?|render|[Ss]olve|disentangled?|unravel(ed)?|[Cc]haracterized?|[Cc]larify?(ied)?|[Ee]xplain(ed)?)\b</SpeechAct>
+    <SpeechAct name="ProceduralKey">\b(plan|scheme|design|proposal|suggestion|arrangement|outline|program|method|way|manner|form|mode|procedure|route|steps|process|used?)\b</SpeechAct>
+    <SpeechAct name="DefinitionKey">\b(definition|meaning|understand|means?|[Dd]efine)\b</SpeechAct>
+    <SpeechAct name="ExampleKey">\b(example|type|kind|claim|evidence|illustration|instance|support|evidence|prototype|standard|exemplar|picture|case|demonstration|show|demonstrate|exemplify|illustrate|qualify|typical|model|standard|exemplar)\b</SpeechAct>
+    <SpeechAct name="FeatureSpecificationKey">\b(characteristics|color|parts|features|sound|properties|attributes|shape|smell|taste|look|feel|sound|dimension|[Ss]pecify|[Ll]ist|[Dd]escribe|[Cc]haracterize)\b</SpeechAct>
+    <SpeechAct name="EnablementKey">\b(tools|useful|helpful|indicated|help|need(ed)?|required?|help|allows?|necessary|in order to)\b</SpeechAct>
+    <SpeechAct name="EXPECTATIONALKEY">\bHAPPEN_E</SpeechAct>
+    <SpeechAct name="VERIFICATIONPAT">^@(MODAL|DOHAVE|BE).*?(NN|JJ|DT)</SpeechAct>
+    <SpeechAct name="DEFINITIONPAT">(@(WHAT|DOHAVE|MODAL|BE).*?DEFINITIONKEY|@WHAT DT? NN @BE|@WHAT @BE DT NN|@WHAT @BE.*?)</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTKEY">\b(reason|causes?d?|allows?(ed)?|led|leads|stems?(ed)?|occurs?(ed)?|transpires?(ed)?|made|because|unless)\b</SpeechAct>
+    <SpeechAct name="CAUSAL_CONSEQUENTKEY">\b(outcomes?|results?|consequences?|effects?|conclusion|HAPPENS)\b</SpeechAct>
+    <SpeechAct name="DisjunctionKey">\bor</SpeechAct>
+    <SpeechAct name="JudgmentalKey">\b(SHOULD|thoughts?|judgments?|decisions?|findings?|opinions?|assessments?|beliefs?|views?|impressions?|conceptions?|conclusions?|decide|decisions?|findings?|find|conceive|realizations?|realize|rate|understanding?|recommend|impressions?|recognize|think|consider|believe|advise|conclude|indicate)\b</SpeechAct>
+    <SpeechAct name="NOUN">(NNPS|NNP|NNS|NNX|NPX|NN)</SpeechAct>
+    <SpeechAct name="ADJADV">(RBR|RBS|RB|JJ)</SpeechAct>
+    <SpeechAct name="@WHY">\b[Ww]hy\b</SpeechAct>
+    <SpeechAct name="@HOW ">\b[Hh]ow\b</SpeechAct>
+    <SpeechAct name="@WHAT">\b[Ww]hat\b</SpeechAct>
+    <SpeechAct name="@SHOULD">[Ss]hould</SpeechAct>
+    <SpeechAct name="HAPPENS HAPPENED HAPPEN_E">happens?(ed)?</SpeechAct>
+    <SpeechAct name="DISJUNCTIONPAT">@(MODAL|SHOULD|DOHAVE|BE).*?DISJUNCTIONKEY</SpeechAct>
+    <SpeechAct name="EXAMPLEPAT">@(WHAT|MODAL|SHOULD|DOHAVE|BE).*?EXAMPLEKEY</SpeechAct>
+    <SpeechAct name="QUANTIFICATIONPAT">@(WHAT.*?QUANTIFICATIONKEY|HOW.*?(ADJADV|QUANTIFICATIONKEY)|MODAL.*?PRON.*?QUANTIFICATIONKEY)</SpeechAct>
+    <SpeechAct name="FEATURE_SPECIFICATIONPAT">(@WHAT.*?FEATURE_SPECIFICATIONKEY|@BE DT.*?PREP.*?NN)</SpeechAct>
+    <SpeechAct name="CONCEPT_COMPLETIONPAT">@(WHAT|WH).*?NN</SpeechAct>
+    <SpeechAct name="ENABLEMENTPAT">@(WHAT|WH|HOW|WHY).*?ENABLEMENTKEY</SpeechAct>
+    <SpeechAct name="JudgmentalPat">(PRP.*?JUDGEMENTALKEY|(SHOULD|JUDGEMENTALKEY).*?(PRP|NN))</SpeechAct>
+    <SpeechAct name="EXPECTATIONALPAT">@((WHY|HOW).*?NEG|MODAL.*?CAUSAL_CONSEQUENTKEY.*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="Casual_ConsequentPat">@(WHAT|DO).*?CAUSAL_CONSEQUENTKEY</SpeechAct>
+    <SpeechAct name="ComparisonPat">@(WHAT|WH|HOW|MODAL.*?PRP).*?COMPARISONKEY</SpeechAct>
+    <SpeechAct name="INSTRUMENTALPAT">@(HOW.*?@(MODAL|SHOULD|DOHAVE).*?(NN|PRP)|(WHAT|HOW|WHY|WH).*?PROCEDURALKEY|MODAL.*?PRP.*?PROCEDURALKEY)</SpeechAct>
+    <SpeechAct name="GOAL_ORIENTATIONPAT">@(WHY.*?(@DOHAVE|MODAL|BE).*?(PRP|GOALORIENTATIONKEY)|@(WHAT|WH).*?(GOAL_ORIENTATIONKEY|MODAL))</SpeechAct>
+    <SpeechAct name="CAUSAL_ANTECEDENTPAT">@((WHY|HOW).*?@(DOHAVE|BE|MODAL|SHOULD).*?(VB|CAUSAL_ANTECEDENTKEY)|(WHAT|HOW|WHY|WH).*?CAUSAL_ANTECEDENTKEY)</SpeechAct>
+    <SpeechAct name="INTERPRETATIONPAT">INTERPRETATIONKEY</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Transition7" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Ok, now let's help ComputerStudent1 write the email. First we need a subject, or title for the email." speech="" play="A54" />
+    </RigidPack>
+    <RigidPack name="Transition9" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Good job sending the message to Erica. Whenever you send a message, you will be directed back to your inbox. Or you can be directed back to another message, similar to what was just done. It looks like ComputerStudent1 has a meeting today. Let's read it to see what it's about" speech="Good job sending the message to Erica. Whenever you send a message, you will be directed back to your inbox. Or you can be directed back to another message, similar to what was just done. It looks like ComputerStudent1 has a meeting today. Let's reed it to see what it's about" play="A55" />
+      <Item id="2" agent="ComputerStudent1" text="The message is from Ms. Johnson and Dr. Arthur. It's reminding me i have a meeting with Dr. Arthur at 3 o clock today. " speech="" play="B14" />
+      <Item id="3" agent="ComputerTutor" text="I think it is important to send a friendly message back to thank Jeanine Johnson for the reminder about your meeting with Dr. Arthur. And confirmation to Dr. Arthur telling him you will be at the meeting." speech="" play="A56" />
+    </RigidPack>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, welcome back." speech="_user_ and ComputerStudent1, welcome back." media="media\Lesson33-IntroTitle.html" play="_user_,A57" />
+      <Item id="2" agent="ComputerStudent1" text="ComputerTutor! I am having a dilemma! I have a new email account that I don't know how to use!" speech="" play="B15" />
+      <Item id="3" agent="ComputerTutor" text="Well ComputerStudent1, we can help you with that. _user_, I bet you can help answer questions ComputerStudent1 may have." speech="" play="A58,_user_,A59" />
+      <Item id="4" agent="ComputerStudent1" text="_user_, would you help me!? That would be great! Okay, i'm ready to learn!" speech="" play="_user_,B16" />
+      <Item id="5" agent="ComputerTutor" text="Great let's get started!" speech="" media="media\Lesson33-0-0.html" play="A60" />
+      <Item id="6" agent="ComputerStudent1" text="Cool! Ok, here is the login page for my account. I guess this is how we get into my email?" speech="" play="B17" />
+      <Item id="7" agent="ComputerTutor" text="Yes. To get into ComputerStudent1's account, we first need to log him in. Many email accounts will have different login styles but they all require you to do the same thing, which is put in your username and password. The username and password prevent people other than you from getting into your email. Remember, never share those with anyone." speech="" play="A61" />
+      <Item id="8" agent="ComputerStudent1" text="I already entered my username and password." speech="" play="B18" />
+      <Item id="9" agent="ComputerTutor" text="ComputerStudent1, thanks. _user_, press the login button whenever you're ready to look at ComputerStudent1's account." speech="" play="A62,_user_,A63" />
+    </RigidPack>
+    <RigidPack name="Transition9111" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Great message to Ms. Johnson and Dr. Arthur. It looks like we answered all of the urgent messages in ComputerStudent1's inbox. Let's go ahead and sign out. I think we're done for the day." speech="" play="A64" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_, thank you for helping ComputerStudent1 type and send emails and explore his new account. ComputerStudent1 has now been signed out of his email account. In order to log back in he must reenter his password in the password box below." speech="" media="media\Lesson33-Close.html" play="_user_,A65" />
+      <Item id="2" agent="ComputerStudent1" text="_user_, you were such a big help! thank you! ComputerTutor I think I will log back in later on to check my inbox for new emails." speech="" play="_user_,B19" />
+      <Item id="3" agent="ComputerTutor" text="Great idea. You two have a wonderful day and see you soon." speech="" play="A66" />
+      <Item id="4" agent="ComputerStudent1" text="Thanks again everyone. See you both later." speech="" media="media\Lesson33-IntroTitle.html" play="B20" />
+    </RigidPack>
+    <RigidPack name="Transition4" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Now that we have the normal email out of the spam folder we can delete the spam emails. You will notice that your spam folder will constantly be full of messages. It is important that you always empty it out." speech="" play="A67" />
+      <Item id="2" agent="ComputerStudent1" text="I'm confused about deleting email. For instance, there is the trash folder and the picture of the trash at the top of the screen. Whats the difference?" speech="" play="B21" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, Good question. Typically, if you place emails in the trash folder, you can open the folder to view the emails again. Also, you may choose to bring an email you thought you wanted in the trash back out to the inbox. On the other hand, when you put mail in the trash icon, or the picture of a trash can, you cannot get these messages again. They will be permanently deleted." speech="" play="A68" />
+      <Item id="4" agent="ComputerStudent1" text="Oh ok. So if i am sure i do not want emails in my account, i should move them to the trash bin. Well i definitely do not want the spam in my email account." speech="" play="B22" />
+    </RigidPack>
+    <RigidPack name="Transition911" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Now that we have a good subject line, let's help ComputerStudent1 write the message to Jeanine and Dr. Arthur." speech="" play="A69" />
+    </RigidPack>
+    <RigidPack name="Transition1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_,  great work. ComputerStudent1 is logged into his account." speech="" play="_user_,A70" />
+    </RigidPack>
+    <RigidPack name="Transition2" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Ok, now lets talk about different types of email that can show up inside of an inbox. There will be two important kinds: real email and fake email." speech="" play="A71" />
+      <Item id="2" agent="ComputerStudent1" text="ComputerTutor, what about spam email? People always are saying how bad spam mail is. Shouldn't we talk about spam email too?" speech="" play="B23" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, good point. You should know that a common name for fake email is spam. So when people talk about spam, they are talking about fake email. Spam is dangerous because people who send it may try to steal your information and take over your email account. It is important to be able to tell the difference between real email and spam." speech="" play="A72" />
+    </RigidPack>
+    <RigidPack name="Transition6" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="Wow. it looks like Erica and Rachel are having a party. I can make chili and bring it for everyone to eat." speech="" play="B24" />
+      <Item id="2" agent="ComputerTutor" text="ComputerStudent1, before you put your apron on and start cooking, let's take a look and see what the message says, and make sure you are invited." speech="" play="A73" />
+    </RigidPack>
+    <RigidPack name="Transition8" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Now that we have a good subject line for the email, let's try typing the message for ComputerStudent1." speech="" play="A74" />
+    </RigidPack>
+    <RigidPack name="Transition3" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Let's look in the spam folder to see if all of the spam emails have been moved there." speech="" play="A75" />
+      <Item id="2" agent="ComputerStudent1" text="There they all are! Hey, wait a second... There is an email in the spam folder from my friend Erica. But it's not spam!" speech="" play="B25" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, it looks like this email was sent to the spam folder by mistake. Sometimes this happens when your email account does not recognize the email address of the sender. Don't worry, we can move it to the inbox. Moving it to the inbox tells ComputerStudent1's email account to place messages from Erica into the inbox folder. Future emails from Erica should no longer end up in the spam folder." speech="" play="A76" />
+    </RigidPack>
+    <RigidPack name="Transition5" usedIn="">
+      <Item id="1" agent="ComputerStudent1" text="_user_, thanks for all of your help with emptying the spam folder." speech="" play="_user_,B26" />
+      <Item id="2" agent="ComputerTutor" text="Yes, great work. Now let's go back to the inbox again and find the email from ComputerStudent1's friend, Erica." speech="" play="A77" />
+    </RigidPack>
+    <RigidPack name="Transition91" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Ok, let's begin writing the email." speech="" play="A78" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TPA1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="It's important to know the difference between the folders in an email account. Let's look at the folders in ComputerStudent1's account. They are listed on the left side of the screen, at the top. There is the inbox folder, the outbox folder, the trash folder and the spam folder. _user_, can you select the inbox folder for me?" speech="" media="" itemDif="0.1" play="A79,_user_,A80">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Here is the inbox, at the top of the folder list. It is highlighted green. The inbox holds all of ComputerStudent1's current emails." speech="" keys="any" threshold="" test="" play="A81" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_, please select the inbox." speech="" keys="any" threshold="" test="" play="_user_,A82" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_, Which folder is the inbox? Give it another go." speech="" keys="any" threshold="" test="" play="_user_,A83" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA2">
+      <Questions>
+        <Question id="2" agent="ComputerStudent1" text="_user_, since ComputerTutor is talking about spam mail,  I've selected two emails that I believe to be spam. Do you think these two emails are spam? Choose one of the answers below." speech="" media="" itemDif="0.1" play="_user_,B27">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="These are both examples of spam emails. Note that spam mail looks different from normal emails, they have funny characters and weird sayings, like click here to claim cash. Since we identified the two selected emails as spam, I am going to move them to the spam folder." speech="" keys="any" threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please decide whether these emails are spam. Select an answer below." speech="" keys="any" threshold="" test="" play="A85" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Try it again. Are these emails considered spam email? Select one of the answer options." speech="" keys="any" threshold="" test="" play="A86" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA3">
+      <Questions>
+        <Question id="3" agent="ComputerStudent1" text="_user_, i've already selected the email from my friend Erica and I need to move back to the inbox folder. Can you help me move this email to the inbox folder by pressing on the correct folder for me?" speech="" media="" itemDif="0.1" play="_user_,B28">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The email entitled Erica and Rachel's party was sent to the spam folder. ComputerStudent1's email account did not recognize the email address from the sender and placed it inside of this folder. This sometimes happens and you will want to move emails like this back to the inbox." speech="" keys="any" threshold="" test="" play="A87" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please move the email back to the right folder" speech="" keys="any" threshold="" test="" play="A88" />
+            <Answer name="A" agent="ComputerTutor" type="A" text="You selected the inbox folder. That was the correct folder. Erica's email has been moved there. Great work." speech="" keys="any" threshold="" test="" play="A89" />
+            <Answer name="B" agent="ComputerTutor" type="B" text="You selected the outbox folder, the correct folder is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A90" />
+            <Answer name="D" agent="ComputerTutor" type="D" text="You selected the spam folder, the right folder is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A91" />
+            <Answer name="C" agent="ComputerTutor" type="C" text="You selected the trash folder, the folder that should have been picked is the inbox folder. Its at the top of the folder list and i have highlighted it green to indicate it is the correct folder. I went ahead and moved Erica's email there." speech="" keys="any" threshold="" test="" play="A92" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="" kc="">
+          <Answers />
+          <Hints />
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA4">
+      <Questions>
+        <Question id="4" agent="ComputerStudent1" text="_user_, which button do I press to get rid of the spam messages? The spam mail has been selected, all you have to do is press on the correct button." speech="" media="" itemDif="0.1" play="_user_,B29">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="To delete messages you always press on the trash bin. You can tell which button is the trash bin because it will typically look like a picture of a garbage can. In ComputerStudent1's account, we see it at the top of the screen. The trash bin will delete the emails you selected. When you select emails to delete be sure that you really want to get rid of them because once you press on the trash bin the emails are deleted forever." speech="" keys="any" threshold="" test="" play="A93" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select a button to delete the spam emails." speech="" keys="any" threshold="" test="" play="A94" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA5">
+      <Questions>
+        <Question id="5" agent="ComputerTutor" text="Remember, we moved this email from the spam folder to the inbox folder. _user_, will you press on the email from ComputerStudent1's friend, Erica?" speech="" media="" itemDif="0.1" play="A95,_user_,A96">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The top email is the message from ComputerStudent1's friend. The title, or subject, of the email is Erica and Rachel's party invite." speech="" keys="any" threshold="" test="" play="A97" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please press on the email from ComputerStudent1's friend." speech="" keys="any" threshold="" test="" play="A98" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA6">
+      <Questions>
+        <Question id="6" agent="ComputerStudent1" text="ComputerTutor, it looks like the party is the twelveth and i am invited! I'd like to help Erica set up her party this weekend. _user_, can you send her a message for me and tell her that? Which button would I press to reply to her to begin typing?" speech="" media="" itemDif="0.1" play="B30,_user_,B31">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="You should press on the reply button. This will allow you to reply only to Erica in the message. The reply all button will send a message to Erica and everyone else in the class. Sometimes you may not want to respond to everyone in class, it depends on what you want to say." speech="" keys="any" threshold="" test="" play="A99" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer. " speech="" keys="any" threshold="" test="" play="A100" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA7">
+      <Questions>
+        <Question id="7" agent="ComputerTutor" text="_user_, can you type in an appropriate subject line? A subject line should tell the receiver the main reason why you're sending the email. Since this is an email from ComputerStudent1 telling Erica that he wants to help with the party, the subject line should say this." speech="" media="" itemDif="0.1" play="_user_,A101">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a very fitting subject line for our email to ComputerStudent1's classmate. Here is another example of a good subject line" speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold="0.5" test="" play="A102" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="_user_, thanks. Displayed here is an example of an appropriate subject line" speech="" keys="any" threshold="" test="" play="_user_,A103" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="_user_ when writing a subject line, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subject line “Running late to meeting.” Use this idea to create a subject line for Erica and Rachel’s party." kc="">
+          <Answers>
+            <Answer name="Good Answer" agent="ComputerTutor" type="Good" text="That is a really good subject line. Great work typing it in." speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A104" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="ComputerTutor" text="_user_, when writing a subject line, make sure it entails the message you want the receiver to know before they open it. So for example, if I want to send a message to my boss about running late to a meeting I’d make the subject line “Running late to meeting.” Use this idea to create a subject line for Erica and Rachel’s party." speech="" media="" play="_user_,A105">
+              <Answers>
+                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a great answer. I think you are on the right track." speech="" keys="\b(h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*)\b" threshold=".75" test="" play="A106" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA8">
+      <Questions>
+        <Question id="8" agent="ComputerTutor" text="_user_, can you write a message to Erica telling her that ComputerStudent1 would like to help her set up for the party this weekend? It is always important to address the receiver when you first start a message, so please be sure to write a greeting such as, hi Erica and Rachel. You should also let them know who the email is from by using a signature at the end of a message. Something such as, from ComputerStudent1, or, thanks, ComputerStudent1. When you are finished please press the send email button." speech="" media="" itemDif="0.1" play="_user_,A107">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="_user_, here is an example of a good email to send" speech="" keys="any" threshold="" test="" play="_user_,A108" />
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That was a great message. Displayed here is another example of what a good email could be. It contains all of the appropriate information needed." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A109" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Hi Erica and Rachel! Thank you for sending out the invitation to me. I really would like to help you decorate for the party before hand, if that’s okay. Please let me know!-ComputerStudent1" kc="">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is really good email! Thank you for typing!" speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A110" />
+            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="That is not quite the answer I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A111" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="ComputerTutor" text="_user_ when writing an email, create a message that allows the receiver to know the exact purpose of your email. So in this case, telling the receivers that you can help for decorate for their party is a great message to relay." speech="" media="" play="_user_,A112">
+              <Answers>
+                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(Er[aie]l\w*|R[ae]\w*|h[ea]l\w*|s[ei]t\w*|up|par[td]\w*|even\w*|y[ou]\w*|hi\w*|h[ea]\w*|d[ea][ae]r\w*|th[ae]n\w*|j[ou]r\w*)\b" threshold=".7" test="" play="A113" />
+                <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="dog|cat|fish" threshold=".2" test="" play="A114" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA9">
+      <Questions>
+        <Question id="9" agent="ComputerStudent1" text="ComputerTutor, good idea. But how do I reply back to both Dr. Arthur and Jeanine Johnson? _user_, can you help? Please press the correct button for me." speech="" media="" itemDif="0.1" play="B32,_user_,B33">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Selecting reply all is the best option. There are two people on this current email, Jeanine Johnson and Dr. Arthur, and ComputerStudent1 wants to respond to them both." speech="" keys="any" threshold="" test="" play="A115" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Please select an answer." speech="" keys="any" threshold="" test="" play="A116" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA91">
+      <Questions>
+        <Question id="10" agent="ComputerTutor" text="Before we type the message remember we need an appropriate subject line. _user_, can you please type in a subject for ComputerStudent1 that says, Thank you for the reminder." speech="" media="" itemDif="0.1" play="A117,_user_,A118">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="_user_, I really think that is a great subject line. Displayed is another example of a good subject line." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold="0.5" test="" play="_user_,A119" />
+            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="_user_, can you please type a different subject in the subject line bar." speech="" keys="any" threshold="" test="" play="_user_,A120" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Thank you for the reminder" kc="">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is really good subject line. Great job typing it all in." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A121" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="ComputerTutor" text="_user_, when writing a subject line, make sure it encompasses the overall message you’d like to receiver to know. This way, they will have a general idea of the purpose of your message." speech="" media="" play="_user_,A122">
+              <Answers>
+                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a great answer! I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*)\b" threshold=".75" test="" play="A123" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="TPA911">
+      <Questions>
+        <Question id="11" agent="ComputerTutor" text="_user_,  Can you please tell Ms. Jeanine that ComputerStudent1 said thank you for reminding him about his meeting with Dr. Arthur. And can you tell Dr. Arthur that ComputerStudent1 will be at his office at 3." speech="" media="" itemDif="0.1" play="_user_,A124">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a nice email. Excellent work typing it all in. Displayed is yet another example of good email." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold="0.5" test="" play="A125" />
+            <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="_user_, try typing a different email that is more fitting." speech="" keys="any" threshold="" test="" play="_user_,A126" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="Hello Ms. Johnson, Thank you so much for the reminder email for my meeting today. Dr. Arthur, see you at 3 pm! I’m looking forward to it! Thank you, ComputerStudent1" kc="">
+          <Answers>
+            <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a really good email. Super job typing it all in." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A127" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="ComputerTutor" text="_user_, when writing an email to two people, it is important to address them both. Also, be sure to make the purpose of your email clear. Thank Jeanine Johnson for her reminder and let Dr. Arthur know that you will see him during your meeting. So a short and sweet email that says thank you will do just fine." speech="" media="" play="_user_,A128">
+              <Answers>
+                <Answer name="GoodAnswer" agent="ComputerTutor" type="Good" text="That is a great answer. I think you are on the right track." speech="" keys="\b(y[ou]\w*|th[ae]n\w*|rem[iye]n\w*|mess?\w*|mee?t\w*|j[eai]n\w*|art\w*|doc\w*|dr\w*|off?\w*|j[ou]r\w*)\b" threshold=".75" test="" play="A129" />
+                <Answer name="BadAnswer" agent="ComputerTutor" type="Bad" text="Oh that isn't quite what I was looking for." speech="" keys="any" threshold=".2" test="" play="A130" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts />
+        </Expectation>
+      </Expectations>
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="NextPage" id="1" />
+      <Action agent="System" act="WaitForEvent" data="60" id="2" />
+    </Rule>
+    <Rule name="NextPage" status="NextPage" response="" event="Stop1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="PageLoaded" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+    </Rule>
+    <Rule name="PageLoaded" status="PageLoaded" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="DeliverRigidPack" data="Transition1" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="TPA" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="9999" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="5" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="TP3" status="AskQ" response="" event="TP3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerTP3" id="1" />
+      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="JordanAskQ" status="AskQ" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskQ" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="CristinaAskTypingU" status="AskQ" response="" event="CristinaT" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerT" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="100" id="3" />
+    </Rule>
+    <Rule name="CorrectT" status="UserAnswerT" response="Main-Good" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAskedT" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TP3Correct" status="UserAnswerTP3" response="" event="CorrectTP3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="A" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="TP3Correct1" status="QAskedTP3" response="" event="TP3" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="A" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CAskedT" status="QAskedT" response="" event="CristinaT" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUserT" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAsked" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="JordanAsked" status="QAsked" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="AnyT" status="UserAnswerT" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="BlankT" status="UserAnswerT" response="Blank" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectJIT" status="UserAnswerT" response="Main-Bad" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoUserT" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+    </Rule>
+    <Rule name="IncorrectTP3" status="UserAnswerTP3" response="" event="IncorrectTP3D" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="D" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="IncorrectTP31" status="UserAnswerTP3" response="" event="IncorrectTP3C" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="C" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="IncorrectTP32" status="UserAnswerTP3" response="" event="IncorrectTP3B" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="B" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoUser" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="60" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackFinal" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbacktoUser" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HasExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetHint" id="1" />
+      <Action agent="System" act="GetHint" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoExpectation" status="GetExpectation" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+    </Rule>
+    <Rule name="HasHint" status="GetHint" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskHint" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="NoHint" status="GetHint" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GoBack" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+    </Rule>
+    <Rule name="AskHint" status="AskHint" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswerTH" id="1" />
+      <Action agent="ComputerTutor" act="DeliverHint" data="1" id="2" />
+      <Action agent="System" act="WaitForMediaInput" data="100" id="3" />
+    </Rule>
+    <Rule name="HintCorrect" status="UserAnswerTH" response="Hint-Good" event="" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoUser" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="GetMediaEvent" data="AddScore" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintBlank" status="UserAnswerTH" response="Any" event="" hasItem="" priority="3" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="HintIncorrect" status="UserAnswerTH" response="Hint-Bad" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Good" id="3" />
+      <Action agent="System" act="AddScore" data="0" id="4" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="5" />
+      <Action agent="System" act="GetRule" data="" id="10" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Transition" id="1" />
+      <Action agent="System" act="SetStatus" data="Close" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

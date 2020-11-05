@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Score Bar Test</title>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script> 
+		
+		<style type="text/css" id="page-css">
+			#scoreBar
+			{
+				position: absolute;
+				width: 680px;
+				z-index: 1;
+				top: 10;
+			}
+			#scoreFill
+			{
+				position: relative;
+				z-index: -1;
+				/*do not set a width here*/
+				width: 300px;
+				min-height: 20px;
+				background-color: green;
+				top: 0;
+				margin: -28px 0px 0px 12px;
+				display: block;
+			}
+			.doIt
+			{
+				position: relative;
+				margin-top: 50px;
+			}
+		</style>
+		<script type="text/javascript">			
+			function fillBar1()
+			{
+				var newWidth = "200px";
+				var barWidth = document.getElementById("scoreFill");
+				barWidth.style.width = newWidth;
+				
+				$( "#scoreFill" ).animate({backgroundColor: "#0ad300"}, 1000);
+			}
+			
+			function fillBar2()
+			{
+				
+				$( "#scoreFill" ).show( "slide", 1000 );
+			}
+			
+			function resetBar()
+			{
+				var barWidth = document.getElementById("scoreFill");
+				barWidth.style.width = "0px";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="scoreBar">
+			<img src="ScoreBar2.png">
+			<div id="scoreFill"></div>
+		</div>
+		
+		<button class="doIt" onclick="fillBar1();">Fill Bar 1</button>
+		<button class="doIt" onclick="fillBar2();">Fill Bar 2</button>
+		<button class="doIt" onclick="resetBar();">Reset</button>
+	</body>
+</html>

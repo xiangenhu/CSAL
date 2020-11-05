@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L29Bkgd0.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 302px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 22px;
+				padding: 15px 30px 0px 30px;
+				line-height: 38px;
+				color: #212121;
+			}
+			#banner
+			{
+				width: 730px;
+				z-index: 0;
+				display: block;
+			}
+			#mainTextHead
+			{
+				font-family: 'Bangers', Verdana, 'Times New Roman';
+				font-size: 100px;
+				line-height: 56px;
+				margin: 25px 0px 15px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+				letter-spacing: 3px;
+				position: absolute;
+				top: 20px;
+				left: 30px;
+				z-index: 10;
+			}
+			.subHead1
+			{
+				font-family: 'Bangers', Verdana, 'Times New Roman';
+				font-size: 30px;
+				font-weight: bold;
+				margin: 10px 0px;
+			}
+			.subHead2
+			{
+				font-family: 'Bangers', Verdana, 'Times New Roman';
+				font-size: 40px;
+				font-weight: bold;
+				margin: 10px 0px;
+			}
+			#notice
+			{
+				position: relative;
+				float: right;
+				padding: 10px;
+				color: red;
+				font-weight: bold;
+				border: 3px dashed red;
+				width: 200px;
+				font-size: 20px;
+				line-height: 22px;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				left: 0;
+				z-index:1;
+				width: 800px;
+				height: 180px;
+				background-color: #212121;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 28px;
+				padding: 10px 10px 0px 10px;
+				color: white;
+				margin: 0px 0px 0px 5px;
+				width: 760px;
+				vertical-align: top;
+			}
+			#buttonBox
+			{
+				margin: 4px auto;
+				width: 780px;
+				vertical-align: top;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 760px;
+				height: 34px;
+				line-height: 34px;
+				margin: 2px;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				display: inline-block;
+				outline: none;
+				border-radius: 12px;
+			}
+			.indent { margin: 0px 15px; }
+			.para { margin: 10px 0px; }
+		</style>
+		<script type="text/javascript" id="sourcecode">	
+		          var currentItem = -1;
+					var numItems = 0;
+					var $scrollElement;			
+					var questionBoxArray = [];
+					var numQuestionBoxes = 1;
+					var selectedAnswer = "";
+					var isSelected = false
+					var userAnswer = "";
+					var strId = "";
+			var correctAnswer = "#b2";
+			$(document).ready(function()
+			{	
+				//lock the buttons
+				Lock();
+				parent.GetWorldEvent("MediaLoaded");
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "para1");
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+			
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					$("#buttonBox").fadeIn(750);
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+			
+				function Start()
+			{
+				$("#fadeBody").fadeIn(600);
+				var pageName="Lesson17-Main0-2medium.html"
+				//parent.GetWorldEvent(pageName);
+				GetRequest();
+				//parent.GetWorldEvent("MediaLoaded");
+			}	
+			function ShowItem(){
+			}
+				function GetRequest() 
+			{
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					strId = strs[1];
+					//strId= parseInt(strId, 10);
+					//var a= parseInt(strId, 10);
+					//a=a/2;
+					//parent.GetWorldEvent(strId);
+					//idName=strId.split("&");
+					//return idName[idName.length-2];
+			   }
+			}
+			
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue = document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^;&\*{}=_`~()\"]/g,"");
+				    userSelectedValue=userSelectedValue.replace(/nbsp/g,'');
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");	
+						
+					//play appropriate sound
+					if (userAnswer == "Correct")
+					{
+						strId+="1";
+						parent.GetWorldEvent(strId);
+						parent.PlaySound('clicked0.wav'); 
+						//parent.GetWorldEvent(strId.length);
+					}
+					else {
+						parent.PlaySound('incorrect0.wav');
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "#edff73"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "white;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function ShowMediaAnswer()
+			{
+				//if an answer has been selected compare see if it is equal to the correct answer
+				if( userAnswer == "Incorrect" )
+				{
+					//do nothing
+				}else if( userAnswer == "Correct" )
+				{
+					//play the correct answer sound
+					parent.PlaySound('success0.wav');
+				}
+				
+				//highlight the correct answer green
+				$(correctAnswer).animate({backgroundColor: "green", color: "white"}, 1000);
+				
+				//$(".hideAnswer").animate({backgroundColor: "transparent"}, 300);
+			}
+			
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "AskQ") 
+				{
+				parent.GetWorldEvent("ComputerTutor");
+				}
+				else if (data == "ThisQ")
+				{
+				parent.GetWorldEvent("ComputerTutor");
+				}
+				else if(data == "NextPage")
+				{
+			
+						parent.nextPage("media/"+"Lesson29-Medium-0-2.html?id="+strId);
+					
+					//$("#buttonBox").fadeOut(1000);
+					//$("#questionText").fadeOut(1000);
+					
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if(data == "Page")
+				{
+					parent.GetWorldEvent("Start1");
+				}
+				else if (data == "Difficulty") 
+				{
+					parent.GetWorldEvent("Medium");
+				}
+			}
+		
+		</script>
+	</head>
+	<body onload="Start()">
+		<div id="textbox" class="scroll-pane">
+			<div id="mainText">
+				<img src="littleherdsbanner.png" id="banner">
+				<div id="mainTextHead">
+					Little Herds
+				</div>
+				
+				<div class="subHead"></div>
+				<div id="para1" class="para">
+				Little Herds is an Austin nonprofit organization focused on educating the next generation on the environmental and nutritional benefits of edible insects.
+				Our purpose is to work with schools, businesses, and community members to promote this sustainable way of feeding not only ourselves, but the world.
+				<div class="subHead1">Who Eats Bugs?</div>
+				<div id="para2" class="para">
+				Countless cultures around the world eat insects. Studies suggest that up to 80% of the world's population has eaten insects! People eat them in Central and South America, Africa, Australia, India, China, Japan - the list goes on.
+				</div>
+				
+				<div class="subHead2">BECAUSE BUGS ARE...</div>
+				<div class="subHead1">Healthy</div>
+				<div id="para3" class="para">
+				<span class="indent"></span>Insects have low levels of cholesterol and fat, and high levels of:
+				
+				<div id="notice">
+				<span style="text-decoration: underline;">Allergy Notice</span>
+				Insects may trigger shellfish allergies. Please consume with caution.
+				</div>
+				
+				<br><span class="indent"></span>&bull;protein
+				<br><span class="indent"></span>&bull;essential amino acids
+				<br><span class="indent"></span>&bull;iron
+				<br><span class="indent"></span>&bull;calcium
+				<br><span class="indent"></span>&bull;vitamins and minerals other meats lack
+				</div>
+				
+				<div class="subHead1">Eco-Friendly</div>
+				<div id="para4" class="para">
+				<span class="indent"></span>Insects can be raised in almost any climate or environment, and they require less land, water, feed, and energy than traditional protein sources. Some scientists are even experimenting with growing them in space! Even better, insects don't harbor diseases transmittable to humans, like mad cow disease or swine and avian flu.
+				</div>
+				
+				<div class="subHead1">Cost-Efficient</div>
+				<div id="para5" class="para">
+				<span class="indent"></span>Insects can convert feed to human-consumable protein more efficiently than traditional livestock like beef, and they need less energy and less space to grow. From crickets to mealworms and beyond, insects provide a large return with little input, especially compared with traditional livestock.
+				</div>
+				
+				<div class="subHead1">Tasty!</div>
+				<div id="para6" class="para">
+				<span class="indent"></span>There are 2,000 species of insects known to be edible, and tens of thousands yet to be tested. Insects can be prepared in a variety of ways and used in many diverse dishes. Western chefs are just discovering the art of entomophagy. Every day people are trying new and delicious ways to serve bugs!
+				</div>
+				
+				<div class="subHead1">Our Bugs are Safe , Clean, and All-Natural</div>
+				<div id="para7" class="para">
+				<span class="indent"></span>Since April 2012, Little Herds had collaborated with World Entomophagy to provide high-quality, human-consumption grade insects. World Ento is the first company growing, processing, and distributing these insects on an industrial scale. The hygienic conditions, stringent health standards, and high-quality feed make World Ento's insects top-notch in both flavor and safety. Little Herds has been growing mealworms in Austin since March 2013. We have used World Ento as a standard for our insects to assure that we are providing the highest quality insect possible.
+				</div>
+				
+				<div class="subHead2">OUR PLANS:</div>
+				
+				<div class="subHead1">Bug Dinners</div>
+				<div id="para8" class="para">
+				Little Herds is partnering with local restaurants to provide ongoing opportunities for people to try insects prepared by their favorite chefs in familiar and comfortable settings. These dinners will include educational presentations and discussions on entomophagy.
+				</div>
+				
+				<div class="subHead1">School Presentations</div>
+				<div id="para9" class="para">
+				Little Herds is interested in working with local schools, from elementary to college. We will bring educational presentations on why insects are nutritious, as well as how to grow and cook your own insects. We are also partnering with sister schools in other countries.
+				</div>
+				
+				<div class="subHead1">Farmers Markets</div>
+				<div id="para10" class="para">
+				Little Herds is working with local farmers markets, including HOPE, to provide educational materials and edible insect samples.
+				</div>
+				
+				<div class="subHead1">Festivals</div>
+				<div id="para11" class="para">
+				Little Herds will appear at local festivals to help promote healthy eating habits and sustainable farming practices.
+				</div>
+				
+				<div class="subHead2">GET INVOLVED!</div>
+				<div id="para12" class="para">
+				Keep up with Little Herds at facebook.com/LittleHerds and on Twitter @LittleHerds. Little Herds is a Texas nonprofit corporation with 501(c)(3) status pending. For donation information or any other questions, email LittleHerds@gmail.com.
+				</div>
+			</div>
+		</div>
+		<div id="questionBox0" class="questionBox">				
+			<div id="questionText">
+				What is the topic of this text?
+			</div>
+			
+			<div id="buttonBox">
+				<div class='mybutton' id="b1" value="Incorrect">
+					Cowboys
+				</div>
+				<div class='mybutton' id="b2" value="Correct">
+					Eating bugs 
+				</div>
+			
+				<div class='mybutton' id="b3" value="Incorrect">
+					Community involvement
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

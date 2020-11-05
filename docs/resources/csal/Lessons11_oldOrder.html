@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>CSAL Lessons</title>
+
+    <script>
+        document.domain = 'ace.autotutor.org'
+    </script>
+
+    <script type="text/css" href="CSSReset.css" rel="stylesheet"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+
+    <!--<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />-->
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <!--load jQuery libraries-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <!--script type="text/javascript" src="../lessonsController/csal.js"></script-->
+
+    <style>
+        body {
+            font-family: 'Source Sans Pro', 'Verdana', 'Times New Roman';
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #fadeBody {
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            margin: 0px;
+            width: 800px;
+            height: 490px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -100;
+            overflow: hidden;
+        }
+
+        #content {
+            display: none;
+            margin: 20px auto;
+        }
+
+        #activity1,
+        #activity2,
+        #activity3,
+        #activity4 {
+            width: 384px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 40px;
+            text-indent: 0px;
+            margin: 20px 0px 0px 0px;
+            outline: 0;
+            background-color: silver;
+            font-family: 'Raleway', Verdana, 'Times New Roman';
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 4px;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.45);
+        }
+
+        .lessonButton {
+            background-color: white;
+            border: 0px;
+            width: 280px;
+            text-align: left;
+            font-size: 20px;
+            margin-top: 7px;
+            margin-left: 2px;
+            outline: 0;
+            padding: 2px 8px;
+            font-weight: normal;
+        }
+
+        .pic {
+            margin-left: 5px;
+            margin-bottom: 2px;
+            vertical-align: bottom;
+            height: 26px;
+            width: 26px;
+            padding: 0px 0px 0px 4px;
+        }
+
+        .lessonButton:hover {
+            background-color: buttonface;
+        }
+
+        #lesson1 {
+            margin-top: 16px;
+        }
+
+        #div1
+        /*this affects main right pane*/
+
+            {
+            font-family: 'Raleway', 'Verdana', 'Times New Roman';
+            font-size: 18px;
+            background-color: white;
+            width: 350px;
+            margin-right: 15px;
+            margin-top: 0px;
+            float: right;
+            border: 1px solid black;
+            height: 450px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 5px;
+        }
+
+        #instruct {
+            font-size: 24px;
+            margin: 8px 0px 4px 16px;
+            color: #303030;
+            text-decoration: underline;
+        }
+
+        #practice {
+            font-size: 24px;
+            margin: 8px 0px 4px 16px;
+            color: #303030;
+            text-decoration: underline;
+        }
+
+        #div2
+        /*this affects bottom left pane*/
+
+            {
+            width: 370px;
+            margin-left: 15px;
+            margin-top: 170px;
+            float: left;
+            border: none;
+        }
+
+        #div3
+        /*not sure what this effects*/
+
+            {
+            background-color: white;
+            width: 250px;
+            height: 210px;
+            margin-left: 446px;
+            margin-top: 182px;
+            float: left;
+            border-style: solid;
+            border-width: medium;
+            z-index: 1;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        #div4
+        /*affects top left pane*/
+
+            {
+            background-color: #f0f0f0;
+            margin-left: 15px;
+            margin-top: 20px;
+            float: left;
+            border: 2px solid gray;
+            z-index: 1;
+            position: absolute;
+            visibility: visible;
+            border-radius: 12px;
+        }
+
+        #test {
+            float: left;
+        }
+
+        #lessonDes {
+            background-color: #f0f0f0;
+            font-size: 32px;
+            width: 370px;
+            height: 125px;
+            resize: none;
+            overflow: auto;
+            font-family: 'Raleway', 'Verdana', 'Times New Roman';
+            border: none;
+            padding: 6px 10px;
+            margin: 15px 0px 0px 0px;
+            font-weight: bold;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 12px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var LessonName, LessonID;
+        var lessonSelected = false;
+        var videoId;
+        var isHasVideo = false;
+        var activity1Status = false;
+        var activity2Status = false;
+        var LessonsConfigObj;
+        var RecoverableOn = false;
+        $(document).ready(function() {
+
+            LessonsConfigObj = parent.getLessonsConfig();
+            RecoverableOn = parent.getRecoverableStatus();
+            pageInit();
+            if (RecoverableOn == true) {
+                GeRecoverInfo();
+            }
+
+            ShowLessonsStatus();
+
+            $(".lessonButton").click(function() {
+
+                LessonName = $(this).attr("value");
+                LessonID = $(this).attr("id");
+                if (LessonID != undefined) {
+                    lessonSelected = true;
+                }
+                var LessonInfo = checkLessonInfo(LessonID);
+                sessionStorage.setItem("LessonName", LessonName);
+                sessionStorage.setItem("LessonID", LessonID);
+                sessionStorage.setItem("LessonInfo", JSON.stringify(LessonInfo));
+
+                showLessonDes(LessonID);
+                isHasVideo = LessonInfo.isHasVideo;
+                videoId = LessonInfo.videoId;
+                sessionStorage.setItem("isHasVideo", isHasVideo);
+                sessionStorage.setItem("videoId", videoId);
+                activity1Status = LessonInfo.activity1;
+                activity2Status = LessonInfo.activity2;
+                showActiveButtons(LessonInfo.activity1, LessonInfo.activity2, LessonInfo.isHasVideo);
+
+            });
+            $("#activity1").click(function() {
+                if (isHasVideo == true && activity1Status == "Unlock") {
+                    playVideo(LessonID);
+                } else if (isHasVideo == false) {
+                    alert("This lesson do not have video!");
+
+                    return;
+
+                } else if (lessonSelected == false) {
+                    alert("No Lesson Selected. Please select a Lesson from lessons list.");
+                    return;
+                } else if (activity1Status = "Lock") {
+
+
+                    alert("video is locked!");
+                    return;
+
+                }
+            });
+            $("#activity2").click(function() {
+                if (lessonSelected == true) {
+                    parent.GetScript(LessonID);
+                } else {
+                    alert("No Lesson Selected. Please select a Lesson from lessons list.");
+                    return;
+                }
+
+            });
+
+            $(".mybutton")
+                .mouseover(function() {
+                    var getId = $(this).attr("id");
+
+                    if (lessonSelected == true) {
+                        if (getId == "activity1" && activity1Status == "Unlock") {
+                            $(this).stop().animate({
+                                backgroundColor: "#f5ffd2",
+                                color: "#303030"
+                            }, 300).css('cursor', 'pointer')
+
+                        } else if (getId == "activity2" && activity2Status == "Unlock") {
+                            $(this).stop().animate({
+                                backgroundColor: "#f5ffd2",
+                                color: "#303030"
+                            }, 300).css('cursor', 'pointer')
+
+                        }
+
+
+                    }
+
+
+                })
+                .mouseout(function() {
+                    var getId = $(this).attr("id");
+                    if (lessonSelected == true) {
+                        if (getId == "activity1" && activity1Status == "Unlock") {
+                            $(this).animate({
+                                backgroundColor: "#dff6ff",
+                                color: "#303030"
+                            }, 700).css({
+                                'cursor': 'pointer',
+                                'text-decoration': 'none'
+                            });
+
+                        } else if (getId == "activity2" && activity2Status == "Unlock") {
+                            $(this).animate({
+                                backgroundColor: "#dff6ff",
+                                color: "#303030"
+                            }, 700).css({
+                                'cursor': 'pointer',
+                                'text-decoration': 'none'
+                            });
+
+                        }
+
+                    }
+                });
+        });
+
+        function checkLessonInfo(lessonID) {
+            for (var i = 0; i < LessonsConfigObj.length; i++) {
+                var getLessonID = LessonsConfigObj[i].lessonId;
+                if (lessonID == getLessonID) {
+                    return LessonsConfigObj[i];
+                }
+
+            }
+        }
+
+        function showActiveButtons(activity1, activity2) {
+            if (activity1 == "Unlock" && isHasVideo == true) {
+                ShowActivity1Button();
+            } else {
+                UnableActivity1Button();
+            }
+            if (activity2 == "Unlock") {
+                ShowActivity2Button();
+            } else {
+                UnableActivity2Button();
+            }
+        }
+
+        function ShowActivity1Button() {
+            CurrentLessonVideoStatus = true;
+            $("#activity1").animate({
+                backgroundColor: "#dff6ff",
+                color: "#303030"
+            }, 700).css({
+                'cursor': 'pointer',
+                'text-decoration': 'none'
+            });
+        }
+
+        function ShowActivity2Button() {
+
+            $("#activity2").animate({
+                backgroundColor: "#dff6ff",
+                color: "#303030"
+            }, 700).css({
+                'cursor': 'pointer',
+                'text-decoration': 'none'
+            });
+        }
+
+        function UnableActivity1Button() {
+            CurrentLessonVideoStatus = false;
+            $("#activity1").animate({
+                backgroundColor: "#474747",
+                color: "gray"
+            }, 700).css({
+                'cursor': 'not-allowed',
+                'text-decoration': 'line-through'
+            });
+
+        }
+
+        function UnableActivity2Button() {
+
+            $("#activity2").animate({
+                backgroundColor: "#474747",
+                color: "gray"
+            }, 700).css({
+                'cursor': 'not-allowed',
+                'text-decoration': 'line-through'
+            });
+        }
+
+        function showLessonDes(LessonID) {
+
+            for (var i in LessonsConfigObj) {
+                if (LessonsConfigObj[i].lessonId === LessonID) {
+                    $("#lessonDes").html(LessonsConfigObj[i].lessonDes);
+                }
+            }
+        }
+
+        function pageInit() {
+            $("#picA").hide();
+            $("#picB").hide();
+            $("#lessonA").hide();
+            $("#lessonB").hide();
+
+            for (var i in LessonsConfigObj) {
+                if (LessonsConfigObj[i].isShow === false) {
+
+                    $("#div" + LessonsConfigObj[i].lessonId).hide();
+
+                }
+            }
+
+
+            $("#content").fadeIn(900);
+
+            UnableActivity1Button();
+            UnableActivity2Button()
+        }
+
+        function playVideo(LessonID) {
+
+            for (var i in LessonsConfigObj) {
+                if (LessonsConfigObj[i].lessonId === LessonID) {
+                    parent.vidPlayerControl(LessonsConfigObj[i].videoId);
+                }
+            }
+
+        }
+
+        function ShowLessonsStatus() {
+            var getIdArray = sessionStorage.getItem("UID").split("-");
+            var getId = getIdArray[getIdArray.length - 1];
+
+            $.get("https://ace.autotutor.org/ACEAPICORS10/api/passfail/" + getId, function(data, status) {
+
+                if (status == "success") {
+
+                    for (var i = 0; i < data.length; i++) {
+                        var getLessonInfo = data[i].split(":");
+                        var lessonName = getLessonInfo[0];
+                        var lessonStatus = getLessonInfo[1];
+                        var lessonNameInfo = lessonName.split("lesson");
+                        var newLessonNum = parseInt(lessonNameInfo[1]);
+                        if (lessonStatus == 0) {
+
+                            $("#pic" + (newLessonNum)).css("visibility", "hidden");
+                        } else if (lessonStatus == 1) {
+
+                            $("#lesson" + (newLessonNum)).css('font-style', 'italic');
+                            $("#pic" + (newLessonNum)).attr("src", "images/redRefresh.png");
+                        } else if (lessonStatus == 2) {
+
+                            $("#lesson" + (newLessonNum)).css({
+                                'font-style': 'italic',
+                                'font-weight': 'bold'
+                            });
+                            $("#pic" + (newLessonNum)).attr("src", "images/checkMark.png");
+                        }
+                    }
+
+                }
+            });
+        }
+
+
+
+        //THIS FUNCTION CALL ACE TO GET GeRecoverInfo
+        function GeRecoverInfo() {
+            var userID = sessionStorage.getItem("UID");
+            var aceurl = "https://ace.autotutor.org/ACEAPICORS6/api/aceaction";
+            var inpjson = "{\"ID\":\"" + userID + "\",\"ScriptURL\":\"" + "" + "\",\"User\":\"" + "" + "\",\"UseDB\":\"" + "false" + "\"}";
+            var content = JSON.parse(inpjson);
+
+            var method = "GET";
+            var getUrl = $.ajax({
+                type: method,
+                url: aceurl,
+                data: content,
+                success: function(data) {}
+            }).done(function(data) {
+                if (data != null) {
+                    var isRecoverable = GeRecoveryInfo(data);
+                    if (isRecoverable == true) {
+                        show_confirm();
+                    }
+
+                }
+
+            });
+        }
+
+        var recoveryActions;
+        var PresentationHistory;
+        var PresentationID;
+        var recoveryLesson;
+        var recoveryTime;
+        var recoveryMediaUrl;
+
+        function GeRecoveryInfo(obj) {
+            for (var key in obj) {
+
+                if (key == "ACEActions") {
+                    var getActions = obj[key];
+                    if (getActions.length == 0) {
+                        console.log("Recovery actions Error!");
+                        return false;
+
+                    } else {
+                        recoveryActions = getActions;
+                        var str = recoveryActions[recoveryActions.length - 1];
+                        var lastAct = str.Act;
+                        if (lastAct == "End") {
+                            return false;
+                        }
+                        var isVideoMediaPage = CheckVideoMediaPage(recoveryActions);
+                        if (isVideoMediaPage == false) {
+                            return false;
+
+                        }
+
+                    }
+
+                }
+                if (key == "Log") {
+                    var errorMessage = obj[key].ErrorMessage;
+                    console.log("Recovery errorMessage: " + errorMessage);
+                    var inputObj = obj[key].Input;
+                    if (inputObj.PresentationHistory == "" || inputObj.PresentationID == "") {
+                        return false;
+                    }
+                    PresentationHistory = JSON.parse(inputObj.PresentationHistory);
+                    PresentationID = JSON.parse(inputObj.PresentationID);
+                    recoveryLesson = PresentationID.lessonID;
+                    recoveryMediaUrl = PresentationHistory.MediaUrl;
+
+                    //below lessons can not be recovery
+                    if (recoveryLesson == "Lesson8" || recoveryLesson == "Lesson9" || recoveryLesson == "Lesson10" || recoveryLesson == "Lesson12" || recoveryLesson == "Lesson13" || recoveryLesson == "Lesson14" || recoveryLesson == "Lesson27") {
+                        return false;
+
+                    }
+                    if (recoveryMediaUrl == "") {
+                        return false;
+
+                    }
+                }
+                if (key == "Time") {
+                    recoveryTime = obj[key];
+                }
+
+            }
+
+            modifyRecoveryActions(recoveryActions, recoveryMediaUrl);
+            return true;
+        }
+
+        function CheckVideoMediaPage(recoveryActions) {
+            for (var i in recoveryActions) {
+                var getAct = recoveryActions[i].Act;
+                var getData = recoveryActions[i].Data;
+                if (getAct == "ShowMedia") {
+                    var n = getData.indexOf(".mp4");
+                    if (n = -1) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                } else {
+                    return true;
+                }
+
+            }
+
+        }
+
+        function modifyRecoveryActions(recoveryActions, recoveryMediaUrl) {
+            var isHasActions = checkRecoveryAction(recoveryActions);
+            var isHasShowMedia = checkIsHasShowMedia(recoveryActions);
+            if (recoveryActions[recoveryActions.length - 1] == "Wait" && isHasActions == false) {
+                var showItemObj = {};
+                showItemObj.Agent = "System"
+                showItemObj.Act = "ShowMediaItem";
+                showItemObj.Data = "";
+                recoveryActions.unshift(showItemObj);
+
+                var GetItemObj = {};
+                GetItemObj.Agent = "System"
+                GetItemObj.Act = "GetMediaItem";
+                GetItemObj.Data = "";
+                recoveryActions.unshift(GetItemObj);
+            }
+
+            if (isHasShowMedia == false) {
+                var urlArr = recoveryMediaUrl.split('/');
+                var showMediaObj = {};
+                showMediaObj.Agent = "System"
+                showMediaObj.Act = "ShowMedia";
+                showMediaObj.Data = urlArr[urlArr.length - 2] + '/' + urlArr[urlArr.length - 1];
+                recoveryActions.unshift(showMediaObj);
+
+            }
+        }
+
+        function checkRecoveryAction(recoveryActions) {
+            for (var i in recoveryActions) {
+                var getAct = recoveryActions[i].Act;
+                if (getAct == "ShowMediaItem" || getAct == "GetMediaItem") {
+                    return true;
+                } else {
+                    return false;
+                }
+
+            }
+
+        }
+
+        function checkIsHasShowMedia(recoveryActions) {
+            for (var i in recoveryActions) {
+                var getAct = recoveryActions[i].Act;
+                var getData = recoveryActions[i].Data;
+                if (getAct == "ShowMedia") {
+                    var n = getData.indexOf(".html");
+                    if (n = -1) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+
+                } else {
+                    return false;
+                }
+
+            }
+
+        }
+
+        function show_confirm() {
+
+            var lessonID = PresentationID.lessonID;
+            var mediaUrl = PresentationHistory.MediaUrl;
+            var lessonInfo = checkLessonInfo(lessonID);
+            var lessonName = lessonInfo.lessonName;
+            sessionStorage.setItem("LessonName", lessonName);
+            sessionStorage.setItem("LessonID", lessonID);
+            sessionStorage.setItem("LessonInfo", JSON.stringify(lessonInfo));
+            isHasVideo = lessonInfo.isHasVideo;
+            videoId = lessonInfo.videoId;
+            sessionStorage.setItem("isHasVideo", isHasVideo);
+            sessionStorage.setItem("videoId", videoId);
+
+            layer.confirm("Do you want to recover \"" + lessonName + "\"! \n", {
+                icon: 6,
+                title: "Time is : " + recoveryTime
+            }, function(index) {
+
+                parent.startRecover(recoveryActions, lessonID, PresentationHistory);
+                layer.close(index);
+            });
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="fadeBody">
+        <div id="content">
+            <div id="div4">
+                <div id="lessonDes" contenteditable="false">Please select a lesson.</div>
+            </div>
+
+            <div id="div2">
+                <div class="mybutton" id="activity1" value="Review Video" name="button" title="Select lesson then click here to start.">Review Video</div>
+
+                <div class="mybutton" id="activity2" value="Activity" name="button" title="Select lesson then click here to start.">Start Lesson</div>
+            </div>
+
+            <div id="div1">
+                <div id="instruct">
+                    Click a lesson below first!
+                </div>
+                <div>
+                    <img class="pic" id="picA" src=""><input type="button" class="lessonButton" id="lessonA" title="Click to start the Typing Orientation" value="Typing Orientation" name="button"></div>
+                <img class="pic" id="picB" src=""><input type="button" class="lessonButton" id="lessonB" title="Click to start the Prediction Summary" value="Prediction Summary" name="button">
+                <div id="divlesson34"><img class="pic" id="pic34" src=""><input type="button" class="lessonButton" id="Lesson34" title="Click to select Lesson" value="Social Media" name="button"></div>
+                <div id="divlesson32"><img class="pic" id="pic32" src=""><input type="button" class="lessonButton" id="Lesson32" title="Click to select Lesson" value="Online Research" name="button"></div>
+                <div id="divlesson4"><img class="pic" id="pic4" src=""><input type="button" class="lessonButton" id="Lesson4" title="Click to select Lesson" value="Prefixes and Suffixes" name="button"></div>
+                <div id="divlesson5"><img class="pic" id="pic5" src=""><input type="button" class="lessonButton" id="Lesson5" title="Click to select Lesson" value="Punctuation" name="button"></div>
+                <div id="divlesson6"><img class="pic" id="pic6" src=""><input type="button" class="lessonButton" id="Lesson6" title="Click to select Lesson" value="Context Clues" name="button"></div>
+                <div id="divlesson8"><img class="pic" id="pic8" src=""><input type="button" class="lessonButton" id="Lesson8" title="Click to select Lesson" value="Multiple Meaning Words" name="button"></div>
+                <div id="divlesson9"><img class="pic" id="pic9" src=""><input type="button" class="lessonButton" id="Lesson9" title="Click to select Lesson" value="Pronouns" name="button"></div>
+                <div id="divlesson10"><img class="pic" id="pic10" src=""><input type="button" class="lessonButton" id="Lesson10" title="Click to select Lesson" value="Non-Literal Language" name="button"></div>
+                <div id="divlesson1"><img class="pic" id="pic1" src=""><input type="button" class="lessonButton" id="Lesson1" title="Click to select Lesson" value="Text Signals" name="button"> </div>
+                <div id="divlesson11"><img class="pic" id="pic11" src=""><input type="button" class="lessonButton" id="Lesson11" title="Click to select Lesson" value="Review" name="button"></div>
+                <div id="divlesson16"><img class="pic" id="pic16" src=""><input type="button" class="lessonButton" id="Lesson16" title="Click to select Lesson" value="Evaluating Understanding" name="button"></div>
+                <div id="divlesson20"><img class="pic" id="pic20" src=""><input type="button" class="lessonButton" id="Lesson20" title="Click to select Lesson" value="Problem and Solution Texts" name="button"></div>
+                <div id="divlesson21"><img class="pic" id="pic21" src=""><input type="button" class="lessonButton" id="Lesson21" title="Click to select Lesson" value="Cause and Effect Texts" name="button"></div>
+                <div id="divlesson23"><img class="pic" id="pic23" src=""><input type="button" class="lessonButton" id="Lesson23" title="Click to select Lesson" value="Compare and Contrast Texts" name="button"></div>
+                <div id="divlesson25"><img class="pic" id="pic25" src=""><input type="button" class="lessonButton" id="Lesson25" title="Click to select Lesson" value="Procedural Texts" name="button"></div>
+                <div id="divlesson17"><img class="pic" id="pic17" src=""><input type="button" class="lessonButton" id="Lesson17" title="Click to select Lesson" value="Evaluating: Persuasive" name="button"></div>
+                <div id="divlesson13"><img class="pic" id="pic13" src=""><input type="button" class="lessonButton" id="Lesson13" title="Click to select Lesson" value="Evaluating: Narrative" name="button"></div>
+                <div id="divlesson2"><img class="pic" id="pic2" src=""><input type="button" class="lessonButton" id="Lesson2" title="Click to select Lesson" value="Predicting Purpose" name="button"></div>
+                <div id="divlesson3"><img class="pic" id="pic3" src=""><input type="button" class="lessonButton" id="Lesson3" title="Click to select Lesson" value="Hybrid Texts" name="button"></div>
+                <div id="divlesson18"><img class="pic" id="pic18" src=""><input type="button" class="lessonButton" id="Lesson18" title="Click to select Lesson" value="Review" name="button"></div>
+                <div id="divlesson31"><img class="pic" id="pic31" src=""><input type="button" class="lessonButton" id="Lesson31" title="Click to select Lesson" value="Applications" name="button"></div>
+                <div id="divlesson27"><img class="pic" id="pic27" src=""><input type="button" class="lessonButton" id="Lesson27" title="Click to select Lesson" value="Bridging: Narrative" name="button"></div>
+                <div id="divlesson15"><img class="pic" id="pic15" src=""><input type="button" class="lessonButton" id="Lesson15" title="Click to select Lesson" value="Elaborating: Narrative" name="button"></div>
+                <div id="divlesson28"><img class="pic" id="pic28" src=""><input type="button" class="lessonButton" id="Lesson28" title="Click to select Lesson" value="Elaborating: Informative" name="button"></div>
+                <div id="divlesson29"><img class="pic" id="pic29" src=""><input type="button" class="lessonButton" id="Lesson29" title="Click to select Lesson" value="Elaborating: Persuasive" name="button"></div>
+                <div id="divlesson30"><img class="pic" id="pic30" src=""><input type="button" class="lessonButton" id="Lesson30" title="Click to select Lesson" value="Documents" name="button"></div>
+                <div id="divlesson33"><img class="pic" id="pic33" src=""><input type="button" class="lessonButton" id="Lesson33" title="Click to select Lesson" value="Email" name="button"></div>
+                <div id="divlesson7"><img class="pic" id="pic7" src=""><input type="button" class="lessonButton" id="Lesson7" title="Click to select Lesson" value="Acquiring New Words" name="button"></div>
+                <div id="divlesson12"><img class="pic" id="pic12" src=""><input type="button" class="lessonButton" id="Lesson12" title="Click to select Lesson" value="Using Key Information" name="button"></div>
+                <div id="divlesson14"><img class="pic" id="pic14" src=""><input type="button" class="lessonButton" id="Lesson14" title="Click to select Lesson" value="Bridge Building" name="button"></div>
+                <div id="divlesson19"><img class="pic" id="pic19" src=""><input type="button" class="lessonButton" id="Lesson19" title="Click to select Lesson" value="Statement and Explanation" name="button"></div>
+                <div id="divlesson22"><img class="pic" id="pic22" src=""><input type="button" class="lessonButton" id="Lesson22" title="Click to select Lesson" value="Description and Spatial" name="button"></div>
+                <div id="divlesson24"><img class="pic" id="pic24" src=""><input type="button" class="lessonButton" id="Lesson24" title="Click to select Lesson 11" value="Time Order" name="button"></div>
+                <div id="divlesson26"><img class="pic" id="pic26" src=""><input type="button" class="lessonButton" id="Lesson26" title="Click to select Lesson" value="" name="button"></div>
+            </div>
+
+            <div id="div3"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

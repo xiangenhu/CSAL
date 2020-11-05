@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L25Bkgd3.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Arimo', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 294px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			#mainText
+			{
+				font-size: 27px;
+				padding: 15px 30px 0px 30px;
+				line-height: 40px;
+			}
+			#mainTextHead
+			{
+				font-family: 'Special Elite', Verdana, 'Times New Roman';
+				font-size: 62px;
+				margin: 10px 0px 20px 0px;
+				font-weight: bold;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 810px;
+				height: 200px;
+				background-color: white;
+				margin: 0px auto;
+				padding: 0px;
+				border: none;
+				border-top: 5px solid #a58870;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 22px;
+				padding: 0px 20px;
+				color: #212121;
+				margin: 10px 0px 0px 5px;
+				width: 740px;
+			}
+			#buttonBox
+			{
+				margin: 6px 10px;
+				width: 700px;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 330px;
+				height: 34px;
+				line-height: 34px;
+				margin: 1px 0px;
+				text-decoration: none;
+				border: none;
+				text-align: center;
+				padding: 1px 2px;
+				outline: none;
+				border-radius: 12px;
+				position: relative;
+			}
+			.indent { margin: 0px 25px; }
+			.para { margin: 15px 0px; }
+			#b3{
+			margin-left: 430px;
+			margin-top: -75px;
+			}
+			#b4{
+			margin-left: 430px;
+			margin-top: 1px;
+			
+			}
+			<script type="text/javascript" id="sourcecode">
+					
+					var currentItem = -1;
+					var numItems = 0;
+					var isSelected = false;
+					var tryCount=0;
+					var score=0;
+					var userSelecteditem="";
+			$(document).ready(function()
+			{parent.GetWorldEvent("HardLoaded");
+			
+			});
+			function GetItem()
+			{
+				
+				 parent.GetWorldEvent("Stop");
+				
+			}
+			</script>
+		</style>
+		
+	</head>
+	
+</html>

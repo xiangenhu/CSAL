@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L6BkgdIntro.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			#main
+			{
+				font-size: 26px;
+				padding: 10px 20px;
+				color: #212121;
+			}
+			.anim
+			{
+				display: none;
+			}
+			.step
+			{
+				font-size: 30px;
+				font-weight: bold;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.stepInfo
+			{
+				width: 640px;
+				display: inline-block;
+				border: 3px solid #404040;
+				border-radius: 8px;
+				text-align: center;
+				background-color: white;
+				padding: 5px;
+			}
+			.arrow
+			{
+				margin: 0px 0px 0px 390px;
+				display: block;
+			}
+			#step1, #step3 { margin-top: 5px;}
+			#step2 { margin-top: 20px;}
+			#step4 { margin-top: 30px;}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			$(document).ready(function(){
+			parent.GetWorldEvent("StartPageLoaded");	
+			});
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "Animation1") 
+				{
+					$("#anim1").fadeIn(1500);
+				}
+				else if (data == "Animation2")
+				{
+					$("#anim2").fadeIn(1500);
+				}
+				else if (data == "Animation3")
+				{
+					$("#anim3").fadeIn(1500);
+				}
+				else if (data == "Animation4")
+				{
+					$("#anim4").fadeIn(1500);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="anim1" class="anim">
+				<div id="step1" class="step">
+					Step 1
+				</div>
+				<div id="stepInfo1" class="stepInfo">
+					Find context clues.
+				</div>
+			</div>
+			
+			<div id="anim2" class="anim">
+				<img src="arrow.png" class="arrow">
+				<div id="step2" class="step">
+					Step 2
+				</div>
+				<div id="stepInfo2" class="stepInfo">
+					Create a definition for the word based on the context clues found.
+				</div>
+			</div>
+			
+			<div id="anim3" class="anim">
+				<img src="arrow.png" class="arrow">
+				<div id="step3" class="step">
+					Step 3
+				</div>
+				<div id="stepInfo3" class="stepInfo">
+					Replace the word with your definition you created.
+				</div>
+			</div>
+			
+			<div id="anim4" class="anim">
+				<img src="arrow.png" class="arrow">
+				<div id="step4" class="step">
+					Step 4
+				</div>
+				<div id="stepInfo4" class="stepInfo">
+					Does your definition of the word fit within the sentences? If it does, you got it! If not, start over at Step 1 until it does!
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

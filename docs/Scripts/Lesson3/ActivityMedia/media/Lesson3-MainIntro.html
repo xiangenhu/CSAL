@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L3OpeningBkgd.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Varela Round', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			#main
+			{
+				font-size: 26px;
+				padding: 10px 20px;
+				color: #212121;
+			}
+			#newspaper
+			{
+				border: 2px solid #212121;
+				border-radius: 2px;
+				height: 360px;
+				position: fixed;
+				top: 30px;
+				left: 10px;
+			}
+			#stepInfo1
+			{
+				position: fixed;
+				bottom: 50px;
+				left: 55px;
+				border: 3px solid #FF1E00;
+			}
+			#ad
+			{
+				border: 2px solid #212121;
+				border-radius: 2px;
+				height: 300px;
+				position: fixed;
+				right: 50px;
+				top: 10px;
+			}
+			#stepInfo2
+			{
+				position: fixed;
+				top: 100px;
+				right: 250px;
+				border: 3px solid #04819E;
+			}
+			#comic
+			{
+				border: 2px solid #212121;
+				border-radius: 2px;
+				height: 130px;
+				position: fixed;
+				right: 10px;
+				bottom: 20px;
+			}
+			#stepInfo3
+			{
+				position: fixed;
+				bottom: 5px;
+				right: 90px;
+				border: 3px solid #00BF32;
+			}
+			.anim
+			{
+				display: none;
+			}
+			.step
+			{
+				font-size: 30px;
+				font-weight: bold;
+				vertical-align: top;
+			}
+			.stepInfo
+			{
+				border-radius: 8px;
+				text-align: center;
+				background-color: white;
+				padding: 5px;
+				display: inline-block;
+			}
+			#step1, #step3 { margin-top: 5px;}
+			#step2 { }
+			#step4 { margin-top: 30px;}
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			$(document).ready(function(){
+			parent.GetWorldEvent("PageLoaded");	
+			});
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "Animation1") 
+				{
+					$("#anim1").fadeIn(1500);
+				}
+				else if (data == "Animation2")
+				{
+					$("#anim2").fadeIn(1500);
+				}
+				else if (data == "Animation3")
+				{
+					$("#anim3").fadeIn(1500);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="anim1" class="anim">
+				<div id="step1" class="step">
+					<img src="newspaper0.png" id="newspaper">
+				</div>
+				<div id="stepInfo1" class="stepInfo">
+					Informative Articles 
+				</div>
+			</div>
+			
+			<div id="anim2" class="anim">
+				<div id="step2" class="step">
+					<img src="ad0.png" id="ad">
+				</div>
+				<div id="stepInfo2" class="stepInfo">
+					Persuasive<br>Ads
+				</div>
+			</div>
+			
+			<div id="anim3" class="anim">
+				<div id="step3" class="step">
+					<img src="comic0.png" id="comic">
+				</div>
+				<div id="stepInfo3" class="stepInfo">
+					Entertaining Comic
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

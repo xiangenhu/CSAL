@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Life+Savers' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L19Bkgd.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Life Savers', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 312px;
+				width: 798px;
+				margin-top: 1px;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			/*#textMapButton
+			{
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-size: 22px;
+				font-weight: bold;
+				background-color: #5b8ebc;
+				padding: 3px 70px;
+				top: 0;
+				right: 80px;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+				border-bottom: 1px solid black;
+				border-radius: 0px 0px 8px 8px;
+				cursor: pointer;
+				position: fixed;
+			}*/
+			#textMapButton:hover
+			{
+				color: white;
+				border-right: 1px solid white;
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+			}
+			#instructBox{}
+			#mainTextHead
+			{
+				font-family: 'Faster One', Verdana, 'Times New Roman';
+				font-weight: 700;
+				font-size: 32px;
+				margin: 0px 0px 6px -20px;
+				padding: 5px;
+				text-align: center;
+				width: 380px;
+				vertical-align: top;
+				display: inline-block;
+				font-style: italic;
+				border: 3px solid #212121;
+			}
+			#mainTextHead span
+			{
+				font-size: 40px;
+			}
+			#mainTextSubHead
+			{
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				font-size: 18px;
+				font-weight: normal;
+				font-style: italic;
+			}
+			#adPic img
+			{	
+				display: inline-block;
+				margin: 25px 0px 0px 20px;
+				height: 120px;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 20px;
+				font-weight: bold;
+				width: 690px;
+				margin: 0px 0px 0px 30px;
+				padding: 20px 20px;
+				display: inline-block;
+			}
+			#para1, #para2
+			{
+				letter-spacing: 2px;
+				margin: 10px 0px;
+			}
+			#para2
+			{
+				text-align: center;
+				font-size: 28px;
+			}
+			.questionBox
+			{
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				width: 800px;
+				height: 170px;
+				background-image: url('QBkgd1.png');
+				background-color: #d8daab;
+				border-top: 3px solid #5b8ebc;
+				margin: 0px  0px auto;
+				padding: 0px;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				display: none;
+			}
+			#questionText
+			{
+				text-align: center;
+				font-size: 25px;
+				padding: 10px 0px 5px 0px;
+				color: #212121;
+				margin: 0px;
+			}
+			#buttonBox
+			{
+				margin: 0px auto;
+				width: 660px;
+			}
+			.mybutton
+			{
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				width: 650px;
+				height: 30px;
+				line-height: 30px;
+				margin: 3px auto;
+				text-decoration: none;
+				border: none;
+				position: relative;
+				text-align: center;
+				padding: 2px;
+				outline: none;
+				border-radius: 6px;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+			}
+			#textMap
+			{
+				background-color: #2a3c51;
+				font-family: Copse, Verdana, 'Times New Roman';
+				width: 800px;
+				height: 220px;
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				margin: 0px  0px auto;
+				padding: 0px;
+				border: none;
+				display: none;
+				cursor: pointer;
+			}
+			.textTitleTopicBox
+			{
+				background-color: #ffbf40;
+				color: #835904;
+				width: 45%;
+				height: 112px;
+				margin: 12px 0px 0px 15px;
+				padding: 5px;
+				border: 4px solid #ffbf40;
+				border-radius: 10px;
+				display: inline-block;
+			}
+			#textTopicBox{margin-left: 12px;}
+			#headTitleTopic
+			{
+				font-size: 32px;
+				width: 22%;
+				padding: 40px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#titleEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 30px;
+				width: 70%;
+				height: 92%;
+				margin: 5px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText1 {
+				display: inline-block;
+				padding: 10px 5px;
+				font-size: 20px;
+				width: 70%;
+				height: 70%;
+				text-align: center;
+				background-color: white; 
+			}
+			
+			
+			
+			#textMainIdeaBox
+			{
+				border: 4px solid #ff6140;
+				background-color: #ff6140;
+				color: #9f3019;
+				width: 94%;
+				height: 70px;
+				margin: 6px 0px 0px 15px;
+				padding: 0px 5px;
+				border-radius: 10px;
+				display: inline-block;
+			}
+			#headMainIdea
+			{
+				font-size: 32px;
+				width: 22%;
+				height: 90%;
+				padding: 10px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#mainIdeaEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 24px;
+				width: 73%;
+				height: 99%;
+				margin: 1px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.supportEntry
+			{
+				color: #292929;
+				background-color: #62b1d0;
+				font-size: 22px;
+				width: 95%;
+				height: 12%;
+				margin: 6px 0px 0px 15px;
+				border-radius: 10px;
+				border: 4px solid #9be1fc;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			
+			#supportEntry1
+			{
+			border: 6px dotted #dbdbdb;
+			}
+			
+			
+			
+			.posText2
+			{
+				padding: 2px 8px;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 10px;
+				font-size: 24px;
+			}
+			.indent
+			{
+				margin-left: 40px;
+			}
+			.para
+			{
+				margin: 10px 0px;
+			}
+			#instructBox
+			{
+				background-image: url('QBkgd1.png');
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 770px;
+				font-size: 25px;
+				font-weight: bold;
+				text-align: center;
+				padding: 10px 5px 10px 5px;
+				border-bottom: 5px dashed #5b8ebc;
+				margin: 0px auto 4px auto;
+				top: 0;
+			}
+			#textMapButton
+			{
+				background-color: #5b8ebc;
+				padding: 2px 4px;
+				font-weight: 700;
+				border: 1px solid #5b8ebc;
+				border-radius: 8px;
+				cursor: pointer;
+			}
+			
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			var userSelecteditem;
+			var score=0;			
+			
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b1"];
+			var items = ["b1","b2","b3"];
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{				
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoadedMedium");
+				
+				GetRequest();
+				
+				//lock the buttons
+				Lock();
+				$("#questionBox0").slideDown(1000);
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: false, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "para1");
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+				
+					$("#textMap").click(function() {
+				
+				HideTextMap();
+			}); 
+				
+				
+			});
+
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				//animate text map appearance
+		
+				//fades the elements that belong to the fade class. Fades to 40%.
+				$(".fade").fadeTo(1000,0.4);
+				
+				//This call toggles .slideUp and .slideDown every-time ShowTextMap is called.
+				$( "#textMap" ).slideToggle(1000);
+				
+				
+				
+				//loop allows the Main idea box to flash 2 times. 
+				for(i=0;i<4;i++) {
+				$("#supportEntry1").fadeTo('medium', 0.5).fadeTo('medium', 1.0);
+			//	$("#supportEntry2").fadeTo('medium', 0.5).fadeTo('medium', 1.0);
+				//$("#supportEntry3").fadeTo('medium', 0.5).fadeTo('medium', 1.0);
+				
+				
+				}
+			}
+			function HideTextMap()
+			{
+				//hide text map
+				$( "#textMap" ).slideUp(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$( "#supReplace1" ).empty();
+					$("#supReplace1").html("The car saves gas.");
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userAnswerId = $(this).attr("id");
+					content=$(this).html();
+					//get user answer's text
+					userSelectedValue = document.getElementById(userAnswerId).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					
+					//user selcted Item 4-7
+					userSelecteditem = $(this).attr("item");
+					
+					items.splice(jQuery.inArray(userAnswerId,items),1); 
+					$( "#supReplace1" ).empty();
+					$("#supReplace1").html(content);
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+					
+						score++;
+					//$("#supReplace1").append("Size, exterior color, mileage")
+					sound_clicked(); 
+					}
+					else { 
+					sound_incorrect(); 
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#5b8ebc"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #5b8ebc;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if(data =="ShowTextMap")
+				{
+				ShowTextMap()
+				}
+				else if(data =="HideTextMap")
+				{
+				HideTextMap()
+				}
+				else if(data=="ComputerStudent1")
+				{
+				var value = parseInt(Math.random() * (items.length - 1 + 1) + 1);
+  				var JordanAnswerID=items[value-1];
+				var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+					$("#"+JordanAnswerID).animate({backgroundColor: "blue", color: "white"}, 1000);
+					parent.GetWorldEvent(JordanAnswer);
+			
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else if(data == "NextPage")
+				{
+				//parent.GetWorldEvent("Medium");
+				parent.nextPage("media/"+"Lesson19-M3.html?score="+score);
+				}
+				else if (data == "getScore")
+				{
+					
+					parent.GetWorldEvent(score);
+				}
+				
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+				
+			   }
+			  
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+				 <span id="textMapButton" onclick="ShowTextMap()">Click here to show Text Map.
+			</div>
+			<div id="mainText">
+				<div id="mainTextHead">
+					<span>
+						2001 Honda Accord
+					</span>
+					<br>
+					$4500
+					<div id="mainTextSubHead">
+						Posted on January 5, 2014
+					</div>
+				</div>
+				
+				<span id="adPic">
+					<img src="HondaAccord.png">
+				</span>
+				
+				<div id="para1" class="para">
+					Don't miss the chance to buy this 2001 Honda Accord! This mid-size Honda is gray with approximately 157,000 miles on it. It will take you wherever you want to go. <span class="highlight">This vehicle is a terrific gas saver. It achieves the best mileage in rural areas, but it will also save you money in the city.</span> The AC and heat are in great condition and make travel comfortable in any weather. The AC can definitely take on our crazy, hot summers! The car has been regularly serviced and has never been in a major accident. It has four new tires, new brakes, and only a minor amount of rust for how old it is! We can test it on the highway, if you want to see how well it runs. Inside and out, the car is so clean that it looks like it just came off the showroom floor! I am available to meet in the evenings and on weekends. </div>
+				
+				<div id="para2" class="para">
+					Call me with any questions 223-818-9199!
+				</div>
+			</div>
+			<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					What is the most important description in the highlighted sentences?
+				</div>
+				
+				<div id="buttonBox">
+					<div class='mybutton' id="b1" item="A" value="Correct"; href='javascript:void(null)'>This car saves gas in the city and in the country.</div>
+					<div class='mybutton' id="b2" item="B" value="Incorrect"; href='javascript:void(null)'>This car saves the most gas in cities.</div>
+					<div class='mybutton' id="b3" item="C" value="Incorrect"; href='javascript:void(null)'>This car guzzles gas in rural areas.</div>
+				</div>
+			</div>
+		</div>
+		<div id="textMap" title="CLICK TO HIDE">
+			
+			<div class="fade" id="textMainIdeaBox">
+				<div id="headMainIdea">Main Idea</div>
+				<div id="mainIdeaEntry" data-state="">
+					<div class="posText1" id="MainIdea">Don't miss the chance to buy this 2001 Honda Accord!</div>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry1" data-state="">
+				<div class="posText2">
+					<span id="supReplace1"> 
+						
+					</span>
+				</div>
+			</div>
+			<div class="fade supportEntry" id="supportEntry2" data-state="">
+				<div class="posText2">
+					<span id="supReplace2">
+						
+					</span>
+				</div>
+			</div>
+			<div class="fade supportEntry" id="supportEntry3" data-state="">
+				<div class="posText2">
+					<span id="supReplace3"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

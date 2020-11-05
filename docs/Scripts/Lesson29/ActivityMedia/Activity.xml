@@ -1,0 +1,978 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoTutorScript>
+  <Agents>
+    <Agent name="ComputerStudent1" gender="Male" title="Mr." firstName="ComputerStudent1" lastName="Smith" displayName="ComputerStudent1">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, Great job! That's right!" speech="" play="_user_,B1" />
+        <Item text="_user_,That's right!" speech="" play="_user_,B2" />
+        <Item text="_user_, That is correct!" speech="" play="_user_,B3" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackToBoth">
+        <Item text="Both of you were incorrect this time." speech="" play="B4" />
+        <Item text="It looks like you were both wrong this time." speech="" play="B5" />
+        <Item text="Oh no! It looks like that one tripped you both up!" speech="" play="B6" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="That is incorrect." speech="" play="B7" />
+        <Item text="That's not quite right." speech="" play="B8" />
+        <Item text="That is not the right answer." speech="" play="B9" />
+        <Item text="That is the wrong answer." speech="" play="B10" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeJordanFeedback">
+        <Item text="_user_, you are right! ComputerStudent1, you were wrong this time." speech="" play="_user_,B11" />
+        <Item text="_user_, you were right! ComputerStudent1, you were wrong this time." speech="" play="_user_,B12" />
+        <Item text="_user_, great job on this question! You were right! ComputerStudent1, you were wrong." speech="" play="_user_,B13" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBoth">
+        <Item text="Great! You are both correct!" speech="" play="B14" />
+        <Item text="You're both correct! Wonderful!" speech="" play="B15" />
+        <Item text="Nice job, both of you! You are both right!" speech="" play="B16" />
+      </SpeechCan>
+      <SpeechCan name="NegativeUserPositiveJordanFeedback">
+        <Item text="_user_, you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,B17" />
+        <Item text="_user_, you were wrong this time. ComputerStudent1, you were correct." speech="" play="_user_,B18" />
+        <Item text="_user_, it looks like you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,B19" />
+      </SpeechCan>
+    </Agent>
+    <Agent name="ComputerTutor" gender="Female" title="Dr." firstName="ComputerTutor" lastName="Valdez" displayName="ComputerTutor">
+      <SpeechCan name="PositiveUserNegativeJordanFeedbackUserFirst">
+        <Item text="ComputerStudent1, you were wrong this time. _user_, you are right!" speech="" play="A1,_user_,A2" />
+        <Item text="ComputerStudent1, you were wrong this time. _user_, you were right! " speech="" play="A3,_user_,A4" />
+        <Item text=" ComputerStudent1, you were wrong. _user_, great job on this question! You were right!" speech="" play="A5,_user_,A6" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedback">
+        <Item text="_user_, Great job! That's right!" speech="" play="_user_,A7" />
+        <Item text="_user_, That is correct!" speech="" play="_user_,A8" />
+      </SpeechCan>
+      <SpeechCan name="PositiveUserNegativeJordanFeedbackUserSecond">
+        <Item text="_user_, you are right! ComputerStudent1, sorry, you were wrong this time." speech="" play="_user_,A9" />
+        <Item text="_user_, you were right! ComputerStudent1, sorry, you were wrong this time." speech="" play="_user_,A10" />
+        <Item text="_user_, great job on this question! You were right! ComputerStudent1, you were wrong." speech="" play="_user_,A11" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackToBothUserSecond">
+        <Item text="sorry, Both of you were incorrect this time." speech="" play="A12" />
+        <Item text="unfortunately, It looks like you were both wrong this time." speech="" play="A13" />
+      </SpeechCan>
+      <SpeechCan name="MoreTime">
+        <Item text="Take a few more minutes to read this text." speech="" play="A14" />
+      </SpeechCan>
+      <SpeechCan name="NegativeUserPositiveJordanFeedbackUserSecond">
+        <Item text="_user_, you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,A15" />
+        <Item text="_user_, you were wrong this time. ComputerStudent1, you were correct." speech="" play="_user_,A16" />
+        <Item text="_user_, it looks like you were incorrect this time. ComputerStudent1, you were right." speech="" play="_user_,A17" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="_user_, That is incorrect." speech="" play="_user_,A18" />
+        <Item text="_user_, That's not quite right." speech="" play="_user_,A19" />
+        <Item text="_user_, That is not the right answer." speech="" play="_user_,A20" />
+        <Item text="_user_, That is the wrong answer." speech="" play="_user_,A21" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedbackToBothUserFirst">
+        <Item text="Sorry, both of you were incorrect this time." speech="" play="A22" />
+        <Item text="Unfortunately, it looks like you were both wrong this time." speech="" play="A23" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBothUserFirst">
+        <Item text="Great work, You are both correct!" speech="" play="A24" />
+      </SpeechCan>
+      <SpeechCan name="NegativeUserPositiveJordanFeedbackUserFirst">
+        <Item text="ComputerStudent1, you were right.  _user_, you were incorrect this time. " speech="" play="A25,_user_,A26" />
+        <Item text=" ComputerStudent1, you were correct.  _user_, you were wrong this time." speech="" play="A27,_user_,A28" />
+        <Item text=" ComputerStudent1, you were right.  _user_, it looks like you were incorrect this time." speech="" play="A29,_user_,A30" />
+      </SpeechCan>
+      <SpeechCan name="PositiveFeedbacktoBothUserSecond">
+        <Item text="You're both correct! Wonderful!" speech="" play="A31" />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs />
+  <RigidPacks>
+    <RigidPack name="Opening1" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="Alright, Now that we have red the passage, let's answer some questions that elaborate on what we red." speech="" play="A32" />
+      <Item id="2" agent="ComputerStudent1" text="ok. this text was pretty interesting, actually." speech="" play="B20" />
+    </RigidPack>
+    <RigidPack name="NewPassage" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="great job! You both did really well! Now we are going to look at another persuasive text! " speech="" play="A33" />
+      <Item id="2" agent="ComputerStudent1" text="I hope this one is as interesting as the last one. " speech="" play="B21" />
+      <Item id="3" agent="ComputerTutor" text="I'm sure it will be. Again, remember that in order to elaborate, we have to go outside of what the writer has written. We have to make connections in the text that are not explicitly given. Let's get started.  read this text, when you are finished reading, click the continue button at the bottom of the page." speech="" play="A34" />
+    </RigidPack>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="that wraps up our discussion for today. I hope you enjoyed learning about elaborating on persuasive texts!" speech="" media="media/L29Close.html" play="A35" />
+      <Item id="2" agent="ComputerStudent1" text="I know I did. These passages were really interesting, and I think I understand some of the material better as well." speech="" play="B22" />
+      <Item id="3" agent="ComputerTutor" text="ComputerStudent1, that's great! I hope to see you both again soon! Bye!" speech="" play="A36" />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="ComputerTutor" text="_user_ and ComputerStudent1, hello. Welcome back! Today we will be learning how to elaborate on persuasive texts." speech="" media="media/Lesson29-IntroTitle.html" play="_user_,A37" />
+      <Item id="2" agent="ComputerStudent1" text="The writers of persuasive texts are trying to convince us of something, right?" speech="" play="B23" />
+      <Item id="3" agent="ComputerTutor" text=" ComputerStudent1, that's right! They support their position using arguments and supportive information. Remember, elaborating on a text means that we are asking questions and making inferences. Inferences are based, on the text, but they are not found directly in the text." speech="" media="media\L29-Opening1.html" play="A38" />
+      <Item id="4" agent="ComputerStudent1" text="Oh yes, I remember this from last time. Can you give me an example of how a writer would do this in a persuasive text?" speech="" play="B24" />
+      <Item id="5" agent="ComputerTutor" text="You got it. Look at the text below that is taken from a text message on a cell phone. In this case, you can see that the writer is very upset because they are at a movie theater and everyone around them is using a phone. They have even complained to the theater manager." speech="" media="media\L29-Opening2.html" play="A39" />
+      <Item id="6" agent="ComputerStudent1" text="Ok, I think I get it. So, even though they do not specifically say it, we can infer that they believe that phones should not be allowed in movie theaters." speech="" play="B25" />
+      <Item id="7" agent="ComputerTutor" text="Exactly! Now, I have picked out a few persuasive texts so you can practice elaborating on your own." speech="" play="A40" />
+      <Item id="8" agent="ComputerStudent1" text=" _user_, lets both read the text on our own. When you are finished reading, click on the button at the bottom that says click to continue and then we can start trying to elaborate!" speech="" media="media/Lesson29-Medium-0-0.html" play="_user_,B26" />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="E1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's start with the topic." speech="" media="" play="A41">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this text is sensationalizing crime reporting. This is when the media makes an act of crime seem worse or more horrific than it actually was." speech="" keys="." threshold="" test="" play="A42" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please remember to click on your answer." speech="" keys="." threshold="" test="" play="_user_,A43" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the topic of this text?" speech="" keys="." threshold="" test="" play="A44" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the topic is Journalists in the nineteenth century." speech="" keys="." threshold="" test="" play="B27" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the topic is sensationalizing crime reporting." speech="" keys="." threshold="" test="" play="B28" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the topic of this text?" speech="" keys="." threshold="" test="" play="_user_,A45" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I am going to have to agree." speech="" keys="." threshold="" test="" play="B29" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So things can seem worse in the news than they actually were?" speech="" keys="." threshold="" test="" play="B30" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, thats right. This is not always the case, but sometimes, things get blown out of proportion by media outlets and the effect is a poorly informed platform audience." speech="" keys="." threshold="" test="" play="A46" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="_user_, Look for clues in the text, including the title and section headings. What is the topic of this text? Give it another try." speech="" keys="." threshold="" test="" play="_user_,A47" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Now, let's dig a little deeper." speech="" media="" itemDif="" play="A48">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The main argument of this text is that sensationalizing boosts sales. The more interesting or horrible the news is, the more likely people will be to buy the newspaper." speech="" keys="." threshold="" test="" play="A49" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to click on one of the answer choices." speech="" keys="." threshold="" test="" play="_user_,A50" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the writer's main argument in this text?" speech="" keys="." threshold="" test="" play="A51" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I'm thinking the main argument is attracting an audience is difficult." speech="" keys="." threshold="" test="" play="B31" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm thinking the main argument is sensationalizing boosts sales." speech="" keys="." threshold="" test="" play="B32" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the writer's main argument in this text?" speech="" keys="." threshold="" test="" play="_user_,A52" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_, I agree with you. Thats the right answer." speech="" keys="." threshold="" test="" play="_user_,B33" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think that's definitely true, people tune in more when something awful happens." speech="" keys="." threshold="" test="" play="B34" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Exactly, ComputerStudent1. The media is able to keep up good ratings when controversial things happen in the news." speech="" keys="." threshold="" test="" play="A53" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="The main argument is what the writer is trying to convince us of. So, what is the writer trying to convince us of?" speech="" keys="." threshold="" test="" play="A54" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's keep going." speech="" media="" itemDif="" play="A55">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The correct answer is, false, weak descriptors are used more. It is more common for writers to use more neutral words in the media than outright negative words." speech="" keys="." threshold="" test="" play="A56" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_, please click on one of the options, even if you're not sure." speech="" keys="." threshold="" test="" play="_user_,A57" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, true or false, strong descriptors are used more than weak descriptors." speech="" keys="." threshold="" test="" play="A58" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="True, strong descriptors boost ad sales." speech="" keys="." threshold="" test="" play="B35" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="False, weak descriptors are used more." speech="" keys="." threshold="" test="" play="B36" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, true or false, strong descriptors are used more than weak descriptors." speech="" keys="." threshold="" test="" play="_user_,A59" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_, I agree with you. Thats the right answer." speech="" keys="." threshold="" test="" play="_user_,B37" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Okay, so the stronger the words, the worse it seems?" speech="" keys="." threshold="" test="" play="B38" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Yep. That's the idea, " speech="" keys="." threshold="" test="" play="A60" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read this section of text again. Look at what the text says about the use of strong descriptors. Please try it again." speech="" keys="." threshold="" test="" play="A61" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's elaborate on this section." speech="" media="" itemDif="" play="A62">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="From this text, we learn that the media uses ways other than descriptors to sensationalize crime. Using strong language is not the most important way media outlets sensationalize." speech="" keys="." threshold="" test="" play="A63" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ remember, you have to click on an answer or I wont know what you think is the correct answer." speech="" keys="." threshold="" test="" play="_user_,A64" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the writer suggesting in this section of the text?" speech="" keys="." threshold="" test="" play="A65" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the writer is suggesting that the media's use of sensationalizing is in decline." speech="" keys="." threshold="" test="" play="B39" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the writer is suggesting that the media uses ways other than descriptors to sensationalize." speech="" keys="." threshold="" test="" play="B40" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the writer suggesting in this section of the text?" speech="" keys="." threshold="" test="" play="_user_,A66" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_, i think you're right. I agree with your answer choice." speech="" keys="." threshold="" test="" play="_user_,B41" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So it's not always strong words that makes crimes sensational?" speech="" keys="." threshold="" test="" play="B42" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right, other things propogate media sensationalization." speech="" keys="." threshold="" test="" play="A67" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look at the section again. The writer tells us that strong descriptors are not always used and yet the media continues to sensationalize. What does this suggest?" speech="" keys="." threshold="" test="" play="A68" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Okay." speech="" media="" itemDif="" play="A69">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Reporters focused on the youngest shooting victim because it appealed to the emotions of the readers. " speech="" keys="." threshold="" test="" play="A70" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to click on one of the answer buttons." speech="" keys="." threshold="" test="" play="_user_,A71" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why does the writer say that the media focuses on the youngest victim?" speech="" keys="." threshold="" test="" play="A72" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I'm guessing there were more witnesses of that shooting." speech="" keys="." threshold="" test="" play="B43" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm guessing it appealed to the emotions of the readers." speech="" keys="." threshold="" test="" play="B44" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why does the writer say that the media focuses on the youngest victim?" speech="" keys="." threshold="" test="" play="_user_,A73" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm thinking that answer was right." speech="" keys="." threshold="" test="" play="B45" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="What do emotions have to do with the media?" speech="" keys="." threshold="" test="" play="B46" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's talk about it." speech="" keys="." threshold="" test="" play="A74" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read this section again. What about the youngest shooting victim would capture the media's focus?" speech="" keys="." threshold="" test="" play="A75" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Moving on." speech="" media="" itemDif="" play="A76">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer thinks that reporters benefit from focusing on the youngest shooting victim because it boosts sales for the media outlet. When readers have an emotional reaction to what they are reading, they are more likely to continue following the story in the future which increases the readership of the platform." speech="" keys="." threshold="" test="" play="A77" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please click on one of the choices." speech="" keys="." threshold="" test="" play="_user_,A78" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how does the author think that reporters benefit from focusing on the youngest victim?" speech="" keys="." threshold="" test="" play="A79" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I bet it de-sensationalizes the story" speech="" keys="." threshold="" test="" play="B47" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I bet it boosts sales for the media outlet." speech="" keys="." threshold="" test="" play="B48" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how does the author think that reporters benefit from focusing on the youngest victim?" speech="" keys="." threshold="" test="" play="_user_,A80" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I agree with that answer." speech="" keys="." threshold="" test="" play="B49" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="That definitely sensationalizes the story, even though it's already sad." speech="" keys="." threshold="" test="" play="B50" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Yes it is. Let's move on." speech="" keys="." threshold="" test="" play="A81" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about how strong emotions from the readers would affect the story's publicity. Try it again." speech="" keys="." threshold="" test="" play="A82" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Take a look at this part of the text." speech="" media="" itemDif="" play="A83">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer is suggesting that the media uses coverage focus to sensationalize the event. They focus on one fact or detail. In this case they focused on the youngest victim because it appealed to the emotions of the readers." speech="" keys="." threshold="" test="" play="A84" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ click on one of the answer options, please." speech="" keys="." threshold="" test="" play="_user_,A85" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the writer suggesting in this section of the text?" speech="" keys="." threshold="" test="" play="A86" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the writer is suggesting that the media purposely leaves out information to sensationalize." speech="" keys="." threshold="" test="" play="B51" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the writer is suggesting that the media uses coverage focus to sensationalize." speech="" keys="." threshold="" test="" play="B52" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the writer suggesting in this section of the text?" speech="" keys="." threshold="" test="" play="_user_,A87" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_, I'm going to stick with your answer on this one!" speech="" keys="." threshold="" test="" play="_user_,B53" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So the reporters focused on the youngest victim because that was the saddest story?" speech="" keys="." threshold="" test="" play="B54" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, yes, but that does not mean that the other deaths were not sad. That is what sensationalizing does." speech="" keys="." threshold="" test="" play="A88" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look at clues in the text such as the section heading or key topics in the paragraph. Try it again." speech="" keys="." threshold="" test="" play="A89" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E8">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Alright." speech="" media="" itemDif="" play="A90">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The author thinks the media uses tools such as photos and videos to appeal to readers.  Photos and videos can easily be manipulated to show only one detail or to show the most horrific part of any event and this can overstate the reality of what happened." speech="" keys="." threshold="" test="" play="A91" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to click an answer!" speech="" keys="." threshold="" test="" play="_user_,A92" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, according to the writer, what tools are used by the media to appeal to readers?" speech="" keys="." threshold="" test="" play="A93" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I bet it's phone calls and emails." speech="" keys="." threshold="" test="" play="B55" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I bet it's eyewitness accounts." speech="" keys="." threshold="" test="" play="B56" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, according to the writer, what tools are used by the media to appeal to readers?" speech="" keys="." threshold="" test="" play="_user_,A94" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_ I think you picked the right answer." speech="" keys="." threshold="" test="" play="_user_,B57" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="In videos, they can take out and keep only the parts they want, especially in interviews, right?" speech="" keys="." threshold="" test="" play="B58" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1,That's right." speech="" keys="." threshold="" test="" play="A95" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read this section again. The writer points out a common phrase used in regards to one of these tools. What tool is it?" speech="" keys="." threshold="" test="" play="A96" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="E9">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's look at another possibility." speech="" media="" itemDif="" play="A97">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Using emotions makes people want to learn more about a story. By making the story more emotional, people are more inclined to follow it after they initially hear about it." speech="" keys="." threshold="" test="" play="A98" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ if you do not click one of the answers, then i wont know what you think the answer is." speech="" keys="." threshold="" test="" play="_user_,A99" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why does the writer think that the media uses emotion to appeal to readers?" speech="" keys="." threshold="" test="" play="A100" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am not sure about this one. I don't even have a guess," speech="" keys="." threshold="" test="" play="B59" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am not sure, but i'm going to go with using emotions makes people want to learn more." speech="" keys="." threshold="" test="" play="B60" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why does the writer think that the media uses emotion to appeal to readers?" speech="" keys="." threshold="" test="" play="_user_,A101" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I am going to go with the same answer." speech="" keys="." threshold="" test="" play="B61" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Okay, I think I get it!" speech="" keys="." threshold="" test="" play="B62" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, great." speech="" keys="." threshold="" test="" play="A102" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about the different news stories you hear about. What are you likely to do if the story provokes a strong emotional response?" speech="" keys="." threshold="" test="" play="A103" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Ea">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's look at a take home message from this text." speech="" media="" itemDif="" play="A104">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer is suggesting that readers can ask themselves these questions in order to determine whether the crime is being sensationalized or not. It is important for readers to be aware of sensationalizing so they can look more closely to find all the facts of an event rather than just what the media focuses on." speech="" keys="." threshold="" test="" play="A105" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ remember, to submit your answer, click on one of the answer buttons." speech="" keys="." threshold="" test="" play="_user_,A106" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what might the writer be suggesting in this part of the text?" speech="" keys="." threshold="" test="" play="A107" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The writer is suggesting that journalists already attempt to avoid sensationalizing crime." speech="" keys="." threshold="" test="" play="B63" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The writer is suggesting that readers can ask themselves these questions as well to spot sensationalizing in the media." speech="" keys="." threshold="" test="" play="B64" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what might the writer be suggesting in this part of the text?" speech="" keys="." threshold="" test="" play="_user_,A108" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm not sure about this one, so i'm going with the same answer." speech="" keys="." threshold="" test="" play="B65" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Asking yourself these questions can help let you know that you're not getting the full story." speech="" keys="." threshold="" test="" play="B66" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, thats exactly right." speech="" keys="." threshold="" test="" play="A109" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about whether or not you notice when things like this happen in the news. Give it another try." speech="" keys="." threshold="" test="" play="A110" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's start with the topic." speech="" media="" itemDif="" play="A111">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this text is fracking. As we red in the text, fracking is a way of extracting oil and natural gas from deep underground." speech="" keys="." threshold="" test="" play="A112" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ Don't forget to click an answer." speech="" keys="." threshold="" test="" play="_user_,A113" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the topic of this text?" speech="" keys="." threshold="" test="" play="A114" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The topic is natural gas." speech="" keys="." threshold="" test="" play="B67" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The topic is fracking." speech="" keys="." threshold="" test="" play="B68" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the topic of this text?" speech="" keys="." threshold="" test="" play="_user_,A115" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_, I think that you are right this time." speech="" keys="." threshold="" test="" play="_user_,B69" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think I have heard of fracking before, but I wasn't sure what it was." speech="" keys="." threshold="" test="" play="B70" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="It's starting to become a hot topic!" speech="" keys="." threshold="" test="" play="A116" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look for clues in the text such as the title or section headings. Try this one again." speech="" keys="." threshold="" test="" play="A117" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Now we will look at the main argument." speech="" media="" itemDif="0.1" play="A118">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer is trying to convince us that fracking is dangerous. One way we can tell that this is a very important argument is that it is included in the title." speech="" keys="." threshold="" test="" play="A119" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ Please remember to answer the question, even if you're not sure." speech="" keys="." threshold="" test="" play="_user_,A120" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, the writer is trying to convince us of something. What is it?" speech="" keys="." threshold="" test="" play="A121" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The writer is trying to convice us of what fracking is." speech="" keys="." threshold="" test="" play="B71" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The writer is trying to convince us that fracking is dangerous." speech="" keys="." threshold="" test="" play="B72" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, the writer is trying to convince us of something. What is it?" speech="" keys="." threshold="" test="" play="_user_,A122" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm going to stick with that answer on this one." speech="" keys="." threshold="" test="" play="B73" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I want to learn more about fracking, it sounds interesting." speech="" keys="." threshold="" test="" play="B74" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Good. ok, Let's move on." speech="" keys="." threshold="" test="" play="A123" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look at the text, what does the writer seem to be trying to persuade us of?" speech="" keys="." threshold="" test="" play="A124" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's take a look at some supporting information." speech="" media="" itemDif="0.1" play="A125">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Fracking exploits communities for business profit supports the writer's main argument that fracking is dangerous." speech="" keys="." threshold="" test="" play="A126" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to click an answer." speech="" keys="." threshold="" test="" play="_user_,A127" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these would support the writer's main argument?" speech="" keys="." threshold="" test="" play="A128" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I am going to guess, fracking is well regulated by the governement." speech="" keys="." threshold="" test="" play="B75" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I am going to guess, fracking exploits communities for business profit." speech="" keys="." threshold="" test="" play="B76" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these would support the writer's main argument?" speech="" keys="." threshold="" test="" play="_user_,A129" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I agree with that answer." speech="" keys="." threshold="" test="" play="B77" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I didn't know it wasn't well regulated, that's a scary thought." speech="" keys="." threshold="" test="" play="B78" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="It is, let's move on." speech="" keys="." threshold="" test="" play="A130" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read each answer option again. Which one supports the fact that fracking is dangerous? Give it another try." speech="" keys="." threshold="" test="" play="A131" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Okay." speech="" media="" itemDif="0.1" play="A132">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The text tells us that one reason fracking is dangerous is because it can pollute nearby water sources. Water used in fracking is full of pollutants such as sand and toxic chemicals. This is very dangerous to the environment and humans living near these sites." speech="" keys="." threshold="" test="" play="A133" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ remember, you must click one of the answer options to answer the question." speech="" keys="." threshold="" test="" play="_user_,A134" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how is the writer arguing that fracking is dangerous?" speech="" keys="." threshold="" test="" play="A135" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="It's dangerous because it's very expensive." speech="" keys="." threshold="" test="" play="B79" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="It's dangerous because is can pollute nearby water sources." speech="" keys="." threshold="" test="" play="B80" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how is the writer arguing that  fracking is dangerous?" speech="" keys="." threshold="" test="" play="_user_,A136" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm sticking with that answer to this one." speech="" keys="." threshold="" test="" play="B81" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Toxins in the water is definitely not a good thing, people have to drink that water!" speech="" keys="." threshold="" test="" play="B82" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right, it is definitely dangerous." speech="" keys="." threshold="" test="" play="A137" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read the section again. Look for clues such as the title or section headings. Give it another try." speech="" keys="." threshold="" test="" play="A138" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's discuss supporting information." speech="" media="" play="A139">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This sentence supports the writer's argument because it is elaborating on how it can pollute nearby water. This sentence is giving examples of how these chemicals pollute surrounding waterways." speech="" keys="." threshold="" test="" play="A140" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to answer the question. " speech="" keys="." threshold="" test="" play="_user_,A141" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, does the highlighted sentence support the writer's argument, fracking pollutes water sources?" speech="" keys="." threshold="" test="" play="A142" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text=" I think it's the second option, elaborating on how to prevent water pollution." speech="" keys="." threshold="" test="" play="B83" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it is the third option, it is elaborating on how fracking can pollute water sources." speech="" keys="." threshold="" test="" play="B84" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, does the highlighted sentence support the writer's argument, fracking pollutes water sources?" speech="" keys="." threshold="" test="" play="_user_,A143" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I think that is right, i'm going with that answer." speech="" keys="." threshold="" test="" play="B85" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="That would kill fish too, right?" speech="" keys="." threshold="" test="" play="B86" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right, it destroys water eco-systems." speech="" keys="." threshold="" test="" play="A144" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Read the sentences again, which sentence supports the statement?" speech="" keys="." threshold="" test="" play="A145" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Alright." speech="" media="" itemDif="0.1" play="A146">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Fracking increases the amount of pollution in an area. it has a negative impact on the air in surrounding communities because it contains pollutants related to diseases. Toxic dust clouds travel through the air and permeates nearby cities." speech="" keys="." threshold="" test="" play="A147" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ click an answer button to answer the question." speech="" keys="." threshold="" test="" play="_user_,A148" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what does the author tell us about the relationship between pollution and fracking?" speech="" keys="." threshold="" test="" play="A149" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Fracking reverses the effects of pollution in an area." speech="" keys="." threshold="" test="" play="B87" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Fracking increases the amount of pollution in an area." speech="" keys="." threshold="" test="" play="B88" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_,  what does the author tell us about the relationship between pollution and fracking?" speech="" keys="." threshold="" test="" play="_user_,A150" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I am betting that answer is right this time. I'm going with that answer." speech="" keys="." threshold="" test="" play="B89" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Pollutants in the ground, and, in the air? This article is very convincing." speech="" keys="." threshold="" test="" play="B90" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="I would have to agree! The writer is using strong arguments." speech="" keys="." threshold="" test="" play="A151" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look for clues in the text such as the section headings or key words. Try this one again." speech="" keys="." threshold="" test="" play="A152" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's do some elaborating." speech="" media="" itemDif="0.1" play="A153">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This part of the text is suggesting that fracking can lead to very serious illnesses in communities near fracking sites. These diseases can cause serious harm to people living in these communities." speech="" keys="." threshold="" test="" play="A154" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please click one of the answer options, even if you're not sure." speech="" keys="." threshold="" test="" play="_user_,A155" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is being suggested in this part of the text?" speech="" keys="." threshold="" test="" play="A156" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think the writer is suggesting that fracking leads to large travelling dust clouds." speech="" keys="." threshold="" test="" play="B91" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think the writer is suggesting that fracking can lead to very serious illnesses in communities." speech="" keys="." threshold="" test="" play="B92" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is being suggested in this part of the text?" speech="" keys="." threshold="" test="" play="_user_,A157" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="_user_ has to be right on this question, I'm going with that answer." speech="" keys="." threshold="" test="" play="_user_,B93" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="How horrible." speech="" keys="." threshold="" test="" play="B94" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="These pollutants in the air can lead to a wide range of illnesses for those working at the site and people in the surrounding areas." speech="" keys="." threshold="" test="" play="A158" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="What is the writer trying to persuade us of in this section of the text?" speech="" keys="." threshold="" test="" play="A159" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="H9">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's look at this section." speech="" media="" itemDif="0.1" play="A160">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="In this section of the text, the writer is suggesting that fracking overall is dangerous to communities. This is because of the massive social and economic repercussions of polluted air and water, and the need for more expensive emergency and social services. " speech="" keys="." threshold="" test="" play="A161" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to answer the question!" speech="" keys="." threshold="" test="" play="_user_,A162" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the writer suggesting in this section of the text?" speech="" keys="." threshold="" test="" play="A163" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="The writer is suggesting that fracking is generally safe and protects agriculture." speech="" keys="." threshold="" test="" play="B95" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="The writer is suggesting that fracking is generally very dangerous to communities." speech="" keys="." threshold="" test="" play="B96" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the writer suggesting in this section of the text? Think about the pros and cons of fracking." speech="" keys="." threshold="" test="" play="_user_,A164" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I think i'm going to pick the same one." speech="" keys="." threshold="" test="" play="B97" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So overall, fracking seems pretty bad." speech="" keys="." threshold="" test="" play="B98" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="ComputerStudent1, It surely does! I think this text has you convinced." speech="" keys="." threshold="" test="" play="A165" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="What is the writer trying to persuade us of in this section of the text?" speech="" keys="." threshold="" test="" play="A166" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="Ha">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Alright." speech="" media="" itemDif="0.1" play="A167">
+          <Answers>
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="Don't forget to click on an answer!" speech="" keys="." threshold="" test="" play="A168" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why would this topic be one that people have strong opinions about?" speech="" keys="." threshold="" test="" play="A169" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's because big business does not care about protecting the environment." speech="" keys="." threshold="" test="" play="B99" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's because between economic wealth and public health, fracking has serious trade-offs." speech="" keys="." threshold="" test="" play="B100" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why would this topic be one that people have strong opinions about?" speech="" keys="." threshold="" test="" play="_user_,A170" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I think that answer is right this time." speech="" keys="." threshold="" test="" play="B101" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="This sure is a hot topic!" speech="" keys="." threshold="" test="" play="B102" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Yes, It really is." speech="" keys="." threshold="" test="" play="A171" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about how there can be two sides to this debate. Give it another try." speech="" keys="." threshold="" test="" play="A172" />
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Between economic wealth and public health, fracking has serious trade-offs. While it might help to boost the economy of an area it might also have an adverse effect on the environment and public health." speech="" keys="." threshold="" test="" play="A173" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M1">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's start with the topic." speech="" media="" itemDif="0.1" play="A174">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The topic of this text is eating bugs or in other words, edible insects. During this lesson, I will use both words, bugs and, insects." speech="" keys="." threshold="" test="" play="A175" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ remember, to answer the question, you must click on one of the answer options." speech="" keys="." threshold="" test="" play="_user_,A176" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, what is the topic of this text?" speech="" keys="." threshold="" test="" play="A177" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think that the topic is cowboys because there is a picture of a cowboy." speech="" keys="." threshold="" test="" play="B103" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think that the topic is eating bugs." speech="" keys="." threshold="" test="" play="B104" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, what is the topic of this text?" speech="" keys="." threshold="" test="" play="_user_,A178" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm not sure about this one, so I'm going with the same answer." speech="" keys="." threshold="" test="" play="B105" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I think I like this text already!" speech="" keys="." threshold="" test="" play="B106" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Good. I'm glad." speech="" keys="." threshold="" test="" play="A179" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look at clues in the text such as pictures or heading titles. Give this question another try." speech="" keys="." threshold="" test="" play="A180" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M2">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Now let's look at the writer's main argument." speech="" media="" itemDif="0.1" play="A181">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer is for, this topic. The writer is persuading the reader to consider the health and global benefits of eating insects." speech="" keys="." threshold="" test="" play="A182" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please remember to click your answer!" speech="" keys="." threshold="" test="" play="_user_,A183" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, is the writer for or against this topic?" speech="" keys="." threshold="" test="" play="A184" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I'm going to go with against, the writer does not want people to eat bugs." speech="" keys="." threshold="" test="" play="B107" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I'm going to go with for, the writer is suggesting people eat bugs." speech="" keys="." threshold="" test="" play="B108" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, is the writer for or against this topic?" speech="" keys="." threshold="" test="" play="_user_,A185" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I bet the right one is that answer, I'm going with that one too." speech="" keys="." threshold="" test="" play="B109" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="What are the benefits?" speech="" keys="." threshold="" test="" play="B110" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's talk about them." speech="" keys="." threshold="" test="" play="A186" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="The writer talks about the focus of the organization. With that in mind, do you think the writer is for the topic or against it?" speech="" keys="." threshold="" test="" play="A187" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M3">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's think about the writer's motive for writing this text." speech="" media="" itemDif="0.1" play="A188">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="One reason people should eat insects is because they are healthy. They contain lots of vitamins and minerals that other meats do not have." speech="" keys="." threshold="" test="" play="A189" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to press an answer choice." speech="" keys="." threshold="" test="" play="_user_,A190" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, which of these is one reason the writer suggests people should eat bugs?" speech="" keys="." threshold="" test="" play="A191" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it's because people all around the world do it." speech="" keys="." threshold="" test="" play="B111" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it's because they are healthy." speech="" keys="." threshold="" test="" play="B112" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, which of these is one reason the writer suggests people should eat bugs?" speech="" keys="." threshold="" test="" play="_user_,A192" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I agree." speech="" keys="." threshold="" test="" play="B113" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I would have never known that bugs were healthy! " speech="" keys="." threshold="" test="" play="B114" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Let's move on." speech="" keys="." threshold="" test="" play="A193" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Look for clues in the text such as key words and section headings. Try this one again." speech="" keys="." threshold="" test="" play="A194" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M4">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's look more closely at this section." speech="" media="" itemDif="0.1" play="A195">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Bugs are healthy because they are low in fat and high in protein.  They also have low levels of cholesterol. Cholesterol blocks the flow of blood to your heart which can cause heart attacks. Lots of foods are high in cholesterol but bugs are not." speech="" keys="." threshold="" test="" play="A196" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please choose an an answer, even if you're not sure about it." speech="" keys="." threshold="" test="" play="_user_,A197" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, how do we know bugs are nutritious?" speech="" keys="." threshold="" test="" play="A198" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Probably because they can be raised in any climate." speech="" keys="." threshold="" test="" play="B115" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Probably because they are low fat and high in protein." speech="" keys="." threshold="" test="" play="B116" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, how do we know bugs are nutritious?" speech="" keys="." threshold="" test="" play="_user_,A199" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I think that answer is right." speech="" keys="." threshold="" test="" play="B117" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Who would have thought bugs would be healthy?!" speech="" keys="." threshold="" test="" play="B118" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="You learn new things all the time! Let's move on." speech="" keys="." threshold="" test="" play="A200" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="There are a number of health benefits listed in the text, which of these is one of them?" speech="" keys="." threshold="" test="" play="A201" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M5">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Alright, let's look at the information the writer has here." speech="" media="" itemDif="0.1" play="A202">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer might include information about other cultures eating bugs in order to convince us that it can become a norm in our society too. There are cultures all over the world that consider it normal to eat insects so there should not be a stigma associated with it." speech="" keys="." threshold="" test="" play="A203" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to answer the question!" speech="" keys="." threshold="" test="" play="_user_,A204" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why might the writer tell us that other cultures already eat insects?" speech="" keys="." threshold="" test="" play="A205" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="To teach us about cultures around the world I bet." speech="" keys="." threshold="" test="" play="B119" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="To convince us that it can become a norm in our society too." speech="" keys="." threshold="" test="" play="B120" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why might the writer tell us that other cultures eat insects? Think about how things can become normal that seem strange at first." speech="" keys="." threshold="" test="" play="_user_,A206" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I definitely think that that answer is correct." speech="" keys="." threshold="" test="" play="B121" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So the writer is showing us that it's really not as weird as it seems to us?" speech="" keys="." threshold="" test="" play="B122" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right, The writer is telling us that globally, it is very common." speech="" keys="." threshold="" test="" play="A207" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Many trends become cross cultural. Think about what it means when a trend spreads. Give it another try." speech="" keys="." threshold="" test="" play="A208" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M6">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Let's read this part again." speech="" media="" play="A209">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="This sentence is not considered important information. It is, however, a supporting statement. It supports the writer's statement that insects are tasty." speech="" keys="." threshold="" test="" play="A210" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please remember to click on one of the answer buttons." speech="" keys="." threshold="" test="" play="_user_,A211" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, is this sentence important for the writer's main argument?" speech="" keys="." threshold="" test="" play="A212" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I don't think so, it's the topic." speech="" keys="." threshold="" test="" play="B123" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I don't think so, it's a supporting statement." speech="" keys="." threshold="" test="" play="B124" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, does the writer's main argument depend on this sentence? Think about whether or not this sentence is important to the writer's argument." speech="" keys="." threshold="" test="" play="_user_,A213" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm going with the same answer." speech="" keys="." threshold="" test="" play="B125" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="I would like one with ketchup, mustard, and relish, please." speech="" keys="." threshold="" test="" play="B126" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Sounds delicious, Let's move on." speech="" keys="." threshold="" test="" play="A214" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Does the highlighted sentence contain information that is essential to the text making sense? Is this sentence important information? " speech="" keys="." threshold="" test="" play="A215" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M7">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="OK, let's re-read this sentence." speech="" media="" play="A216">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="Bugs are less expensive to produce than traditional livestock supports the writer's argument that bugs are economical, or, cost efficient. Insects can be grown and raised in much smaller spaces and they consume less resources during their growth period than say, a cow, does." speech="" keys="." threshold="" test="" play="A217" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ don't forget to answer the question by clicking one of the answer options." speech="" keys="." threshold="" test="" play="_user_,A218" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, the statement, bugs are less expensive to produce than traditional livestock, supports which argument?" speech="" keys="." threshold="" test="" play="A219" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it supports that bugs are tasty." speech="" keys="." threshold="" test="" play="B127" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think it supports that bugs are economical." speech="" keys="." threshold="" test="" play="B128" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_,  the statement, bugs are less expensive to produce than traditional livestock, supports which argument? In other words, which of these statements are saying that bugs are cheap?" speech="" keys="." threshold="" test="" play="_user_,A220" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I'm not one hundred percent sure about this one, so I'm going with the same answer." speech="" keys="." threshold="" test="" play="B129" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="Basically bugs take up less space, eat less, and drink less water?" speech="" keys="." threshold="" test="" play="B130" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="That's right! The natural resources necessary for the farming of insects are much less than the resources necessary for the farming of other animals such as chickens or pigs." speech="" keys="." threshold="" test="" play="A221" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="The text explains that bugs use less resources and are therefore cheap to raise. Try it again." speech="" keys="." threshold="" test="" play="A222" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M8">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Here is another part of the text." speech="" media="" play="A223">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer might include information about safe, clean, and all natural insects in order to appeal to those who are conscious about what they eat. Not that most of us want to eat dangerous food, but it reassures us that they have stringent health and safety standards when it comes to the large scale production of insects." speech="" keys="." threshold="" test="" play="A224" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please select an answer from the answer options." speech="" keys="." threshold="" test="" play="_user_,A225" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why might the writer include information about safe, clean, and all natural bugs?" speech="" keys="." threshold="" test="" play="A226" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="I think it is to show that bugs are nutritious. " speech="" keys="." threshold="" test="" play="B131" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="I think to appeal to those who are very conscious about what they eat." speech="" keys="." threshold="" test="" play="B132" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why might the writer include information about safe, clean, and all natural bugs?" speech="" keys="." threshold="" test="" play="_user_,A227" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I agree with that answer this time." speech="" keys="." threshold="" test="" play="B133" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="So they're not just finding bugs out in the woods and giving them to people to eat." speech="" keys="." threshold="" test="" play="B134" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Right, the bugs are grown in healthy and controlled environments and have to meet safety standards in order to be consumed by people." speech="" keys="." threshold="" test="" play="A228" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Think about marketing and how this organization might want to attract people to their cause. Why don't you try it again." speech="" keys="." threshold="" test="" play="A229" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+    <TutoringPack name="M9">
+      <Questions>
+        <Question id="1" agent="ComputerTutor" text="Here is the writer's conclusion." speech="" media="" itemDif="0.1" play="A230">
+          <Answers>
+            <Answer name="Correct" agent="ComputerTutor" type="Correct" text="The writer includes information about future plans to show the reader that the organization is moving forward. This can include the fact that the organization is established and not going to go away. This promotes the organization's integrity and it's social and economic standing." speech="" keys="." threshold="" test="" play="A231" />
+            <Answer name="BlankPrompt" agent="ComputerTutor" type="BlankPrompt" text="_user_ please pick one of the answer options, even if you're not sure." speech="" keys="." threshold="" test="" play="_user_,A232" />
+            <Answer name="AskJordan" agent="ComputerTutor" type="AskJordan" text="ComputerStudent1, why does the writer include information about future plans?" speech="" keys="." threshold="" test="" play="A233" />
+            <Answer name="JordanIncorrect" agent="ComputerStudent1" type="JordanIncorrect" text="Probably to convince the reader that insects are delicious." speech="" keys="." threshold="" test="" play="B135" />
+            <Answer name="JordanCorrect" agent="ComputerStudent1" type="JordanCorrect" text="Probably to show the reader that the organization is moving forward." speech="" keys="." threshold="" test="" play="B136" />
+            <Answer name="AskUser" agent="ComputerTutor" type="AskUser" text="_user_, why does the writer include information about future plans?" speech="" keys="." threshold="" test="" play="_user_,A234" />
+            <Answer name="AgreesWithUser" agent="ComputerStudent1" type="AgreesWithUser" text="I think that answer is correct." speech="" keys="." threshold="" test="" play="B137" />
+            <Answer name="JordanExplanation" agent="ComputerStudent1" type="JordanExplanation" text="It's kind of like the organization is showing us that they know what they're doing." speech="" keys="." threshold="" test="" play="B138" />
+            <Answer name="CristinaMoveOn" agent="ComputerTutor" type="CristinaMoveOn" text="Exactly, ComputerStudent1! They are showing us that they are reputable, which is important when persuading people of their cause!" speech="" keys="." threshold="" test="" play="A235" />
+            <Answer name="IncorrectPrompt" agent="ComputerTutor" type="IncorrectPrompt" text="Having a plan for the future indicates something about the organization. What is it?" speech="" keys="." threshold="" test="" play="A236" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations />
+      <Misconceptions />
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="SetStatus" data="LoadPage" id="2" />
+      <Action agent="System" act="Wait" data="1" id="3" />
+    </Rule>
+    <Rule name="Start2" status="Start2" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson29Fracking.mp3" id="1" />
+      <Action agent="System" act="SetStatus" data="DoneReading" id="2" />
+      <Action agent="System" act="WaitForEvent" data="500" id="3" />
+    </Rule>
+    <Rule name="Start3" status="Start3" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson29Easy.mp3" id="1" />
+      <Action agent="System" act="SetStatus" data="DoneReading" id="2" />
+      <Action agent="System" act="WaitForEvent" data="500" id="3" />
+    </Rule>
+    <Rule name="Read" status="Read" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="WaitForEvent" data="300" id="2" />
+    </Rule>
+    <Rule name="DoneReading" status="DoneReading" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson29-Medium-0-1.html" id="2" />
+      <Action agent="System" act="DeliverRigidPack" data="Opening1" id="3" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="DoneReading2" status="DoneReading" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson29-Easy-0-1.html" id="2" />
+      <Action agent="System" act="SetStatus" data="LoadPage1" id="3" />
+      <Action agent="System" act="Wait" data="10" id="4" />
+    </Rule>
+    <Rule name="DoneReading1" status="DoneReading" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="HideAudioButton" data="" id="1" />
+      <Action agent="System" act="ShowMedia" data="media/Lesson29-Hard-0-1.html" id="2" />
+      <Action agent="System" act="SetStatus" data="LoadPage1" id="3" />
+      <Action agent="System" act="Wait" data="10" id="4" />
+    </Rule>
+    <Rule name="NotDoneReading" status="DoneReading" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="MoveOn" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="MoreTime" id="2" />
+      <Action agent="System" act="WaitForEvent" data="120" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn" status="MoveOn" response="" event="Stop1" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn2" status="MoveOn" response="" event="Stop3" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="UserMoveOn1" status="MoveOn" response="" event="Stop2" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="HideAudioButton" data="" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="SystemMoveOn" status="MoveOn" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="DoneReading" id="1" />
+      <Action agent="System" act="PlayAudio" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="120" id="3" />
+    </Rule>
+    <Rule name="LoadPage1" status="LoadPage1" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="LoadPage" status="LoadPage" response="" event="MainPageLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Read" id="1" />
+      <Action agent="System" act="ShowAudioButton" data="media\Lesson29Medium.mp3" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetDifficulty" status="GetDifficulty" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="1" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackEasy" status="GetTutoringPack" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="E" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackMedium" status="GetTutoringPack" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="M" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="GetTutoringPackHard" status="GetTutoringPack" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="HasTutoringPack" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="H" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="Continue" status="HasTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="GetItem" id="1" />
+      <Action agent="System" act="GetMediaItem" data="" id="2" />
+      <Action agent="System" act="Wait" data="1" id="3" />
+    </Rule>
+    <Rule name="Stop" status="HasTutoringPack" response="" event="" hasItem="false" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Close" id="1" />
+    </Rule>
+    <Rule name="Close" status="Close" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+    <Rule name="End" status="End" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="Wait" data="10" id="1" />
+    </Rule>
+    <Rule name="HasItem" status="GetItem" response="" event="Continue" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="AskQ" id="1" />
+      <Action agent="System" act="ShowMediaItem" data="" id="2" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="3" />
+      <Action agent="System" act="Wait" data="10" id="4" />
+    </Rule>
+    <Rule name="NoItem" status="GetItem" response="" event="Stop" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Start2" id="1" />
+    </Rule>
+    <Rule name="JordanAskQUserOnly" status="AskQ" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerStudent1" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="CristinaAskJCUserSecond" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1C" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="System" act="WaitForEvent" data="90" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQJIUserSecond" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="25" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer1Inc" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="5" />
+      <Action agent="System" act="WaitForEvent" data="90" id="6" />
+    </Rule>
+    <Rule name="CristinaAskQUserFirst" status="AskQ" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer" id="1" />
+      <Action agent="ComputerTutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="AskUser" id="3" />
+      <Action agent="System" act="WaitForEvent" data="90" id="4" />
+    </Rule>
+    <Rule name="Correct1UserSecond" status="UserAnswer1C" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked1C" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Correct11UserSecond" status="UserAnswer1Inc" response="" event="Correct" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked1Inc" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="Correct" status="UserAnswer" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAskedUserOnlyCorrect" status="QAsked" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="CristinaAskedFJCUserSecond" status="QAsked1C" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedbacktoBothUserSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="CristinaAskedJIUserFirst" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanIncorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveUserNegativeJordanFeedbackUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="7" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="8" />
+    </Rule>
+    <Rule name="CristinaAskedJCUserFirst" status="QAsked" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="ComputerTutor" act="Answer" data="AskJordan" id="1" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanCorrect" id="2" />
+      <Action agent="System" act="ShowMediaAnswer" data="" id="3" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveFeedbacktoBothUserFirst" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="5" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="6" />
+      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="7" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="8" />
+    </Rule>
+    <Rule name="CristinaAskedFJIUserSecond" status="QAsked1Inc" response="" event="ComputerTutor" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="PositiveUserNegativeJordanFeedbackUserSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="ComputerStudent1" act="Answer" data="JordanExplanation" id="4" />
+      <Action agent="ComputerTutor" act="Answer" data="CristinaMoveOn" id="5" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="6" />
+    </Rule>
+    <Rule name="IncorrectFJCUserSecond" status="UserAnswer1C" response="" event="Incorrect" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="IncorrectPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="IncorrectFJIUserSecond" status="UserAnswer1Inc" response="" event="Incorrect" hasItem="" priority="" frequency="50" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="GiveFeedback" data="NegativeFeedbackToBothUserSecond" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="System" act="WaitForEvent" data="90" id="4" />
+    </Rule>
+    <Rule name="Incorrect" status="UserAnswer" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="IncorrectPrompt" id="3" />
+      <Action agent="System" act="WaitForEvent" data="90" id="4" />
+    </Rule>
+    <Rule name="Blank1Inc" status="UserAnswer1Inc" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="Blank1C" status="UserAnswer1C" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="Blank" status="UserAnswer" response="Any" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="UserAnswer2" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="BlankPrompt" id="2" />
+      <Action agent="System" act="WaitForEvent" data="90" id="3" />
+    </Rule>
+    <Rule name="Correct2" status="UserAnswer2" response="" event="Correct" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="QAsked2" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="ThisQ" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="JordanAsked2" status="QAsked2" response="" event="ComputerStudent1" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="CristinaAsked2" status="QAsked2" response="" event="ComputerTutor" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="PositiveFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="Incorrect2" status="UserAnswer2" response="" event="Incorrect" hasItem="" priority="1" frequency="" description="">
+      <Action agent="System" act="ShowMediaAnswer" data="" id="1" />
+      <Action agent="ComputerTutor" act="CannedExpression" data="NegativeFeedback" id="2" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="3" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="4" />
+    </Rule>
+    <Rule name="Blank2" status="UserAnswer2" response="" event="" hasItem="" priority="2" frequency="" description="">
+      <Action agent="ComputerTutor" act="CannedExpression" data="NeutralFeedback" id="1" />
+      <Action agent="ComputerTutor" act="Answer" data="Correct" id="2" />
+      <Action agent="System" act="SetStatus" data="GoBack" id="3" />
+    </Rule>
+    <Rule name="GoBack" status="GoBack" response="" event="" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition0" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="NextPage" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionMediaLoaded" status="Transition0" response="" event="MediaLoaded" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="SetStatus" data="Transition" id="1" />
+      <Action agent="System" act="GetMediaEvent" data="Difficulty" id="2" />
+      <Action agent="System" act="Wait" data="5" id="3" />
+    </Rule>
+    <Rule name="TransitionNewH" status="Transition0" response="" event="MediaLoadedNewH" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="Start2" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionNewE" status="Transition0" response="" event="MediaLoadedNewE" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="NewPassage" id="1" />
+      <Action agent="System" act="SetStatus" data="Start3" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionStop" status="Transition0" response="" event="StopFinal" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="Close" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionEasy1" status="Transition" response="" event="Easy" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="E" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionMedium1" status="Transition" response="" event="Medium" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="M" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TransitionHard1" status="Transition" response="" event="Hard" hasItem="" priority="" frequency="" description="">
+      <Action agent="System" act="DeliverRigidPack" data="D" id="1" />
+      <Action agent="System" act="SetStatus" data="GetDifficulty" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>

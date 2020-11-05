@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				cursor:default;
+				background-image:url('L18Bkgd2.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Dosis', Verdana, 'Times New Roman';
+				cursor: default;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 380px;
+				width: 798px;
+				margin-top: 102px;
+			}
+			.jspHorizontalBar { display: none; }
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#instructBox
+			{
+				background-color: #bac5ca;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 24px;
+				text-align: center;
+				padding: 10px;
+				border-bottom: 5px dashed #77a0b5;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+				z-index: 2;
+			}
+			#mainTextHead
+			{
+				font-weight: bold;
+				font-size: 30px;
+				margin-bottom: 6px;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 24px;
+				width: 690px;
+				margin: 10px 0px 20px 40px;
+				padding: 10px 10px;
+				display: inline-block;
+			}
+			.para { margin: 10px 0px; }
+			.indent { margin-left: 40px; }
+			#buttonBox{	}
+			.mybutton
+			{
+				width: 180px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 24px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				margin: 5px auto;
+				padding: 4px 10px;
+				text-decoration: none;
+				outline: none;
+				border-radius: 8px;
+				display: inline-block;
+
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 8px;
+				padding: 0px 8px;
+			}
+			#textMapButton
+			{
+				background-color: #77a0b5;
+				padding: 2px 20px;
+				font-weight: 700;
+				cursor: pointer;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				box-shadow: 3px -3px 6px #888888;
+				position: fixed;
+				bottom: 0;
+				margin: 0px -30px;
+			}
+			#textMapButton:hover { background-color: white; }
+			#textMap
+			{
+				background-color: #2a3c51;
+				font-family: Copse, Verdana, 'Times New Roman';
+				width: 800px;
+				height: 486px;
+				position: fixed;
+				bottom:0;
+				z-index:1;
+				margin: 0px auto 0px auto;
+				padding: 0px;
+				border: none;
+				display: none;
+				cursor: pointer;
+			}
+			.textTitleTopicBox
+			{
+				background-color: #ffbf40;
+				color: #835904;
+				width: 94%;
+				height: 42px;
+				margin: 105px 0px 0px 15px;
+				padding: 5px;
+				border: 4px solid #ffbf40;
+				border-radius: 10px;
+				display: inline-block;
+
+			}
+			#textTopicBox{margin-left: 12px;}
+			#headTitleTopic
+			{
+				font-size: 32px;
+				width: 22%;
+				padding: 4px 10px 0px 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#titleEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 30px;
+				width: 70%;
+				height: 98%;
+				margin: 2px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText1 { padding: 5px 5px; }
+			#textMainIdeaBox
+			{
+				background-color: #ff6140;
+				color: #9f3019;
+				width: 94%;
+				height: 70px;
+				margin: 6px 0px 0px 15px;
+				padding: 5px;
+				border-radius: 10px;
+				border: 4px solid #ff6140;
+				display: inline-block;
+			}
+			#headMainIdea
+			{
+				font-size: 30px;
+				width: 18%;
+				padding: 4px 0px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			#mainIdeaEntry
+			{
+				color: #292929;
+				background-color: white;
+				font-size: 17px;
+				width: 80%;
+				height: 99%;
+				margin: 1px 0px 0px 0px;
+				border-radius: 10px;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.supportEntry
+			{
+				color: #292929;
+				background-color: #62b1d0;
+				font-size: 22px;
+				width: 95%;
+				height: 12%;
+				margin: 6px 0px 0px 15px;
+				border-radius: 10px;
+				border: 4px solid #9be1fc;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+			}
+			.posText2
+			{
+				padding: 2px 8px;
+			}
+			.empty
+			{
+				border-width: 4px;
+				border-style: dashed;
+				border-color: red;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b2"];
+			
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{				
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoadedDifficult");
+				
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+				
+				$( "#textMapButton" ).click(function()
+				{
+					ShowTextMap();
+				});
+				
+				$( "#textMap" ).click(function()
+				{
+					ShowTextMap();
+				});
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-10);
+			}
+
+			function GetItem()
+			{
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				$( "#textMap" ).slideToggle(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userSelectedItem = $(this).attr("id");
+					userSelectedValue=document.getElementById(userSelectedItem).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/[\r\n]/g,"");
+					userSelectedValue=userSelectedValue.replace(/[\/#$%\^&\*{}=_`~()\"]/g,"");	
+					
+					//play appropriate sound
+					if (userAnswer == "Correct"){ sound_clicked(); }
+					else { sound_incorrect(); }
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#77a0b5"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #77a0b5;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "UserAnswer")
+				{
+				//alert(userAnswer)
+					parent.GetWorldEvent(userAnswer);
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if (data == "NextPage")
+				{
+			
+				parent.nextPage("media/"+"Lesson18-HardSup1_TryAgain.html");
+				
+				}
+				else if (data == "Difficulty")
+				{
+					parent.GetWorldEvent("Difficult");
+				}
+				else if(data="ComputerStudent1")
+				{
+				var value = parseInt(Math.random() * (items.length - 1 + 1) + 1);
+				
+  				var JordanAnswerID=items[value-1];
+				var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+					$("#"+JordanAnswerID).animate({backgroundColor: "blue", color: "white"}, 1000);
+					parent.GetWorldEvent(JordanAnswer);
+			
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+					Do you agree with ComputerStudent1's supporting sentence highlighted below?
+					<div class='mybutton' id="b1" value="Incorrect"; href='javascript:void(null)'>Agree</div>
+					<div class='mybutton' id="b2" value="Correct"; href='javascript:void(null)'>Disagree</div>
+			</div>
+			<div id="mainText">
+				<div id="mainTextHead">
+					The Olympic Games
+				</div>
+				<div id="para1" class="para">
+					<span class="indent"></span><span class="highlight">The first Olympic Games took place over 3,000 years ago in Greece.</span> Every four years, a month-long festival was held in a large city. These celebrations were so important that during the month of the festival all fighting among the people stopped . This is called the Olympic Truce. During the Truce, wars were suspended, armies were prohibited from threatening the Games, legal disputes were stopped, and death penalties were forbidden.   
+				</div>
+				<div id="para2" class="para">
+					<span class="indent"></span>At first, only male Greek citizens could compete. Later, it was opened to women and foreigners as well. Pageants, parades, feasts, and religious rituals were added to the Games.  In the late 1800s, a French educator named Baron Pierre de Coubertin wanted to bring the Olympic Games into the modern era . Coubertin thought that by encouraging athletics for the youth, people of the world would come to have a better understanding of one another . This in turn would promote peace. 
+				</div>
+				<div id="para3" class="para">
+					<span class="indent"></span>In June of 1894 a group of representatives from 12 countries met and formed the International Olympic Committee (the IOC). The modern Olympics represent an international sporting friendship . The IOC renewed the previous tradition of the Olympic Truce by calling upon all nations to observe the Truce. The Olympic Truce was revived by UN resolution 48/11 of October 25th 1993, as well by the United Nations Millennium Declaration relating to world peace and security. The heart of the Olympic Games is the uniting of countries in peace and sportsmanship to celebrate and honor the finest Olympians from each country.
+				</div>
+				<div id="textMapButton">Show Text Map</div>
+			</div>
+		
+			<!--<div id="questionBox0" class="questionBox">
+				<div id="questionText">
+					Do you agree with ComputerStudent1's supporting sentence underlined below?
+					<div class='mybutton' id="b1" value="Incorrect"; href='javascript:void(null)'>Agree</div>
+					<div class='mybutton' id="b2" value="Correct"; href='javascript:void(null)'>Disagree</div></span> 
+				</div>
+				<div id="buttonBox"></div>
+			</div>-->
+		</div>
+		
+		<div id="textMap">
+			<div class="textTitleTopicBox" id="textTitleBox">
+				<div id="headTitleTopic">Title</div>
+				<div id="titleEntry" data-state="">
+					<div class="posText1">The Olympic Games</div>
+				
+				</div>
+			</div>
+			<div id="textMainIdeaBox">
+				<div id="headMainIdea">Main<br>Idea</div>
+				<div id="mainIdeaEntry" data-state="">
+					<div class="posText1">
+						The heart of the Olympic Games is the uniting of countries in peace and sportsmanship to celebrate and honor the finest Olympians from each country.
+					</div>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry1" data-state="">
+				<div class="posText2">
+					<span id="supReplace1">
+						<span class="highlight">1. The first Olympic Games took place over 3,000 years ago in Greece. 
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry2" data-state="">
+				<div class="posText2">
+					<span id="supReplace2">
+						2. At first, only male Greek citizens could compete. 
+					</span>
+				</div>
+			</div>
+			<div class="supportEntry" id="supportEntry3" data-state="">
+				<div class="posText2">
+					<span id="supReplace3">3. In the late 1800s, a French educator named Baron Pierre de Coubertin wanted to bring the Olympic Games into the modern era.</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

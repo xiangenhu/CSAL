@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		
+		<!--load jScrollPane libraries and CSS-->
+		<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>
+		
+		<style type="text/css" id="page-css">
+			body
+			{
+				background-image:url('L19Bkgd3.1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 0px 52px;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Sintony', Verdana, 'Times New Roman';
+				cursor: default;
+				width: 798px;
+			}
+			.scroll-pane
+			{
+				overflow: auto;
+				height: 428px;
+				width: 500px;
+				margin-top: 55px;
+				float: left;
+			}
+			/*.jspHorizontalBar { display: none !important; }*/
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 200px;
+			}
+			#instructBox
+			{
+				background-image: url('QBkgd2.png');
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 790px;
+				font-size: 25px;
+				font-weight: bold;
+				text-align: center;
+				padding: 10px 5px 10px 5px;
+				border-bottom: 5px dashed #a3d794;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
+			#mainText
+			{
+				overflow: auto;
+				font-size: 21px;
+				font-weight: normal;
+				width: 430px;
+				margin: 8px 0px 0px 30px;
+				padding: 0px 5px;
+				display: inline-block;
+				line-height: 32px;
+			}
+			#mainTextHead
+			{
+				font-weight: 700;
+				font-size: 28px;
+				margin: 0px 0px 8px -10px;
+				padding: 5px;
+				text-align: left;
+				width: 380px;
+				vertical-align: top;
+				display: inline-block;
+				font-style: normal;
+				line-height: normal;
+			}
+			#fromEmail
+			{
+				width: 570px;
+				border: 1px solid #212121;
+				display: inline-block;
+				margin: 0px 0px -6px 0px;
+				padding: 4px 10px;
+			}
+			#toEmail
+			{
+				width: 570px;
+				border: 1px solid #212121;
+				display: inline-block;
+				margin: 0px 0px -2px 0px;
+				padding: 4px 10px;
+			}
+			#sentTime
+			{
+				width: 570px;
+				border: 1px solid #212121;
+				border-bottom: 2px solid #212121;
+				font-size: 18px;
+				display: inline-block;
+				margin: 0px 0px 0px 0px;
+				padding: 4px 10px;
+				font-style: italic;
+			}
+			#para1, #para3
+			{
+				margin: 10px 0px;
+				font-size: 28px;
+			}
+			#para2{}
+			#para3 {margin-top: 8px;}
+			#para3 div
+			{
+				font-family: Damion, Verdana, 'Times New Roman';
+				font-size: 40px;
+				margin: 8px 0px 30px 0px;
+			}
+			.mybutton
+			{
+				width: 200px;
+				font-size: 24px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				text-decoration: none;
+				border: 1px solid #212121;
+				padding: 3px 4px;
+				outline: none;
+				border-radius: 8px;
+				margin: 3px 2px;
+				text-align: center;
+			}
+			.mybutton:hover
+			{
+				cursor: pointer;
+			}
+			#symptomListMain
+			{
+				width: 240px;
+				background-color: white;
+				border: 2px solid #212121;
+				float: right;
+				padding: 10px 5px;
+				margin: 70px 20px 0px 0px;
+			}
+			#symptomHead
+			{
+				font-size: 22px;
+				margin: 5px 0px 0px 0px;
+				text-align: center;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			#symptomList
+			{
+				font-size: 26px;
+				margin: 2px -24px;
+				text-align: left;
+			}
+			.highlight
+			{
+				background-color: #ffeb43;
+				border-radius: 10px;
+				padding: 0px 4px;
+				font-size: 24px;
+			}
+		</style>
+		
+		<script type="text/javascript" id="sourcecode">
+			//-1 to 0 == 1 item
+			var currentItem = -1;
+			var numItems = 0;
+			var $scrollElement;			
+			var questionBoxArray = [];
+			var numQuestionBoxes = 1;
+			var selectedAnswer = "";
+			var isSelected = false
+			var userAnswer = "";
+			
+			//you can store multiple answers in this array if needed
+			var correctAnswerArray = ["b2"];
+			var items = ["b2","b3","b5","b6"];
+			var userSelecteditem;
+			var score=0;
+			//create sound functions
+			function sound_clicked() 
+			{ return parent.PlaySound('clicked0.wav');}
+
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			
+			$(document).ready(function()
+			{
+				//reports to the parent program that the media page html has loaded
+				parent.GetWorldEvent("MediaLoadedDifficult");
+				GetRequest();
+				
+				//lock the buttons
+				Lock();
+				
+				//create scroll pane element
+				$scrollElement = $("#textbox").jScrollPane({animateScroll: false, animateDuration: 1000});
+				
+				ScrollToId($scrollElement, "scrollPoint1");
+				
+				//instantiates an array of id strings for the corresponding number of question boxes
+				for(i = 0; i < numQuestionBoxes; i++)
+				{
+					var questionBox = "#questionBox" + i;
+					questionBoxArray.push(questionBox);
+				}
+				
+				//button that scrolls the text box a fixed amount
+				$('#scrollBtn').click(function()
+				{
+					var api = $scrollElement.data('jsp');
+					api.scrollByY(100);
+				});
+			});
+			
+			function ScrollToId($scrollElement, id)
+			{
+				//searches document to find the first instance of an element id that matches the id parameter 
+				//and calls a function to get the position of that element
+				var scrollTarget = document.getElementById(id);
+				var rect = scrollTarget.getBoundingClientRect();
+				
+				//vertically scrolls a scroll bar determined by the $scrollElement parameter to the above determined position
+				var api = $scrollElement.data('jsp');
+				api.scrollToY(rect.top-50);
+			}
+
+			function GetItem()
+			{ 
+				if(currentItem < numItems)
+				{
+					++currentItem;
+					return parent.GetWorldEvent("Continue");
+				}
+				else
+				{
+					return parent.GetWorldEvent("Stop");
+				}
+			}
+
+			function ShowItem()
+			{
+				if(currentItem == 0)
+				{
+					//animate answer box appearance
+					$(questionBoxArray[currentItem]).slideDown(1000);
+				}
+			}
+			
+			//the Show & HideTextMap functions should be called automatically by the system when the user is building the text map; this means that the buttons in this file should be removed.
+			function ShowTextMap()
+			{
+				//animate text map appearance
+				$( "#textMap" ).slideDown(1000);
+			}
+			function HideTextMap()
+			{
+				//hide text map
+				$( "#textMap" ).slideUp(1000);
+			}
+			
+			function ShowMediaAnswer()
+			{
+				if(currentItem == 0)
+				{
+					selectedAnswer;
+					isSelected = true;
+					
+					if(isSelected)
+					{
+						//if an answer has been selected compare see if it is equal to the correct answer
+						if( userAnswer == "Incorrect" )
+						{
+							//do nothing
+						}else if( userAnswer == "Correct" )
+						{
+							//play the correct answer sound
+							sound_correct();
+						}
+						isSelected = false;
+					}
+					
+					//highlight the correct answer green
+					$("#" + correctAnswerArray[0]).animate({backgroundColor: "green", color: "white"}, 1000);
+				}
+			}
+
+			function Lock()
+			{				
+				//unbinds click function and hover
+				
+				$( ".mybutton" ).unbind("click");
+				$( ".mybutton" ).unbind("mouseover");
+				$( ".mybutton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor on buttons
+				$( ".mybutton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				$( ".mybutton" ).animate({backgroundColor: "#474747", color: "gray"}, 500);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".mybutton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 1 + "px";
+				
+				var clickFunc = function()
+				{
+					//store the user's answer
+					userAnswer = $(this).attr("value");
+					userAnswerId = $(this).attr("id");
+					//get user answer's text
+					userSelectedValue = document.getElementById(userAnswerId).innerHTML;
+					userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+					//user selcted Item 4-7
+					userSelecteditem = $(this).attr("item");
+					
+					items.splice(jQuery.inArray(userAnswerId,items),1); 
+					//play appropriate sound
+					if (userAnswer == "Correct"){ 
+					
+					score++;
+					sound_clicked(); 
+					}
+					else { 
+					sound_incorrect(); 
+					}
+					
+					//animate button click
+					$(this).animate({fontSize: butAnimSize}, 75);
+					$(this).animate({fontSize: butFontSize}, 600);
+					
+					//lock buttons
+					Lock();
+					
+					//set selection color and report answer to ASAT
+					$(this).animate({backgroundColor: "#edff73", color: "#212121"}, 600);
+					
+					//parent.GetWorldEvent(userAnswer);
+					parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+				};
+				
+				//this sets the hover animation & cursor for buttons
+				$( ".mybutton" ).mouseover(function()
+				{ $(this).animate({backgroundColor: "white"}, 300); });
+				$( ".mybutton" ).mouseout(function()
+				{ $(this).animate({backgroundColor: "#a3d794"}, 300); });
+				$( ".mybutton" ).css( 'cursor', 'pointer' );
+				
+				//animates unlocking via font color & background color
+				$(".mybutton").animate({backgroundColor: "#background-color: #a3d794;", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".mybutton"
+				$(".mybutton").bind( "click", clickFunc );
+			}
+			
+			function GetMediaEvent(data)
+			{
+				if (data == "MainQ")
+				{
+					parent.GetWorldEvent("ComputerStudent1");
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("ComputerTutor");
+				}
+				else if(data=="ComputerStudent1")
+				{
+				var value = parseInt(Math.random() * (items.length - 1 + 1) + 1);
+  				var JordanAnswerID=items[value-1];
+				var JordanAnswer = $("#"+JordanAnswerID).attr("value");
+					$("#"+JordanAnswerID).animate({backgroundColor: "blue", color: "white"}, 1000);
+					parent.GetWorldEvent(JordanAnswer);
+			
+				}
+				else if(data=="UserAnswer")
+				{
+				
+					parent.GetWorldEvent(userSelecteditem);
+				}
+				else if(data == "NextPage")
+				{
+				parent.nextPage("media/"+"Lesson19-D6.html?score="+score);
+				}
+				else if (data == "getScore")
+				{
+					
+					parent.GetWorldEvent(score);
+				}
+				
+				
+			}
+			function GetRequest() 
+			{ 
+			
+			   var url = location.search; 
+			   var idName = new Array();
+			   if (url.indexOf("?") != -1) 
+			   { 
+				   str = url.substr(1); 
+					strs = str.split("=");
+					score = strs[1];
+				
+				
+				
+			   }
+			  
+			}
+		</script>
+	</head>
+	<body>
+		<div id="instructBox">
+			Click the symptom button that the sentence describes.
+		</div>
+		<div id="textbox" class="scroll-pane">			
+			<div id="mainText">
+				<!--<div id="mainTextHead">
+					<div id="toEmail">
+						To: ComputerStudent1
+					</div>
+					<div id="fromEmail">
+						From: Cheryl
+					</div>
+					<div id="sentTime">
+						Sent: 11:33AM, Today
+					</div>
+				</div>-->
+				
+				<div id="para1" class="para">
+					Hey ComputerStudent1,
+				</div>
+				<div id="para2" class="para">
+					<div style="height: 10px;"></div>
+					I called you, but you didn't answer the phone. I hope you will get a chance to look at this e-mail right away! Today is my day to check in on Aunt Kerry. I just got to her apartment and she is worried about some discomfort that she is having. She says that it feels like abnormal pressure, or squeezing pain in the center of her chest. It seems like she is having trouble breathing. 
+					<div style="height: 10px;" id="scrollPoint1"></div>
+					I am not sure what to do. Do you think she needs to go to the hospital? I brought her some lunch, but she says that she can't eat anything. She feels too queasy and lightheaded. Kerry can hardly get off the couch. <span class="highlight">She says it is like she ran a marathon. She told me that she could not sleep last night, or get any rest this morning.</span> I really cannot miss any more work, but I want to do the right thing.  Should I call 9-1-1?
+					Give me a call!
+				</div>
+				
+				<div id="para3" class="para">
+					 Love,
+					<div>Cheryl</div>
+				</div>
+			</div>
+		</div>
+		<div id="symptomListMain">
+			<div id="symptomHead">
+				Heart Attack Symptoms
+			</div>
+			<div id="symptomList">
+				<ul id="list">
+					<div class="mybutton" id="b1" item="A" value="Incorrect">
+						Chest pain
+					</div>
+					<div class="mybutton" id="b2" item="B" value="Correct">
+						Fatigue
+					</div>
+					<div class="mybutton" id="b3" item="C" value="Incorrect">
+						Upset stomach
+					</div>
+					<div class="mybutton" id="b4" item="D" value="Incorrect">
+						Stress
+					</div>
+					<div class="mybutton" id="b5" item="E" value="Incorrect">
+						Nausea
+					</div>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

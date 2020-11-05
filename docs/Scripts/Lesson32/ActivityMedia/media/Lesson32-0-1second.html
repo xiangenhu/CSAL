@@ -1,0 +1,513 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>CSAL Media</title>
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!--load Google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+		
+		<!--load jQuery libraries-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
+		
+		<!--load jScrollPane libraries and CSS-->
+		<!--<link type="text/css" href="jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="jScrollPane/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="jScrollPane/script/jquery.jscrollpane.min.js"></script>-->
+		
+		<style type="text/css" id="page-css">
+			.border { border: 5px double gray; }
+			.indent { padding-left: 20px; }
+			.underline { text-decoration: underline; }
+			.bold { font-weight: bold; }
+			.notBold {font-weight: normal;}
+			.italic { font-style: italic; }
+			.vertSpace { margin-top: 5px; margin-bottom: 5px; }
+			.vertSpace1 { margin-top: 10px; margin-bottom: 10px; }
+			.center {text-align: center;}
+			
+			/*
+			*{border: 1px solid red;}
+			*/
+			.dropdown .dropdown-menu {
+				position: absolute;
+				top: 90%;
+				display: none;
+				margin: 0;
+				border: 2px solid #4885ed;
+				border-radius:10px;
+				/****************
+				 ** NEW STYLES **
+				 ****************/
+
+				list-style: none; /** Remove list bullets */
+				width: 64%; /** Set the width to 100% of it's parent */
+				padding: 0;
+			}
+			/** List Item Styles **/
+			#top{
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			}
+			#bottom{
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			}
+			.dropdown a {
+				display: block;
+				padding: 0.2em 0.8em;
+				text-decoration: none;
+				background: #ffffff;
+				color: #333333;
+				height: 40px;
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				
+			}
+			.dropdown a:hover {
+				background: #fdffe7;
+			}
+			
+			body
+			{
+				background-image:url('mainbkgd.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0px;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				cursor: default;
+				width: 798px;
+				height: 500px;
+			}
+			#mainBanner
+			{
+				font-family: 'Nova Round', Verdana, 'Times New Roman';
+				font-size: 40px;
+				width: 100%;
+				text-align: left;
+				margin: 0px;
+				background-color: white;
+				opacity: .7;
+				display: inline-block;
+			}
+			#mainBannerSub
+			{
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 19%;
+				display: block;
+				margin: -10px 0px 0px 0px;
+				font-size: 15px;
+				text-align: right;
+				font-weight: bold;
+			}
+			#instruct
+			{
+				width: 40%;
+				display: block;
+				margin: 5px auto;
+				font-size: 20px;
+				text-align: center;
+				background-color: #edf776;
+				border-radius: 10px;
+			}
+			#search
+			{
+				position: absolute;
+				top: 0;
+				left: 20%;
+				margin: 4px 0px 0px 0px;
+				width: 80%;
+			}
+			#searchInput
+			{
+				font-size: 20px;
+				width: 65%;
+				display: inline-block;
+				margin: 5px auto;
+				text-align: left;
+				height: 2em;
+				border-radius: 12px 0px 0px 12px;
+				border: 2px solid #ddd;
+				padding: 1px 5px;
+			}
+			.searchButton
+			{
+				background-color: #ddd;
+				font-size: 20px;
+				font-family: Raleway, Verdana, 'Times New Roman';
+				font-weight: 700;
+				
+				
+				text-decoration: none;
+				border: none;
+				position: absolute;
+				text-align: center;
+				
+				display: inline-block;
+				margin: 5px auto;
+				margin-left: -5px;
+				outline: none;
+				border-radius: 0px 12px 12px 0px;
+			}
+			
+			#mainBody
+			{
+				background-color: rgba(255,255,255,0.9);
+				display: block;
+				width: 80%;
+				margin: 10px auto;
+				height: 100%;
+				border-radius: 2px;
+				padding: 10px 20px;
+			}
+			.link
+			{
+				padding: 10px;
+				border-radius: 10px;
+				margin: 5px 0px;
+			}
+			.linkHead
+			{
+				color: blue;
+				font-weight: bold;
+				font-size: 20px;
+				margin: 0px 0px 10px 0px;
+				border-radius: 8px;
+				padding: 5px;
+			}
+			.linkHeadSub
+			{
+				color: green;
+				font-size: 16px;
+			}
+			.linkBody
+			{
+				line-height: 1.3em;
+			}
+			#questionBox
+			{
+				
+				background-color: #444;
+				color: white;
+				font-size: 28px;
+				position: fixed;
+				text-align: center;
+				display: table;
+				border-radius: 0px 0px 10px 10px;
+				cursor: help;
+				top: 0;
+				width: 100%;
+				height: 80px;
+				max-height: 80px;
+				z-index: 99;
+			}
+			#questionBoxText
+			{
+				display: table-cell;
+				vertical-align: middle;	
+				padding: 0px 10px;
+				height: 100%;
+			}
+			
+
+		
+		</style>
+		<script type="text/javascript" id="sourcecode">
+			var userAnswer = "";
+			var blink = 40;
+			$(document).ready(function()
+			{
+			
+			//alert("hi");
+				$('#sShow').hide();
+				
+				
+				//$(".dropdown-menu").show();
+				
+				//$("li").click(function(){
+				//	
+				//});
+			//	$(".dropdown-menu").css('border-color','rgba(0,0,0,.1)');
+				
+				//$(".searchButton").css('border', '5px solid black');
+	
+			
+				//lock the buttons
+				Lock();
+				$('#questionBox').hide();
+				parent.GetWorldEvent("MediaLoaded");
+				
+				//create scroll pane element
+				//$scrollElement = $("#textbox").jScrollPane({animateScroll: true, animateDuration: 1000});
+				
+				
+			});
+			function GetItem()
+			{
+				//if(currentItem < numItems)
+				//{
+					//++currentItem;
+					return parent.GetWorldEvent("Continue");
+				//}
+				//else
+				//{
+					//return parent.GetWorldEvent("Stop");
+				//}
+			}
+			
+			function ShowItem()
+			{
+				$('#questionBox').toggle('slide', 'left', 1000);
+			}
+			
+			function sound_correct()
+			{ return parent.PlaySound('success0.wav');}
+			function sound_incorrect() 
+			{ return parent.PlaySound('incorrect0.wav');}
+			function ShowMediaAnswer()
+			{
+			//(3)show img div
+				$('#firstShow').hide();
+				$('#sShow').show();
+				
+				
+			}
+			function Lock()
+			{
+				//unbinds click function and hover
+				$( ".searchButton" ).unbind("click");
+				$( ".searchButton" ).unbind("mouseover");
+				$( ".searchButton" ).unbind("mouseout");
+				
+				//sets disabled mouse cursor
+				$( ".searchButton" ).css( 'cursor', 'not-allowed' );
+				
+				//sets disabled colors WITH animation
+				//$( ".searchButton" ).animate({backgroundColor: "#474747", color: "gray"}, 700);
+			}
+			
+			function Unlock()
+			{
+				//this section determines the font size for the click animation used in the clickFunc function below
+				var butFontSize = $( ".searchButton" ).css( "font-size" );
+				var butFontSizeRaw = butFontSize.replace(/\D/g,'');
+				var butAnimSize = butFontSizeRaw - 2 + "px";
+				
+				var clickFunc = function()
+				{
+						//alert($(this).text())
+						if(this.tagName == 'LI' || this.tagName == 'li')
+						{
+							$("#searchInput").val($(this).text());
+							$(".dropdown-menu").hide();
+							$(".searchButton").bind( "click", clickFunc );
+							
+							//$(".searchButton").css('border', '2px solid #4885ed'); 
+							$("#searchImage").css('border', '2px solid #4885ed'); 
+							
+							//this sets the hover animation & cursor for buttons
+							$( ".searchButton" ).mouseover(function()
+							{ $(this).stop().animate({backgroundColor: "#fdffe7"}, 300); });
+							$( ".searchButton" ).mouseout(function()
+							{ $(this).stop().animate({backgroundColor: "white"}, 300); });
+							$( ".searchButton" ).css( 'cursor', 'pointer' );
+							
+							for(i = 0;i<blink;i++)
+							{
+								$("#searchImage").animate({borderColor: "#4885ed"}, 500)
+								.animate({borderColor: "#fdffe7"}, 500)
+								.animate({borderColor: "#4885ed"}, 500)
+								.animate({borderColor: "#fdffe7"}, 500);
+							}
+							
+						}
+						
+						if(this.tagName == 'DIV' || this.tagName == 'div')
+						{
+							if($("#searchInput").val() == "Allergy")
+							{
+								sound_correct();
+							}else{sound_incorrect();}
+						
+							$(".searchButton").css('border', 'none');
+							
+							//play clicked sound
+							//parent.PlaySound('clicked0.wav');
+							
+							//Here need to add a function to get user input content, 
+							//then return to Mainpage by using "parent.GetWorldEvent(userAnswer)"; see line 220
+							userAnswer =$("#searchInput").val().toLowerCase();
+							//After user submit input, you cannot direly go nextpage, sometime the aces server will return action for talking head based rule.
+							//jump to next page please use	"GetMediaEvent(data)",  data is "NextPage"
+							//parent.nextPage("media/"+"Lesson32-0-1.html");
+							
+							//animate the font size of clicked option
+							$(this).animate({fontSize: butAnimSize}, 75);
+							$(this).animate({fontSize: butFontSize, backgroundColor: "#edff73", color: "#212121"}, 600);
+							
+							//this function is to return user input to mianpage.
+							//get user answer's text
+							userSelectedValue = userAnswer;
+							userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
+							//parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+							parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
+							//parent.GetWorldEvent(userAnswer);
+							//lock button and sent Stop call to ASAT
+							Lock();
+					}
+				};
+				/*	$('#textInput').keydown(function(e) {
+					if(e.keyCode == 13) {
+						parent.PlaySound('clicked0.wav'); 
+					
+						//animate button click
+						$(".searchButton").animate({fontSize: butAnimSize}, 75);
+						$(".searchButton").animate({fontSize: butFontSize}, 600);
+						
+						Lock();
+					
+						userAnswer = "userInputString: " + $("#searchInput").val();
+						$('textarea').attr('readonly', true);
+						
+						
+						parent.GetWorldEvent(userAnswer);
+					}
+				});*/
+				
+				
+				$(".dropdown-menu").show();
+				
+					for(i = 0;i<blink;i++)
+					{
+					$(".dropdown-menu").animate({borderColor: "#4885ed"}, 500)
+					.animate({borderColor: "#fdffe7"}, 500)
+					.animate({borderColor: "#4885ed"}, 500)
+					.animate({borderColor: "#fdffe7"}, 500);
+					}
+				
+				$("li").hover(function(){
+				$("#searchInput").val($(this).text());
+				}, function(){
+				
+				});
+				
+				
+				//animates unlocking via font color & background color
+				//$(".searchButton").animate({backgroundColor: "#ddd", color: "#212121"}, 1000);
+				
+				//bind the clickFunc above to any ".searchButton"
+				
+				$("li").bind( "click", clickFunc );
+			}
+			function GetMediaEvent(data)
+			{
+				if (data == "NextPage")
+				{	
+				//*********
+					//parent.nextPage("media/"+"Lesson32-0-ComputerStudent1.html");
+					parent.nextPage("media/"+ "Lesson32-0-ComputerStudent1.html");
+					
+				}
+				else if (data == "ThisQ")
+				{
+					parent.GetWorldEvent("CristinaT");
+				}
+				else if (data == "AskQ")
+				{
+					parent.GetWorldEvent("CristinaT");
+				}
+				else if(data=="JordanGood")
+				{
+					JordanAnswer = $("#b1").attr("value");
+					$("#b1").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+				else if(data=="JordanBad")
+				{
+					JordanAnswer = $("#b2").attr("value");
+					$("#b2").animate({backgroundColor: "blue", color: "white"}, 1000);
+					
+					//parent.GetWorldEvent(JordanAnswer);
+				}
+			}
+		</script>
+	</head>
+	<body>
+	<div id="firstShow">
+		<div id="questionBox">
+			<div id="questionBoxText">
+				Click the link to search
+			</div>
+		</div>
+		<div id="mainBanner">
+			&nbsp;Voogle
+			<div id="mainBannerSub">
+				Search
+			</div>
+		</div>
+	
+		<div class = "dropdown" id="search">
+			<input type="text" id="searchInput" readonly>
+			<!-- dropdown menu -->
+			<ul class="dropdown-menu">
+				<li><a id="top" href="#home">Aluminum</a></li>
+				<li><a href="#about">Allergy</a></li>
+				<li><a id="bottom" href="#contact">Common Cold</a></li>
+			</ul>
+			
+			<div id="submitSearchButton" class="searchButton">
+				<img id="searchImage" src="googleIcon.png" height="40"/>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div class="link">
+				<div class="linkHead mybutton" id="Lesson32-0-1A.html";" value="Incorrect">
+					Mary Poppins (1964)-IMDb
+					<div class="linkHeadSub">
+						www.imdb.com/title/tt0058331
+					</div>
+				</div>
+				<div class="linkBody">
+					Directed by Robert Stevenson. With Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns. A magic nanny comes to work for a cold banker's unhappy ...
+				</div>
+			</div>
+			
+			<div class="link">
+				<div class="linkHead mybutton"id="Lesson32-0-1B.html"  value="Incorrect">
+					Mary Poppins (film) - Wikipedia, the free encyclopedia
+					<div class="linkHeadSub">
+						en.wikipedia.org/wiki/Mary_Poppins_(film) 
+					</div>
+				</div>
+				<div class="linkBody">
+					Mary Poppins is a 1964 American musical fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the ...
+				</div>
+			</div>
+			
+			<div class="link">
+				<div class="linkHead mybutton"  id="Lesson32-0-1C.html"value="Correct">
+					Mary Poppins musical at Bishop McDevitt High School ...
+					<div class="linkHeadSub">
+						www.pennlive.com/.../mary_poppins_musical_at_bish...
+					</div>
+				</div>
+				<div class="linkBody">
+					Bishop McDevitt high school's musical for 2015 is Mary Poppins. ... Mary Poppins musical at Bishop McDevitt High School: photo gallery. 1 / 19.
+				</div>
+			</div>
+		</div>
+		</div>
+		
+	<div id="sShow">
+	<img id="myImg" src="./FirstAllergySearchResult.jpg" width="785" height="500">
+	</div>
+	</body>
+</html>

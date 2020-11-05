@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSAL Media</title>
+    <script>
+        document.domain = "ace.autotutor.org"
+    </script>
+
+    <!--load Google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+
+    <!--load jQuery libraries-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="../js/URI.js"></script>
+
+    <style>
+        body {
+            background-image: url('lessontitlebkgd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #fadeBody {
+            display: none;
+        }
+
+        #content {
+            font-family: 'Source Sans Pro', Verdana, 'Times New Roman';
+            width:650px;
+            height: 500px;
+            background-color: #303030;
+            background: rgba(48, 48, 48, .9);
+            position: relative;
+            margin: 0px auto;
+            padding: 0px;
+            color: white;
+        }
+
+        .lessonFont {
+            font-size: 70px;
+            color: white;
+        }
+
+        .logo {
+            color: white;
+            text-align: center;
+        }
+
+        #logo {
+
+            font-size: 60px;
+            letter-spacing: 2px;
+            margin: 0px 0px 0px 0px;
+            padding: 20px 0px 0px 0px;
+        }
+
+        #logoSub {
+            font-size: 40px;
+            margin: 0px 0px 20px 0px;
+            text-align: center;
+        }
+
+        #lineBreak {
+            height: 2px;
+            width: 400px;
+            border-bottom: solid 2px #3b5a34;
+            margin: auto;
+        }
+
+        .lessonTitle {
+            width: 440px;
+            font-size: 38px;
+            margin: 0px auto;
+          
+        }
+    </style>
+
+
+    <script type="text/javascript" id="sourcecode">
+        var URLParams = URI.parseQuery(window.location.search);
+        var userPerformance = URLParams.userPerformance
+        $(document).ready(function() {
+            //$("pscontainer").show();
+            $("#fadeBody").fadeIn(2000);
+            if (userPerformance != undefined) {
+                showPerformance();
+            }
+
+        });
+
+        function showPerformance() {
+            if (userPerformance == "Passed") {
+                $("#Passed").show();
+                $("#Failed").hide();
+            } else if (userPerformance == "Failed") {
+                $("#Passed").hide();
+                $("#Failed").show();
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="fadeBody">
+        <link href='https://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+        <div id="content">
+            <div id="logo" class="logo">
+                
+            </div>
+
+
+            <div id="spacer" style="height:20px">
+                <!--SPACER-->
+            </div>
+
+            <div class="lessonTitle" id="Passed">
+                <span style="font-weight: bold;font-size: 44px;"> Congratulations! You have completed this lesson.</span> <br/><br/><span style="font-weight: bold;font-size: 54px;"> You Passed!</span>
+			</div>
+			<div class="lessonTitle" id="Failed"><br/><br/>
+				<span style="font-weight: bold;font-size: 50px;">We Recommend that you Take this Lesson Again!
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
