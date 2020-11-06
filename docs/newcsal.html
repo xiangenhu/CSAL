@@ -10,6 +10,7 @@
     <title>CSAL Web Application</title>
 	<link rel="stylesheet" type="text/css" href="css/mainPage.css">
 	
+    <script src="https://author.autotutor.org/editor/ace/ace.js"></script>
 	
     <script src="https://author.autotutor.org/editor/jquery.min.js" type="text/javascript"></script>
     <script src="https://author.autotutor.org/editor/jquery-ui.js" type="text/javascript"></script>
@@ -128,9 +129,26 @@
 
     <div id="editor">
         <table width="100%" height="100%">
-        <tr><td ><div id="editorMenu"></div></td></tr>
-                    <tr ><td height="100%">
-                    <div id = "tree"></div>
+        <tr><td><div id="editorMenu"></div></td></tr>
+                    <tr ><td height="100%" width="100%">
+                    <div id="forest" >
+                        <table height="100%" width="100%">
+                            <tr><td heigh="50">
+                                <hr/>
+                                <div id="TreeMenu"></div>
+                            </td></tr>
+                            <tr>
+                                <td height="100%" width="100%"> <div id="Searching">Search</div>
+                                    <div id = "ShowWholeTree"><div id ="WholeTree"></div><hr/><div id ="TheWholeTreeXMLeditor"></div></div>
+                                    <div id = "ShowID"><div id ="IDTree"></div><hr/><div id ="TheIDXMLeditor"></div></div>
+                                    <div id = "ShowAutoTutor"><div id ="AutoTutorTree"></div><hr/><div id ="TheAutoTutorXMLeditor"></div></div>
+                                    <div id = "ShowLoM"><div id ="LoMTree"></div><hr/><div id ="TheLoMXMLeditor"></div></div>
+                                    <div id = "ShowSKOConfig"><div id ="SKOConfigTree"></div><hr/><div id ="TheSKOConfigXMLeditor"></div></div>
+                                    <div id = "ShowRuningEnv"><div id ="RuningEnvTree"></div></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                     <div id = "XMLtree"></div>
                     <div id = "Outline"><div id="OutlineContent"></div></div>
                     <div id = "About"></div>
@@ -140,14 +158,6 @@
                     </table>
         </div>
             
-    <script src="https://author.autotutor.org/editor/ace/ace.js"></script>
-    <script>
-        var Theeditor = ace.edit("XMLtree");
-        Theeditor.setTheme("ace/theme/twilight");
-        Theeditor.session.setMode("ace/mode/xml");
-    </script>
-
-
 </body>
 
 </html>
