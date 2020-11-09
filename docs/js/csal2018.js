@@ -296,7 +296,10 @@ talkingheadOn="true";
 }
 
 function GetTheEventAssigned(){
-		
+	if (qs("ef","0")=="1"){
+		return;
+	}
+		"	
 	$("#runningstatus" ).mousedown(function() {
 	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
 	$("#runningstatus").html("<center>Your Internet speed is "+ con.downlink+" out of 10.</center>");
