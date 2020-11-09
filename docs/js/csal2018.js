@@ -297,7 +297,7 @@ talkingheadOn="true";
 
 function GetTheEventAssigned(){
 	if (qs("ef","0")=="1"){
-		return;
+		return;  // no need to start tutoring if editing.
 	}	
 	$("#runningstatus" ).mousedown(function() {
 	var con = navigator.connection || navigator.mozConnection || navigator.webkitConnetion;	
