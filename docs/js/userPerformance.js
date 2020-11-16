@@ -12,7 +12,7 @@
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
-		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson30") {
+		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID=="lesson10" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson30") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
