@@ -55,7 +55,8 @@ var fullname=GetFullName();
 
 var SKOGuid=qs("guid",SKOTitle);
 
-var allowedTextLevels=["Hard","Medium","Easy","Final",""];
+// var allowedTextLevels=["Hard","Medium","Easy","Final",""];
+var allowedTextLevels=["Hard","Medium","Easy"];
 
 var InteractionHistory=[];
 var backupInteractionHistory=[];
@@ -98,21 +99,24 @@ function CompileScroe(PresentationHistory){
 	var scoreLabel=QuestLevel.trim();
 		if (QuestLevel.indexOf("L1")==0) {
 			scoreLabel="Easy";
-		}
-		if(QuestLevel.indexOf("L2")==0) {
+		}else if(QuestLevel.indexOf("L2")==0) {
 			scoreLabel="Medium";
-		}
-		if (QuestLevel.indexOf("L3")==0) {
+		}else if (QuestLevel.indexOf("L3")==0) {
 			scoreLabel="Hard";
-		}
-		if (QuestLevel.indexOf("TPM0")==0) {
+		} else if (QuestLevel.indexOf("TPM0")==0) {
 			scoreLabel="Easy";
-		}
-		if (QuestLevel.indexOf("TPM1")==0) {
+		} else if (QuestLevel.indexOf("TPM1")==0) {
 			scoreLabel="Medium";
-		}
-		if (QuestLevel.indexOf("TPM2")==0) {
+		} else if (QuestLevel.indexOf("TPM2")==0) {
 			scoreLabel="Hard";
+		}else if (QuestLevel.indexOf("Easy")==0) {
+			scoreLabel="Easy";
+		} else if (QuestLevel.indexOf("Medium")==0) {
+			scoreLabel="Medium";
+		} else if (QuestLevel.indexOf("Hard")==0) {
+			scoreLabel="Hard";
+		}else {
+			scoreLabel="Medium";
 		}
 	
 	var userAnswer="";
