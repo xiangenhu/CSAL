@@ -124,10 +124,6 @@ function Put(acePutjson) {
 			if (InteractionHistory.length==0){
 				xAPIPostOther(Data,"action"); 
 			}
-	/* 	if (InteractionHistory.length==0){
-				var pairData={"data":lastAceAction,"input":acePutjson};
-				AceResponse(pairData,"interaction");
-			} */
 			LastData=data;
 			LastAction(data);
         },
@@ -140,8 +136,6 @@ function Put(acePutjson) {
     }).done(function(data) {
         var errorInfo = GetRuleError(data);
         var actionsError = GetActions(data);
-//		console.log(actions);
-//		console.log("=============");
 		
 		if (lastACEResponse!=null){
 			actions=lastACEResponse.ACEActions;
@@ -156,10 +150,10 @@ function Put(acePutjson) {
 	    insertMdeda(CurrentMedia,data.ACEActions);
 		if (InteractionHistory.length==0){
 			if (data.ACEActions.length>0){
-			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
-			AceResponse(Data,"response");
+				var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
+				AceResponse(Data,"response");
 			}else{
-				alert("No actions returned from ACE. Talk to Dr. Hu about this error!");
+				console.log("No actions returned from ACE. Contact CSAL Team about this error!");
 				StopTimer();
 				return;
 			}
