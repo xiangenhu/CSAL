@@ -155,8 +155,14 @@ function Put(acePutjson) {
 		
 	    insertMdeda(CurrentMedia,data.ACEActions);
 		if (InteractionHistory.length==0){
+			if (data.ACEActions.length>0){
 			var Data={"latency":latency,"data":{"input":acePutjson,"response":data}}
 			AceResponse(Data,"response");
+			}else{
+				alert("No actions returned from ACE. Talk to Dr. Hu about this error!");
+				StopTimer();
+				return;
+			}
 		}
 		
 		
@@ -164,8 +170,8 @@ function Put(acePutjson) {
         if (errorInfo == false && actionsError == false) {
 			StartTimer();
         } else {
-
-            alert("Put Error");
+			alert("Put Error");
+			StopTimer();
 			return;
         }
 
