@@ -1366,7 +1366,7 @@ function askClickNextButton()
 {
 	var lessonID=sessionStorage.getItem("LessonID");
 	/*if(lessonID=="lesson1" ||lessonID=="lesson2" ||lessonID=="lesson4" || lessonID=="lesson6"|| lessonID=="lesson7"|| lessonID=="lesson12" || lessonID=="lesson15"|| lessonID =="lesson17" || lessonID=="lesson18"||lessonID=="lesson20"|| lessonID =="lesson21" ||lessonID == "lesson22" || lessonID=="lesson24"||lessonID=="lesson25"||  lessonID=="lesson27" || lessonID=="lesson28"||  lessonID=="lesson29"||lessonID=="lesson30"||lessonID=="lesson31" ||  lessonID=="lesson32" || lessonID == "lesson33" )*/
-	if(lessonID!="lesson10"&&lessonID!="lesson11"&&lessonID!="lesson18")
+	if(lessonID!="lesson10"&&lessonID!="lesson11"&&lessonID!="lesson18"&&lessonID!="lesson2")
 	{
 		//var playList=setPlayList("0", "s1");
 		// AngentPlay(playList);
