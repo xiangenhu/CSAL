@@ -823,8 +823,8 @@ function xAPIPostEnding(ActorMbox,
 				 "en":verb 
 			}
 		};
-	var scaledScore;
-	var ARawScore;
+	var scaledScore=0;
+	var ARawScore=0;
 	if (RawScore!=null){
 		scaledScore=RawScore;
 		ARawScore=Math.round(scaledScore*Max);
