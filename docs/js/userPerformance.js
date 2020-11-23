@@ -513,7 +513,7 @@
 				if (countFirstNum == 0){
 					countFirstNum=1;
 				}
-			    var getBranch="Medium";
+			    var getBranch="Medium"; // This for lesson10 only
 			 // = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
 				var Performance = countCrrectNum / countFirstNum;
 		        console.log(Performance)
