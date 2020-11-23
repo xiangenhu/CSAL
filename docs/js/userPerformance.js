@@ -238,7 +238,7 @@
 		            TotalScoreObj.lessonID = lessonID;
 		            TotalScoreObj.pagePath = pagePath;
 		            TotalScoreObj.userAnswer = userAnswer;
-		            TotalScoreObj.TextLevel = TextLevel;
+//		            TotalScoreObj.TextLevel = TextLevel;
 		            TotalScoreObj.AnswerTime = countAnswerTime;
 
 		            TotalScoreObj.userSelectedItem = userSelectedItem;
@@ -510,7 +510,7 @@
 		            }
 
 		        }
-		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		     //   var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
 		        var Performance = countCrrectNum / countFirstNum;
 		        console.log(Performance)
 		        if (countCrrectNum > 13) {
