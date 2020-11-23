@@ -516,7 +516,6 @@
 			    var getBranch="Medium";
 			 // = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
 				var Performance = countCrrectNum / countFirstNum;
-				if ()
 		        console.log(Performance)
 		        if (countCrrectNum > 13) {
 
