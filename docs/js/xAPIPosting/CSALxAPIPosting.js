@@ -823,8 +823,14 @@ function xAPIPostEnding(ActorMbox,
 				 "en":verb 
 			}
 		};
-	var scaledScore=RawScore;
-	var ARawScore=Math.round(scaledScore*Max);
+	var scaledScore;
+	var ARawScore;
+	if (RawScore!=null){
+		scaledScore=RawScore;
+		ARawScore=Math.round(scaledScore*Max);
+	}else{
+		ARawScore=0;
+	}
 	var activityObj=LessonID;
 	var data={"URL":ActivityURL,
 	           "guid":SKOGuid,
