@@ -830,13 +830,9 @@ function xAPIPostEnding(ActorMbox,
 		ARawScore=Math.round(scaledScore*Max);
 	}
 	var activityObj=LessonID;
-	var TheTextLevel=none;
-	if (TextLevel!=null){
-		TheTextLevel=TextLevel;
-	}
 	var data={"URL":ActivityURL,
 	           "guid":SKOGuid,
-			   "TextLevel":TheTextLevel,
+			   "TextLevel":TextLevel,
 			   "finalData":FinalData}
 	var ResultObj={
         "score": {
