@@ -2793,7 +2793,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPerky.html",
           "questionID": "1",
-          "questionLevel": "TP11",
+          "questionLevel": "Medium",
           "progressBarValue": 10,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the x in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
@@ -2802,7 +2802,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPerky.html",
           "questionID": "2",
-          "questionLevel": "TP12",
+          "questionLevel": "Medium",
           "progressBarValue": 10,
           "quesionName": "Cristina:Here is a follow up question about this slogan. _user_, can you tell me if there is a comparison being made in the slogan, take one at night, be out like a light. press the correct answer.",
           "notCountedItem": false
@@ -2811,7 +2811,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPerky.html",
           "questionID": "3",
-          "questionLevel": "TP13",
+          "questionLevel": "Medium",
           "progressBarValue": 10,
           "quesionName": "Cristina:Why is the writer comparing the reader and a light. _user_, Please press the correct response.",
           "notCountedItem": false
@@ -2820,7 +2820,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPerky.html",
           "questionID": "4",
-          "questionLevel": "TP14",
+          "questionLevel": "Medium",
           "progressBarValue": 10,
           "quesionName": "Cristina:What is the intended meaning of the phrase, out like a light. press the correct response.",
           "notCountedItem": false
@@ -2829,7 +2829,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPerky.html",
           "questionID": "5",
-          "questionLevel": "TP15",
+          "questionLevel": "Medium",
           "progressBarValue": 10,
           "quesionName": "Cristina:Now lets put everything we have just discussed together to test our understanding of the non-literal phrase in this ad. _user_, which of these is a good replacement for the nonliteral language, take one at night, be out like a light? press the correct response.",
           "notCountedItem": false
@@ -2838,7 +2838,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdGlasses.html",
           "questionID": "6",
-          "questionLevel": "TP21",
+          "questionLevel": "Medium",
           "progressBarValue": 20,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's first determine which phrase in this advertisement uses nonliteral language. press the correct answer.",
           "notCountedItem": false
@@ -2847,7 +2847,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdGlasses.html",
           "questionID": "7",
-          "questionLevel": "TP22",
+          "questionLevel": "Medium",
           "progressBarValue": 20,
           "quesionName": "Cristina:As we know, non-literal language is sometimes used to make a comparison.  _user_, what do you think. is there a comparison being made in the slogan, blind as a bat, we can fix that. press the correct answer.",
           "notCountedItem": false
@@ -2856,7 +2856,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdGlasses.html",
           "questionID": "8",
-          "questionLevel": "TP23",
+          "questionLevel": "Medium",
           "progressBarValue": 20,
           "quesionName": "Cristina:_user_, why do you think the writer is comparing the reader's eyesight and a bat's eyesight? Please press the correct response.",
           "notCountedItem": false
@@ -2865,7 +2865,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdGlasses.html",
           "questionID": "9",
-          "questionLevel": "TP24",
+          "questionLevel": "Medium",
           "progressBarValue": 20,
           "quesionName": "Cristina:_user_, using what we have learned about the ad's slogan from the previous questions, can you tell me the intended meaning of blind as a bat, We can fix that. press the correct response.",
           "notCountedItem": false
@@ -2874,7 +2874,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdGlasses.html",
           "questionID": "10",
-          "questionLevel": "TP25",
+          "questionLevel": "Medium",
           "progressBarValue": 20,
           "quesionName": "Cristina:If we wanted to replace the nonliteral language in this ad, blind as a bat, we can fix that, which of the phrases below gives the reader the same message? _user_, press the correct response.",
           "notCountedItem": false
@@ -2883,7 +2883,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "11",
-          "questionLevel": "TP31",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:Take a look at this next advertisement. When you think you are ready, press on the image to view the first question,",
           "notCountedItem": false
@@ -2892,7 +2892,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "12",
-          "questionLevel": "TP32",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. As we did with the other ads, let's first determine which part of this advertisement uses nonliteral language. _user_, press the correct answer.",
           "notCountedItem": false
@@ -2901,7 +2901,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "13",
-          "questionLevel": "TP33",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:Is there a comparison being made in the slogan, it will keep you on the ball. press the correct answer." ,
           "notCountedItem": false
@@ -2910,7 +2910,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "14",
-          "questionLevel": "TP34",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
@@ -2919,7 +2919,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "15",
-          "questionLevel": "TP35",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:What is the intended meaning of this idiom? press the correct response.",
           "notCountedItem": false
@@ -2927,7 +2927,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdOrganize.html",
           "questionID": "15",
-          "questionLevel": "TP35",
+          "questionLevel": "Medium",
           "progressBarValue": 40,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response below.",
           "notCountedItem": false
@@ -2936,7 +2936,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPotato.html",
           "questionID": "16",
-          "questionLevel": "TP41",
+          "questionLevel": "Medium",
           "progressBarValue": 60,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
@@ -2945,7 +2945,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPotato.html",
           "questionID": "17",
-          "questionLevel": "TP42",
+          "questionLevel": "Medium",
           "progressBarValue": 60,
           "quesionName": "Cristina:Is there a comparison being made in the phrase, couch potato? press the correct answer.",
           "notCountedItem": false
@@ -2954,7 +2954,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPotato.html",
           "questionID": "18",
-          "questionLevel": "TP43",
+          "questionLevel": "Medium",
           "progressBarValue": 60,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response below.",
           "notCountedItem": false
@@ -2963,7 +2963,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPotato.html",
           "questionID": "19",
-          "questionLevel": "TP44",
+          "questionLevel": "Medium",
           "progressBarValue": 60,
           "quesionName": "Cristina:What is the intended meaning of couch potato? Please press the correct answer below.",
           "notCountedItem": false
@@ -2972,7 +2972,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdPotato.html",
           "questionID": "20",
-          "questionLevel": "TP45",
+          "questionLevel": "Medium",
           "progressBarValue": 60,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, the ultimate couch potato remote control? Please press the correct response.",
           "notCountedItem": false
@@ -2981,7 +2981,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "NewAdSpa.html",
           "questionID": "21",
-          "questionLevel": "TP51",
+          "questionLevel": "Medium",
           "progressBarValue": 80,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. _user_, let's start out exploring this ad the same way as the others. Let's determine which part of this advertisement uses nonliteral language. press the correct answer.",
           "notCountedItem": false
@@ -2990,7 +2990,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "NewAdSpa.html",
           "questionID": "22",
-          "questionLevel": "TP52",
+          "questionLevel": "Medium",
           "progressBarValue": 80,
           "quesionName": "Cristina:Is a comparison being made in the phrase, on cloud nine? Please press yes or no.",
           "notCountedItem": false
@@ -2999,7 +2999,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "NewAdSpa.html",
           "questionID": "23",
-          "questionLevel": "TP53",
+          "questionLevel": "Medium",
           "progressBarValue": 80,
           "quesionName": "Cristina:Why is the writer using this nonliteral language? Please press the correct response.",
           "notCountedItem": false
@@ -3008,7 +3008,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "NewAdSpa.html",
           "questionID": "24",
-          "questionLevel": "TP54",
+          "questionLevel": "Medium",
           "progressBarValue": 80,
           "quesionName": "Cristina:What is the intended meaning of this nonliteral language, on cloud nine? press the correct response.",
           "notCountedItem": false
@@ -3017,7 +3017,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "NewAdSpa.html",
           "questionID": "25",
-          "questionLevel": "TP55",
+          "questionLevel": "Medium",
           "progressBarValue": 80,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language? Please press the correct response.",
           "notCountedItem": false
@@ -3026,7 +3026,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdTea.html",
           "questionID": "26",
-          "questionLevel": "TP61",
+          "questionLevel": "Medium",
           "progressBarValue": 90,
           "quesionName": "Cristina:If you need to look at the image again, press on the advertisement to make it bigger. When you are ready, press the ex in the upper right hand corner to make the ad smaller and answer the question. Which part of this advertisement uses nonliteral language? press the correct answer.",
           "notCountedItem": false
@@ -3035,7 +3035,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdTea.html",
           "questionID": "27",
-          "questionLevel": "TP62",
+          "questionLevel": "Medium",
           "progressBarValue": 90,
           "quesionName": "Cristina:Is there a comparison being made in the slogan, one sip and you're in heaven? Please press yes or no.",
           "notCountedItem": false
@@ -3044,7 +3044,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdTea.html",
           "questionID": "28",
-          "questionLevel": "TP63",
+          "questionLevel": "Medium",
           "progressBarValue": 91,
           "quesionName": "Cristina:Why is the writer comparing a sip of tea and, being in heaven? Please press the correct response.",
           "notCountedItem": false
@@ -3053,7 +3053,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdTea.html",
           "questionID": "29",
-          "questionLevel": "TP64",
+          "questionLevel": "Medium",
           "progressBarValue": 91,
           "quesionName": "Cristina:What is the intended meaning of, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
@@ -3062,7 +3062,7 @@ var systemConfig={
           "Type": "QuestionPage",
           "questionPath": "AdTea.html",
           "questionID": "30",
-          "questionLevel": "TP65",
+          "questionLevel": "Medium",
           "progressBarValue": 91,
           "quesionName": "Cristina:Which of these is a good replacement for the nonliteral language, one sip and you're in heaven? Please press the correct response.",
           "notCountedItem": false
