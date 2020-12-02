@@ -12,7 +12,7 @@
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
-		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID=="lesson10" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"||lessonID == "lesson21"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson30") {
+		    if (lessonID == "lesson1" ||lessonID == "lesson2" || lessonID == "lesson6" || lessonID=="lesson10" || lessonID == "lesson29" || lessonID == "lesson7" || lessonID == "lesson4" || lessonID == "lesson25" || lessonID == "lesson20" || lessonID == "lesson22"|| lessonID == "lesson24"||lessonID == "lesson21"|| lessonID == "lesson34" || lessonID == "lesson16" || lessonID == "lesson31" || lessonID == "lesson33" || lessonID == "lesson12" || lessonID == "lesson17" || lessonID == "lesson14" || lessonID == "lesson28" || lessonID == "lesson30") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -397,6 +397,31 @@
 		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
 		        var Performance = countCrrectNum / countFirstNum;
 		        console.log(Performance)
+		        if (countCrrectNum > 14) {
+
+		            userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
+
+		        }
+
+		    }
+			else if (lessonID == "lesson14") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
 		        if (countCrrectNum > 7) {
 
 		            userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
@@ -590,7 +615,57 @@
 
 		        }
 
+		    }
+			else if (lessonID == "lesson28") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        if (countCrrectNum > 14) {
+
+		            userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
+
+		        }
+
 		    } 
+			else if (lessonID == "lesson32") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        if (countCrrectNum > 5) {
+
+		            userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
+
+		        }
+
+		    } 	
 			else if (lessonID == "lesson22") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
