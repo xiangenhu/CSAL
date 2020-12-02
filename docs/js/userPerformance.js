@@ -705,7 +705,32 @@
 
 		        }
 
-		    } 
+		    }
+			else if (lessonID == "lesson23") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		         if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        
+		            if (countCrrectNum >= 16) {
+
+		                userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
+		            } else {
+		                //no pass
+		                userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
+
+		            }
+
+		    } 			
 			else if (lessonID == "lesson24") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
