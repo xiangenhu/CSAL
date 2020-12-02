@@ -717,7 +717,7 @@
 		                countFirstNum++;
 		            }
 		        }
-		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        //var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
 		        var Performance = countCrrectNum / countFirstNum;
 		        console.log(Performance)
 		        
