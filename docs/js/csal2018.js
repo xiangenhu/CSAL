@@ -1653,7 +1653,7 @@ function endCounting() {
 }
 
 function InvokeScript(funcName, funcParam) {
-
+    console.log(document.getElementById('mainFrame').src);
 	if (funcParam != "") {
 		try {
 			document.getElementById('mainFrame').contentWindow[funcName](funcParam);
