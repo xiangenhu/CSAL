@@ -1058,9 +1058,9 @@ function runActions() {
 					ShowNextButton();
 					nextButtonStatus = true;
 					ShowButtonAndWait=true;
-					if (currentLessonID == "Lesson9")
-					{
-						InvokeScript("getProgressBarValue", "");
+					if (currentLessonID == "Lesson9"){
+						$(".progressbar").hide();
+					//	InvokeScript("getProgressBarValue", "");
 					}
 				
 				}
@@ -1653,7 +1653,6 @@ function endCounting() {
 }
 
 function InvokeScript(funcName, funcParam) {
-    console.log(document.getElementById('mainFrame').src);
 	if (funcParam != "") {
 		try {
 			document.getElementById('mainFrame').contentWindow[funcName](funcParam);
