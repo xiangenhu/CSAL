@@ -846,6 +846,9 @@ function runActions() {
 				data = agentNum + ":" + data;
 				break;
 			case "Play":
+				if(qs("DEBUGGING","0")=="1"){
+					return;
+				}
 			    if (InteractionHistory.lengt==0){
 					if(talkingheadUsing=="Play")
 					{
@@ -857,6 +860,9 @@ function runActions() {
 				   
 				break;
 			case "Speak2":
+				if(qs("DEBUGGING","0")=="1"){
+					return;
+				}
 				if(talkingheadUsing=="Speak2")
 				{
 					if (InteractionHistory.length==0){
