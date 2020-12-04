@@ -847,7 +847,7 @@ function runActions() {
 				break;
 			case "Play":
 				if(qs("DEBUGGING","0")=="1"){
-					return;
+					break;
 				}
 			    if (InteractionHistory.lengt==0){
 					if(talkingheadUsing=="Play")
@@ -861,7 +861,7 @@ function runActions() {
 				break;
 			case "Speak2":
 				if(qs("DEBUGGING","0")=="1"){
-					return;
+					break;
 				}
 				if(talkingheadUsing=="Speak2")
 				{
