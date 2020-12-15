@@ -7,6 +7,7 @@
 		<!--load Google fonts-->
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
 		
 		<!--load jQuery libraries-->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -26,99 +27,63 @@
 				overflow: hidden;
 				margin: 0px;
 				font-family: 'Sintony', Verdana, 'Times New Roman';
+				cursor: default;
 			}
-			#fadeBody {display: none;}
 			.scroll-pane
 			{
 				overflow: auto;
-				height: 314px;
+				height: 482px;
 				width: 798px;
 				margin-top: 1px;
 			}
+			/*.jspHorizontalBar { display: none !important; }*/
 			.horizontal-only
 			{
 				height: auto;
 				max-height: 200px;
 			}
-			#instructBox{}
+			#instructBox
+			{
+				height: 50px;
+				background-color: #e3eaf5;
+				color: #222222;
+				font-family: 'Raleway', Verdana, 'Times New Roman';
+				width: 770px;
+				font-size: 27px;
+				text-align: center;
+				padding: 20px 5px 10px 5px;
+				border-bottom: 5px dashed #1d3352;
+				margin: 0px auto 4px auto;
+				position: fixed;
+				top: 0;
+			}
 			#mainTextHead
 			{
 				font-weight: bold;
-				font-size: 32px;
+				font-size: 30px;
 				margin-bottom: 6px;
 				text-align: center;
-				margin: 5px auto;
-			}
-			#mainTextHeadSub
-			{
-				font-size: 24px;
-				width: 600px;
-				margin: 5px auto 15px auto;
-				font-style: italic;
 			}
 			#mainText
 			{
 				overflow: auto;
-				font-size: 20px;
-				font-weight: 500;
-				width: 700px;
-				margin: 0px 0px 0px 30px;
-				padding: 10px 10px;
-				display: inline-block;
-			}
-			.questionBox
-			{
-				position: fixed;
-				bottom:0;
-				z-index:1;
-				width: 810px;
-				height: 200px;  //height: 170px;
-				background-image: url('QBkgd1.png');
-				background-color: #white;
-				margin: 0px  0px auto;
-				padding: 0px;
-				border: none;
-				font-family: 'Raleway', Verdana, 'Times New Roman';
-				
-			}
-			#questionText
-			{
-				text-align: center;
 				font-size: 24px;
-				padding: 5px 20px 5px 20px;
-				color: #212121;
-				margin: 0px 0px 0px 5px;
-				width: 740px;
+				width: 690px;
+				margin: 10px 0px 0px 40px;
+				padding: 90px 10px;
 				display: inline-block;
-				vertical-align: top;
-			}
-			#buttonBox
-			{
-				margin: 0px 0px 0px 15px;
-				width: 450px;
-				display:none;
-				vertical-align: top;
 			}
 			.mybutton
 			{
-				font-size: 19px;
+				font-size: 22px;
 				font-family: Raleway, Verdana, 'Times New Roman';
 				font-weight: 700;
-				width: 760px;
-				height: 34px;
-				line-height: 37px;
-				margin: 2px;
 				text-decoration: none;
 				border: none;
-				position: relative;
-				text-align: center;
-				padding: 2px;
 				color: #212121;
-				background-color: grey;
-				
-				display: inline-block;
+				padding: 2px 4px;
 				outline: none;
-				border-radius: 12px;
+				border-radius: 8px;
 			}
 			.mybutton:hover
 			{
@@ -128,6 +93,13 @@
 			{
 				background-color: #ffeb43;
 				border-radius: 10px;
+			}
+			
+			.empty
+			{
+				border-width: 4px;
+				border-style: dashed;
+				border-color: red;
 			}
 			.indent
 			{
@@ -373,8 +345,13 @@
 		</script>
 	</head>
 	<body>
-		<div id="fadeBody">
-		<div id="textbox" class="scroll-pane">	
+		<div id="textbox" class="scroll-pane">
+			<div id="instructBox">
+				Click the sentence that best represents the impact of a wage increase. 
+			</div>
+			
+			
+			
 			<div id="mainText">
 				<div id="mainTextHead">
 					Keep It the Same
@@ -383,28 +360,9 @@
 					</div>
 				</div>
 				<div id="para1" class="para">
-					<span class="indent"></span>There has been considerable debate about whether the government should raise minimum wage in America. <span id="spot" class="highlight"><span class="num">&nbsp;1&nbsp;</span>I present to you here a few reasons as to why the government should not raise minimum wage.If employers raised minimum wage, this would in turn increase the cost of products we buy and ultimately increase our federal debt.<span class="num">&nbsp;2&nbsp;</span> With our inflation rate as it is, many common items are already almost out of reach for millions of Americans. <span class="num">&nbsp;3&nbsp;</span> Additionally, those who are currently employed may not want to lose their job just to help someone receive a 2 dollar raise.<span class="num">&nbsp;4&nbsp;</span> If this increase takes place, 500,000 more Americans will find themselves unemployed in this economy.</span> Currently, low wage workers have an easier time finding work without the additional competition. If the wage were to increase, it would be harder to find jobs because the number of unemployed unskilled workers would be so high. Is it worth getting 16.5 million people out of poverty or leaving 500,000 workers unemployed? I think it's not worth it at all.
+					<span class="indent"></span>There has been considerable debate about whether the government should raise minimum wage in America.<span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;1&nbsp;</span>I present to you here a few reasons as to why the government should not raise minimum wage. If employers raised minimum wage, this would in turn increase the cost of products we buy and ultimately increase our federal debt. <span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;2&nbsp;</span>With our inflation rate as it is, many common items are already almost out of reach for millions of Americans. <span class="mybutton" id="b1" value="Incorrect"><span class="num">&nbsp;3&nbsp;</span> Additionally, those who are currently employed may not want to lose their job just to help someone receive a 2 dollar raise.<span class="mybutton" id="b2" value="Correct"><span class="num">&nbsp;4&nbsp;</span>If this increase takes place, 500,000 more Americans will find themselves unemployed in this economy.</span></span></span></span>Currently, low wage workers have an easier time finding work without the additional competition.If the wage were to increase, it would be harder to find jobs because the number of unemployed unskilled workers would be so high. Is it worth getting 16.5 million people out of poverty or leaving 500,000 workers unemployed? I think it's not worth it at all.
 				</div>
 			</div>
-			<div id="questionBox0" class="questionBox">
-				<div id="questionText">
-					Click the sentence that best represents the impact of a wage increase. 
-				</div>
-				
-				<div id="buttonBox">
-					<a class='mybutton' id="b1" value="Incorrect"; href='javascript:void(null)'>
-						 <span class="hint">It is a separate claim that does not support the previous claims.</span> 
-					</a>
-					<a class='mybutton' id="b2" value="Correct"; href='javascript:void(null)'>
-						<span class="hint1">Connects previous information to current claim that 500,000 will be without work.</span>
-					</a>
-				
-					<a class='mybutton' id="b3" value="Incorrect"; href='javascript:void(null)'>
-						Connects previous information to claim that increase will affect the federal debt.
-					</a>
-				</div>
-			</div>
-		</div>
 		</div>
 	</body>
 </html>
