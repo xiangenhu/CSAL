@@ -282,7 +282,7 @@ function GetAllScores(lrsURL,LRSusername,LRSpassword){
 }
 
 function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
-	var queryBody=GetLastActionJSON(LearnerID.mbox,LessonID.mbox);
+	var queryBody=GetLastActionJSON(LearnerID.mbox,TheLessonIDforXAPI.mbox);
 			var settings = {
 		   "url": lrsURL+"statements/aggregate",
 		   "method": "POST",
@@ -306,7 +306,7 @@ function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
 
 function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 	
-	var queryBody=GetLastStartingTime(LearnerID.mbox,LessonID.mbox);
+	var queryBody=GetLastStartingTime(LearnerID.mbox,TheLessonIDforXAPI.mbox);
 			var settings = {
 		   "url": lrsURL+"statements/aggregate",
 		   "method": "POST",
@@ -409,7 +409,7 @@ function removeLastElement(anArray,k){
 }
 
 function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
-		var queryBody=GetInteractionHistorxAPIJSON(LearnerID.mbox,LessonID.mbox,atimestamp);
+		var queryBody=GetInteractionHistorxAPIJSON(LearnerID.mbox,TheLessonIDforXAPI.mbox,atimestamp);
 			var settings = {
 		   "url": lrsURL+"statements/aggregate",
 		   "method": "POST",

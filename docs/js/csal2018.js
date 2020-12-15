@@ -1709,7 +1709,7 @@ function getLastResponse(lrsURL,LRSusername,LRSpassword,Averb){
 	verbID=xAPIVerbBase+Averb;
 	datasqlstringObj={$and:[
 	{"object.mbox":LearnerID.mbox},
-	{"actor.mbox":LessonID.mbox},
+	{"actor.mbox":TheLessonIDforXAPI.mbox},
 	{"verb.id":verbID}]};
 	
 	var secondquery={$and:[{$sort:{"statement.timestamp":1}},{$limit:1}]};
@@ -1751,13 +1751,13 @@ function getLastActiveRecordNew(lrsURL,LRSusername,LRSpassword,Averb){
 	verbID=xAPIVerbBase+Averb;
 	datasqlstringObj={$and:[
 	{"actor.mbox":LearnerID.mbox},
-	{"object.mbox":LessonID.mbox},
+	{"object.mbox":TheLessonIDforXAPI.mbox},
 	{"verb.id":verbID}]};
 	var secondquery=[
 	                  {"$match":{
 						  "$and":[
 							{"actor.mbox":LearnerID.mbox},
-							{"object.mbox":LessonID.mbox},
+							{"object.mbox":TheLessonIDforXAPI.mbox},
 							{"verb.id":verbID}
 							]
 						}
@@ -1817,7 +1817,7 @@ function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
 	verbID=xAPIVerbBase+Averb;
 	datasqlstringObj={$and:[
 	{"actor.mbox":LearnerID.mbox},
-	{"object.mbox":LessonID.mbox},
+	{"object.mbox":TheLessonIDforXAPI.mbox},
 	{"verb.id":verbID}]};
 	var secondquery={$and:[{$sort:{"statement.timestamp":1}},{$limit:1}]};
 	
