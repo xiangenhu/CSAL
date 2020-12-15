@@ -2445,7 +2445,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, Here is another sentence.  Kim sees, her, every month for checkups.  Click on the noun that best replaces the pronoun, her.",
+          "quesionName": "Cristina:_user_, Here is a sentence. # Kim sees, her, every month for checkups. # Click on the noun that best replaces the pronoun, her.",
           "notCountedItem": false
         },
         {
@@ -2454,7 +2454,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_,try this next one. Which of the highlighted nouns best replaces the pronoun, she, in this sentence? Then she takes Kim's blood pressure and gets a blood sample.",
+          "quesionName": "Cristina:_user_,try this next one. # Which of the highlighted nouns best replaces the pronoun, she, in this sentence? # Then she takes Kim's blood pressure and gets a blood sample.",
           "notCountedItem": false
         },
         {
@@ -2463,7 +2463,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Jordan:_user_, please help me. Which noun could replace the pronoun, she, in this sentence?: She also lets Kim and Ben listen.",
+          "quesionName": "Jordan:_user_, please help me. # Which noun could replace the pronoun, she, in this sentence? # She also lets Kim and Ben listen.",
           "notCountedItem": false
         },
         {
@@ -2472,7 +2472,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, Here is the next sentence. It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. Which choice replaces the word, their, in this sentence?",
+          "quesionName": "Cristina:_user_ ,Here is the next sentence. # It is very exciting for them to hear the 'thump, thump, thump' of their little one's heart. # Which choice replaces the word, their, in this sentence?",
           "notCountedItem": false
         },
         {
@@ -2481,7 +2481,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, who does the pronoun, her, refer to in this sentence? The doctor reminds her to eat healthy food and drink lots of water.",
+          "quesionName": "Cristina:_user_, who does the pronoun, her, refer to in this sentence? # The doctor reminds her to eat healthy food and drink lots of water.",
           "notCountedItem": false
         },
         {
@@ -2490,7 +2490,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, here is another one. Which is the best word to replace the pronoun, she, in this sentence? She also explains that Kim needs to take a daily vitamin.",
+          "quesionName": "Cristina:_user_, here is another one. # Which is the best word to replace the pronoun, she, in this sentence? # She also explains that Kim needs to take a daily vitamin.",
           "notCountedItem": false
         },
         {
@@ -2499,7 +2499,7 @@ var systemConfig={
           "questionID": "7",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Jordan:_user_,can you help me with this one? Here is the sentence: They could harm the baby's health. Which word should we put in place of the pronoun, they?",
+          "quesionName": "Jordan:_user_,can you help me with this one? # Here is the sentence: They could harm the baby's health. # Which word should we put in place of the pronoun, they?",
           "notCountedItem": false
         },
         {
@@ -2508,7 +2508,7 @@ var systemConfig={
           "questionID": "8",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_ ,here is another sentence. The doctor also tells Kim and Ben what to expect as it grows. In that sentence the pronoun,It, can be best replaced by which noun.",
+          "quesionName": "Cristina:_user_ ,here is another sentence. # The doctor also tells Kim and Ben what to expect as it grows. # In that sentence the pronoun,It, can be best replaced by which noun.",
           "notCountedItem": false
         },
         {
@@ -2517,7 +2517,7 @@ var systemConfig={
           "questionID": "9",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Jordan:_user_, alright. we just have a few more to knock out. How would you replace the pronoun, they, in the sentence: they are eager to visit?",
+          "quesionName": "Jordan:_user_, alright. # we just have a few more to knock out. # How would you replace the pronoun, they, in the sentence: they are eager to visit?",
           "notCountedItem": false
         },
         {
@@ -2526,7 +2526,7 @@ var systemConfig={
           "questionID": "10",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, in this next sentence, how would you replace the pronoun, their. These classes are a good way to meet other parents and learn about their baby.",
+          "quesionName": "Cristina:_user_, in this next sentence, how would you replace the pronoun, their. # These classes are a good way to meet other parents and learn about their baby.",
           "notCountedItem": false
         },
         {
@@ -2535,7 +2535,7 @@ var systemConfig={
           "questionID": "11",
           "questionLevel": "Medium",
           "progressBarValue": 25,
-          "quesionName": "Jordan:_user_, What do you think about this sentence?  They will also discuss feeding, dressing, diapering, and bathing babies. What could we put in place of the pronoun, they?",
+          "quesionName": "Jordan:_user_, What do you think about this sentence? # They will also discuss feeding, dressing, diapering, and bathing babies. # What could we put in place of the pronoun, they?",
           "notCountedItem": false
         },
         {
@@ -2544,7 +2544,7 @@ var systemConfig={
           "questionID": "12",
           "questionLevel": "Hard",
           "progressBarValue": 54,
-          "quesionName": "Cristina:_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. Often ocean currents can quickly move pieces of debris miles away from where they are spotted.",
+          "quesionName": "Cristina:_user_,  Click on the noun that best replaces the pronoun, they, in this sentence. # Often ocean currents can quickly move pieces of debris miles away from where they are spotted.",
           "notCountedItem": false
         },
         {
@@ -2553,7 +2553,7 @@ var systemConfig={
           "questionID": "13",
           "questionLevel": "Hard",
           "progressBarValue": 58,
-          "quesionName": "Cristina:_user_, which do you think is the correct noun to replace the pronoun, it, in this sentence? They hope it is a clue that could help solve the mystery of the missing plane; however, instead, they learn that it is garbage, a piece of fishing equipment, or it is a box that fell from a passing ship.",
+          "quesionName": "Cristina:_user_, which do you think is the correct noun to replace the pronoun, it, in this sentence? # They hope it is a clue that could help solve the mystery of the missing plane; # however, instead, they learn that it is garbage, a piece of fishing equipment, or it is a box that fell from a passing ship.",
           "notCountedItem": false
         },
         {
@@ -2562,7 +2562,7 @@ var systemConfig={
           "questionID": "14",
           "questionLevel": "Hard",
           "progressBarValue": 62,
-          "quesionName": "Cristina:_user_,  here is the next sentence. In 1997, he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California.",
+          "quesionName": "Cristina:_user_,  here is the next sentence. # In 1997, he discovered what is now known as the Great Pacific Garbage Patch which is located between Hawaii and California.",
           "notCountedItem": false
         },
         {
@@ -2571,7 +2571,7 @@ var systemConfig={
           "questionID": "15",
           "questionLevel": "Hard",
           "progressBarValue": 68,
-          "quesionName": "Jordan:_user_, this one is tricky to me. What noun should replace the pronoun, it, in this sentence: It, is at least the size of Texas. Will you help me to find the best answer for this one?",
+          "quesionName": "Jordan:_user_, this one is tricky to me. # What noun should replace the pronoun, it, in this sentence: It, is at least the size of Texas. # Will you help me to find the best answer for this one?",
           "notCountedItem": false
         },
         {
@@ -2580,7 +2580,7 @@ var systemConfig={
           "questionID": "16",
           "questionLevel": "Hard",
           "progressBarValue": 72,
-          "quesionName": "Cristina:_user_, lets go on to the next one.  Which of the nouns best replaces the word, it, in this sentence? The debris has a negative effect on marine life because much of it is not decomposed.",
+          "quesionName": "Cristina:_user_, lets go on to the next one. # Which of the nouns best replaces the word, it, in this sentence? # The debris has a negative effect on marine life because much of it is not decomposed.",
           "notCountedItem": false
         },
         {
@@ -2589,7 +2589,7 @@ var systemConfig={
           "questionID": "17",
           "questionLevel": "Hard",
           "progressBarValue": 76,
-          "quesionName": "Cristina:_user_, here is another one. Pick the best noun to replace the pronoun, that, for this phrase. That, means the water moves around in a circle.",
+          "quesionName": "Cristina:_user_, here is another one. # Pick the best noun to replace the pronoun, that, for this phrase. # That, means the water moves around in a circle.",
           "notCountedItem": false
         },
         {
@@ -2598,7 +2598,7 @@ var systemConfig={
           "questionID": "18",
           "questionLevel": "Hard",
           "progressBarValue": 79,
-          "quesionName": "Cristina:_user_, Here's the next sentence. Some of it is dumped into rivers that carry it to the ocean, while some is swept into the sea by tsunamis. How would you replace the pronoun, it? ?",
+          "quesionName": "Cristina:_user_, Here's the next sentence. # Some of it is dumped into rivers that carry it to the ocean, while some is swept into the sea by tsunamis. # How would you replace the pronoun, it?",
           "notCountedItem": false
         },
         {
@@ -2607,7 +2607,7 @@ var systemConfig={
           "questionID": "19",
           "questionLevel": "Hard",
           "progressBarValue": 82,
-          "quesionName": "Jordan:_user_,  Let's try another one. Here is the sentence.  Those are huge waves caused by earthquakes under the sea.   how would you replace the pronoun, those? I think the answer is rivers. What about you?",
+          "quesionName": "Jordan:_user_,  Let's try another one. # Here is the sentence. # Those are huge waves caused by earthquakes under the sea. # how would you replace the pronoun, those? # I think the answer is rivers. # What about you?",
           "notCountedItem": false
         },
         {
@@ -2616,7 +2616,7 @@ var systemConfig={
           "questionID": "20",
           "questionLevel": "Hard",
           "progressBarValue": 84,
-          "quesionName": "Cristina:_user_, Just a couple more. Try this sentence. They are dangerous, floating around for months.  what is the best noun to replace the pronoun, they?",
+          "quesionName": "Cristina:_user_, Just a couple more. # Try this sentence. # They are dangerous, floating around for months. # what is the best noun to replace the pronoun, they??",
           "notCountedItem": false
         },
         {
@@ -2625,7 +2625,7 @@ var systemConfig={
           "questionID": "21",
           "questionLevel": "Hard",
           "progressBarValue": 88,
-          "quesionName": "Jordan:_user_, in the next sentence, which noun best replaces the pronoun, them. Waves break them up into much smaller pieces and animals swallow them.",
+          "quesionName": "Jordan:_user_, in the next sentence, which noun best replaces the pronoun, them. # Waves break them up into much smaller pieces and animals swallow them.",
           "notCountedItem": false
         },
         {
@@ -2634,7 +2634,7 @@ var systemConfig={
           "questionID": "22",
           "questionLevel": "Hard",
           "progressBarValue": 92,
-          "quesionName": "Cristina:_user_, which noun best replaces the pronoun, they, in this sentence? They understand the challenges garbage poses.",
+          "quesionName": "Cristina:_user_, which noun best replaces the pronoun, they, in this sentence? # They understand the challenges garbage poses.",
           "notCountedItem": false
         },
         {
@@ -2643,7 +2643,7 @@ var systemConfig={
           "questionID": "23",
           "questionLevel": "Hard",
           "progressBarValue": 96,
-          "quesionName": "Jordan:Last question _user_. Can you help me find the correct noun to replace their. In the sentence. that's what the twins do in their sport? I think it might refer to the hunters.",
+          "quesionName": "Jordan:_user_, here is the Last one. # how would you replace the pronoun, it, in this sentence:  Not only is debris in the oceans an  issue for finding the missing plane, but it also has a greater global impact on the environment.",
           "notCountedItem": false
         },
         {
@@ -2661,7 +2661,7 @@ var systemConfig={
           "questionID": "25",
           "questionLevel": "Easy",
           "progressBarValue": 52,
-          "quesionName": "Cristina:_user_, which noun best replaces the pronoun,  she, in this sentence? She made the U.S. olympic team.",
+          "quesionName": "Cristina:_user_, which noun best replaces the pronoun,  she, in this sentence? # She made the U. # S. # olympic team.",
           "notCountedItem": false
         },
         {
@@ -2670,7 +2670,7 @@ var systemConfig={
           "questionID": "26",
           "questionLevel": "Easy",
           "progressBarValue": 56,
-          "quesionName": "Cristina:_user_, in this sentence which noun best replaces the pronoun, it. It was all over the news.",
+          "quesionName": "Cristina:_user_, in this sentence which noun best replaces the pronoun, it. # It was all over the news.",
           "notCountedItem": false
         },
         {
@@ -2679,11 +2679,11 @@ var systemConfig={
           "questionID": "27",
           "questionLevel": "Easy",
           "progressBarValue": 60,
-          "quesionName": "Jordan:_user_, I am really not sure about this next one. What does the pronoun, she, refer to in this sentence. She was shocked by the level of interest. Can you help me?",
+          "quesionName": "Jordan:_user_, I am really not sure about this next one. # What does the pronoun, she, refer to in this sentence. # She was shocked by the level of interest. # Can you help me?",
           "notCountedItem": false
         },
         {
-          "Type": "QuestionPage",
+          "Type": "QuestionPage", //this is out of order & only has a close match to Question ID =5 in activity.xml//
           "questionPath": "Lesson9-Main1-0new.html",
           "questionID": "28",
           "questionLevel": "Easy",
@@ -2697,7 +2697,7 @@ var systemConfig={
           "questionID": "29",
           "questionLevel": "Easy",
           "progressBarValue": 68,
-          "quesionName": "Cristina:_user_, Let's keep going. How would you replace the pronoun, she, in this sentence? Lanny was having a good season this winter, but she got sick during a set of races in Italy.",
+          "quesionName": "Cristina:_user_, Let's keep going. # How would you replace the pronoun, she, in this sentence? # Lanny was having a good season this winter, but she got sick during a set of races in Italy.",
           "notCountedItem": false
         },
         {
@@ -2706,7 +2706,7 @@ var systemConfig={
           "questionID": "30",
           "questionLevel": "Easy",
           "progressBarValue": 72,
-          "quesionName": "Jordan:_user_, in the sentence, But she would not change her mind, the pronoun, she, is used. What does, she, refer to here?",
+          "quesionName": "Jordan:_user_, in the sentence, But she would not change her mind, the pronoun, she, is used. # What does, she, refer to here?",
           "notCountedItem": false
         },
         {
@@ -2724,7 +2724,7 @@ var systemConfig={
           "questionID": "32",
           "questionLevel": "Easy",
           "progressBarValue": 80,
-          "quesionName": "Cristina:_user_, Which noun does the word, it, refer to in this sentence? But she doesn't mind missing it.",
+          "quesionName": "Cristina:_user_, Which noun does the word, it, refer to in this sentence? # But she doesn't mind missing it.",
           "notCountedItem": false
         },
         {
@@ -2742,7 +2742,7 @@ var systemConfig={
           "questionID": "34",
           "questionLevel": "Easy",
           "progressBarValue": 88,
-          "quesionName": "Cristina:_user_, What does the pronoun, She, refer to in this sentence. She is close to earning a degree in marketing.",
+          "quesionName": "Cristina:_user_, What does the pronoun, She, refer to in this sentence. # She is close to earning a degree in marketing.",
           "notCountedItem": false
         },
         {
@@ -2751,7 +2751,7 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 92,
-          "quesionName": "Jordan:_user_ I think I need a little help here. I am not sure what the correct answer is. Which is the best choice to replace the word, that, in this phrase? That, is helping a business to sell its products.",
+          "quesionName": "Jordan:_user_ I think I need a little help here. # I am not sure what the correct answer is. # Which is the best choice to replace the word, that, in this phrase? # That, is helping a business to sell its products.",
           "notCountedItem": false
         },
 		{
@@ -2760,7 +2760,7 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 96,
-          "quesionName": "Cristina:Let's see what you come up with for another pronoun in this sentence. What is the best replacement for the pronoun, its?",
+          "quesionName": "Cristina:Let's see what you come up with for another pronoun in this sentence. # What is the best replacement for the pronoun, its?",
           "notCountedItem": false
         },
 		{
@@ -2769,7 +2769,7 @@ var systemConfig={
           "questionID": "35",
           "questionLevel": "Easy",
           "progressBarValue": 100,
-          "quesionName": "Jordan:_user_, this is the Last question. Can you help me find the correct noun to replace the pronoun, their, in the sentence, that's what the twins do in their sport?",
+          "quesionName": "Jordan:_user_, this is the Last question. # Can you help me find the correct noun to replace the pronoun, their, in the sentence, that's what the twins do in their sport?",
           "notCountedItem": false
         }
       ]
