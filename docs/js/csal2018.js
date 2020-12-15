@@ -1575,7 +1575,7 @@ function setPresentationHistoryObj() {
 				var questionName1 = getMediaObj[i].quesionName.trim().toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
 				console.log("111111-----------"+getQuestionName)
 				var questionName2 = getQuestionName.trim().toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
-				if (questionName1 == questionName2) {
+				if (questionName1.replace(' ','') == questionName2.replace(' ','')) {
 					if (getType == "QuestionPage") {
 						PresentationHistoryObj.Type = "QuestionPage";
 						PresentationHistoryObj.questionName = getMediaObj[i].quesionName;
