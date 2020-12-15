@@ -731,6 +731,7 @@ function removemovie(){
 }
 function stopff(){
 	InteractionHistory=[];
+	StartTimer();
 }
 
 function runActions() {
@@ -741,7 +742,7 @@ function runActions() {
 		thehtml=thehtml+"<tr><td><h1>Fast Forwarding to where you have stopped</h1></td></tr>";
 		thehtml=thehtml+"<tr><td valign='middle'><h2>("+lastadata+")</h2></td></tr>";
 		thehtml=thehtml+"<tr><td> steps remaining: "+InteractionHistory.length.toString()+"</td></tr>";
-//		thehtml=thehtml+"<tr><td><button id='stopFF' onclick='stopff()'>Stop</button> </td></tr>";
+		thehtml=thehtml+"<tr><td><button id='stopFF' onclick='stopff()'>Stop</button> </td></tr>";
 		thehtml=thehtml+"</table>";
 		$('#TheFastForwardCover').html(thehtml);
 		$('#TheFastForwardCover').show();
