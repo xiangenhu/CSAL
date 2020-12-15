@@ -156,7 +156,7 @@ function CompileScroe(PresentationHistory){
 }	
 	
 				
-var LessonID={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
+var TheLessonIDforXAPI={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
 				 name:SKOTitle,
 				 objectType:"Agent"
 				};
@@ -649,7 +649,7 @@ function init() {
 			}
 		};
 	// Activity
-	var activityObj=LessonID;
+	var activityObj=TheLessonIDforXAPI;
 	// Activity
 	var data={anything:"value"};
 	var ResultObj={};
@@ -717,7 +717,7 @@ function xAPIPostOther(acePostjson,averb){
 			}
 		};
 		
-	var activityObj=LessonID;
+	var activityObj=TheLessonIDforXAPI;
 	// Activity
 	var data=acePostjson;
 	var ResultObj={};
@@ -781,7 +781,7 @@ function xAPIPostStart(acePostjson,averb){
 				 "en":verb 
 			}
 		};
-	var activityObj=LessonID;
+	var activityObj=TheLessonIDforXAPI;
 	// Activity
 	var data=acePostjson;
 	var ResultObj={};
@@ -829,7 +829,7 @@ function xAPIPostEnding(ActorMbox,
 		scaledScore=RawScore;
 		ARawScore=Math.round(scaledScore*Max);
 	}
-	var activityObj=LessonID;
+	var activityObj=TheLessonIDforXAPI;
 	var data={"URL":ActivityURL,
 	           "guid":SKOGuid,
 			   "TextLevel":TextLevel,
