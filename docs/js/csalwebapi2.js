@@ -154,7 +154,7 @@ function Put(acePutjson) {
 				AceResponse(Data,"response");
 			}else{
 				console.log("No actions returned from ACE. Contact CSAL Team about this error!");
-				if (qs("STOPWhenEmptyACEAction","1")=="1"){
+				if (qs("STOPWhenEmptyACEAction","0")=="1"){
 				StopTimer();
 				return;
 				}
