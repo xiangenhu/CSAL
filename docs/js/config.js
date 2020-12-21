@@ -6326,7 +6326,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "",
           "progressBarValue": 25,
-          "quesionName": "Cristina:_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you read in this text?",
+          "quesionName": "Cristina:_user_, Okay, Why might the writer want to go back to school to get a G E D, based on what you red in this text?",
           "notCountedItem": false
         },
 		{
@@ -6335,7 +6335,7 @@ var systemConfig={
           "questionID": "1",
           "questionLevel": "",
           "progressBarValue": 20,
-          "quesionName": "Cristina:The writer talks about being a poor student in high school. With this in mind, which of the following could be true? Try to press a different answer choice below.",
+          "quesionName": "Cristina:The writer talks about being a poor student in high school. # With this in mind, which of the following could be true? # Try to press a different answer choice below.",
           "notCountedItem": false
         },
         {
@@ -6353,7 +6353,7 @@ var systemConfig={
           "questionID": "2",
           "questionLevel": "",
           "progressBarValue": 20,
-          "quesionName": "Cristina:_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? press your answer below.",
+          "quesionName": "Cristina:_user_, in which of the yellow sentences does the writer give insight into his or her behavior while in high school? # press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6362,7 +6362,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "",
           "progressBarValue": 40,
-          "quesionName": "Cristina:_user_, Why is the writer explaining the hardships of life without a high school diploma? Please press an answer below.",
+          "quesionName": "Cristina:_user_, Why is the writer explaining the hardships of life without a high school diploma? # Please press an answer below.",
           "notCountedItem": false
         },
 		{
@@ -6371,7 +6371,7 @@ var systemConfig={
           "questionID": "3",
           "questionLevel": "",
           "progressBarValue": 40,
-          "quesionName": "Cristina:The writer is talking about pursuing a dream. Which of these choices will enable that dream to come true? Try again by pressing a different answer below.",
+          "quesionName": "Cristina:The writer is talking about pursuing a dream. # Which of these choices will enable that dream to come true? # Try again by pressing a different answer below.",
 		   "notCountedItem": false
         },
         {
@@ -6389,7 +6389,7 @@ var systemConfig={
           "questionID": "4",
           "questionLevel": "",
           "progressBarValue": 40,
-          "quesionName": "Cristina:There are many reasons someone may want to go back to school. In this story, the writer talks about a goal he or she has. Which of these sentences talks about that ultimate goal? press your answer below.",
+          "quesionName": "Cristina:There are many reasons someone may want to go back to school. # In this story, the writer talks about a goal he or she has. # Which of these sentences talks about that ultimate goal? # press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6398,7 +6398,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "",
           "progressBarValue": 60,
-          "quesionName": "Cristina:_user_, what do you think the main idea of this story is? press your answer below.",
+          "quesionName": "Cristina:_user_, what do you think the main idea of this story is? # press your answer below.",
           "notCountedItem": false
         },
 		{
@@ -6407,7 +6407,7 @@ var systemConfig={
           "questionID": "5",
           "questionLevel": "",
           "progressBarValue": 60,
-          "quesionName": "Cristina:In this story, the writer has been talking about fulfilling a dream. Which of these choices mentions the writer's dream? press your answer below.",
+          "quesionName": "Cristina:In this story, the writer has been talking about fulfilling a dream. # Which of these choices mentions the writer's dream? # press your answer below.",
           "notCountedItem": false
         },
         {
@@ -6416,7 +6416,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "",
           "progressBarValue": 80,
-          "quesionName": "Cristina:_user_, which of these choices do you think is the best title of this text? press your answer at the top of the page.",
+          "quesionName": "Cristina:_user_, which of these choices do you think is the best title of this text? # press your answer at the top of the page.",
           "notCountedItem": false
         },
         {
@@ -6425,7 +6425,7 @@ var systemConfig={
           "questionID": "6",
           "questionLevel": "",
           "progressBarValue": 80,
-          "quesionName": "Cristina:The writer talks about fulfilling a dream in this story and what is needed to do to do it. Which of these choices relates to the pursuit of that dream? press your answer below.",
+          "quesionName": "Cristina:The writer talks about fulfilling a dream in this story and what is needed to do to do it. # Which of these choices relates to the pursuit of that dream? # press your answer below.",
           "notCountedItem": false
         }
       ]
