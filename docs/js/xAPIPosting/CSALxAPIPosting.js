@@ -152,7 +152,7 @@ function CompileScroe(PresentationHistory){
 			totalScore[scoreLabel].failure=totalScore[scoreLabel].failure+1;
 		}	
 	}
-	console.log("User Answer "+userAnswer);
+	console.log("**** User Answer **** "+userAnswer);
 	return userAnswer;
 }	
 	
