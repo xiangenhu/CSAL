@@ -1387,6 +1387,7 @@ function getAgentMessage(msg){
 	startLesson();
 }
   function GetWorldEvent(msg) {
+	 console.log("Word Msg "+msg);
 	 if (InteractionHistory.length==0){
 		var pairData={"data":actions,"msg":msg,"CurrentMedia":CurrentMedia.Data};
 		AceResponse(pairData,"interaction");
