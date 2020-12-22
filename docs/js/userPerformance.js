@@ -4,7 +4,7 @@
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
-		    if (lessonID == "Lesson1" ||lessonID == "Lesson2" || lessonID == "Lesson6" || lessonID == "Lesson29" || lessonID == "Lesson7" || lessonID == "Lesson4" || lessonID == "Lesson25" || lessonID == "Lesson20" || lessonID == "Lesson22"|| lessonID == "Lesson24"|| lessonID == "Lesson34" || lessonID == "Lesson16" || lessonID == "Lesson31" || lessonID == "Lesson33" || lessonID == "Lesson12" || lessonID == "Lesson17" || lessonID == "Lesson30") {
+		    if (lessonID == "Lesson1" ||lessonID == "Lesson2" || lessonID == "Lesson6" ||lessonID == "Lesson15" || lessonID == "Lesson29" || lessonID == "Lesson7" || lessonID == "Lesson4" || lessonID == "Lesson25" || lessonID == "Lesson20" || lessonID == "Lesson22"|| lessonID == "Lesson24"|| lessonID == "Lesson34" || lessonID == "Lesson16" || lessonID == "Lesson31" || lessonID == "Lesson33" || lessonID == "Lesson12" || lessonID == "Lesson17" || lessonID == "Lesson30") {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
@@ -419,7 +419,31 @@
 		            userPerformancePage("Failed");
 
 		        }
+		    else if (lessonID == "lesson15") {
+		        var countCrrectNum = 0;
+		        var countFirstNum = 0;
+		        for (var i in TotalScoreArr) {
+		            if (TotalScoreArr[i].userAnswer == "Correct" && TotalScoreArr[i].AnswerTime == 1) {
+		                countCrrectNum++;
+		            }
+		            if (TotalScoreArr[i].AnswerTime == 1) {
+		                countFirstNum++;
+		            }
 
+		        }
+		        var getBranch = TotalScoreArr[TotalScoreArr.length - 1].TextLevel;
+		        var Performance = countCrrectNum / countFirstNum;
+		        console.log(Performance)
+		        if (Performance >= 0.7) {
+
+		            userPerformancePage("pass",Performance,0,countFirstNum,getBranch);
+		        } else {
+		            //no pass
+		            userPerformancePage("Failed",Performance,0,countFirstNum,getBranch);
+
+		        }
+
+		    }
 		    } else if (lessonID == "Lesson7") {
 		        var countCrrectNum = 0;
 		        var countFirstNum = 0;
