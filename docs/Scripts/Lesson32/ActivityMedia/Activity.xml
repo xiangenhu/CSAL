@@ -138,18 +138,18 @@
       <Questions>
         <Question id="1" agent="Cristina" text="_user_, let’s try this out. # Typically, to start a search, you need to enter in some key terms or words that might help you search for the information you need. # Let's practice here by selecting the best key words from the box below the search bar for Voogle. # Remember, we are trying to help Jordan find information about health clinics nearby. # Once you pick the best key words, click on the blue search button with the magnifying glass on it." speech="" media="" play="_user_,A34">
           <Answers>
-            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Health clinic are the right keywords to use." speech="" keys="health clinic" threshold="0.6" test="" play="A35" />
+            <Answer name="UserCorrect" agent="Cristina" type="Good" text="Health and clinic are the right keywords to use." speech="" keys="health clinic" threshold="0.6" test="" play="A35" />
             <Answer name="UserCorrectJordan" agent="Jordan" type="Good" text="_user_, I agree! Health clinic should be the right words to use." speech="" keys="health clinic" threshold="0.6" test="" play="B37,_user_" />
           </Answers>
         </Question>
       </Questions>
       <Expectations>
-        <Expectation id="1" text="_user_, let’s try this out. # Please select an answer from the drop down menu to enter in the search engine Voogle  for Jordan to search information on health clinics">
+        <Expectation id="1" text="_user_, let’s try this out. # Please select an answer from the drop down menu to enter in the search engine Voogle for Jordan to search for information on health clinics">
           <Answers>
             <Answer name="UserCorrect" agent="Cristina" type="Good" text="Health and Clinic would be good keywords to use" speech="" keys="" threshold="1" test="" play="A36" />
           </Answers>
           <Hints>
-            <Hint id="1" agent="Cristina" text="Okay, let's try this. # What is information is Jordan trying to find? # That would be a good keyword to select." speech="" media="" play="A37">
+            <Hint id="1" agent="Cristina" text="Okay, let's try this. # What information is Jordan trying to find? # That would be a good keyword to select." speech="" media="" play="A37">
               <Answers>
                 <Answer name="UserCorrect" agent="Cristina" type="Good" text="Health and Clinic would be good keywords to use" speech="" keys="" threshold="" test="" play="A38" />
                 <Answer name="UserCorrectJordan" agent="Jordan" type="UserCorrect" text="thanks so much Cristina" speech="" keys="" threshold="" test="" play="B38" />
