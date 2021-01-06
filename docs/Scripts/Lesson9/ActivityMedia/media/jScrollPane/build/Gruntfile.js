@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     uglify: {
       jsp: {
         files: {
-          'https://js.autotutor.org/ATcommonjs/jScrollPane/script/jquery.jscrollpane.min.js': 'https://js.autotutor.org/ATcommonjs/jScrollPane/script/jquery.jscrollpane.js'
+          'https://tools.autotutor.org/utils/ATcommonjs/jScrollPane/script/jquery.jscrollpane.min.js': 'https://tools.autotutor.org/utils/ATcommonjs/jScrollPane/script/jquery.jscrollpane.js'
         },
         options: {
           preserveComments: 'some'
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     },
     watch: {
       content: {
-        files: ['https://js.autotutor.org/ATcommonjs/jScrollPane/script/jquery.jscrollpane.js'],
+        files: ['https://tools.autotutor.org/utils/ATcommonjs/jScrollPane/script/jquery.jscrollpane.js'],
         tasks: 'uglify'
       }
     },
