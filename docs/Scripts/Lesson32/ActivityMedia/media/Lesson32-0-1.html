@@ -239,9 +239,15 @@
 					if (userAnswer == "Correct")
 					{
 						parent.PlaySound('clicked0.wav');
+						userAnswer="Correct";
+						userSelectedValue="The Small Clinic";
+						parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
 					}
 					else {
 						parent.PlaySound('incorrect0.wav');
+						userAnswer="Incorrect";
+						userSelectedValue=$("#searchInput").val();
+						parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userAnswer);
 					}
 
 					//animate button click
