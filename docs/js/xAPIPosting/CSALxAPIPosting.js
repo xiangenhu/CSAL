@@ -481,7 +481,6 @@ function getACEActionAndPlay(ActionName){
 		"processData": false,
 		"data": JSON.stringify(jsonstr)
 	  }
-	  
 	  $.ajax(settings).done(function (response) {
 		var i;
 		for (i=1; i<response.length;i++){
