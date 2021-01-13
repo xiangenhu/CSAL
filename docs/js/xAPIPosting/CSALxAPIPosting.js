@@ -271,7 +271,7 @@ function GetAllScores(lrsURL,LRSusername,LRSpassword){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+ TheDataAuthory,
+			"Authorization": "Basic "+ getTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -289,7 +289,7 @@ function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+TheDataAuthory,
+			"Authorization": "Basic "+getTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -313,7 +313,7 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+ TheDataAuthory,
+			"Authorization": "Basic "+ getTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -416,7 +416,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+TheDataAuthory,
+			"Authorization": "Basic "+getTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -514,7 +514,7 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + TheDataAuthory
+				"Authorization": "Basic " + getTheDataAuthory()
 			  },
 			data:queryStrForSearch,
 			success: function (data){
@@ -590,7 +590,7 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + TheDataAuthory
+				"Authorization": "Basic " + getTheDataAuthory()
 			  },
 			data:queryStrForSearch,
 			success: function (data){

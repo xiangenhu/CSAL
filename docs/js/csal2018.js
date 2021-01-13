@@ -1727,7 +1727,7 @@ function getLastResponse(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/search",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " + TheDataAuthory
+			"Authorization": "Basic " + getTheDataAuthory()
 		  },
 		  data:datasqlstring,
 		  success: function (data){
@@ -1779,7 +1779,7 @@ function getLastActiveRecordNew(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/aggregate",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " +TheDataAuthory
+			"Authorization": "Basic " +getTheDataAuthory()
 		  },
 		  body:secondquery,
 		  success: function (data){
@@ -1832,7 +1832,7 @@ function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/search",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " +TheDataAuthory
+			"Authorization": "Basic " +getTheDataAuthory()
 		  },
 		  data:datasqlstring,
 		  success: function (data){
