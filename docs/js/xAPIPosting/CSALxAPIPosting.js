@@ -277,7 +277,7 @@ function GetAllScores(lrsURL,LRSusername,LRSpassword){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+ getCSALTheDataAuthory,
+			"Authorization": "Basic "+ getCSALTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -295,7 +295,7 @@ function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+getCSALTheDataAuthory,
+			"Authorization": "Basic "+getCSALTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -319,7 +319,7 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+ getCSALTheDataAuthory,
+			"Authorization": "Basic "+ getCSALTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -421,7 +421,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		   "method": "POST",
 		   "timeout": 0,
 		   "headers": {
-			"Authorization": "Basic "+getCSALTheDataAuthory,
+			"Authorization": "Basic "+getCSALTheDataAuthory(),
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -479,7 +479,7 @@ function getACEActionAndPlay(ActionName){
 		"url": asatlrs+"/statements/aggregate",
 		"method": "POST",
 		"headers": {
-			"Authorization": "Basic "+getCSALTheDataAuthory,
+			"Authorization": "Basic "+getCSALTheDataAuthory(),
 		  "content-type": "application/json",
 		  "cache-control": "no-cache",
 		  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
@@ -518,7 +518,7 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + getCSALTheDataAuthory
+				"Authorization": "Basic " + getCSALTheDataAuthory()
 			  },
 			data:queryStrForSearch,
 			success: function (data){
@@ -594,7 +594,7 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + getCSALTheDataAuthory
+				"Authorization": "Basic " + getCSALTheDataAuthory()
 			  },
 			data:queryStrForSearch,
 			success: function (data){
