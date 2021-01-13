@@ -473,7 +473,7 @@ function getACEActionAndPlay(ActionName){
 		"url": asatlrs+"/statements/aggregate",
 		"method": "POST",
 		"headers": {
-		  "authorization": "Basic "+TheASATAuthory,
+			"Authorization": "Basic "+getTheDataAuthory(),
 		  "content-type": "application/json",
 		  "cache-control": "no-cache",
 		  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
