@@ -318,7 +318,6 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		  },
 		  "data": JSON.stringify(queryBody),
 		};
-		
 	$.ajax(settings).done(function (response){ 
 	//GetALLActions(lrsURL,LRSusername,LRSpassword);
 	if (response.length>0){
