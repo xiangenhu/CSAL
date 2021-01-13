@@ -302,13 +302,13 @@
 								sound_correct();
 								userAnswer="Correct";
 								userSelectedValue="Health clinic";
-								parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+								// parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
 							}else{
 								sound_incorrect();
 								userAnswer="Incorrect";
 								userSelectedValue=$("#searchInput").val();
 								// parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userAnswer);
-								parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+								// parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
 							}
 
 							$(".searchButton").css('border', 'none');
@@ -331,7 +331,7 @@
 							//get user answer's text
 						//	userSelectedValue = userAnswer;
 							userSelectedValue=userSelectedValue.replace(/(^\s*)|(\s*$)/g, "");
-							//parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+							parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
 						//	parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
 							//parent.GetWorldEvent(userAnswer);
 							//lock button and sent Stop call to ASAT
