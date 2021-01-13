@@ -19,9 +19,9 @@ var accumlateScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"fail
 var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure":0},"Easy":{"success":0,"failure":0},"TA":{"success":0,"failure":0},"Final":{"success":0,"failure":0}};
 
 var ITProfile=qs("ITProfile","https://app.skoonline.org/ITSProfile/");
-var LRSURL=qs("lrs","https://record.x-in-y.com/csalexclusive/xapi/");
-var LRSLogin=qs("lrslogin","asaiga");
-var LRSPassword=qs("lrspassword","padkep");
+var LRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
+var LRSLogin=qs("lrslogin","CSALData");
+var LRSPassword=qs("lrspassword","CSALData");
 
 var xAPIVerbBase=qs("verbbase",ITProfile);
 
