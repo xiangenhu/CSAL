@@ -1,6 +1,6 @@
 		var TotalScoreArr = [];
 		var lesson18score=0;
-		
+		var lesson32score=0;
 		var learnerStatus={};
 		var lastACEjson;
 		var lastACEResponse;
@@ -9,6 +9,7 @@
 		var currentACEJson;
 		
 		var lesson18CountTotalAnswerTimes=0;
+		var lesson32CountTotalAnswerTimes=0;
 		function CountTotalScore(pagePath, userAnswer, TextLevel, userSelectedItem, questionID, pageStartTimestamp, talkingHeadSpeechEndTimestamp, userAnswerTimestamp, userAnswerSpendTime, progressBarValue) {
 		    var lessonID = sessionStorage.getItem("LessonID");
 		    var TotalScoreObj = {};
@@ -118,8 +119,75 @@
 		            TotalScoreArr.push(TotalScoreObj);
 
 		        }
+				
 
-		    } else if ( lessonID == "lesson27" ) {
+
+		    } else if (lessonID == "lesson32") {
+		        var countAnswerTime = 1;
+				lesson32CountTotalAnswerTimes++;
+				userAnswer = "Correct"
+		        if (TotalScoreArr.length > 0) {
+
+		            for (var i in TotalScoreArr) {
+		                var path = TotalScoreArr[i].pagePath;
+
+		                if (pagePath == path) {
+
+		                    countAnswerTime++;
+							TotalScoreArr[i].userAnswer = "Incorrect"
+							lesson32score=lesson32score-progressBarValue;
+
+		                }
+
+		            }
+
+		            TotalScoreObj.lessonID = lessonID;
+		            TotalScoreObj.pagePath = pagePath;
+		            TotalScoreObj.userAnswer = userAnswer;
+		            TotalScoreObj.TextLevel = TextLevel;
+		            TotalScoreObj.AnswerTime = countAnswerTime;
+
+		            TotalScoreObj.userSelectedItem = userSelectedItem;
+		            TotalScoreObj.questionID = questionID;
+		            TotalScoreObj.pageStartTimestamp = pageStartTimestamp;
+		            TotalScoreObj.talkingHeadSpeechEndTimestamp = talkingHeadSpeechEndTimestamp;
+		            TotalScoreObj.userAnswerTimestamp = userAnswerTimestamp;
+		            TotalScoreObj.userAnswerSpendTime = userAnswerSpendTime;
+					if(userAnswer=="Correct")
+					{
+						lesson32score=lesson32score+progressBarValue;
+												
+					}
+					
+		            TotalScoreArr.push(TotalScoreObj);
+
+
+		        } else if (TotalScoreArr.length == 0) {
+		            TotalScoreObj.lessonID = lessonID;
+		            TotalScoreObj.pagePath = pagePath;
+		            TotalScoreObj.userAnswer = userAnswer;
+		            TotalScoreObj.pageStartTimestamp = pageStartTimestamp;
+		            TotalScoreObj.AnswerTime = countAnswerTime;
+
+		            TotalScoreObj.userSelectedItem = userSelectedItem;
+		            TotalScoreObj.questionID = questionID;
+		            TotalScoreObj.pageStartTimestamp = pageStartTimestamp;
+		            TotalScoreObj.talkingHeadSpeechEndTimestamp = talkingHeadSpeechEndTimestamp;
+		            TotalScoreObj.userAnswerTimestamp = userAnswerTimestamp;
+		            TotalScoreObj.userAnswerSpendTime = userAnswerSpendTime;
+					TotalScoreObj.score =lesson32score;
+					if(userAnswer=="Correct")
+					{
+						lesson32score=lesson32score+progressBarValue;
+												
+					}
+		            TotalScoreArr.push(TotalScoreObj);
+
+		        }
+				
+
+
+		    }	else if ( lessonID == "lesson27" ) {
 		        var countAnswerTime = 1;
 		        if (TotalScoreArr.length > 0) {
 
