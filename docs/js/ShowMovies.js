@@ -19,6 +19,11 @@ var MOVIEObj={"PopMsg":"",
               "Duration":"Duration"
             }
 
+
+            
+function GetObj(str){
+    return str.split("&");
+}
  function GetMovies(json){
 	var spData = json.feed.entry;
 	var i;
