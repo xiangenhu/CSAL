@@ -1754,6 +1754,8 @@ function getLastActiveRecordNew(lrsURL,LRSusername,LRSpassword,Averb){
 	{"actor.mbox":LearnerID.mbox},
 	{"object.mbox":TheLessonIDforXAPI.mbox},
 	{"verb.id":verbID}]};
+
+	
 	var secondquery=[
 	                  {"$match":{
 						  "$and":[

@@ -27,6 +27,13 @@ var xAPIVerbBase=qs("verbbase",ITProfile);
 
 var wrapper;
 
+var MoodleVar={"classID":qs("classID",""),
+               "objID":qs("objID","") ,
+               "lessonTitle":decodeURIComponent(qs("lessonTitle","")) ,
+               "secodEmail":decodeURIComponent(qs("secodEmail","")) ,
+               "siteName":decodeURIComponent(qs("siteName","")) 
+			};
+
 function getCSALTheDataAuthory(){
 		var TheLRSLogin=qs("lrslogin","CSALData");
 		var theLRSPassword=qs("lrspassword","CSALData");
