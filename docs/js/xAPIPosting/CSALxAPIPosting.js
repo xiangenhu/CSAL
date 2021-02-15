@@ -703,7 +703,7 @@ function AceResponse(Data,averb){
 
 	var resltExt={};
 	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
-	var ResultObj={"extensions":resltExt};
+	var ResultObj={"response":MoodleVar.classID,"extensions":resltExt};
 		
 	var Extdata={};
 	var extObj={};
@@ -742,6 +742,7 @@ function xAPIPostOther(acePostjson,averb){
 
 	var resltExt={};
 	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
+
 
 	var ResultObj={};
 	if ((data.userAnswer=="Incorrect")||(data.userAnswer=="Correct")){
@@ -810,7 +811,8 @@ function xAPIPostStart(acePostjson,averb){
 	
 	var resltExt={};
 	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
-	var ResultObj={"extensions":resltExt};
+//	var ResultObj={"extensions":resltExt};
+	var ResultObj={"response":MoodleVar.classID,"extensions":resltExt};
 
 	var Extdata={};
 	var extObj={};
@@ -869,7 +871,8 @@ function xAPIPostEnding(ActorMbox,
             "max": Max
         },
         "success": Result,
-		"extensions":resltExt
+		"extensions":resltExt,
+		"response":MoodleVar.classID
 	}
 	
 	
