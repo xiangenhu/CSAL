@@ -143,23 +143,28 @@ if (anApp=="csal"){
 	  setfooter("1")
 	  AppRoot=qs("appRoot","https://csal.autotutor.org/");
 	  urlvariable="LessonName="+qs("LN","Lesson0")+
-		  "&UID="+email+ 
-		  "&DEBUGGING="+qs("DEBUGGING","0")+
-		  "&connected="+connected+
-		  "&SName="+fullname+ 
-		  "&SampleGUID="+SampleGUID+
-		  "&email="+email+
-		  "&ef="+qs("ef","0")+
-		  "&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
-		  "&editing="+AllowEditing+
-		  "&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
-		  "&asatlrslogin="+qs("asatlrslogin","asatScripts")+
-		  "&asatlrspassword="+qs("asatlrspassword","asatScripts")+				
-		  "&fullname="+fullname+
-		  "&school="+qs("school","https://class.x-in-y.com")+
-		  "&ssid="+qsp("aicc_sid","Missing")+
-		  "&LN="+qs("LN","Lesson0")+
-		  "&guid="+guid;
+		"&UID="+email+ 
+		"&DEBUGGING="+qs("DEBUGGING","0")+
+		"&connected="+connected+
+		"&SName="+fullname+ 
+		"&SampleGUID="+SampleGUID+
+		"&siteName="+qs("siteName","https://adulted.autotutor.org/")+
+		"&classID="+qs("classID","")+
+		"&objID="+qs("objID","")+
+		"&secodEmail="+qs("secodEmail","")+
+		"&lessonTitle="+qs("lessonTitle","")+
+		"&email="+email+
+		"&ef="+qs("ef","0")+
+		"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
+		"&editing="+AllowEditing+
+		"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
+		"&asatlrslogin="+qs("asatlrslogin","asatScripts")+
+		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+				
+		"&fullname="+fullname+
+		"&school="+qs("school","https://class.x-in-y.com")+
+		"&ssid="+qsp("aicc_sid","Missing")+
+		"&LN="+qs("LN","Lesson0")+
+		"&guid="+guid;
 		  
 	  url=AppRoot+app+".html?"+urlvariable;
 	  return url;
