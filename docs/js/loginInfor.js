@@ -349,7 +349,7 @@ if (qs("GL",GL)=="2"){
 		  console.log("Get Cookie email"+email);
 	  }
 	  var url=GetURL(app);
-	  window.location.replace(url);
+	  window.open(url,"_self");
 	  return;
 	  $("#player").attr("src",url); 
   }else{
