@@ -699,7 +699,11 @@ function AceResponse(Data,averb){
 	var activityObj=LearnerID;
 	// Activity
 	var data=Data;
-	var ResultObj={};
+
+
+	var resltExt={};
+	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
+	var ResultObj={"extensions":resltExt};
 		
 	var Extdata={};
 	var extObj={};
@@ -734,19 +738,23 @@ function xAPIPostOther(acePostjson,averb){
 	var activityObj=TheLessonIDforXAPI;
 	// Activity
 	var data=acePostjson;
+
+
+	var resltExt={};
+	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
+
 	var ResultObj={};
 	if ((data.userAnswer=="Incorrect")||(data.userAnswer=="Correct")){
 		if (data.userAnswer=="Incorrect"){
 			ResultObj={success:false,
 			response:data.userSelectedItem,
-			extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
+			extensions:resltExt
 			}
 		}else{
 			ResultObj={success:true,
 			response:data.userSelectedItem,
-		    extensions:{"https://app.skoonline.org/ITSProfile/CSAL/ResultExt":data}
+		    extensions:resltExt
 		}
-		var Extdata={}
 		}
 	}
 	
@@ -798,13 +806,12 @@ function xAPIPostStart(acePostjson,averb){
 	var activityObj=TheLessonIDforXAPI;
 	// Activity
 	var data=acePostjson;
-	var ResultObj={};
-	/* var Extdata={
-			extensions: {
-				"https://app.skoonline.org/ITSProfile/CSAL/Data": data
-			}
-	}
-	 */
+
+	
+	var resltExt={};
+	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
+	var ResultObj={"extensions":resltExt};
+
 	var Extdata={};
 	var extObj={};
 	var theStr=ITProfile+"CSAL/Data";
@@ -848,6 +855,12 @@ function xAPIPostEnding(ActorMbox,
 	           "guid":SKOGuid,
 			   "TextLevel":TextLevel,
 			   "finalData":FinalData}
+	
+			   
+	var resltExt={};
+	resltExt[ITProfile+"CSAL/LMS"]=MoodleVar;
+
+
 	var ResultObj={
         "score": {
             "scaled": scaledScore,
@@ -855,7 +868,8 @@ function xAPIPostEnding(ActorMbox,
             "min": Min,
             "max": Max
         },
-        "success": Result 
+        "success": Result,
+		"extensions":resltExt
 	}
 	
 	
