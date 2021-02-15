@@ -134,6 +134,6 @@ function launchMOVIE(){
 	var PopupData=GetObj(localvar);
 	MOVIEURL=MOVIEURL+localvar+ExtraInfo+"#"+MOVIEObj.MOVIESource;
 	var htmlbody="<iframe src='"+MOVIEURL+"'  id='TheIframe' frameBorder='0' scrolling='no'></iframe>";
-	OpenPopUp(MOVIETitle,MOVIEFooter,htmlbody,"popupWin",PopupData,"OpenMOVIE");
+	OpenPopUp(MOVIETitle,MOVIEFooter,htmlbody,"popupWin");
 	
 }
