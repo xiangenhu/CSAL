@@ -10,6 +10,14 @@
 		}
 		return defaultstr;
 }
+
+
+var MoodleVar={"classID":qs("classID",""),
+               "objID":qs("objID","") ,
+               "lessonTitle":decodeURIComponent(qs("lessonTitle","")) ,
+               "secodEmail":decodeURIComponent(qs("secodEmail","")) ,
+               "siteName":decodeURIComponent(qs("siteName","")) 
+			};
 var last_action="";
 var last_questionID=""
 
@@ -27,12 +35,6 @@ var xAPIVerbBase=qs("verbbase",ITProfile);
 
 var wrapper;
 
-var MoodleVar={"classID":qs("classID",""),
-               "objID":qs("objID","") ,
-               "lessonTitle":decodeURIComponent(qs("lessonTitle","")) ,
-               "secodEmail":decodeURIComponent(qs("secodEmail","")) ,
-               "siteName":decodeURIComponent(qs("siteName","")) 
-			};
 
 function getCSALTheDataAuthory(){
 		var TheLRSLogin=qs("lrslogin","CSALData");
