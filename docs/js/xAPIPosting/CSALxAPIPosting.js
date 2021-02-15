@@ -444,10 +444,6 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 	if (response.length>0){
 		InteractionHistory=response;
 		backupInteractionHistory=removeLastElement(response,0);
-		
-//		backupInteractionHistory=response;
-//		console.log(InteractionHistory);
-//		console.log(backupInteractionHistory);
 		var html='';
 		var starting=DateString(atimestamp);
 		var ending=DateString(InteractionHistory[InteractionHistory.length-1].time);
