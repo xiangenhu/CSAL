@@ -5,14 +5,32 @@ $(document).ready(function(){
  });
 
 var MovieInfor=[];
+
+
+    
+var MOVIEObj={"PopMsg":"",
+              "PopTitle":"",
+              "MOVIELink":"",
+              "MOVIETitle":"",
+              "MOVIEType":"Youtube",
+              "MOVIESource":"youtube",
+              "Start":"Start",
+              "End":"End",
+              "Duration":"Duration"
+            }
+
  function GetMovies(json){
 	var spData = json.feed.entry;
 	var i;
 	 for (i=0;3*i<spData.length;i++){
 		 var line=i*3;
 		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
-		 MovieInfor.push(row); 
-		 console.log(row);
+         if (qs("quid","")==spData[line+1].content["$t"]){
+            if (spData[line+2].content["$t"]!="NA"){
+                MOVIEObj.MOVIELink=spData[line+2].content["$t"]
+                launchMOVIE();
+            }
+         }
 	 }
 }
 
@@ -88,17 +106,6 @@ function OpenPopUp(header,footer,bodytext,targetwin){
         return lrs+GL+lrsLogin+lrsPassword+guid+user+SavetoLRS+Thefullname+DN+EMT;
     }
 
-    
-var MOVIEObj={"PopMsg":"",
-              "PopTitle":"",
-              "MOVIELink":"",
-              "MOVIETitle":"",
-              "MOVIEType":"Youtube",
-              "MOVIESource":"youtube",
-              "Start":"Start",
-              "End":"End",
-              "Duration":"Duration"
-            }
 
 function launchMOVIE(){
 	var ExtraInfo=GetExtraArguments();
