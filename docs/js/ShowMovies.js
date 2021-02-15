@@ -1,6 +1,8 @@
 $(document).ready(function(){
     if (qs("MOVIE","0")=="1"){
-    loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/4/public/values?alt=json-in-script&callback=GetMovies", "js");
+        if (qs("ef","0")=="0"){
+            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/4/public/values?alt=json-in-script&callback=GetMovies", "js");
+        }
     }
  });
  
