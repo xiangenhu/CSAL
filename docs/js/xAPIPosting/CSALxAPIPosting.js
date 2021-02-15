@@ -437,6 +437,10 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		};
 		
 	$.ajax(settings).done(function (response){ 
+		if (response.length==0){
+			GetMovieWhenReady();
+			return
+		}
 	if (response.length>0){
 		InteractionHistory=response;
 		backupInteractionHistory=removeLastElement(response,0);
