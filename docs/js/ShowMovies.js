@@ -22,7 +22,8 @@ var MOVIEObj={"PopMsg":"",
 	var i;
 	 for (i=0;3*i<spData.length;i++){
 		 var line=i*3;
-//		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
+		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
+         console.log(row,qs("quid",""));
          if (qs("quid","")==spData[line+1].content["$t"]){
             if (spData[line+2].content["$t"]!="NA"){
                 MOVIEObj.MOVIELink=spData[line+2].content["$t"];
