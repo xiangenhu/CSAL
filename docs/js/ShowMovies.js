@@ -26,7 +26,7 @@ var MOVIEObj={"PopMsg":"",
 		 var line=i*3;
 		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
          console.log(row,qs("quid",""));
-         if (qs("quid","")==spData[line+1].content["$t"]){
+         if (qs("guid","")==spData[line+1].content["$t"]){
             if (spData[line+2].content["$t"]!="NA"){
                 MOVIEObj.MOVIELink=spData[line+2].content["$t"];
                 MOVIEObj.MOVIETitle=spData[line].content["$t"];
