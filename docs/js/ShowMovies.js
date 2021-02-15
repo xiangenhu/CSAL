@@ -3,9 +3,7 @@ $(document).ready(function(){
     loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/4/public/values?alt=json-in-script&callback=GetMovies", "js");
     }
  });
-
-var MovieInfor=[];
-
+ 
 
     
 var MOVIEObj={"PopMsg":"",
@@ -24,7 +22,7 @@ var MOVIEObj={"PopMsg":"",
 	var i;
 	 for (i=0;3*i<spData.length;i++){
 		 var line=i*3;
-		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
+//		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
          if (qs("quid","")==spData[line+1].content["$t"]){
             if (spData[line+2].content["$t"]!="NA"){
                 MOVIEObj.MOVIELink=spData[line+2].content["$t"]
