@@ -32,6 +32,7 @@ var MOVIEObj={"PopMsg":"",
                 MOVIEObj.MOVIETitle=spData[line].content["$t"];
                 MOVIEObj.PopTitle=spData[line].content["$t"];
                 launchMOVIE();
+                return;
             }
          }
 	 }
