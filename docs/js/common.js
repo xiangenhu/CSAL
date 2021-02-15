@@ -104,7 +104,6 @@ var MOVIEObj={"PopMsg":"",
 
 function GetObj(str){
     return str.split("&");
-    return JSON.parse('{"' + str.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
 }
 
 function launchMOVIE(){
