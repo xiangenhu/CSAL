@@ -14,8 +14,8 @@
 
 var MoodleVar={"classID":qs("classID",""),
                "objID":qs("objID","") ,
-               "lessonTitle":decodeURIComponent(qs("lessonTitle","")) ,
-               "secodEmail":decodeURIComponent(qs("secodEmail","")) ,
+               "lessonTitle":decodeURIComponent(qs("lessonTitle","")),
+               "secodEmail":decodeURIComponent(qs("secodEmail","")),
                "siteName":decodeURIComponent(qs("siteName","")) 
 			};
 var last_action="";
