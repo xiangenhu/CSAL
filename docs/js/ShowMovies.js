@@ -25,7 +25,9 @@ var MOVIEObj={"PopMsg":"",
 //		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
          if (qs("quid","")==spData[line+1].content["$t"]){
             if (spData[line+2].content["$t"]!="NA"){
-                MOVIEObj.MOVIELink=spData[line+2].content["$t"]
+                MOVIEObj.MOVIELink=spData[line+2].content["$t"];
+                MOVIEObj.MOVIETitle=spData[line].content["$t"];
+                MOVIEObj.PopTitle=spData[line].content["$t"];
                 launchMOVIE();
             }
          }
