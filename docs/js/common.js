@@ -102,6 +102,11 @@ var MOVIEObj={"PopMsg":"",
               "Duration":"Duration"
             }
 
+function GetObj(str){
+    return str.split("&");
+    return JSON.parse('{"' + str.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
+}
+
 function launchMOVIE(){
 	var ExtraInfo=GetExtraArguments();
 	var MOVIEURL=qs("MOVIELink","../movie/movie.html?");
