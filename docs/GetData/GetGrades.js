@@ -161,7 +161,7 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>Number of lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons repeated: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Average time spent on the lessons: <span class='numbers' id='NLFaled'></span></li>";
-	htmlbody=htmlbody+"<li>Number of question answered: <span class='numbers' id='NumberQ'></span></li>";
+	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(student,"details of student "+student,htmlbody,"popupWin");
 }
