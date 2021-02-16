@@ -7,6 +7,8 @@ var TheLRSLogin=qs("lrslogin","CSALData");
 var theLRSPassword=qs("lrspassword","CSALData");
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
+var classID=qs("classID","CSALUSNW01");
+var StudentEmailPhrase = "Student";
 
 TheLRStheSetting={
     "async": true,
@@ -34,12 +36,32 @@ function GetLessons(json){
         console.log(row)
         TheLessions.push(row);
     }
+	GetStudents(classID)
 }
 
-function GetStudents(){
-    var thesetting=TheLRStheSetting;
-    
 
+function GetStudents(classID){
+    var thesetting=TheLRStheSetting;
+	var match={"statement.result.response":classID};
+	var group={"_id":"$statement.actor.mbox",
+	           "Sum":{"$sum":1}};
+	var data=[
+	{"$match":match},
+	{"$group":group}
+	];
+    thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+			return
+		}else{
+			for (var i=0;i<response.length;i++){
+				if (response[i]._id.indexOf(StudentEmailPhrase)!=-1){
+				StudentList.push(response[i]._id);
+				}
+			}
+			console.log(StudentList);
+		}
+	});
 }
 
 function CreateTable(){

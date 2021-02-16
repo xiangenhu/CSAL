@@ -334,11 +334,14 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		  "data": JSON.stringify(queryBody),
 		};
 	$.ajax(settings).done(function (response){ 
-	//GetALLActions(lrsURL,LRSusername,LRSpassword);
+
 	if (response.length>0){
-	lastStartingTime=response[0].time;
-	console.log(lastStartingTime);
-	GetALLActions(lrsURL,LRSusername,LRSpassword,lastStartingTime);
+		lastStartingTime=response[0].time;
+		console.log(lastStartingTime);
+		GetALLActions(lrsURL,LRSusername,LRSpassword,lastStartingTime);
+	}else{
+		GetMovieWhenReady();
+		return;
 	}
 	})
 	
@@ -437,10 +440,6 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		};
 		
 	$.ajax(settings).done(function (response){ 
-		if (response.length==0){
-			GetMovieWhenReady();
-			return
-		}
 	if (response.length>0){
 		InteractionHistory=response;
 		backupInteractionHistory=removeLastElement(response,0);
