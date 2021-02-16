@@ -141,6 +141,25 @@ function GetScoreThe(Lesson,Student,i,j){
 	});
 }
 
+function GetLTRecent(LessonID){
+
+}
+function GetLTFirst(LessonID){
+
+}
+function GetLNStudents(LessonID){
+
+}
+function GetLNCompleted(LessonID){
+
+}
+function GetLNFailed(LessonID){
+
+}
+function GetAVTime(LessonID){
+
+}
+
 function LessonDetails(LessonID){
 	var LessonName="lesson: "+LessonID.split("__")[0]
 	var htmlbody="<span class='numbers'></span>Information about this lesson</span>";
@@ -150,8 +169,8 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"<li>Number of studnets interacted with this lesson: <span class='numbers' id='LNStudents'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students failed this lesson: <span class='numbers' id='LNFailed'></span></li>";
-	htmlbody=htmlbody+"<li>Average Time Students Spent on ths lesson: <span class='numbers' id='LNFailed'></span></li>";
-	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
+	htmlbody=htmlbody+"<li>Average Time Students Spent on ths lesson: <span class='numbers' id='AVTime'></span></li>";
+//	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 }
