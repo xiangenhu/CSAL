@@ -137,6 +137,17 @@ function GetScoreThe(Lesson,Student,i,j){
 	});
 }
 
+function LessonDetails(LessonID){
+	var htmlbody="Information about "+LessonID;
+	htmlbody=htmlbody+"<ul>";
+	htmlbody=htmlbody+"<li>Last time student intearcted with this leson: <span class='numbers' id='LTRecent'></span></li>";
+	htmlbody=htmlbody+"<li>First time student intearcted with this leson: <span class='numbers' id='LTFirst'></span></li>";
+	htmlbody=htmlbody+"<li>Number of studnets interacted with this lesson: <span class='numbers' id='LNStudents'></span></li>";
+	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
+	htmlbody=htmlbody+"<li>Number of students falsed this lesson: <span class='numbers' id='LNFailed'></span></li>";
+	htmlbody=htmlbody+"</ul>";
+	OpenPopUp(LessonID,"details of "+LessonID,htmlbody,"popupWin");
+}
 function StudentDetails(student){
 	var htmlbody="Information about "+student;
 	htmlbody=htmlbody+"<ul>";
@@ -160,7 +171,7 @@ function CreateTable(LessonList,StudentList){
 	}
 	html=html+"</tr>";
 	for (i=0;i<LessonList.length;i++){
-		html=html+"<tr> <td>"+LessonList[i][0]+"</td>";
+		html=html+"<tr> <td>"+LessonList[i][0]+" <button onclick='LessonDetails(\""+LessonList[i][1]+"\")'>?</button></td>";
 		for (j=0;j<StudentList.length;j++){
 			var scoreFiled="score_"+i.toString()+"_"+j.toString();
 			html=html+"<td><span id='"+scoreFiled+"'>"+" "+"</span></td>";
