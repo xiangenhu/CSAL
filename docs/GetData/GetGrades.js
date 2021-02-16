@@ -166,12 +166,15 @@ function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
 	var html="";
-	html=html+"<table align='center' id='customers'>"
+	html=html+"<table align='center' id='customers'>";
+	html=html+"<thead>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
 		html=html+"<th>"+StudentList[j]+"<button  onclick='StudentDetails(\""+StudentList[j]+"\")'>?</button></th>";
 	}
 	html=html+"</tr>";
+	html=html+"</thead>";
+	html=html+'<tbody style="height: 10px !important; overflow: scroll; ">';
 	for (i=0;i<LessonList.length;i++){
 		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
 		html=html+"<tr> <td>"+LessonList[i][0]+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button></td>";
@@ -181,6 +184,7 @@ function CreateTable(LessonList,StudentList){
 		}
 		html=html+"</tr>";
 	}
+	html=html+'</tbody>'
 	html=html+"</table>";
 	$("#TheGrades").html(html);
 	$("#TheGrades").show();
