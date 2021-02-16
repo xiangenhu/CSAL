@@ -137,9 +137,17 @@ function GetScoreThe(Lesson,Student,i,j){
 	});
 }
 
-function StudentDetails(){
-	var htmlbody="Student Information";
-	OpenPopUp("This a test","this is a test",htmlbody,"popupWin");
+function StudentDetails(student){
+	var htmlbody="Information about "+student;
+	htmlbody=htmlbody+"<ul>";
+	htmlbody=htmlbody+"<li>Most recent time seen in class: <span class='numbers' id='RecentTime'></span></li>";
+	htmlbody=htmlbody+"<li>Time started the lesson: <span class='numbers' id='FirstTime'></span></li>";
+	htmlbody=htmlbody+"<li>Number of Lessons Started: <span class='numbers' id='NLStarted'></span></li>";
+	htmlbody=htmlbody+"<li>Number of Lessons Completed: <span class='numbers' id='NLCompeted'></span></li>";
+	htmlbody=htmlbody+"<li>Number of Lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
+	htmlbody=htmlbody+"<li>Number of question answered: <span class='numbers' id='NumberQ'></span></li>";
+	htmlbody=htmlbody+"</ul>";
+	OpenPopUp(student,"details of "+student,htmlbody,"popupWin");
 }
 function CreateTable(LessonList,StudentList){
 	var j;
@@ -148,7 +156,7 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<table align='center' id='customers'>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
-		html=html+"<th>"+StudentList[j]+"<button onclick='StudentDetails()'>?</button></th>";
+		html=html+"<th>"+StudentList[j]+"<button  onclick='StudentDetails(\""+StudentList[j]+"\")'>?</button></th>";
 	}
 	html=html+"</tr>";
 	for (i=0;i<LessonList.length;i++){
