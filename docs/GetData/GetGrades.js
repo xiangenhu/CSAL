@@ -173,7 +173,7 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<thead>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
-		html=html+"<th>"+StudentList[j]+"<button  onclick='StudentDetails(\""+StudentList[j]+"\")'>?</button></th>";
+		html=html+"<th>"+StudentList[j]+"<br/><button  onclick='StudentDetails(\""+StudentList[j]+"\")'>?</button></th>";
 	}
 	html=html+"</tr>";
 	html=html+"</thead>";
