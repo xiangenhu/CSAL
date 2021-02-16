@@ -138,11 +138,11 @@ function GetScoreThe(Lesson,Student,i,j){
 }
 
 function LessonDetails(LessonID){
-	var LessonName=LessonID.split("__")[0]
+	var LessonName="lesson: "+LessonID.split("__")[0]
 	var htmlbody="<span class='numbers'></span>Information about this lesson</span>";
 	htmlbody=htmlbody+"<ul>";
-	htmlbody=htmlbody+"<li>Last time student intearcted with this leson: <span class='numbers' id='LTRecent'></span></li>";
-	htmlbody=htmlbody+"<li>First time student intearcted with this leson: <span class='numbers' id='LTFirst'></span></li>";
+	htmlbody=htmlbody+"<li>Last time student intearcted with this lesson: <span class='numbers' id='LTRecent'></span></li>";
+	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
 	htmlbody=htmlbody+"<li>Number of studnets interacted with this lesson: <span class='numbers' id='LNStudents'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students falsed this lesson: <span class='numbers' id='LNFailed'></span></li>";
@@ -151,7 +151,7 @@ function LessonDetails(LessonID){
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 }
 function StudentDetails(student){
-	var htmlbody="Information about "+student;
+	var htmlbody="Information about this student ";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>Most recent time seen in class: <span class='numbers' id='RecentTime'></span></li>";
 	htmlbody=htmlbody+"<li>Time started the lesson: <span class='numbers' id='FirstTime'></span></li>";
@@ -160,7 +160,7 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>Number of Lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Number of question answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
-	OpenPopUp(student,"details of "+student,htmlbody,"popupWin");
+	OpenPopUp(student,"details of student "+student,htmlbody,"popupWin");
 }
 function CreateTable(LessonList,StudentList){
 	var j;
