@@ -11,6 +11,10 @@
 		return defaultstr;
 }
 var wrapper;
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
+var TheLRSLogin=qs("lrslogin","CSALData");
+var theLRSPassword=qs("lrspassword","CSALData");
+
 var SKOSchool="AutoTutor.org";
 var sessionID="http://"+qs("ssid","anAICC_sid");
 var guid=qs("guid","");
@@ -26,9 +30,9 @@ var SlideNumer="@Scene"+qs("SlideNumber","0");
 		} else {
 			wrapper = ADL.XAPIWrapper;
 			wrapper.changeConfig({
-				endpoint: LRSURL,
-				user: LRSLogin,
-				password: LRSPassword
+				endpoint: TheLRSURL,
+				user: TheLRSLogin,
+				password: theLRSPassword
 			});
 			console.log("--- content statically configured ---\n", wrapper.lrs);
 		}
