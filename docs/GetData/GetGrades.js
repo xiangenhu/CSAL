@@ -8,7 +8,7 @@ var theLRSPassword=qs("lrspassword","CSALData");
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
 var classID=qs("classID","CSALUSNW01");
-var StudentEmailPhrase = "Student";
+var StudentEmailPhrase = "student";
 
 TheLRStheSetting={
     "async": true,
@@ -56,34 +56,100 @@ function GetStudents(classID){
 		}else{
 			for (var i=0;i<response.length;i++){
 				if (response[i]._id.indexOf(StudentEmailPhrase)!=-1){
-				StudentList.push(response[i]._id);
+					var studentID=response[i]._id;
+					studentID=studentID.split("@")[0].split(":")[1].split("tudent")[1];
+				StudentList.push(studentID);
 				}
 			}
 			console.log(StudentList);
+			CreateTable(TheLessions,StudentList)
 		}
 	});
 }
 
-function CreateTable(){
+function GetPassFailInProgress(Lesson,Student,i,j){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+Student+"@csal.autotutor.org",
+	           "statement.object.mbox":"mailto:"+Lesson[1]+"@csal.autotutor.org"
+			};
+	var data=[
+		{"$match":match},
+		{"$sort":{"statement.timestamp":-1}},
+		{"$group":{"_id":"$statement.verb.id","TotalScore":{"$sum":1}}}
+	];
+    thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		var scoreFiled="score_"+i.toString()+"_"+j.toString();
+		if (response.length==0){ 
+			$("#"+scoreFiled).html("");
+			return;
+		}else{
+			for (var k=1;k<response.length;k++){
+				if (response[k]._id.indexOf("completed")>-1){
+				$("#"+scoreFiled).html("P");
+				return;
+				}
+				if (response[k]._id.indexOf("failed")>-1){
+					$("#"+scoreFiled).html("F");
+					return;
+				}
+			}
+			$("#"+scoreFiled).html("IP");
+		}
+	});
+}
+
+function GetScoreThe(Lesson,Student,i,j){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+Student+"@csal.autotutor.org",
+	           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
+	           "statement.object.mbox":"mailto:"+Lesson[1]+"@csal.autotutor.org"
+			};
+	var data=[
+	{"$match":match},
+		{"$sort":{"statement.timestamp":-1}},
+		{"$project":{"ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+		{"$project":{"Statement":"$ResultExt.Score.this"}}
+	];
+    thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		var scoreFiled="score_"+i.toString()+"_"+j.toString();
+		if (response.length==0){ 
+			$("#"+scoreFiled).html("");
+			return;
+		}else{
+			$("#"+scoreFiled).html("tried");
+		}
+	});
+}
+
+function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
 	var html="";
 	html=html+"<table align='center' id='customers'>"
 	html=html+"<tr><th></th>";
-	for (j=0;j<TestList.length;j++){
-		html=html+"<th>"+TestList[j][0]+"</th>";
+	for (j=0;j<StudentList.length;j++){
+		html=html+"<th>"+StudentList[j]+"</th>";
 	}
 	html=html+"</tr>";
-	html=html+"<tr><td></td><td></td><td></td></tr>";
-	for (i=0;i<emailList.length;i++){
-		html=html+"<tr><td><span id='email"+i.toString()+"'>"+emailList[i]+"</span></td>"
-		for (j=0;j<TestList.length;j++){
-			html=html+"<td><span id='test"+j.toString()+i.toString()+"'></span></td>"
+	for (i=0;i<LessonList.length;i++){
+		html=html+"<tr> <td>"+LessonList[i][0]+"</td>";
+		for (j=0;j<StudentList.length;j++){
+			var scoreFiled="score_"+i.toString()+"_"+j.toString();
+			html=html+"<td><span id='"+scoreFiled+"'>"+" "+"</span></td>";
 		}
-		html=html+"</tr>"
+		html=html+"</tr>";
 	}
 	html=html+"</table>";
 	$("#TheGrades").html(html);
+	$("#TheGrades").show();
+	for (i=0;i<LessonList.length;i++){
+		for (j=0;j<StudentList.length;j++){
+			GetPassFailInProgress(LessonList[i],StudentList[j],i,j);
+		//	GetScoreThe(LessonList[i],StudentList[j],i,j);
+		}
+	}
 }
 
 function GetGradesFor(User,Test,ObjID,n,i,j,link){
