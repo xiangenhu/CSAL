@@ -147,17 +147,19 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students falsed this lesson: <span class='numbers' id='LNFailed'></span></li>";
 	htmlbody=htmlbody+"<li>Average Time Students Spent on ths lesson: <span class='numbers' id='LNFailed'></span></li>";
+	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 }
 function StudentDetails(student){
 	var htmlbody="Information about this student ";
 	htmlbody=htmlbody+"<ul>";
-	htmlbody=htmlbody+"<li>Most recent time seen in class: <span class='numbers' id='RecentTime'></span></li>";
-	htmlbody=htmlbody+"<li>Time started the lesson: <span class='numbers' id='FirstTime'></span></li>";
-	htmlbody=htmlbody+"<li>Number of Lessons Started: <span class='numbers' id='NLStarted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of Lessons Completed: <span class='numbers' id='NLCompeted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of Lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
+	htmlbody=htmlbody+"<li>Most recent time took any lessons: <span class='numbers' id='RecentTime'></span></li>";
+	htmlbody=htmlbody+"<li>First time started any lessons: <span class='numbers' id='FirstTime'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons started: <span class='numbers' id='NLStarted'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons completed: <span class='numbers' id='NLCompeted'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons repeated: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Number of question answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(student,"details of student "+student,htmlbody,"popupWin");
