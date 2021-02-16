@@ -80,6 +80,9 @@ function GetStudents(classID){
 		}
 	});
 }
+function DetailsForStudentandLesson(student,lesson){
+
+}
 
 function GetPassFailInProgress(Lesson,Student,i,j){
 	var thesetting=TheLRStheSetting;
@@ -93,6 +96,7 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
+		var detailInformationLink="<button onclick=''></button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html("");
@@ -145,7 +149,7 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
 	htmlbody=htmlbody+"<li>Number of studnets interacted with this lesson: <span class='numbers' id='LNStudents'></span></li>";
 	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of students falsed this lesson: <span class='numbers' id='LNFailed'></span></li>";
+	htmlbody=htmlbody+"<li>Number of students failed this lesson: <span class='numbers' id='LNFailed'></span></li>";
 	htmlbody=htmlbody+"<li>Average Time Students Spent on ths lesson: <span class='numbers' id='LNFailed'></span></li>";
 	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
@@ -158,7 +162,7 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>First time started any lessons: <span class='numbers' id='FirstTime'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons started: <span class='numbers' id='NLStarted'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons completed: <span class='numbers' id='NLCompeted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of lessons falsed: <span class='numbers' id='NLFaled'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons failed: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons repeated: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Average time spent on the lessons: <span class='numbers' id='NLFaled'></span></li>";
 	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
@@ -194,7 +198,6 @@ function CreateTable(LessonList,StudentList){
 	for (i=0;i<LessonList.length;i++){
 		for (j=0;j<StudentList.length;j++){
 			GetPassFailInProgress(LessonList[i],StudentList[j],i,j);
-		//	GetScoreThe(LessonList[i],StudentList[j],i,j);
 		}
 	}
 }
