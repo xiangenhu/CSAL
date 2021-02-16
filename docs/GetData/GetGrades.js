@@ -39,6 +39,20 @@ function GetLessons(json){
 	GetStudents(classID)
 }
 
+function studentsReport(student,verb){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":+student,"statement.verb.id":"https://app.skoonline.org/ITSProfile/"+verb};
+	var group={"_id":"$statement.id",
+	           "Sum":{"$sum":1}};
+	var data=[
+	{"$match":match},
+	{"$group":group}
+	];
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		
+	})
+}
 
 function GetStudents(classID){
     var thesetting=TheLRStheSetting;
@@ -123,6 +137,10 @@ function GetScoreThe(Lesson,Student,i,j){
 	});
 }
 
+function StudentDetails(){
+	var htmlbody="Student Information";
+	OpenPopUp("This a test","this is a test",htmlbody,"popupWin");
+}
 function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
@@ -130,7 +148,7 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<table align='center' id='customers'>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
-		html=html+"<th>"+StudentList[j]+"</th>";
+		html=html+"<th>"+StudentList[j]+"<button onclick='StudentDetails()'>?</button></th>";
 	}
 	html=html+"</tr>";
 	for (i=0;i<LessonList.length;i++){
