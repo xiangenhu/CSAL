@@ -169,7 +169,7 @@ function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
 	var html="";
-	html=html+"<table align='center' id='customers'>";
+	html=html+"<table width='100%' align='center' id='customers'>";
 	html=html+"<thead>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
