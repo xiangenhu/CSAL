@@ -247,7 +247,6 @@ function GetTheLessonQuestion(LessonID){
 		}
 	});
 }
-}
 function LessonDetails(LessonID){
 	var LessonName="lesson: "+LessonID.split("__")[0]
 	var htmlbody="<span class='numbers'></span>Information about this lesson</span>";
