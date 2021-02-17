@@ -26,6 +26,11 @@ TheLRStheSetting={
     "data":{}
 }
 
+var TheScore={
+	          "Hard":{"success":0,"failure":0},
+              "Medium":{"success":0,"failure":0},
+			  "Easy":{"success":0,"failure":0}
+			}
 
 function GetLessons(json){
     var spData = json.feed.entry;
@@ -84,6 +89,24 @@ function DetailsForStudentandLesson(student,lesson){
 
 }
 
+function DetailsS_L(Lesson_and_Student){
+	var LessonName=Lesson_and_Student.split("___")[0];
+	var LessonID=Lesson_and_Student.split("___")[1];
+	var Student=Lesson_and_Student.split("___")[2];
+	var htmlbody="Detailed Interaction of  "+ Student+ " and "+LessonName ;
+	htmlbody=htmlbody+"<ul>";
+	htmlbody=htmlbody+"<li>First time "+Student+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>Last time  "+Student+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>Number Questions Answered: <span class='numbers' id='QuestionsAnswered'></span></li>";
+	htmlbody=htmlbody+"<li>Average time spend on each answer: <span class='numbers' id='TimeOnAnswer'></span></li>";
+	htmlbody=htmlbody+"<li>How the answers of question in this lesson compared with others: <span class='numbers' id='AnswersCompared'></span></li>";
+//	htmlbody=htmlbody+"<li>Answers to all the questions: <span class='numbers' id='AnswersCompared'></span></li>";
+	htmlbody=htmlbody+"</ul>";
+	OpenPopUp(LessonName+" and "+Student,"details ...",htmlbody,"popupWin");
+
+}
+
+
 function GetPassFailInProgress(Lesson,Student,i,j){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":"mailto:student"+Student+"@csal.autotutor.org",
@@ -96,7 +119,7 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		var detailInformationLink="<button onclick=''></button>"
+		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"\")'>?</button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html("");
@@ -104,15 +127,15 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 		}else{
 			for (var k=1;k<response.length;k++){
 				if (response[k]._id.indexOf("completed")>-1){
-				$("#"+scoreFiled).html("P");
+				$("#"+scoreFiled).html("P "+detailInformationLink);
 				return;
 				}
 				if (response[k]._id.indexOf("failed")>-1){
-					$("#"+scoreFiled).html("F");
+					$("#"+scoreFiled).html("F "+detailInformationLink);
 					return;
 				}
 			}
-			$("#"+scoreFiled).html("IP");
+			$("#"+scoreFiled).html("IP "+detailInformationLink);
 		}
 	});
 }
@@ -223,27 +246,72 @@ function GetAverageTime(LessonID){
 };
 
 
-function GetTheLessonQuestion(LessonID){
+
+function StudentAnswerQuestions_Lesson(student,LessonID){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
-				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
+	var match={"statement.actor.mbox":student,
+				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
+				"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org"
+			};
+
 	var data=[{"$match":match}, 
 		{"$sort":{"statement.timestamp":-1}},
 		{"$limit":1},
 		{"$project":{"EXt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
-		{"$project":{"Score":"$EXt.Score.total"}}
+		{"$project":{"Score":"$EXt.Score.this"}}
 	]
 	thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
 		if (response.length==0){ 
 		}else{
 			var theScore= response[0].Score;
+			TheScore.Hard.success=TheScore.Hard.success+theScore.Hard.success;
+			TheScore.Hard.failure=TheScore.Hard.failure+theScore.Hard.failure;
+
+			TheScore.Medium.success=TheScore.Medium.success+theScore.Medium.success;
+			TheScore.Medium.failure=TheScore.Medium.failure+theScore.Medium.failure;
+			
+			TheScore.Easy.success=TheScore.Easy.success+theScore.Easy.success;
+			TheScore.Easy.failure=TheScore.Easy.failure+theScore.Easy.failure;
+
 			var html="<ul>";
-			html=html+"<li>Hard Questions "+ theScore.Hard.success.toString() +" correct, "+theScore.Hard.failure.toString() +" wrong. </li>";
-			html=html+"<li>Medium Questions "+ theScore.Medium.success.toString() +" correct, "+theScore.Medium.failure.toString() +" wrong. </li>";
-			html=html+"<li>Easy Questions "+ theScore.Easy.success.toString() +" correct, "+ theScore.Easy.failure.toString() +" wrong. </li>";
+			html=html+"<li>Hard Questions "+ TheScore.Hard.success.toString() +" correct, "+TheScore.Hard.failure.toString() +" wrong. </li>";
+			html=html+"<li>Medium Questions "+ TheScore.Medium.success.toString() +" correct, "+TheScore.Medium.failure.toString() +" wrong. </li>";
+			html=html+"<li>Easy Questions "+ TheScore.Easy.success.toString() +" correct, "+ TheScore.Easy.failure.toString() +" wrong. </li>";
 			html=html+"</ul>";
-			$("#NumberQ").html(html);
+			$("#LSAnswerDetails").html(html);
+		}
+	});
+}
+
+
+
+function GetTheLessonQuestion(LessonID){
+	TheScore={
+		"Hard":{"success":0,"failure":0},
+		"Medium":{"success":0,"failure":0},
+		"Easy":{"success":0,"failure":0}
+	  }
+	  var html="<ul>";
+	  html=html+"<li>Hard Questions "+ TheScore.Hard.success.toString() +" correct, "+TheScore.Hard.failure.toString() +" wrong. </li>";
+	  html=html+"<li>Medium Questions "+ TheScore.Medium.success.toString() +" correct, "+TheScore.Medium.failure.toString() +" wrong. </li>";
+	  html=html+"<li>Easy Questions "+ TheScore.Easy.success.toString() +" correct, "+ TheScore.Easy.failure.toString() +" wrong. </li>";
+	  html=html+"</ul>";
+	  $("#LSAnswerDetails").html(html);
+	var thesetting=TheLRStheSetting;
+	var match={"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
+				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
+	var group={"_id":"$statement.actor.mbox","sum":{"$sum":1}};
+	var data=[{"$match":match},
+	          {"$group":group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			var i;
+			for (i=0;i<response.length;i++){
+			StudentAnswerQuestions_Lesson(response[0]._id,LessonID)
+			}
 		}
 	});
 }
@@ -254,11 +322,12 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"<li>Last time student intearcted with this lesson: <span class='numbers' id='LTRecent'></span></li>";
 	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
 	htmlbody=htmlbody+"<li>Average Time between Interactions: <span class='numbers' id='AVTime'></span></li>";
-//	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
+	htmlbody=htmlbody+"<li>The questions answered by students: <span class='numbers' id='LSAnswerDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 	GetLTRecentLast(LessonID.split("__")[1]);
 	GetAverageTime(LessonID.split("__")[1]);
+	GetTheLessonQuestion(LessonID.split("__")[1]);
 }
 function StudentDetails(student){
 	var htmlbody="Information about this student ";
