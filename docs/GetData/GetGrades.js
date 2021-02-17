@@ -117,6 +117,23 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 	});
 }
 
+
+function ReturnDate(Thedate){
+	d=new Date(Thedate);
+	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+	var weekday = new Array(7);
+	weekday[0] = "Sunday";
+	weekday[1] = "Monday";
+	weekday[2] = "Tuesday";
+	weekday[3] = "Wednesday";
+	weekday[4] = "Thursday";
+	weekday[5] = "Friday";
+	weekday[6] = "Saturday";
+	var say=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+" on " +weekday[d.getDay()]+", "+ months[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();
+	return say;
+  }
+
+
 function GetScoreThe(Lesson,Student,i,j){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":"mailto:student"+Student+"@csal.autotutor.org",
@@ -141,38 +158,108 @@ function GetScoreThe(Lesson,Student,i,j){
 	});
 }
 
-function GetLTRecent(LessonID){
+function GetLTRecentLast(LessonID){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
+	           "statement.result.response":classID};
+	var Group={"_id":"$statement.verb.id",
+	           "firstTime":{"$min":"$statement.timestamp"},
+			   "LastTime":{"$max":"$statement.timestamp"}
+			}
+	var data=[{"$match":match}, 
+              {"$group":Group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			$("#LTRecent").html(ReturnDate(response[0].LastTime));
+			$("#LTFirst").html(ReturnDate(response[0].firstTime));
+			for (var i=0; i<response.length;i++){
+				console.log(response[i]);
+			}
+		}
+	});
+};
 
+function Getmean(numberArray){
+	var sum=0;
+	if (numberArray.length==0){
+		return sum;
+	}
+	var i;
+	for (i=0;i<numberArray.length;i++){
+		sum=sum+numberArray[i];
+	}
+	return sum/numberArray.length;
 }
-function GetLTFirst(LessonID){
 
+function GetAverageTime(LessonID){	
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
+	           "statement.verb.id":"https://app.skoonline.org/ITSProfile/interaction",
+				"statement.result.response":classID};
+	var Group={"_id":"$statement.object.mbox",
+			   "sum":{"$sum":1},
+	           "firstTime":{"$min":"$statement.timestamp"},
+			   "LastTime":{"$max":"$statement.timestamp"}
+			}
+	var data=[{"$match":match}, 
+              {"$group":Group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			var numberArray=[];
+			for (var i=0; i<response.length;i++){
+				var FirstTime = new Date(response[i].firstTime).getTime();
+				var LastTime = new Date(response[i].LastTime).getTime();
+				var timediff=(LastTime-FirstTime)/response[i].sum;
+				numberArray.push(timediff);
+			}
+			var averageDiff=Getmean(numberArray);
+			$("#AVTime").html((averageDiff/1000).toFixed(1)+ " seconds");
+		}
+	});
+};
+
+
+function GetTheLessonQuestion(LessonID){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
+				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
+	var data=[{"$match":match}, 
+		{"$sort":{"statement.timestamp":-1}},
+		{"$limit":1},
+		{"$project":{"EXt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+		{"$project":{"Score":"$EXt.Score.total"}}
+	]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			var theScore= response[0].Score;
+			var html="<ul>";
+			html=html+"<li>Hard Questions "+ theScore.Hard.success.toString() +" correct, "+theScore.Hard.failure.toString() +" wrong. </li>";
+			html=html+"<li>Medium Questions "+ theScore.Medium.success.toString() +" correct, "+theScore.Medium.failure.toString() +" wrong. </li>";
+			html=html+"<li>Easy Questions "+ theScore.Easy.success.toString() +" correct, "+ theScore.Easy.failure.toString() +" wrong. </li>";
+			html=html+"</ul>";
+			$("#NumberQ").html(html);
+		}
+	});
 }
-function GetLNStudents(LessonID){
-
 }
-function GetLNCompleted(LessonID){
-
-}
-function GetLNFailed(LessonID){
-
-}
-function GetAVTime(LessonID){
-
-}
-
 function LessonDetails(LessonID){
 	var LessonName="lesson: "+LessonID.split("__")[0]
 	var htmlbody="<span class='numbers'></span>Information about this lesson</span>";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>Last time student intearcted with this lesson: <span class='numbers' id='LTRecent'></span></li>";
 	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
-	htmlbody=htmlbody+"<li>Number of studnets interacted with this lesson: <span class='numbers' id='LNStudents'></span></li>";
-	htmlbody=htmlbody+"<li>Number of students Completed this lesson: <span class='numbers' id='LNCompleted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of students failed this lesson: <span class='numbers' id='LNFailed'></span></li>";
-	htmlbody=htmlbody+"<li>Average Time Students Spent on ths lesson: <span class='numbers' id='AVTime'></span></li>";
+	htmlbody=htmlbody+"<li>Average Time between Interactions: <span class='numbers' id='AVTime'></span></li>";
 //	htmlbody=htmlbody+"<li>Who took this lesson and how are they doing?: <span class='numbers' id='LSDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
+	GetLTRecentLast(LessonID.split("__")[1]);
+	GetAverageTime(LessonID.split("__")[1]);
 }
 function StudentDetails(student){
 	var htmlbody="Information about this student ";
@@ -181,12 +268,124 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>First time started any lessons: <span class='numbers' id='FirstTime'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons started: <span class='numbers' id='NLStarted'></span></li>";
 	htmlbody=htmlbody+"<li>Number of lessons completed: <span class='numbers' id='NLCompeted'></span></li>";
-	htmlbody=htmlbody+"<li>Number of lessons failed: <span class='numbers' id='NLFaled'></span></li>";
-	htmlbody=htmlbody+"<li>Number of lessons repeated: <span class='numbers' id='NLFaled'></span></li>";
-	htmlbody=htmlbody+"<li>Average time spent on the lessons: <span class='numbers' id='NLFaled'></span></li>";
+	htmlbody=htmlbody+"<li>Number of lessons failed: <span class='numbers' id='NLFailed'></span></li>";
+//	htmlbody=htmlbody+"<li>Number of lessons repeated: <span class='numbers' id='NLRepeated'></span></li>";
+	htmlbody=htmlbody+"<li>Average time spent on each lesson: <span class='numbers' id='AverageTimeOnLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(student,"details of student "+student,htmlbody,"popupWin");
+	StdudentFirstLast(student);
+	StudentsStartedLesson(student);
+	averageTimeOnLesson(student);
+	StudentAnswerQuestions(student);
+}
+
+
+
+function StudentAnswerQuestions(student){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
+
+	var data=[{"$match":match}, 
+		{"$sort":{"statement.timestamp":-1}},
+		{"$limit":1},
+		{"$project":{"EXt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+		{"$project":{"Score":"$EXt.Score.total"}}
+	]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			var theScore= response[0].Score;
+			var html="<ul>";
+			html=html+"<li>Hard Questions "+ theScore.Hard.success.toString() +" correct, "+theScore.Hard.failure.toString() +" wrong. </li>";
+			html=html+"<li>Medium Questions "+ theScore.Medium.success.toString() +" correct, "+theScore.Medium.failure.toString() +" wrong. </li>";
+			html=html+"<li>Easy Questions "+ theScore.Easy.success.toString() +" correct, "+ theScore.Easy.failure.toString() +" wrong. </li>";
+			html=html+"</ul>";
+			$("#NumberQ").html(html);
+		}
+	});
+}
+function averageTimeOnLesson(student){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+				"statement.result.response":classID};
+	var Group={"_id":"$statement.object.mbox",
+			   "sum":{"$sum":1},
+	           "firstTime":{"$min":"$statement.timestamp"},
+			   "LastTime":{"$max":"$statement.timestamp"}
+			}
+	var data=[{"$match":match}, 
+              {"$group":Group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			var numberArray=[];
+			for (var i=0; i<response.length;i++){
+				var FirstTime = new Date(response[i].firstTime).getTime();
+				var LastTime = new Date(response[i].LastTime).getTime();
+				var timediff=(LastTime-FirstTime)/response[i].sum;
+				numberArray.push(timediff);
+			}
+			var averageDiff=Getmean(numberArray);
+			$("#AverageTimeOnLesson").html((averageDiff/(1000*60)).toFixed(1)+ " minutes");
+		}
+	});
+
+}
+function StudentsStartedLesson(student){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+				"statement.result.response":classID};
+	var Group={"_id":"$statement.verb.id",
+			   "sum":{"$sum":1},
+			}
+	var data=[{"$match":match}, 
+              {"$group":Group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			for (var i=0;i<response.length;i++){
+				var theverb=response[i]._id;
+				if (theverb.indexOf("start")>-1){
+					$("#NLStarted").html(response[i].sum);
+				}
+				if (theverb.indexOf("failed")>-1){
+					$("#NLFailed").html(response[i].sum);
+				}
+				if (theverb.indexOf("completed")>-1){
+					$("#NLCompeted").html(response[i].sum);
+				}
+			}
+		}
+	});
+
+}
+
+function StdudentFirstLast(student){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.object.mbox":"mailto:student"+student+"@csal.autotutor.org",
+				"statement.result.response":classID,
+			    "statement.verb.id":"https://app.skoonline.org/ITSProfile/interaction"};
+	var Group={"_id":"$statement.verb.id",
+			   "sum":{"$sum":1},
+	           "firstTime":{"$min":"$statement.timestamp"},
+			   "LastTime":{"$max":"$statement.timestamp"}
+			}
+	var data=[{"$match":match}, 
+              {"$group":Group}]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+		}else{
+			$("#RecentTime").html(ReturnDate(response[0].LastTime));
+			$("#FirstTime").html(ReturnDate(response[0].firstTime));
+		}
+	});
+
 }
 function CreateTable(LessonList,StudentList){
 	var j;
