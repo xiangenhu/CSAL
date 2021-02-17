@@ -10,6 +10,9 @@ var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
 var classID=qs("classID","CSALUSNW01");
 var StudentEmailPhrase = "student";
 
+var TheLessonPages=[];
+var TheLearnerResponses=[]
+
 TheLRStheSetting={
     "async": true,
     "crossDomain": true,
@@ -107,6 +110,89 @@ function DetailsForStudentandLesson(student,lesson){
 			$("#FirstTimeLesson").html(ReturnDate(response[0].firstTime));
 		}
 	});
+}
+
+function LessonQuestionSummary(LessonID){
+	var thesetting=TheLRStheSetting;
+	var match={"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
+	           "statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org"
+			};
+    var data=[{"$match":match},
+		{"$sort":{"statement.timestamp":-1}},
+		{"$project":
+			{"Ext":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result",
+				"Result":"$statement.result.success",
+				"LessonID":"$statement.object.mbox"}},
+		{"$project":
+			{"MediaUrl":"$Ext.MediaUrl",
+				"questionLevel":"$Ext.questionLevel",
+				"questionID":"$Ext.questionID",
+				"QuestionType":"$Ext.Type",
+				"userSelectedItem":"$Ext.userSelectedItem",
+				"success":"$Result",
+				"TheLesson":"$LessonID"
+				}
+		}
+	]
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		TheLessonPages=[];
+		if (response.length==0){ 
+			return;
+		}else{
+			// list of pages
+			var ListOfLessonObj=[];
+			for (var i=0; i<response.length;i++){
+				if (response[i].QuestionType=="QuestionPage"){
+					var choiceObj=response[i].userSelectedItem+ " ("+response[i].success+")";
+					var index=TheLessonPages.indexOf(response[i].questionID);
+					if (index>-1){
+						ListOfLessonObj[index].Choices.push(choiceObj);
+					}else{
+						var LessonObj={"Page":response[i].MediaUrl.split("ActivityMedia/media/")[1].split("?")[0],
+						             "ID":response[i].questionID,
+									 "Choices":[choiceObj]}
+						ListOfLessonObj.push(LessonObj);
+						TheLessonPages.push(response[i].questionID);
+						}
+					}
+				}
+			console.log(TheLessonPages);
+			console.log(ListOfLessonObj);
+			// Construct report
+			var html="<ul>";
+			for (i=0;i<ListOfLessonObj.length;i++){
+				html=html+"<li>";;
+				html=html+ListOfLessonObj[i].Page;
+				html=html+"<ul>";
+				html=html+GetCount(ListOfLessonObj[i].Choices);
+				html=html+"</ul>";
+				html=html+"</li>";
+			}
+			html=html+"</ul>";
+			$("#MoreDetails").html(html);
+		}
+	});
+}
+
+function GetCount(ArrayStr){
+	var html="";
+	var newArray=[];
+	var TheCount=[];
+	var i;
+	for (i=0; i<ArrayStr.length;i++){
+		var Index=newArray.indexOf(ArrayStr[i]);
+		if (Index==-1){
+			newArray.push(ArrayStr[i]);
+			TheCount.push(1)
+		}else{
+			TheCount[Index]=TheCount[Index]+1;
+		}
+	}
+	for (i=0;i<newArray.length;i++){
+		html=html+"<li>"+newArray[i]+" ["+TheCount[i].toString()+"] "+"</li>"
+	}
+	return html;
 }
 
 function DetailsS_L(Lesson_and_Student){
@@ -345,13 +431,15 @@ function GetTheLessonQuestion(LessonID){
 }
 function LessonDetails(LessonID){
 	var LessonName="lesson: "+LessonID.split("__")[0]
-	var htmlbody="<span class='numbers'></span>Information about this lesson</span>";
+	var htmlbody="<div class='numbers' id='MoreDetails'><span class='numbers'></span>Information about this lesson</span>";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>Last time student intearcted with this lesson: <span class='numbers' id='LTRecent'></span></li>";
 	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
 	htmlbody=htmlbody+"<li>Average Time between Interactions: <span class='numbers' id='AVTime'></span></li>";
 	htmlbody=htmlbody+"<li>The questions answered by students: <span class='numbers' id='LSAnswerDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
+	
+	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+LessonID.split("__")[1]+"\")'>More details</button> </div>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 	GetLTRecentLast(LessonID.split("__")[1]);
 	GetAverageTime(LessonID.split("__")[1]);

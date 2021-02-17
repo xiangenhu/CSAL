@@ -19,6 +19,7 @@ var lastAceAction={};
 
 
 function showwarnings(){
+	return;
 	  if (latency.duration>parseInt(qs("latencyThreshold","1000"))){
 		  $("#runningstatus").show();
 	  }else{
