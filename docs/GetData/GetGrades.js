@@ -86,7 +86,27 @@ function GetStudents(classID){
 	});
 }
 function DetailsForStudentandLesson(student,lesson){
-
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	           "statement.object.mbox":"mailto:"+lesson+"@csal.autotutor.org",
+			   "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"
+			};
+	var group= {"_id":"$statement.verb.id",
+		        "firstTime":{"$min":"$statement.timestamp"},
+				"LastTime":{"$max":"$statement.timestamp"}}
+	var data=[
+		{"$match":match},
+		{"$group":group}
+	];
+    thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){ 
+			return;
+		}else{
+			$("#LastTimeLesson").html(ReturnDate(response[0].LastTime));
+			$("#FirstTimeLesson").html(ReturnDate(response[0].firstTime));
+		}
+	});
 }
 
 function DetailsS_L(Lesson_and_Student){
@@ -97,13 +117,20 @@ function DetailsS_L(Lesson_and_Student){
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>First time "+Student+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Last time  "+Student+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
-	htmlbody=htmlbody+"<li>Number Questions Answered: <span class='numbers' id='QuestionsAnswered'></span></li>";
-	htmlbody=htmlbody+"<li>Average time spend on each answer: <span class='numbers' id='TimeOnAnswer'></span></li>";
-	htmlbody=htmlbody+"<li>How the answers of question in this lesson compared with others: <span class='numbers' id='AnswersCompared'></span></li>";
+	htmlbody=htmlbody+"<li>Number Questions Answered: <span class='numbers' id='LSAnswerDetails'></span></li>";
+//	htmlbody=htmlbody+"<li>Average time spend on each answer: <span class='numbers' id='TimeOnAnswer'></span></li>";
+//	htmlbody=htmlbody+"<li>How the answers of question in this lesson compared with others: <span class='numbers' id='AnswersCompared'></span></li>";
 //	htmlbody=htmlbody+"<li>Answers to all the questions: <span class='numbers' id='AnswersCompared'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	OpenPopUp(LessonName+" and "+Student,"details ...",htmlbody,"popupWin");
-
+	DetailsForStudentandLesson(Student,LessonID);
+	TheScore={
+		"Hard":{"success":0,"failure":0},
+		"Medium":{"success":0,"failure":0},
+		"Easy":{"success":0,"failure":0}
+	  }
+	TheStudent="mailto:student"+Student+"@csal.autotutor.org";
+	StudentAnswerQuestions_Lesson(TheStudent,LessonID);
 }
 
 
@@ -135,7 +162,7 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 					return;
 				}
 			}
-			$("#"+scoreFiled).html("IP "+detailInformationLink);
+			$("#"+scoreFiled).html("IP ");
 		}
 	});
 }
@@ -264,6 +291,7 @@ function StudentAnswerQuestions_Lesson(student,LessonID){
 	$.ajax(thesetting).done(function (response) {
 		if (response.length==0){ 
 		}else{
+
 			var theScore= response[0].Score;
 			TheScore.Hard.success=TheScore.Hard.success+theScore.Hard.success;
 			TheScore.Hard.failure=TheScore.Hard.failure+theScore.Hard.failure;
