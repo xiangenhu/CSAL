@@ -114,9 +114,19 @@ function DetailsForStudentandLesson(student,lesson){
 
 function LessonQuestionSummary(LessonID){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
+	var match
+	if (LessonID.indexOf("___")==-1){
+	    match={"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
 	           "statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org"
 			};
+		}else{
+			var newLessonID=LessonID.split("___")[1];
+			var student=LessonID.split("___")[2];
+			match={"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
+			"statement.object.mbox":"mailto:"+newLessonID+"@csal.autotutor.org",
+			"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org"
+		 };
+		}
     var data=[{"$match":match},
 		{"$sort":{"statement.timestamp":-1}},
 		{"$project":
@@ -144,7 +154,7 @@ function LessonQuestionSummary(LessonID){
 			var ListOfLessonObj=[];
 			for (var i=0; i<response.length;i++){
 				if (response[i].QuestionType=="QuestionPage"){
-					var choiceObj=response[i].userSelectedItem+ " ("+response[i].success+")";
+					var choiceObj="(<span class='numbers'>"+response[i].success+"</span>) "+response[i].userSelectedItem;
 					var index=TheLessonPages.indexOf(response[i].questionID);
 					if (index>-1){
 						ListOfLessonObj[index].Choices.push(choiceObj);
@@ -190,7 +200,7 @@ function GetCount(ArrayStr){
 		}
 	}
 	for (i=0;i<newArray.length;i++){
-		html=html+"<li>"+newArray[i]+" ["+TheCount[i].toString()+"] "+"</li>"
+		html=html+"<li> <span class='numbers'>["+TheCount[i].toString()+"]</span> "+newArray[i]+"</li>"
 	}
 	return html;
 }
@@ -200,6 +210,7 @@ function DetailsS_L(Lesson_and_Student){
 	var LessonID=Lesson_and_Student.split("___")[1];
 	var Student=Lesson_and_Student.split("___")[2];
 	var htmlbody="Detailed Interaction of  "+ Student+ " and "+LessonName ;
+	htmlbody=htmlbody+"<div id='MoreDetails'>";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>First time "+Student+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Last time  "+Student+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
@@ -208,6 +219,8 @@ function DetailsS_L(Lesson_and_Student){
 //	htmlbody=htmlbody+"<li>How the answers of question in this lesson compared with others: <span class='numbers' id='AnswersCompared'></span></li>";
 //	htmlbody=htmlbody+"<li>Answers to all the questions: <span class='numbers' id='AnswersCompared'></span></li>";
 	htmlbody=htmlbody+"</ul>";
+	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+Lesson_and_Student+"\")'>More details</button> </div>";
+	htmlbody=htmlbody+"</div>"
 	OpenPopUp(LessonName+" and "+Student,"details ...",htmlbody,"popupWin");
 	DetailsForStudentandLesson(Student,LessonID);
 	TheScore={
@@ -431,7 +444,7 @@ function GetTheLessonQuestion(LessonID){
 }
 function LessonDetails(LessonID){
 	var LessonName="lesson: "+LessonID.split("__")[0]
-	var htmlbody="<div class='numbers' id='MoreDetails'><span class='numbers'></span>Information about this lesson</span>";
+	var htmlbody="<div id='MoreDetails'>Information about this lesson</span>";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>Last time student intearcted with this lesson: <span class='numbers' id='LTRecent'></span></li>";
 	htmlbody=htmlbody+"<li>First time student intearcted with this lesson: <span class='numbers' id='LTFirst'></span></li>";
