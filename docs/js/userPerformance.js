@@ -135,7 +135,8 @@
 
 		                    countAnswerTime++;
 							TotalScoreArr[i].userAnswer = "Incorrect"
-							lesson32score=lesson32score-progressBarValue;
+							//lesson32score=lesson32score-progressBarValue;
+							lesson32score=lesson32score-1;
 
 		                }
 
@@ -155,7 +156,8 @@
 		            TotalScoreObj.userAnswerSpendTime = userAnswerSpendTime;
 					if(userAnswer=="Correct")
 					{
-						lesson32score=lesson32score+progressBarValue;
+						//lesson32score=lesson32score+progressBarValue;
+						lesson32score=lesson32score+1;
 												
 					}
 					
@@ -175,13 +177,15 @@
 		            TotalScoreObj.talkingHeadSpeechEndTimestamp = talkingHeadSpeechEndTimestamp;
 		            TotalScoreObj.userAnswerTimestamp = userAnswerTimestamp;
 		            TotalScoreObj.userAnswerSpendTime = userAnswerSpendTime;
-					TotalScoreObj.score =lesson32score;
+					//TotalScoreObj.score =lesson32score;
 					if(userAnswer=="Correct")
 					{
-						lesson32score=lesson32score+progressBarValue;
+						//lesson32score=lesson32score+progressBarValue;
+						lesson32score=lesson32score+1;
 												
 					}
-		            TotalScoreArr.push(TotalScoreObj);
+		            TotalScoreObj.score =lesson32score;
+					TotalScoreArr.push(TotalScoreObj);
 
 		        }
 				
