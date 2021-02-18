@@ -675,7 +675,7 @@ div#controlButton{
   color: white;
 }
 
-#popupWin{
+#popupWinOld{
 	display: none;
 	position:absolute;
 	bottom:0px;
@@ -685,10 +685,15 @@ div#controlButton{
 	z-index: 1200;
  }
 #TheIframe{
-    width: 800px;
-    height: 600px;
+    width: 640px;
+    height: 480px; 
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -340px;
+    margin-top: -240px;
 }
- #popupWinOLd{
+ #popupWin{
     width: 800px;
     height: 600px;
     position: absolute;
