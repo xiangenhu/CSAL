@@ -132,7 +132,7 @@ function launchMOVIE(){
 	var localvar=MOVIELink+MOVIEName+MOVIEType+MOVIESource+Start+End+Duration;
 	var PopupData=GetObj(localvar);
 	MOVIEURL=MOVIEURL+localvar+ExtraInfo+"#"+MOVIEObj.MOVIESource;
-	var htmlbody="<iframe src='"+MOVIEURL+"'  id='TheIframe' frameBorder='0' scrolling='no'></iframe>";
+	var htmlbody="<iframe src='"+MOVIEURL+"' id='TheIframe' frameBorder='0' scrolling='no'></iframe>";
 	OpenPopUp(MOVIETitle,MOVIEFooter,htmlbody,"popupWin");
 	
 }
