@@ -353,8 +353,13 @@ if (qs("GL",GL)=="2"){
              !navigator.userAgent.match(/crios/i) &&
              !navigator.userAgent.match(/fxios/i);
 	  if (isSafari){
-		alert("If you are using Safari, please swich to Chorme. Thanks!");
-		return;
+		  var confirmed=confirm('You are using Safari, you may experience some issues with the Avatars. Use Chrome if that happend.');
+		  if (!confirmed){
+			return;
+		  }else{
+			window.open(url,"_self");
+			return;
+		  }
 	  }else{
 	  	window.open(url,"_self");
 	    return;
