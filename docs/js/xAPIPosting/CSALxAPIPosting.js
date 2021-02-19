@@ -335,6 +335,8 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		};
 	$.ajax(settings).done(function (response){ 
 
+		GetMovieWhenReady();
+		return;
 	if (response.length>0){
 		lastStartingTime=response[0].time;
 		console.log(lastStartingTime);
