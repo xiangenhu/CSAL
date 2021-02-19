@@ -349,8 +349,16 @@ if (qs("GL",GL)=="2"){
 		  console.log("Get Cookie email"+email);
 	  }
 	  var url=GetURL(app);
-	  window.open(url,"_self");
-	  return;
+      var isSafari = navigator.vendor.match(/apple/i) &&
+             !navigator.userAgent.match(/crios/i) &&
+             !navigator.userAgent.match(/fxios/i);
+	  if (isSafari){
+		alert("If you are using Safari, please swich to Chorme. Thanks!");
+		return;
+	  }else{
+	  	window.open(url,"_self");
+	    return;
+	  }
 	  $("#player").attr("src",url); 
   }else{
 	  document.body.innerHTML += '<div id="AskInformation"><br/> &nbsp;&nbsp;&nbsp; Your Name <input type="text" id="yourname"> <input type="button" onclick="explainName()" value="?"><br/><br/> &nbsp;&nbsp;&nbsp; Your Email <input type="text" id="youremail"> <input type="button" onclick="explainEmail()" value="?"> <br/> <br/> &nbsp;&nbsp; <input type="checkbox" value="remember" id="remembernameemail"> <label for="remembernameemail">Remember my name and email。</label> <input type="button" onclick="RememberEmail()" value="?"> <br/><p align="right"><input type="button" onclick="myFunction()" value="Start">&nbsp;&nbsp;&nbsp;</p></div>';	
