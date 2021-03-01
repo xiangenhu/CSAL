@@ -45,7 +45,7 @@ var listofMessage=[];
 
 var enableEditing=false;
 var InputFound;
-
+var VerboseMode=(qs("verbose","0")=="1");
 var time_in_Day;
 var time_in_hours;
 var time_in_min;
@@ -352,10 +352,17 @@ function GetTheEventAssigned(){
 	$("#CloseCaption").click(function() {
 		CaptionOn=!CaptionOn;
 		showCC(CaptionOn);
-		if (CaptionOn){ 
+		if (CaptionOn){
 			 $("#CloseCaption").css("background-color", "green");
 		}else{
 			$("#CloseCaption").css("background-color", "black");
+		}
+		if(VerboseMode) {
+			if (CaptionOn){
+			PostWorldEvent("userEvent","Caption On");
+			}else{
+			PostWorldEvent("userEvent","Caption Off");
+			}
 		}
 	});
 	
@@ -376,6 +383,13 @@ function GetTheEventAssigned(){
 			$("#EditingBtn").hide();
 			StartTimer();
 		}
+		if(VerboseMode) {
+			if (buttonFaceValue=="Pause"){
+			PostWorldEvent("userEvent","Pause On");
+			}else{
+			PostWorldEvent("userEvent","Pause Off");
+			}
+		}
 		
 	});
 	
@@ -395,7 +409,13 @@ function GetTheEventAssigned(){
 				$("#PauseBtn").show();
 			}
 		})
-		
+		if(VerboseMode) {
+			if ($("#ScorePanel").is(":visible")){
+			PostWorldEvent("userEvent","Score On");
+			}else{
+			PostWorldEvent("userEvent","Score Off");
+			}
+		}
 	});
 	
 	$("#FeedBackBtn").click(function() {
@@ -419,10 +439,20 @@ function GetTheEventAssigned(){
 		$("#CloseCaption").css("background-color", "black");
 		showCC(vid);
 	}
-	});
+	if(VerboseMode) {
+		if (vid){
+		PostWorldEvent("userEvent","Muted On");
+		}else{
+		PostWorldEvent("userEvent","Muted Off");
+		}
+	}
+});
 	
 	
 	$("#btNext").click(function() {
+		if(VerboseMode) {
+			PostWorldEvent("userEvent","Click Next Button");
+		}
 		//added by xhu
 		userSelectedItem="";
 		//added by xhu
@@ -461,6 +491,15 @@ function GetTheEventAssigned(){
 			if(SpeakRepeatList.length>0)
 			ShowRepeatButton();
 		}
+
+		if(VerboseMode) {
+			if (replayVideo==true){
+			PostWorldEvent("userEvent","Play Video");
+			}else{
+			PostWorldEvent("userEvent","Stopp video");
+			}
+		}
+
 	});
 	$("#readText").click(function() {
 		if ($('#readTextImg').attr('src') == "images/SpeakBefore.png") {
@@ -1127,17 +1166,15 @@ function StopTimer() {
 }
 function Speak2(data)
 {
-	if(talkingheadOn=="true")
-	{
-	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
-	}
-	else
-	{
+	if(talkingheadOn=="true") { 
+		document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "on");
+		if(VerboseMode) {
+			PostWorldEvent("CSALEvent","Speaking: "+data);
+		}
+	}else {
 	document.getElementById('agentsLarge').contentWindow.callBoth(data, "Speak", "off");
 	}
  
-
-
 }
 	function isPunctuation(ch)
 	{
@@ -1322,6 +1359,9 @@ function skipNextButton()
 }	   
 var askClickNext;
 function nextPage(data) {
+	if(VerboseMode) {
+	   PostWorldEvent("CSALEvent","NEXT "+data);
+	}
 	repeatList = [];
 	SpeakRepeatList=[];
 		var currentMediaUrlList1=currentMediaUrl.split("/");
@@ -1387,7 +1427,9 @@ function getAgentMessage(msg){
 	startLesson();
 }
   function GetWorldEvent(msg) {
-	 console.log("Word Msg "+msg);
+	if(VerboseMode) {
+	PostWorldEvent("CSALEvent",msg);
+	}
 	 if (InteractionHistory.length==0){
 		var pairData={"data":actions,"msg":msg,"CurrentMedia":CurrentMedia.Data};
 		AceResponse(pairData,"interaction");

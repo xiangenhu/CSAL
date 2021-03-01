@@ -319,6 +319,26 @@ function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
 	})
 }
 
+function PostWorldEvent(eventType,msg){
+	
+	var AnActor=TheLessonIDforXAPI;	
+	var verb="CSALMsg";			
+	var verbObj={
+			id:xAPIVerbBase+verb,
+			display:{
+				 "en":verb 
+			}
+		};
+	var activityObj=LearnerID;
+	var Extdata={};
+    var ResultObj={"response":eventType+":"+msg};
+	var statements=Compose(AnActor,
+							verbObj,
+							ResultObj,
+							activityObj,
+							Extdata);
+	ADL.XAPIWrapper.sendStatement(statements);
+}
 
 function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 	

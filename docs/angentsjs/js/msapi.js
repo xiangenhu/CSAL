@@ -126,6 +126,10 @@ function startShieldDown() {
 
 function playTTS(id, action,note) {
 	if (id==null) return;
+	if(VerboseMode) {
+		PostWorldEvent("CSALEvent",id+" Speaking:"+action);
+	}
+
 	idAnimating = id;
 	console.log("playTTS("+id+", "+action+")");
 	var char = chars[id];
