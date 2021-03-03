@@ -135,7 +135,7 @@ function LessonQuestionSummary(LessonID){
 			var student=LessonID.split("___")[2];
 			match={"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
 			"statement.object.mbox":"mailto:"+newLessonID+"@csal.autotutor.org",
-			"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org"
+			"statement.actor.mbox":student
 		 };
 		}
     var data=[{"$match":match},
