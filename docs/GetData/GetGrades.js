@@ -654,6 +654,7 @@ function CreateTable(LessonList,StudentList){
 		for (j=0;j<StudentList.length;j++){
 			var scoreFiled="score_"+i.toString()+"_"+j.toString();
 			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
+			console.log(scoreFiled);
 		}
 		html=html+"</tr>";
 	}
@@ -665,6 +666,7 @@ function CreateTable(LessonList,StudentList){
 		for (i=0;i<LessonList.length;i++){
 			for (j=0;j<StudentList.length;j++){
 				var scoreFiled="score_"+i.toString()+"_"+j.toString();
+				console.log(scoreFiled);
 				if (ThestudentID!=""){
 					GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
 				}else{
@@ -672,7 +674,7 @@ function CreateTable(LessonList,StudentList){
 				}
 			}
 		}
-	}, 5000);
+	}, 10);
 	
 }
 

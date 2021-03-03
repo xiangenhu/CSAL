@@ -549,28 +549,6 @@ function getACEActionAndPlay(ActionName){
 	  });
 }
 
-function GetRealScore(student,CourseGUID,target){
-	var setting=TheSetting;
-	var QueryObj=[
-					{"$match":{"statement.actor.mbox":student,
-							"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org",
-							"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
-					{"$project":{"Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
-					{"$project":{"Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
-				]
-	setting.data=JSON.stringify(QueryObj);
-	$.ajax(setting).success(function (response){
-		if (response.length==0){
-			$("#"+target).html("not yet started")
-			return;
-		}else{
-			for (var i=0;i<response.length;i++){
-				console.log(response[i]);
-			}
-		}
-	});
-}
-
 function GetReport(lrsURL,LRSusername,LRSpassword){
 	var queryObj={$and:[
 	{"actor.mbox":LearnerID.mbox},
