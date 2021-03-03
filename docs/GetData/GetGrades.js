@@ -246,6 +246,7 @@ function DetailsS_L(Lesson_and_Student){
 }
 
 
+
 function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":Student,
@@ -652,7 +653,7 @@ function CreateTable(LessonList,StudentList){
 		html=html+"</td>";
 		for (j=0;j<StudentList.length;j++){
 			var scoreFiled="score_"+i.toString()+"_"+j.toString();
-			html=html+"<td><span id='"+scoreFiled+"'>"+" "+"</span></td>";
+			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
 		}
 		html=html+"</tr>";
 	}
@@ -662,7 +663,12 @@ function CreateTable(LessonList,StudentList){
 	$("#TheGrades").show();
 	for (i=0;i<LessonList.length;i++){
 		for (j=0;j<StudentList.length;j++){
-			GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
+			var scoreFiled="score_"+i.toString()+"_"+j.toString();
+			if (ThestudentID!=""){
+				GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
+			}else{
+				GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
+			}
 		}
 	}
 }
@@ -782,4 +788,62 @@ function getTest(email,testID,n,target,link,Title){
 	  });
 
 
+}
+
+
+function GetRealScore(student,CourseGUID,target){
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+					{"$match":{"statement.actor.mbox":student,
+							"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org",
+							"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$sort":{"statement.timestamp":-1}},
+					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).success(function (response){
+		if (response.length==0){
+			$("#"+target).html("")
+			return;
+		}else{
+			var Levels=[];
+			// get The question levels
+			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+				if (Levels.includes(response[i].QuestLevelExt)){
+				}else{
+					Levels.push(response[i].QuestLevelExt)
+				}
+			}
+			}
+			// Get the performace Obj
+			var PerformaceObj={};
+			var PerfomaceScore={"true":0,"false":0};
+			for (var i=0;i<Levels.length;i++){
+				var PerfomaceScore={"true":0,"false":0};
+				PerformaceObj[Levels[i]]=PerfomaceScore;
+			}
+            for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+					if (response[i].Success){
+						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+					}else{
+						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+					}
+				}
+			}
+			var html="<ul>";
+			html="<li>The time of your recent access to this lesson: "+ReturnDate(response[0].time);
+			html=html+"<li>The first time you started this lesson : "+ReturnDate(response[response.length-1].time);
+			html=html+"<li>How did you answer questions in this lesson?<ul>";
+			for (i=0;i<Levels.length;i++){
+				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+			}
+			html=html+"</ul>";
+			html=html+"</ul>";
+			$("#"+target).html(html)
+			console.log(PerformaceObj);
+		}
+	});
 }

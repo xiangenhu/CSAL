@@ -11,6 +11,20 @@
 		return defaultstr;
 }
 
+var TheSetting={
+	"async": true,
+	"crossDomain": true,
+	"url": asatlrs+"/statements/aggregate",
+	"method": "POST",
+	"headers": {
+		"Authorization": "Basic "+getCSALTheDataAuthory(),
+	  "content-type": "application/json",
+	  "cache-control": "no-cache",
+	  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
+	},
+	"processData": false,
+	"data": "";
+  }
 
 var MoodleVar={"classID":qs("classID",""),
                "objID":qs("objID","") ,
@@ -531,6 +545,28 @@ function getACEActionAndPlay(ActionName){
 			}
 		}
 	  });
+}
+
+function GetRealScore(student,CourseGUID,target){
+	var setting=TheSetting;
+	var QueryObj=[
+					{"$match":{"statement.actor.mbox":student,
+							"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org",
+							"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$project":{"Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).success(function (response){
+		if (response.length==0){
+			$("#"+target).html("not yet started")
+			return;
+		}else{
+			for (var i=0;i<response.length;i++){
+				console.log(response[i]);
+			}
+		}
+	});
 }
 
 function GetReport(lrsURL,LRSusername,LRSpassword){
