@@ -12,7 +12,7 @@ var StudentEmailPhrase = "student";
 
 var TheLessonPages=[];
 var TheLearnerResponses=[];
-var ThestudentID=qs("sid","");
+var ThestudentID=decodeURIComponent(qs("sid",""));
 
 TheLRStheSetting={
     "async": true,
