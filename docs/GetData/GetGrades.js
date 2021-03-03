@@ -494,6 +494,10 @@ function LessonDetails(LessonID){
 	GetAverageTime(LessonID.split("__")[1]);
 	GetTheLessonQuestion(LessonID.split("__")[1]);
 }
+
+function StudentDetailsNew(student){
+	var TheStudent=student.split("_&_");
+}
 function StudentDetails(student){
 	var TheStudent=student.split("_&_");
 	var htmlbody="Information about this student ";
@@ -631,7 +635,11 @@ function CreateTable(LessonList,StudentList){
 	for (j=0;j<StudentList.length;j++){
 		var firstname=StudentList[j].name.split(" ")[0];
 		var studentjson=JSON.stringify(StudentList[j]);
-		html=html+"<th>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
+		if (ThestudentID==""){
+		    html=html+"<th>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
+		}else{
+			html=html+"<th>"+firstname+"</th>";
+		}
 		console.log(html)
 	}
 	html=html+"</tr>";
