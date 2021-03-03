@@ -8,7 +8,6 @@ var theLRSPassword=qs("lrspassword","CSALData");
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
 var classID=qs("classID","CSALUSNW01");
-var StudentEmailPhrase = "student";
 
 var TheLessonPages=[];
 var TheLearnerResponses=[];
