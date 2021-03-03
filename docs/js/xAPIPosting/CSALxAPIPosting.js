@@ -23,7 +23,7 @@ var TheSetting={
 	  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
 	},
 	"processData": false,
-	"data": "";
+	"data": ""
   }
 
 var MoodleVar={"classID":qs("classID",""),

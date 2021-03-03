@@ -661,16 +661,19 @@ function CreateTable(LessonList,StudentList){
 	html=html+"</table>";
 	$("#TheGrades").html(html);
 	$("#TheGrades").show();
-	for (i=0;i<LessonList.length;i++){
-		for (j=0;j<StudentList.length;j++){
-			var scoreFiled="score_"+i.toString()+"_"+j.toString();
-			if (ThestudentID!=""){
-				GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
-			}else{
-				GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
+	setTimeout(function(){ 
+		for (i=0;i<LessonList.length;i++){
+			for (j=0;j<StudentList.length;j++){
+				var scoreFiled="score_"+i.toString()+"_"+j.toString();
+				if (ThestudentID!=""){
+					GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
+				}else{
+					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
+				}
 			}
 		}
-	}
+	}, 5000);
+	
 }
 
 function GetGradesFor(User,Test,ObjID,n,i,j,link){
