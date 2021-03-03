@@ -88,11 +88,9 @@ function GetStudents(classID,student){
 			return
 		}else{
 			for (var i=0;i<response.length;i++){
-				if (response[i]._id.mbox.indexOf(StudentEmailPhrase)!=-1){
-					var studentID=response[i]._id;
+				var studentID=response[i]._id;
 //					studentID=studentID.split("@")[0].split(":")[1].split("tudent")[1];
 				StudentList.push(studentID);
-				}
 			}
 			console.log(StudentList);
 			CreateTable(TheLessions,StudentList)
