@@ -76,7 +76,7 @@ function GetStudents(classID,student){
 	}else{
 		match={"statement.result.response":classID};
 	}
-	var group={"_id":"$statement.actor.mbox",
+	var group={"_id":"$statement.actor",
 	           "Sum":{"$sum":1}};
 	var data=[
 	{"$match":match},
@@ -88,9 +88,9 @@ function GetStudents(classID,student){
 			return
 		}else{
 			for (var i=0;i<response.length;i++){
-				if (response[i]._id.indexOf(StudentEmailPhrase)!=-1){
+				if (response[i]._id.mbox.indexOf(StudentEmailPhrase)!=-1){
 					var studentID=response[i]._id;
-					studentID=studentID.split("@")[0].split(":")[1].split("tudent")[1];
+//					studentID=studentID.split("@")[0].split(":")[1].split("tudent")[1];
 				StudentList.push(studentID);
 				}
 			}
@@ -101,7 +101,7 @@ function GetStudents(classID,student){
 }
 function DetailsForStudentandLesson(student,lesson){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	var match={"statement.actor.mbox":student,
 	           "statement.object.mbox":"mailto:"+lesson+"@csal.autotutor.org",
 			   "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"
 			};
@@ -220,11 +220,13 @@ function DetailsS_L(Lesson_and_Student){
 	var LessonName=Lesson_and_Student.split("___")[0];
 	var LessonID=Lesson_and_Student.split("___")[1];
 	var Student=Lesson_and_Student.split("___")[2];
+	var Name=Lesson_and_Student.split("___")[3];
+
 	var htmlbody="Detailed Interaction of  "+ Student+ " and "+LessonName ;
 	htmlbody=htmlbody+"<div id='MoreDetails'>";
 	htmlbody=htmlbody+"<ul>";
-	htmlbody=htmlbody+"<li>First time "+Student+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
-	htmlbody=htmlbody+"<li>Last time  "+Student+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>First time "+Name+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>Last time  "+Name+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Number Questions Answered: <span class='numbers' id='LSAnswerDetails'></span></li>";
 //	htmlbody=htmlbody+"<li>Average time spend on each answer: <span class='numbers' id='TimeOnAnswer'></span></li>";
 //	htmlbody=htmlbody+"<li>How the answers of question in this lesson compared with others: <span class='numbers' id='AnswersCompared'></span></li>";
@@ -232,21 +234,21 @@ function DetailsS_L(Lesson_and_Student){
 	htmlbody=htmlbody+"</ul>";
 //	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+Lesson_and_Student+"\")'>More details</button> </div>";
 	htmlbody=htmlbody+"</div>"
-	OpenPopUp(LessonName+" and "+Student,"details ...",htmlbody,"popupWin");
+	OpenPopUp(LessonName+" and "+Name,"details ...",htmlbody,"popupWin");
 	DetailsForStudentandLesson(Student,LessonID);
 	TheScore={
 		"Hard":{"success":0,"failure":0},
 		"Medium":{"success":0,"failure":0},
 		"Easy":{"success":0,"failure":0}
 	  }
-	TheStudent="mailto:student"+Student+"@csal.autotutor.org";
-	StudentAnswerQuestions_Lesson(TheStudent,LessonID);
+//	var TheStudent="mailto:student"+Student+"@csal.autotutor.org";
+	StudentAnswerQuestions_Lesson(Student,LessonID);
 }
 
 
-function GetPassFailInProgress(Lesson,Student,i,j){
+function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.actor.mbox":"mailto:student"+Student+"@csal.autotutor.org",
+	var match={"statement.actor.mbox":Student,
 	           "statement.object.mbox":"mailto:"+Lesson[1]+"@csal.autotutor.org"
 			};
 	var data=[
@@ -256,7 +258,7 @@ function GetPassFailInProgress(Lesson,Student,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"\")'>?</button>"
+		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"___"+Name+"\")'>?</button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html("");
@@ -321,12 +323,12 @@ function GetScoreThe(Lesson,Student,i,j){
 function GetLTRecentLast(LessonID){
 	var thesetting=TheLRStheSetting;
 	var match;
-	if (ThestudentID==""){
+	if (ThestudentID!=""){
 	    match={"statement.actor.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
 	           "statement.result.response":classID,
 			   "statement.object.mbox":"mailto:"+ThestudentID};
 	}else{
-		vmatch={"statement.actor.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
+		match={"statement.actor.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
 	           "statement.result.response":classID};
 	}
 
@@ -462,8 +464,7 @@ function GetTheLessonQuestion(LessonID){
 				"statement.actor.mbox":"mailto:"+ThestudentID};
 	}else{
 		match={"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
-				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action",
-				"statement.actor.mbox":"mailto:"+ThestudentID};
+				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
 	}
 	var group={"_id":"$statement.actor.mbox","sum":{"$sum":1}};
 	var data=[{"$match":match},
@@ -496,6 +497,7 @@ function LessonDetails(LessonID){
 	GetTheLessonQuestion(LessonID.split("__")[1]);
 }
 function StudentDetails(student){
+	var TheStudent=student.split("_&_");
 	var htmlbody="Information about this student ";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>Most recent time took any lessons: <span class='numbers' id='RecentTime'></span></li>";
@@ -507,18 +509,18 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>Average time spent on each lesson: <span class='numbers' id='AverageTimeOnLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
-	OpenPopUp(student,"details of student "+student,htmlbody,"popupWin");
-	StdudentFirstLast(student);
-	StudentsStartedLesson(student);
-	averageTimeOnLesson(student);
-	StudentAnswerQuestions(student);
+	OpenPopUp(TheStudent[0],"details of student "+TheStudent[0],htmlbody,"popupWin");
+	StdudentFirstLast(TheStudent[1]);
+	StudentsStartedLesson(TheStudent[1]);
+	averageTimeOnLesson(TheStudent[1]);
+	StudentAnswerQuestions(TheStudent[1]);
 }
 
 
 
 function StudentAnswerQuestions(student){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	var match={"statement.actor.mbox":student,
 				"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
 
 	var data=[{"$match":match}, 
@@ -543,7 +545,7 @@ function StudentAnswerQuestions(student){
 }
 function averageTimeOnLesson(student){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	var match={"statement.actor.mbox":student,
 				"statement.result.response":classID};
 	var Group={"_id":"$statement.object.mbox",
 			   "sum":{"$sum":1},
@@ -571,7 +573,7 @@ function averageTimeOnLesson(student){
 }
 function StudentsStartedLesson(student){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.actor.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	var match={"statement.actor.mbox":student,
 				"statement.result.response":classID};
 	var Group={"_id":"$statement.verb.id",
 			   "sum":{"$sum":1},
@@ -601,7 +603,7 @@ function StudentsStartedLesson(student){
 
 function StdudentFirstLast(student){
 	var thesetting=TheLRStheSetting;
-	var match={"statement.object.mbox":"mailto:student"+student+"@csal.autotutor.org",
+	var match={"statement.object.mbox":student,
 				"statement.result.response":classID,
 			    "statement.verb.id":"https://app.skoonline.org/ITSProfile/interaction"};
 	var Group={"_id":"$statement.verb.id",
@@ -629,7 +631,10 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<thead>"
 	html=html+"<tr><th></th>";
 	for (j=0;j<StudentList.length;j++){
-		html=html+"<th>"+StudentList[j]+"<br/><button  onclick='StudentDetails(\""+StudentList[j]+"\")'>?</button></th>";
+		var firstname=StudentList[j].name.split(" ")[0];
+		var studentjson=JSON.stringify(StudentList[j]);
+		html=html+"<th>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
+		console.log(html)
 	}
 	html=html+"</tr>";
 	html=html+"</thead>";
@@ -640,7 +645,7 @@ function CreateTable(LessonList,StudentList){
 			html=html+"<tr> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
-			html=html+"<tr> <td><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
+			html=html+"<tr> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": <br/></span>";
 			html=html+"<span class='lessonDescription'> "+LessonList[i][3]+"</span>";
 		}
 
@@ -657,7 +662,7 @@ function CreateTable(LessonList,StudentList){
 	$("#TheGrades").show();
 	for (i=0;i<LessonList.length;i++){
 		for (j=0;j<StudentList.length;j++){
-			GetPassFailInProgress(LessonList[i],StudentList[j],i,j);
+			GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 		}
 	}
 }
