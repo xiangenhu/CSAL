@@ -222,7 +222,7 @@ function DetailsS_L(Lesson_and_Student){
 	var Student=Lesson_and_Student.split("___")[2];
 	var Name=Lesson_and_Student.split("___")[3];
 
-	var htmlbody="Detailed Interaction of  "+ Student+ " and "+LessonName ;
+	var htmlbody="Detailed Interaction of  "+ Name+ " with "+LessonName ;
 	htmlbody=htmlbody+"<div id='MoreDetails'>";
 	htmlbody=htmlbody+"<ul>";
 	htmlbody=htmlbody+"<li>First time "+Name+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
