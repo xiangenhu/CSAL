@@ -636,10 +636,11 @@ function CreateTable(LessonList,StudentList){
 	html=html+'<tbody style="height: 10px !important; overflow: scroll; ">';
 	for (i=0;i<LessonList.length;i++){
 		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
-		html=html+"<tr> <td>"+LessonList[i][0];
         if (ThestudentID==""){
+			html=html+"<tr> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
+			html=html+"<tr> <td><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
 			html=html+"<span class='lessonDescription'> "+LessonList[i][3]+"</span>";
 		}
 
