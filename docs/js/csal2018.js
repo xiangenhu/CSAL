@@ -372,7 +372,7 @@ function GetTheEventAssigned(){
 		if  (buttonFaceValue=="Pause"){ 
 			$("#PauseBtn").html("Continue");
 			$("#FeedBackBtn").show();
-			$("#ScoreBtn").show();
+		//	$("#ScoreBtn").show();
 			if (allowediting){
 			   $("#EditingBtn").show();
 			}
