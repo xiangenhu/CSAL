@@ -11,6 +11,8 @@
 		return defaultstr;
 }
 
+
+
 var TheSetting={
 	"async": true,
 	"crossDomain": true,
