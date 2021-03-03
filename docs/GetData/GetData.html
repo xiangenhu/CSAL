@@ -46,6 +46,11 @@
 			margin-top: -300px;
 		}
 
+		.lessonDescription{
+			font-style: italic;
+			font-weight: bold;
+			color:rgb(0, 0, 0);
+		}
 
 		
 		.numbers{
@@ -61,7 +66,7 @@
    <script>
 		$(document).ready(function(){
             GL="0";
-            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/4/public/values?alt=json-in-script&callback=GetLessons", "js");
+            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/5/public/values?alt=json-in-script&callback=GetLessons", "js");
  		});
 	</script>
 	<div id="TheGrades"></div>
