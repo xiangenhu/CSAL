@@ -823,6 +823,12 @@ function GetRealScore(student,CourseGUID,target){
 			var Levels=[];
 			// get The question levels
 			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt==null){
+					response[i].QuestLevelExt="Other"
+				}
+				if (response[i].QuestLevelExt==""){
+					response[i].QuestLevelExt="Not Rated"
+				}
 				if (response[i].QuestLevelExt!=null){
 				if (Levels.includes(response[i].QuestLevelExt)){
 				}else{
@@ -886,6 +892,12 @@ function LessonStudentDetailsNew(TheLessonID,Student,Target){
 			var Levels=[];
 			// get The question levels
 			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt==null){
+					response[i].QuestLevelExt="Other"
+				}
+				if (response[i].QuestLevelExt==""){
+					response[i].QuestLevelExt="Not Rated"
+				}
 				if (response[i].QuestLevelExt!=null){
 				if (Levels.includes(response[i].QuestLevelExt)){
 				}else{
@@ -938,15 +950,21 @@ function LessonDetailsNew(TheLessonID,Target){
 			$("#"+Target).html("")
 			return;
 		}else{
-			var Levels=[];
-			// get The question levels
+				var Levels=[];
+				// get The question levels
 			for (var i=0;i<response.length;i++){
-				if (response[i].QuestLevelExt!=null){
-				if (Levels.includes(response[i].QuestLevelExt)){
-				}else{
-					Levels.push(response[i].QuestLevelExt)
+				if (response[i].QuestLevelExt==null){
+					response[i].QuestLevelExt="Other"
 				}
-			}
+				if (response[i].QuestLevelExt==""){
+					response[i].QuestLevelExt="Not Rated"
+				}
+				if (response[i].QuestLevelExt!=null){
+					if (Levels.includes(response[i].QuestLevelExt)){
+					}else{
+						Levels.push(response[i].QuestLevelExt)
+					}
+				}
 			}
 			// Get the performace Obj
 			var PerformaceObj={};
@@ -997,6 +1015,12 @@ function StudentDetailsNew(student,target){
 			var Levels=[];
 			// get The question levels
 			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt==null){
+					response[i].QuestLevelExt="Other"
+				}
+				if (response[i].QuestLevelExt==""){
+					response[i].QuestLevelExt="Not Rated"
+				}
 				if (response[i].QuestLevelExt!=null){
 				if (Levels.includes(response[i].QuestLevelExt)){
 				}else{
