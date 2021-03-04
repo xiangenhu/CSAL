@@ -88,8 +88,9 @@ function GetStudents(classID,student){
 		}else{
 			for (var i=0;i<response.length;i++){
 				var studentID=response[i]._id;
-//					studentID=studentID.split("@")[0].split(":")[1].split("tudent")[1];
-				StudentList.push(studentID);
+				if (studentID.name.indexOf("github")==-1){
+					StudentList.push(studentID);
+				}
 			}
 			console.log(StudentList);
 			CreateTable(TheLessions,StudentList)
@@ -231,15 +232,17 @@ function DetailsS_L(Lesson_and_Student){
 	htmlbody=htmlbody+"</ul>";
 //	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+Lesson_and_Student+"\")'>More details</button> </div>";
 	htmlbody=htmlbody+"</div>"
+	htmlbody="<span id='SLDetails'></span>"
 	OpenPopUp(LessonName+" and "+Name,"details ...",htmlbody,"popupWin");
-	DetailsForStudentandLesson(Student,LessonID);
-	TheScore={
-		"Hard":{"success":0,"failure":0},
-		"Medium":{"success":0,"failure":0},
-		"Easy":{"success":0,"failure":0}
-	  }
+	LessonStudentDetailsNew(LessonID,Lesson_and_Student,"SLDetails")
+//	DetailsForStudentandLesson(Student,LessonID);
+//	TheScore={
+//		"Hard":{"success":0,"failure":0},
+//		"Medium":{"success":0,"failure":0},
+//		"Easy":{"success":0,"failure":0}
+//	  }
 //	var TheStudent="mailto:student"+Student+"@csal.autotutor.org";
-	StudentAnswerQuestions_Lesson(Student,LessonID);
+//	StudentAnswerQuestions_Lesson(Student,LessonID);
 }
 
 
@@ -487,17 +490,15 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"<li>Average Time between Interactions: <span class='numbers' id='AVTime'></span></li>";
 	htmlbody=htmlbody+"<li>The questions answered by students: <span class='numbers' id='LSAnswerDetails'></span></li>";
 	htmlbody=htmlbody+"</ul>";
-	
+	htmlbody="<span id='TheLessonDetails'></span>"
 //	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+LessonID.split("__")[1]+"\")'>More details</button> </div>";
 	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
-	GetLTRecentLast(LessonID.split("__")[1]);
-	GetAverageTime(LessonID.split("__")[1]);
-	GetTheLessonQuestion(LessonID.split("__")[1]);
+	LessonDetailsNew(LessonID.split("__")[1],"TheLessonDetails")
+//	GetLTRecentLast(LessonID.split("__")[1]);
+//	GetAverageTime(LessonID.split("__")[1]);
+//	GetTheLessonQuestion(LessonID.split("__")[1]);
 }
 
-function StudentDetailsNew(student){
-	var TheStudent=student.split("_&_");
-}
 function StudentDetails(student){
 	var TheStudent=student.split("_&_");
 	var htmlbody="Information about this student ";
@@ -511,11 +512,13 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>Average time spent on each lesson: <span class='numbers' id='AverageTimeOnLesson'></span></li>";
 	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
+	htmlbody="<span id='TheDeatisl'></span>";
 	OpenPopUp(TheStudent[0],"details of student "+TheStudent[0],htmlbody,"popupWin");
-	StdudentFirstLast(TheStudent[1]);
-	StudentsStartedLesson(TheStudent[1]);
-	averageTimeOnLesson(TheStudent[1]);
-	StudentAnswerQuestions(TheStudent[1]);
+	StudentDetailsNew(TheStudent[1],"TheDeatisl")
+//	StdudentFirstLast(TheStudent[1]);
+//	StudentsStartedLesson(TheStudent[1]);
+//	averageTimeOnLesson(TheStudent[1]);
+//	StudentAnswerQuestions(TheStudent[1]);
 }
 
 
@@ -856,4 +859,179 @@ function GetRealScore(student,CourseGUID,target){
 			console.log(PerformaceObj);
 		}
 	});
+}
+
+
+function LessonStudentDetailsNew(TheLessonID,Student,Target){
+	var setting=TheLRStheSetting;
+	
+	var LessonName=Student.split("___")[0];
+	var LessonID=Student.split("___")[1];
+	var TheStudent=Student.split("___")[2];
+	var Name=Student.split("___")[3];
+	var QueryObj=[
+					{"$match":{"statement.object.mbox":"mailto:"+TheLessonID+"@csal.autotutor.org",
+					           "statement.actor.mbox":TheStudent,
+					           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$sort":{"statement.timestamp":-1}},
+					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).success(function (response){
+		if (response.length==0){
+			$("#"+Target).html("")
+			return;
+		}else{
+			var Levels=[];
+			// get The question levels
+			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+				if (Levels.includes(response[i].QuestLevelExt)){
+				}else{
+					Levels.push(response[i].QuestLevelExt)
+				}
+			}
+			}
+			// Get the performace Obj
+			var PerformaceObj={};
+			var PerfomaceScore={"true":0,"false":0};
+			for (var i=0;i<Levels.length;i++){
+				var PerfomaceScore={"true":0,"false":0};
+				PerformaceObj[Levels[i]]=PerfomaceScore;
+			}
+            for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+					if (response[i].Success){
+						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+					}else{
+						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+					}
+				}
+			}
+			var html="<ul>";
+			html="<li>"+Name+" accessed this lesson between: "+ReturnDate(response[response.length-1].time) +" and "+ ReturnDate(response[0].time);
+			html=html+"<li>Questions in this lesson answered by "+Name+":<ul>";
+			for (i=0;i<Levels.length;i++){
+				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+			}
+			html=html+"</ul>";
+			html=html+"</ul>";
+			$("#"+Target).html(html)
+			console.log(PerformaceObj);
+		}
+	});
+}
+
+function LessonDetailsNew(TheLessonID,Target){
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+					{"$match":{"statement.object.mbox":"mailto:"+TheLessonID+"@csal.autotutor.org",
+					           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$sort":{"statement.timestamp":-1}},
+					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).success(function (response){
+		if (response.length==0){
+			$("#"+Target).html("")
+			return;
+		}else{
+			var Levels=[];
+			// get The question levels
+			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+				if (Levels.includes(response[i].QuestLevelExt)){
+				}else{
+					Levels.push(response[i].QuestLevelExt)
+				}
+			}
+			}
+			// Get the performace Obj
+			var PerformaceObj={};
+			var PerfomaceScore={"true":0,"false":0};
+			for (var i=0;i<Levels.length;i++){
+				var PerfomaceScore={"true":0,"false":0};
+				PerformaceObj[Levels[i]]=PerfomaceScore;
+			}
+            for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+					if (response[i].Success){
+						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+					}else{
+						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+					}
+				}
+			}
+			var html="<ul>";
+			html="<li>The lesson was accessed between: "+ReturnDate(response[response.length-1].time) +" and "+ ReturnDate(response[0].time);
+			html=html+"<li>Questions answered by students:<ul>";
+			for (i=0;i<Levels.length;i++){
+				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+			}
+			html=html+"</ul>";
+			html=html+"</ul>";
+			$("#"+Target).html(html)
+			console.log(PerformaceObj);
+		}
+	});
+}
+
+function StudentDetailsNew(student,target){
+	var TheStudent=student.split("_&_");
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+					{"$match":{"statement.actor.mbox":student,
+					           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$sort":{"statement.timestamp":-1}},
+					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).success(function (response){
+		if (response.length==0){
+			$("#"+target).html("")
+			return;
+		}else{
+			var Levels=[];
+			// get The question levels
+			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+				if (Levels.includes(response[i].QuestLevelExt)){
+				}else{
+					Levels.push(response[i].QuestLevelExt)
+				}
+			}
+			}
+			// Get the performace Obj
+			var PerformaceObj={};
+			var PerfomaceScore={"true":0,"false":0};
+			for (var i=0;i<Levels.length;i++){
+				var PerfomaceScore={"true":0,"false":0};
+				PerformaceObj[Levels[i]]=PerfomaceScore;
+			}
+            for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+					if (response[i].Success){
+						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+					}else{
+						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+					}
+				}
+			}
+			var html="<ul>";
+			html="<li>The time of your recent access to this lesson: "+ReturnDate(response[0].time);
+			html=html+"<li>The first time you started this lesson : "+ReturnDate(response[response.length-1].time);
+			html=html+"<li>How did you answer questions in this lesson?<ul>";
+			for (i=0;i<Levels.length;i++){
+				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+			}
+			html=html+"</ul>";
+			html=html+"</ul>";
+			$("#"+target).html(html)
+			console.log(PerformaceObj);
+		}
+	});
+
 }
