@@ -838,17 +838,17 @@ function GetRealScore(student,CourseGUID,target){
 			}
 			// Get the performace Obj
 			var PerformaceObj={};
-			var PerfomaceScore={"true":0,"false":0};
+			var PerfomaceScore={"correct":0,"incorrect":0};
 			for (var i=0;i<Levels.length;i++){
-				var PerfomaceScore={"true":0,"false":0};
+				var PerfomaceScore={"correct":0,"incorrect":0};
 				PerformaceObj[Levels[i]]=PerfomaceScore;
 			}
             for (var i=0;i<response.length;i++){
 				if (response[i].QuestLevelExt!=null){
 					if (response[i].Success){
-						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+						PerformaceObj[response[i].QuestLevelExt].correct=PerformaceObj[response[i].QuestLevelExt].correct+1;
 					}else{
-						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+						PerformaceObj[response[i].QuestLevelExt].incorrect=PerformaceObj[response[i].QuestLevelExt].incorrect+1;
 					}
 				}
 			}
@@ -907,17 +907,17 @@ function LessonStudentDetailsNew(TheLessonID,Student,Target){
 			}
 			// Get the performace Obj
 			var PerformaceObj={};
-			var PerfomaceScore={"true":0,"false":0};
+			var PerfomaceScore={"correct":0,"incorrect":0};
 			for (var i=0;i<Levels.length;i++){
-				var PerfomaceScore={"true":0,"false":0};
+				var PerfomaceScore={"correct":0,"incorrect":0};
 				PerformaceObj[Levels[i]]=PerfomaceScore;
 			}
             for (var i=0;i<response.length;i++){
 				if (response[i].QuestLevelExt!=null){
 					if (response[i].Success){
-						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+						PerformaceObj[response[i].QuestLevelExt].correct=PerformaceObj[response[i].QuestLevelExt].correct+1;
 					}else{
-						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+						PerformaceObj[response[i].QuestLevelExt].incorrect=PerformaceObj[response[i].QuestLevelExt].incorrect+1;
 					}
 				}
 			}
@@ -968,17 +968,17 @@ function LessonDetailsNew(TheLessonID,Target){
 			}
 			// Get the performace Obj
 			var PerformaceObj={};
-			var PerfomaceScore={"true":0,"false":0};
+			var PerfomaceScore={"correct":0,"incorrect":0};
 			for (var i=0;i<Levels.length;i++){
-				var PerfomaceScore={"true":0,"false":0};
+				var PerfomaceScore={"correct":0,"incorrect":0};
 				PerformaceObj[Levels[i]]=PerfomaceScore;
 			}
             for (var i=0;i<response.length;i++){
 				if (response[i].QuestLevelExt!=null){
 					if (response[i].Success){
-						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+						PerformaceObj[response[i].QuestLevelExt].correct=PerformaceObj[response[i].QuestLevelExt].correct+1;
 					}else{
-						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+						PerformaceObj[response[i].QuestLevelExt].incorrect=PerformaceObj[response[i].QuestLevelExt].incorrect+1;
 					}
 				}
 			}
@@ -1030,17 +1030,17 @@ function StudentDetailsNew(student,target){
 			}
 			// Get the performace Obj
 			var PerformaceObj={};
-			var PerfomaceScore={"true":0,"false":0};
+			var PerfomaceScore={"correct":0,"incorrect":0};
 			for (var i=0;i<Levels.length;i++){
-				var PerfomaceScore={"true":0,"false":0};
+				var PerfomaceScore={"correct":0,"incorrect":0};
 				PerformaceObj[Levels[i]]=PerfomaceScore;
 			}
             for (var i=0;i<response.length;i++){
 				if (response[i].QuestLevelExt!=null){
 					if (response[i].Success){
-						PerformaceObj[response[i].QuestLevelExt].true=PerformaceObj[response[i].QuestLevelExt].true+1;
+						PerformaceObj[response[i].QuestLevelExt].correct=PerformaceObj[response[i].QuestLevelExt].correct+1;
 					}else{
-						PerformaceObj[response[i].QuestLevelExt].false=PerformaceObj[response[i].QuestLevelExt].false+1;
+						PerformaceObj[response[i].QuestLevelExt].incorrect=PerformaceObj[response[i].QuestLevelExt].incorrect+1;
 					}
 				}
 			}
