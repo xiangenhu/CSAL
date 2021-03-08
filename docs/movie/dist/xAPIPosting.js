@@ -11,6 +11,7 @@
 		return defaultstr;
 }
 var wrapper;
+
 var TheLRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
 var TheLRSLogin=qs("lrslogin","CSALData");
 var theLRSPassword=qs("lrspassword","CSALData");

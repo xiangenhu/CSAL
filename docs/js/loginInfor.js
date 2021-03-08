@@ -155,11 +155,16 @@ if (anApp=="csal"){
 		"&lessonTitle="+qs("lessonTitle","")+
 		"&email="+email+
 		"&ef="+qs("ef","0")+
-		"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
 		"&editing="+AllowEditing+
+		"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
+// Will Change Later
 		"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
 		"&asatlrslogin="+qs("asatlrslogin","asatScripts")+
-		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+				
+		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+	
+		"&lrs="+qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/")+
+		"&lrslogin="+qs("lrslogin","CSALData")+
+		"&lrspassword="+qs("lrspassword","CSALData")+			
+// Will Change Later			
 		"&fullname="+fullname+
 		"&school="+qs("school","https://class.x-in-y.com")+
 		"&ssid="+qsp("aicc_sid","Missing")+
