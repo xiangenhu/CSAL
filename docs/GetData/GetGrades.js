@@ -1060,3 +1060,48 @@ function StudentDetailsNew(student,target){
 	});
 
 }
+
+
+var ExistingStudents=[];
+var MaximumNumberStudent=999;
+function CreateExistingStudents(){
+for (var i=0;i<MaximumNumberStudent;i++){
+	var StudentMbox="mailto:student"+(1000+i).toString()+"@csal.autotutor.org";
+	var StudentLogin="student"+(1000+i).toString();
+	var StudentPassword="Student#"+(1000+i).toString();
+	StudentObj={"mbx":StudentMbox,
+				"login":StudentLogin,
+				"password":StudentPassword}
+	ExistingStudents.push(JSON.stringify(StudentObj)); 
+}
+}
+
+function GetAllStudents(){
+	CreateExistingStudents();
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+		{"$match":{"statement.verb.id":"http://id.tincanapi.com/verb/viewed"}},
+		{"$group":{"_id":"$statement.actor.mbox","sum":{"$sum":1}}}
+	]
+setting.data=JSON.stringify(QueryObj);
+$.ajax(setting).success(function (response){
+		if (response.length==0){
+		return;
+		}else{
+			console.log(ExistingStudents.length)
+			for (var i=1;i<response.length;i++){
+				for (var j=MaximumNumberStudent-1;j>0;j--){
+					console.log(ExistingStudents[j],response[i]._id);
+					if (ExistingStudents[j].indexOf(response[i]._id)>-1){
+						ExistingStudents.splice(j, 1);
+					}
+				}
+			}
+			var randomIndex=Math.floor(Math.random()*ExistingStudents.length);
+			var UserObj=JSON.parse(ExistingStudents[randomIndex]);
+			var html="login <b>"+UserObj.login+"</b> password: <b>"+UserObj.password+"</b>"
+			$("#AvaiableLogin").html(html);
+			console.log(ExistingStudents.length)
+		}
+	});
+}
