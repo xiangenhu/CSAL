@@ -61,7 +61,7 @@ function getCSALTheDataAuthory(){
 
 var SKOSchool="AutoTutorARC:"+qs("client","moodle");
 var sessionID="http://"+qs("ssid","anAICC_sid");
-var TheSchool=qs("school","https://class.x-in-y.com");
+var TheSchool=qs("school","https://csal.autotutor.org");
 // var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
 var SKOTitle=decodeURIComponent(qs("LessonName","alesson"));
 
