@@ -340,7 +340,7 @@ if(app.indexOf("SKO")!=-1){
 
 if (qs("GL",GL)=="2"){
   if (qs("NS",NS)=="1"){
-	  fullname=qs("fullname","Guest of Memphis");
+	  fullname=qs("fullname","Sam Scholar");
 	  email=qs("email","guest@autotutor.org");
   }else{
 	  fullname=getCookie(app+"_name");
