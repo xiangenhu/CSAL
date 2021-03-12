@@ -89,7 +89,7 @@ function GetFullName(){
 		if (TheFullName.indexOf("Friend")>-1){
 			TheFullName="Sam Scholar";
 		}
-		return TheFullNamel
+		return TheFullName;
 	}
 }
 var fullname=GetFullName();
