@@ -70,9 +70,9 @@ function GetEmail(){
 	if (GoogleLogin){
 		return userEmail;
 	}else{
-		var TheEmail=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
-		if (TheEmail.indexOf("Friend")>-1){
-			TheEmail="Sam Scholar";
+		var TheEmail=decodeURIComponent(qs("user",qs("UID","guest@autotutor.org")));
+		if (TheEmail.indexOf("localhost")>-1){
+			TheEmail="guest@autotutor.org";
 		}
 		return TheEmail;
 	}
