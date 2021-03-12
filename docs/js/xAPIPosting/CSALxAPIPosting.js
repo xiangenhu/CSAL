@@ -65,7 +65,6 @@ var TheSchool=qs("school","https://csal.autotutor.org");
 // var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
 var SKOTitle=decodeURIComponent(qs("LessonName","alesson"));
 
-
 function GetEmail(){
 	if (GoogleLogin){
 		return userEmail;
@@ -110,7 +109,6 @@ var LearnerID={mbox:"mailto:"+user,
 				 objectType:"Agent"
 				};
 					
-
 function UpdateTotalScore(){
 	totalScore.Hard.failure=totalScore.Hard.failure+accumlateScore.Hard.failure;
 	totalScore.Medium.failure=totalScore.Medium.failure+accumlateScore.Medium.failure;
