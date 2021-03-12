@@ -79,8 +79,6 @@ function GetEmail(){
 }
 var user=GetEmail();
 
-
-
 function GetFullName(){
 	if (GoogleLogin){
 		return Theauthorname;
