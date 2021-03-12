@@ -70,7 +70,11 @@ function GetEmail(){
 	if (GoogleLogin){
 		return userEmail;
 	}else{
-		return decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
+		var TheEmail=decodeURIComponent(qs("user",qs("UID","csalguest@csal.autotutor.org")));
+		if (TheEmail.indexOf("Friend")>-1){
+			TheEmail="Sam Scholar";
+		}
+		return TheEmail;
 	}
 }
 var user=GetEmail();
@@ -81,7 +85,11 @@ function GetFullName(){
 	if (GoogleLogin){
 		return Theauthorname;
 	}else{
-		return decodeURIComponent(qs("fullname",qs("SName","John Doe")));
+		var TheFullName=decodeURIComponent(qs("fullname",qs("SName","John Doe")));
+		if (TheFullName.indexOf("Friend")>-1){
+			TheFullName="Sam Scholar";
+		}
+		return TheFullNamel
 	}
 }
 var fullname=GetFullName();
