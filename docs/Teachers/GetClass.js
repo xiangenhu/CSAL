@@ -78,11 +78,13 @@ var TheScore={
 function GetClass(json){
 	var spData = json.feed.entry;
 	var i;
-	for (i=1;3*i<spData.length;i++){
-		var line=i*3;
+	for (i=1;5*i<spData.length;i++){
+		var line=i*5;
 		var row=[spData[line].content["$t"],
 					spData[line+1].content["$t"],
-					spData[line+2].content["$t"]
+					spData[line+2].content["$t"],
+					spData[line+3].content["$t"],
+					spData[line+4].content["$t"]
 				];
 		TheClasses.push(row);
 	}
