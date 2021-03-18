@@ -2,9 +2,6 @@
 <html>
  <head>
     <title>CSAL Web Application</title>
- <!--
-      <script src="https://tools.autotutor.org/utils/ATcommonjs/common.js" type="text/javascript"></script>
- -->  
 	
 	
     <script src="https://tools.autotutor.org/author/editor/jquery.min.js" type="text/javascript"></script>
@@ -18,12 +15,10 @@
 	<link href="https://tools.autotutor.org/author/editor/themes/editor.css" rel="stylesheet" type="text/css"/>
     
 	<script src="../js/def.js"></script>
-	<script src="../js/ShowMovies.js"></script>
 
-	<script src="GetGrades.js"></script>	
+	<script src="GetClass.js"></script>	
 	<style>
 				
-	
 		button{
 			color: blue;
 		}	
@@ -61,6 +56,25 @@
 			font-weight: bold;
 			color:rgb(0, 0, 0);
 		}
+		#AskQuestion{
+			position:absolute;
+			width:400px;
+			height:300px;
+			top:50%;
+			left:50%;
+			margin-left:-200px;   /* negative half of width above */
+			margin-top:-150px;   /* negative half of height above */
+		}
+		#ClassInfor{
+			position:absolute;
+			display: none;
+			width:400px;
+			height:300px;
+			top:50%;
+			left:50%;
+			margin-left:-200px;   /* negative half of width above */
+			margin-top:-150px;   /* negative half of height above */
+		}
 	</style>
 	
 </head>
@@ -69,10 +83,14 @@
    <script>
 		$(document).ready(function(){
             GL="0";
-            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1Io6YE0Z9iGbus1cT58y-N6POBkQ5VOTnRlTmjP4iGG0")+"/5/public/values?alt=json-in-script&callback=GetLessons", "js");
+            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
  		});
 	</script>
-	<div id="TheGrades"></div>
-	<div id="popupWin"></div>
+	<div id="AskQuestion">
+	Hello, <br/>Welcome to ARC. If you would like to be a teacher fpr reading comprehension, you may fill-in the information bellow. We will create a class for you. <br/><br>
+	Your email: <input id="TheEmail"/><br/><br/>Your name <input id="TheFullName"/><br/><br/>
+	<button onclick="submitInfo()">Submit</button>
+     </div>
+	<div id="ClassInfor"></div>
 </body>
 </html>
