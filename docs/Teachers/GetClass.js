@@ -99,8 +99,10 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	html=html+"Welcome to Adult Reading Comprehension (ARC) website! <br/> You have been approved to be a teacher. <br/>We have created a class for you. ";
 	html=html+"<br/>Please use the following login information to login:<ul>";
 	html=html+"<li>Login: <b>"+TheOriginalList[randomindex][1]+"</b>";
-	html=html+"<li>password: <b>"+TheOriginalList[randomindex][2]+"</b>"
-	html=html+"<li>URL: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
+	html=html+"<li>password: <b>"+TheOriginalList[randomindex][2]+"</b>";
+	html=html+"<li>Instruction to teacher: <b>"+TheOriginalList[randomindex][3]+"</b>";
+	html=html+"<li>List of your student: <b>"+TheOriginalList[randomindex][4]+"</b>"
+	html=html+"<li>URL to login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
 	
 	var TeacherCourseObj={"TeacherEmail":TeacherEmail,
 		"TeacherName":TeacherName,
@@ -111,6 +113,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	
 	var TheLink=encodeURI(JSON.stringify(TeacherCourseObj));
 	html=html+"<p><button class='btn' onclick='TakeTeacher(\""+TheLink+"\")'>Move Forward</button></p>"; 
+	sendEmail(TheEmail,"Welcome",html);
 	return html;
 }
 
@@ -150,6 +153,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
 
 					$("#ClassInfor").html(html);
+					sendEmail(TheEmail,"Welcome",html);
 					return
 				}
 			}
@@ -236,4 +240,18 @@ function submitInfo(){
 	}else{
 		alert("Need an email");
 	}
+}
+
+function sendEmail(email,subject,body) {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "read.autotutor@gmail.com",
+	Password : "csal2020",
+	To : email,
+	From : "read.autotutor@gmail.com",
+	Subject : subject,
+	Body : body,
+	}).then(
+		message => alert("mail sent to "+email)
+	);
 }
