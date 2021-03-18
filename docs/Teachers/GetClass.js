@@ -145,7 +145,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"<ul>";
 					html=html+"<li>Login: <b>"+response[i].login+"</b>";
 					html=html+"<li>password: <b>"+response[i].password+"</b>";
-					html=html+"<li>URL: <b><a href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
+					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
 					html=html+"<p><button class='btn' >OK</button></p>"; 
 
 					$("#ClassInfor").html(html);
