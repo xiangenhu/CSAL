@@ -98,7 +98,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	html=html+"<br/>Please use the following login information to login:<ul>";
 	html=html+"<li>Login: <b>"+TheOriginalList[randomindex][1]+"</b>";
 	html=html+"<li>password: <b>"+TheOriginalList[randomindex][2]+"</b>"
-	html=html+"<li>URL: <b><a href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
+	html=html+"<li>URL: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
 	
 	var TeacherCourseObj={"TeacherEmail":TeacherEmail,
 		"TeacherName":TeacherName,
@@ -146,7 +146,6 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"<li>Login: <b>"+response[i].login+"</b>";
 					html=html+"<li>password: <b>"+response[i].password+"</b>";
 					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
-					html=html+"<p><button class='btn' >OK</button></p>"; 
 
 					$("#ClassInfor").html(html);
 					return
