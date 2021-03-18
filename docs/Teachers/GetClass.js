@@ -16,7 +16,7 @@ var ITSRoot=qs("ITSRoot","https://www.autotutor.org/");
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
-
+var TheEmailMessage;
 
 ADL.launch(function(err, launchdata, xAPIWrapper) {
 	if (!err) {
@@ -100,20 +100,23 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	html=html+"<br/>Please use the following login information to login:<ul>";
 	html=html+"<li>Login: <b>"+TheOriginalList[randomindex][1]+"</b>";
 	html=html+"<li>password: <b>"+TheOriginalList[randomindex][2]+"</b>";
-	html=html+"<li>Instruction to teacher: <b>"+TheOriginalList[randomindex][3]+"</b>";
-	html=html+"<li>List of your student: <b>"+TheOriginalList[randomindex][4]+"</b>"
+	html=html+"<li>Instruction to teacher: <a href='"+TheOriginalList[randomindex][3]+"' target='new'></a><b>"+TheOriginalList[randomindex][3]+"</b></a>";
+	html=html+"<li>List of your student: <a href='"+TheOriginalList[randomindex][4]+"' target='new'> <b>"+TheOriginalList[randomindex][4]+"</b> </a>"
 	html=html+"<li>URL to login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
 	
 	var TeacherCourseObj={"TeacherEmail":TeacherEmail,
 		"TeacherName":TeacherName,
 		"Course":TheOriginalList[randomindex][0],
 		"login":TheOriginalList[randomindex][1],
-		"password":TheOriginalList[randomindex][2]
+		"password":TheOriginalList[randomindex][2],
+		"instruction":TheOriginalList[randomindex][3],
+		"students":TheOriginalList[randomindex][4]
 	}
 	
 	var TheLink=encodeURI(JSON.stringify(TeacherCourseObj));
+	TheEmailMessage=html;
 	html=html+"<p><button class='btn' onclick='TakeTeacher(\""+TheLink+"\")'>Move Forward</button></p>"; 
-	sendEmail(TheEmail,"Welcome",html);
+//      	sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
 	return html;
 }
 
@@ -128,7 +131,9 @@ function FindTeacher(TeacherEmail,TeacherName){
 				"teacherName":"$teacherName",
 				"course":"$course",
 				"login":"$loginpassword.login",
-				"password":"$loginpassword.password"
+				"password":"$loginpassword.password",
+				"instruction":"$loginpassword.instruction",
+				"students":"$loginpassword.students"
 			};			 
 	var data=[
 		{"$match":match},
@@ -150,10 +155,13 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"<ul>";
 					html=html+"<li>Login: <b>"+response[i].login+"</b>";
 					html=html+"<li>password: <b>"+response[i].password+"</b>";
+					html=html+"<li>Instruction to teacher: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
+					html=html+"<li>List of your student: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
 					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
 
 					$("#ClassInfor").html(html);
-					sendEmail(TheEmail,"Welcome",html);
+					TheEmailMessage=html;
+					sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
 					return
 				}
 			}
@@ -212,7 +220,11 @@ function xAPIPost(TeacherObj){
 				 "en":verb 
 			}
 		};
-	var ResultObj={"login":TeacherObj.login,"password":TeacherObj.password}
+	var ResultObj={"login":TeacherObj.login,
+	               "password":TeacherObj.password,
+				   "instruction":TeacherObj.instruction,
+	               "students":TeacherObj.students,
+				}
 	var extensionObj={};
 	var activityObj={"id":ITSRoot+"ITSProfile/"+verb};
 	extensionObj[ITSRoot+"ITSProfile/"+verb]=ResultObj;
@@ -222,8 +234,33 @@ function xAPIPost(TeacherObj){
 							ResultObj,
 							activityObj);
 	console.log(JSON.stringify(statements))
-	ADL.XAPIWrapper.sendStatement(statements);
+	ADL.XAPIWrapper.sendStatement(statements,ConfirmationFromLRS);
 }
+
+
+
+
+var ConfirmationFromLRS = function (resp, thing) {
+	var spanclass = "text-info";
+	var text = "";
+	if (resp.status >= 400) {
+		spanclass = "text-danger";
+		text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+		for ( var res in thing.results ) {
+			text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+			for ( var err in thing.results[res].errors ) {
+				text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+				text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+			}
+		}
+	} else {
+		if ( resp.responseText ){
+			text = "LRS "+TheLRSURL+ "Successfully sent " + resp.responseText;
+			sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
+		} else
+			text = thing+" "+EXPID;
+	}
+};
 
 function validateEmail(email) {
         var re = /\S+@\S+\.\S+/;
@@ -246,12 +283,12 @@ function sendEmail(email,subject,body) {
 	Email.send({
 	Host: "smtp.gmail.com",
 	Username : "read.autotutor@gmail.com",
-	Password : "csal2020",
+	Password : "hyhtabqqjlsmbdlh",
 	To : email,
 	From : "read.autotutor@gmail.com",
 	Subject : subject,
 	Body : body,
 	}).then(
-		message => alert("mail sent to "+email)
+		message => $("#msg").html("    A confirmation email is sent to <b> "+email+" </b>. Should you have any questions, contact <b> read.autotutor@gmail.com </b>")
 	);
 }
