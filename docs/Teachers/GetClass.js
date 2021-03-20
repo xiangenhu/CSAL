@@ -96,7 +96,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	var TheIndex=Math.random()*TheOriginalList.length;
 	var randomindex=Math.floor(TheIndex);
 	var html="";
-	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/> You have been approved to be a teacher. <br/>We have created a class for you. Please record the below login information and use it to log in. We've also created pre-made student accounts for you. The linked list of students with give you your students' login information. You can find more instructions for using AutoTutor with our Teacher Manual. Thank you! <br> Click \"Move Forward\" to receive a confirmation email, and \"Close\" to return to the website. ";
+	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. <br><br/>We have created a class for you. Please record the below login information and use it to log in. We've also created pre-made student accounts for you. The linked list of students with give you your students' login information. You can find more instructions for using AutoTutor with our Teacher Manual. Thank you! <br><br> First click \"Move Forward\" to receive a confirmation email. Then click \"Close\" to return to the website. ";
 	html=html+"<br/>Please use the following login information to login:<ul>";
 	html=html+"<li>Login: <b>"+TheOriginalList[randomindex][1]+"</b>";
 	html=html+"<li>Password: <b>"+TheOriginalList[randomindex][2]+"</b>";
