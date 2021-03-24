@@ -325,8 +325,8 @@ if(app.indexOf("SKO")!=-1){
   $("#player").css('margin-left',ML);
   $("#player").css('margin-top',MT);
 }else{
-  var pw=qs("pw","1280");
-  var ph=qs("ph","1116")
+	var pw=840;
+	var ph=650;
   
   $("#player").height(ph);
   $("#player").width(pw);
