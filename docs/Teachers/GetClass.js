@@ -95,10 +95,10 @@ function GetClass(json){
 function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,TeacherName){
 	var TheIndex=Math.random()*TheOriginalList.length;
 	var randomindex=Math.floor(TheIndex);
-	var html="";
+	var html="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
 	html=html+"We have created a class for you. ";
-	html=html+"Please click the <b>[Move Forward] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+")<br/><br/>";
+	html=html+"Please click the <b>[Move Forward] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
 
 //	html=html+"Please record the below login information and use it to log in. We've also created pre-made student accounts for you. The linked list of students with give you your students' login information. You can find more instructions for using AutoTutor with our Teacher Manual. Thank you! <br><br> First click \"Move Forward\" to receive a confirmation email. Then click \"Close\" to return to the website. ";
 //	html=html+"<br/>Please use the following login information to login:<ul>";
