@@ -218,29 +218,35 @@ function InitParameters() {
 }
 
 function clearDisplayArea() {
-    $("#speechArea").html("");
+  //  $("#speechArea").html("");
 	
     $("#caption").html("");
 }
 
 function appendTextToDisplayArea(data) {
+
 	$("#speechArea").append(data + "\n\n");
 	var textarea = document.getElementById('speechArea');
 	textarea.scrollTop = textarea.scrollHeight;
 	
 	var displayText=data.split("#").join(" ");
-	displayText= displayText.split(":").join(": ")
-	$("#caption").append(displayText + "\n");
+	displayText= displayText.split(":").join(": ");
+    var TestArary=displayText.split(":");
+    displayText="<b>"+TestArary[0]+":</b> <i>"+TestArary[1]+"</i>";
+	$("#caption").append("<li>"+displayText + "</li>");
+
 	var textarea = document.getElementById('caption');
 	textarea.scrollTop = textarea.scrollHeight;
 	var name1="Cristina:";
 	var name2="Jordan:";
+
 	if (displayText.indexOf(name1)>=0){
-	   $("#caption1").html(displayText.split(name1).join(""));
+	   $("#caption1").html(TestArary[1]);
 	   var textarea1 = document.getElementById('caption1');
 	   textarea1.scrollTop = textarea1.scrollHeight;
+
 	}else if (displayText.indexOf(name2)>=0){
-	   $("#caption2").html(displayText.split(name2).join(""));
+	   $("#caption2").html(TestArary[1]);
 	   var textarea2 = document.getElementById('caption2');
 	   textarea2.scrollTop = textarea2.scrollHeight;
 	}

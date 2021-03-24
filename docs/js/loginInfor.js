@@ -141,7 +141,7 @@ if (anApp=="csal"){
 		  return url;
   }else if(anApp.indexOf("newcsal")==0){
 	  setfooter("1")
-	  AppRoot=qs("appRoot","https://csal.autotutor.org/");
+	//  AppRoot=qs("appRoot","https://csal.autotutor.org/");
 	  urlvariable="LessonName="+qs("LN","Lesson0")+
 		"&UID="+email+ 
 		"&DEBUGGING="+qs("DEBUGGING","0")+
@@ -291,6 +291,7 @@ window.open(RememberEmailURL);
 }
 
 function setfooter(haveFooter){
+	return;
 if (haveFooter=="1"){
 document.body.innerHTML += '<div align="center" id="footer"><input value="Who We Are" type="button" onclick="whoweare()"/> <input value="What is AutoTutor?" type="button" onclick="WhatisAutoTutor()"/>  <input value="A Snapshot" type="button" onclick="Snapshot()"/> <input value="Useful Links" type="button" onclick="UsefulLinks()"/> <input value="Send feedback" type="button" onclick="SendFeedback()"/><input value="Logout" type="button" onclick="eraseCookie()"/></div>';
 }
@@ -313,8 +314,8 @@ if ((app.indexOf("SKO")==0)&&(newhref.indexOf("d2lSessionVal")>-1)){
 }
 setfooter(footer);
 if(app.indexOf("SKO")!=-1){
-  var pw=qs("pw","1280");
-  var ph=qs("ph","1116")
+  var pw=840;
+  var ph=650;
   
   $("#player").height(ph);
   $("#player").width(pw);
@@ -362,12 +363,12 @@ if (qs("GL",GL)=="2"){
 		  if (!confirmed){
 			return;
 		  }else{
-			window.open(url,"_self");
-			return;
+	//		window.open(url,"_self");
+//			return;
 		  }
 	  }else{
-	  	window.open(url,"_self");
-	    return;
+//	  	window.open(url,"_self");
+//	    return;
 	  }
 	  $("#player").attr("src",url); 
   }else{
