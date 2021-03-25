@@ -140,7 +140,7 @@ if (anApp=="csal"){
 		  url=AppRoot+app+".html?"+urlvariable;
 		  return url;
   }else if(anApp.indexOf("newcsal")==0){
-	  setfooter("1")
+	  setfooter("0")
 	  AppRoot=qs("appRoot","https://csal.autotutor.org/");
 	  urlvariable="LessonName="+qs("LN","Lesson0")+
 		"&UID="+email+ 
@@ -156,14 +156,15 @@ if (anApp=="csal"){
 		"&email="+email+
 		"&ef="+qs("ef","0")+
 		"&editing="+AllowEditing+
+		"&verbose="+qs("verbose","1")+
 		"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
 // Will Change Later
 		"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
 		"&asatlrslogin="+qs("asatlrslogin","asatScripts")+
 		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+	
-		"&lrs="+qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/")+
-		"&lrslogin="+qs("lrslogin","CSALData")+
-		"&lrspassword="+qs("lrspassword","CSALData")+			
+		"&lrs="+qs("lrs","https://record.x-in-y.com/umiis/xapi/")+
+		"&lrslogin="+qs("lrslogin","zawirg")+
+		"&lrspassword="+qs("lrspassword","supocg")+			
 // Will Change Later			
 		"&fullname="+fullname+
 		"&school="+qs("school","https://class.x-in-y.com")+
