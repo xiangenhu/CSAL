@@ -142,33 +142,34 @@ if (anApp=="csal"){
   }else if(anApp.indexOf("newcsal")==0){
 	  setfooter("1")
 	//  AppRoot=qs("appRoot","https://csal.autotutor.org/");
-	  urlvariable="LessonName="+qs("LN","Lesson0");
-	  urlvariable=urlvariable+"&UID="+email;
-	  urlvariable=urlvariable+"&DEBUGGING="+qs("DEBUGGING","0");
-	  urlvariable=urlvariable+"&connected="+connected;
-	  urlvariable=urlvariable+"&SName="+fullname; 
-	  urlvariable=urlvariable+"&SampleGUID="+SampleGUID;
-	  urlvariable=urlvariable+"&siteName="+qs("siteName","https://adulted.autotutor.org/");
-	  urlvariable=urlvariable+"&classID="+qs("classID","");
-	  urlvariable=urlvariable+"&objID="+qs("objID","");
-	  urlvariable=urlvariable+"&secodEmail="+qs("secodEmail","");
-	  urlvariable=urlvariable+"&lessonTitle="+qs("lessonTitle","");
-	  urlvariable=urlvariable+"&email="+email;
-	  urlvariable=urlvariable+"&ef="+qs("ef","0");
-	  urlvariable=urlvariable+"&editing="+AllowEditing;
-	  urlvariable=urlvariable+"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction");
-		// Will Change Later
-		urlvariable=urlvariable+"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/");
-		urlvariable=urlvariable+"&asatlrslogin="+qs("asatlrslogin","asatScripts");
-		urlvariable=urlvariable+"&asatlrspassword="+qs("asatlrspassword","asatScripts");	
-		urlvariable=urlvariable+"&lrs="+qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
-		urlvariable=urlvariable+"&lrslogin="+qs("lrslogin","CSALData");
-		urlvariable=urlvariable+"&lrspassword="+qs("lrspassword","CSALData");			
-		// Will Change Later			
-		urlvariable=urlvariable+"&fullname="+fullname;
-		urlvariable=urlvariable+"&school="+qs("school","https://class.x-in-y.com");
-//		urlvariable=urlvariable+"&ssid="+qsp("aicc_sid","Missing");
-		urlvariurlvariable=urlvariable+"&guid="+guid;
+	  urlvariable="LessonName="+qs("LN","Lesson0")+
+		"&UID="+email+ 
+		"&DEBUGGING="+qs("DEBUGGING","0")+
+		"&connected="+connected+
+		"&SName="+fullname+ 
+		"&SampleGUID="+SampleGUID+
+		"&siteName="+qs("siteName","https://adulted.autotutor.org/")+
+		"&classID="+qs("classID","")+
+		"&objID="+qs("objID","")+
+		"&secodEmail="+qs("secodEmail","")+
+		"&lessonTitle="+qs("lessonTitle","")+
+		"&email="+email+
+		"&ef="+qs("ef","0")+
+		"&editing="+AllowEditing+
+		"&aceurl="+qs("aceurl","https://ace.autotutor.org/aceapi2017/api/aceaction")+
+// Will Change Later
+		"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
+		"&asatlrslogin="+qs("asatlrslogin","asatScripts")+
+		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+	
+		"&lrs="+qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/")+
+		"&lrslogin="+qs("lrslogin","CSALData")+
+		"&lrspassword="+qs("lrspassword","CSALData")+			
+// Will Change Later			
+		"&fullname="+fullname+
+		"&school="+qs("school","https://class.x-in-y.com")+
+		"&ssid="+qs("aicc_sid","Missing")+
+		"&LN="+qs("LN","Lesson0")+
+		"&guid="+guid;
 		  
 	  url=AppRoot+app+".html?"+urlvariable;
 	  return url;
