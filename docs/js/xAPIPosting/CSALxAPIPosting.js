@@ -44,9 +44,9 @@ var totalScore={"Hard":{"success":0,"failure":0},"Medium":{"success":0,"failure"
 
 var ITProfile=qs("ITProfile","https://app.skoonline.org/ITSProfile/");
 
-var LRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
-var LRSLogin=qs("lrslogin","CSALData");
-var LRSPassword=qs("lrspassword","CSALData");
+var LRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
+var LRSLogin=qs("lrslogin","mihamo");
+var LRSPassword=qs("lrspassword","zutivv");
 
 var xAPIVerbBase=qs("verbbase",ITProfile);
 
@@ -54,8 +54,8 @@ var wrapper;
 
 
 function getCSALTheDataAuthory(){
-		var TheLRSLogin=qs("lrslogin","CSALData");
-		var theLRSPassword=qs("lrspassword","CSALData");
+		var TheLRSLogin=qs("lrslogin","mihamo");
+		var theLRSPassword=qs("lrspassword","zutivv");
 		return qs("TheCASLDataAuthory",btoa(TheLRSLogin+":"+theLRSPassword));
 	}
 

@@ -2,9 +2,9 @@
 var TheLessions=[];
 var StudentList=[];
 
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
-var TheLRSLogin=qs("lrslogin","CSALData");
-var theLRSPassword=qs("lrspassword","CSALData");
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
+var TheLRSLogin=qs("lrslogin","mihamo");
+var theLRSPassword=qs("lrspassword","zutivv");
 
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);

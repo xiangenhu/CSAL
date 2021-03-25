@@ -12,9 +12,9 @@
 }
 var wrapper;
 
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/csaldata2021/xapi/");
-var TheLRSLogin=qs("lrslogin","CSALData");
-var theLRSPassword=qs("lrspassword","CSALData");
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
+var TheLRSLogin=qs("lrslogin","mihamo");
+var theLRSPassword=qs("lrspassword","zutivv");
 
 var SKOSchool="AutoTutor.org";
 var sessionID="http://"+qs("ssid","anAICC_sid");
