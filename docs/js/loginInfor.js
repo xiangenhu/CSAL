@@ -141,7 +141,7 @@ if (anApp=="csal"){
 		  return url;
   }else if(anApp.indexOf("newcsal")==0){
 	  setfooter("1")
-	//  AppRoot=qs("appRoot","https://csal.autotutor.org/");
+	  AppRoot=qs("appRoot","https://csal.autotutor.org/");
 	  urlvariable="LessonName="+qs("LN","Lesson0")+
 		"&UID="+email+ 
 		"&DEBUGGING="+qs("DEBUGGING","0")+
