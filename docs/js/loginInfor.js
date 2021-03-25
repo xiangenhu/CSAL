@@ -162,9 +162,10 @@ if (anApp=="csal"){
 		"&asatlrs="+qs("asatlrs","https://record.x-in-y.com/scripts/xapi/")+
 		"&asatlrslogin="+qs("asatlrslogin","asatScripts")+
 		"&asatlrspassword="+qs("asatlrspassword","asatScripts")+	
-		"&lrs="+qs("lrs","https://record.x-in-y.com/umiis/xapi/")+
-		"&lrslogin="+qs("lrslogin","zawirg")+
-		"&lrspassword="+qs("lrspassword","supocg")+			
+
+		"&lrs="+qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/")+
+		"&lrslogin="+qs("lrslogin","mihamo")+
+		"&lrspassword="+qs("lrspassword","zutivv")+			
 // Will Change Later			
 		"&fullname="+fullname+
 		"&school="+qs("school","https://class.x-in-y.com")+
