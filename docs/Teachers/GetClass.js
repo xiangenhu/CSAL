@@ -3,9 +3,9 @@ var TheClasses=[];
 var StudentList=[];
 var ClassIDSpreadsheet="1TW6MmY59UQlybW7-m2bzUtMp1eBZtLJhRFFWUtIKOHU"
 
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/umiis/xapi/");
-var TheLRSLogin=qs("lrslogin","zawirg");
-var theLRSPassword=qs("lrspassword","supocg");
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
+var TheLRSLogin=qs("lrslogin","mihamo");
+var theLRSPassword=qs("lrspassword","zutivv");
 var TheVerb="Assigned";
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
