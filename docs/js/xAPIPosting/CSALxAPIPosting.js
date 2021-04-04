@@ -567,7 +567,8 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + getCSALTheDataAuthory()
+				"Authorization": "Basic " + getCSALTheDataAuthory(),
+				"x-experience-api-version": "1.0.3",
 			  },
 			data:queryStrForSearch,
 			success: function (data){
@@ -643,7 +644,8 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 			  url: lrsURL+"statements",
 			  dataType: 'json',
 			  headers: {
-				"Authorization": "Basic " + getCSALTheDataAuthory()
+				"Authorization": "Basic " + getCSALTheDataAuthory(),
+				"x-experience-api-version": "1.0.3",
 			  },
 			data:queryStrForSearch,
 			success: function (data){

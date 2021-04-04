@@ -1769,7 +1769,8 @@ function getLastResponse(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/search",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " + getCSALTheDataAuthory()
+			"Authorization": "Basic " + getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 		  },
 		  data:datasqlstring,
 		  success: function (data){
@@ -1823,7 +1824,8 @@ function getLastActiveRecordNew(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/aggregate",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " +getCSALTheDataAuthory()
+			"Authorization": "Basic " +getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 		  },
 		  body:secondquery,
 		  success: function (data){
@@ -1876,7 +1878,8 @@ function getLastActiveRecord(lrsURL,LRSusername,LRSpassword,Averb){
 		  url: lrsURL+"/statements/search",
 		  dataType: 'json',
 		  headers: {
-			"Authorization": "Basic " +getCSALTheDataAuthory()
+			"Authorization": "Basic " +getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 		  },
 		  data:datasqlstring,
 		  success: function (data){
