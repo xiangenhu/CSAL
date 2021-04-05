@@ -259,7 +259,7 @@ function getTeacherInfor(login){
 		if (response.length==0){
 		}else{
 			var StudentURL=response[0].Assigned.students;
-			window.open(StudentURL);
+			window.open(StudentURL,"_self");
 			return;
 			$("#signupinfor").show();
 
