@@ -29,11 +29,15 @@ var TheSetting={
 	"data": ""
   }
 
+function GetTopURL(){
+
+}
 var MoodleVar={"classID":qs("classID",""),
                "objID":qs("objID","") ,
                "lessonTitle":decodeURIComponent(qs("lessonTitle","")),
                "secodEmail":decodeURIComponent(qs("secodEmail","")),
-               "siteName":decodeURIComponent(qs("siteName","")) 
+               "siteName":decodeURIComponent(qs("siteName","")),
+			   "url":top.location.href
 			};
 var last_action="";
 var last_questionID=""
@@ -250,7 +254,7 @@ function ComposewithContextActivities(AnActor,
 	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory; 
 	
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore};
-	PresentationHistory.URLLink=location.href;
+//	PresentationHistory.URLLink=location.href;
 	PresentationHistory.OtherInfor=MoodleVar;
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
 	var contextObj={"contextActivities":contextActivities,"extensions":Extdata.extensions};
