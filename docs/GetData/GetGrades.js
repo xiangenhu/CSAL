@@ -634,15 +634,15 @@ function CreateTable(LessonList,StudentList){
 	var i;
 	var html="";
 	html=html+"<table width='100%' align='center' id='customers'>";
-	html=html+"<thead>"
-	html=html+"<tr><th></th>";
+	html=html+"<thead class='TheHeader'>"
+	html=html+"<tr class='TheHeader'><th class='TheHeader'></th>";
 	for (j=0;j<StudentList.length;j++){
 		var firstname=StudentList[j].name.split(" ")[0];
 		var studentjson=JSON.stringify(StudentList[j]);
 		if (ThestudentID==""){
-		    html=html+"<th>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
+		    html=html+"<th class='TheHeader'>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
 		}else{
-			html=html+"<th>"+firstname+"</th>";
+			html=html+"<th class='TheHeader'>"+firstname+"</th>";
 		}
 		console.log(html)
 	}

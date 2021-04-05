@@ -1,0 +1,60 @@
+		
+	
+button{
+    color: blue;
+}	
+#popupWinOld{
+    display: none;
+    position:absolute;
+    bottom:0px;
+    top:100px;
+    right:0px;
+    left:0px;
+    z-index: 1200;
+}
+#popupWin{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.lessonDescription{
+    font-style: italic;
+    color:rgb(0, 0, 0);
+}
+.LessonTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(23, 8, 228);
+}
+
+.numbers{
+    font-style: italic;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+#customers {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+  }
+  
+  #customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #455C7B;
+	color: white;
+  }
