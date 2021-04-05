@@ -263,7 +263,7 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"___"+Name+"\")'>?</button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
 		if (response.length==0){ 
-			$("#"+scoreFiled).html("");
+			$("#"+scoreFiled).html(" ");
 			return;
 		}else{
 			for (var k=1;k<response.length;k++){
@@ -633,16 +633,16 @@ function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
 	var html="";
-	html=html+"<table width='100%' align='center' id='customers'>";
+	html=html+"<table width='100%' align='center' id='TheScoreTable'>";
 	html=html+"<thead class='TheHeader'>"
-	html=html+"<tr class='TheHeader'><th class='TheHeader'></th>";
+	html=html+"<tr class='TheHeader'><th class='TheHeader'>The Lessons </th>";
 	for (j=0;j<StudentList.length;j++){
 		var firstname=StudentList[j].name.split(" ")[0];
 		var studentjson=JSON.stringify(StudentList[j]);
 		if (ThestudentID==""){
 		    html=html+"<th class='TheHeader'>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
 		}else{
-			html=html+"<th class='TheHeader'>"+firstname+"</th>";
+//			html=html+"<th class='TheHeader'>"+firstname+"</th>";
 		}
 		console.log(html)
 	}
@@ -655,16 +655,18 @@ function CreateTable(LessonList,StudentList){
 			html=html+"<tr> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
-			html=html+"<tr> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": <br/></span>";
+			html=html+"<tr> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
 			html=html+"<span class='lessonDescription'> "+LessonList[i][3]+"</span>";
+			var scoreFiled="score_"+i.toString()+"_0";
+			html=html+"<br/><span id='"+scoreFiled+"'>"+""+"</span>";
 		}
-
 		html=html+"</td>";
+		if (ThestudentID==""){
 		for (j=0;j<StudentList.length;j++){
 			var scoreFiled="score_"+i.toString()+"_"+j.toString();
 			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
 			console.log(scoreFiled);
-		}
+		}}
 		html=html+"</tr>";
 	}
 	html=html+'</tbody>'
@@ -727,7 +729,7 @@ function GetGradesFor(User,Test,ObjID,n,i,j,link){
 
 function GetScore(email){
 	var html="";
-	html=html+"<table align='center' id='customers'>"
+	html=html+"<table align='center' id='TheScoreTable'>"
 	html=html+"<tr>";
 	var j;
 	for (j=0;j<TestList.length;j++){
@@ -817,8 +819,10 @@ function GetRealScore(student,CourseGUID,target){
 				]
 	setting.data=JSON.stringify(QueryObj);
 	$.ajax(setting).done(function (response){
+		var theModuleLink=location.hostname+"?"+student.split(":")[1]+"?"+CourseGUID;
+		console.log(theModuleLink);
 		if (response.length==0){
-			$("#"+target).html("")
+			$("#"+target).html("<button>Start the Lesson</button>")
 			return;
 		}else{
 			var Levels=[];
@@ -854,14 +858,17 @@ function GetRealScore(student,CourseGUID,target){
 				}
 			}
 			var html="<ul>";
-			html="<li>The time of your recent access to this lesson: "+ReturnDate(response[0].time);
-			html=html+"<li>The first time you started this lesson : "+ReturnDate(response[response.length-1].time);
-			html=html+"<li>How did you answer questions in this lesson?<ul>";
-			for (i=0;i<Levels.length;i++){
-				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
-			}
+			html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(response[0].time)+"</span>";
+			html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(response[response.length-1].time)+"</span>";
+//			html="<li>The time of your recent access to this lesson: "+ReturnDate(response[0].time);
+//			html=html+"<li>The first time you started this lesson : "+ReturnDate(response[response.length-1].time);
+//			html=html+"<li>How did you answer questions in this lesson?<ul>";
+//			for (i=0;i<Levels.length;i++){
+//				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+//			}
+//			html=html+"</ul>";
 			html=html+"</ul>";
-			html=html+"</ul>";
+			html=html+"<button>Continue The Lesson</button>";
 			$("#"+target).html(html)
 			console.log(PerformaceObj);
 		}

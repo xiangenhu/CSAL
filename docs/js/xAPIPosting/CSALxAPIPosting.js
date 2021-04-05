@@ -249,7 +249,8 @@ function ComposewithContextActivities(AnActor,
 	
 	resultExt[ITProfile+"CSAL/Result"]=PresentationHistory; 
 	
-	PresentationHistory.Score={"this":accumlateScore,"total":totalScore}
+	PresentationHistory.Score={"this":accumlateScore,"total":totalScore};
+	PresentationHistory.URLLink=location.href;
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
 	var contextObj={"contextActivities":contextActivities,"extensions":Extdata.extensions};
 //	contextObj={};
