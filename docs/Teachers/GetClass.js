@@ -234,7 +234,7 @@ function xAPIPost(TeacherObj){
 	var extensionObj={};
 	var activityObj={"id":ITSRoot+"ITSProfile/"+verb};
 	extensionObj[ITSRoot+"ITSProfile/"+verb]=ResultObj;
-	var ResultObj={"response":TeacherObj.Course,"extensions":extensionObj};
+	var ResultObj={"response":TeacherObj.login,"extensions":extensionObj};
 	var statements=Compose(AnActor,
 							verbObj,
 							ResultObj,
@@ -243,7 +243,47 @@ function xAPIPost(TeacherObj){
 	ADL.XAPIWrapper.sendStatement(statements,ConfirmationFromLRS);
 }
 
+function getTeacherInfor(TeachEmail){	
+	var thesetting=TheLRStheSetting;
+	var match={"statement.actor.id":TeachEmail};
+	var project={"$project":{"Assigned":"$statement.result.extensions.https://www.autotutor.org/ITSProfile/Assigned"}}
+	var data=[
+		{"$match":match},
+		{"$project":project}
+		];
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){
+			$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,null,TeacherEmail,TeacherName))
+		}else{
+			var listofCourses=[];
+			for (var i=0; i<response.length;i++){
+				listofCourses.push(response[i].course);
+				if (response[i].teacherEmail==TeacherEmail){
+					var html="";
+					html=html+"Hello <b>"+response[i].teacherName+"</b>: <br/>";
+					html=html+"You already have assigned a class for you. It is <b>"+response[i].course+"</b>.";
+					html=html+"<ul>";
+					html=html+"<li>Login: <b>"+response[i].login+"</b>";
+					html=html+"<li>password: <b>"+response[i].password+"</b>";
+					html=html+"<li>Instruction to teacher: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
+					html=html+"<li>List of your student: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
+					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
 
+					$("#ClassInfor").html(html);
+					TheEmailMessage=html;
+					sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
+					return
+				}
+			}
+			if (listofCourses.length==0){
+				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,null,TeacherEmail,TeacherName))
+			}else{
+				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,listofCourses,TeacherEmail,TeacherName))
+			}
+		}
+	})
+}
 
 
 var ConfirmationFromLRS = function (resp, thing) {
