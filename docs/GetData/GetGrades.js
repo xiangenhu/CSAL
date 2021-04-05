@@ -815,16 +815,16 @@ function GetRealScore(student,CourseGUID,target){
 							"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
 					{"$sort":{"statement.timestamp":-1}},
 					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
-					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel","TheLink":"$ResultExt.URLLink"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
 	$.ajax(setting).done(function (response){
-		var theModuleLink=location.hostname+"?"+student.split(":")[1]+"?"+CourseGUID;
-		console.log(theModuleLink);
 		if (response.length==0){
-			$("#"+target).html("<button>Start the Lesson</button>")
+			$("#"+target).html("")
 			return;
 		}else{
+		var theModuleLink=response[0].TheLink;
+		console.log(theModuleLink);
 			var Levels=[];
 			// get The question levels
 			for (var i=0;i<response.length;i++){
@@ -868,7 +868,9 @@ function GetRealScore(student,CourseGUID,target){
 //			}
 //			html=html+"</ul>";
 			html=html+"</ul>";
-			html=html+"<button>Continue The Lesson</button>";
+			if (theModuleLink!=null){
+			html=html+"<a href='"+theModuleLink+"' target='Player'>Continue The Lesson</a>";
+			}
 			$("#"+target).html(html)
 			console.log(PerformaceObj);
 		}
