@@ -196,7 +196,7 @@ function CompileScroe(PresentationHistory){
 	
 				
 var TheLessonIDforXAPI={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
-				 name:SKOTitle,
+				 name:SKOTitle+":"+qs("classID",""),
 				 objectType:"Agent"
 				};
 
