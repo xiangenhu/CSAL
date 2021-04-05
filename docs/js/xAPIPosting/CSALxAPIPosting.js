@@ -196,7 +196,7 @@ function CompileScroe(PresentationHistory){
 	
 				
 var TheLessonIDforXAPI={mbox:"mailto:"+SKOGuid+"@"+ASATLocation,
-				 name:SKOTitle+":"+qs("classID",""),
+				 name:SKOTitle,
 				 objectType:"Agent"
 				};
 
@@ -251,6 +251,7 @@ function ComposewithContextActivities(AnActor,
 	
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore};
 	PresentationHistory.URLLink=location.href;
+	PresentationHistory.OtherInfor=MoodleVar;
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
 	var contextObj={"contextActivities":contextActivities,"extensions":Extdata.extensions};
 //	contextObj={};
