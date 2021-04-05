@@ -90,16 +90,24 @@
 <body>
    <script>
 		$(document).ready(function(){
-            GL="0";
-            loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
- 		});
+			if (qs("Tlogin","")!=""){
+				$("#signupinfor").hide();
+				getTeacherInfor(qs("Tlogin",""));
+			}else{
+				$("#signupinfor").show();
+				GL="0";
+				loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
+			}
+		});
 	</script>
-	<div id="AskQuestion">
-	Hello! <br/>Welcome to AutoTutor for Adult Reading Comprehension. If you would like to be a teacher within this system, please fill in the below information. We will create a class for you. When you are done, please click "Next."<br/><br>
-	Your email: <input id="TheEmail"/><br/><br/>Your name <input id="TheFullName"/><br/><br/>
-	<button onclick="submitInfo()">Next</button>
-     </div>
-	<div id="ClassInfor"></div>
-	<div id="msg"></div>
+	<div id="signupinfor">
+		<div id="AskQuestion">
+		Hello! <br/>Welcome to AutoTutor for Adult Reading Comprehension. If you would like to be a teacher within this system, please fill in the below information. We will create a class for you. When you are done, please click "Next."<br/><br>
+		Your email: <input id="TheEmail"/><br/><br/>Your name <input id="TheFullName"/><br/><br/>
+		<button onclick="submitInfo()">Next</button>
+		</div>
+		<div id="ClassInfor"></div>
+		<div id="msg"></div>
+	</div>
 </body>
 </html>
