@@ -815,7 +815,7 @@ function GetRealScore(student,CourseGUID,target){
 							"statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
 					{"$sort":{"statement.timestamp":-1}},
 					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
-					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel","TheLink":"$ResultExt.URLLink"}}
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel","TheLink":"$ResultExt.OtherInfor.url"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
 	$.ajax(setting).done(function (response){
