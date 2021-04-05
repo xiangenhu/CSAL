@@ -22,6 +22,7 @@ var TheSetting={
 		"Authorization": "Basic "+getCSALTheDataAuthory(),
 	  "content-type": "application/json",
 	  "cache-control": "no-cache",
+	  "x-experience-api-version": "1.0.3",
 	  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
 	},
 	"processData": false,
@@ -309,7 +310,8 @@ function GetAllScores(lrsURL,LRSusername,LRSpassword){
 		   "timeout": 0,
 		   "headers": {
 			"Authorization": "Basic "+ getCSALTheDataAuthory(),
-			"Content-Type": "application/json"
+			"Content-Type": "application/json",
+			"x-experience-api-version": "1.0.3"
 		  },
 		  "data": JSON.stringify(queryBody),
 		};
@@ -327,6 +329,7 @@ function GetLastRecordedAction(lrsURL,LRSusername,LRSpassword) {
 		   "timeout": 0,
 		   "headers": {
 			"Authorization": "Basic "+getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -371,6 +374,7 @@ function GetLastLessonStarting(lrsURL,LRSusername,LRSpassword){
 		   "timeout": 0,
 		   "headers": {
 			"Authorization": "Basic "+ getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -475,6 +479,7 @@ function GetALLActions(lrsURL,LRSusername,LRSpassword,atimestamp){
 		   "timeout": 0,
 		   "headers": {
 			"Authorization": "Basic "+getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 			"Content-Type": "application/json"
 		  },
 		  "data": JSON.stringify(queryBody),
@@ -529,6 +534,7 @@ function getACEActionAndPlay(ActionName){
 		"method": "POST",
 		"headers": {
 			"Authorization": "Basic "+getCSALTheDataAuthory(),
+			"x-experience-api-version": "1.0.3",
 		  "content-type": "application/json",
 		  "cache-control": "no-cache",
 		  "postman-token": "0ccc8805-b634-5c18-36c2-9f22c589c0c9"
@@ -568,7 +574,7 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 			  dataType: 'json',
 			  headers: {
 				"Authorization": "Basic " + getCSALTheDataAuthory(),
-				"x-experience-api-version": "1.0.3",
+				"x-experience-api-version": "1.0.3"
 			  },
 			data:queryStrForSearch,
 			success: function (data){
@@ -645,7 +651,7 @@ function GetSCORE(lrsURL,LRSusername,LRSpassword){
 			  dataType: 'json',
 			  headers: {
 				"Authorization": "Basic " + getCSALTheDataAuthory(),
-				"x-experience-api-version": "1.0.3",
+				"x-experience-api-version": "1.0.3"
 			  },
 			data:queryStrForSearch,
 			success: function (data){
