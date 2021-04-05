@@ -252,7 +252,7 @@ function ComposewithContextActivities(AnActor,
 	PresentationHistory.Score={"this":accumlateScore,"total":totalScore}
 	var aResultObj={"success":resultsSuccess,"response":PresentationHistory.userSelectedItem,"extensions":resultExt};
 	var contextObj={"contextActivities":contextActivities,"extensions":Extdata.extensions};
-	contextObj={};
+//	contextObj={};
 	var parts = {
 		actor: AnActor,
 		verb: verbObj,
