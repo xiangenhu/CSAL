@@ -816,7 +816,7 @@ function GetRealScore(student,CourseGUID,target){
 					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
-	$.ajax(setting).success(function (response){
+	$.ajax(setting).done(function (response){
 		if (response.length==0){
 			$("#"+target).html("")
 			return;
@@ -885,7 +885,7 @@ function LessonStudentDetailsNew(TheLessonID,Student,Target){
 					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
-	$.ajax(setting).success(function (response){
+	$.ajax(setting).done(function (response){
 		if (response.length==0){
 			$("#"+Target).html("")
 			return;
@@ -946,7 +946,7 @@ function LessonDetailsNew(TheLessonID,Target){
 					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
-	$.ajax(setting).success(function (response){
+	$.ajax(setting).done(function (response){
 		if (response.length==0){
 			$("#"+Target).html("")
 			return;
@@ -1008,7 +1008,7 @@ function StudentDetailsNew(student,target){
 					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
 				]
 	setting.data=JSON.stringify(QueryObj);
-	$.ajax(setting).success(function (response){
+	$.ajax(setting).done(function (response){
 		if (response.length==0){
 			$("#"+target).html("")
 			return;
@@ -1084,7 +1084,7 @@ function GetAllStudents(){
 		{"$group":{"_id":"$statement.actor.mbox","sum":{"$sum":1}}}
 	]
 setting.data=JSON.stringify(QueryObj);
-$.ajax(setting).success(function (response){
+$.ajax(setting).done(function (response){
 		if (response.length==0){
 		return;
 		}else{
