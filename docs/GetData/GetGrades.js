@@ -679,7 +679,8 @@ function CreateTable(LessonList,StudentList){
 				var scoreFiled="score_"+i.toString()+"_"+j.toString();
 				console.log(scoreFiled);
 				if (ThestudentID!=""){
-					GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
+					GetStudentRecord(StudentList[j].mbox,LessonList[i][1],scoreFiled);
+//					GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
 				}else{
 					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 				}
@@ -804,6 +805,66 @@ function getTest(email,testID,n,target,link,Title){
 	  });
 
 
+}
+
+function GetStudentRecord(student,CourseGUID,target){
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+		{"$match":{"statement.actor.mbox":student,
+				"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org"}
+			},
+			{"$group":
+			         {"_id":"$statement.actor.mbox","sum":{"$sum":1},
+                      "LastTime":{"$max":"$statement.timestamp"},
+                      "FirstTime":{"$min":"$statement.timestamp"}
+            }
+		}
+	]
+setting.data=JSON.stringify(QueryObj);
+$.ajax(setting).done(function (response){
+	if (response.length==0){
+		$("#"+target).html("")
+		return;
+	}else{
+		var html="<ul>";
+		html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(response[0].LastTime)+"</span>";
+		html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(response[response.length-1].FirstTime)+"</span>";
+		html=html+"</ul>";
+		var LinkObj={"student":student,"guid":CourseGUID}
+		html=html+"<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>Continue</button></p>";
+		$("#"+target).html(html)
+	}
+	});
+}
+
+function GetLessonPopup(LinkObj){
+	var TheObj=JSON.parse(decodeURI(LinkObj));
+	var setting=TheLRStheSetting;
+	var Match={"statement.actor.mbox":TheObj.student,
+	            "statement.object.mbox":"mailto:"+TheObj.guid+"@csal.autotutor.org",
+	            "statement.verb.id":"https://app.skoonline.org/ITSProfile/start"};
+	var sort={"statement.timestamp":-1};
+	var limit=1;
+	var project1={"ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/LMS"};
+	var project2={"url":"$ResultExt.url"}
+
+	var QueryObj=[
+		    {"$match":Match},{"$sort":sort},{"$limit":limit},
+	        {"$project":project1},
+			{"$project":project2}
+	];
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).done(function (response){
+		if (response.length==0){
+			return;
+		}else{
+			var theURL=response[0].url;
+			if (theURL!=null){
+				window.open(theURL,"player")
+			}
+//		alert(response[0].url);
+		}
+	});
 }
 
 
