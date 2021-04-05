@@ -814,7 +814,7 @@ function GetStudentRecord(student,CourseGUID,target){
 				"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org"}
 			},
 			{"$group":
-			         {"_id":"$statement.actor.mbox","sum":{"$sum":1},
+			         {"_id":"$statement.verb.id","sum":{"$sum":1},
                       "LastTime":{"$max":"$statement.timestamp"},
                       "FirstTime":{"$min":"$statement.timestamp"}
             }
@@ -826,12 +826,45 @@ $.ajax(setting).done(function (response){
 		$("#"+target).html("")
 		return;
 	}else{
+		var last;
+		var first;
+		var buttonface="Continue";
+		var successTime;
+		var failTime;
+		for (var i=0;i<response.length;i++){
+			var theverb=response[i]._id;
+
+			if (theverb.indexOf("start")>=1){
+				first=response[i].FirstTime;
+				last=response[i].LastTime;
+			}
+			if (theverb.indexOf("action")>=1){
+				last=response[i].LastTime;
+			}
+			if (theverb.indexOf("completed")>=1){
+				successTime=new Date(response[i].LastTime);
+			}
+			if (theverb.indexOf("failed")>=1){
+				failTime=new Date(response[i].LastTime);
+			}
+		}
+        if ((successTime!=null)&&(failTime!=null)){
+			if (successTime>failTime){
+			    buttonface="Well done, enjoy it again?";
+			}else{
+				buttonface="You did not do well. Try it again.";
+			}
+		}else if (successTime!=null) {
+			buttonface="Well done, enjoy it again?";
+		}else if (failTime!=null) {
+			buttonface="You did not do well. Try it again.";
+		}
 		var html="<ul>";
-		html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(response[0].LastTime)+"</span>";
-		html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(response[response.length-1].FirstTime)+"</span>";
+		html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(last)+"</span>";
+		html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(first)+"</span>";
 		html=html+"</ul>";
 		var LinkObj={"student":student,"guid":CourseGUID}
-		html=html+"<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>Continue</button></p>";
+		html=html+"<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>"+buttonface+"</button></p>";
 		$("#"+target).html(html)
 	}
 	});
@@ -862,7 +895,6 @@ function GetLessonPopup(LinkObj){
 			if (theURL!=null){
 				window.open(theURL,"player")
 			}
-//		alert(response[0].url);
 		}
 	});
 }
