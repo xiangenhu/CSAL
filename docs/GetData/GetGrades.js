@@ -14,6 +14,45 @@ var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
 
+
+
+function OpenPopUpDetails(header,footer,bodytext,targetwin){
+ //   	$("#"+targetwin).show();
+//	    $("#popupWin").html(bodytext);
+//		$("#popupWin").show();
+//		return;
+        var html="";
+        html=html+'<div class="modal-content" id="PopupDialog">';
+        html=html+'<div class="modal-header">';
+        html=html+'<span id="Modalclosebtn" class="close">&times;</span>';
+        html=html+'<h2>'+header+'</h2>';
+        html=html+'</div>';
+        html=html+'<div class="modal-body" id="bodytext">';
+        html=html+bodytext;
+        html=html+'</div>';
+        html=html+'<div class="modal-footer">';
+        html=html+'<h3>'+footer+'</h3>';
+        html=html+'</div>';
+        html=html+'</div>';
+        var popup=document.getElementById(targetwin);
+        if (popup == null ) {
+            var popup=document.createElement("div");
+            popup.class="modal";
+            popup.id=targetwin;
+            $("#editor").append(popup);
+            popup.innerHTML = html;
+        }else{
+            $('#'+targetwin).html(html);
+            $('#'+targetwin).show();
+        }
+        $("#Modalclosebtn").click(function(){
+            $('#'+targetwin).hide();
+            popup.innerHTML = "";
+        });
+    }
+
+
+
 TheLRStheSetting={
     "async": true,
     "crossDomain": true,
@@ -74,7 +113,7 @@ function GetStudents(classID,student){
 	if (student!=""){
 	  	match={"statement.result.response":classID,"statement.actor.mbox":"mailto:"+student};
 	}else{
-		match={"statement.result.response":classID};
+		match={"statement.result.response":classID,"statement.verb.id":"https://app.skoonline.org/ITSProfile/start"};
 	}
 	var group={"_id":"$statement.actor",
 	           "Sum":{"$sum":1}};
@@ -234,7 +273,7 @@ function DetailsS_L(Lesson_and_Student){
 //	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+Lesson_and_Student+"\")'>More details</button> </div>";
 	htmlbody=htmlbody+"</div>"
 	htmlbody="<span id='SLDetails'></span>"
-	OpenPopUp(LessonName+" and "+Name,"details ...",htmlbody,"popupWin");
+	OpenPopUpDetails(LessonName+" and "+Name,"details ...",htmlbody,"popupWin");
 	LessonStudentDetailsNew(LessonID,Lesson_and_Student,"SLDetails")
 //	DetailsForStudentandLesson(Student,LessonID);
 //	TheScore={
@@ -262,8 +301,11 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	$.ajax(thesetting).done(function (response) {
 		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"___"+Name+"\")'>?</button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
+		var TheLessonRowID="Row_"+i.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html(" ");
+//			var TheLessonRowID="Row_"+i.toString();
+//			$("#"+TheLessonRowID).hide();
 			return;
 		}else{
 			for (var k=1;k<response.length;k++){
@@ -277,6 +319,7 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 				}
 			}
 			$("#"+scoreFiled).html("IP ");
+			$("#"+TheLessonRowID).show();
 		}
 	});
 }
@@ -493,7 +536,7 @@ function LessonDetails(LessonID){
 	htmlbody=htmlbody+"</ul>";
 	htmlbody="<span id='TheLessonDetails'></span>"
 //	htmlbody=htmlbody+"<button onclick='LessonQuestionSummary(\""+LessonID.split("__")[1]+"\")'>More details</button> </div>";
-	OpenPopUp(LessonName,"details of "+LessonName,htmlbody,"popupWin");
+    OpenPopUpDetails(LessonName,"details of "+LessonName,htmlbody,"popupWin");
 	LessonDetailsNew(LessonID.split("__")[1],"TheLessonDetails")
 //	GetLTRecentLast(LessonID.split("__")[1]);
 //	GetAverageTime(LessonID.split("__")[1]);
@@ -514,7 +557,7 @@ function StudentDetails(student){
 	htmlbody=htmlbody+"<li>Total Number of questions answered: <span class='numbers' id='NumberQ'></span></li>";
 	htmlbody=htmlbody+"</ul>";
 	htmlbody="<span id='TheDeatisl'></span>";
-	OpenPopUp(TheStudent[0],"details of student "+TheStudent[0],htmlbody,"popupWin");
+	OpenPopUpDetails(TheStudent[0],"details of student "+TheStudent[0],htmlbody,"popupWin");
 	StudentDetailsNew(TheStudent[1],"TheDeatisl")
 //	StdudentFirstLast(TheStudent[1]);
 //	StudentsStartedLesson(TheStudent[1]);
@@ -653,7 +696,7 @@ function CreateTable(LessonList,StudentList){
 		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
 		var TheLessonRowID="Row_"+i.toString();
         if (ThestudentID==""){
-			html=html+"<tr id='"+TheLessonRowID+"'> <td>"+LessonList[i][0];
+			html=html+"<tr id='"+TheLessonRowID+"' style='display: none;'> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
 			html=html+"<tr id='"+TheLessonRowID+"'> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
