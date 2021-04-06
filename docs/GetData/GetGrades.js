@@ -651,11 +651,12 @@ function CreateTable(LessonList,StudentList){
 	html=html+'<tbody style="height: 10px !important; overflow: scroll; ">';
 	for (i=0;i<LessonList.length;i++){
 		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
+		var TheLessonRowID="Row_"+i.toString();
         if (ThestudentID==""){
-			html=html+"<tr> <td>"+LessonList[i][0];
+			html=html+"<tr id='"+TheLessonRowID+"'> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
-			html=html+"<tr> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
+			html=html+"<tr id='"+TheLessonRowID+"'> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
 			html=html+"<span class='lessonDescription'> "+LessonList[i][3]+"</span>";
 			var scoreFiled="score_"+i.toString()+"_0";
 			html=html+"<br/><span id='"+scoreFiled+"'>"+""+"</span>";
@@ -823,7 +824,9 @@ function GetStudentRecord(student,CourseGUID,target){
 setting.data=JSON.stringify(QueryObj);
 $.ajax(setting).done(function (response){
 	if (response.length==0){
-		$("#"+target).html("")
+		$("#"+target).html("");
+		var rowID=target.split("score").join("Row").split("_0").join("");
+		$("#"+rowID).hide();
 		return;
 	}else{
 		var last;
