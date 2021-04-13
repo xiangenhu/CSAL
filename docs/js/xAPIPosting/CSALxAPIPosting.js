@@ -162,9 +162,19 @@ function CompileScroe(PresentationHistory){
 		}
 	
 	var userAnswer="";
-	if (PresentationHistory.userAnswer!=null){
+	/*if (PresentationHistory.userAnswer!=null){
 		userAnswer=PresentationHistory.userAnswer;
-	}
+	} */
+	if (PresentationHistory.newUserPerfomaceLog!=null && PresentationHistory.newUserPerfomaceLog.length>0)
+{
+       len = PresentationHistory.newUserPerfomaceLog.length
+       log = PresentationHistory.newUserPerfomaceLog[len-1]
+       if(log.userAnswer!=null)
+		   {
+            userAnswer=log.userAnswer;
+           }
+
+}
 	/* if (PresentationHistory.newUserPerfomaceLog!=null){
 		if (PresentationHistory.newUserPerfomaceLog.length>0){
 			userAnswer=PresentationHistory.newUserPerfomaceLog[0].userAnswer;
