@@ -340,8 +340,8 @@ border-radius:10px;
 							//get user answer's text
 							userSelectedValue = userAnswer;
 							userSelectedValue = userSelectedValue.replace(/(^\s*)|(\s*$)/g, ""); 
-							parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
-							//parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
+							//parent.GetWorldEvent("userAnswer_"+userAnswer+"_"+userSelectedValue);
+							parent.GetWorldEvent("userInput_"+userAnswer+"_"+userAnswer);
 							//parent.GetWorldEvent(userAnswer);
 							//lock button and sent Stop call to ASAT
 							Lock();
