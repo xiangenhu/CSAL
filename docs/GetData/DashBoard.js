@@ -1415,8 +1415,3 @@ function FindLessonByStudents(TheSerachInfo){
 function FindClassByLesson(TheSerachInfo){
 console.log(TheSerachInfo);
 }
-
-$(document).ready(function(){
-	GL="0";
-	loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw")+"/5/public/values?alt=json-in-script&callback=GetLessons", "js");
- });
