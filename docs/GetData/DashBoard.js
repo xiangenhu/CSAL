@@ -1269,6 +1269,21 @@ $.ajax(setting).done(function (response){
 	});
 }
 
+function GetOneLesson(TheLesson){
+	var setting=TheLRStheSetting;
+	var QueryObj=[
+		{"$match":{"statement.actor.mbox":TheLesson}},
+        {"$sort":{"statement.timestamp":-1}},
+		{"$group":{"_id":"$statement.object.mbox","sum":{"$sum":1}, "LastTime":{"$max":"$statement.timestamp"}}}
+	]
+	setting.data=JSON.stringify(QueryObj);
+$.ajax(setting).done(function (response){
+		if (response.length==0){}else{
+
+		}
+	});
+}
+
 function GetAllLessons(){
     var Type=$("#Theverb option:selected" ).text();
 	var setting=TheLRStheSetting;
@@ -1281,7 +1296,7 @@ setting.data=JSON.stringify(QueryObj);
 $.ajax(setting).done(function (response){
 		if (response.length==0){
             $("#TheData").html("");
-		return;
+			return;
 		}else{
             var html="";
             html=html+"<table width='100%' align='center' id='TheScoreTable'>";
@@ -1293,7 +1308,7 @@ $.ajax(setting).done(function (response){
             html=html+"<th>Lesson Title</th>";
             html=html+"<th>Class Code </th>";
             html=html+"<th>Last Access</th>";
-            html=html+"<th>Number of times</th>";
+ //           html=html+"<th>Number of times</th>";
             html=html+"</tr>";
             html=html+"</thead>";
 			for (var i=0;i<response.length;i++){
@@ -1305,10 +1320,10 @@ $.ajax(setting).done(function (response){
                     if (TheClassID!=""){
                         TheLessonID=TheLessonID.split("guid=")[1].split("&NS=1")[0];
                         html=html+"<tr>";
-                        html=html+"<td>"+TheClassInfor.lessonTitle+" <button onclick='FindClassByLesson(\""+TheLessonID+"\")'>?</button></td>";
-                        html=html+"<td>"+TheClassID+" <button onclick='FindLessonByStudents(\""+TheClassID+"\")'>?</button></td>";
+                        html=html+"<td>"+TheClassInfor.lessonTitle+" <button onclick='FindStudentsByLesson(\""+TheLessonID+"\")'>?</button></td>";
+                        html=html+"<td>"+TheClassID+" <button onclick='FindStudentByClass(\""+TheClassID+"\")'>?</button></td>";
                         html=html+"<td>"+ReturnDate(response[i].LastTime)+"</td>";
-                        html=html+"<td>"+response[i].sum+"</td>";
+ //                       html=html+"<td>"+response[i].sum+"</td>";
                         html=html+"</tr>"
                     }
                 }
@@ -1341,11 +1356,8 @@ function FindLessonByActions(TheSerachInfo){
             html=html+"<table width='100%' align='center' id='TheScoreTable'>";
             html=html+"<thead>"
             html=html+"<tr>";
-            html=html+"<th colspan='3'>Students that have the verb '"+Type+"' in the database</th>";
-            html=html+"</tr>";
-            html=html+"<tr>";
             html=html+"<th>Action</th>";
-            html=html+"<th>Times</th>";
+//            html=html+"<th>Times</th>";
             html=html+"<th>Last Access</th>";
             html=html+"</tr>";
             html=html+"</thead>";
@@ -1354,7 +1366,7 @@ function FindLessonByActions(TheSerachInfo){
                 var TheVerb=TheVerb.split("/ITSProfile/")[1];
                 html=html+"<tr>";
                 html=html+"<td>"+TheVerb+"</td>";
-                html=html+"<td>"+response[i].sum+"</td>";
+//                html=html+"<td>"+response[i].sum+"</td>";
                 html=html+"<td>"+ReturnDate(response[i].LastTime)+"</td>";
                 html=html+"</tr>"
                 }
@@ -1366,7 +1378,7 @@ function FindLessonByActions(TheSerachInfo){
 
 
 
-function FindLessonByStudents(TheSerachInfo){
+function FindStudentByClass(TheSerachInfo){
     console.log(TheSerachInfo);
 
     var Type=$("#Theverb option:selected" ).text();
@@ -1386,22 +1398,19 @@ function FindLessonByStudents(TheSerachInfo){
             html=html+"<table width='100%' align='center' id='TheScoreTable'>";
             html=html+"<thead>"
             html=html+"<tr>";
-            html=html+"<th colspan='3'>Students that have the verb '"+Type+"' in the database</th>";
-            html=html+"</tr>";
-            html=html+"<tr>";
             html=html+"<th>Student</th>";
-            html=html+"<th>Times</th>";
-            html=html+"<th>Last Access</th>";
+ //           html=html+"<th>Times</th>";
+            html=html+"<th>Last Time Access</th>";
             html=html+"</tr>";
             html=html+"</thead>";
 			for (var i=0;i<response.length;i++){
                 var TheActor=response[i]._id;
                 var TheActorName=TheActor.name;
 				var TheActorEmail=TheActor.mbox;
-				if (TheActorEmail.indexOf("csal.autotutor.org")==-1){
+				if (TheActorEmail.indexOf("student")>=1){
 					html=html+"<tr>";
 					html=html+"<td>"+TheActorName+"</td>";
-					html=html+"<td>"+response[i].sum+"</td>";
+//					html=html+"<td>"+response[i].sum+"</td>";
 					html=html+"<td>"+ReturnDate(response[i].LastTime)+"</td>";
 					html=html+"</tr>"
 					}
@@ -1412,6 +1421,42 @@ function FindLessonByStudents(TheSerachInfo){
 	});
 }
 
-function FindClassByLesson(TheSerachInfo){
-console.log(TheSerachInfo);
+function FindStudentsByLesson(TheSerachInfo){
+	var setting=TheLRStheSetting;
+	var Lessonmbox="mailto:"+TheSerachInfo+"@csal.autotutor.org";
+	var QueryObj=[
+		{"$match":{"statement.actor.mbox":Lessonmbox}},
+        {"$sort":{"statement.timestamp":-1}},
+		{"$group":{"_id":"$statement.object","sum":{"$sum":1}, "LastTime":{"$max":"$statement.timestamp"}}}
+	]
+	setting.data=JSON.stringify(QueryObj);
+$.ajax(setting).done(function (response){
+		if (response.length==0){
+
+		}else{
+			var html="";
+            html=html+"<table width='100%' align='center' id='TheScoreTable'>";
+            html=html+"<thead>"
+            html=html+"<tr>";
+            html=html+"<th>Student</th>";
+ //           html=html+"<th>Times</th>";
+            html=html+"<th>Last Time Access</th>";
+            html=html+"</tr>";
+            html=html+"</thead>";
+			for (var i=0;i<response.length;i++){
+                var TheActor=response[i]._id;
+                var TheActorName=TheActor.name;
+				var TheActorEmail=TheActor.mbox;
+				if (TheActorEmail.indexOf("csal.autotutor.org")==-1){
+					html=html+"<tr>";
+					html=html+"<td>"+TheActorName+"</td>";
+//					html=html+"<td>"+response[i].sum+"</td>";
+					html=html+"<td>"+ReturnDate(response[i].LastTime)+"</td>";
+					html=html+"</tr>"
+					}
+                }
+            html=html+"</table>";
+			$("#TheData").html(html);
+		}
+	});
 }
