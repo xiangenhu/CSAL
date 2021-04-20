@@ -178,7 +178,7 @@ msSpeakQueued(C3,Words,"");
             var firstPart = strs[0];
            // var secondPart ='<Break time="10ms" />'+ strs[1];
 		   var secondPart = strs[1].trim();
-		   if(secondPart!=""&&secondPart.length>1)secondPart = '<Break time="100ms" />'+secondPart;
+		   if(secondPart!=""&&secondPart.length>1)secondPart = '<pause/>'+secondPart;
             if (status == "Speak") {
 		var segments = secondPart.split("#");
 				for(var i=0;i<segments.length;i++)
