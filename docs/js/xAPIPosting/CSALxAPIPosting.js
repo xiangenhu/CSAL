@@ -655,6 +655,7 @@ function GetReport(lrsURL,LRSusername,LRSpassword){
 }
 
 function GetSCORE(lrsURL,LRSusername,LRSpassword){
+	return;
 	var queryObj={$and:[
 	{"actor.mbox":LearnerID.mbox},
 	{"verb.id":xAPIVerbBase+"action"},{$or:[{"result.success":true},{"result.success":false}]}
