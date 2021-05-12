@@ -304,22 +304,32 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 		var TheLessonRowID="Row_"+i.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html(" ");
-//			var TheLessonRowID="Row_"+i.toString();
-//			$("#"+TheLessonRowID).hide();
 			return;
 		}else{
-			for (var k=1;k<response.length;k++){
-				if (response[k]._id.indexOf("completed")>-1){
-				$("#"+scoreFiled).html("P "+detailInformationLink);
-				return;
-				}
-				if (response[k]._id.indexOf("failed")>-1){
-					$("#"+scoreFiled).html("F "+detailInformationLink);
-					return;
-				}
+			var AllVerbs=[];
+			for (var k=0;k<response.length;k++){
+				var verb=response[k]._id;
+				AllVerbs.push(verb.split("https://app.skoonline.org/ITSProfile/")[1]);
 			}
-			$("#"+scoreFiled).html("IP ");
+			console.log(AllVerbs);
 			$("#"+TheLessonRowID).show();
+			if (AllVerbs.includes("completed")){
+				$("#"+scoreFiled).html("passed "+detailInformationLink);
+				return;
+			}
+			if (AllVerbs.includes("failed")){
+				$("#"+scoreFiled).html("failed "+detailInformationLink);
+				return;
+			}
+			
+			if (AllVerbs.includes("action")){
+				$("#"+scoreFiled).html("in progress "+detailInformationLink);
+				return;
+			}
+			if (AllVerbs.includes("start")){
+				$("#"+scoreFiled).html("started ");
+				return;
+			}
 		}
 	});
 }
