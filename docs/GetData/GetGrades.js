@@ -255,10 +255,11 @@ function GetCount(ArrayStr){
 }
 
 function DetailsS_L(Lesson_and_Student){
-	var LessonName=Lesson_and_Student.split("___")[0];
-	var LessonID=Lesson_and_Student.split("___")[1];
-	var Student=Lesson_and_Student.split("___")[2];
-	var Name=Lesson_and_Student.split("___")[3];
+	var thePassedObj=JSON.parse(decodeURI(Lesson_and_Student))
+	var LessonName=thePassedObj.LessonName;
+	var LessonID=thePassedObj.LessonID;
+	var Student=thePassedObj.Student;
+	var Name=thePassedObj.Name;
 
 	var htmlbody="Detailed Interaction of  "+ Name+ " with "+LessonName ;
 	htmlbody=htmlbody+"<div id='MoreDetails'>";
@@ -299,7 +300,12 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		var detailInformationLink="<button onclick='DetailsS_L(\""+Lesson[0]+"___"+Lesson[1]+"___"+Student+"___"+Name+"\")'>?</button>"
+		var TheObj={LessonName:+Lesson[0],
+				   LessonID:Lesson[1],
+				   Student:Student,
+				   Name:Name}
+        var LessonPassVar=encodeURI(JSON.stringify(TheObj))
+		var detailInformationLink="<button onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
 		var scoreFiled="score_"+i.toString()+"_"+j.toString();
 		var TheLessonRowID="Row_"+i.toString();
 		if (response.length==0){ 
@@ -1029,11 +1035,11 @@ function GetRealScore(student,CourseGUID,target){
 
 function LessonStudentDetailsNew(TheLessonID,Student,Target){
 	var setting=TheLRStheSetting;
-	
-	var LessonName=Student.split("___")[0];
-	var LessonID=Student.split("___")[1];
-	var TheStudent=Student.split("___")[2];
-	var Name=Student.split("___")[3];
+	var thePassedObj=JSON.parse(decodeURI(Student))
+	var LessonName=thePassedObj.LessonName;
+	var LessonID=thePassedObj.LessonID;
+	var TheStudent=thePassedObj.Student;
+	var Name=thePassedObj.Name;
 	var QueryObj=[
 					{"$match":{"statement.object.mbox":"mailto:"+TheLessonID+"@csal.autotutor.org",
 					           "statement.actor.mbox":TheStudent,
