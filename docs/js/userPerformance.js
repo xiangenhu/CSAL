@@ -310,7 +310,7 @@
 		            TotalScoreObj.lessonID = lessonID;
 		            TotalScoreObj.pagePath = pagePath;
 		            TotalScoreObj.userAnswer = userAnswer;
-//		            TotalScoreObj.TextLevel = TextLevel;
+		            TotalScoreObj.TextLevel = TextLevel;
 		            TotalScoreObj.AnswerTime = countAnswerTime;
 
 		            TotalScoreObj.userSelectedItem = userSelectedItem;
