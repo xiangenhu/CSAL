@@ -162,9 +162,12 @@ function CompileScroe(PresentationHistory){
 		}
 	
 	var userAnswer="";
-	/*if (PresentationHistory.userAnswer!=null){
+	// Changes made by XHU 05/26/2021
+	if (PresentationHistory.userAnswer!=null){
 		userAnswer=PresentationHistory.userAnswer;
-	} */
+		return userAnswer;
+	}
+	// Changes made by XHU 05/26/2021
 	if (PresentationHistory.newUserPerfomaceLog!=null && PresentationHistory.newUserPerfomaceLog.length>0)
 {
        len = PresentationHistory.newUserPerfomaceLog.length
@@ -811,6 +814,13 @@ function xAPIPostOther(acePostjson,averb){
 
 
 	var ResultObj={};
+	
+    if (data.userAnswer==null){
+		if (data.Data.input.PresentationHistory!=null){
+
+		}
+	}
+
 	if ((data.userAnswer=="Incorrect")||(data.userAnswer=="Correct")){
 		if (data.userAnswer=="Incorrect"){
 			ResultObj={success:false,
