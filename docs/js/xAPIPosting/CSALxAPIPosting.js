@@ -815,11 +815,6 @@ function xAPIPostOther(acePostjson,averb){
 
 	var ResultObj={};
 	
-    if (data.userAnswer==null){
-		if (data.Data.input.PresentationHistory!=null){
-
-		}
-	}
 
 	if ((data.userAnswer=="Incorrect")||(data.userAnswer=="Correct")){
 		if (data.userAnswer=="Incorrect"){
