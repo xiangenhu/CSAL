@@ -564,6 +564,7 @@ function restart(){
 
 
 $(document).ready(function() {
+//	CheckIfPossibleToRewind();
 	GetTheEventAssigned();
 	if (qs("editing","0")=="1"){
 		onLoad1();

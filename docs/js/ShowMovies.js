@@ -6,7 +6,11 @@ function GetMovieWhenReady(){
         }
     }
 }
-    
+
+function CheckIfPossibleToRewind(){
+    loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw")+"/6/public/values?alt=json-in-script&callback=CheckRewind", "js");
+}
+CanRewind=false;
 var MOVIEObj={"PopMsg":"",
               "PopTitle":"",
               "MOVIELink":"",
@@ -23,6 +27,24 @@ var MOVIEObj={"PopMsg":"",
 function GetObj(str){
     return str.split("&");
 }
+
+function CheckRewind(json){
+    var spData = json.feed.entry;
+	var i;
+	 for (i=0;3*i<spData.length;i++){
+		 var line=i*3;
+		 var row=[spData[line].content["$t"],spData[line+1].content["$t"],spData[line+2].content["$t"]];
+         console.log(row,qs("quid",""));
+         if (qs("guid","")==spData[line+1].content["$t"]){
+            CanRewind=(spData[line+2].content["$t"]!="No");
+            if (CanRewind) {
+                GetALLActions(LRSURL,LRSLogin,LRSPassword,lastStartingTime);
+            }
+            return;
+         }
+	 }
+}
+
  function GetMovies(json){
 	var spData = json.feed.entry;
 	var i;
