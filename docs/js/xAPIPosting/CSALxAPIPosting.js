@@ -27,6 +27,10 @@ var TheSetting = {
   data: "",
 };
 
+function GetPerformanceLog(User,Lesson){
+
+}
+
 function GetTopURL() {}
 var MoodleVar = {
   classID: qs("classID", ""),
