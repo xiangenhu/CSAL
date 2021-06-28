@@ -163,10 +163,10 @@ function FindTeacher(TeacherEmail,TeacherName){
 		}else{
 			var listofCourses=[];
 			for (var i=0; i<response.length;i++){
-				if (listofCourses.includes(response[i].course)){
+				if (listofCourses.includes(response[i].login)){
 
 				}else{
-					listofCourses.push(response[i].course);
+					listofCourses.push(response[i].login);
 				}
 				if (response[i].teacherEmail==TeacherEmail){
 					var html="";
