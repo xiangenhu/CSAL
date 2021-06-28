@@ -93,7 +93,17 @@ function GetClass(json){
 }
 
 function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,TeacherName){
-	var TheIndex=Math.random()*TheOriginalList.length;
+	var i;
+	var remainList=[];
+	for (i=TheOriginalList.length-1;i>0;i--){
+		if (RemoveList.includes(TheOriginalList[i][1])){
+			console.log(TheOriginalList[i][1]);
+		}else{
+			remainList.push(TheOriginalList[i]);
+		}
+	}
+	console.log(remainList);
+	var TheIndex=Math.random()*remainList.length;
 	var randomindex=Math.floor(TheIndex);
 	var html="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
@@ -101,19 +111,19 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	html=html+"Please click the <b>[Move Forward] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
     var TheMessage="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	TheMessage=TheMessage+"Please use the following login information to login:<ul>";
-	TheMessage=TheMessage+"<li>Login: <b>"+TheOriginalList[randomindex][1]+"</b>";
-	TheMessage=TheMessage+"<li>Password: <b>"+TheOriginalList[randomindex][2]+"</b>";
-	TheMessage=TheMessage+"<li>Instruction to teacher: <a href='"+TheOriginalList[randomindex][3]+"' target='new'></a><b>"+TheOriginalList[randomindex][3]+"</b></a>";
-	TheMessage=TheMessage+"<li>List of your students: <a href='"+TheOriginalList[randomindex][4]+"' target='new'> <b>"+TheOriginalList[randomindex][4]+"</b> </a>"
+	TheMessage=TheMessage+"<li>Login: <b>"+remainList[randomindex][1]+"</b>";
+	TheMessage=TheMessage+"<li>Password: <b>"+remainList[randomindex][2]+"</b>";
+	TheMessage=TheMessage+"<li>Instruction to teacher: <a href='"+remainList[randomindex][3]+"' target='new'></a><b>"+remainList[randomindex][3]+"</b></a>";
+	TheMessage=TheMessage+"<li>List of your students: <a href='"+remainList[randomindex][4]+"' target='new'> <b>"+remainList[randomindex][4]+"</b> </a>"
 	TheMessage=TheMessage+"<li>URL to Login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
 	
 	var TeacherCourseObj={"TeacherEmail":TeacherEmail,
 		"TeacherName":TeacherName,
-		"Course":TheOriginalList[randomindex][0],
-		"login":TheOriginalList[randomindex][1],
-		"password":TheOriginalList[randomindex][2],
-		"instruction":TheOriginalList[randomindex][3],
-		"students":TheOriginalList[randomindex][4]
+		"Course":remainList[randomindex][0],
+		"login":remainList[randomindex][1],
+		"password":remainList[randomindex][2],
+		"instruction":remainList[randomindex][3],
+		"students":remainList[randomindex][4]
 	}
 
 	
@@ -153,7 +163,11 @@ function FindTeacher(TeacherEmail,TeacherName){
 		}else{
 			var listofCourses=[];
 			for (var i=0; i<response.length;i++){
-				listofCourses.push(response[i].course);
+				if (listofCourses.includes(response[i].course)){
+
+				}else{
+					listofCourses.push(response[i].course);
+				}
 				if (response[i].teacherEmail==TeacherEmail){
 					var html="";
 					html=html+"Hello <b>"+response[i].teacherName+"</b>: <br/>";
