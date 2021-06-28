@@ -12,7 +12,11 @@ var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
 var classID=qs("classID","CSALUSNW01");
 
 var ITSRoot=qs("ITSRoot","https://www.autotutor.org/");
-
+var ignoredResearchEmails=["mailto:xiangenhu@gmail.com",
+                           "mailto:esmith42@memphis.edu",
+						   "mailto:keithshubeck@gmail.com",
+						   "mailto:genghushi@hotmail.com",
+						   "mailto:jodycockroft@gmail.com","mailto:zhiqiang.cai.2016@gmail.com","mailto:genghushi@foxmail.com"];
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
@@ -164,9 +168,13 @@ function FindTeacher(TeacherEmail,TeacherName){
 			var listofCourses=[];
 			for (var i=0; i<response.length;i++){
 				if (listofCourses.includes(response[i].login)){
-
 				}else{
-					listofCourses.push(response[i].login);
+					if (!ignoredResearchEmails.includes(response[i].teacherEmail)) {
+						listofCourses.push(response[i].login);
+						console.log(response[i].login+" "+response[i].teacherEmail);
+					}else{
+					//	console.log(response[i].login+" "+response[i].teacherEmail);
+					}
 				}
 				if (response[i].teacherEmail==TeacherEmail){
 					var html="";
