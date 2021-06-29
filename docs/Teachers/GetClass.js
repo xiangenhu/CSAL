@@ -16,7 +16,20 @@ var ignoredResearchEmails=["mailto:xiangenhu@gmail.com",
                            "mailto:esmith42@memphis.edu",
 						   "mailto:keithshubeck@gmail.com",
 						   "mailto:genghushi@hotmail.com",
-						   "mailto:jodycockroft@gmail.com","mailto:zhiqiang.cai.2016@gmail.com","mailto:genghushi@foxmail.com"];
+						   "mailto:jodycockroft@gmail.com",
+						   "mailto:zhiqiang.cai.2016@gmail.com",
+						   "mailto:genghushi@foxmail.com",
+						   "mailto:aatawfik@memphis.edu",
+						   "mailto:cbourret@provlib.org",
+						   "mailto:cmcarmon@memphis.edu",
+						   "mailto:djrosen1123@gmail.com",
+						   "mailto:djrosen123@gmail.com",
+						   "mailto:jaclynjgish@gmail.com",
+						   "mailto:jdgatewood16@gmail.com",
+						   "mailto:jen_vanek@worlded.org",
+						   "mailto:jjgshbgh@memphis.edu",
+						   "mailto:jmhllndr@memphis.edu",
+						   "mailto:jpangloss856@outlook.com"];
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
