@@ -85,7 +85,7 @@ function OpenPopUp(header, footer, bodytext, targetwin) {
   var html = "";
   html = html + '<div class="modal-content" id="PopupDialog">';
   html = html + '<div class="modal-header">';
-  html = html + '<span id="Modalclosebtn" class="close">&times;</span>';
+  html = html + '<button id="Modalclosebtn" class="btn"  style="float: right;">&times;</button>';
   html = html + "<h2>" + header + "</h2>";
   html = html + "</div>";
   html = html + '<div class="modal-body" id="bodytext">';
