@@ -306,11 +306,29 @@ function ComposewithContextActivities(
   PresentationHistory.Score = { this: accumlateScore, total: totalScore };
   //	PresentationHistory.URLLink=location.href;
   PresentationHistory.OtherInfor = MoodleVar;
+
+// updated to track activities  --- XHU
+  var theCodeForAction={learner:AnActor.mbox,
+                        learnerName:AnActor.name,
+                        lesson:activityObj.mbox,
+                        lessonTitle:activityObj.name
+                      }
+  var aResultObj = {
+    success: resultsSuccess,
+    score:{raw:SuccessFailToValue01(resultsSuccess)},
+    response: JSON.stringify(theCodeForAction),
+    extensions: resultExt,
+  };
+
+// updated to track activities  --- XHU
+	 
+/*	  
   var aResultObj = {
     success: resultsSuccess,
     response: PresentationHistory.userSelectedItem,
     extensions: resultExt,
   };
+*/
   var contextObj = {
     contextActivities: contextActivities,
     extensions: Extdata.extensions,
