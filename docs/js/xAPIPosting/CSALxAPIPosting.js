@@ -346,6 +346,9 @@ function ComposewithContextActivities(
   return parts;
 }
 
+function SuccessFailToValue01(SorF){
+  if(SorF) {return 1}else{return 0}
+}
 function calculateAllScores(response) {
   var i;
   var AllHard = "";
