@@ -132,10 +132,10 @@ function loadjscssfile(filename, filetype) {
 function GetExtraArguments() {
   var TheLRSURL = qs(
     "lrs",
-    "https://record.x-in-y.com/arcfinaldebugging/xapi/"
+    "https://record.x-in-y.com/arcproduction/xapi/"
   );
-  var TheLRSLogin = qs("lrslogin", "mihamo");
-  var theLRSPassword = qs("lrspassword", "zutivv");
+  var TheLRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+  var theLRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
   var lrs = "&lrs=" + TheLRSURL;
   var lrsLogin = "&lrslogin=" + TheLRSLogin;

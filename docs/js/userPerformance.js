@@ -373,8 +373,16 @@ function CountTotalScore(
   }
 }
 
+
 function showEndingPage() {
+
   var lessonID = sessionStorage.getItem("LessonID");
+
+  if (qs("NewEnding","1")=="1"){
+    getCurrentScore(TheLessonIDforXAPI.mbox,LearnerID.mbox);
+    return
+  }
+
   //user can answer two times for a question
   if (lessonID == "lesson1") {
     var countCrrectNum = 0;

@@ -62,17 +62,17 @@ var totalScore = {
 
 var ITProfile = qs("ITProfile", "https://app.skoonline.org/ITSProfile/");
 
-var LRSURL = qs("lrs", "https://record.x-in-y.com/arcfinaldebugging/xapi/");
-var LRSLogin = qs("lrslogin", "mihamo");
-var LRSPassword = qs("lrspassword", "zutivv");
+var LRSURL = qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/");
+var LRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+var LRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
 var xAPIVerbBase = qs("verbbase", ITProfile);
 
 var wrapper;
 
 function getCSALTheDataAuthory() {
-  var TheLRSLogin = qs("lrslogin", "mihamo");
-  var theLRSPassword = qs("lrspassword", "zutivv");
+  var TheLRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+  var theLRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
   return qs("TheCASLDataAuthory", btoa(TheLRSLogin + ":" + theLRSPassword));
 }
 
@@ -1030,7 +1030,7 @@ function xAPIPostOther(acePostjson, averb) {
   if (statements != null) {
     //	console.log(JSON.stringify(statements));
     var TheOrignalName=statements.object.name;
-    statements.object.name=TheOrignalName+"@"+qs("ClassID","ClassID");
+    statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
     ADL.XAPIWrapper.sendStatement(statements);
   }
 }
