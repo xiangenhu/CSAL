@@ -1,11 +1,10 @@
-﻿
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcproduction/xapi/");
-var TheLRSLogin=qs("lrslogin","8ab2151b-dd04-478c-9a41-6075ef40d47e");
-var theLRSPassword=qs("lrspassword","8ab2151b-dd04-478c-9a41-6075ef40d47e");
+﻿var TheLRSURL = qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/");
+var TheLRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+var theLRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
-var AggregateURLData=TheLRSURL+"statements/aggregate";
+var AggregateURLData = TheLRSURL + "statements/aggregate";
 
-var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
+var TheDataAuthory = btoa(TheLRSLogin + ":" + theLRSPassword);
 
 var TheUniqPointer = qs(
   "TheDashPointer",
@@ -13,15 +12,15 @@ var TheUniqPointer = qs(
 );
 var DashboardAgentLink = qs(
   "DashAgentLink",
-  "37448295-cd87-4727-92e0-72187923fb30"
+  "07288904-ab64-4562-87ea-821880887e14"
 );
 var DashboardActivityLink = qs(
   "DashActivityLink",
-  "ee6e78ae-20c4-4767-9790-8a002a44ce99"
+  "52f9d198-442a-4d96-b33d-c83baae136d2"
 );
 var DashboardLRSLink = qs(
   "DashLRSLink",
-  "ef68bddf-2a01-40ae-a87f-9e9e2be4a71f"
+  "2a82bdc3-10ff-4a9c-beb9-a6dad906a26f"
 );
 
 function DisplayStudentLog(StudentID, name) {
@@ -30,7 +29,12 @@ function DisplayStudentLog(StudentID, name) {
 
   var DashConfig = {
     name: "agent",
-    params: { agentId: { value: StudentID, display: name } },
+    params: {
+      agentId: {
+        value: StudentID,
+        display: name
+      }
+    },
   };
   return (
     TheUniqPointer + DashboardAgentLink + "/#" + JSON.stringify(DashConfig)
@@ -47,7 +51,10 @@ function DisplayStudentActivity(StudentID, name) {
       activityId: {
         value: StudentID,
         display: name,
-        range: { from: last24hurs, to: TheDate },
+        range: {
+          from: last24hurs,
+          to: TheDate
+        },
       },
     },
   };
@@ -71,6 +78,7 @@ function GetLessonInformation(LessonID) {
     }
   }
 }
+
 function CreateLessonByStudentMatrix() {
   var settings = TheLRStheSetting;
   // create matrix
@@ -79,34 +87,61 @@ function CreateLessonByStudentMatrix() {
   //  create matrix
   var match = {
     "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
-    $or: [
-      { "statement.result.score.raw": 1 },
-      { "statement.result.score.raw": 0 },
+    $or: [{
+        "statement.result.score.raw": 1
+      },
+      {
+        "statement.result.score.raw": 0
+      },
     ],
   };
   if (qs("classID", "0000") != "Master") {
     var theStr = "^.*" + qs("classID", "0000") + ".*$";
     match = {
       "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
-      "statement.object.name": { $parseRegex: { regex: theStr } },
-      $or: [
-        { "statement.result.score.raw": 1 },
-        { "statement.result.score.raw": 0 },
+      "statement.object.name": {
+        $parseRegex: {
+          regex: theStr
+        }
+      },
+      $or: [{
+          "statement.result.score.raw": 1
+        },
+        {
+          "statement.result.score.raw": 0
+        },
       ],
     };
   }
-  var data = [
-    { $match: match },
-    { $sort: { "statement.timestamp": -1 } },
+  var data = [{
+      $match: match
+    },
+    {
+      $sort: {
+        "statement.timestamp": -1
+      }
+    },
     {
       $group: {
         _id: "$statement.result.response",
-        sum: { $sum: 1 },
-        Start: { $min: "$statement.timestamp" },
-        End: { $max: "$statement.timestamp" },
-        MaxScore: { $max: "$statement.result.score.raw" },
-        MinScore: { $min: "$statement.result.score.raw" },
-        Average: { $avg: "$statement.result.score.raw" },
+        sum: {
+          $sum: 1
+        },
+        Start: {
+          $min: "$statement.timestamp"
+        },
+        End: {
+          $max: "$statement.timestamp"
+        },
+        MaxScore: {
+          $max: "$statement.result.score.raw"
+        },
+        MinScore: {
+          $min: "$statement.result.score.raw"
+        },
+        Average: {
+          $avg: "$statement.result.score.raw"
+        },
       },
     },
   ];
@@ -137,12 +172,10 @@ function CreateLessonByStudentMatrix() {
           name: DetailObj.learnerName,
         };
 
-        if (Lessons.includes(JSON.stringify(lessoninfor))) {
-        } else {
+        if (Lessons.includes(JSON.stringify(lessoninfor))) {} else {
           Lessons.push(JSON.stringify(lessoninfor));
         }
-        if (Learners.includes(JSON.stringify(learnerinfo))) {
-        } else {
+        if (Learners.includes(JSON.stringify(learnerinfo))) {} else {
           Learners.push(JSON.stringify(learnerinfo));
         }
       }
@@ -163,6 +196,7 @@ function CreateLessonByStudentMatrix() {
       for (var i = 0; i < Lessons.length; i++) {
         html = html + "<tr>";
         var Therow = "";
+
         for (var k = 0; k < TheRealResponse.length; k++) {
           var Thedetails = JSON.parse(TheRealResponse[k]._id);
           if (Therow == "") {
@@ -173,6 +207,7 @@ function CreateLessonByStudentMatrix() {
             }
           }
         }
+        
         for (var j = 0; j < Learners.length; j++) {
           var theValue = "";
 
@@ -185,12 +220,12 @@ function CreateLessonByStudentMatrix() {
             JSON.parse(Learners[j]).name
           );
           var Links =
-            "<br/><a href='" +
-            encodeURI(activityLink) +
-            "' target='activity'>activities in the last 24 hours</a>" +
-            "<br/><a href='" +
-            encodeURI(AgentLink) +
-            "' target='alllogs'>All history since starting</a>";
+            "<li><a href='" +
+            activityLink +
+            "' target='activity'>activities in the last 24 hours</a>" + "</li>";
+          Links = Links + "<li><a href='" +
+            AgentLink +
+            "' target='alllogs'>All history since starting</a> </li>";
           var WithAnswer = false;
           for (var k = 0; k < TheRealResponse.length; k++) {
             var Thedetails = JSON.parse(TheRealResponse[k]._id);
@@ -201,8 +236,6 @@ function CreateLessonByStudentMatrix() {
             ) {
               WithAnswer = true;
               var cellID = "cell_" + i.toString() + "_" + j.toString();
-              // get inform rom lessons
-              //             var lessonPassing=GetLessonInformation(Thedetails.lesson);
 
               if (TheRealResponse[k].sum >= LessonInfor.total) {
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
@@ -226,6 +259,8 @@ function CreateLessonByStudentMatrix() {
               theValue =
                 theValue + "<div id='" + cellID + "' style='display:none'>";
               theValue = theValue + "<ul>";
+
+ //             theValue = theValue + Links;
               theValue =
                 theValue +
                 "<li>Last  Access: " +
@@ -256,12 +291,9 @@ function CreateLessonByStudentMatrix() {
                 "<li>Average Score " +
                 TheRealResponse[k].Average.toFixed(2) +
                 " </li>";
-              //              var theLinkRow="<li>More details:"+Links+" </li>";
-              //              theValue =theValue+ "<li>More details:"+Links+" </li>";
               theValue = theValue + "</ul>";
               theValue = theValue + "</div>";
-            } else {
-            }
+            } else {}
           }
           if (WithAnswer) {
             html = html + "<td>" + theValue + "</td>";
@@ -274,6 +306,7 @@ function CreateLessonByStudentMatrix() {
       }
     }
     html = html + "</table>";
+    console.log(html)
     $("#TheStatusOfStudents").html(html);
     // create table
   });
@@ -282,6 +315,7 @@ function CreateLessonByStudentMatrix() {
 function togglebtn(divName) {
   $("#" + divName).toggle();
 }
+
 function DashBoardCheckStudentStatus() {
   CreateLessonByStudentMatrix();
 }
@@ -313,6 +347,7 @@ function loadjscssfile(filename, filetype) {
 }
 
 TheLessionsInfo = [];
+
 function GetLessonsInfo(json) {
   var spData;
   var FromTools = json.feed == null;
@@ -338,55 +373,72 @@ function GetLessonsInfo(json) {
 }
 
 
-TheLRStheSetting={
+TheLRStheSetting = {
   "async": true,
   "crossDomain": true,
   "url": AggregateURLData,
   "method": "POST",
   "headers": {
-  "authorization": "Basic " + TheDataAuthory,
-  "content-type": "application/json",
-  "cache-control": "no-cache",
-  "x-experience-api-version": "1.0.3",
-  "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
+    "authorization": "Basic " + TheDataAuthory,
+    "content-type": "application/json",
+    "cache-control": "no-cache",
+    "x-experience-api-version": "1.0.3",
+    "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
   },
   "processData": false,
-  "data":{}
+  "data": {}
 }
 
-function getCurrentScore(LessonID,Learnermbox){
-	var thesetting=TheLRStheSetting;
-	  var match={"statement.actor.mbox":Learnermbox,
-	             "statement.object.mbox":LessonID,
-				 "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
-	  var group={
-        _id: "$statement.result.response",
-        sum: { $sum: 1 },
-        Start: { $min: "$statement.timestamp" },
-        End: { $max: "$statement.timestamp" },
-        MaxScore: { $max: "$statement.result.score.raw" },
-        MinScore: { $min: "$statement.result.score.raw" },
-        Average: { $avg: "$statement.result.score.raw" },
-      }
-	  var data=[
-	  {"$match":match},
-	  {"$group":group}
-	  ];
-	  thesetting.data=JSON.stringify(data);
-	  $.ajax(thesetting).done(function (response) {
-		  if (response.length==0){
-       
-      }else{
-        for (i=0;i<TheLessionsInfo.length;i++){
-          if (response[0]._id.indexOf(TheLessionsInfo[i][1])>-1){
-            if (response[0].Average>=TheLessionsInfo[i][5]){
+function getCurrentScore(LessonID, Learnermbox) {
+  var thesetting = TheLRStheSetting;
+  var match = {
+    "statement.actor.mbox": Learnermbox,
+    "statement.object.mbox": LessonID,
+    "statement.verb.id": "https://app.skoonline.org/ITSProfile/action"
+  };
+  var group = {
+    _id: "$statement.result.response",
+    sum: {
+      $sum: 1
+    },
+    Start: {
+      $min: "$statement.timestamp"
+    },
+    End: {
+      $max: "$statement.timestamp"
+    },
+    MaxScore: {
+      $max: "$statement.result.score.raw"
+    },
+    MinScore: {
+      $min: "$statement.result.score.raw"
+    },
+    Average: {
+      $avg: "$statement.result.score.raw"
+    },
+  }
+  var data = [{
+      "$match": match
+    },
+    {
+      "$group": group
+    }
+  ];
+  thesetting.data = JSON.stringify(data);
+  $.ajax(thesetting).done(function (response) {
+    if (response.length == 0) {
+
+    } else {
+      for (i = 0; i < TheLessionsInfo.length; i++) {
+        if (response[0]._id.indexOf(TheLessionsInfo[i][1]) > -1) {
+          if (response[0].Average >= TheLessionsInfo[i][5]) {
             userPerformancePage("pass", response[0].Average, 0, response[0].sum, "Level");
-            }else{
-              userPerformancePage("Fail",  response[0].Average, 0, response[0].sum, "Level"); 
-            }
-            return;
+          } else {
+            userPerformancePage("Fail", response[0].Average, 0, response[0].sum, "Level");
           }
+          return;
         }
       }
-	  })
-  }
+    }
+  })
+}
