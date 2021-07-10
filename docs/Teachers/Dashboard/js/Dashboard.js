@@ -365,7 +365,6 @@ function GetLessonsInfo(json) {
       spData[line + 4].content["$t"],
       spData[line + 5].content["$t"],
     ];
-    console.log(row);
     TheLessionsInfo.push(row);
   }
   DashBoardCheckStudentStatus();
