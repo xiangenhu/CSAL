@@ -1029,7 +1029,9 @@ function xAPIPostOther(acePostjson, averb) {
   if (statements != null) {
     //	console.log(JSON.stringify(statements));
     var TheOrignalName=statements.object.name;
-    statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
+    if (TheOrignalName.indexOf("@")==-1){
+      statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
+    }
     ADL.XAPIWrapper.sendStatement(statements);
   }
 }
