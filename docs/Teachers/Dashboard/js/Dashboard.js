@@ -235,32 +235,30 @@ function CreateLessonByStudentMatrix() {
               Thedetails.learner == JSON.parse(Learners[j]).email
             ) {
               WithAnswer = true;
-              var cellID = "cell_" + i.toString() + "_" + j.toString();
+              var cellID = "cell__" + i.toString() + "__" + j.toString();
 
               if (TheRealResponse[k].sum >= LessonInfor.total) {
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
                   theValue =
                     "<button onclick='togglebtn(\"" +
                     cellID +
-                    "\");' class='btn' style='background-color: green' >&#10003;</button>";
+                    "\");' class='btn1' style='background-color: green' >&#10003;</button>";
                 } else {
                   theValue =
                     "<button onclick='togglebtn(\"" +
                     cellID +
-                    "\");' class='btn' style='background-color: red' >&#10008;</button>";
+                    "\");' class='btn1' style='background-color: red' >&#10008;</button>";
                 }
               } else {
                 theValue =
                   "<button onclick='togglebtn(\"" +
                   cellID +
-                  "\");' class='btn' style='background-color: grey' >&#x27A4;</button>";
+                  "\");' class='btn1' style='background-color: grey' >&#x27A4;</button>";
               }
 
-              theValue =
-                theValue + "<div id='" + cellID + "' style='display:none'>";
-              theValue = theValue + "<ul>";
+              theValue = theValue + "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
 
- //             theValue = theValue + Links;
+         //     theValue = theValue + Links;
               theValue =
                 theValue +
                 "<li>Last  Access: " +
@@ -292,7 +290,6 @@ function CreateLessonByStudentMatrix() {
                 TheRealResponse[k].Average.toFixed(2) +
                 " </li>";
               theValue = theValue + "</ul>";
-              theValue = theValue + "</div>";
             } else {}
           }
           if (WithAnswer) {
@@ -314,6 +311,7 @@ function CreateLessonByStudentMatrix() {
 
 function togglebtn(divName) {
   $("#" + divName).toggle();
+  console.log(divName)
 }
 
 function DashBoardCheckStudentStatus() {
@@ -370,6 +368,7 @@ function GetLessonsInfo(json) {
     console.log(row);
     TheLessionsInfo.push(row);
   }
+  DashBoardCheckStudentStatus();
 }
 
 
