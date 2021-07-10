@@ -3,9 +3,13 @@ var TheClasses=[];
 var StudentList=[];
 var ClassIDSpreadsheet="1TW6MmY59UQlybW7-m2bzUtMp1eBZtLJhRFFWUtIKOHU"
 
+//this is for teacher information Keep this
 var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
 var TheLRSLogin=qs("lrslogin","mihamo");
 var theLRSPassword=qs("lrspassword","zutivv");
+
+//this is for teacher information Keep this
+
 var TheVerb="Assigned";
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);

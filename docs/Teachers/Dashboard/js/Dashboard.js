@@ -1,4 +1,13 @@
-﻿var TheUniqPointer = qs(
+﻿
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcproduction/xapi/");
+var TheLRSLogin=qs("lrslogin","8ab2151b-dd04-478c-9a41-6075ef40d47e");
+var theLRSPassword=qs("lrspassword","8ab2151b-dd04-478c-9a41-6075ef40d47e");
+
+var AggregateURLData=TheLRSURL+"statements/aggregate";
+
+var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
+
+var TheUniqPointer = qs(
   "TheDashPointer",
   "https://record.x-in-y.com/integrations/embedableDashboards/"
 );
@@ -75,8 +84,8 @@ function CreateLessonByStudentMatrix() {
       { "statement.result.score.raw": 0 },
     ],
   };
-  if (qs("ClassID", "0000") != "Master") {
-    var theStr = "^.*" + qs("ClassID", "0000") + ".*$";
+  if (qs("classID", "0000") != "Master") {
+    var theStr = "^.*" + qs("classID", "0000") + ".*$";
     match = {
       "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
       "statement.object.name": { $parseRegex: { regex: theStr } },
@@ -211,7 +220,7 @@ function CreateLessonByStudentMatrix() {
                 theValue =
                   "<button onclick='togglebtn(\"" +
                   cellID +
-                  "\");' class='btn' style='background-color: purple' >&#10003;</button>";
+                  "\");' class='btn' style='background-color: grey' >&#x27A4;</button>";
               }
 
               theValue =
@@ -327,3 +336,57 @@ function GetLessonsInfo(json) {
     TheLessionsInfo.push(row);
   }
 }
+
+
+TheLRStheSetting={
+  "async": true,
+  "crossDomain": true,
+  "url": AggregateURLData,
+  "method": "POST",
+  "headers": {
+  "authorization": "Basic " + TheDataAuthory,
+  "content-type": "application/json",
+  "cache-control": "no-cache",
+  "x-experience-api-version": "1.0.3",
+  "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
+  },
+  "processData": false,
+  "data":{}
+}
+
+function getCurrentScore(LessonID,Learnermbox){
+	var thesetting=TheLRStheSetting;
+	  var match={"statement.actor.mbox":Learnermbox,
+	             "statement.object.mbox":LessonID,
+				 "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"};
+	  var group={
+        _id: "$statement.result.response",
+        sum: { $sum: 1 },
+        Start: { $min: "$statement.timestamp" },
+        End: { $max: "$statement.timestamp" },
+        MaxScore: { $max: "$statement.result.score.raw" },
+        MinScore: { $min: "$statement.result.score.raw" },
+        Average: { $avg: "$statement.result.score.raw" },
+      }
+	  var data=[
+	  {"$match":match},
+	  {"$group":group}
+	  ];
+	  thesetting.data=JSON.stringify(data);
+	  $.ajax(thesetting).done(function (response) {
+		  if (response.length==0){
+       
+      }else{
+        for (i=0;i<TheLessionsInfo.length;i++){
+          if (response[0]._id.indexOf(TheLessionsInfo[i][1])>-1){
+            if (response[0].Average>=TheLessionsInfo[i][5]){
+            userPerformancePage("pass", response[0].Average, 0, response[0].sum, "Level");
+            }else{
+              userPerformancePage("Fail",  response[0].Average, 0, response[0].sum, "Level"); 
+            }
+            return;
+          }
+        }
+      }
+	  })
+  }
