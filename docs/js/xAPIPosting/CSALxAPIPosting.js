@@ -310,8 +310,7 @@ function ComposewithContextActivities(
 // updated to track activities  --- XHU
   var theCodeForAction={learner:AnActor.mbox,
                         learnerName:AnActor.name,
-                        lesson:activityObj.mbox,
-                        lessonTitle:activityObj.name
+                        lesson:activityObj.mbox
                       }
   var aResultObj = {
     success: resultsSuccess,
