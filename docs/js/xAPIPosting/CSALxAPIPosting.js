@@ -974,9 +974,13 @@ function xAPIPostOther(acePostjson, averb) {
   };
 
   var activityObj = TheLessonIDforXAPI;
+ 
   // Activity
   var data = acePostjson;
-
+  var responseCode={"user":LearnerID.mbox,
+                   "lesson":TheLessonIDforXAPI.mbox};
+  var responseCodeStr=JSON.stringify(responseCode);
+  console.log(JSON.stringify(responseCode));
   var resltExt = {};
   resltExt[ITProfile + "CSAL/LMS"] = MoodleVar;
 
@@ -986,13 +990,15 @@ function xAPIPostOther(acePostjson, averb) {
     if (data.userAnswer == "Incorrect") {
       ResultObj = {
         success: false,
-        response: data.userSelectedItem,
+        score:{raw:0},
+        response: responseCodeStr,
         extensions: resltExt,
       };
     } else {
       ResultObj = {
         success: true,
-        response: data.userSelectedItem,
+        score:{raw:1},
+        response: responseCodeStr,
         extensions: resltExt,
       };
     }
@@ -1023,6 +1029,8 @@ function xAPIPostOther(acePostjson, averb) {
   }
   if (statements != null) {
     //	console.log(JSON.stringify(statements));
+    var TheOrignalName=statements.object.name;
+    statements.object.name=TheOrignalName+"@"+qs("ClassID","ClassID");
     ADL.XAPIWrapper.sendStatement(statements);
   }
 }
