@@ -239,9 +239,10 @@ function CompileScroe(PresentationHistory) {
   return userAnswer;
 }
 
+var TheTitle=SKOTitle+"@"+qs("classID","classID")
 var TheLessonIDforXAPI = {
   mbox: "mailto:" + SKOGuid + "@" + ASATLocation,
-  name: SKOTitle,
+  name: TheTitle,
   objectType: "Agent",
 };
 
@@ -1028,10 +1029,10 @@ function xAPIPostOther(acePostjson, averb) {
   }
   if (statements != null) {
     //	console.log(JSON.stringify(statements));
-    var TheOrignalName=statements.object.name;
-    if (TheOrignalName.indexOf("@")==-1){
-      statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
-    }
+//    var TheOrignalName=statements.object.name;
+//    if (TheOrignalName.indexOf("@")==-1){
+//      statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
+ //   }
     ADL.XAPIWrapper.sendStatement(statements);
   }
 }
