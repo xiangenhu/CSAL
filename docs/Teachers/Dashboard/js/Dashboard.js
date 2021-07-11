@@ -428,7 +428,6 @@ function findLastSession(LessonID, Learnermbox, N, findReport,LessonLearnObj) {
       $match: match,
     },
     { $sort: { "statement.timestamp": -1 } },
-    { $limit: N },
     { $project: { statementTime: "$statement.timestamp" } },
   ];
   thesetting.data = JSON.stringify(data);
@@ -439,13 +438,15 @@ function findLastSession(LessonID, Learnermbox, N, findReport,LessonLearnObj) {
         LessonID,
         Learnermbox,
         response[0].statementTime,
-        findReport,LessonLearnObj
+        findReport,
+        LessonLearnObj,
+        response.length
       );
     }
   });
 }
 
-function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonLearnObj) {
+function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonLearnObj,total) {
   var thesetting = TheLRStheSetting;
   var match = {
     "statement.actor.mbox": Learnermbox,
@@ -486,7 +487,9 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
   $.ajax(thesetting).done(function (response) {
     if (response.length == 0) {
       var msg="LAST RECORD RETRIEVED: \n"
-            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n"
+            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n",
+            msg=msg+"Started "+total +" times\n";
+            msg=msg+"Here is the information for the most recent attempt:\n";
             msg=msg+"Started at: "+ReturnDate(startingTime)+"\n";
             msg=msg+"But did not answer any questions";
             alert(msg);
@@ -515,6 +518,8 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
           } else {
             var msg="LAST RECORD RETRIEVED: \n"
             msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n"
+            msg=msg+"Started "+total +" times\n";
+            msg=msg+"Here is the information for the most recent attempt:\n";
             msg=msg+"Total Number of questions answered: "+response[0].sum+"\n";
             msg=msg+"Average Score: "+response[0].Average.toFixed(2)+"\n"; 
             msg=msg+"Started at: "+ReturnDate(response[0].Start)+"\n";
