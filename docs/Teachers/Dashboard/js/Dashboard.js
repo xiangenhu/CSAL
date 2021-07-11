@@ -227,8 +227,8 @@ function CreateLessonByStudentMatrix() {
           var Links =
             "<li><a href='" +
             AgentLink +
-            "' target='alllogs'>All history since starting</a> </li>";
-
+            "' target='alllogs'><button>Activity Log</button></a> </li>";
+       
           /*Links =
             Links +
             "<li><a href='" +
@@ -245,6 +245,13 @@ function CreateLessonByStudentMatrix() {
               Thedetails.lesson == JSON.parse(Lessons[i]).guid &&
               Thedetails.learner == JSON.parse(Learners[j]).email
             ) {
+              Thedetails.learnerName=JSON.parse(Learners[j]).name;
+              Thedetails.LessonTitle=Therow;
+              var LastPerformance =
+                "<li><button onclick='GetLastperformance(\"" +
+                encodeURI(JSON.stringify(Thedetails)) +
+                "\")'>Last Performance</button></li>";
+                console.log(LastPerformance)
               WithAnswer = true;
               var cellID = "cell__" + i.toString() + "__" + j.toString();
 
@@ -273,6 +280,7 @@ function CreateLessonByStudentMatrix() {
                 cellID +
                 "' style='display:none; z-index: -1'>";
 
+              theValue = theValue + LastPerformance;
               theValue = theValue + Links;
               theValue =
                 theValue +
@@ -323,6 +331,12 @@ function CreateLessonByStudentMatrix() {
     $("#TheStatusOfStudents").html(html);
     // create table
   });
+}
+
+function GetLastperformance(LessonAndUser) {
+  var LessonLearner=JSON.parse(decodeURI(LessonAndUser));
+  console.log(LessonLearner)
+  findLastSession(LessonLearner.lesson, LessonLearner.learner, 1, false,LessonLearner) 
 }
 
 function togglebtn(divName) {
@@ -402,12 +416,42 @@ TheLRStheSetting = {
   data: {},
 };
 
-function getCurrentScore(LessonID, Learnermbox) {
+function findLastSession(LessonID, Learnermbox, N, findReport,LessonLearnObj) {
+  var thesetting = TheLRStheSetting;
+  var match = {
+    "statement.actor.mbox": Learnermbox,
+    "statement.object.mbox": LessonID,
+    "statement.verb.id": "https://app.skoonline.org/ITSProfile/start",
+  };
+  var data = [
+    {
+      $match: match,
+    },
+    { $sort: { "statement.timestamp": -1 } },
+    { $limit: N },
+    { $project: { statementTime: "$statement.timestamp" } },
+  ];
+  thesetting.data = JSON.stringify(data);
+  $.ajax(thesetting).done(function (response) {
+    if (response.length == 0) {
+    } else {
+      getCurrentScore(
+        LessonID,
+        Learnermbox,
+        response[0].statementTime,
+        findReport,LessonLearnObj
+      );
+    }
+  });
+}
+
+function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonLearnObj) {
   var thesetting = TheLRStheSetting;
   var match = {
     "statement.actor.mbox": Learnermbox,
     "statement.object.mbox": LessonID,
     "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
+    "statement.timestamp": { $gt: { $parseDate: { date: startingTime } } },
   };
   var group = {
     _id: "$statement.result.response",
@@ -441,27 +485,42 @@ function getCurrentScore(LessonID, Learnermbox) {
   thesetting.data = JSON.stringify(data);
   $.ajax(thesetting).done(function (response) {
     if (response.length == 0) {
+      var msg="LAST RECORD RETRIEVED: \n"
+            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n"
+            msg=msg+"Started at: "+ReturnDate(startingTime)+"\n";
+            msg=msg+"But did not answer any questions";
+            alert(msg);
     } else {
       for (i = 0; i < TheLessionsInfo.length; i++) {
         if (response[0]._id.indexOf(TheLessionsInfo[i][1]) > -1) {
-          if (response[0].Average >= TheLessionsInfo[i][5]) {
-            userPerformancePage(
-              "pass",
-              response[0].Average,
-              0,
-              response[0].sum,
-              "Level"
-            );
+          if (findReport) {
+            if (response[0].Average >= TheLessionsInfo[i][5]) {
+              userPerformancePage(
+                "pass",
+                response[0].Average,
+                0,
+                response[0].sum,
+                "Level"
+              );
+            } else {
+              userPerformancePage(
+                "Fail",
+                response[0].Average,
+                0,
+                response[0].sum,
+                "Level"
+              );
+            }
+            return;
           } else {
-            userPerformancePage(
-              "Fail",
-              response[0].Average,
-              0,
-              response[0].sum,
-              "Level"
-            );
+            var msg="LAST RECORD RETRIEVED: \n"
+            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n"
+            msg=msg+"Total Number of questions answered: "+response[0].sum+"\n";
+            msg=msg+"Average Score: "+response[0].Average.toFixed(2)+"\n"; 
+            msg=msg+"Started at: "+ReturnDate(response[0].Start)+"\n";
+            msg=msg+"Finished at: "+ReturnDate(response[0].End)+"\n";
+            alert(msg);
           }
-          return;
         }
       }
     }

@@ -374,12 +374,13 @@ function CountTotalScore(
 }
 
 
+
 function showEndingPage() {
 
   var lessonID = sessionStorage.getItem("LessonID");
 
   if (qs("NewEnding","1")=="1"){
-    getCurrentScore(TheLessonIDforXAPI.mbox,LearnerID.mbox);
+    findLastSession(TheLessonIDforXAPI.mbox,LearnerID.mbox,1,true,null);
     return
   }
 
