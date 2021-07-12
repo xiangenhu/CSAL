@@ -486,13 +486,27 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
   thesetting.data = JSON.stringify(data);
   $.ajax(thesetting).done(function (response) {
     if (response.length == 0) {
-      var msg="LAST RECORD RETRIEVED: \n"
-            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n",
-            msg=msg+"Started "+total +" times\n";
-            msg=msg+"Here is the information for the most recent attempt:\n";
-            msg=msg+"Started at: "+ReturnDate(startingTime)+"\n";
-            msg=msg+"But did not answer any questions";
-            alert(msg);
+
+      var header,footer,bodytext,targetwin,data,Verb;
+            
+      var msg="<b>LAST RECORD RETRIEVED: </b><ul>"
+      if (total>1){
+        msg=msg+"<li>Started "+total +" times.</li>";
+      }else{
+        msg=msg+"<li>Started "+total +" time.</li>";
+      }
+      msg=msg+"<li>most recent attempt:</li><ul>";
+      msg=msg+"<li>Started at: "+ReturnDate(startingTime)+"</li>";
+      msg=msg+"<li>Did not respond to any questions</li>";
+      msg=msg+"</ul>";
+      msg=msg+"</ul>";
+      header=LessonLearnObj.learnerName.split(" ")[0];
+      footer=LessonLearnObj.LessonTitle;
+      bodytext=msg;
+      targetwin="popupWin";
+      data={};
+      Verb="";
+      OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb);
     } else {
       for (i = 0; i < TheLessionsInfo.length; i++) {
         if (response[0]._id.indexOf(TheLessionsInfo[i][1]) > -1) {
@@ -518,8 +532,12 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
           } else {
             var header,footer,bodytext,targetwin,data,Verb;
             
-            var msg="<b>LAST RECORD RETRIEVED: </b><ul>"
-            msg=msg+"<li>Started "+total +" times.</li>";
+            var msg="<b>LAST RECORD RETRIEVED: </b><ul>";
+            if (total>1){
+              msg=msg+"<li>Started "+total +" times.</li>";
+            }else{
+              msg=msg+"<li>Started "+total +" time.</li>";
+            }
             msg=msg+"<li>most recent attempt:</li><ul>";
             msg=msg+"<li>Total Number of questions answered: "+response[0].sum+"</li>";
             msg=msg+"<li>Average Score: "+response[0].Average.toFixed(2)+"</li>"; 
