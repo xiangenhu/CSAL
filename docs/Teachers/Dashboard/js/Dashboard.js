@@ -516,18 +516,78 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
             }
             return;
           } else {
-            var msg="LAST RECORD RETRIEVED: \n"
-            msg=msg+LessonLearnObj.learnerName.split(" ")[0] +" Worked on lesson "+LessonLearnObj.LessonTitle+"\n"
-            msg=msg+"Started "+total +" times\n";
-            msg=msg+"Here is the information for the most recent attempt:\n";
-            msg=msg+"Total Number of questions answered: "+response[0].sum+"\n";
-            msg=msg+"Average Score: "+response[0].Average.toFixed(2)+"\n"; 
-            msg=msg+"Started at: "+ReturnDate(response[0].Start)+"\n";
-            msg=msg+"Finished at: "+ReturnDate(response[0].End)+"\n";
-            alert(msg);
+            var header,footer,bodytext,targetwin,data,Verb;
+            
+            var msg="<b>LAST RECORD RETRIEVED: </b><ul>"
+            msg=msg+"<li>Started "+total +" times.</li>";
+            msg=msg+"<li>most recent attempt:</li><ul>";
+            msg=msg+"<li>Total Number of questions answered: "+response[0].sum+"</li>";
+            msg=msg+"<li>Average Score: "+response[0].Average.toFixed(2)+"</li>"; 
+            msg=msg+"<li>Started at: "+ReturnDate(response[0].Start)+"</li>";
+            msg=msg+"<li>Finished at: "+ReturnDate(response[0].End)+"</li>";
+            msg=msg+"</ul>";
+            msg=msg+"</ul>";
+            header=LessonLearnObj.learnerName.split(" ")[0];
+            footer=LessonLearnObj.LessonTitle;
+            bodytext=msg;
+            targetwin="popupWin";
+            data={};
+            Verb="";
+            OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb);
+          //  alert(msg);
           }
         }
       }
     }
   });
 }
+
+
+function OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb){
+	var html="";
+	html=html+'<div class="modal-dialog modal-dialog-centered">';
+
+	html=html+'<div class="modal-content" id="PopupDialog">';
+    html=html+'<div class="modal-header">';
+    html=html+'<button id="Modalclosebtn" class="btn" style="float: right;">&times;</button>';
+    html=html+'<h2>'+header+'</h2>';
+    html=html+'</div>';
+    html=html+'<div class="modal-body" id="bodytextReport">';
+    html=html+bodytext;
+    html=html+'</div>';
+    html=html+'<div class="modal-footer">';
+    html=html+'<h3>'+footer+'</h3>';
+    html=html+'</div>';
+	html=html+'</div>';
+
+	html=html+'</div>';
+
+	var popup=document.getElementById(targetwin);
+	if (popup == null ) {
+		var popup=document.createElement("div");
+		popup.class="modal";
+		popup.id=targetwin;
+		$("#editor").append(popup);
+		popup.innerHTML = html;
+	}else{
+		$('#'+targetwin).html(html);
+		$('#'+targetwin).show();
+	}
+	$("#Modalclosebtn").on("click",function(){
+		$('#'+targetwin).hide();
+		popup.innerHTML = "";
+	});
+	if (Verb!=""){
+		xAPIPostPopup("Popup",Verb,data);
+	}
+	const iframe = document.createElement('TheIframe')
+	iframe.onload = function() {
+        try {
+           console.log(iframe.src)
+        } catch (e) {
+            if (e.message.includes('cross-origin')) console.warn(e.message);
+            else console.error(e.message);
+        }
+    }
+}
+
