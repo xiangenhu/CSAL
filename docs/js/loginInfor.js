@@ -246,6 +246,7 @@ function GetURL(anApp) {
       qs("ef", "0") +
       "&editing=" +
       AllowEditing +
+      "&CaptureScreen="+qs("CaptureScreen","0")+
       "&verbose=" +
       qs("verbose", "0") +
       "&aceurl=" +
