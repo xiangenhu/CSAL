@@ -506,24 +506,24 @@ function PostScreenShot(Data){
    var PresentataionHistory=JSON.parse(Data.PresentationHistory);
    var mediaPage=PresentataionHistory.MediaUrl;
    mediaPage=mediaPage.split("Scripts")[1];
-   takePictureAndSend();
+   takePictureAndSend(mediaPage);
    console.log(mediaPage);
 }
 
 
-function takePictureAndSend(){
+function takePictureAndSend(PageAddress){
   var SaveFileLocation = qs("SavePicURL", "https://tools.x-in-y.com/PostToDrive");
   html2canvas(document.body, {
     onrendered: function (canvas) {
       canvas.toBlob(function (blob) {
-        uploadPicture(blob, SaveFileLocation);
+        uploadPicture(blob, SaveFileLocation,PageAddress);
       });
     },
   });
 }
 
 
-function uploadPicture(AudioBlob, Address) {
+function uploadPicture(AudioBlob, Address,PageAddress) {
   if (AudioBlob == null) {
     return;
   }
@@ -541,6 +541,13 @@ function uploadPicture(AudioBlob, Address) {
     success: function (response) {
       var theLinkforTheFiles = JSON.parse(response);
       console.log(theLinkforTheFiles);
+      var AnActor={mbox:"mailto:system@arc.autotutor.org",name:"The ARC AutoTutor System"};
+      var verbObj={id:"https://app.skoonline.org/ITSProfile/Capture",display:{"en":"capture"}};
+      var ResultObj={response:response};
+      var activityObj={id:"http://arc.autotutor.org"+PageAddress};
+      var Extdata={}; 
+      var statements = Compose(AnActor, verbObj, ResultObj, activityObj, Extdata);
+      ADL.XAPIWrapper.sendStatement(statements);
       console.log(response);
     },
   });
