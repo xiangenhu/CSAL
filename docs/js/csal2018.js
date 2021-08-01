@@ -46,7 +46,7 @@ var listofMessage = [];
 var enableEditing = false;
 var InputFound;
 var VerboseMode = qs("verbose", "1") == "1";
-var CaptureScreen = qs("CaptureScreen", "1") == "1";
+var CaptureScreen = qs("CaptureScreen", "0") == "1";
 var time_in_Day;
 var time_in_hours;
 var time_in_min;
@@ -506,7 +506,44 @@ function PostScreenShot(Data){
    var PresentataionHistory=JSON.parse(Data.PresentationHistory);
    var mediaPage=PresentataionHistory.MediaUrl;
    mediaPage=mediaPage.split("Scripts")[1];
+   takePictureAndSend();
    console.log(mediaPage);
+}
+
+
+function takePictureAndSend(){
+  var SaveFileLocation = qs("SavePicURL", "https://tools.x-in-y.com/PostToDrive");
+  html2canvas(document.body, {
+    onrendered: function (canvas) {
+      canvas.toBlob(function (blob) {
+        uploadPicture(blob, SaveFileLocation);
+      });
+    },
+  });
+}
+
+
+function uploadPicture(AudioBlob, Address) {
+  if (AudioBlob == null) {
+    return;
+  }
+  var form_data = new FormData();
+  var FileName = TheEmail + ":image.png";
+  form_data.append("data", AudioBlob, FileName);
+  $.ajax({
+    type: "POST",
+    url: Address,
+    processData: false,
+    contentType: false,
+    async: false,
+    cache: false,
+    data: form_data,
+    success: function (response) {
+      var theLinkforTheFiles = JSON.parse(response);
+      console.log(theLinkforTheFiles);
+      console.log(response);
+    },
+  });
 }
 
 function GetStarted() {
