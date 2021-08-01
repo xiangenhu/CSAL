@@ -123,6 +123,7 @@ function Put(acePutjson) {
         data: { input: acePutjson, response: data },
       };
       if (InteractionHistory.length == 0) {
+        theData=acePutjson;
         xAPIPostOther(Data, "action");
       }
       LastData = data;

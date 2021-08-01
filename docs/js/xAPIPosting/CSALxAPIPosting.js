@@ -437,6 +437,7 @@ function GetLastRecordedAction(lrsURL, LRSusername, LRSpassword) {
 }
 
 function PostWorldEvent(eventType, msg) {
+ 
   var AnActor = TheLessonIDforXAPI;
   var verb = "CSALMsg";
   var verbObj = {
@@ -1033,9 +1034,34 @@ function xAPIPostOther(acePostjson, averb) {
 //    if (TheOrignalName.indexOf("@")==-1){
 //      statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
  //   }
-    ADL.XAPIWrapper.sendStatement(statements);
+    ADL.XAPIWrapper.sendStatement(statements,TakeAPicture);
   }
 }
+
+var TakeAPicture= function (resp, thing) {
+	var spanclass = "text-info";
+	var text = "";
+	if (resp.status >= 400) {
+		spanclass = "text-danger";
+		text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+		for ( var res in thing.results ) {
+			text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+			for ( var err in thing.results[res].errors ) {
+				text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+				text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+			}
+		}
+	} else {
+		if ( resp.responseText ){
+			text = "LRS "+TheLRSURL+ "Successfully sent " + resp.responseText;
+      console.log("SubmitActionResult:"+text);
+      if (CaptureScreen){
+        PostScreenShot(theData);
+      }
+		} else
+			text = thing+" "+EXPID;
+	}
+};
 
 function xAPIPostStart(acePostjson, averb) {
   if (started) {

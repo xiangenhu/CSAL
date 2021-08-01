@@ -45,10 +45,12 @@ var listofMessage = [];
 
 var enableEditing = false;
 var InputFound;
-var VerboseMode = qs("verbose", "0") == "1";
+var VerboseMode = qs("verbose", "1") == "1";
+var CaptureScreen = qs("CaptureScreen", "1") == "1";
 var time_in_Day;
 var time_in_hours;
 var time_in_min;
+var theData;
 
 var TheMsg = "";
 
@@ -439,6 +441,7 @@ function GetTheEventAssigned() {
     if (VerboseMode) {
       PostWorldEvent("userEvent", "Click Next Button");
     }
+   
     //added by xhu
     userSelectedItem = "";
     //added by xhu
@@ -497,6 +500,13 @@ function GetTheEventAssigned() {
       mediaElement.src = "";
     }
   });
+}
+
+function PostScreenShot(Data){
+   var PresentataionHistory=JSON.parse(Data.PresentationHistory);
+   var mediaPage=PresentataionHistory.MediaUrl;
+   mediaPage=mediaPage.split("Scripts")[1];
+   console.log(mediaPage);
 }
 
 function GetStarted() {
