@@ -528,6 +528,7 @@ function uploadPicture(AudioBlob, Address,PageAddress) {
     return;
   }
   var form_data = new FormData();
+  var TheEmail="system@arc.autotutor.org";
   var FileName = TheEmail + ":image.png";
   form_data.append("data", AudioBlob, FileName);
   $.ajax({
