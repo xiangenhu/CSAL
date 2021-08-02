@@ -502,58 +502,6 @@ function GetTheEventAssigned() {
   });
 }
 
-function PostScreenShot(Data){
-   var PresentataionHistory=JSON.parse(Data.PresentationHistory);
-   var mediaPage=PresentataionHistory.MediaUrl;
-   mediaPage=mediaPage.split("Scripts")[1];
-   takePictureAndSend(mediaPage);
-   console.log(mediaPage);
-}
-
-
-function takePictureAndSend(PageAddress){
-  var SaveFileLocation = qs("SavePicURL", "https://tools.x-in-y.com/PostToDrive");
-  html2canvas(document.body, {
-    onrendered: function (canvas) {
-      canvas.toBlob(function (blob) {
-        uploadPicture(blob, SaveFileLocation,PageAddress);
-      });
-    },
-  });
-}
-
-
-function uploadPicture(AudioBlob, Address,PageAddress) {
-  if (AudioBlob == null) {
-    return;
-  }
-  var form_data = new FormData();
-  var TheEmail="system@arc.autotutor.org";
-  var FileName = TheEmail + ":image.png";
-  form_data.append("data", AudioBlob, FileName);
-  $.ajax({
-    type: "POST",
-    url: Address,
-    processData: false,
-    contentType: false,
-    async: false,
-    cache: false,
-    data: form_data,
-    success: function (response) {
-      var theLinkforTheFiles = JSON.parse(response);
-      console.log(theLinkforTheFiles);
-      var AnActor={mbox:"mailto:system@arc.autotutor.org",name:"The ARC AutoTutor System"};
-      var verbObj={id:"https://app.skoonline.org/ITSProfile/Capture",display:{"en":"capture"}};
-      var ResultObj={response:response};
-      var activityObj={id:"http://arc.autotutor.org"+PageAddress};
-      var Extdata={}; 
-      var statements = Compose(AnActor, verbObj, ResultObj, activityObj, Extdata);
-      ADL.XAPIWrapper.sendStatement(statements);
-      console.log(response);
-    },
-  });
-}
-
 function GetStarted() {
   if (actions.length != 0) {
     restart();

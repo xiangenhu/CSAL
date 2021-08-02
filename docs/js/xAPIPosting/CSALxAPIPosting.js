@@ -1056,7 +1056,12 @@ var TakeAPicture= function (resp, thing) {
 			text = "LRS "+TheLRSURL+ "Successfully sent " + resp.responseText;
       console.log("SubmitActionResult:"+text);
       if (CaptureScreen){
-        PostScreenShot(theData);
+        // code to capture screen
+        
+        // code to capture screen
+
+      //  document.getElementById("mainFrame").contentWindow.PostScreenShot("TestPage")
+      //   PostScreenShot(theData);
       }
 		} else
 			text = thing+" "+EXPID;
