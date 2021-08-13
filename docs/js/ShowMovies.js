@@ -37,7 +37,9 @@ function GetObj(str) {
 }
 
 function CheckRewind(json) {
-  var spData = json.feed.entry;
+  var spData;
+        var FromTools=(json.feed==null);
+        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
   var i;
   for (i = 0; 3 * i < spData.length; i++) {
     var line = i * 3;
@@ -58,7 +60,9 @@ function CheckRewind(json) {
 }
 
 function GetMovies(json) {
-  var spData = json.feed.entry;
+  var spData;
+        var FromTools=(json.feed==null);
+        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
   var i;
   for (i = 0; 3 * i < spData.length; i++) {
     var line = i * 3;
