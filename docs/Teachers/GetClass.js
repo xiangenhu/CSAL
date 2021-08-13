@@ -129,7 +129,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	var html="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
 	html=html+"We have created a class for you. ";
-	html=html+"Please click the <b>[Move Forward] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
+	html=html+"Please click the <b>[NEXT] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
     var TheMessage="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	TheMessage=TheMessage+"Please use the following login information to login:<ul>";
 	TheMessage=TheMessage+"<li>Login: <b>"+remainList[randomindex][1]+"</b>";

@@ -640,7 +640,7 @@ function GetALLActions(lrsURL, LRSusername, LRSpassword, atimestamp) {
       var footer =
         "<p align='left'>What do you want to do next? <br/><br/><input type='radio' name='choice' id='startover'>  Start over from the start. " +
         " <p align='left'><input type='radio' name='choice' id='continue' > Continue from where you have stopped.</p>" +
-        "<p align='right'><button class='btn' onclick='moveforward()'> Move forward </button><p/>";
+        "<p align='right'><button class='btn' onclick='moveforward()'> NEXT </button><p/>";
       if (qs("editing", "0") == "0") {
         OpenModal(
           fullname.split(" ")[0] + ", " + Greetings() + " and Welcome Back!",
