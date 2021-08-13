@@ -83,10 +83,10 @@ function GetLessons(json){
 	var i;
 	for (i=0;4*i<spData.length;i++){
 		var line=i*4;
-		var row=[spData[line].content["$t"],
-					spData[line+1].content["$t"],
-					spData[line+2].content["$t"],
-					spData[line+3].content["$t"]
+		var row=[spData[line].value,
+					spData[line+1].value,
+					spData[line+2].value,
+					spData[line+3].value
 				];
 		console.log(row)
 		TheLessions.push(row);

@@ -156,11 +156,11 @@ function GetClass(json){
 	var i;
 	for (i=1;5*i<spData.length;i++){
 		var line=i*5;
-		var row=[spData[line].content["$t"],
-					spData[line+1].content["$t"],
-					spData[line+2].content["$t"],
-					spData[line+3].content["$t"],
-					spData[line+4].content["$t"]
+		var row=[spData[line].value,
+					spData[line+1].value,
+					spData[line+2].value,
+					spData[line+3].value,
+					spData[line+4].value
 				];
 		TheClasses.push(row);
 	}
@@ -206,7 +206,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 
 	
 	var TheLink=encodeURI(JSON.stringify(TeacherCourseObj));
-	html=html+"<p align='right'><button class='btn1' onclick='TakeTeacher(\""+TheLink+"\")'>Move Forward</button></p>"; 
+	html=html+"<p align='right'><button class='btn1' onclick='TakeTeacher(\""+TheLink+"\")'>Next</button></p>"; 
 	TheEmailMessage=TheMessage;
 //      	sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
 	return html;

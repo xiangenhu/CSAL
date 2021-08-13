@@ -388,12 +388,12 @@ function GetLessonsInfo(json) {
   for (i = 0; 6 * i < spData.length; i++) {
     var line = i * 6;
     var row = [
-      spData[line].content["$t"],
-      spData[line + 1].content["$t"],
-      spData[line + 2].content["$t"],
-      spData[line + 3].content["$t"],
-      spData[line + 4].content["$t"],
-      spData[line + 5].content["$t"],
+      spData[line].value,
+      spData[line + 1].value,
+      spData[line + 2].value,
+      spData[line + 3].value,
+      spData[line + 4].value,
+      spData[line + 5].value,
     ];
     TheLessionsInfo.push(row);
   }
