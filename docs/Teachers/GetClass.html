@@ -96,7 +96,7 @@
 			}else{
 				$("#signupinfor").show();
 				GL="0";
-				loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
+				GetGoogleSheetData("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
 			}
 		});
 	</script>

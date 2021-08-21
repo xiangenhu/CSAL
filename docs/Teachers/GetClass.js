@@ -57,72 +57,7 @@ ADL.launch(function(err, launchdata, xAPIWrapper) {
 
 
 
-function GetSpreadSheet(GoogleID, GoogleSheet) {
-	var theUrl = "https://tools.x-in-y.com/gs?json=";
-	var theObj = { id: GoogleID, page: GoogleSheet };
-	console.log(GoogleID);
-	theUrl = theUrl + JSON.stringify(theObj);
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open("GET", theUrl, false); // false for synchronous request
-	xmlHttp.send(null);
-	return xmlHttp.responseText;
-}
 
-function loadjscssfile(filename, filetype) {
-	if (qs("USATTools", "1") == "1") {
-		var GoogleStuff = filename
-			.split("https://spreadsheets.google.com/feeds/cells/")[1]
-			.split("/public/")[0]
-			.split("/");
-		var GoogleID = GoogleStuff[0];
-		var GoogleSheet = GoogleStuff[1];
-		var CallBak = filename.split("callback=")[1];
-		console.log(CallBak);
-		// console.log(GoogleID)
-		// console.log(GoogleSheet);
-		// console.log(CallBak);
-
-		// console.log(GetSpreadSheet(GoogleID,GoogleSheet));
-		var json = JSON.parse(GetSpreadSheet(GoogleID, GoogleSheet));
-		var myfunc = this[CallBak];
-		myfunc(json);
-		return;
-	} else if (qs("GL", "0") != "1") {
-		return;
-	}
-
-	if (filetype == "js") {
-		//if filename is a external JavaScript file
-		var fileref = document.createElement("script");
-		fileref.setAttribute("type", "text/javascript");
-		fileref.setAttribute("src", filename);
-	} else if (filetype == "css") {
-		//if filename is an external CSS file
-		var fileref = document.createElement("link");
-		fileref.setAttribute("rel", "stylesheet");
-		fileref.setAttribute("type", "text/css");
-		fileref.setAttribute("href", filename);
-	}
-	if (typeof fileref != "undefined") {
-		document.getElementsByTagName("head")[0].appendChild(fileref);
-	}
-}
-
-function loadjscssfileOld(filename, filetype){
-	if (filetype=="js"){ //if filename is a external JavaScript file
-	var fileref=document.createElement('script')
-	fileref.setAttribute("type","text/javascript")
-	fileref.setAttribute("src", filename)
-	}
-	else if (filetype=="css"){ //if filename is an external CSS file
-	var fileref=document.createElement("link")
-	fileref.setAttribute("rel", "stylesheet")
-	fileref.setAttribute("type", "text/css")
-	fileref.setAttribute("href", filename)
-	}
-	if (typeof fileref!="undefined")
-	document.getElementsByTagName("head")[0].appendChild(fileref)
-}
 
 TheLRStheSetting={
     "async": true,

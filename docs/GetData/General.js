@@ -31,7 +31,7 @@ function onSignIn(googleUser) {
 	console.log(TheEmail);
 	GoogleLogin=true;
     $("#ThePanel").show();
-	loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("Emails","1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw")+"/5/public/values?alt=json-in-script&callback=GetLessons", "js");
+	GetGoogleSheetData(LessonInforPointer,"GetLessons", "5");
  
 }
 

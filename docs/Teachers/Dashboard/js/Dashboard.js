@@ -357,48 +357,33 @@ function GetLessonName(LessonList, guid) {
   return "";
 }
 
-function loadjscssfileold(filename, filetype) {
-  if (filetype == "js") {
-    //if filename is a external JavaScript file
-    var fileref = document.createElement("script");
-    fileref.setAttribute("type", "text/javascript");
-    fileref.setAttribute("src", filename);
-  } else if (filetype == "css") {
-    //if filename is an external CSS file
-    var fileref = document.createElement("link");
-    fileref.setAttribute("rel", "stylesheet");
-    fileref.setAttribute("type", "text/css");
-    fileref.setAttribute("href", filename);
-  }
-  if (typeof fileref != "undefined")
-    document.getElementsByTagName("head")[0].appendChild(fileref);
-}
 
 TheLessionsInfo = [];
 
-function GetLessonsInfo(json) {
-  var spData;
-  var FromTools = json.feed == null;
-  if (FromTools) {
-    spData = json;
-  } else {
-    spData = json.feed.entry;
-  }
-  var i;
-  for (i = 0; 6 * i < spData.length; i++) {
-    var line = i * 6;
-    var row = [
-      spData[line].value,
-      spData[line + 1].value,
-      spData[line + 2].value,
-      spData[line + 3].value,
-      spData[line + 4].value,
-      spData[line + 5].value,
-    ];
-    TheLessionsInfo.push(row);
-  }
-  DashBoardCheckStudentStatus();
+
+function GetTheRow(jsonData){
+  var RowArray=[];
+  for (x in jsonData) {   
+      RowArray.push(jsonData[x].replace(/(<([^>]+)>)/gi, ""))
+      }
+  return RowArray;
+
 }
+
+
+function GetLessonsInfo(json) {
+  if (json!=""){
+    TheLessionsInfo=[];
+    var TheJSONObj=json;
+    var i;
+    for (i=1;i<TheJSONObj.length;i++){
+        var TheRowInfo=TheJSONObj[i];
+        TheLessionsInfo.push(GetTheRow(TheRowInfo));
+    }
+    DashBoardCheckStudentStatus();
+}
+}
+
 
 TheLRStheSetting = {
   async: true,

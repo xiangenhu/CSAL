@@ -545,7 +545,10 @@ function restart() {
 
 $(document).ready(function () {
   //	CheckIfPossibleToRewind();
-  loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("LessonInfor","1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw")+"/7/public/values?alt=json-in-script&callback=GetLessonsInfo", "js");
+  
+  var LessonInforPointer="2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT";
+
+  GetGoogleSheetData(LessonInforPointer,"GetLessonsInfo", "7");
   GetTheEventAssigned();
   if (qs("editing", "0") == "1") {
     onLoad1();

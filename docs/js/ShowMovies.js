@@ -1,7 +1,7 @@
 function GetMovieWhenReady() {
   if (qs("MOVIE", "1") == "1") {
     if (qs("ef", "0") == "0") {
-      loadjscssfile(
+      GetGoogleSheetData(
         "https://spreadsheets.google.com/feeds/cells/" +
           qs("Emails", "1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw") +
           "/4/public/values?alt=json-in-script&callback=GetMovies",
@@ -12,7 +12,7 @@ function GetMovieWhenReady() {
 }
 
 function CheckIfPossibleToRewind() {
-  loadjscssfile(
+  GetGoogleSheetData(
     "https://spreadsheets.google.com/feeds/cells/" +
       qs("Emails", "1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw") +
       "/6/public/values?alt=json-in-script&callback=CheckRewind",
@@ -116,7 +116,7 @@ function OpenPopUp(header, footer, bodytext, targetwin) {
   });
 }
 
-function loadjscssfile(filename, filetype) {
+function GetGoogleSheetData(filename, filetype) {
   if (filetype == "js") {
     //if filename is a external JavaScript file
     var fileref = document.createElement("script");
