@@ -96,8 +96,9 @@
 			}else{
 				$("#signupinfor").show();
 				GL="0";
-				GetGoogleSheetData("https://spreadsheets.google.com/feeds/cells/"+qs("Classes",ClassIDSpreadsheet)+"/1/public/values?alt=json-in-script&callback=GetClass", "js");
-			}
+				
+	            GetGoogleSheetData(ClassIDSpreadsheet,"GetClass", "1");
+				}
 		});
 	</script>
 	<div id="signupinfor">

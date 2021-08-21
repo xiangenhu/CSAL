@@ -1,7 +1,7 @@
 
 var TheClasses=[];
 var StudentList=[];
-var ClassIDSpreadsheet="1TW6MmY59UQlybW7-m2bzUtMp1eBZtLJhRFFWUtIKOHU"
+var ClassIDSpreadsheet="2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq"
 
 //this is for teacher information Keep this
 var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
@@ -56,7 +56,7 @@ ADL.launch(function(err, launchdata, xAPIWrapper) {
 
 
 
-
+/*
 
 function GetSpreadSheet(GoogleID, GoogleSheet) {
 	var theUrl = "https://tools.x-in-y.com/gs?json=";
@@ -68,7 +68,7 @@ function GetSpreadSheet(GoogleID, GoogleSheet) {
 	xmlHttp.send(null);
 	return xmlHttp.responseText;
 }
-
+*/
 
 TheLRStheSetting={
     "async": true,

@@ -188,7 +188,7 @@ function GetSpreadSheetARC(GoogleID, GoogleSheet) {
 function GetGoogleSheetData(GooglePageID,CallBak, page) {
       var GoogleID = GooglePageID;
       var GoogleSheet = page;
-      var TheJSFileFromGS = GetSpreadSheet(GoogleID, GoogleSheet);
+      var TheJSFileFromGS = GetSpreadSheetARC(GoogleID, GoogleSheet);
       if (TheJSFileFromGS != "") {
           var json = JSON.parse(GetSpreadSheetARC(GoogleID, GoogleSheet));
           var myfunc = this[CallBak];
