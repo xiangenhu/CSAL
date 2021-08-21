@@ -546,9 +546,11 @@ function restart() {
 $(document).ready(function () {
   //	CheckIfPossibleToRewind();
   
+  
   var LessonInforPointer="2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT";
 
   GetGoogleSheetData(LessonInforPointer,"GetLessonsInfo", "7");
+
   GetTheEventAssigned();
   if (qs("editing", "0") == "1") {
     onLoad1();

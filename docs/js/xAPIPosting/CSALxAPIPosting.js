@@ -308,15 +308,12 @@ function ComposewithContextActivities(
   //	PresentationHistory.URLLink=location.href;
 
   PresentationHistory.OtherInfor = MoodleVar;
-<<<<<<< HEAD
-  
 // updated to track activities  --- XHU
   var theCodeForAction={learner:AnActor.mbox,
                         learnerName:AnActor.name,
                         lesson:activityObj.mbox,
                         lessonTitle:activityObj.name
                       }
-=======
 
 // updated to track activities  --- XHU
   var theCodeForAction={learner:AnActor.mbox,
@@ -331,22 +328,7 @@ function ComposewithContextActivities(
   };
 
 // updated to track activities  --- XHU
-	 
-/*	  
->>>>>>> 3114ad51611345e29b81cd639f5e53a2effccd17
-  var aResultObj = {
-    success: resultsSuccess,
-    score:{raw:SuccessFailToValue01(resultsSuccess)},
-    response: JSON.stringify(theCodeForAction),
-    extensions: resultExt,
-  };
-<<<<<<< HEAD
-
-// updated to track activities  --- XHU
-
-=======
-*/
->>>>>>> 3114ad51611345e29b81cd639f5e53a2effccd17
+	
   var contextObj = {
     contextActivities: contextActivities,
     extensions: Extdata.extensions,

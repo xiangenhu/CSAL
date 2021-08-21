@@ -357,7 +357,6 @@ function GetLessonName(LessonList, guid) {
   return "";
 }
 
-
 TheLessionsInfo = [];
 
 
@@ -383,7 +382,6 @@ function GetLessonsInfo(json) {
     DashBoardCheckStudentStatus();
 }
 }
-
 
 TheLRStheSetting = {
   async: true,
