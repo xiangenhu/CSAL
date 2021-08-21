@@ -381,6 +381,7 @@ function GetLessonsInfo(json) {
         TheLessionsInfo.push(GetTheRow(TheRowInfo));
     }
     DashBoardCheckStudentStatus();
+    
 }
 }
 
