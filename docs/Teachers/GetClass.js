@@ -3,9 +3,13 @@ var TheClasses=[];
 var StudentList=[];
 var ClassIDSpreadsheet="1TW6MmY59UQlybW7-m2bzUtMp1eBZtLJhRFFWUtIKOHU"
 
+//this is for teacher information Keep this
 var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
 var TheLRSLogin=qs("lrslogin","mihamo");
 var theLRSPassword=qs("lrspassword","zutivv");
+
+//this is for teacher information Keep this
+
 var TheVerb="Assigned";
 var AggregateURLData=TheLRSURL+"/statements/aggregate";
 var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
@@ -51,7 +55,60 @@ ADL.launch(function(err, launchdata, xAPIWrapper) {
 }, true);
 
 
-function loadjscssfile(filename, filetype){
+
+
+function GetSpreadSheet(GoogleID, GoogleSheet) {
+	var theUrl = "https://tools.x-in-y.com/gs?json=";
+	var theObj = { id: GoogleID, page: GoogleSheet };
+	console.log(GoogleID);
+	theUrl = theUrl + JSON.stringify(theObj);
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("GET", theUrl, false); // false for synchronous request
+	xmlHttp.send(null);
+	return xmlHttp.responseText;
+}
+
+function loadjscssfile(filename, filetype) {
+	if (qs("USATTools", "1") == "1") {
+		var GoogleStuff = filename
+			.split("https://spreadsheets.google.com/feeds/cells/")[1]
+			.split("/public/")[0]
+			.split("/");
+		var GoogleID = GoogleStuff[0];
+		var GoogleSheet = GoogleStuff[1];
+		var CallBak = filename.split("callback=")[1];
+		console.log(CallBak);
+		// console.log(GoogleID)
+		// console.log(GoogleSheet);
+		// console.log(CallBak);
+
+		// console.log(GetSpreadSheet(GoogleID,GoogleSheet));
+		var json = JSON.parse(GetSpreadSheet(GoogleID, GoogleSheet));
+		var myfunc = this[CallBak];
+		myfunc(json);
+		return;
+	} else if (qs("GL", "0") != "1") {
+		return;
+	}
+
+	if (filetype == "js") {
+		//if filename is a external JavaScript file
+		var fileref = document.createElement("script");
+		fileref.setAttribute("type", "text/javascript");
+		fileref.setAttribute("src", filename);
+	} else if (filetype == "css") {
+		//if filename is an external CSS file
+		var fileref = document.createElement("link");
+		fileref.setAttribute("rel", "stylesheet");
+		fileref.setAttribute("type", "text/css");
+		fileref.setAttribute("href", filename);
+	}
+	if (typeof fileref != "undefined") {
+		document.getElementsByTagName("head")[0].appendChild(fileref);
+	}
+}
+
+function loadjscssfileOld(filename, filetype){
 	if (filetype=="js"){ //if filename is a external JavaScript file
 	var fileref=document.createElement('script')
 	fileref.setAttribute("type","text/javascript")
@@ -93,15 +150,17 @@ var TheScore={
 
 
 function GetClass(json){
-	var spData = json.feed.entry;
+	var spData;
+        var FromTools=(json.feed==null);
+        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
 	var i;
 	for (i=1;5*i<spData.length;i++){
 		var line=i*5;
-		var row=[spData[line].content["$t"],
-					spData[line+1].content["$t"],
-					spData[line+2].content["$t"],
-					spData[line+3].content["$t"],
-					spData[line+4].content["$t"]
+		var row=[spData[line].value,
+					spData[line+1].value,
+					spData[line+2].value,
+					spData[line+3].value,
+					spData[line+4].value
 				];
 		TheClasses.push(row);
 	}
@@ -125,7 +184,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	var html="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	html=html+"Welcome to to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
 	html=html+"We have created a class for you. ";
-	html=html+"Please click the <b>[Move Forward] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
+	html=html+"Please click the <b>[NEXT] </b> button below to receive detailed class information in your email: ("+TeacherEmail.split(":")[1]+"). Please check an email sent from <b>read.autotutor@gmail.com.</b><br/><br/>";
     var TheMessage="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
 	TheMessage=TheMessage+"Please use the following login information to login:<ul>";
 	TheMessage=TheMessage+"<li>Login: <b>"+remainList[randomindex][1]+"</b>";
@@ -147,7 +206,7 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 
 	
 	var TheLink=encodeURI(JSON.stringify(TeacherCourseObj));
-	html=html+"<p align='right'><button class='btn1' onclick='TakeTeacher(\""+TheLink+"\")'>Move Forward</button></p>"; 
+	html=html+"<p align='right'><button class='btn1' onclick='TakeTeacher(\""+TheLink+"\")'>Next</button></p>"; 
 	TheEmailMessage=TheMessage;
 //      	sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
 	return html;

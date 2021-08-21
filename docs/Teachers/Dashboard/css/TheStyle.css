@@ -1,0 +1,139 @@
+		
+	
+button{
+    color: blue;
+}	
+#popupWinOld{
+    display: none;
+    position:absolute;
+    bottom:0px;
+    top:100px;
+    right:0px;
+    left:0px;
+    z-index: 1200;
+}
+#popupWin{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.lessonDescription{
+    font-style: italic;
+    color:rgb(0, 0, 0);
+}
+.LessonTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(23, 8, 228);
+}
+
+.numbers{
+    font-style: italic;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+#TheScoreTable {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+  }
+  
+  #TheScoreTable td, #TheScoreTable th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #TheScoreTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #TheScoreTable tr:hover {background-color: #ddd;}
+  
+  #TheScoreTable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #455C7B;
+	color: white;
+  }
+.modal-header{
+    background-color: #455C7B; 
+    color: white; 
+}
+.modal-footer{
+    background-color: #455C7B; 
+    color: white; 
+}
+.btn1{
+    background-color: #455C7B; 
+    color: white; 
+}
+#popupWin1{
+    display:block;
+    background-color: #023981; 
+    position: absolute;
+    right:100px;
+    height:300px;
+    bottom: 0px;
+    color: white; 
+}
+#TheGrades1{
+    display:block;
+    position: absolute;
+    left:100px;
+    right:100px;
+    height:800px;
+    top: 200px;
+}
+#ThePanel{
+    position: absolute;
+    left:100px;
+    right:100px;
+    height:50px;
+    top: 20px;
+    display:none;
+}
+#TheData{
+    position: absolute;
+    top: 60px;
+    left:100px;
+    right:100px;
+}
+#GoogleLoginBtn{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -30px;
+    margin-top: -15px;
+}
+input[type=radio] {
+    border: 1px;
+    width: 1em;
+    height: 1em;
+}
+
+#ReportTable {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+  }
+  
+  #ReportTable td, #ReportTable th {
+	border: 1px solid #ddd;
+	padding: 4px;
+  }
+  
+  #ReportTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #ReportTable tr:hover {background-color: #ddd;}
+  
+  #ReportTable th {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+	background-color: #3A454b;
+	color: white;
+  }

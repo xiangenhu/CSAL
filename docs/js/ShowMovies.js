@@ -37,18 +37,20 @@ function GetObj(str) {
 }
 
 function CheckRewind(json) {
-  var spData = json.feed.entry;
+  var spData;
+        var FromTools=(json.feed==null);
+        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
   var i;
   for (i = 0; 3 * i < spData.length; i++) {
     var line = i * 3;
     var row = [
-      spData[line].content["$t"],
-      spData[line + 1].content["$t"],
-      spData[line + 2].content["$t"],
+      spData[line].value,
+      spData[line + 1].value,
+      spData[line + 2].value,
     ];
     console.log(row, qs("quid", ""));
-    if (qs("guid", "") == spData[line + 1].content["$t"]) {
-      CanRewind = spData[line + 2].content["$t"] != "No";
+    if (qs("guid", "") == spData[line + 1].value) {
+      CanRewind = spData[line + 2].value != "No";
       if (CanRewind) {
         GetALLActions(LRSURL, LRSLogin, LRSPassword, lastStartingTime);
       }
@@ -58,21 +60,23 @@ function CheckRewind(json) {
 }
 
 function GetMovies(json) {
-  var spData = json.feed.entry;
+  var spData;
+        var FromTools=(json.feed==null);
+        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
   var i;
   for (i = 0; 3 * i < spData.length; i++) {
     var line = i * 3;
     var row = [
-      spData[line].content["$t"],
-      spData[line + 1].content["$t"],
-      spData[line + 2].content["$t"],
+      spData[line].value,
+      spData[line + 1].value,
+      spData[line + 2].value,
     ];
     console.log(row, qs("quid", ""));
-    if (qs("guid", "") == spData[line + 1].content["$t"]) {
-      if (spData[line + 2].content["$t"] != "NA") {
-        MOVIEObj.MOVIELink = spData[line + 2].content["$t"];
-        MOVIEObj.MOVIETitle = spData[line].content["$t"];
-        MOVIEObj.PopTitle = spData[line].content["$t"];
+    if (qs("guid", "") == spData[line + 1].value) {
+      if (spData[line + 2].value != "NA") {
+        MOVIEObj.MOVIELink = spData[line + 2].value;
+        MOVIEObj.MOVIETitle = spData[line].value;
+        MOVIEObj.PopTitle = spData[line].value;
         launchMOVIE();
         return;
       }
@@ -132,10 +136,10 @@ function loadjscssfile(filename, filetype) {
 function GetExtraArguments() {
   var TheLRSURL = qs(
     "lrs",
-    "https://record.x-in-y.com/arcfinaldebugging/xapi/"
+    "https://record.x-in-y.com/arcproduction/xapi/"
   );
-  var TheLRSLogin = qs("lrslogin", "mihamo");
-  var theLRSPassword = qs("lrspassword", "zutivv");
+  var TheLRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+  var theLRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
   var lrs = "&lrs=" + TheLRSURL;
   var lrsLogin = "&lrslogin=" + TheLRSLogin;

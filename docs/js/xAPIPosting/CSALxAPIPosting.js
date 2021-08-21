@@ -62,17 +62,17 @@ var totalScore = {
 
 var ITProfile = qs("ITProfile", "https://app.skoonline.org/ITSProfile/");
 
-var LRSURL = qs("lrs", "https://record.x-in-y.com/arcfinaldebugging/xapi/");
-var LRSLogin = qs("lrslogin", "mihamo");
-var LRSPassword = qs("lrspassword", "zutivv");
+var LRSURL = qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/");
+var LRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+var LRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
 var xAPIVerbBase = qs("verbbase", ITProfile);
 
 var wrapper;
 
 function getCSALTheDataAuthory() {
-  var TheLRSLogin = qs("lrslogin", "mihamo");
-  var theLRSPassword = qs("lrspassword", "zutivv");
+  var TheLRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
+  var theLRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
   return qs("TheCASLDataAuthory", btoa(TheLRSLogin + ":" + theLRSPassword));
 }
 
@@ -239,9 +239,10 @@ function CompileScroe(PresentationHistory) {
   return userAnswer;
 }
 
+var TheTitle=SKOTitle+"@"+qs("classID","classID")
 var TheLessonIDforXAPI = {
   mbox: "mailto:" + SKOGuid + "@" + ASATLocation,
-  name: SKOTitle,
+  name: TheTitle,
   objectType: "Agent",
 };
 
@@ -305,12 +306,47 @@ function ComposewithContextActivities(
 
   PresentationHistory.Score = { this: accumlateScore, total: totalScore };
   //	PresentationHistory.URLLink=location.href;
+
   PresentationHistory.OtherInfor = MoodleVar;
+<<<<<<< HEAD
+  
+// updated to track activities  --- XHU
+  var theCodeForAction={learner:AnActor.mbox,
+                        learnerName:AnActor.name,
+                        lesson:activityObj.mbox,
+                        lessonTitle:activityObj.name
+                      }
+=======
+
+// updated to track activities  --- XHU
+  var theCodeForAction={learner:AnActor.mbox,
+                        learnerName:AnActor.name,
+                        lesson:activityObj.mbox
+                      }
   var aResultObj = {
     success: resultsSuccess,
-    response: PresentationHistory.userSelectedItem,
+    score:{raw:SuccessFailToValue01(resultsSuccess)},
+    response: JSON.stringify(theCodeForAction),
     extensions: resultExt,
   };
+
+// updated to track activities  --- XHU
+	 
+/*	  
+>>>>>>> 3114ad51611345e29b81cd639f5e53a2effccd17
+  var aResultObj = {
+    success: resultsSuccess,
+    score:{raw:SuccessFailToValue01(resultsSuccess)},
+    response: JSON.stringify(theCodeForAction),
+    extensions: resultExt,
+  };
+<<<<<<< HEAD
+
+// updated to track activities  --- XHU
+
+=======
+*/
+>>>>>>> 3114ad51611345e29b81cd639f5e53a2effccd17
   var contextObj = {
     contextActivities: contextActivities,
     extensions: Extdata.extensions,
@@ -328,6 +364,9 @@ function ComposewithContextActivities(
   return parts;
 }
 
+function SuccessFailToValue01(SorF){
+  if(SorF) {return 1}else{return 0}
+}
 function calculateAllScores(response) {
   var i;
   var AllHard = "";
@@ -416,6 +455,7 @@ function GetLastRecordedAction(lrsURL, LRSusername, LRSpassword) {
 }
 
 function PostWorldEvent(eventType, msg) {
+ 
   var AnActor = TheLessonIDforXAPI;
   var verb = "CSALMsg";
   var verbObj = {
@@ -618,7 +658,7 @@ function GetALLActions(lrsURL, LRSusername, LRSpassword, atimestamp) {
       var footer =
         "<p align='left'>What do you want to do next? <br/><br/><input type='radio' name='choice' id='startover'>  Start over from the start. " +
         " <p align='left'><input type='radio' name='choice' id='continue' > Continue from where you have stopped.</p>" +
-        "<p align='right'><button class='btn' onclick='moveforward()'> Move forward </button><p/>";
+        "<p align='right'><button class='btn' onclick='moveforward()'> NEXT </button><p/>";
       if (qs("editing", "0") == "0") {
         OpenModal(
           fullname.split(" ")[0] + ", " + Greetings() + " and Welcome Back!",
@@ -953,9 +993,13 @@ function xAPIPostOther(acePostjson, averb) {
   };
 
   var activityObj = TheLessonIDforXAPI;
+ 
   // Activity
   var data = acePostjson;
-
+  var responseCode={"user":LearnerID.mbox,
+                   "lesson":TheLessonIDforXAPI.mbox};
+  var responseCodeStr=JSON.stringify(responseCode);
+  console.log(JSON.stringify(responseCode));
   var resltExt = {};
   resltExt[ITProfile + "CSAL/LMS"] = MoodleVar;
 
@@ -965,13 +1009,15 @@ function xAPIPostOther(acePostjson, averb) {
     if (data.userAnswer == "Incorrect") {
       ResultObj = {
         success: false,
-        response: data.userSelectedItem,
+        score:{raw:0},
+        response: responseCodeStr,
         extensions: resltExt,
       };
     } else {
       ResultObj = {
         success: true,
-        response: data.userSelectedItem,
+        score:{raw:1},
+        response: responseCodeStr,
         extensions: resltExt,
       };
     }
@@ -1002,9 +1048,43 @@ function xAPIPostOther(acePostjson, averb) {
   }
   if (statements != null) {
     //	console.log(JSON.stringify(statements));
-    ADL.XAPIWrapper.sendStatement(statements);
+//    var TheOrignalName=statements.object.name;
+//    if (TheOrignalName.indexOf("@")==-1){
+//      statements.object.name=TheOrignalName+"@"+qs("classID","ClassID");
+ //   }
+    ADL.XAPIWrapper.sendStatement(statements,TakeAPicture);
   }
 }
+
+var TakeAPicture= function (resp, thing) {
+	var spanclass = "text-info";
+	var text = "";
+	if (resp.status >= 400) {
+		spanclass = "text-danger";
+		text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+		for ( var res in thing.results ) {
+			text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+			for ( var err in thing.results[res].errors ) {
+				text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+				text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+			}
+		}
+	} else {
+		if ( resp.responseText ){
+			text = "LRS "+TheLRSURL+ "Successfully sent " + resp.responseText;
+      console.log("SubmitActionResult:"+text);
+      if (CaptureScreen){
+        // code to capture screen
+        
+        // code to capture screen
+
+      //  document.getElementById("mainFrame").contentWindow.PostScreenShot("TestPage")
+      //   PostScreenShot(theData);
+      }
+		} else
+			text = thing+" "+EXPID;
+	}
+};
 
 function xAPIPostStart(acePostjson, averb) {
   if (started) {

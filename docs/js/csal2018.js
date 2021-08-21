@@ -45,10 +45,12 @@ var listofMessage = [];
 
 var enableEditing = false;
 var InputFound;
-var VerboseMode = qs("verbose", "0") == "1";
+var VerboseMode = qs("verbose", "1") == "1";
+var CaptureScreen = qs("CaptureScreen", "0") == "1";
 var time_in_Day;
 var time_in_hours;
 var time_in_min;
+var theData;
 
 var TheMsg = "";
 
@@ -439,6 +441,7 @@ function GetTheEventAssigned() {
     if (VerboseMode) {
       PostWorldEvent("userEvent", "Click Next Button");
     }
+   
     //added by xhu
     userSelectedItem = "";
     //added by xhu
@@ -542,6 +545,7 @@ function restart() {
 
 $(document).ready(function () {
   //	CheckIfPossibleToRewind();
+  loadjscssfile("https://spreadsheets.google.com/feeds/cells/"+qs("LessonInfor","1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw")+"/7/public/values?alt=json-in-script&callback=GetLessonsInfo", "js");
   GetTheEventAssigned();
   if (qs("editing", "0") == "1") {
     onLoad1();

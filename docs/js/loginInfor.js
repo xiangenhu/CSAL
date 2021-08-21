@@ -246,8 +246,9 @@ function GetURL(anApp) {
       qs("ef", "0") +
       "&editing=" +
       AllowEditing +
+      "&CaptureScreen="+qs("CaptureScreen","0")+
       "&verbose=" +
-      qs("verbose", "1") +
+      qs("verbose", "0") +
       "&aceurl=" +
       qs("aceurl", "https://ace.autotutor.org/aceapi2017/api/aceaction") +
       // Will Change Later
@@ -258,11 +259,11 @@ function GetURL(anApp) {
       "&asatlrspassword=" +
       qs("asatlrspassword", "asatScripts") +
       "&lrs=" +
-      qs("lrs", "https://record.x-in-y.com/arcfinaldebugging/xapi/") +
+      qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/") +
       "&lrslogin=" +
-      qs("lrslogin", "mihamo") +
+      qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e") +
       "&lrspassword=" +
-      qs("lrspassword", "zutivv") +
+      qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e") +
       // Will Change Later
       "&fullname=" +
       fullname +
