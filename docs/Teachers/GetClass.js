@@ -96,18 +96,8 @@ var TheScore={
 
 
 function GetClass(json){
-	var spData;
-        var FromTools=(json.feed==null);
-        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
-	var i;
-	for (i=1;5*i<spData.length;i++){
-		var line=i*5;
-		var row=[spData[line].value,
-					spData[line+1].value,
-					spData[line+2].value,
-					spData[line+3].value,
-					spData[line+4].value
-				];
+	for (var i=1;i<json.length;i++){
+		var row=[json[i].classID,json[i].Login,json[i].Password,json[i].Instruction,json[i].Students];	
 		TheClasses.push(row);
 	}
 	console.log(TheClasses);
