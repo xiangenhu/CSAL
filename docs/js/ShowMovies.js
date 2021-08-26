@@ -1,23 +1,13 @@
 function GetMovieWhenReady() {
   if (qs("MOVIE", "1") == "1") {
     if (qs("ef", "0") == "0") {
-      GetGoogleSheetData(
-        "https://spreadsheets.google.com/feeds/cells/" +
-          qs("Emails", "1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw") +
-          "/4/public/values?alt=json-in-script&callback=GetMovies",
-        "js"
-      );
+      GetGoogleSheetData("2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT","GetMovies","4");
     }
   }
 }
 
 function CheckIfPossibleToRewind() {
-  GetGoogleSheetData(
-    "https://spreadsheets.google.com/feeds/cells/" +
-      qs("Emails", "1l9cLdijhas7QBfrGKni5ULg3eNcu3fhmrXqE3NsekKw") +
-      "/6/public/values?alt=json-in-script&callback=CheckRewind",
-    "js"
-  );
+  GetGoogleSheetData("2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT","CheckRewind","6");
 }
 CanRewind = false;
 var MOVIEObj = {
@@ -37,20 +27,12 @@ function GetObj(str) {
 }
 
 function CheckRewind(json) {
-  var spData;
-        var FromTools=(json.feed==null);
-        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
-  var i;
-  for (i = 0; 3 * i < spData.length; i++) {
-    var line = i * 3;
-    var row = [
-      spData[line].value,
-      spData[line + 1].value,
-      spData[line + 2].value,
-    ];
+  for (var i=1;i<json.length;i++){
+    var guid=json[i].GUID.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
+    var row=[json[i].LessonName,guid,json[i].Rewind];
     console.log(row, qs("quid", ""));
-    if (qs("guid", "") == spData[line + 1].value) {
-      CanRewind = spData[line + 2].value != "No";
+    if (qs("guid", "") ==guid) {
+      CanRewind = json[i].Rewind != "No";
       if (CanRewind) {
         GetALLActions(LRSURL, LRSLogin, LRSPassword, lastStartingTime);
       }
@@ -60,25 +42,19 @@ function CheckRewind(json) {
 }
 
 function GetMovies(json) {
-  var spData;
-        var FromTools=(json.feed==null);
-        if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
-  var i;
-  for (i = 0; 3 * i < spData.length; i++) {
-    var line = i * 3;
-    var row = [
-      spData[line].value,
-      spData[line + 1].value,
-      spData[line + 2].value,
-    ];
+  
+  for (var i=1;i<json.length;i++){
+    var guid=json[i].GUID.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
+    var row=[json[i].LessonName,guid,json[i].Movie];
     console.log(row, qs("quid", ""));
-    if (qs("guid", "") == spData[line + 1].value) {
-      if (spData[line + 2].value != "NA") {
-        MOVIEObj.MOVIELink = spData[line + 2].value;
-        MOVIEObj.MOVIETitle = spData[line].value;
-        MOVIEObj.PopTitle = spData[line].value;
+    if (qs("guid", "") ==guid) {
+      HaveMovie = json[i].Movie != "NA";
+      if (HaveMovie) {
+        MOVIEObj.MOVIELink = json[i].Movie;
+        MOVIEObj.MOVIETitle = json[i].LessonName;
+        MOVIEObj.PopTitle = json[i].LessonName;
         launchMOVIE();
-        return;
+       return;
       }
     }
   }
@@ -116,7 +92,8 @@ function OpenPopUp(header, footer, bodytext, targetwin) {
   });
 }
 
-function GetGoogleSheetData(filename, filetype) {
+
+function GetGoogleSheetDataOld(filename, filetype) {
   if (filetype == "js") {
     //if filename is a external JavaScript file
     var fileref = document.createElement("script");
@@ -190,3 +167,25 @@ function launchMOVIE() {
     "' id='TheIframe' frameBorder='0' scrolling='no'></iframe>";
   OpenPopUp(MOVIETitle, MOVIEFooter, htmlbody, "popupWin");
 }
+function GetSpreadSheetARC(GoogleID, GoogleSheet) {
+	var theUrl = "https://tools.x-in-y.com/gs?json=";
+	var theObj = { id: GoogleID, page: GoogleSheet };
+	console.log(GoogleID);
+	theUrl = theUrl + JSON.stringify(theObj);
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("GET", theUrl, false); // false for synchronous request
+	xmlHttp.send(null);
+	return xmlHttp.responseText;
+}
+
+function GetGoogleSheetData(GooglePageID,CallBak, page) {
+      var GoogleID = GooglePageID;
+      var GoogleSheet = page;
+      var TheJSFileFromGS = GetSpreadSheetARC(GoogleID, GoogleSheet);
+      if (TheJSFileFromGS != "") {
+          var json = JSON.parse(GetSpreadSheetARC(GoogleID, GoogleSheet));
+          var myfunc = this[CallBak];
+          myfunc(json);
+          return;
+      }
+  }
