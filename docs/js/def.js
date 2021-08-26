@@ -10,6 +10,9 @@ function qs(search_for, defaultstr) {
   }
   return defaultstr;
 }
+
+
+
 var C1 = qs("C1", "Angela");
 var CR1 = C1;
 var F1 = qs("F1", "Head");

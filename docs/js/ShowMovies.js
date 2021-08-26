@@ -28,7 +28,7 @@ function GetObj(str) {
 
 function CheckRewind(json) {
   for (var i=1;i<json.length;i++){
-    var guid=json[i].GUID.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
+    var guid=removehtml(json[i].GUID);
     var row=[json[i].LessonName,guid,json[i].Rewind];
     console.log(row, qs("quid", ""));
     if (qs("guid", "") ==guid) {
@@ -41,10 +41,15 @@ function CheckRewind(json) {
   }
 }
 
+
+function removehtml(str){
+	return str.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
+}
+
 function GetMovies(json) {
   
   for (var i=1;i<json.length;i++){
-    var guid=json[i].GUID.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
+    var guid=removehtml(json[i].GUID);
     var row=[json[i].LessonName,guid,json[i].Movie];
     console.log(row, qs("quid", ""));
     if (qs("guid", "") ==guid) {
