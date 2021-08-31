@@ -188,7 +188,7 @@ function CreateLessonByStudentMatrix() {
       console.log(Lessons);
       console.log(Learners);
       // create table
-      var html = "<table align='center' id='ReportTable'>";
+      var html = "<table align='center' class='ReportTable'>";
       html = html + "<tr><th></th>";
       for (var j = 0; j < Learners.length; j++) {
         html =
@@ -228,14 +228,6 @@ function CreateLessonByStudentMatrix() {
             "<li><a href='" +
             AgentLink +
             "' target='alllogs'><button>Activity Log</button></a> </li>";
-       
-          /*Links =
-            Links +
-            "<li><a href='" +
-            activityLink +
-            "' target='activity'>activities in the last 24 hours</a>" +
-            "</li>";
-            */
 
           var WithAnswer = false;
           for (var k = 0; k < TheRealResponse.length; k++) {
@@ -251,73 +243,39 @@ function CreateLessonByStudentMatrix() {
                 "<li><button onclick='GetLastperformance(\"" +
                 encodeURI(JSON.stringify(Thedetails)) +
                 "\")'>Last Performance</button></li>";
-                console.log(LastPerformance)
+             //   console.log(LastPerformance)
               WithAnswer = true;
               var cellID = "cell__" + i.toString() + "__" + j.toString();
 
               if (TheRealResponse[k].sum >= LessonInfor.total) {
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
-                  theValue =
-                    "<button onclick='togglebtn(\"" +
-                    cellID +
-                    "\");' class='btn1' style='background-color: green' >&#10003;</button>";
+                  theValue = 
+                    "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: green' >&#10003;</button>";
                 } else {
-                  theValue =
-                    "<button onclick='togglebtn(\"" +
-                    cellID +
-                    "\");' class='btn1' style='background-color: red' >&#10008;</button>";
+                  theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: red' >&#10008;</button>";
                 }
               } else {
-                theValue =
-                  "<button onclick='togglebtn(\"" +
-                  cellID +
-                  "\");' class='btn1' style='background-color: grey' >&#x27A4;</button>";
+                theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: grey' >&#x27A4;</button>";
               }
-
-              theValue =
-                theValue +
-                "<ul  id='" +
-                cellID +
-                "' style='display:none; z-index: -1'>";
-
-              theValue = theValue + LastPerformance;
-              theValue = theValue + Links;
-              theValue =
-                theValue +
-                "<li>Last  Access: " +
-                ReturnDate(TheRealResponse[k].End) +
-                " </li>";
-              theValue =
-                theValue +
-                "<li>First  Access: " +
-                ReturnDate(TheRealResponse[k].Start) +
-                " </li>";
-              theValue =
-                theValue +
-                "<li>Answered: " +
-                TheRealResponse[k].sum +
-                " Question(s)</li>";
-              theValue =
-                theValue +
-                "<li>Maximum Score " +
-                TheRealResponse[k].MaxScore.toFixed(2) +
-                " </li>";
-              theValue =
-                theValue +
-                "<li>Minimum Score " +
-                TheRealResponse[k].MinScore.toFixed(2) +
-                " </li>";
-              theValue =
-                theValue +
-                "<li>Average Score " +
-                TheRealResponse[k].Average.toFixed(2) +
-                " </li>";
-              theValue = theValue + "</ul>";
+              var ThePopupInfor="";
+              ThePopupInfor=ThePopupInfor+ "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
+              ThePopupInfor=ThePopupInfor + LastPerformance;
+              ThePopupInfor=ThePopupInfor + Links;
+              ThePopupInfor=ThePopupInfor + "<li>Last  Access: " + ReturnDate(TheRealResponse[k].End) +" </li>";
+              ThePopupInfor=ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse[k].Start) + " </li>";
+              ThePopupInfor=ThePopupInfor + "<li>Answered: " + TheRealResponse[k].sum + " Question(s)</li>";
+              ThePopupInfor=ThePopupInfor + "<li>Maximum Score " + TheRealResponse[k].MaxScore.toFixed(2) + " </li>"; 
+              ThePopupInfor=ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
+              ThePopupInfor=ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) +  " </li>";
+              ThePopupInfor=ThePopupInfor +"</ul>";
+              theValue = theValue +ThePopupInfor;
+      //        theValue ="<a href='#'>BBB</a>";
             } else {
             }
           }
           if (WithAnswer) {
             html = html + "<td>" + theValue + "</td>";
+            console.log(theValue)
           } else {
             html = html + "<td></td>";
           }
