@@ -190,3 +190,16 @@ function AudioPlaying() {
 }
 
 
+
+function GetLessons(json){
+	var i;
+	for (i=1;i<json.length;i++){
+		var row=[json[i].LessonTitle,
+					removehtml(json[i].GUID),
+					json[i].YouTube,
+					json[i].Description]
+	   console.log(row);
+	   TheLessions.push(row);
+	}
+	GetStudents(classID,ThestudentID);
+}

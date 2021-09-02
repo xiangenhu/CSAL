@@ -71,20 +71,6 @@ var TheScore={
 			}
 
 
-function GetLessons(json){
-
-	var i;
-	for (i=1;i<json.length;i++){
-		var row=[json[i].LessonTitle,
-					removehtml(json[i].GUID),
-					json[i].YouTube,
-					json[i].Description]
-	   console.log(row);
-	   TheLessions.push(row);
-	}
-	GetStudents(classID,ThestudentID);
-}
-
 function studentsReport(student,verb){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":+student,"statement.verb.id":"https://app.skoonline.org/ITSProfile/"+verb};
