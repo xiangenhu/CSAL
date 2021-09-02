@@ -13,6 +13,19 @@ function qs(search_for, defaultstr) {
 
 
 
+var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcproduction/xapi/");
+var TheLRSLogin=qs("lrslogin","8ab2151b-dd04-478c-9a41-6075ef40d47e");
+var theLRSPassword=qs("lrspassword","8ab2151b-dd04-478c-9a41-6075ef40d47e");
+
+var AggregateURLData=TheLRSURL+"statements/aggregate";
+var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
+var classID=qs("classID","CSALUSNW01");
+
+var LessonInforPointer =
+"2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT";
+
+
+
 var C1 = qs("C1", "Angela");
 var CR1 = C1;
 var F1 = qs("F1", "Head");

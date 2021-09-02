@@ -14,7 +14,7 @@
 var TheSetting = {
   async: true,
   crossDomain: true,
-  url: asatlrs + "/statements/aggregate",
+  url: asatlrs + "statements/aggregate",
   method: "POST",
   headers: {
     Authorization: "Basic " + getCSALTheDataAuthory(),
@@ -62,9 +62,6 @@ var totalScore = {
 
 var ITProfile = qs("ITProfile", "https://app.skoonline.org/ITSProfile/");
 
-var LRSURL = qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/");
-var LRSLogin = qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
-var LRSPassword = qs("lrspassword", "8ab2151b-dd04-478c-9a41-6075ef40d47e");
 
 var xAPIVerbBase = qs("verbbase", ITProfile);
 
@@ -673,7 +670,7 @@ function getACEActionAndPlay(ActionName) {
   var settings = {
     async: true,
     crossDomain: true,
-    url: asatlrs + "/statements/aggregate",
+    url: asatlrs + "statements/aggregate",
     method: "POST",
     headers: {
       Authorization: "Basic " + getCSALTheDataAuthory(),

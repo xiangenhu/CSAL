@@ -1802,7 +1802,7 @@ function getLastActiveRecordNew(lrsURL, LRSusername, LRSpassword, Averb) {
   console.log(datasqlstring);
   $.ajax({
     type: "POST",
-    url: lrsURL + "/statements/aggregate",
+    url: lrsURL + "statements/aggregate",
     dataType: "json",
     headers: {
       Authorization: "Basic " + getCSALTheDataAuthory(),

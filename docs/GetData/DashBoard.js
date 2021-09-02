@@ -2,14 +2,6 @@
 var TheLessions=[];
 var StudentList=[];
 
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
-var TheLRSLogin=qs("lrslogin","mihamo");
-var theLRSPassword=qs("lrspassword","zutivv");
-
-var AggregateURLData=TheLRSURL+"/statements/aggregate";
-var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
-var classID=qs("classID","CSALUSNW01");
-
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
@@ -77,6 +69,15 @@ var TheScore={
 
 
 function GetLessons(json){
+	for (var i=1;i<json.length;i++){
+		var row=[spData[line].value,
+					spData[line+1].value,
+					spData[line+2].value,
+					spData[line+3].value
+				];
+		console.log(row)
+		TheLessions.push(row);
+	}
 	var spData;
         var FromTools=(json.feed==null);
         if ( FromTools){ spData=json;}else{spData = json.feed.entry;}
