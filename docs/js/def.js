@@ -204,6 +204,17 @@ function GetLessons(json){
 	GetStudents(classID,ThestudentID);
 }
 
+function GetSpreadSheetARC(GoogleID, GoogleSheet) {
+	var theUrl = "https://tools.x-in-y.com/gs?json=";
+	var theObj = { id: GoogleID, page: GoogleSheet };
+	console.log(GoogleID);
+	theUrl = theUrl + JSON.stringify(theObj);
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("GET", theUrl, false); // false for synchronous request
+	xmlHttp.send(null);
+	return xmlHttp.responseText;
+}
+
 
 function GetGoogleSheetData(GooglePageID,CallBak, page) {
   var GoogleID = GooglePageID;

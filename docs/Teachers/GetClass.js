@@ -165,7 +165,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 	thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
 		if (response.length==0){
-			$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,null,TeacherEmail,TeacherName))
+			$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,[],TeacherEmail,TeacherName))
 		}else{
 			var listofCourses=[];
 			for (var i=0; i<response.length;i++){
@@ -196,7 +196,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 				}
 			}
 			if (listofCourses.length==0){
-				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,null,TeacherEmail,TeacherName))
+				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,[],TeacherEmail,TeacherName))
 			}else{
 				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,listofCourses,TeacherEmail,TeacherName))
 			}
