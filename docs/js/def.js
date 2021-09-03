@@ -203,3 +203,16 @@ function GetLessons(json){
 	}
 	GetStudents(classID,ThestudentID);
 }
+
+
+function GetGoogleSheetData(GooglePageID,CallBak, page) {
+  var GoogleID = GooglePageID;
+  var GoogleSheet = page;
+  var TheJSFileFromGS = GetSpreadSheetARC(GoogleID, GoogleSheet);
+  if (TheJSFileFromGS != "") {
+      var json = JSON.parse(GetSpreadSheetARC(GoogleID, GoogleSheet));
+      var myfunc = this[CallBak];
+      myfunc(json);
+      return;
+  }
+}
