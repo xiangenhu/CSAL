@@ -102,7 +102,7 @@ function GetURL(anApp) {
       "&UID=" +
       email +
       "&aceurl=" +
-      qs("aceurl", "https://ace.autotutor.org/aceapi2017/api/aceaction") +
+      qs("aceurl", "https://ace.x-in-y.com/aceapi2021/api/aceaction") +
       "&editing=" +
       AllowEditing +
       "&SampleGUID=" +
@@ -250,7 +250,7 @@ function GetURL(anApp) {
       "&verbose=" +
       qs("verbose", "0") +
       "&aceurl=" +
-      qs("aceurl", "https://ace.autotutor.org/aceapi2017/api/aceaction") +
+      qs("aceurl", "https://ace.x-in-y.com/aceapi2021/api/aceaction") +
       // Will Change Later
       "&asatlrs=" +
       qs("asatlrs", "https://record.x-in-y.com/scripts/xapi/") +
