@@ -190,7 +190,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"You already have assigned a class for you. It is <b>"+response[i].course+"</b>.";
 					html=html+"<ul>";
 					html=html+"<li>Login: <b>"+response[i].login+"</b>";
-					html=html+"<li>password: <b>"+response[i].password+"</b>";
+					html=html+"<li>Password: <b>"+response[i].password+"</b>";
 					html=html+"</ul>";
 					html=html+"<br/>Here are some important links that you can save or bookmark:<br/><br/>";
 					html=html+"<ul>";
