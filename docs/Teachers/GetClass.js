@@ -122,6 +122,9 @@ function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,Tea
 	TheMessage=TheMessage+"Please use the following login information to login:<ul>";
 	TheMessage=TheMessage+"<li>Login: <b>"+remainList[randomindex][1]+"</b>";
 	TheMessage=TheMessage+"<li>Password: <b>"+remainList[randomindex][2]+"</b>";
+	TheMessage=TheMessage+"</ul>";
+	TheMessage=TheMessage+"Here are some important links that you can save or bookmark:";
+	TheMessage=TheMessage+"<ul>";
 	TheMessage=TheMessage+"<li>Instruction to teacher: <a href='"+remainList[randomindex][3]+"' target='new'></a><b>"+remainList[randomindex][3]+"</b></a>";
 	TheMessage=TheMessage+"<li>List of your students: <a href='"+remainList[randomindex][4]+"' target='new'> <b>"+remainList[randomindex][4]+"</b> </a>"
 	TheMessage=TheMessage+"<li>URL to Login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
