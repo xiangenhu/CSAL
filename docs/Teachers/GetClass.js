@@ -192,7 +192,7 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"<li>Login: <b>"+response[i].login+"</b>";
 					html=html+"<li>password: <b>"+response[i].password+"</b>";
 					html=html+"</ul>";
-					html=html+"Here are some important links that you can save or bookmark:";
+					html=html+"<br/>Here are some important links that you can save or bookmark:<br/><br/>";
 					html=html+"<ul>";
 					html=html+"<li>Instruction to teacher: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
 					html=html+"<li>List of your students: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
