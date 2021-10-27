@@ -194,9 +194,9 @@ function FindTeacher(TeacherEmail,TeacherName){
 					html=html+"</ul>";
 					html=html+"<br/>Here are some important links that you can save or bookmark:<br/><br/>";
 					html=html+"<ul>";
-					html=html+"<li>Instruction to teacher: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
-					html=html+"<li>List of your students: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
-					html=html+"<li>URL: <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
+					html=html+"<li>Teacher Instructions: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
+					html=html+"<li>Student Roster & Login Information: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
+					html=html+"<li>AutoTutor Website (URL): <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
 
 					$("#ClassInfor").html(html);
 					TheEmailMessage=html;
