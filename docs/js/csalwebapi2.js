@@ -4,6 +4,8 @@ var actions;
 var PutStatus = false;
 var LastData;
 var latency = {};
+
+var PostingHistory=[];
 function insertMdeda(media, list) {
   if (qs("startReturn", "0") == "0") return;
   if (list == null) return;
@@ -105,10 +107,13 @@ function Post(acePostjson) {
 
 function Put(acePutjson) {
   //  acePutjson.ScriptXML="";
+
   var content = acePutjson;
   var method = "PUT";
   webAPImethod = method;
   latency.start = new Date();
+  PostingHistory.push(iputObj.Event);
+  console.log(PostingHistory);
   var getUrl = $.ajax({
     type: method,
     url: aceurl,
