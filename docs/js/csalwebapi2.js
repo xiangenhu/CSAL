@@ -112,7 +112,7 @@ function Put(acePutjson) {
   var method = "PUT";
   webAPImethod = method;
   latency.start = new Date();
-  PostingHistory.push(iputObj.Event);
+  PostingHistory.push(acePutjson.Event);
   console.log(PostingHistory);
   var getUrl = $.ajax({
     type: method,
