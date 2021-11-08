@@ -347,7 +347,7 @@ function sendEmail(email,subject,body) {
 	Email.send({
 	Host: "smtp.gmail.com",
 	Username : "read.autotutor@gmail.com",
-	Password : "hyhtabqqjlsmbdlh",
+	Password : "csal2020",
 	To : email,
 	From : "read.autotutor@gmail.com",
 	Subject : subject,
