@@ -27,9 +27,9 @@
 <body>
     <script>
         $(document).ready(function () {
-            var teacherID = qs("teacherlogin", "");
+            var teacherID = qs("teacherID", "");
             var classID = qs("classID", "")
-            if ((teacherID != "1") && (classID != "1")) {
+            if ((teacherID != "1") && (classID != "")) {
                 $("#ClassInforPanel").show();
                 $("#GeneralMsg").hide();
                 getClassInfor(teacherID, classID);
@@ -38,6 +38,12 @@
                 $("#ClassInforPanel").hide();
             }
         });
+        function viewStudent(){
+            window.open("ViewStudent.html?classID="+classID,"_self");
+        }
+        function viewClassProgress(){
+            window.open("Teacher.html?GL=0&CourseID=ARCProd&classID="+classID,"_self");
+        }
     </script>
 </body>
 <div id="ClassInforPanel">
@@ -45,8 +51,8 @@
         <tr>
             <td>
                 <ul>
-                    <li>View Student roster <span id="studentInfo">View Students</span> </li>
-                    <li>Check class progress <span id="ProgressView">Progress Report</span></li>
+                    <li>View Student roster <button class="btn" onclick="viewStudent()">View Students</button> </li>
+                    <li>Check class progress <button class="btn" onclick="viewClassProgress()">View Progress</button> </li>
                 </ul>
             </td>
         </tr>

@@ -1,39 +1,40 @@
+var TheClasses = [];
+var StudentList = [];
+var ClassIDSpreadsheet = "2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq";
+var studentDatainGS = "2PACX-1vQhXuVJqyd7MSnlkYYYeG1f5jovoubip6VnfrCKJ-QCpYkZV48pq0a6JchcL6BVm6nSmH14TfrGs9S8"
 
-var TheClasses=[];
-var StudentList=[];
-var ClassIDSpreadsheet="2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq"
 
+var TheVerb = "Assigned";
+var AggregateURLData = TheLRSURL + "statements/aggregate";
+var TheDataAuthory = btoa(TheLRSLogin + ":" + theLRSPassword);
+var classID = qs("classID", "CSALUSNW01");
 
-var TheVerb="Assigned";
-var AggregateURLData=TheLRSURL+"statements/aggregate";
-var TheDataAuthory=btoa(TheLRSLogin+":"+theLRSPassword);
-var classID=qs("classID","CSALUSNW01");
-
-var ITSRoot=qs("ITSRoot","https://www.autotutor.org/");
-var ignoredResearchEmails=["mailto:xiangenhu@gmail.com",
-                           "mailto:esmith42@memphis.edu",
-						   "mailto:keithshubeck@gmail.com",
-						   "mailto:genghushi@hotmail.com",
-						   "mailto:jodycockroft@gmail.com",
-						   "mailto:zhiqiang.cai.2016@gmail.com",
-						   "mailto:genghushi@foxmail.com",
-						   "mailto:aatawfik@memphis.edu",
-						   "mailto:cbourret@provlib.org",
-						   "mailto:cmcarmon@memphis.edu",
-						   "mailto:djrosen1123@gmail.com",
-						   "mailto:djrosen123@gmail.com",
-						   "mailto:jaclynjgish@gmail.com",
-						   "mailto:jdgatewood16@gmail.com",
-						   "mailto:jen_vanek@worlded.org",
-						   "mailto:jjgshbgh@memphis.edu",
-						   "mailto:jmhllndr@memphis.edu",
-						   "mailto:jpangloss856@outlook.com"];
-var TheLessonPages=[];
-var TheLearnerResponses=[];
-var ThestudentID=decodeURIComponent(qs("sid",""));
+var ITSRoot = qs("ITSRoot", "https://www.autotutor.org/");
+var ignoredResearchEmails = ["mailto:xiangenhu@gmail.com",
+	"mailto:esmith42@memphis.edu",
+	"mailto:keithshubeck@gmail.com",
+	"mailto:genghushi@hotmail.com",
+	"mailto:jodycockroft@gmail.com",
+	"mailto:zhiqiang.cai.2016@gmail.com",
+	"mailto:genghushi@foxmail.com",
+	"mailto:aatawfik@memphis.edu",
+	"mailto:cbourret@provlib.org",
+	"mailto:cmcarmon@memphis.edu",
+	"mailto:djrosen1123@gmail.com",
+	"mailto:djrosen123@gmail.com",
+	"mailto:jaclynjgish@gmail.com",
+	"mailto:jdgatewood16@gmail.com",
+	"mailto:jen_vanek@worlded.org",
+	"mailto:jjgshbgh@memphis.edu",
+	"mailto:jmhllndr@memphis.edu",
+	"mailto:jpangloss856@outlook.com"
+];
+var TheLessonPages = [];
+var TheLearnerResponses = [];
+var ThestudentID = decodeURIComponent(qs("sid", ""));
 var TheEmailMessage;
 
-ADL.launch(function(err, launchdata, xAPIWrapper) {
+ADL.launch(function (err, launchdata, xAPIWrapper) {
 	if (!err) {
 		wrapper = ADL.XAPIWrapper = xAPIWrapper;
 		console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
@@ -64,162 +65,182 @@ function GetSpreadSheet(GoogleID, GoogleSheet) {
 }
 */
 
-TheLRStheSetting={
-    "async": true,
-    "crossDomain": true,
-    "url": AggregateURLData,
-    "method": "POST",
-    "headers": {
-    "authorization": "Basic " + TheDataAuthory,
-    "content-type": "application/json",
-    "cache-control": "no-cache",
-    "x-experience-api-version": "1.0.3",
-    "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
-    },
-    "processData": false,
-    "data":{}
+TheLRStheSetting = {
+	"async": true,
+	"crossDomain": true,
+	"url": AggregateURLData,
+	"method": "POST",
+	"headers": {
+		"authorization": "Basic " + TheDataAuthory,
+		"content-type": "application/json",
+		"cache-control": "no-cache",
+		"x-experience-api-version": "1.0.3",
+		"postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
+	},
+	"processData": false,
+	"data": {}
 }
-var TheEmail=qs("TheEmail","xhu@memphis.edu");
-var TheFullName=qs("TheFullName","Xiangen Hu")
+var TheEmail = qs("TheEmail", "xhu@memphis.edu");
+var TheFullName = qs("TheFullName", "Xiangen Hu")
 
-var TheScore={
-	          "Hard":{"success":0,"failure":0},
-              "Medium":{"success":0,"failure":0},
-			  "Easy":{"success":0,"failure":0}
-			}
+var TheScore = {
+	"Hard": {
+		"success": 0,
+		"failure": 0
+	},
+	"Medium": {
+		"success": 0,
+		"failure": 0
+	},
+	"Easy": {
+		"success": 0,
+		"failure": 0
+	}
+}
 
 
-function GetClass(json){
-	for (var i=1;i<json.length;i++){
-		var row=[json[i].classID,json[i].Login,json[i].Password,json[i].Instruction,json[i].Students];	
+function GetClass(json) {
+	for (var i = 1; i < json.length; i++) {
+		var row = [json[i].classID, json[i].Login, json[i].Password, json[i].Instruction, json[i].Students];
 		TheClasses.push(row);
 	}
 	console.log(TheClasses);
-//	FindTeacher("mailto:"+TheEmail,TheFullName)
+	//	FindTeacher("mailto:"+TheEmail,TheFullName)
 }
 
-function CreateCourseLoginForTeacher(TheOriginalList,RemoveList,TeacherEmail,TeacherName){
+function CreateCourseLoginForTeacher(TheOriginalList, RemoveList, TeacherEmail, TeacherName) {
 	var i;
-	var remainList=[];
-	for (i=TheOriginalList.length-1;i>0;i--){
-		if (RemoveList.includes(TheOriginalList[i][1])){
+	var remainList = [];
+	for (i = TheOriginalList.length - 1; i > 0; i--) {
+		if (RemoveList.includes(TheOriginalList[i][1])) {
 			console.log(TheOriginalList[i][1]);
-		}else{
+		} else {
 			remainList.push(TheOriginalList[i]);
 		}
 	}
 	console.log(remainList);
-	var TheIndex=Math.random()*remainList.length;
-	var randomindex=Math.floor(TheIndex);
-	var html="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
-	html=html+"Welcome to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
-	html=html+"We have created a class for you. ";
-	html=html+"Please click the <b>[NEXT] </b> button below to receive detailed class information in your email: ";
-	html=html+"("+TeacherEmail.split(":")[1]+").";
-	html=html+"Please check an email sent from <b>read.autotutor@gmail.com.</b><br/>";
-	html=html+"Should you have any questions, contact <b>read.autotutor@gmail.com</b><br/>";
-    var TheMessage="Hello "+TeacherName.split(" ")[0]+",<br/><br/>";
-	TheMessage=TheMessage+"Please use the following login information to login:<ul>";
-	TheMessage=TheMessage+"<li>Login: <b>"+remainList[randomindex][1]+"</b>";
-	TheMessage=TheMessage+"<li>Password: <b>"+remainList[randomindex][2]+"</b>";
-	TheMessage=TheMessage+"</ul>";
-	TheMessage=TheMessage+"Here are some important links that you can save or bookmark:";
-	TheMessage=TheMessage+"<ul>";
-	TheMessage=TheMessage+"<li>Instruction to teacher: <a href='"+remainList[randomindex][3]+"' target='new'></a><b>"+remainList[randomindex][3]+"</b></a>";
-	TheMessage=TheMessage+"<li>List of your students: <a href='"+remainList[randomindex][4]+"' target='new'> <b>"+remainList[randomindex][4]+"</b> </a>"
-	TheMessage=TheMessage+"<li>URL to Login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 	
-	
-	var TeacherCourseObj={"TeacherEmail":TeacherEmail,
-		"TeacherName":TeacherName,
-		"Course":remainList[randomindex][0],
-		"login":remainList[randomindex][1],
-		"password":remainList[randomindex][2],
-		"instruction":remainList[randomindex][3],
-		"students":remainList[randomindex][4]
+	var TheIndex = Math.random() * remainList.length;
+	var randomindex = Math.floor(TheIndex);
+	var html = "Hello " + TeacherName.split(" ")[0] + ",<br/><br/>";
+	html = html + "Welcome to the AutoTutor Adult Reading Comprehension (ARC) website! <br/><br> You have been approved to be a teacher. "
+	html = html + "We have created a class for you. ";
+	html = html + "Please click the <b>[NEXT] </b> button below to receive detailed class information in your email: ";
+	html = html + "(" + TeacherEmail.split(":")[1] + ").";
+	html = html + "Please check an email sent from <b>read.autotutor@gmail.com.</b><br/>";
+	html = html + "Should you have any questions, contact <b>read.autotutor@gmail.com</b><br/>";
+	var TheMessage = "Hello " + TeacherName.split(" ")[0] + ",<br/><br/>";
+	TheMessage = TheMessage + "Please use the following login information to login:<ul>";
+	TheMessage = TheMessage + "<li>Login: <b>" + remainList[randomindex][1] + "</b>";
+	TheMessage = TheMessage + "<li>Password: <b>" + remainList[randomindex][2] + "</b>";
+	TheMessage = TheMessage + "</ul>";
+	TheMessage = TheMessage + "Here are some important links that you can save or bookmark:";
+	TheMessage = TheMessage + "<ul>";
+	TheMessage = TheMessage + "<li>Instruction to teacher: <a href='" + remainList[randomindex][3] + "' target='new'></a><b>" + remainList[randomindex][3] + "</b></a>";
+	TheMessage = TheMessage + "<li>List of your students: <a href='" + remainList[randomindex][4] + "' target='new'> <b>" + remainList[randomindex][4] + "</b> </a>"
+	TheMessage = TheMessage + "<li>URL to Login: <b><a  target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>";
+
+	var TeacherCourseObj = {
+		"TeacherEmail": TeacherEmail,
+		"TeacherName": TeacherName,
+		"Course": remainList[randomindex][0],
+		"login": remainList[randomindex][1],
+		"password": remainList[randomindex][2],
+		"instruction": remainList[randomindex][3],
+		"students": remainList[randomindex][4]
 	}
 
-	
 
-	
-	var TheLink=encodeURI(JSON.stringify(TeacherCourseObj));
-	html=html+"<p align='right'><button class='btn1' onclick='TakeTeacher(\""+TheLink+"\")'>Next</button></p>"; 
-	TheEmailMessage=TheMessage;
-//      	sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
+
+
+	var TheLink = encodeURI(JSON.stringify(TeacherCourseObj));
+	html = html + "<p align='right'><button class='btn1' onclick='TakeTeacher(\"" + TheLink + "\")'>Next</button></p>";
+	TheEmailMessage = TheMessage;
+	//      	sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
 	return html;
 }
 
-function FindTeacher(TeacherEmail,TeacherName){
-	var thesetting=TheLRStheSetting;
-	var match={"statement.verb.id":ITSRoot+"ITSProfile/"+TheVerb};
-	var project1={"teacherEmail":"$statement.actor.mbox",
-	             "teacherName":"$statement.actor.name",
-				 "course":"$statement.result.response",
-				 "loginpassword":"$statement.result.extensions.https://www.autotutor.org/ITSProfile/Assigned"};
-	var project={"teacherEmail":"$teacherEmail",
-				"teacherName":"$teacherName",
-				"course":"$course",
-				"login":"$loginpassword.login",
-				"password":"$loginpassword.password",
-				"instruction":"$loginpassword.instruction",
-				"students":"$loginpassword.students"
-			};			 
-	var data=[
-		{"$match":match},
-		{"$project":project1},
-		{"$project":project}
-		];
-	thesetting.data=JSON.stringify(data);
+function FindTeacher(TeacherEmail, TeacherName) {
+	var thesetting = TheLRStheSetting;
+	var match = {
+		"statement.verb.id": ITSRoot + "ITSProfile/" + TheVerb
+	};
+	var project1 = {
+		"teacherEmail": "$statement.actor.mbox",
+		"teacherName": "$statement.actor.name",
+		"course": "$statement.result.response",
+		"loginpassword": "$statement.result.extensions.https://www.autotutor.org/ITSProfile/Assigned"
+	};
+	var project = {
+		"teacherEmail": "$teacherEmail",
+		"teacherName": "$teacherName",
+		"course": "$course",
+		"login": "$loginpassword.login",
+		"password": "$loginpassword.password",
+		"instruction": "$loginpassword.instruction",
+		"students": "$loginpassword.students"
+	};
+	var data = [{
+			"$match": match
+		},
+		{
+			"$project": project1
+		},
+		{
+			"$project": project
+		}
+	];
+	thesetting.data = JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		if (response.length==0){
-			$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,[],TeacherEmail,TeacherName))
-		}else{
-			var listofCourses=[];
-			for (var i=0; i<response.length;i++){
-				if (listofCourses.includes(response[i].login)){
-				}else{
+		if (response.length == 0) {
+			$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses, [], TeacherEmail, TeacherName))
+		} else {
+			var listofCourses = [];
+			for (var i = 0; i < response.length; i++) {
+				if (listofCourses.includes(response[i].login)) {} else {
 					if (!ignoredResearchEmails.includes(response[i].teacherEmail)) {
 						listofCourses.push(response[i].login);
-						console.log(response[i].login+" "+response[i].teacherEmail);
-					}else{
-					//	console.log(response[i].login+" "+response[i].teacherEmail);
+						console.log(response[i].login + " " + response[i].teacherEmail);
+					} else {
+						//	console.log(response[i].login+" "+response[i].teacherEmail);
 					}
 				}
-				if (response[i].teacherEmail==TeacherEmail){
-					var html="";
-					html=html+"Hello <b>"+response[i].teacherName+"</b>: <br/>";
-					html=html+"You already have assigned a class for you. It is <b>"+response[i].course+"</b>.";
-					html=html+"<ul>";
-					html=html+"<li>Login: <b>"+response[i].login+"</b>";
-					html=html+"<li>Password: <b>"+response[i].password+"</b>";
-					html=html+"</ul>";
-					html=html+"<br/>Here are some important links that you can save or bookmark:<br/><br/>";
-					html=html+"<ul>";
-					html=html+"<li>Teacher Instructions: <a href='"+response[i].instruction+"' target='new'><b>"+response[i].instruction+"</b></a>";
-					html=html+"<li>Student Roster & Login Information: <a href='"+response[i].students+"' target='new'> <b>"+response[i].students+"</b> </a>"
-					html=html+"<li>AutoTutor Website (URL): <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>"; 
+				if (response[i].teacherEmail == TeacherEmail) {
+					var html = "";
+					html = html + "Hello <b>" + response[i].teacherName + "</b>: <br/>";
+					html = html + "You already have assigned a class for you. It is <b>" + response[i].course + "</b>.";
+					html = html + "<ul>";
+					html = html + "<li>Login: <b>" + response[i].login + "</b>";
+					html = html + "<li>Password: <b>" + response[i].password + "</b>";
+					html = html + "</ul>";
+					html = html + "<br/>Here are some important links that you can save or bookmark:<br/><br/>";
+					html = html + "<ul>";
+					html = html + "<li>Teacher Instructions: <a href='" + response[i].instruction + "' target='new'><b>" + response[i].instruction + "</b></a>";
+					html = html + "<li>Student Roster & Login Information: <a href='" + response[i].students + "' target='new'> <b>" + response[i].students + "</b> </a>"
+					html = html + "<li>AutoTutor Website (URL): <b><a target='_top' href='https://arcweb.us/login/'>https://arcweb.us/login/</a> </b></ul>";
 
 					$("#ClassInfor").html(html);
-					TheEmailMessage=html;
-					sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
+					TheEmailMessage = html;
+					sendEmail(TheEmail, "Welcome to ARC!", TheEmailMessage);
 					return
 				}
 			}
-			if (listofCourses.length==0){
-				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,[],TeacherEmail,TeacherName))
-			}else{
-				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses,listofCourses,TeacherEmail,TeacherName))
+			if (listofCourses.length == 0) {
+				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses, [], TeacherEmail, TeacherName))
+			} else {
+				$("#ClassInfor").html(CreateCourseLoginForTeacher(TheClasses, listofCourses, TeacherEmail, TeacherName))
 			}
 		}
 	})
 }
-function TakeTeacher(TeacherEmail_Course_Infor){
-	var TeacherObj=JSON.parse(decodeURI(TeacherEmail_Course_Infor));
+
+function TakeTeacher(TeacherEmail_Course_Infor) {
+	var TeacherObj = JSON.parse(decodeURI(TeacherEmail_Course_Infor));
 	xAPIPost(TeacherObj);
 }
 
-function ReturnDate(Thedate){
-	d=new Date(Thedate);
-	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function ReturnDate(Thedate) {
+	d = new Date(Thedate);
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	var weekday = new Array(7);
 	weekday[0] = "Sunday";
 	weekday[1] = "Monday";
@@ -228,15 +249,15 @@ function ReturnDate(Thedate){
 	weekday[4] = "Thursday";
 	weekday[5] = "Friday";
 	weekday[6] = "Saturday";
-	var say=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+" on " +weekday[d.getDay()]+", "+ months[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();
+	var say = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + " on " + weekday[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
 	return say;
-  }
+}
 
-  function Compose(
+function Compose(
 	AnActor,
 	verbObj,
 	ResultObj,
-	activityObj){
+	activityObj) {
 	var parts = {
 		actor: AnActor,
 		verb: verbObj,
@@ -247,57 +268,77 @@ function ReturnDate(Thedate){
 }
 
 
-function xAPIPost(TeacherObj){
-	var AnActor={mbox:TeacherObj.TeacherEmail,
-				 name:decodeURI(TeacherObj.TeacherName),
-				 objectType:"Agent"};
-				
-	var verb=TheVerb;			
-	var verbObj={
-			id:ITSRoot+"ITSProfile/"+verb,
-			display:{
-				 "en":verb 
-			}
-		};
-	var ResultObj={"login":TeacherObj.login,
-	               "password":TeacherObj.password,
-				   "instruction":TeacherObj.instruction,
-	               "students":TeacherObj.students,
-				}
-	var extensionObj={};
-	var activityObj={"id":ITSRoot+"ITSProfile/"+verb};
-	extensionObj[ITSRoot+"ITSProfile/"+verb]=ResultObj;
-	var ResultObj={"response":TeacherObj.login,"extensions":extensionObj};
-	var statements=Compose(AnActor,
-							verbObj,
-							ResultObj,
-							activityObj);
+function xAPIPost(TeacherObj) {
+	var AnActor = {
+		mbox: TeacherObj.TeacherEmail,
+		name: decodeURI(TeacherObj.TeacherName),
+		objectType: "Agent"
+	};
+
+	var verb = TheVerb;
+	var verbObj = {
+		id: ITSRoot + "ITSProfile/" + verb,
+		display: {
+			"en": verb
+		}
+	};
+	var ResultObj = {
+		"login": TeacherObj.login,
+		"password": TeacherObj.password,
+		"instruction": TeacherObj.instruction,
+		"students": TeacherObj.students,
+	}
+	var extensionObj = {};
+	var activityObj = {
+		"id": ITSRoot + "ITSProfile/" + verb
+	};
+	extensionObj[ITSRoot + "ITSProfile/" + verb] = ResultObj;
+	var ResultObj = {
+		"response": TeacherObj.login,
+		"extensions": extensionObj
+	};
+	var statements = Compose(AnActor,
+		verbObj,
+		ResultObj,
+		activityObj);
 	console.log(JSON.stringify(statements))
-	ADL.XAPIWrapper.sendStatement(statements,ConfirmationFromLRS);
+	ADL.XAPIWrapper.sendStatement(statements, ConfirmationFromLRS);
 }
 
-function getTeacherInfor(login){	
-	var thesetting=TheLRStheSetting;
-	var match={"statement.verb.id":"https://www.autotutor.org/ITSProfile/Assigned",
-	           "statement.result.response":login};
-	var project={"Assigned":"$statement.result.extensions.https://www.autotutor.org/ITSProfile/Assigned"}
-	var data=[
-			{"$match":match},
-			{"$sort":{"statement.timestamp":-1}},
-			{"$limit":1},
-			{"$project":project}
-		];
-	thesetting.data=JSON.stringify(data);
+function getTeacherInfor(login) {
+	var thesetting = TheLRStheSetting;
+	var match = {
+		"statement.verb.id": "https://www.autotutor.org/ITSProfile/Assigned",
+		"statement.result.response": login
+	};
+	var project = {
+		"Assigned": "$statement.result.extensions.https://www.autotutor.org/ITSProfile/Assigned"
+	}
+	var data = [{
+			"$match": match
+		},
+		{
+			"$sort": {
+				"statement.timestamp": -1
+			}
+		},
+		{
+			"$limit": 1
+		},
+		{
+			"$project": project
+		}
+	];
+	thesetting.data = JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		if (response.length==0){
-		}else{
-			var StudentURL=response[0].Assigned.students;
-			window.open(StudentURL,"_self");
+		if (response.length == 0) {} else {
+			var StudentURL = response[0].Assigned.students;
+			window.open(StudentURL, "_self");
 			return;
 			$("#signupinfor").show();
 
-			var html="";
-			html=html+"<a href='"+response[0].Assigned.students+"'>Check your students</a>"
+			var html = "";
+			html = html + "<a href='" + response[0].Assigned.students + "'>Check your students</a>"
 			$("#signupinfor").html(html);
 		}
 	})
@@ -310,54 +351,78 @@ var ConfirmationFromLRS = function (resp, thing) {
 	if (resp.status >= 400) {
 		spanclass = "text-danger";
 		text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
-		for ( var res in thing.results ) {
+		for (var res in thing.results) {
 			text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
-			for ( var err in thing.results[res].errors ) {
+			for (var err in thing.results[res].errors) {
 				text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
 				text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
 			}
 		}
 	} else {
-		if ( resp.responseText ){
-			text = "LRS "+TheLRSURL+ "Successfully sent " + resp.responseText;
-			sendEmail(TheEmail,"Welcome to ARC!",TheEmailMessage);
+		if (resp.responseText) {
+			text = "LRS " + TheLRSURL + "Successfully sent " + resp.responseText;
+			sendEmail(TheEmail, "Welcome to ARC!", TheEmailMessage);
 		} else
-			text = thing+" "+EXPID;
+			text = thing + " " + EXPID;
 	}
 };
 
 function validateEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
+	var re = /\S+@\S+\.\S+/;
+	return re.test(email);
+}
 
-function submitInfo(){
-	TheEmail=$("#TheEmail").val();
-	TheFullName=$("#TheFullName").val();
-	if (validateEmail(TheEmail)){
-	FindTeacher("mailto:"+TheEmail,TheFullName);
-	$("#AskQuestion").hide();
-	$("#ClassInfor").show();	
-	}else{
+function submitInfo() {
+	TheEmail = $("#TheEmail").val();
+	TheFullName = $("#TheFullName").val();
+	if (validateEmail(TheEmail)) {
+		FindTeacher("mailto:" + TheEmail, TheFullName);
+		$("#AskQuestion").hide();
+		$("#ClassInfor").show();
+	} else {
 		alert("Need an email");
 	}
 }
 
-function sendEmail(email,subject,body) {
+function sendEmail(email, subject, body) {
 	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "read.autotutor@gmail.com",
-	Password : "csal2020",
-	To : email,
-	From : "read.autotutor@gmail.com",
-	Subject : subject,
-	Body : body,
+		Host: "smtp.gmail.com",
+		Username: "read.autotutor@gmail.com",
+		Password: "csal2020",
+		To: email,
+		From: "read.autotutor@gmail.com",
+		Subject: subject,
+		Body: body,
 	}).then(
-		message => $("#msg").html("    A confirmation email is sent to <b> "+email+" </b>. Should you have any questions, contact <b> read.autotutor@gmail.com </b>")
+		message => $("#msg").html("    A confirmation email is sent to <b> " + email + " </b>. Should you have any questions, contact <b> read.autotutor@gmail.com </b>")
 	);
 }
 
 
-function getClassInfor(teacherID,classID){
+function getClassInfor(teacherID, classID) {
 
+}
+
+function GetStudents(json) {
+	var Theclass = json.filter((item) => {
+		return item.course1 == classID
+	});
+	html = "";
+	html = html + "<table width='60%' align='center' id='TheScoreTable'>";
+	html = html + "<tr>";
+	html = html + "<th >Login username</th>";
+	html = html + "<th >login Password</th>";
+	html = html + "</tr>";
+	for (var i = 0; i < Theclass.length; i++) {
+		html = html + "<tr>";
+		html = html + "<td>";
+		html = html + Theclass[i].username;
+		html = html + "</td>";
+		html = html + "<td>";
+		html = html + Theclass[i].password;
+		html = html + "</td>";
+		html = html + "</tr>";
+	}
+	html = html + "</table>";
+	$("#studentsInfor").html(html);
 }
