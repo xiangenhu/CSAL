@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSAL Web Application</title>
+
+
+    <script src="https://tools.autotutor.org/author/editor/jquery.min.js" type="text/javascript"></script>
+    <script src="https://tools.autotutor.org/author/editor/jquery-ui.js" type="text/javascript"></script>
+
+
+
+    <script src="../../js/xAPIPosting/xapiwrapper.min.js"></script>
+
+    <link href="https://tools.autotutor.org/author/editor/themes/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://tools.autotutor.org/author/editor/themes/editor.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/TheStyle.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../js/def.js"></script>
+
+    <script src="../smtp.js"></script>
+    <script src="../GetClass.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            var teacherID = qs("teacherlogin", "");
+            var classID = qs("classID", "")
+            if ((teacherID != "1") && (classID != "1")) {
+                $("#ClassInforPanel").show();
+                $("#GeneralMsg").hide();
+                getClassInfor(teacherID, classID);
+            } else {
+                $("#GeneralMsg").show();
+                $("#ClassInforPanel").hide();
+            }
+        });
+    </script>
+</body>
+<div id="ClassInforPanel">
+    <table height="100%" width="100%">
+        <tr>
+            <td>
+                <ul>
+                    <li>View Student roster <span id="studentInfo">View Students</span> </li>
+                    <li>Check class progress <span id="ProgressView">Progress Report</span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="GeneralMsg">Only identified Teachers can see this.</div>
+
+</html>

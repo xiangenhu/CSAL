@@ -356,3 +356,8 @@ function sendEmail(email,subject,body) {
 		message => $("#msg").html("    A confirmation email is sent to <b> "+email+" </b>. Should you have any questions, contact <b> read.autotutor@gmail.com </b>")
 	);
 }
+
+
+function getClassInfor(teacherID,classID){
+
+}

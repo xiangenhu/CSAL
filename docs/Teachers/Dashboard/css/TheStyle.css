@@ -113,3 +113,82 @@ input[type=radio] {
     width: 1em;
     height: 1em;
 }
+
+	
+button{
+    color: blue;
+}	
+#popupWinOld{
+    display: none;
+    position:absolute;
+    bottom:0px;
+    top:100px;
+    right:0px;
+    left:0px;
+    z-index: 1200;
+}
+#popupWin{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.lessonDescription{
+    font-style: italic;
+    color:rgb(0, 0, 0);
+}
+.LessonTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(23, 8, 228);
+}
+
+.numbers{
+    font-style: italic;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+#AskQuestion{
+    position:absolute;
+    width:400px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin-left:-200px;   /* negative half of width above */
+    margin-top:-150px;   /* negative half of height above */
+}
+#ClassInforPanel{
+    position:absolute;
+    display: none;
+    width:500px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin-left:-250px;   /* negative half of width above */
+    margin-top:-150px;   /* negative half of height above */
+    
+    background-color: #7ee6e0; 
+}
+#GeneralMsg{
+    position:absolute;
+    display: none;
+    width:500px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin-left:-250px;   /* negative half of width above */
+    margin-top:-150px;   /* negative half of height above */
+    
+    background-color: #85eccd; 
+}
+#msg{
+    position:absolute;
+    display: block;
+    width:100%;
+    bottom:10px;
+
+}

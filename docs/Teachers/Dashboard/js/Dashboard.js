@@ -542,4 +542,3 @@ function OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb){
         }
     }
 }
-
