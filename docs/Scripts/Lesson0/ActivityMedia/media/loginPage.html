@@ -23,8 +23,7 @@
             $("#submit").click(function() {
                 if (isLocked == false) {
                     $("#fadeBody").fadeOut(800, function() {
-                       
-                        parent.GetWorldEvent("Correct");
+                        parent.GetWorldEvent("Correct"+"_TheLearnerFirstName_"+$("#firstName").val());
                     });
                     Lock();
                 }

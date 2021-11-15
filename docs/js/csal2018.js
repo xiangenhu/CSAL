@@ -1402,7 +1402,26 @@ function askClickNextButton() {
 function getAgentMessage(msg) {
   startLesson();
 }
+
+function CaptureFirstName(Msg){
+  if (Msg.indexOf("TheLearnerFirstName")>-1){
+      var NamePasredFromMsg=Msg.split("_TheLearnerFirstName_")[1];
+      //
+      LearnerID.name=NamePasredFromMsg;
+      var actor=LearnerID;
+      var verb={id:xAPIVerbBase+"changeName",display:{"en-US":"changeName"}};
+      var object={id:xAPIVerbBase+"changeName"}
+      var aStatement={actor:actor,verb:verb,object:object};
+      ADL.XAPIWrapper.sendStatement(aStatement);
+      console.log("NameChanged")
+      console.log(aStatement)
+      return Msg.split("_TheLearnerFirstName_")[0];
+  }
+  return Msg;
+}
+
 function GetWorldEvent(msg) {
+  msg=CaptureFirstName(msg);
   if (VerboseMode) {
     PostWorldEvent("CSALEvent", msg);
   }
