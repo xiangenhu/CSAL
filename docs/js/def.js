@@ -25,6 +25,25 @@ var LessonInforPointer =
 "2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT";
 
 
+var realName="";
+
+
+var TheLRStheSetting={
+  "async": true,
+  "crossDomain": true,
+  "url": AggregateURLData,
+  "method": "POST",
+  "headers": {
+  "authorization": "Basic " + TheDataAuthory,
+  "content-type": "application/json",
+  "cache-control": "no-cache",
+  "x-experience-api-version": "1.0.3",
+  "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
+  },
+  "processData": false,
+  "data":{}
+}
+
 
 var C1 = qs("C1", "Angela");
 var CR1 = C1;

@@ -5,7 +5,6 @@ var StudentList=[];
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
-var realName="";
 
 
 function OpenPopUpDetails(header,footer,bodytext,targetwin){
@@ -45,22 +44,6 @@ function OpenPopUpDetails(header,footer,bodytext,targetwin){
 
 
 
-TheLRStheSetting={
-    "async": true,
-    "crossDomain": true,
-    "url": AggregateURLData,
-    "method": "POST",
-    "headers": {
-    "authorization": "Basic " + TheDataAuthory,
-    "content-type": "application/json",
-    "cache-control": "no-cache",
-    "x-experience-api-version": "1.0.3",
-    "postman-token": "f2acffd3-e37a-3578-cea0-995aa07124a8"
-    },
-    "processData": false,
-    "data":{}
-}
-
 var TheScore={
 	          "Hard":{"success":0,"failure":0},
               "Medium":{"success":0,"failure":0},
@@ -83,27 +66,6 @@ function studentsReport(student,verb){
 	})
 }
 
-function GetStudentName(student){
-	var thesetting=TheLRStheSetting;
-	var verb="changeName";
-	var match={"statement.actor.mbox":+student,"statement.verb.id":xAPIVerbBase+verb};
-	var project={"name":"$statement.actor.name"}
-	var data=[
-	{"$match":match},
-	{"$sort":{"statement.timestamp":-1}},
-	{"$limit":1},
-	{"$project":project}
-	];
-	thesetting.data=JSON.stringify(data);
-	$.ajax(thesetting).done(function (response) {
-		if (response.length==0){
-			realName="";
-		}else{
-			console.log(response[0].name);
-			realName=response[0].name;
-		}
-	})
-}
 
 function GetStudents(classID,student){
     var thesetting=TheLRStheSetting;

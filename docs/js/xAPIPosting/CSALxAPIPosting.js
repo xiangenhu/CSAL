@@ -79,6 +79,29 @@ var TheSchool = qs("school", "https://csal.autotutor.org");
 // var SKOTitle=decodeURIComponent(qs("LessonName","alesson")+qs("ver","_github"));
 var SKOTitle = decodeURIComponent(qs("LessonName", "alesson"));
 
+
+function GetStudentName(student){
+	var thesetting=TheLRStheSetting;
+	var verb="changeName";
+	var match={"statement.actor.mbox":+student,"statement.verb.id":xAPIVerbBase+verb};
+	var project={"name":"$statement.actor.name"}
+	var data=[
+	{"$match":match},
+	{"$sort":{"statement.timestamp":-1}},
+	{"$limit":1},
+	{"$project":project}
+	];
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){
+			realName="";
+		}else{
+			console.log(response[0].name);
+			realName=response[0].name;
+		}
+	})
+}
+
 function GetEmail() {
   if (GoogleLogin) {
     return userEmail;
