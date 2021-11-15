@@ -83,7 +83,7 @@ var SKOTitle = decodeURIComponent(qs("LessonName", "alesson"));
 function GetStudentName(student){
 	var thesetting=TheLRStheSetting;
 	var verb="changeName";
-	var match={"statement.actor.mbox":+"mailto:"+student,"statement.verb.id":xAPIVerbBase+verb};
+	var match={"statement.actor.mbox":"mailto:"+student,"statement.verb.id":xAPIVerbBase+verb};
 	var project={"name":"$statement.actor.name"}
 	var data=[
 	{"$match":match},
