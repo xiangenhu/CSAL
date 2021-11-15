@@ -1722,6 +1722,15 @@ function InvokeScript(funcName, funcParam) {
   } else {
     document.getElementById("mainFrame").contentWindow[funcName]();
   }
+  if (VerboseMode){
+    try {
+      var src= document.getElementById("mainFrame").contentWindow.location.href;
+      var scriptObj={funcName:funcName,funcParam:funcParam,target:src};
+      PostWorldEvent("InvokeScript",JSON.stringify(scriptObj))
+    } catch (error) {
+      
+    }
+  }
 }
 
 function startRecover(recoveryActions, lessonID, PresentationHistory) {
