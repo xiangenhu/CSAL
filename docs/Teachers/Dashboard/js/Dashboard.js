@@ -253,14 +253,15 @@ function CreateLessonByStudentMatrix() {
               var ThePopupInfor="";
               ThePopupInfor=ThePopupInfor+ "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
               ThePopupInfor=ThePopupInfor + LastPerformance;
-              ThePopupInfor=ThePopupInfor + Links;
-              ThePopupInfor=ThePopupInfor + "<li>Last  Access: " + ReturnDate(TheRealResponse[k].End) +" </li>";
+       //       ThePopupInfor=ThePopupInfor + Links;
+              ThePopupInfor=ThePopupInfor + "<li>Performance Overview</li><ul>";
+              ThePopupInfor=ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse[k].End) +" </li>";
               ThePopupInfor=ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse[k].Start) + " </li>";
               ThePopupInfor=ThePopupInfor + "<li>Answered: " + TheRealResponse[k].sum + " Question(s)</li>";
               ThePopupInfor=ThePopupInfor + "<li>Maximum Score " + TheRealResponse[k].MaxScore.toFixed(2) + " </li>"; 
               ThePopupInfor=ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
               ThePopupInfor=ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) +  " </li>";
-              ThePopupInfor=ThePopupInfor +"</ul>";
+              ThePopupInfor=ThePopupInfor +"</ul></ul>";
               theValue = theValue +ThePopupInfor;
       //        theValue ="<a href='#'>BBB</a>";
             } else {
