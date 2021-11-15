@@ -1403,6 +1403,23 @@ function getAgentMessage(msg) {
   startLesson();
 }
 
+function TrackARCACEAction(TheJSON){
+  var AnActor = TheLessonIDforXAPI;
+  var verb = "ACEAction";
+  var verbObj = {
+    id: xAPIVerbBase + verb,
+    display: {
+      en: verb,
+    },
+  };
+  var responseObj={text:TheJSON.text,event:TheJSON.event}
+  var activityObj = LearnerID;
+  var Extdata = TheJSON;
+  var ResultObj = { response: JSON.stringify(responseObj) };
+  var statements = Compose(AnActor, verbObj, ResultObj, activityObj, Extdata);
+  ADL.XAPIWrapper.sendStatement(statements);
+}
+
 function CaptureFirstName(Msg){
   if (Msg.indexOf("TheLearnerFirstName")>-1){
       var NamePasredFromMsg=Msg.split("_TheLearnerFirstName_")[1];

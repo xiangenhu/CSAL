@@ -114,6 +114,7 @@ function Put(acePutjson) {
   latency.start = new Date();
   PostingHistory.push(acePutjson.Event);
   console.log(PostingHistory);
+  if (VerboseMode) {TrackARCACEAction(acePutjson)};
   var getUrl = $.ajax({
     type: method,
     url: aceurl,
