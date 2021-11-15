@@ -5,7 +5,7 @@ var StudentList=[];
 var TheLessonPages=[];
 var TheLearnerResponses=[];
 var ThestudentID=decodeURIComponent(qs("sid",""));
-
+var realName="";
 
 
 function OpenPopUpDetails(header,footer,bodytext,targetwin){
@@ -80,6 +80,28 @@ function studentsReport(student,verb){
 	thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
 		
+	})
+}
+
+function GetStudentName(student){
+	var thesetting=TheLRStheSetting;
+	var verb="changeName";
+	var match={"statement.actor.mbox":+student,"statement.verb.id":xAPIVerbBase+verb};
+	var project={"name":"$statement.actor.name"}
+	var data=[
+	{"$match":match},
+	{"$sort":{"statement.timestamp":-1}},
+	{"$limit":1},
+	{"$project":project}
+	];
+	thesetting.data=JSON.stringify(data);
+	$.ajax(thesetting).done(function (response) {
+		if (response.length==0){
+			realName="";
+		}else{
+			console.log(response[0].name);
+			realName=response[0].name;
+		}
 	})
 }
 

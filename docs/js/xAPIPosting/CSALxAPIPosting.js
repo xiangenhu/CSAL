@@ -89,12 +89,16 @@ function GetEmail() {
     if (TheEmail.indexOf("localhost") > -1) {
       TheEmail = "guest@autotutor.org";
     }
+    GetStudentName(TheEmail)
     return TheEmail;
   }
 }
 var user = GetEmail();
 
 function GetFullName() {
+  if (realName!=""){
+    return realName;
+  }
   if (GoogleLogin) {
     return Theauthorname;
   } else {
