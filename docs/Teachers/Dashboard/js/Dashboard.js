@@ -182,7 +182,7 @@ function CreateLessonByStudentMatrix() {
       console.log(Learners);
       // create table
       var html = "<table align='center' class='ReportTable'>";
-      html = html + "<tr><th></th>";
+      html = html + "<tr><td><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
       for (var j = 0; j < Learners.length; j++) {
         html =
           html +
@@ -284,6 +284,9 @@ function CreateLessonByStudentMatrix() {
   });
 }
 
+function OpenHelpForReprt(){
+  window.open("https://docs.google.com/presentation/d/e/2PACX-1vQmiAzgVmYO2jLiaDEmNwxUVHORUaaEhbrilujeY3iIlo0NZ92Cix4HSyOnD4iGtx5RUt-kFwPnYaiW/pub?start=false&loop=false&delayms=3000","_new")
+}
 function GetLastperformance(LessonAndUser) {
   var LessonLearner=JSON.parse(decodeURI(LessonAndUser));
   console.log(LessonLearner)
