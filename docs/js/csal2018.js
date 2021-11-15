@@ -1408,6 +1408,7 @@ function CaptureFirstName(Msg){
       var NamePasredFromMsg=Msg.split("_TheLearnerFirstName_")[1];
       //
       LearnerID.name=NamePasredFromMsg;
+      realName=NamePasredFromMsg;
       var actor=LearnerID;
       var verb={id:xAPIVerbBase+"changeName",display:{"en-US":"changeName"}};
       var object={id:xAPIVerbBase+"changeName"}
