@@ -1412,7 +1412,7 @@ function TrackARCACEAction(TheJSON){
       en: verb,
     },
   };
-  var responseObj={text:TheJSON.text,event:TheJSON.event}
+  var responseObj={text:TheJSON.Text,event:TheJSON.Event}
   var activityObj = LearnerID;
   var Extdata = TheJSON;
   var ResultObj = { response: JSON.stringify(responseObj) };
