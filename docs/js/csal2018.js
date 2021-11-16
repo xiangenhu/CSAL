@@ -1414,9 +1414,9 @@ function TrackARCACEAction(TheJSON){
   };
   var responseObj={text:TheJSON.Text,event:TheJSON.Event}
   var activityObj = LearnerID;
-  var Extdata = TheJSON;
+  var Extdata = {extensions:responseObj};
   var ResultObj = { response: JSON.stringify(responseObj) };
-  var statements = Compose(AnActor, verbObj, ResultObj, activityObj,TheJSON);
+  var statements = Compose(AnActor, verbObj, ResultObj, activityObj,Extdata);
   ADL.XAPIWrapper.sendStatement(statements);
 }
 
