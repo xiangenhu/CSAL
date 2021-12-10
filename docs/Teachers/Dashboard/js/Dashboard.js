@@ -285,20 +285,8 @@ function CreateLessonByStudentMatrix() {
                 "\")'>Last Performance</button></li>";
               //   console.log(LastPerformance)
               WithAnswer = true;
-              var cellID = "cell__" + i.toString() + "__" + j.toString();
-              /*
-              var ThePopupInfor = "";
-              ThePopupInfor = ThePopupInfor + "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
-              ThePopupInfor = ThePopupInfor + LastPerformance;
-              ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
-              ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse[k].End) + " </li>";
-              ThePopupInfor = ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse[k].Start) + " </li>";
-              ThePopupInfor = ThePopupInfor + "<li>Answered: " + TheRealResponse[k].sum + " Question(s)</li>";
-              ThePopupInfor = ThePopupInfor + "<li>Maximum Score " + TheRealResponse[k].MaxScore.toFixed(2) + " </li>";
-              ThePopupInfor = ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
-              ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) + " </li>";
-              ThePopupInfor = ThePopupInfor + "</ul></ul>";
-              */
+              var cellID;
+             
               var performanceInfo = {
                 Learner: Thedetails.learner,
                 Lesson: JSON.parse(Lessons[i]).title,
@@ -309,19 +297,15 @@ function CreateLessonByStudentMatrix() {
               var EncodedStr = encodeURI(JSON.stringify(performanceInfo));
               cellID = EncodedStr;
               if (TheRealResponse[k].sum >= LessonInfor.total) {
-
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
                   theValue =
-                    "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: green' >&#10003;</button>";
+                    "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: green' >&#10003;</button>";
                 } else {
-                  theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: red' >&#10008;</button>";
+                  theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: red' >&#10008;</button>";
                 }
               } else {
-                theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: grey' >&#x27A4;</button>";
+                theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: grey' >&#x27A4;</button>";
               }
-
-
-              theValue = theValue ;
             } else {}
           }
           if (WithAnswer) {
