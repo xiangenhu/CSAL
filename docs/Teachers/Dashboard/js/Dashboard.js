@@ -66,10 +66,10 @@ function DisplayLRSLog() {
 function GetLessonInformation(LessonID) {
   var LessonIfo = {};
   for (var i = 0; i < TheLessionsInfo.length; i++) {
-    if (LessonID.indexOf(TheLessionsInfo[i][1]) > 0) {
-      LessonIfo.total = parseInt(TheLessionsInfo[i][4]);
-      LessonIfo.passing = parseFloat(TheLessionsInfo[i][5]);
-      LessonIfo.lessonTitle = TheLessionsInfo[i][0];
+    if (LessonID.indexOf(TheLessionsInfo[i].GUID) > 0) {
+      LessonIfo.total = parseInt(TheLessionsInfo[i].ETotalNumber);
+      LessonIfo.passing = parseFloat(TheLessionsInfo[i].FCriteria);
+      LessonIfo.lessonTitle = TheLessionsInfo[i].ALessonTitle;
       return LessonIfo;
     }
   }
@@ -181,18 +181,18 @@ function CreateLessonByStudentMatrix() {
 
  //     console.log(TheLessionsInfo);
       Lessons = [];
-
+      TheLessionsInfo.sort(SortLesson);
       for (var i = 0; i < TheLessionsInfo.length; i++) {
         var Leeson = {
-          guid: "mailto:" + TheLessionsInfo[i][1] + "@csal.autotutor.org",
-          title: TheLessionsInfo[i][0],
-          Section: TheLessionsInfo[i][6],
-          SectionOrder: TheLessionsInfo[i][7]
+          guid: "mailto:" + TheLessionsInfo[i].GUID + "@csal.autotutor.org",
+          title: TheLessionsInfo[i].ALessonTitle,
+          Section: TheLessionsInfo[i].Category,
+          SectionOrder: TheLessionsInfo[i].Section
         };
         Lessons.push(JSON.stringify(Leeson));
       }
 
-      Lessons.sort(SortLesson);
+     
 
 //      console.log(Learners);
 //      console.log(Theclass);
@@ -248,7 +248,7 @@ function CreateLessonByStudentMatrix() {
           if (Therow == "") {
             if (Thedetails.lesson == JSON.parse(Lessons[i]).guid) {
               var LessonInfor = GetLessonInformation(Thedetails.lesson);
-              Therow = LessonInfor.lessonTitle;
+              Therow = LessonInfor.ALessonTitle;
             }
           } else {}
         }
@@ -328,10 +328,10 @@ function CreateLessonByStudentMatrix() {
 }
 
 function SortLesson(a, b) {
-  if (a.SectionOrder > b.SectionOrder) {
+  if (a.Section < b.Section) {
     return -1;
   }
-  if (a.SectionOrder < b.SectionOrder) {
+  if (a.Section > b.Section) {
     return 1;
   }
   return 0;
@@ -408,13 +408,22 @@ function GetTheRow(jsonData) {
 
 function GetLessonsInfo(json) {
   if (json != "") {
-    TheLessionsInfo = [];
+    TheLessionsInfo = json;
+    TheLessionsInfo=TheLessionsInfo.filter((item)=>{
+      return item.GUID!="GUID";
+    })
+    DashBoardCheckStudentStatus();
+    return;
+
     var TheJSONObj = json;
     var i;
     for (i = 1; i < TheJSONObj.length; i++) {
       var TheRowInfo = TheJSONObj[i];
       TheLessionsInfo.push(GetTheRow(TheRowInfo));
     }
+    TheLessionsInfo=TheLessionsInfo.filter((item)=>{
+      return item.GUID!="GUID";
+    })
     DashBoardCheckStudentStatus();
   }
 }
