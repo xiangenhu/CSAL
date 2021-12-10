@@ -116,7 +116,7 @@ function GetStudents(classID,student){
 			TheLessions=TheLessions.filter((item)=>{
 				return item.Section!="Section";
 			})
-			TheLessions.sort(SortLesson);
+		//	TheLessions.sort(SortLesson);
 			CreateTable(TheLessions,StudentList)
 		}
 	});
