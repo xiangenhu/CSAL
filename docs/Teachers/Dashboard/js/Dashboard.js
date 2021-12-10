@@ -176,10 +176,10 @@ function CreateLessonByStudentMatrix() {
         }
       }
 
-      console.log(Lessons);
+ //     console.log(Lessons);
 
 
-      console.log(TheLessionsInfo);
+ //     console.log(TheLessionsInfo);
       Lessons = [];
 
       for (var i = 0; i < TheLessionsInfo.length; i++) {
@@ -194,9 +194,9 @@ function CreateLessonByStudentMatrix() {
 
       Lessons.sort(SortLesson);
 
-      console.log(Learners);
-      console.log(Theclass);
-
+//      console.log(Learners);
+//      console.log(Theclass);
+      if (classID!="Master"){
       Learners=[]
       for (var j=0; j<Theclass.length;j++){
         var LearnerObj={email:"mailto:"+Theclass[j].email,
@@ -204,6 +204,7 @@ function CreateLessonByStudentMatrix() {
         Learners.push(JSON.stringify(LearnerObj));
       }
       console.log(Learners);
+    }
       // filterLearner
       var TheRealLearner = [];
 
@@ -228,8 +229,8 @@ function CreateLessonByStudentMatrix() {
       for (var j = 0; j < Learners.length; j++) {
         html =
           html +
-          "<th width='10' wramp>" +
-          JSON.parse(Learners[j]).email.split("student")[1].split("@")[0]
+          "<th width='30' align='center'>" +
+          JSON.parse(Learners[j]).email.split("student")[1].split("@")[0].split("").join("<br/>");
         //        JSON.parse(Learners[j]).name.split(" ")[0] +
         "</p></th>";
       }
