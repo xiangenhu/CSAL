@@ -252,10 +252,10 @@ function GetCount(ArrayStr){
 
 function DetailsS_L(Lesson_and_Student){
 	var thePassedObj=JSON.parse(decodeURI(Lesson_and_Student))
-	var LessonName=thePassedObj.LessonName;
-	var LessonID=thePassedObj.LessonID;
+	var LessonName=thePassedObj.Lesson.ALessonTitle;
+	var LessonID=thePassedObj.Lesson.GUID;
 	var Student=thePassedObj.Student;
-	var Name=thePassedObj.Name;
+	var Name=thePassedObj.Name.split(" ")[0];
 
 	var htmlbody="Detailed Interaction of  "+ Name+ " with "+LessonName ;
 	htmlbody=htmlbody+"<div id='MoreDetails'>";
@@ -296,13 +296,13 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		var TheObj={LessonName:+Lesson.ALessonTitle,
-				   LessonID:Lesson.GUID,
+		var TheObj={Lesson:Lesson,
 				   Student:Student,
 				   Name:Name}
         var LessonPassVar=encodeURI(JSON.stringify(TheObj))
-		var detailInformationLink="<button onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
-		var scoreFiled="score_"+i.toString()+"_"+j.toString();
+		var detailInformationLink="<button class='btn' style='background-color: grey' onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
+		var failedBtn= "<button class='btn' class='btn' style='background-color: red' onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
+		var scoreFiled="Ascore_"+i.toString()+"_"+j.toString();
 		var TheLessonRowID="Row_"+i.toString();
 		if (response.length==0){ 
 			$("#"+scoreFiled).html(" ");
@@ -316,16 +316,17 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 			console.log(AllVerbs);
 			$("#"+TheLessonRowID).show();
 			if (AllVerbs.includes("completed")){
-				$("#"+scoreFiled).html("passed "+detailInformationLink);
+				var BtnStr="<span class='btn' style='background-color: green' >&#10003;</span>Passed"
+				$("#"+scoreFiled).html(BtnStr);
 				return;
 			}
 			if (AllVerbs.includes("failed")){
-				$("#"+scoreFiled).html("failed "+detailInformationLink);
+				$("#"+scoreFiled).html(+failedBtn+"failed");
 				return;
 			}
 			
 			if (AllVerbs.includes("action")){
-				$("#"+scoreFiled).html("in progress "+detailInformationLink);
+				$("#"+scoreFiled).html(detailInformationLink+"in progress");
 				return;
 			}
 			if (AllVerbs.includes("start")){
@@ -693,7 +694,7 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<tr><th>Section </th>";
 	html=html+"<th>The Lessons </th>";
 	html=html+"<th>Log </th>";
-	html=html+"<th>Action </th>";
+	html=html+"<th>Status</th>";
 	
 	html=html+"</tr>";
 	html=html+"</thead>";
@@ -727,6 +728,7 @@ function CreateTable(LessonList,StudentList){
 				console.log(scoreFiled);
 				if (ThestudentID!=""){
 					GetStudentRecord(StudentList[j].mbox,LessonList[i].GUID,scoreFiled);
+					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 				}else{
 					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 				}
@@ -859,6 +861,8 @@ function GetStudentRecord(student,CourseGUID,target){
 		{"$match":{"statement.actor.mbox":student,
 				"statement.object.mbox":"mailto:"+CourseGUID+"@csal.autotutor.org"}
 			},
+			
+		    {"$sort":{"statement.timestamp":-1}},
 			{"$group":
 			         {"_id":"$statement.verb.id","sum":{"$sum":1},
                       "LastTime":{"$max":"$statement.timestamp"},
@@ -914,7 +918,7 @@ $.ajax(setting).done(function (response){
 		$("#"+target).html(html);
 		var LinkObj={"student":student,"guid":CourseGUID}
 		var Link="<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>"+buttonface+"</button></p>";
-		$("#A"+target).html(Link)
+	//	$("#A"+target).html(Link)
 	}
 	});
 }
@@ -1020,15 +1024,18 @@ function GetRealScore(student,CourseGUID,target){
 }
 
 
-function LessonStudentDetailsNew(TheLessonID,Student,Target){
+function LessonStudentDetailsNew(TheLessonID,TheLessonandStudent,Target){
+	
+
 	var setting=TheLRStheSetting;
-	var thePassedObj=JSON.parse(decodeURI(Student))
-	var LessonName=thePassedObj.LessonName;
-	var LessonID=thePassedObj.LessonID;
-	var TheStudent=thePassedObj.Student;
+	var thePassedObj=JSON.parse(decodeURI(TheLessonandStudent))
+	var LessonName=thePassedObj.Lesson.ALessonTitle;
+	var LessonID=thePassedObj.Lesson.GUID;
 	var Name=thePassedObj.Name;
+	var TheStudent=thePassedObj.Student;
+	var Name=thePassedObj.Name.split(" ")[0];
 	var QueryObj=[
-					{"$match":{"statement.object.mbox":"mailto:"+TheLessonID+"@csal.autotutor.org",
+					{"$match":{"statement.object.mbox":"mailto:"+LessonID+"@csal.autotutor.org",
 					           "statement.actor.mbox":TheStudent,
 					           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
 					{"$sort":{"statement.timestamp":-1}},
