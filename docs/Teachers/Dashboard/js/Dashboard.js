@@ -181,7 +181,7 @@ function CreateLessonByStudentMatrix() {
 
  //     console.log(TheLessionsInfo);
       Lessons = [];
-      TheLessionsInfo.sort(SortLesson);
+ //     TheLessionsInfo.sort(SortLesson);
       for (var i = 0; i < TheLessionsInfo.length; i++) {
         var Leeson = {
           guid: "mailto:" + TheLessionsInfo[i].GUID + "@csal.autotutor.org",
@@ -328,10 +328,10 @@ function CreateLessonByStudentMatrix() {
 }
 
 function SortLesson(a, b) {
-  if (a.Section < b.Section) {
+  if (a.NewOrder < b.NewOrder) {
     return -1;
   }
-  if (a.Section > b.Section) {
+  if (a.NewOrder > b.NewOrder) {
     return 1;
   }
   return 0;
