@@ -692,7 +692,7 @@ function CreateTable(LessonList,StudentList){
 		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
 		var TheLessonRowID="Row_"+i.toString();
         if (ThestudentID==""){
-			html=html+"<tr id='"+TheLessonRowID+"' style='display: none;'> <td>"+LessonList[i][0];
+			html=html+"<tr id='"+TheLessonRowID+"'> <td>"+LessonList[i][0];
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
 			html=html+"<tr id='"+TheLessonRowID+"'> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
@@ -720,7 +720,6 @@ function CreateTable(LessonList,StudentList){
 				console.log(scoreFiled);
 				if (ThestudentID!=""){
 					GetStudentRecord(StudentList[j].mbox,LessonList[i][1],scoreFiled);
-//					GetRealScore(StudentList[j].mbox,LessonList[i][1],scoreFiled);
 				}else{
 					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 				}
@@ -863,9 +862,9 @@ function GetStudentRecord(student,CourseGUID,target){
 setting.data=JSON.stringify(QueryObj);
 $.ajax(setting).done(function (response){
 	if (response.length==0){
-		$("#"+target).html("");
-		var rowID=target.split("score").join("Row").split("_0").join("");
-		$("#"+rowID).hide();
+        var LinkObj={"student":student,"guid":CourseGUID}
+		var html="<p align='right'>Not yet started</p>";
+		$("#"+target).html(html)
 		return;
 	}else{
 		var last;
