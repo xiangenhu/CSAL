@@ -203,7 +203,7 @@ function CreateLessonByStudentMatrix() {
                         name:Theclass[j].firstname+ " "+ Theclass[j].lastname};
         Learners.push(JSON.stringify(LearnerObj));
       }
-      console.log(Learners);
+//      console.log(Learners);
     }
       // filterLearner
       var TheRealLearner = [];
