@@ -958,7 +958,7 @@ function GetRealScore(student,CourseGUID,target){
 			}
 			var html="<ul>";
 			html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(response[0].time)+"</span>";
-			html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(response[response.length-1].time)+"</span>";
+			html=html+"<li>First time on this lesson : <span class='numbers'>"+ReturnDate(response[response.length-1].time)+"</span>";
 //			html="<li>The time of your recent access to this lesson: "+ReturnDate(response[0].time);
 //			html=html+"<li>The first time you started this lesson : "+ReturnDate(response[response.length-1].time);
 //			html=html+"<li>How did you answer questions in this lesson?<ul>";
