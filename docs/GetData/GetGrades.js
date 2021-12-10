@@ -706,8 +706,8 @@ function CreateTable(LessonList,StudentList){
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
 			html=html+"<tr id='"+TheLessonRowID+"'>";
-			html=html+"<td><span class='LessonTitle'>"+LessonList[i].Section+"</span></td>";
-			html=html+"<td width='300'><span class='LessonTitle'>"+LessonList[i].ALessonTitle+"</span></td>";
+			html=html+"<th>"+LessonList[i].Section+"</span></th>";
+			html=html+"<th nowrap>"+LessonList[i].ALessonTitle+"</td>";
 	//		html=html+"<span class='lessonDescription'> "+LessonList[i].Description+"</span>";
 			var scoreFiled="score_"+i.toString()+"_0";
 			var ActionFiled="Ascore_"+i.toString()+"_0";
