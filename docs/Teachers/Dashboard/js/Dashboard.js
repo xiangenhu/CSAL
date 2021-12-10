@@ -357,11 +357,18 @@ function togglebtn(PerformanceInfo) {
       encodeURI(JSON.stringify(ThePerformanceInfo.LRSInfor)) +
       "\")'>Last Performance</button></li>";
     //   console.log(LastPerformance)
+/*
+    var TheObj={Lesson:Lesson,
+      Student:Student,
+      Name:Name}
+    var LessonPassVar=encodeURI(JSON.stringify(TheObj))
+    var detailInformationLink="<button class='btn' style='background-color: grey' onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
+*/
 
   ThePopupInfor = ThePopupInfor + "<ul>";
   //  ThePopupInfor = ThePopupInfor + LastPerformance;
   ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
-  ThePopupInfor = ThePopupInfor + LastPerformance;
+ // ThePopupInfor = ThePopupInfor + LastPerformance;
   ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse.End) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse.Start) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>Answered: " + TheRealResponse.sum + " Question(s)</li>";
@@ -377,8 +384,48 @@ function togglebtn(PerformanceInfo) {
   var targetwin = "popupWin";
   var data = {};
   var Verb = "";
-  OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
+  
+	OpenPopUpDetails(header, footer, bodytext, targetwin);
+
+ // OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
 }
+
+
+function OpenPopUpDetails(header,footer,bodytext,targetwin){
+  //   	$("#"+targetwin).show();
+ //	    $("#popupWin").html(bodytext);
+ //		$("#popupWin").show();
+ //		return;
+         var html="";
+         html=html+'<div class="modal-content" id="PopupDialog">';
+         html=html+'<div class="modal-header">';
+         html=html+'<span id="Modalclosebtn" class="close">&times;</span>';
+         html=html+'<h2>'+header+'</h2>';
+         html=html+'</div>';
+         html=html+'<div class="modal-body" id="bodytext">';
+         html=html+bodytext;
+         html=html+'</div>';
+         html=html+'<div class="modal-footer">';
+         html=html+'<h3>'+footer+'</h3>';
+         html=html+'</div>';
+         html=html+'</div>';
+         var popup=document.getElementById(targetwin);
+         if (popup == null ) {
+             var popup=document.createElement("div");
+             popup.class="modal";
+             popup.id=targetwin;
+             $("#editor").append(popup);
+             popup.innerHTML = html;
+         }else{
+             $('#'+targetwin).html(html);
+             $('#'+targetwin).show();
+         }
+         $("#Modalclosebtn").click(function(){
+             $('#'+targetwin).hide();
+             popup.innerHTML = "";
+         });
+     }
+ 
 
 function DashBoardCheckStudentStatus() {
   CreateLessonByStudentMatrix();
