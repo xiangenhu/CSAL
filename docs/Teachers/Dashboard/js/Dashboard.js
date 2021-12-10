@@ -179,7 +179,24 @@ function CreateLessonByStudentMatrix() {
       }
 
       console.log(Lessons);
+
+
+      console.log(TheLessionsInfo);
+      Lessons=[];
+      
+      for (var i=0;i<TheLessionsInfo.length;i++){
+          var Leeson={guid:"mailto:"+TheLessionsInfo[i][1]+"@csal.autotutor.org",
+                      title:TheLessionsInfo[i][0]};
+          Lessons.push(JSON.stringify(Leeson));
+      }
+
       console.log(Learners);
+      // Add Lessons
+
+
+      // Add Learners
+
+
       // create table
       var html = "<table align='center' class='ReportTable'>";
       html = html + "<tr><td><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
@@ -191,21 +208,25 @@ function CreateLessonByStudentMatrix() {
           "</p></th>";
       }
       html = html + "</tr>";
+
       for (var i = 0; i < Lessons.length; i++) {
         html = html + "<tr>";
         var Therow = "";
 
+        html = html + "<th nowrap>" + JSON.parse(Lessons[i]).title + "</th>";
+        
         for (var k = 0; k < TheRealResponse.length; k++) {
           var Thedetails = JSON.parse(TheRealResponse[k]._id);
           if (Therow == "") {
             if (Thedetails.lesson == JSON.parse(Lessons[i]).guid) {
               var LessonInfor = GetLessonInformation(Thedetails.lesson);
               Therow = LessonInfor.lessonTitle;
-              html = html + "<th>" + Therow + "</th>";
+       //       html = html + "<th>" + Therow + "</th>";
             }
+          }else{
           }
         }
-
+        
         for (var j = 0; j < Learners.length; j++) {
           var theValue = "";
 
