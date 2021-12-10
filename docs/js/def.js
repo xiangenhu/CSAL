@@ -212,15 +212,20 @@ function AudioPlaying() {
 
 function GetLessons(json){
 	var i;
+  TheLessions=json;
+	GetStudents(classID,ThestudentID);
+  return;
 	for (i=1;i<json.length;i++){
-		var row=[json[i].LessonTitle,
+		var row=[json[i].ALessonTitle,
 					removehtml(json[i].GUID),
-					json[i].YouTube,
-					json[i].Description]
+					json[i].CMovie,
+					json[i].Description,
+					json[i].Category,
+          json[i].Section
+        ]
 	   console.log(row);
 	   TheLessions.push(row);
 	}
-	GetStudents(classID,ThestudentID);
 }
 
 function GetSpreadSheetARC(GoogleID, GoogleSheet) {

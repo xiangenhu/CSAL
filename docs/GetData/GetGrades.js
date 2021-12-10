@@ -113,10 +113,26 @@ function GetStudents(classID,student){
 				}
 			}
 			console.log(StudentList);
+			TheLessions=TheLessions.filter((item)=>{
+				return item.Section!="Section";
+			})
+			TheLessions.sort(SortLesson);
 			CreateTable(TheLessions,StudentList)
 		}
 	});
 }
+
+function SortLesson(a, b) {
+	if (a.Section < b.Section) {
+	  return -1;
+	}
+	if (a.Section > b.Section) {
+	  return 1;
+	}
+	return 0;
+  }
+  
+
 function DetailsForStudentandLesson(student,lesson){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":student,
@@ -271,7 +287,7 @@ function DetailsS_L(Lesson_and_Student){
 function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	var thesetting=TheLRStheSetting;
 	var match={"statement.actor.mbox":Student,
-	           "statement.object.mbox":"mailto:"+Lesson[1]+"@csal.autotutor.org"
+	           "statement.object.mbox":"mailto:"+Lesson.GUID+"@csal.autotutor.org"
 			};
 	var data=[
 		{"$match":match},
@@ -280,8 +296,8 @@ function GetPassFailInProgress(Lesson,Student,Name,i,j){
 	];
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
-		var TheObj={LessonName:+Lesson[0],
-				   LessonID:Lesson[1],
+		var TheObj={LessonName:+Lesson.ALessonTitle,
+				   LessonID:Lesson.GUID,
 				   Student:Student,
 				   Name:Name}
         var LessonPassVar=encodeURI(JSON.stringify(TheObj))
@@ -672,41 +688,32 @@ function CreateTable(LessonList,StudentList){
 	var j;
 	var i;
 	var html="";
-	html=html+"<table width='100%' align='center' id='TheScoreTable'>";
+	html=html+"<table width='80%' align='center' id='TheScoreTable'>";
 	html=html+"<thead class='TheHeader'>"
-	html=html+"<tr class='TheHeader'><th class='TheHeader'>The Lessons </th>";
-	for (j=0;j<StudentList.length;j++){
-		var firstname=StudentList[j].name.split(" ")[0];
-		var studentjson=JSON.stringify(StudentList[j]);
-		if (ThestudentID==""){
-		    html=html+"<th class='TheHeader'>"+firstname+"<br/><button  onclick='StudentDetails(\""+StudentList[j].name+"_&_"+StudentList[j].mbox+"\")'>?</button></th>";
-		}else{
-//			html=html+"<th class='TheHeader'>"+firstname+"</th>";
-		}
-		console.log(html)
-	}
+	html=html+"<tr><th>Section </th>";
+	html=html+"<th>The Lessons </th>";
+	html=html+"<th>Log </th>";
+	html=html+"<th>Action </th>";
+	
 	html=html+"</tr>";
 	html=html+"</thead>";
 	html=html+'<tbody style="height: 10px !important; overflow: scroll; ">';
-	for (i=0;i<LessonList.length;i++){
-		var PassingVariable=LessonList[i][0]+"__"+LessonList[i][1];
+	for (i=2;i<LessonList.length;i++){
+		var PassingVariable=LessonList[i].ALessonTitle+"__"+LessonList[i].GUID;
 		var TheLessonRowID="Row_"+i.toString();
         if (ThestudentID==""){
-			html=html+"<tr id='"+TheLessonRowID+"'> <td>"+LessonList[i][0];
+			html=html+"<tr id='"+TheLessonRowID+"'> <td>"+LessonList[i].ALessonTitle;
 			html=html+" <button onclick='LessonDetails(\""+PassingVariable+"\")'>?</button>";
 		}else{
-			html=html+"<tr id='"+TheLessonRowID+"'> <td width='300'><span class='LessonTitle'>"+LessonList[i][0]+": </span>";
-			html=html+"<span class='lessonDescription'> "+LessonList[i][3]+"</span>";
+			html=html+"<tr id='"+TheLessonRowID+"'>";
+			html=html+"<td><span class='LessonTitle'>"+LessonList[i].Section+"</span></td>";
+			html=html+"<td width='300'><span class='LessonTitle'>"+LessonList[i].ALessonTitle+"</span></td>";
+	//		html=html+"<span class='lessonDescription'> "+LessonList[i].Description+"</span>";
 			var scoreFiled="score_"+i.toString()+"_0";
-			html=html+"<br/><span id='"+scoreFiled+"'>"+""+"</span>";
-		}
-		html=html+"</td>";
-		if (ThestudentID==""){
-		for (j=0;j<StudentList.length;j++){
-			var scoreFiled="score_"+i.toString()+"_"+j.toString();
+			var ActionFiled="Ascore_"+i.toString()+"_0";
 			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
-			console.log(scoreFiled);
-		}}
+			html=html+"<td><span id='"+ActionFiled+"'>"+""+"</span></td>";
+		}
 		html=html+"</tr>";
 	}
 	html=html+'</tbody>'
@@ -714,12 +721,12 @@ function CreateTable(LessonList,StudentList){
 	$("#TheGrades").html(html);
 	$("#TheGrades").show();
 	setTimeout(function(){ 
-		for (i=0;i<LessonList.length;i++){
+		for (i=1;i<LessonList.length;i++){
 			for (j=0;j<StudentList.length;j++){
 				var scoreFiled="score_"+i.toString()+"_"+j.toString();
 				console.log(scoreFiled);
 				if (ThestudentID!=""){
-					GetStudentRecord(StudentList[j].mbox,LessonList[i][1],scoreFiled);
+					GetStudentRecord(StudentList[j].mbox,LessonList[i].GUID,scoreFiled);
 				}else{
 					GetPassFailInProgress(LessonList[i],StudentList[j].mbox,StudentList[j].name,i,j);
 				}
@@ -864,7 +871,7 @@ $.ajax(setting).done(function (response){
 	if (response.length==0){
         var LinkObj={"student":student,"guid":CourseGUID}
 		var html="<p align='right'>Not yet started</p>";
-		$("#"+target).html(html)
+		$("#A"+target).html(html)
 		return;
 	}else{
 		var last;
@@ -874,7 +881,7 @@ $.ajax(setting).done(function (response){
 		var failTime;
 		for (var i=0;i<response.length;i++){
 			var theverb=response[i]._id;
-
+			console.log(theverb);
 			if (theverb.indexOf("start")>=1){
 				first=response[i].FirstTime;
 				last=response[i].LastTime;
@@ -896,17 +903,18 @@ $.ajax(setting).done(function (response){
 				buttonface="You did not do well. Try it again.";
 			}
 		}else if (successTime!=null) {
-			buttonface="Well done, enjoy it again?";
+			buttonface="Well done!";
 		}else if (failTime!=null) {
-			buttonface="You did not do well. Try it again.";
+			buttonface="Try it again.";
 		}
 		var html="<ul>";
 		html=html+"<li>Last time on this lesson: <span class='numbers'>"+ReturnDate(last)+"</span>";
 		html=html+"<li>Started this lesson : <span class='numbers'>"+ReturnDate(first)+"</span>";
 		html=html+"</ul>";
+		$("#"+target).html(html);
 		var LinkObj={"student":student,"guid":CourseGUID}
-		html=html+"<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>"+buttonface+"</button></p>";
-		$("#"+target).html(html)
+		var Link="<p align='right'><button class='btn1' onclick='GetLessonPopup(\""+encodeURI(JSON.stringify(LinkObj))+"\")'>"+buttonface+"</button></p>";
+		$("#A"+target).html(Link)
 	}
 	});
 }
@@ -1252,5 +1260,5 @@ $.ajax(setting).done(function (response){
 $(document).ready(function(){
 	GL="0";
 	
-	GetGoogleSheetData(LessonInforPointer,"GetLessons", "5");
+	GetGoogleSheetData(LessonInforPointer,"GetLessons", "7");
  });
