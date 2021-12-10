@@ -186,11 +186,26 @@ function CreateLessonByStudentMatrix() {
       
       for (var i=0;i<TheLessionsInfo.length;i++){
           var Leeson={guid:"mailto:"+TheLessionsInfo[i][1]+"@csal.autotutor.org",
-                      title:TheLessionsInfo[i][0]};
+                      title:TheLessionsInfo[i][0],
+                      Section:TheLessionsInfo[i][6],
+                      SectionOrder:TheLessionsInfo[i][7]};
           Lessons.push(JSON.stringify(Leeson));
       }
+      
+      Lessons.sort(SortLesson);
 
       console.log(Learners);
+      // filterLearner
+      var TheRealLearner=[];
+
+      for (var j=0;j<Learners.length;j++){
+        var LearnerEmail= JSON.parse(Learners[j]).email;
+        if (LearnerEmail.indexOf("student")>-1){
+          TheRealLearner.push(Learners[j]);
+        }
+      }
+
+      Learners=TheRealLearner;
       // Add Lessons
 
 
@@ -199,12 +214,14 @@ function CreateLessonByStudentMatrix() {
 
       // create table
       var html = "<table align='center' class='ReportTable'>";
-      html = html + "<tr><td><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
+      html = html + "<tr><td colspan='2'><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
+
       for (var j = 0; j < Learners.length; j++) {
         html =
           html +
           "<th> <p align='center'>" +
-          JSON.parse(Learners[j]).name.split(" ")[0] +
+          JSON.parse(Learners[j]).email.split("student")[1].split("@")[0]
+  //        JSON.parse(Learners[j]).name.split(" ")[0] +
           "</p></th>";
       }
       html = html + "</tr>";
@@ -213,6 +230,7 @@ function CreateLessonByStudentMatrix() {
         html = html + "<tr>";
         var Therow = "";
 
+        html = html + "<th nowrap>" + JSON.parse(Lessons[i]).SectionOrder + "</th>";
         html = html + "<th nowrap>" + JSON.parse(Lessons[i]).title + "</th>";
         
         for (var k = 0; k < TheRealResponse.length; k++) {
@@ -304,6 +322,16 @@ function CreateLessonByStudentMatrix() {
     $("#TheStatusOfStudents").html(html);
     // create table
   });
+}
+
+  function SortLesson(a, b) {
+  if (a.SectionOrder > b.SectionOrder) {
+    return -1;
+  }
+  if (a.SectionOrder < b.SectionOrder) {
+    return 1;
+  }
+  return 0;
 }
 
 function OpenHelpForReprt(){
