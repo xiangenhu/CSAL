@@ -1,5 +1,4 @@
-﻿
-var TheUniqPointer = qs(
+﻿var TheUniqPointer = qs(
   "TheDashPointer",
   "https://record.x-in-y.com/integrations/embedableDashboards/"
 );
@@ -80,8 +79,7 @@ function CreateLessonByStudentMatrix() {
   //  create matrix
   var match = {
     "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
-    $or: [
-      {
+    $or: [{
         "statement.result.score.raw": 1,
       },
       {
@@ -98,8 +96,7 @@ function CreateLessonByStudentMatrix() {
           regex: theStr,
         },
       },
-      $or: [
-        {
+      $or: [{
           "statement.result.score.raw": 1,
         },
         {
@@ -108,8 +105,7 @@ function CreateLessonByStudentMatrix() {
       ],
     };
   }
-  var data = [
-    {
+  var data = [{
       $match: match,
     },
     {
@@ -168,12 +164,10 @@ function CreateLessonByStudentMatrix() {
           name: DetailObj.learnerName,
         };
 
-        if (Lessons.includes(JSON.stringify(lessoninfor))) {
-        } else {
+        if (Lessons.includes(JSON.stringify(lessoninfor))) {} else {
           Lessons.push(JSON.stringify(lessoninfor));
         }
-        if (Learners.includes(JSON.stringify(learnerinfo))) {
-        } else {
+        if (Learners.includes(JSON.stringify(learnerinfo))) {} else {
           Learners.push(JSON.stringify(learnerinfo));
         }
       }
@@ -182,30 +176,32 @@ function CreateLessonByStudentMatrix() {
 
 
       console.log(TheLessionsInfo);
-      Lessons=[];
-      
-      for (var i=0;i<TheLessionsInfo.length;i++){
-          var Leeson={guid:"mailto:"+TheLessionsInfo[i][1]+"@csal.autotutor.org",
-                      title:TheLessionsInfo[i][0],
-                      Section:TheLessionsInfo[i][6],
-                      SectionOrder:TheLessionsInfo[i][7]};
-          Lessons.push(JSON.stringify(Leeson));
+      Lessons = [];
+
+      for (var i = 0; i < TheLessionsInfo.length; i++) {
+        var Leeson = {
+          guid: "mailto:" + TheLessionsInfo[i][1] + "@csal.autotutor.org",
+          title: TheLessionsInfo[i][0],
+          Section: TheLessionsInfo[i][6],
+          SectionOrder: TheLessionsInfo[i][7]
+        };
+        Lessons.push(JSON.stringify(Leeson));
       }
-      
+
       Lessons.sort(SortLesson);
 
       console.log(Learners);
       // filterLearner
-      var TheRealLearner=[];
+      var TheRealLearner = [];
 
-      for (var j=0;j<Learners.length;j++){
-        var LearnerEmail= JSON.parse(Learners[j]).email;
-        if (LearnerEmail.indexOf("student")>-1){
+      for (var j = 0; j < Learners.length; j++) {
+        var LearnerEmail = JSON.parse(Learners[j]).email;
+        if (LearnerEmail.indexOf("student") > -1) {
           TheRealLearner.push(Learners[j]);
         }
       }
 
-      Learners=TheRealLearner;
+      Learners = TheRealLearner;
       // Add Lessons
 
 
@@ -221,8 +217,8 @@ function CreateLessonByStudentMatrix() {
           html +
           "<th> <p align='center'>" +
           JSON.parse(Learners[j]).email.split("student")[1].split("@")[0]
-  //        JSON.parse(Learners[j]).name.split(" ")[0] +
-          "</p></th>";
+        //        JSON.parse(Learners[j]).name.split(" ")[0] +
+        "</p></th>";
       }
       html = html + "</tr>";
 
@@ -232,19 +228,17 @@ function CreateLessonByStudentMatrix() {
 
         html = html + "<th nowrap>" + JSON.parse(Lessons[i]).SectionOrder + "</th>";
         html = html + "<th nowrap>" + JSON.parse(Lessons[i]).title + "</th>";
-        
+
         for (var k = 0; k < TheRealResponse.length; k++) {
           var Thedetails = JSON.parse(TheRealResponse[k]._id);
           if (Therow == "") {
             if (Thedetails.lesson == JSON.parse(Lessons[i]).guid) {
               var LessonInfor = GetLessonInformation(Thedetails.lesson);
               Therow = LessonInfor.lessonTitle;
-       //       html = html + "<th>" + Therow + "</th>";
             }
-          }else{
-          }
+          } else {}
         }
-        
+
         for (var j = 0; j < Learners.length; j++) {
           var theValue = "";
 
@@ -269,19 +263,40 @@ function CreateLessonByStudentMatrix() {
               Thedetails.lesson == JSON.parse(Lessons[i]).guid &&
               Thedetails.learner == JSON.parse(Learners[j]).email
             ) {
-              Thedetails.learnerName=JSON.parse(Learners[j]).name;
-              Thedetails.LessonTitle=Therow;
+              Thedetails.learnerName = JSON.parse(Learners[j]).name;
+              Thedetails.LessonTitle = Therow;
               var LastPerformance =
                 "<li><button onclick='GetLastperformance(\"" +
                 encodeURI(JSON.stringify(Thedetails)) +
                 "\")'>Last Performance</button></li>";
-             //   console.log(LastPerformance)
+              //   console.log(LastPerformance)
               WithAnswer = true;
               var cellID = "cell__" + i.toString() + "__" + j.toString();
 
+              var ThePopupInfor = "";
+              ThePopupInfor = ThePopupInfor + "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
+              ThePopupInfor = ThePopupInfor + LastPerformance;
+              ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
+              ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse[k].End) + " </li>";
+              ThePopupInfor = ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse[k].Start) + " </li>";
+              ThePopupInfor = ThePopupInfor + "<li>Answered: " + TheRealResponse[k].sum + " Question(s)</li>";
+              ThePopupInfor = ThePopupInfor + "<li>Maximum Score " + TheRealResponse[k].MaxScore.toFixed(2) + " </li>";
+              ThePopupInfor = ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
+              ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) + " </li>";
+              ThePopupInfor = ThePopupInfor + "</ul></ul>";
+              var performanceInfo = {
+                Learner: Thedetails.learner,
+                Lesson: JSON.parse(Lessons[i]).title,
+                ThePerformance: TheRealResponse[k],
+                LRSInfor:Thedetails
+              }
+
+              var EncodedStr = encodeURI(JSON.stringify(performanceInfo));
+              cellID = EncodedStr;
               if (TheRealResponse[k].sum >= LessonInfor.total) {
+
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
-                  theValue = 
+                  theValue =
                     "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: green' >&#10003;</button>";
                 } else {
                   theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: red' >&#10008;</button>";
@@ -289,22 +304,10 @@ function CreateLessonByStudentMatrix() {
               } else {
                 theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn1' style='background-color: grey' >&#x27A4;</button>";
               }
-              var ThePopupInfor="";
-              ThePopupInfor=ThePopupInfor+ "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
-              ThePopupInfor=ThePopupInfor + LastPerformance;
-       //       ThePopupInfor=ThePopupInfor + Links;
-              ThePopupInfor=ThePopupInfor + "<li>Performance Overview</li><ul>";
-              ThePopupInfor=ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse[k].End) +" </li>";
-              ThePopupInfor=ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse[k].Start) + " </li>";
-              ThePopupInfor=ThePopupInfor + "<li>Answered: " + TheRealResponse[k].sum + " Question(s)</li>";
-              ThePopupInfor=ThePopupInfor + "<li>Maximum Score " + TheRealResponse[k].MaxScore.toFixed(2) + " </li>"; 
-              ThePopupInfor=ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
-              ThePopupInfor=ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) +  " </li>";
-              ThePopupInfor=ThePopupInfor +"</ul></ul>";
-              theValue = theValue +ThePopupInfor;
-      //        theValue ="<a href='#'>BBB</a>";
-            } else {
-            }
+
+
+              theValue = theValue + ThePopupInfor;
+            } else {}
           }
           if (WithAnswer) {
             html = html + "<td>" + theValue + "</td>";
@@ -313,6 +316,7 @@ function CreateLessonByStudentMatrix() {
             html = html + "<td></td>";
           }
           theValue = "";
+
         }
         html = html + "</tr>";
       }
@@ -324,7 +328,7 @@ function CreateLessonByStudentMatrix() {
   });
 }
 
-  function SortLesson(a, b) {
+function SortLesson(a, b) {
   if (a.SectionOrder > b.SectionOrder) {
     return -1;
   }
@@ -334,18 +338,47 @@ function CreateLessonByStudentMatrix() {
   return 0;
 }
 
-function OpenHelpForReprt(){
-  window.open("https://docs.google.com/presentation/d/e/2PACX-1vQmiAzgVmYO2jLiaDEmNwxUVHORUaaEhbrilujeY3iIlo0NZ92Cix4HSyOnD4iGtx5RUt-kFwPnYaiW/pub?start=false&loop=false&delayms=3000","_new")
-}
-function GetLastperformance(LessonAndUser) {
-  var LessonLearner=JSON.parse(decodeURI(LessonAndUser));
-  console.log(LessonLearner)
-  findLastSession(LessonLearner.lesson, LessonLearner.learner, 1, false,LessonLearner) 
+function OpenHelpForReprt() {
+  window.open("https://docs.google.com/presentation/d/e/2PACX-1vQmiAzgVmYO2jLiaDEmNwxUVHORUaaEhbrilujeY3iIlo0NZ92Cix4HSyOnD4iGtx5RUt-kFwPnYaiW/pub?start=false&loop=false&delayms=3000", "_new")
 }
 
-function togglebtn(divName) {
-  $("#" + divName).toggle();
-  console.log(divName);
+function GetLastperformance(LessonAndUser) {
+  var LessonLearner = JSON.parse(decodeURI(LessonAndUser));
+  console.log(LessonLearner)
+  findLastSession(LessonLearner.lesson, LessonLearner.learner, 1, false, LessonLearner)
+}
+
+function togglebtn(PerformanceInfo) {
+  console.log(JSON.parse(decodeURI(PerformanceInfo)));
+  var ThePerformanceInfo= JSON.parse(decodeURI(PerformanceInfo));
+  TheRealResponse =ThePerformanceInfo.ThePerformance;
+  var ThePopupInfor = "";
+    var LastPerformance =
+      "<li><button onclick='GetLastperformance(\"" +
+      encodeURI(JSON.stringify(ThePerformanceInfo.LRSInfor)) +
+      "\")'>Last Performance</button></li>";
+    //   console.log(LastPerformance)
+
+  ThePopupInfor = ThePopupInfor + "<ul>";
+  //  ThePopupInfor = ThePopupInfor + LastPerformance;
+  ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
+  ThePopupInfor = ThePopupInfor + LastPerformance;
+  ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse.End) + " </li>";
+  ThePopupInfor = ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse.Start) + " </li>";
+  ThePopupInfor = ThePopupInfor + "<li>Answered: " + TheRealResponse.sum + " Question(s)</li>";
+  ThePopupInfor = ThePopupInfor + "<li>Maximum Score " + TheRealResponse.MaxScore.toFixed(2) + " </li>";
+  ThePopupInfor = ThePopupInfor + "<li>Minimum Score " + TheRealResponse.MinScore.toFixed(2) + " </li>";
+  ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse.Average.toFixed(2) + " </li>";
+  ThePopupInfor = ThePopupInfor + "</ul></ul>";
+  console.log(ThePopupInfor);
+
+  var bodytext = ThePopupInfor;
+  var header="Learner: "+ThePerformanceInfo.Learner.split(":")[1].split("@")[0];
+  var footer="Lesson: "+ThePerformanceInfo.Lesson;
+  var targetwin = "popupWin";
+  var data = {};
+  var Verb = "";
+  OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
 }
 
 function DashBoardCheckStudentStatus() {
@@ -364,27 +397,27 @@ function GetLessonName(LessonList, guid) {
 TheLessionsInfo = [];
 
 
-function GetTheRow(jsonData){
-  var RowArray=[];
-  for (x in jsonData) {   
-      RowArray.push(jsonData[x].replace(/(<([^>]+)>)/gi, ""))
-      }
+function GetTheRow(jsonData) {
+  var RowArray = [];
+  for (x in jsonData) {
+    RowArray.push(jsonData[x].replace(/(<([^>]+)>)/gi, ""))
+  }
   return RowArray;
 
 }
 
 
 function GetLessonsInfo(json) {
-  if (json!=""){
-    TheLessionsInfo=[];
-    var TheJSONObj=json;
+  if (json != "") {
+    TheLessionsInfo = [];
+    var TheJSONObj = json;
     var i;
-    for (i=1;i<TheJSONObj.length;i++){
-        var TheRowInfo=TheJSONObj[i];
-        TheLessionsInfo.push(GetTheRow(TheRowInfo));
+    for (i = 1; i < TheJSONObj.length; i++) {
+      var TheRowInfo = TheJSONObj[i];
+      TheLessionsInfo.push(GetTheRow(TheRowInfo));
     }
     DashBoardCheckStudentStatus();
-}
+  }
 }
 
 TheLRStheSetting = {
@@ -403,24 +436,30 @@ TheLRStheSetting = {
   data: {},
 };
 
-function findLastSession(LessonID, Learnermbox, N, findReport,LessonLearnObj) {
+function findLastSession(LessonID, Learnermbox, N, findReport, LessonLearnObj) {
   var thesetting = TheLRStheSetting;
   var match = {
     "statement.actor.mbox": Learnermbox,
     "statement.object.mbox": LessonID,
     "statement.verb.id": "https://app.skoonline.org/ITSProfile/start",
   };
-  var data = [
-    {
+  var data = [{
       $match: match,
     },
-    { $sort: { "statement.timestamp": -1 } },
-    { $project: { statementTime: "$statement.timestamp" } },
+    {
+      $sort: {
+        "statement.timestamp": -1
+      }
+    },
+    {
+      $project: {
+        statementTime: "$statement.timestamp"
+      }
+    },
   ];
   thesetting.data = JSON.stringify(data);
   $.ajax(thesetting).done(function (response) {
-    if (response.length == 0) {
-    } else {
+    if (response.length == 0) {} else {
       getCurrentScore(
         LessonID,
         Learnermbox,
@@ -433,13 +472,19 @@ function findLastSession(LessonID, Learnermbox, N, findReport,LessonLearnObj) {
   });
 }
 
-function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonLearnObj,total) {
+function getCurrentScore(LessonID, Learnermbox, startingTime, findReport, LessonLearnObj, total) {
   var thesetting = TheLRStheSetting;
   var match = {
     "statement.actor.mbox": Learnermbox,
     "statement.object.mbox": LessonID,
     "statement.verb.id": "https://app.skoonline.org/ITSProfile/action",
-    "statement.timestamp": { $gt: { $parseDate: { date: startingTime } } },
+    "statement.timestamp": {
+      $gt: {
+        $parseDate: {
+          date: startingTime
+        }
+      }
+    },
   };
   var group = {
     _id: "$statement.result.response",
@@ -462,8 +507,7 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
       $avg: "$statement.result.score.raw",
     },
   };
-  var data = [
-    {
+  var data = [{
       $match: match,
     },
     {
@@ -474,26 +518,26 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
   $.ajax(thesetting).done(function (response) {
     if (response.length == 0) {
 
-      var header,footer,bodytext,targetwin,data,Verb;
-            
-      var msg="<b>LAST RECORD RETRIEVED: </b><ul>"
-      if (total>1){
-        msg=msg+"<li>Started "+total +" times.</li>";
-      }else{
-        msg=msg+"<li>Started "+total +" time.</li>";
+      var header, footer, bodytext, targetwin, data, Verb;
+
+      var msg = "<b>LAST RECORD RETRIEVED: </b><ul>"
+      if (total > 1) {
+        msg = msg + "<li>Started " + total + " times.</li>";
+      } else {
+        msg = msg + "<li>Started " + total + " time.</li>";
       }
-      msg=msg+"<li>most recent attempt:</li><ul>";
-      msg=msg+"<li>Started at: "+ReturnDate(startingTime)+"</li>";
-      msg=msg+"<li>Did not respond to any questions</li>";
-      msg=msg+"</ul>";
-      msg=msg+"</ul>";
-      header=LessonLearnObj.learnerName.split(" ")[0];
-      footer=LessonLearnObj.LessonTitle;
-      bodytext=msg;
-      targetwin="popupWin";
-      data={};
-      Verb="";
-      OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb);
+      msg = msg + "<li>most recent attempt:</li><ul>";
+      msg = msg + "<li>Started at: " + ReturnDate(startingTime) + "</li>";
+      msg = msg + "<li>Did not respond to any questions</li>";
+      msg = msg + "</ul>";
+      msg = msg + "</ul>";
+      header = "Learner: "+LessonLearnObj.learner.split(":")[1].split("@")[0];
+      footer = "Lesson: "+LessonLearnObj.LessonTitle;
+      bodytext = msg;
+      targetwin = "popupWin";
+      data = {};
+      Verb = "";
+      OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
     } else {
       for (i = 0; i < TheLessionsInfo.length; i++) {
         if (response[0]._id.indexOf(TheLessionsInfo[i][1]) > -1) {
@@ -517,29 +561,29 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
             }
             return;
           } else {
-            var header,footer,bodytext,targetwin,data,Verb;
-            
-            var msg="<b>LAST RECORD RETRIEVED: </b><ul>";
-            if (total>1){
-              msg=msg+"<li>Started "+total +" times.</li>";
-            }else{
-              msg=msg+"<li>Started "+total +" time.</li>";
+            var header, footer, bodytext, targetwin, data, Verb;
+
+            var msg = "<b>LAST RECORD RETRIEVED: </b><ul>";
+            if (total > 1) {
+              msg = msg + "<li>Started " + total + " times.</li>";
+            } else {
+              msg = msg + "<li>Started " + total + " time.</li>";
             }
-            msg=msg+"<li>most recent attempt:</li><ul>";
-            msg=msg+"<li>Total Number of questions answered: "+response[0].sum+"</li>";
-            msg=msg+"<li>Average Score: "+response[0].Average.toFixed(2)+"</li>"; 
-            msg=msg+"<li>Started at: "+ReturnDate(response[0].Start)+"</li>";
-            msg=msg+"<li>Finished at: "+ReturnDate(response[0].End)+"</li>";
-            msg=msg+"</ul>";
-            msg=msg+"</ul>";
-            header=LessonLearnObj.learnerName.split(" ")[0];
-            footer=LessonLearnObj.LessonTitle;
-            bodytext=msg;
-            targetwin="popupWin";
-            data={};
-            Verb="";
-            OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb);
-          //  alert(msg);
+            msg = msg + "<li>most recent attempt:</li><ul>";
+            msg = msg + "<li>Total Number of questions answered: " + response[0].sum + "</li>";
+            msg = msg + "<li>Average Score: " + response[0].Average.toFixed(2) + "</li>";
+            msg = msg + "<li>Started at: " + ReturnDate(response[0].Start) + "</li>";
+            msg = msg + "<li>Finished at: " + ReturnDate(response[0].End) + "</li>";
+            msg = msg + "</ul>";
+            msg = msg + "</ul>";
+            header = "Learner: "+LessonLearnObj.learner.split(":")[1].split("@")[0];
+            footer = "Lesson: "+LessonLearnObj.LessonTitle;
+            bodytext = msg;
+            targetwin = "popupWin";
+            data = {};
+            Verb = "";
+            OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
+            //  alert(msg);
           }
         }
       }
@@ -548,50 +592,50 @@ function getCurrentScore(LessonID, Learnermbox, startingTime, findReport,LessonL
 }
 
 
-function OpenPopUpReport(header,footer,bodytext,targetwin,data,Verb){
-	var html="";
-	html=html+'<div class="modal-dialog modal-dialog-centered">';
+function OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb) {
+  var html = "";
+  html = html + '<div class="modal-dialog modal-dialog-centered">';
 
-	html=html+'<div class="modal-content" id="PopupDialog">';
-    html=html+'<div class="modal-header">';
-    html=html+'<button id="Modalclosebtn" class="btn" style="float: right;">&times;</button>';
-    html=html+'<h2>'+header+'</h2>';
-    html=html+'</div>';
-    html=html+'<div class="modal-body" id="bodytextReport">';
-    html=html+bodytext;
-    html=html+'</div>';
-    html=html+'<div class="modal-footer">';
-    html=html+'<h3>'+footer+'</h3>';
-    html=html+'</div>';
-	html=html+'</div>';
+  html = html + '<div class="modal-content" id="PopupDialog">';
+  html = html + '<div class="modal-header">';
+  html = html + '<button id="Modalclosebtn" class="btn" style="float: right;">&times;</button>';
+  html = html + '<h2>' + header + '</h2>';
+  html = html + '</div>';
+  html = html + '<div class="modal-body" id="bodytextReport">';
+  html = html + bodytext;
+  html = html + '</div>';
+  html = html + '<div class="modal-footer">';
+  html = html + '<h3>' + footer + '</h3>';
+  html = html + '</div>';
+  html = html + '</div>';
 
-	html=html+'</div>';
+  html = html + '</div>';
 
-	var popup=document.getElementById(targetwin);
-	if (popup == null ) {
-		var popup=document.createElement("div");
-		popup.class="modal";
-		popup.id=targetwin;
-		$("#editor").append(popup);
-		popup.innerHTML = html;
-	}else{
-		$('#'+targetwin).html(html);
-		$('#'+targetwin).show();
-	}
-	$("#Modalclosebtn").on("click",function(){
-		$('#'+targetwin).hide();
-		popup.innerHTML = "";
-	});
-	if (Verb!=""){
-		xAPIPostPopup("Popup",Verb,data);
-	}
-	const iframe = document.createElement('TheIframe')
-	iframe.onload = function() {
-        try {
-           console.log(iframe.src)
-        } catch (e) {
-            if (e.message.includes('cross-origin')) console.warn(e.message);
-            else console.error(e.message);
-        }
+  var popup = document.getElementById(targetwin);
+  if (popup == null) {
+    var popup = document.createElement("div");
+    popup.class = "modal";
+    popup.id = targetwin;
+    $("#editor").append(popup);
+    popup.innerHTML = html;
+  } else {
+    $('#' + targetwin).html(html);
+    $('#' + targetwin).show();
+  }
+  $("#Modalclosebtn").on("click", function () {
+    $('#' + targetwin).hide();
+    popup.innerHTML = "";
+  });
+  if (Verb != "") {
+    xAPIPostPopup("Popup", Verb, data);
+  }
+  const iframe = document.createElement('TheIframe')
+  iframe.onload = function () {
+    try {
+      console.log(iframe.src)
+    } catch (e) {
+      if (e.message.includes('cross-origin')) console.warn(e.message);
+      else console.error(e.message);
     }
+  }
 }
