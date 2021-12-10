@@ -402,27 +402,3 @@ function sendEmail(email, subject, body) {
 function getClassInfor(teacherID, classID) {
 
 }
-
-function GetStudents(json) {
-	var Theclass = json.filter((item) => {
-		return item.course1 == classID
-	});
-	html = "";
-	html = html + "<table width='60%' align='center' id='TheScoreTable'>";
-	html = html + "<tr>";
-	html = html + "<th >Login username</th>";
-	html = html + "<th >login Password</th>";
-	html = html + "</tr>";
-	for (var i = 0; i < Theclass.length; i++) {
-		html = html + "<tr>";
-		html = html + "<td>";
-		html = html + Theclass[i].username;
-		html = html + "</td>";
-		html = html + "<td>";
-		html = html + Theclass[i].password;
-		html = html + "</td>";
-		html = html + "</tr>";
-	}
-	html = html + "</table>";
-	$("#studentsInfor").html(html);
-}

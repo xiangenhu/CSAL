@@ -20,16 +20,16 @@
       width: 1280px;
     }
 
-		#popupWin{
-			width: 800px;
-			height: 600px;
-			position: absolute;
-			left: 50%;
-			top: 50%; 
-			margin-left: -400px;
-			margin-top: -300px;
+    #popupWin {
+      width: 800px;
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -400px;
+      margin-top: -300px;
       z-index: 10000;
-		}
+    }
 
 
     .ReportTable td,
@@ -122,6 +122,12 @@
     $(document).ready(function () {
       loadLRSScriptsData();
       GetGoogleSheetData(LessonInforPointer, "GetLessonsInfo", "7");
+      var teacherID = qs("teacherID", "");
+      var classID = qs("classID", "ARCCLASS01_2_1")
+      if ((teacherID != "1") && (classID != "1")) {
+        $("#studentsInfor").show();
+        GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
+      }
     });
   </script>
   <div id="TheStatusOfStudents"></div>

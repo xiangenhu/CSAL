@@ -1,4 +1,8 @@
-﻿var TheUniqPointer = qs(
+﻿
+var ClassIDSpreadsheet = "2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq";
+var studentDatainGS = "2PACX-1vQhXuVJqyd7MSnlkYYYeG1f5jovoubip6VnfrCKJ-QCpYkZV48pq0a6JchcL6BVm6nSmH14TfrGs9S8"
+var Theclass;
+var TheUniqPointer = qs(
   "TheDashPointer",
   "https://record.x-in-y.com/integrations/embedableDashboards/"
 );
@@ -191,6 +195,15 @@ function CreateLessonByStudentMatrix() {
       Lessons.sort(SortLesson);
 
       console.log(Learners);
+      console.log(Theclass);
+
+      Learners=[]
+      for (var j=0; j<Theclass.length;j++){
+        var LearnerObj={email:"mailto:"+Theclass[j].email,
+                        name:Theclass[j].firstname+ " "+ Theclass[j].lastname};
+        Learners.push(JSON.stringify(LearnerObj));
+      }
+      console.log(Learners);
       // filterLearner
       var TheRealLearner = [];
 
@@ -215,7 +228,7 @@ function CreateLessonByStudentMatrix() {
       for (var j = 0; j < Learners.length; j++) {
         html =
           html +
-          "<th> <p align='center'>" +
+          "<th width='10' wramp>" +
           JSON.parse(Learners[j]).email.split("student")[1].split("@")[0]
         //        JSON.parse(Learners[j]).name.split(" ")[0] +
         "</p></th>";
@@ -272,7 +285,7 @@ function CreateLessonByStudentMatrix() {
               //   console.log(LastPerformance)
               WithAnswer = true;
               var cellID = "cell__" + i.toString() + "__" + j.toString();
-
+              /*
               var ThePopupInfor = "";
               ThePopupInfor = ThePopupInfor + "<ul  id='" + cellID + "' style='display:none; z-index: -1'>";
               ThePopupInfor = ThePopupInfor + LastPerformance;
@@ -284,6 +297,7 @@ function CreateLessonByStudentMatrix() {
               ThePopupInfor = ThePopupInfor + "<li>Minimum Score " + TheRealResponse[k].MinScore.toFixed(2) + " </li>";
               ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse[k].Average.toFixed(2) + " </li>";
               ThePopupInfor = ThePopupInfor + "</ul></ul>";
+              */
               var performanceInfo = {
                 Learner: Thedetails.learner,
                 Lesson: JSON.parse(Lessons[i]).title,
@@ -306,12 +320,12 @@ function CreateLessonByStudentMatrix() {
               }
 
 
-              theValue = theValue + ThePopupInfor;
+              theValue = theValue ;
             } else {}
           }
           if (WithAnswer) {
             html = html + "<td>" + theValue + "</td>";
-            console.log(theValue)
+ //           console.log(theValue)
           } else {
             html = html + "<td></td>";
           }
@@ -322,7 +336,7 @@ function CreateLessonByStudentMatrix() {
       }
     }
     html = html + "</table>";
-    console.log(html);
+ //   console.log(html);
     $("#TheStatusOfStudents").html(html);
     // create table
   });
@@ -638,4 +652,33 @@ function OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb) {
       else console.error(e.message);
     }
   }
+}
+
+
+function GetStudents(json) {
+  var TheClassID=classID;
+  if (classID.indexOf("CSALUSNW")==-1);
+  TheClassID=classID.split("CSALUSNW").join("ARCCLASS");
+
+  Theclass = json.filter((item) => {
+		return item.course1 == TheClassID
+	});
+	html = "";
+	html = html + "<table width='60%' align='center' id='TheScoreTable'>";
+	html = html + "<tr>";
+	html = html + "<th >Login username</th>";
+	html = html + "<th >login Password</th>";
+	html = html + "</tr>";
+	for (var i = 0; i < Theclass.length; i++) {
+		html = html + "<tr>";
+		html = html + "<td>";
+		html = html + Theclass[i].username;
+		html = html + "</td>";
+		html = html + "<td>";
+		html = html + Theclass[i].password;
+		html = html + "</td>";
+		html = html + "</tr>";
+	}
+	html = html + "</table>";
+	$("#studentsInfor").html(html);
 }
