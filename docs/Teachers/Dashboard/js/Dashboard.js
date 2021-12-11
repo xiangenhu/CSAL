@@ -297,13 +297,14 @@ function CreateLessonByStudentMatrix() {
               var EncodedStr = encodeURI(JSON.stringify(performanceInfo));
               cellID = EncodedStr;
               if (TheRealResponse[k].sum >= LessonInfor.total) {
+                console.log(">>>"+TheRealResponse[k].sum, LessonInfor.total);
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
-                  theValue =
-                    "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: green' >&#10003;</button>";
+                  theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: green' >&#10003;</button>";
                 } else {
                   theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: red' >&#10008;</button>";
                 }
               } else {
+                console.log("<<<"+TheRealResponse[k].sum, LessonInfor.total);
                 theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: grey' >&#x27A4;</button>";
               }
             } else {}
