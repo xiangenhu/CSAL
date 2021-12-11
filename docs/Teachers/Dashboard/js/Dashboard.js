@@ -347,44 +347,128 @@ function GetLastperformance(LessonAndUser) {
   findLastSession(LessonLearner.lesson, LessonLearner.learner, 1, false, LessonLearner)
 }
 
+
+function DetailsS_L(Lesson_and_Student){
+	var thePassedObj=JSON.parse(decodeURI(Lesson_and_Student))
+	var LessonName=thePassedObj.Lesson.ALessonTitle;
+	var LessonID=thePassedObj.Lesson.GUID;
+	var Name=thePassedObj.Name.split(" ")[0];
+
+	var htmlbody="Detailed Interaction of  "+ Name+ " with "+LessonName ;
+	htmlbody=htmlbody+"<div id='MoreDetails'>";
+	htmlbody=htmlbody+"<ul>";
+	htmlbody=htmlbody+"<li>First time "+Name+" start the lesson: <span class='numbers' id='FirstTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>Last time  "+Name+" was on the lessons: <span class='numbers' id='LastTimeLesson'></span></li>";
+	htmlbody=htmlbody+"<li>Number Questions Answered: <span class='numbers' id='LSAnswerDetails'></span></li>";
+	htmlbody=htmlbody+"</ul>";
+	htmlbody=htmlbody+"</div>"
+	htmlbody="<span id='SLDetails'></span>"
+	OpenPopUpDetails(LessonName+" and "+Name,"details ...",htmlbody,"popupWin");
+	LessonStudentDetailsNew(LessonID,Lesson_and_Student,"SLDetails")
+}
+
+
+
+function LessonStudentDetailsNew(TheLessonID,TheLessonandStudent,Target){
+	
+	var setting=TheLRStheSetting;
+	var thePassedObj=JSON.parse(decodeURI(TheLessonandStudent))
+	var LessonName=thePassedObj.Lesson.ALessonTitle;
+	var LessonID=thePassedObj.Lesson.GUID;
+	var Name=thePassedObj.Name;
+	var TheStudent=thePassedObj.Student;
+	var Name=thePassedObj.Name.split(" ")[0];
+  if (LessonID.indexOf("mailto:")==-1){
+     LessonID="mailto:"+LessonID+"@csal.autotutor.org";
+  }
+	var QueryObj=[
+					{"$match":{"statement.object.mbox":LessonID,
+					           "statement.actor.mbox":TheStudent,
+					           "statement.verb.id":"https://app.skoonline.org/ITSProfile/action"}},
+					{"$sort":{"statement.timestamp":-1}},
+					{"$project":{"thetime":"$statement.timestamp","Result":"$statement.result","ResultExt":"$statement.result.extensions.https://app.skoonline.org/ITSProfile/CSAL/Result"}},
+					{"$project":{"time":"$thetime","Success":"$Result.success","QuestLevelExt":"$ResultExt.questionLevel"}}
+				]
+	setting.data=JSON.stringify(QueryObj);
+	$.ajax(setting).done(function (response){
+		if (response.length==0){
+			$("#"+Target).html("")
+			return;
+		}else{
+			var Levels=[];
+			// get The question levels
+			for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt==null){
+					response[i].QuestLevelExt="Other"
+				}
+				if (response[i].QuestLevelExt==""){
+					response[i].QuestLevelExt="Not Rated"
+				}
+				if (response[i].QuestLevelExt!=null){
+				if (Levels.includes(response[i].QuestLevelExt)){
+				}else{
+					Levels.push(response[i].QuestLevelExt)
+				}
+			}
+			}
+			// Get the performace Obj
+			var PerformaceObj={};
+			var PerfomaceScore={"correct":0,"incorrect":0};
+			for (var i=0;i<Levels.length;i++){
+				var PerfomaceScore={"correct":0,"incorrect":0};
+				PerformaceObj[Levels[i]]=PerfomaceScore;
+			}
+            for (var i=0;i<response.length;i++){
+				if (response[i].QuestLevelExt!=null){
+					if (response[i].Success){
+						PerformaceObj[response[i].QuestLevelExt].correct=PerformaceObj[response[i].QuestLevelExt].correct+1;
+					}else{
+						PerformaceObj[response[i].QuestLevelExt].incorrect=PerformaceObj[response[i].QuestLevelExt].incorrect+1;
+					}
+				}
+			}
+			var html="<ul>";
+			html="<li>"+Name+" accessed this lesson between: "+ReturnDate(response[response.length-1].time) +" and "+ ReturnDate(response[0].time);
+			html=html+"<li>Questions in this lesson answered by "+Name+":<ul>";
+			for (i=0;i<Levels.length;i++){
+				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+			}
+			html=html+"</ul>";
+			html=html+"</ul>";
+			$("#"+Target).html(html)
+			console.log(PerformaceObj);
+		}
+	});
+}
+
 function togglebtn(PerformanceInfo) {
   console.log(JSON.parse(decodeURI(PerformanceInfo)));
   var ThePerformanceInfo= JSON.parse(decodeURI(PerformanceInfo));
   TheRealResponse =ThePerformanceInfo.ThePerformance;
-  var ThePopupInfor = "";
-    var LastPerformance =
-      "<li><button onclick='GetLastperformance(\"" +
-      encodeURI(JSON.stringify(ThePerformanceInfo.LRSInfor)) +
-      "\")'>Last Performance</button></li>";
-    //   console.log(LastPerformance)
-/*
-    var TheObj={Lesson:Lesson,
-      Student:Student,
-      Name:Name}
+    var TheObj={Lesson:{ALessonTitle:ThePerformanceInfo.Lesson,GUID:ThePerformanceInfo.LRSInfor.lesson},
+      Student:ThePerformanceInfo.Learner,
+      Name:ThePerformanceInfo.LRSInfor.learnerName}
     var LessonPassVar=encodeURI(JSON.stringify(TheObj))
-    var detailInformationLink="<button class='btn' style='background-color: grey' onclick='DetailsS_L(\""+LessonPassVar+"\")'>?</button>"
-*/
+    var detailInformationLink="<button class='btn' style='background-color: grey' onclick='DetailsS_L(\""+LessonPassVar+"\")'>here</button>"
+  var ThePopupInfor="";
 
   ThePopupInfor = ThePopupInfor + "<ul>";
-  //  ThePopupInfor = ThePopupInfor + LastPerformance;
   ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
- // ThePopupInfor = ThePopupInfor + LastPerformance;
   ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse.End) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>First  Access: " + ReturnDate(TheRealResponse.Start) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>Answered: " + TheRealResponse.sum + " Question(s)</li>";
   ThePopupInfor = ThePopupInfor + "<li>Maximum Score " + TheRealResponse.MaxScore.toFixed(2) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>Minimum Score " + TheRealResponse.MinScore.toFixed(2) + " </li>";
   ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse.Average.toFixed(2) + " </li>";
-  ThePopupInfor = ThePopupInfor + "</ul></ul>";
+  ThePopupInfor = ThePopupInfor + "</ul>";
+  ThePopupInfor = ThePopupInfor + "<li> Click "+detailInformationLink+" for more Details </li>";
+  ThePopupInfor = ThePopupInfor + "</ul>";
   console.log(ThePopupInfor);
 
   var bodytext = ThePopupInfor;
   var header="Learner: "+ThePerformanceInfo.Learner.split(":")[1].split("@")[0];
   var footer="Lesson: "+ThePerformanceInfo.Lesson;
-  var targetwin = "popupWin";
-  var data = {};
-  var Verb = "";
-  
+  var targetwin = "popupWin";  
 	OpenPopUpDetails(header, footer, bodytext, targetwin);
 
  // OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
