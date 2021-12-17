@@ -168,7 +168,7 @@ function launchMOVIE() {
 }
 function GetSpreadSheetARC(GoogleID, GoogleSheet) {
 	var theUrl = "https://tools.x-in-y.com/gs?json=";
-	var theObj = { id: GoogleID, page: GoogleSheet };
+	var theObj = { id: GoogleID, page: GoogleSheet ,Pub:qs("Pub","1")};
 	console.log(GoogleID);
 	theUrl = theUrl + JSON.stringify(theObj);
 	var xmlHttp = new XMLHttpRequest();
