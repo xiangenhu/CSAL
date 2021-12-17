@@ -1083,7 +1083,10 @@ function LessonStudentDetailsNew(TheLessonID,TheLessonandStudent,Target){
 			html="<li>"+Name+" accessed this lesson between: "+ReturnDate(response[response.length-1].time) +" and "+ ReturnDate(response[0].time);
 			html=html+"<li>Questions in this lesson answered by "+Name+":<ul>";
 			for (i=0;i<Levels.length;i++){
-				html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
+				var totalNumber=(PerformaceObj[Levels[i]].correct+PerformaceObj[Levels[i]].incorrect);
+				var htmlStr=PerformaceObj[Levels[i]].correct+" out of "+totalNumber+" correct.";
+				html=html+"<li>"+Levels[i]+" question: "+htmlStr+"</li>";
+			//	html=html+"<li>"+Levels[i]+" question: "+JSON.stringify(PerformaceObj[Levels[i]])+"</li>"
 			}
 			html=html+"</ul>";
 			html=html+"</ul>";
