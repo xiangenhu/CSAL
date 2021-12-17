@@ -334,6 +334,11 @@ function CreateLessonByStudentMatrix() {
 function AssignLesson(PerformanceInfo){
   var ThePerformanceInfo= JSON.parse(decodeURI(PerformanceInfo));
   console.log(ThePerformanceInfo);
+  return;
+  var lessonID;
+  var StudentID;
+  var Assigned;
+  PostAssignment(lessonID,StudentID,Assigned)
 }
 
 function SortLesson(a, b) {
@@ -346,6 +351,13 @@ function SortLesson(a, b) {
   return 0;
 }
 
+function PostAssignment(lessonID,StudentID,Assigned){
+  var actor = {mbox:lessonID,name:LessonName};
+  var verb = {id:"https://app.skoonline.org/ITSProfile/AssignLesson"}
+  var object = {id:StudentID};
+  var result = {Success:Assigned}
+
+}
 function OpenHelpForReprt() {
   window.open("https://docs.google.com/presentation/d/e/2PACX-1vQmiAzgVmYO2jLiaDEmNwxUVHORUaaEhbrilujeY3iIlo0NZ92Cix4HSyOnD4iGtx5RUt-kFwPnYaiW/pub?start=false&loop=false&delayms=3000", "_new")
 }
