@@ -693,8 +693,8 @@ function CreateTable(LessonList,StudentList){
 	html=html+"<thead class='TheHeader'>"
 	html=html+"<tr><th>Section </th>";
 	html=html+"<th>The Lessons </th>";
-	html=html+"<th>Log </th>";
 	html=html+"<th>Status</th>";
+	html=html+"<th>Log </th>";
 	
 	html=html+"</tr>";
 	html=html+"</thead>";
@@ -709,11 +709,10 @@ function CreateTable(LessonList,StudentList){
 			html=html+"<tr id='"+TheLessonRowID+"'>";
 			html=html+"<th>"+LessonList[i].Section+"</span></th>";
 			html=html+"<th nowrap>"+LessonList[i].ALessonTitle+"</td>";
-	//		html=html+"<span class='lessonDescription'> "+LessonList[i].Description+"</span>";
 			var scoreFiled="score_"+i.toString()+"_0";
 			var ActionFiled="Ascore_"+i.toString()+"_0";
-			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
 			html=html+"<td><span id='"+ActionFiled+"'>"+""+"</span></td>";
+			html=html+"<td><span id='"+scoreFiled+"'>"+""+"</span></td>";
 		}
 		html=html+"</tr>";
 	}
@@ -1266,6 +1265,6 @@ $.ajax(setting).done(function (response){
 
 $(document).ready(function(){
 	GL="0";
-	
+	$("#popupWin").hide();
 	GetGoogleSheetData(LessonInforPointer,"GetLessons", "7");
  });
