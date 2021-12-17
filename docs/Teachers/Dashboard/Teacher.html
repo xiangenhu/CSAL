@@ -54,6 +54,21 @@
       background-color: #3a454b;
       color: white;
     }
+    #WaitBtn{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+      z-index: 1;
+      color:#ddd;
+      font-size: 50px;
+      background-color: #0d09cf;
+      display:block;
+      border-radius: 50%;
+    }
   </style>
 </head>
 
@@ -72,6 +87,7 @@
       }
     });
   </script>
+  <button id="WaitBtn" class="btn">Wait...</button>
   <div id="TheStatusOfStudents"></div>
   <div id="popupWin"></div>
 </body>
