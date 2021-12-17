@@ -95,9 +95,11 @@ function GetStudentName(student){
 	$.ajax(thesetting).done(function (response) {
 		if (response.length==0){
 			realName="";
+      $("#YourName").html(fullname);
 		}else{
 			console.log(response[0].name);
 			realName=response[0].name;
+      $("#YourName").html(realName);
 		}
 	})
 }

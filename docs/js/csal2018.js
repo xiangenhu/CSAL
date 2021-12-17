@@ -293,14 +293,22 @@ function GetTheEventAssigned() {
       navigator.connection ||
       navigator.mozConnection ||
       navigator.webkitConnetion;
+      var TheName=fullname;
+      if (realName!=""){
+        TheName=realName;
+      }
     $("#runningstatus").html(
-      "<center>Your Internet speed is " + con.downlink + " out of 10.</center>"
+      "<center>"+TheName+": Your Internet speed is " + con.downlink + " out of 10.</center>"
     );
   });
 
   $("#runningstatus").mouseup(function () {
+    var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Click to see your internet connection status.</center>"
+      "<center> "+TheName+": Click to see your internet connection status.</center>"
     );
   });
 
@@ -316,14 +324,24 @@ function GetTheEventAssigned() {
       navigator.connection ||
       navigator.mozConnection ||
       navigator.webkitConnetion;
+
+      var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Your Internet speed is " + con.downlink + " out of 10.</center>"
+      "<center>"+TheName+": Your Internet speed is " + con.downlink + " out of 10.</center>"
     );
   });
 
   $("#runningstatus").mouseup(function () {
+    
+    var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Click to see your internet connection status.</center>"
+      "<center>"+TheName+":Click to see your internet connection status.</center>"
     );
   });
 
