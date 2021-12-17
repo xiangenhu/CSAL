@@ -313,7 +313,13 @@ function CreateLessonByStudentMatrix() {
             html = html + "<td>" + theValue + "</td>";
  //           console.log(theValue)
           } else {
-            theValue = "<input type = 'checkbox' onchange='AssignLesson(\""+cellID+"\")'> </input>"
+            var TheCheckID="";
+            var TheCheckboxID={Learner:performanceInfo.Learner,
+                               Lesson:performanceInfo.Lesson,
+                               CellID:TheCheckID}
+
+            var CheckboxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
+            theValue = "<input type = 'checkbox' onchange='AssignLesson(\""+CheckboxIDStr+"\")'> </input>"
             html = html + "<td align='center'> "+theValue+"</td>";
           }
           theValue = "";
