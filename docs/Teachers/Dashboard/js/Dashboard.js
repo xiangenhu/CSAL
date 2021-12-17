@@ -313,8 +313,8 @@ function CreateLessonByStudentMatrix() {
             html = html + "<td>" + theValue + "</td>";
  //           console.log(theValue)
           } else {
-            theValue = "<button onclick='Sendmsg(\"" + cellID + "\");' class='btn' style='background-color: yellow' >&#x2709;</button>";
-            html = html + "<td> "+theValue+"</td>";
+            theValue = "<input type = 'checkbox' onchange='AssignLesson(\""+cellID+"\")'> </input>"
+            html = html + "<td align='center'> "+theValue+"</td>";
           }
           theValue = "";
 
@@ -329,6 +329,11 @@ function CreateLessonByStudentMatrix() {
     $("#TheStatusOfStudents").html(html);
     // create table
   });
+}
+
+function AssignLesson(PerformanceInfo){
+  var ThePerformanceInfo= JSON.parse(decodeURI(PerformanceInfo));
+  console.log(ThePerformanceInfo);
 }
 
 function SortLesson(a, b) {
