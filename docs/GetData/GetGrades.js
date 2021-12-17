@@ -104,6 +104,7 @@ function GetStudents(classID,student){
     thesetting.data=JSON.stringify(data);
 	$.ajax(thesetting).done(function (response) {
 		if (response.length==0){ 
+			$("#WaitBtn").html("No data yet");
 			return
 		}else{
 			for (var i=0;i<response.length;i++){
@@ -719,6 +720,7 @@ function CreateTable(LessonList,StudentList){
 	html=html+'</tbody>'
 	html=html+"</table>";
 	$("#TheGrades").html(html);
+	$("#WaitBtn").hide();
 	$("#TheGrades").show();
 	setTimeout(function(){ 
 		for (i=1;i<LessonList.length;i++){
