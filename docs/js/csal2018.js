@@ -381,9 +381,11 @@ function GetTheEventAssigned() {
   });
 
   $("#PauseBtn").click(function () {
+    $("#SetupBtn").hide();
     var buttonFaceValue = $("#PauseBtn").text();
     if (buttonFaceValue == "Pause") {
       $("#PauseBtn").html("Continue");
+      $("#SetupBtn").show();
       $("#FeedBackBtn").show();
       //	$("#ScoreBtn").show();
       if (allowediting) {

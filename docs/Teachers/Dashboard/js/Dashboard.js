@@ -313,7 +313,8 @@ function CreateLessonByStudentMatrix() {
             html = html + "<td>" + theValue + "</td>";
  //           console.log(theValue)
           } else {
-            html = html + "<td></td>";
+            theValue = "<button onclick='Sendmsg(\"" + cellID + "\");' class='btn' style='background-color: yellow' >&#x2709;</button>";
+            html = html + "<td> "+theValue+"</td>";
           }
           theValue = "";
 
