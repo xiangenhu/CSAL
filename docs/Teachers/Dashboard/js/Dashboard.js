@@ -314,10 +314,12 @@ function CreateLessonByStudentMatrix() {
  //           console.log(theValue)
           } else {
             var TheCheckID="";
+            /*
             var TheCheckboxID={Learner:performanceInfo.Learner,
                                Lesson:performanceInfo.Lesson,
                                CellID:TheCheckID}
-
+            */
+            var TheCheckboxID={}
             var CheckboxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
             theValue = "<input type = 'checkbox' onchange='AssignLesson(\""+CheckboxIDStr+"\")'> </input>"
             html = html + "<td align='center'> "+theValue+"</td>";
