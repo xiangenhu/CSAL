@@ -243,7 +243,7 @@ function CreateLessonByStudentMatrix() {
 
       // create table
       var html = "<table align='center' class='ReportTable'>";
-      html = html + "<tr><td colspan='2'><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
+      html = html + "<tr><td colspan='3'><p align='center'><button class='btn' onclick='OpenHelpForReprt()'>Understand students' Report</button></p></td>";
 
       for (var j = 0; j < Learners.length; j++) {
         html =
@@ -257,10 +257,12 @@ function CreateLessonByStudentMatrix() {
       var TheCheckboxID = {}
       for (var i = 0; i < Lessons.length; i++) {
         html = html + "<tr>";
+
         var Therow = "";
 
         html = html + "<th nowrap>" + JSON.parse(Lessons[i]).SectionOrder + "</th>";
         html = html + "<th nowrap>" + JSON.parse(Lessons[i]).title + "</th>";
+
 
         for (var k = 0; k < TheRealResponse.length; k++) {
           var Thedetails = JSON.parse(TheRealResponse[k]._id);
@@ -272,12 +274,33 @@ function CreateLessonByStudentMatrix() {
           } else {}
         }
 
+        var the0CheckID = "cell_" + i.toString() + "_-1";
+
+        TheCheckboxID = {
+          Lesson: JSON.parse(Lessons[i]),
+          Learner: null,
+          LessonID:i,
+          AllLessons:Lessons,
+          AllLearners:Learners,
+          LessonsCount:Lessons.length,
+          LearnersCount:Learners.length,
+        }
+        TheCheckboxID.cellID = the0CheckID;
+        var Check0boxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
+        var The0Check = "<input id='" + the0CheckID + "' type = 'checkbox' onchange='AssignLesson(\"" + Check0boxIDStr + "\")'> </input>";
+        html = html + "<td>" + The0Check + "</td>";
+
         for (var j = 0; j < Learners.length; j++) {
 
           var theValue = "";
           TheCheckboxID = {
             Lesson: JSON.parse(Lessons[i]),
-            Learner: JSON.parse(Learners[j])
+            Learner: JSON.parse(Learners[j]),
+            AllLessons:Lessons,
+            AllLearners:Learners,
+            LearnerID:j,
+            LessonsCount:Lessons.length,
+            LearnersCount:Learners.length,
           }
 
           var AgentLink = DisplayStudentLog(
@@ -340,25 +363,26 @@ function CreateLessonByStudentMatrix() {
             var cellCheckBoxID = "cell_" + i.toString() + "_" + j.toString();
             TheCheckboxID.cellID = cellCheckBoxID;
             var CheckboxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
-            
-            var TheEntry=TheAssignmentStatus.filter((item)=>{
-              return ((item.Lesson.mbox==TheCheckboxID.Lesson.guid) && (item.Learner.mbox==TheCheckboxID.Learner.email))
+
+            var TheEntry = TheAssignmentStatus.filter((item) => {
+              return ((item.Lesson.mbox == TheCheckboxID.Lesson.guid) && (item.Learner.mbox == TheCheckboxID.Learner.email))
             })
             theValue = "<input id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
-            if (TheEntry.length>0){
+            if (TheEntry.length > 0) {
               console.log(TheEntry[0]);
-              if (TheEntry[0].result){
+              if (TheEntry[0].result) {
                 theValue = "<input checked id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
               }
             }
 
             html = html + "<td align='center'> " + theValue + "</td>";
 
-           // getAllAssignments(TheCheckboxID.Lesson.guid, TheCheckboxID.Learner.email, cellCheckBoxID);
+            // getAllAssignments(TheCheckboxID.Lesson.guid, TheCheckboxID.Learner.email, cellCheckBoxID);
           }
           theValue = "";
 
         }
+
         html = html + "</tr>";
       }
     }
@@ -398,7 +422,7 @@ function getAssignmentStatus() {
     if (response.length == 0) {
       //  console.log(CellID,"false")
     } else {
-      for (var i=0;i<response.length;i++){
+      for (var i = 0; i < response.length; i++) {
         TheAssignmentStatus.push(response[i]);
         console.log(response[i])
       }
@@ -447,9 +471,29 @@ function getAllAssignments(lesson, Student, CellID) {
 
 function AssignLesson(PerformanceInfo) {
   var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
+  if (ThePerformanceInfo.Lesson.SectionOrder==""){
 
+    var BoxChecked=$("#"+ThePerformanceInfo.cellID).prop('checked');
+    for (var i=0;i<ThePerformanceInfo.LessonsCount;i++){
+      var CellID = "cell_" +i.toString()+"_"+ ThePerformanceInfo.LearnerID.toString() ;
+      $("#"+CellID).prop('checked',BoxChecked);
+
+    }
+    return;
+
+  }
+  if (ThePerformanceInfo.Learner == null) {
+    var BoxChecked=$("#"+ThePerformanceInfo.cellID).prop('checked');
+    for (var j=0;j<ThePerformanceInfo.LearnersCount;j++){
+      var CellID = "cell_" + ThePerformanceInfo.LessonID.toString() + "_" + j.toString();
+      $("#"+CellID).prop('checked',BoxChecked);
+
+    }
+    return
+  }
   var lessonID = ThePerformanceInfo.Lesson;
   var StudentID = ThePerformanceInfo.Learner;
+
   var Assigned = $("#" + ThePerformanceInfo.cellID).prop('checked');
   PostAssignment(lessonID, StudentID, Assigned)
 }
