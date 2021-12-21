@@ -474,10 +474,13 @@ function AssignLesson(PerformanceInfo) {
   if (ThePerformanceInfo.Lesson.SectionOrder==""){
 
     var BoxChecked=$("#"+ThePerformanceInfo.cellID).prop('checked');
-    for (var i=0;i<ThePerformanceInfo.LessonsCount;i++){
+    for (var i=1;i<ThePerformanceInfo.LessonsCount;i++){
+      var TempPerformanceInfo=ThePerformanceInfo;
       var CellID = "cell_" +i.toString()+"_"+ ThePerformanceInfo.LearnerID.toString() ;
       $("#"+CellID).prop('checked',BoxChecked);
-
+      TempPerformanceInfo.CellID=CellID;
+      TempPerformanceInfo.Lesson=JSON.parse(ThePerformanceInfo.AllLessons[i]);
+      AssignLesson(encodeURI(JSON.stringify(TempPerformanceInfo)))
     }
     return;
 
@@ -487,10 +490,15 @@ function AssignLesson(PerformanceInfo) {
     for (var j=0;j<ThePerformanceInfo.LearnersCount;j++){
       var CellID = "cell_" + ThePerformanceInfo.LessonID.toString() + "_" + j.toString();
       $("#"+CellID).prop('checked',BoxChecked);
+      var TempPerformanceInfo=ThePerformanceInfo;
+      TempPerformanceInfo.CellID=CellID;
+      TempPerformanceInfo.Learner=JSON.parse(ThePerformanceInfo.AllLearners[j]);
+      AssignLesson(encodeURI(JSON.stringify(TempPerformanceInfo)))
 
     }
     return
   }
+
   var lessonID = ThePerformanceInfo.Lesson;
   var StudentID = ThePerformanceInfo.Learner;
 
