@@ -374,9 +374,6 @@ function SortLesson(a, b) {
 }
 
 function PostAssignment(lesson,Student,Assigned){
-  console.log(lesson);
-  console.log(Student);
-  console.log(Assigned);
   var actor = {mbox:lesson.guid,name:lesson.title};
   var verb = {id:"https://app.skoonline.org/ITSProfile/AssignLesson","display":{
     "en":"AssignLesson"
@@ -389,7 +386,6 @@ function PostAssignment(lesson,Student,Assigned){
     object:object,
     result:result
   }
-  console.log(JSON.stringify(parts))
   ADL.XAPIWrapper.sendStatement(parts);
 }
 function OpenHelpForReprt() {
