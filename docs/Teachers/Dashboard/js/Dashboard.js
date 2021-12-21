@@ -340,9 +340,21 @@ function CreateLessonByStudentMatrix() {
             var cellCheckBoxID = "cell_" + i.toString() + "_" + j.toString();
             TheCheckboxID.cellID = cellCheckBoxID;
             var CheckboxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
-            theValue = "<input id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>"
+            
+            var TheEntry=TheAssignmentStatus.filter((item)=>{
+              return ((item.Lesson.mbox==TheCheckboxID.Lesson.guid) && (item.Learner.mbox==TheCheckboxID.Learner.email))
+            })
+            theValue = "<input id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
+            if (TheEntry.length>0){
+              console.log(TheEntry[0]);
+              if (TheEntry[0].result){
+                theValue = "<input checked id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
+              }
+            }
+
             html = html + "<td align='center'> " + theValue + "</td>";
-            getAllAssignments(TheCheckboxID.Lesson.guid,TheCheckboxID.Learner.email,cellCheckBoxID);
+
+           // getAllAssignments(TheCheckboxID.Lesson.guid, TheCheckboxID.Learner.email, cellCheckBoxID);
           }
           theValue = "";
 
@@ -359,13 +371,50 @@ function CreateLessonByStudentMatrix() {
   });
 }
 
+var TheAssignmentStatus = [];
+
+function getAssignmentStatus() {
+  var settings = TheLRStheSetting;
+  var data = [{
+      "$match": {
+        "statement.verb.id": "https://app.skoonline.org/ITSProfile/AssignLesson"
+      }
+    },
+    {
+      "$sort": {
+        "statement.timestamp": -1
+      }
+    },
+    {
+      "$project": {
+        "result": "$statement.result.success",
+        "Lesson": "$statement.actor",
+        "Learner": "$statement.object"
+      }
+    }
+  ]
+  settings.data = JSON.stringify(data);
+  $.ajax(settings).done(function (response) {
+    if (response.length == 0) {
+      //  console.log(CellID,"false")
+    } else {
+      for (var i=0;i<response.length;i++){
+        TheAssignmentStatus.push(response[i]);
+        console.log(response[i])
+      }
+    }
+  });
+}
+
+
+
 function getAllAssignments(lesson, Student, CellID) {
   var settings = TheLRStheSetting;
   var data = [{
       "$match": {
-        "statement.actor.mbox":lesson,
+        "statement.actor.mbox": lesson,
         "statement.verb.id": "https://app.skoonline.org/ITSProfile/AssignLesson",
-        "statement.object.mbox":Student
+        "statement.object.mbox": Student
       }
     },
     {
@@ -385,11 +434,11 @@ function getAllAssignments(lesson, Student, CellID) {
   settings.data = JSON.stringify(data);
   $.ajax(settings).done(function (response) {
     if (response.length == 0) {
-    //  console.log(CellID,"false")
+      //  console.log(CellID,"false")
     } else {
-      if (response[0].result){
-      console.log(CellID,response[0].result);
-      $("#"+CellID).prop('checked', true);
+      if (response[0].result) {
+        console.log(CellID, response[0].result);
+        $("#" + CellID).prop('checked', true);
       }
     }
   });
