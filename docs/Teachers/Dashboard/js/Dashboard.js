@@ -19,6 +19,24 @@ var DashboardLRSLink = qs(
   "2a82bdc3-10ff-4a9c-beb9-a6dad906a26f"
 );
 
+
+
+ADL.launch(function (err, launchdata, xAPIWrapper) {
+	if (!err) {
+		wrapper = ADL.XAPIWrapper = xAPIWrapper;
+		console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+	} else {
+		wrapper = ADL.XAPIWrapper;
+		wrapper.changeConfig({
+			endpoint: TheLRSURL,
+			user: TheLRSLogin,
+			password: theLRSPassword
+		});
+		console.log("--- content statically configured ---\n", wrapper.lrs);
+	}
+}, true);
+
+
 function DisplayStudentLog(StudentID, name) {
   var TheDate = Date.now();
   var last24hurs = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
@@ -235,7 +253,7 @@ function CreateLessonByStudentMatrix() {
         "</p></th>";
       }
       html = html + "</tr>";
-
+      var TheCheckboxID={}
       for (var i = 0; i < Lessons.length; i++) {
         html = html + "<tr>";
         var Therow = "";
@@ -254,7 +272,9 @@ function CreateLessonByStudentMatrix() {
         }
 
         for (var j = 0; j < Learners.length; j++) {
+         
           var theValue = "";
+          TheCheckboxID={Lesson:JSON.parse(Lessons[i]),Learner:JSON.parse(Learners[j])}
 
           var AgentLink = DisplayStudentLog(
             JSON.parse(Learners[j]).email,
@@ -313,15 +333,10 @@ function CreateLessonByStudentMatrix() {
             html = html + "<td>" + theValue + "</td>";
  //           console.log(theValue)
           } else {
-            var TheCheckID="";
-            /*
-            var TheCheckboxID={Learner:performanceInfo.Learner,
-                               Lesson:performanceInfo.Lesson,
-                               CellID:TheCheckID}
-            */
-            var TheCheckboxID={}
+            var cellCheckBoxID="cell_"+i.toString()+"_"+j.toString();
+            TheCheckboxID.cellID=cellCheckBoxID;
             var CheckboxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
-            theValue = "<input type = 'checkbox' onchange='AssignLesson(\""+CheckboxIDStr+"\")'> </input>"
+            theValue = "<input id='"+cellCheckBoxID+"' type = 'checkbox' onchange='AssignLesson(\""+CheckboxIDStr+"\")'> </input>"
             html = html + "<td align='center'> "+theValue+"</td>";
           }
           theValue = "";
@@ -341,11 +356,10 @@ function CreateLessonByStudentMatrix() {
 
 function AssignLesson(PerformanceInfo){
   var ThePerformanceInfo= JSON.parse(decodeURI(PerformanceInfo));
-  console.log(ThePerformanceInfo);
-  return;
-  var lessonID;
-  var StudentID;
-  var Assigned;
+ 
+  var lessonID=ThePerformanceInfo.Lesson;
+  var StudentID=ThePerformanceInfo.Learner;
+  var Assigned=$("#"+ThePerformanceInfo.cellID).prop('checked');
   PostAssignment(lessonID,StudentID,Assigned)
 }
 
@@ -359,12 +373,24 @@ function SortLesson(a, b) {
   return 0;
 }
 
-function PostAssignment(lessonID,StudentID,Assigned){
-  var actor = {mbox:lessonID,name:LessonName};
-  var verb = {id:"https://app.skoonline.org/ITSProfile/AssignLesson"}
-  var object = {id:StudentID};
-  var result = {Success:Assigned}
-
+function PostAssignment(lesson,Student,Assigned){
+  console.log(lesson);
+  console.log(Student);
+  console.log(Assigned);
+  var actor = {mbox:lesson.guid,name:lesson.title};
+  var verb = {id:"https://app.skoonline.org/ITSProfile/AssignLesson","display":{
+    "en":"AssignLesson"
+    }}
+  var object = {objectType: "Agent",mbox:Student.email,name:Student.name};
+  var result = {success:Assigned};
+  var parts = {
+    actor:actor,
+    verb:verb,
+    object:object,
+    result:result
+  }
+  console.log(JSON.stringify(parts))
+  ADL.XAPIWrapper.sendStatement(parts);
 }
 function OpenHelpForReprt() {
   window.open("https://docs.google.com/presentation/d/e/2PACX-1vQmiAzgVmYO2jLiaDEmNwxUVHORUaaEhbrilujeY3iIlo0NZ92Cix4HSyOnD4iGtx5RUt-kFwPnYaiW/pub?start=false&loop=false&delayms=3000", "_new")
