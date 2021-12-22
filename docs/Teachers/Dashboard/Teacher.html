@@ -78,17 +78,12 @@
 		<script>
 			var LessonInforPointer =
 				"2PACX-1vSWw3xjkqyB2Tq7ITTL0OPaCWtSvDzH5HOQYpAYpSI6jkmd-UiVqJbMHVu79GhW7yxV0h6v-T5PLvsT";
+				var teacherID = qs("teacherID", "");
+				var classID = qs("classID", "ARCCLASS01_2_1");
 			$(document).ready(function () {
 				loadLRSScriptsData();
 				getAssignmentStatus();
-				GetGoogleSheetData(LessonInforPointer, "GetLessonsInfo", "7");
-
-				var teacherID = qs("teacherID", "");
-				var classID = qs("classID", "ARCCLASS01_2_1");
-				if (teacherID != "1" && classID != "1") {
-					$("#studentsInfor").show();
-					GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
-				}
+				
 			});
 		</script>
 		<button id="WaitBtn" class="btn">Wait...</button>
