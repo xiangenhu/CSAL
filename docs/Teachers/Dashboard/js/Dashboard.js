@@ -367,6 +367,8 @@ function CreateLessonByStudentMatrix() {
             var TheEntry = TheAssignmentStatus.filter((item) => {
               return ((item.Lesson.mbox == TheCheckboxID.Lesson.guid) && (item.Learner.mbox == TheCheckboxID.Learner.email))
             })
+
+
             theValue = "<input id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
             if (TheEntry.length > 0) {
               console.log(TheEntry[0]);
@@ -398,7 +400,55 @@ function CreateLessonByStudentMatrix() {
 
 var TheAssignmentStatus = [];
 
+
 function getAssignmentStatus() {
+  var settings = TheLRStheSetting;
+  var data = [{
+      "$match": {
+        "statement.verb.id": "https://app.skoonline.org/ITSProfile/AssignLesson"
+      }
+    },
+    {
+      "$group": {
+        "_id": "$statement.result",
+        "count": {
+          "$sum": 1
+        },
+        "lastTime": {
+          "$max": "$statement.timestamp"
+        }
+      }
+    }
+  ]
+  settings.data = JSON.stringify(data);
+  $.ajax(settings).done(function (response) {
+    if (response.length == 0) {
+      //  console.log(CellID,"false")
+    } else {
+      for (var i = 0; i < response.length; i++) {
+        if (response[i]._id.response != null) {
+          var TheAssignemt = JSON.parse(response[i]._id.response);
+          var theAssunmentObj = {
+            result: response[i]._id.success,
+            Lesson: TheAssignemt.actor,
+            Learner: TheAssignemt.object
+          }
+          if (theAssunmentObj.Lesson!=null){
+          TheAssignmentStatus.push(theAssunmentObj);
+          }
+        }
+      }
+  //    return;
+    }
+    GetGoogleSheetData(LessonInforPointer, "GetLessonsInfo", "7");
+    if (teacherID != "1" && classID != "1") {
+      $("#studentsInfor").show();
+      GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
+    }
+  });
+}
+
+function getAssignmentStatusOld() {
   var settings = TheLRStheSetting;
   var data = [{
       "$match": {
@@ -429,10 +479,10 @@ function getAssignmentStatus() {
       }
     }
     GetGoogleSheetData(LessonInforPointer, "GetLessonsInfo", "7");
-				if (teacherID != "1" && classID != "1") {
-					$("#studentsInfor").show();
-					GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
-				}
+    if (teacherID != "1" && classID != "1") {
+      $("#studentsInfor").show();
+      GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
+    }
   });
 }
 
@@ -476,11 +526,14 @@ function getAllAssignments(lesson, Student, CellID) {
 }
 
 function AssignLesson(PerformanceInfo) {
+
   var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
   var TempPerformanceInfo = ThePerformanceInfo;
+
   var BoxChecked = $("#" + ThePerformanceInfo.cellID).prop('checked');
 
 
+  $("#" + ThePerformanceInfo.cellID).attr("disabled", true);
   if (ThePerformanceInfo.Lesson.SectionOrder == "") {
     for (var i = 1; i < ThePerformanceInfo.LessonsCount; i++) {
       var CellID = "cell_" + i.toString() + "_" + ThePerformanceInfo.LearnerID.toString();
@@ -491,7 +544,7 @@ function AssignLesson(PerformanceInfo) {
           TempPerformanceInfo.CellID = CellID;
           AssignLesson(encodeURI(JSON.stringify(TempPerformanceInfo)));
           $("#" + CellID).prop('checked', BoxChecked);
-//          $("#" + CellID).attr("disabled", true);
+          $("#" + CellID).attr("disabled", true);
         }
       } catch (error) {
 
@@ -510,7 +563,7 @@ function AssignLesson(PerformanceInfo) {
           TempPerformanceInfo.CellID = CellID;
           AssignLesson(encodeURI(JSON.stringify(TempPerformanceInfo)));
           $("#" + CellID).prop('checked', BoxChecked);
-//          $("#" + CellID).attr("disabled", true);
+          $("#" + CellID).attr("disabled", true);
         }
 
       } catch (error) {
@@ -519,13 +572,18 @@ function AssignLesson(PerformanceInfo) {
     }
     return
   }
-
   var lessonID = ThePerformanceInfo.Lesson;
   var StudentID = ThePerformanceInfo.Learner;
 
   var Assigned = $("#" + ThePerformanceInfo.cellID).prop('checked');
-  PostAssignment(lessonID, StudentID, Assigned);
-//  $("#" + ThePerformanceInfo.cellID).attr("disabled", true);
+  var ResponseUniqueStr = JSON.stringify({
+    lesson: lessonID.guid,
+    learner: StudentID.email,
+    Assigned: Assigned
+  });
+
+  PostAssignment(lessonID, StudentID, Assigned, ResponseUniqueStr);
+
 }
 
 function SortLesson(a, b) {
@@ -538,7 +596,7 @@ function SortLesson(a, b) {
   return 0;
 }
 
-function PostAssignment(lesson, Student, Assigned) {
+function PostAssignment(lesson, Student, Assigned, UniqueStr) {
   var actor = {
     mbox: lesson.guid,
     name: lesson.title
@@ -554,8 +612,14 @@ function PostAssignment(lesson, Student, Assigned) {
     mbox: Student.email,
     name: Student.name
   };
+
+  var TheUniqueStr = JSON.stringify({
+    actor: actor,
+    object: object
+  })
   var result = {
-    success: Assigned
+    success: Assigned,
+    response: TheUniqueStr
   };
   var parts = {
     actor: actor,
