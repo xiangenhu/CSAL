@@ -31,7 +31,7 @@ ADL.launch(function (err, launchdata, xAPIWrapper) {
       user: TheLRSLogin,
       password: theLRSPassword
     });
-    console.log("--- content statically configured ---\n", wrapper.lrs);
+  //  console.log("--- content statically configured ---\n", wrapper.lrs);
   }
 }, true);
 
@@ -344,14 +344,12 @@ function CreateLessonByStudentMatrix() {
               var EncodedStr = encodeURI(JSON.stringify(performanceInfo));
               cellID = EncodedStr;
               if (TheRealResponse[k].sum >= LessonInfor.total) {
-                console.log(">>>" + TheRealResponse[k].sum, LessonInfor.total);
                 if (TheRealResponse[k].Average >= LessonInfor.passing) {
                   theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: green' >&#10003;</button>";
                 } else {
                   theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: red' >&#10008;</button>";
                 }
               } else {
-                console.log("<<<" + TheRealResponse[k].sum, LessonInfor.total);
                 theValue = "<button onclick='togglebtn(\"" + cellID + "\");' class='btn' style='background-color: grey' >&#x27A4;</button>";
               }
             } else {}
@@ -371,7 +369,6 @@ function CreateLessonByStudentMatrix() {
 
             theValue = "<input id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
             if (TheEntry.length > 0) {
-              console.log(TheEntry[0]);
               if (TheEntry[0].result) {
                 theValue = "<input checked id='" + cellCheckBoxID + "' type = 'checkbox' onchange='AssignLesson(\"" + CheckboxIDStr + "\")'> </input>";
               }
@@ -425,6 +422,7 @@ function getAssignmentStatus() {
     if (response.length == 0) {
       //  console.log(CellID,"false")
     } else {
+      response.sort(sortGroupingTime)
       for (var i = 0; i < response.length; i++) {
         if (response[i]._id.response != null) {
           var TheAssignemt = JSON.parse(response[i]._id.response);
@@ -438,7 +436,6 @@ function getAssignmentStatus() {
           }
         }
       }
-  //    return;
     }
     GetGoogleSheetData(LessonInforPointer, "GetLessonsInfo", "7");
     if (teacherID != "1" && classID != "1") {
@@ -446,6 +443,16 @@ function getAssignmentStatus() {
       GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
     }
   });
+}
+
+function sortGroupingTime(a,b){
+  if ( a.lastTime > b.lastTime ){
+    return -1;
+  }
+  if ( a.lastTime < b.lastTime ){
+    return 1;
+  }
+  return 0;
 }
 
 function getAssignmentStatusOld() {
