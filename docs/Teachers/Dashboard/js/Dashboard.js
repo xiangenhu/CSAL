@@ -287,8 +287,13 @@ function CreateLessonByStudentMatrix() {
         }
         TheCheckboxID.cellID = the0CheckID;
         var Check0boxIDStr = encodeURI(JSON.stringify(TheCheckboxID));
+
         var The0Check = "<input id='" + the0CheckID + "' type = 'checkbox' onchange='AssignLesson(\"" + Check0boxIDStr + "\")'> </input>";
+        if (the0CheckID=="cell_0_-1"){
+          html = html + "<th></th>";
+        }else{
         html = html + "<th>" + The0Check + "</th>";
+        }
 
         for (var j = 0; j < Learners.length; j++) {
 
@@ -536,10 +541,12 @@ function AssignLesson(PerformanceInfo) {
 
   var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
   var TempPerformanceInfo = ThePerformanceInfo;
-
+  if (ThePerformanceInfo.cellID=="cell_0_-1"){
+    return;
+  }
   var BoxChecked = $("#" + ThePerformanceInfo.cellID).prop('checked');
 
-
+  
   $("#" + ThePerformanceInfo.cellID).attr("disabled", true);
   if (ThePerformanceInfo.Lesson.SectionOrder == "") {
     for (var i = 1; i < ThePerformanceInfo.LessonsCount; i++) {
@@ -783,7 +790,15 @@ function togglebtn(PerformanceInfo) {
   var LessonPassVar = encodeURI(JSON.stringify(TheObj))
   var detailInformationLink = "<button class='btn' style='background-color: grey' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>here</button>"
   var ThePopupInfor = "";
-
+  var LeanerFirstName="<b>"+ThePerformanceInfo.Learner.split(":")[1].split("@")[0]+"</b>"
+  var header = "Learner: " + LeanerFirstName;
+  var QuickMsgLink="Quick message to "+LeanerFirstName+" (this lesson only <input type='checkbox'></input>)";
+  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey'>Previous Message</button>";
+  QuickMsgLink=QuickMsgLink+"<br/> <input class='TheQuickMessage' id='TheQUickMsg'></input>";
+  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey'>Submit</button>";
+  
+  
+  
   ThePopupInfor = ThePopupInfor + "<ul>";
   ThePopupInfor = ThePopupInfor + "<li>Performance Overview</li><ul>";
   ThePopupInfor = ThePopupInfor + "<li>Performance on the Most Recent Attempt: " + ReturnDate(TheRealResponse.End) + " </li>";
@@ -794,11 +809,12 @@ function togglebtn(PerformanceInfo) {
   ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse.Average.toFixed(2) + " </li>";
   ThePopupInfor = ThePopupInfor + "</ul>";
   ThePopupInfor = ThePopupInfor + "<li> Click " + detailInformationLink + " for more Details </li>";
+  ThePopupInfor = ThePopupInfor + "<li> " + QuickMsgLink + "</li>";
   ThePopupInfor = ThePopupInfor + "</ul>";
   console.log(ThePopupInfor);
 
   var bodytext = ThePopupInfor;
-  var header = "Learner: " + ThePerformanceInfo.Learner.split(":")[1].split("@")[0];
+  
   var footer = "Lesson: " + ThePerformanceInfo.Lesson;
   var targetwin = "popupWin";
   OpenPopUpDetails(header, footer, bodytext, targetwin);
