@@ -434,7 +434,8 @@ function getAssignmentStatus() {
           var theAssunmentObj = {
             result: response[i]._id.success,
             Lesson: TheAssignemt.actor,
-            Learner: TheAssignemt.object
+            Learner: TheAssignemt.object,
+            Time:response[i].lastTime
           }
           if (theAssunmentObj.Lesson!=null){
           TheAssignmentStatus.push(theAssunmentObj);

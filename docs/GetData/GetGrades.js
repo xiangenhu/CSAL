@@ -396,6 +396,8 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 				if (TheAssigned[0].result){
 					html = "Assigned";
 				    $("#" + ActionFiled).html(startBtn);
+					var AssignedDate = " Assigned at <span class='numbers'>" + ReturnDate(TheAssigned[0].Time) + "</span>";
+					$("#" + LogFiled).html(AssignedDate);
 				}
 			}
 			$("#" + StatusFiled).html(html);
@@ -926,7 +928,7 @@ function CreateTable(LessonList, StudentList) {
 	html = html + "<th>The Lessons </th>";
 	html = html + "<th>Action</th>";
 	html = html + "<th>Status</th>";
-//	html = html + "<th>Log </th>";
+	html = html + "<th>Note </th>";
 
 	html = html + "</tr>";
 	html = html + "</thead>";
@@ -946,7 +948,7 @@ function CreateTable(LessonList, StudentList) {
 			var LogFiled = "Lscore_" + i.toString() + "_0";
 			html = html + "<td><span id='" + ActionFiled + "'>" + "" + "</span></td>";
 			html = html + "<td><span id='" + StatusFiled + "'>" + "" + "</span></td>";
-//			html = html + "<td><span id='" + LogFiled + "'>" + "" + "</span></td>";
+			html = html + "<td><span id='" + LogFiled + "'>" + "" + "</span></td>";
 		}
 		html = html + "</tr>";
 	}
@@ -965,7 +967,7 @@ function CreateTable(LessonList, StudentList) {
 
 				if (ThestudentID != "") {
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
-				//	GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, LogFiled);
+					GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, LogFiled);
 				} else {
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
 				}
@@ -1216,10 +1218,10 @@ function GetStudentRecord(student, CourseGUID, target) {
 			} else if (failTime != null) {
 				buttonface = "Try it again.";
 			}
-			var html = "<ul>";
-			html = html + "<li>Last time on this lesson: <span class='numbers'>" + ReturnDate(last) + "</span>";
-			html = html + "<li>First time on this lesson : <span class='numbers'>" + ReturnDate(first) + "</span>";
-			html = html + "</ul>";
+			var html = "";
+			html = html + "Last time on this lesson: <span class='numbers'>" + ReturnDate(last) + "</span>";
+		//	html = html + "<li>First time on this lesson : <span class='numbers'>" + ReturnDate(first) + "</span>";
+		//	html = html + "</ul>";
 			$("#" + target).html(html);
 			var LinkObj = {
 				"student": student,
@@ -1795,7 +1797,8 @@ function getAssignmentStatus(email) {
 					var theAssunmentObj = {
 						result: response[i]._id.success,
 						Lesson: TheAssignemt.actor,
-						Learner: TheAssignemt.object
+						Learner: TheAssignemt.object,
+						Time:response[i].lastTime
 					}
 					if (theAssunmentObj.Lesson != null) {
 						TheAssignmentStatus.push(theAssunmentObj);
