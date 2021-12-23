@@ -610,6 +610,37 @@ function SortLesson(a, b) {
   return 0;
 }
 
+
+
+function PostMsg(lesson, Student,Msg) {
+  var actor = {
+    mbox: lesson.guid,
+    name: lesson.title
+  };
+  var verb = {
+    id: "https://app.skoonline.org/ITSProfile/PostMsg",
+    "display": {
+      "en": "PostMsg"
+    }
+  }
+  var object = {
+    objectType: "Agent",
+    mbox: Student.email,
+    name: Student.name
+  };
+
+  var result = {
+    response: Msg
+  };
+  var parts = {
+    actor: actor,
+    verb: verb,
+    object: object,
+    result: result
+  }
+  ADL.XAPIWrapper.sendStatement(parts);
+}
+
 function PostAssignment(lesson, Student, Assigned, UniqueStr) {
   var actor = {
     mbox: lesson.guid,
@@ -776,7 +807,7 @@ function LessonStudentDetailsNew(TheLessonID, TheLessonandStudent, Target) {
 }
 
 function togglebtn(PerformanceInfo) {
-  console.log(JSON.parse(decodeURI(PerformanceInfo)));
+//  console.log(JSON.parse(decodeURI(PerformanceInfo)));
   var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
   TheRealResponse = ThePerformanceInfo.ThePerformance;
   var TheObj = {
@@ -787,15 +818,31 @@ function togglebtn(PerformanceInfo) {
     Student: ThePerformanceInfo.Learner,
     Name: ThePerformanceInfo.LRSInfor.learnerName
   }
+
+  var TheObjForMSG = {
+    Lesson: {
+      title: ThePerformanceInfo.Lesson,
+      guid: ThePerformanceInfo.LRSInfor.lesson
+    },
+    Student:{
+      email:ThePerformanceInfo.Learner,
+      name:ThePerformanceInfo.LRSInfor.learnerName,
+    }
+  }
   var LessonPassVar = encodeURI(JSON.stringify(TheObj))
   var detailInformationLink = "<button class='btn' style='background-color: grey' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>here</button>"
   var ThePopupInfor = "";
-  var LeanerFirstName="<b>"+ThePerformanceInfo.Learner.split(":")[1].split("@")[0]+"</b>"
+  var LeanerFirstName=ThePerformanceInfo.Learner.split(":")[1].split("@")[0];
   var header = "Learner: " + LeanerFirstName;
-  var QuickMsgLink="Quick message to "+LeanerFirstName+" (this lesson only <input type='checkbox'></input>)";
-  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey'>Previous Message</button>";
-  QuickMsgLink=QuickMsgLink+"<br/> <input class='TheQuickMessage' id='TheQUickMsg'></input>";
-  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey'>Submit</button>";
+
+  var TheMessageID=LeanerFirstName+"_"+ThePerformanceInfo.LRSInfor.lesson.split("mailto:")[1].split("@")[0].split("-").join("_");
+  TheObjForMSG.TheMessageID=TheMessageID;
+  var TheObjStr=encodeURI(JSON.stringify(TheObjForMSG));
+
+  var QuickMsgLink="Quick message to <b>"+LeanerFirstName+"</b> (this lesson only <input id='Type_"+TheMessageID+"' type='checkbox'></input>)";
+  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey' onclick='GetMessages(\""+TheObjStr+"\")'>Previous Message</button>";
+  QuickMsgLink=QuickMsgLink+"<br/> <input class='TheQuickMessage' id='"+TheMessageID+"'></input>";
+  QuickMsgLink=QuickMsgLink+" <button class='btn' style='background-color: grey' id='btn_"+TheMessageID+"' onclick='SubmitMsg(\""+TheObjStr+"\")'>Submit</button>";
   
   
   
@@ -822,6 +869,20 @@ function togglebtn(PerformanceInfo) {
   // OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb);
 }
 
+function GetMessages(PerformanceInfo) {
+  var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
+  console.log(ThePerformanceInfo);
+}
+function SubmitMsg(PerformanceInfo) {
+  var ThePerformanceInfo = JSON.parse(decodeURI(PerformanceInfo));
+  console.log(ThePerformanceInfo);
+  var Lesson=ThePerformanceInfo.Lesson;
+  var Student=ThePerformanceInfo.Student;
+  var MSGObj={msg:$("#"+ThePerformanceInfo.TheMessageID).val(),
+              current:$("#Type_"+ThePerformanceInfo.TheMessageID).prop('checked')}
+  PostMsg(Lesson, Student,JSON.stringify(MSGObj));
+  $("#btn_"+ThePerformanceInfo.TheMessageID).attr("disabled",true);
+}
 
 function OpenPopUpDetails(header, footer, bodytext, targetwin) {
   //   	$("#"+targetwin).show();
