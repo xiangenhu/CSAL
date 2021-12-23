@@ -372,12 +372,33 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 			Name: Name
 		}
 		var LessonPassVar = encodeURI(JSON.stringify(TheObj))
-		var detailInformationLink = "<button class='btn' style='background-color: grey' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>?</button>"
-		var failedBtn = "<button class='btn' class='btn' style='background-color: red' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>?</button>"
-		var scoreFiled = "Ascore_" + i.toString() + "_" + j.toString();
+		var detailInformationLink = "<button class='btn' style='background-color: grey' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>&#63;</button>";
+		var failedBtn = "<button class='btn' class='btn' style='background-color: red' onclick='DetailsS_L(\"" + LessonPassVar + "\")'>&#63;</button>";
+		var startBtn = "<button class='btn' class='btn' style='background-color: green' onclick='StartS_L(\"" + LessonPassVar + "\")'>➤</button>";
+		var StopIcon = "<button class='btn' class='btn' style='background-color: grey'>&#10499;</button>";
+
+		var StatusFiled = "Sscore_" + i.toString() + "_0";
+		var ActionFiled = "Ascore_" + i.toString() + "_0";
+		var LogFiled = "Lscore_" + i.toString() + "_0";
+
 		var TheLessonRowID = "Row_" + i.toString();
 		if (response.length == 0) {
-			$("#" + scoreFiled).html(" ");
+
+
+			var html = "Not Assigned";
+			
+			$("#" + ActionFiled).html(StopIcon);
+
+			var TheAssigned=TheAssignmentStatus.filter((item)=>{
+				return (item.Lesson.mbox.indexOf(Lesson.GUID)>-1);
+			});
+			if (TheAssigned.length>0){
+				if (TheAssigned[0].result){
+					html = "Assigned";
+				    $("#" + ActionFiled).html(startBtn);
+				}
+			}
+			$("#" + StatusFiled).html(html);
 			return;
 		} else {
 			var AllVerbs = [];
@@ -388,21 +409,25 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 			//			console.log(AllVerbs);
 			$("#" + TheLessonRowID).show();
 			if (AllVerbs.includes("completed")) {
-				var BtnStr = "<span class='btn' style='background-color: green' >&#10003;</span>Passed"
-				$("#" + scoreFiled).html(BtnStr);
+				var BtnStr = "<span class='btn' style='background-color: green' >&#10003;</span>"
+				$("#" + ActionFiled).html(BtnStr);
+				$("#" + StatusFiled).html("Passed");
 				return;
 			}
 			if (AllVerbs.includes("failed")) {
-				$("#" + scoreFiled).html(+failedBtn + "failed");
+				$("#" + ActionFiled).html(failedBtn);
+				$("#" + StatusFiled).html("failed");
 				return;
 			}
 
 			if (AllVerbs.includes("action")) {
-				$("#" + scoreFiled).html(detailInformationLink + "in progress");
+				$("#" + ActionFiled).html(startBtn);
+				$("#" + StatusFiled).html("in progress "+detailInformationLink);
 				return;
 			}
 			if (AllVerbs.includes("start")) {
-				$("#" + scoreFiled).html("started ");
+				$("#" + ActionFiled).html(startBtn);
+				$("#" + StatusFiled).html("started ");
 				return;
 			}
 		}
@@ -899,8 +924,9 @@ function CreateTable(LessonList, StudentList) {
 	html = html + "<thead class='TheHeader'>"
 	html = html + "<tr><th>Section </th>";
 	html = html + "<th>The Lessons </th>";
+	html = html + "<th>Action</th>";
 	html = html + "<th>Status</th>";
-	html = html + "<th>Log </th>";
+//	html = html + "<th>Log </th>";
 
 	html = html + "</tr>";
 	html = html + "</thead>";
@@ -914,11 +940,13 @@ function CreateTable(LessonList, StudentList) {
 		} else {
 			html = html + "<tr id='" + TheLessonRowID + "'>";
 			html = html + "<th>" + LessonList[i].Section + "</span></th>";
-			html = html + "<th nowrap>" + LessonList[i].ALessonTitle + "</td>";
-			var scoreFiled = "score_" + i.toString() + "_0";
+			html = html + "<th nowrap>" + LessonList[i].ALessonTitle + "</th>";
+			var StatusFiled = "Sscore_" + i.toString() + "_0";
 			var ActionFiled = "Ascore_" + i.toString() + "_0";
+			var LogFiled = "Lscore_" + i.toString() + "_0";
 			html = html + "<td><span id='" + ActionFiled + "'>" + "" + "</span></td>";
-			html = html + "<td><span id='" + scoreFiled + "'>" + "" + "</span></td>";
+			html = html + "<td><span id='" + StatusFiled + "'>" + "" + "</span></td>";
+//			html = html + "<td><span id='" + LogFiled + "'>" + "" + "</span></td>";
 		}
 		html = html + "</tr>";
 	}
@@ -930,11 +958,14 @@ function CreateTable(LessonList, StudentList) {
 	setTimeout(function () {
 		for (i = 1; i < LessonList.length; i++) {
 			for (j = 0; j < StudentList.length; j++) {
-				var scoreFiled = "score_" + i.toString() + "_" + j.toString();
-				//				console.log(scoreFiled);
+				var StatusFiled = "Sscore_" + i.toString() + "_0";
+				var ActionFiled = "Ascore_" + i.toString() + "_0";
+				var LogFiled = "Lscore_" + i.toString() + "_0";
+
+
 				if (ThestudentID != "") {
-					GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, scoreFiled);
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
+				//	GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, LogFiled);
 				} else {
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
 				}
@@ -1136,13 +1167,20 @@ function GetStudentRecord(student, CourseGUID, target) {
 				"student": student,
 				"guid": CourseGUID
 			}
-			var html = "<p align='right'>Not yet started</p>";
-			$("#A" + target).html(html);
-            var ThemailboxOfLesson="mailto:"+CourseGUID
+			var html = "<p align='right'>Not Assigned</p>";
+
 			var TheAssigned=TheAssignmentStatus.filter((item)=>{
-				return item.Lesson.mbox.indexOf(CourseGUID)>-1;
+				return (item.Lesson.mbox.indexOf(CourseGUID)>-1);
 			});
-			console.log(TheAssigned[0]);
+			if (TheAssigned.length>0){
+				if (TheAssigned[0].result){
+				    console.log(TheAssigned[0]);
+					html = "<p align='right'>Assigned</p>";
+				}
+			}
+
+            console.log(target, CourseGUID)
+			$("#A" + target).html(html);
 			return;
 		} else {
 			var last;
@@ -1764,6 +1802,7 @@ function getAssignmentStatus(email) {
 					}
 				}
 			}
+			console.log(TheAssignmentStatus)
 			GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
 		}
 	});
