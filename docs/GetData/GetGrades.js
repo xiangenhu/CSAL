@@ -1,6 +1,6 @@
 var TheLessions = [];
 var StudentList = [];
-
+var launchURL=qs("launchURL","https://csal.autotutor.org/index.html?pw=1024&ph=76&NS=1&GL=2");
 
 var TheLessonPages = [];
 var TheLearnerResponses = [];
@@ -305,6 +305,18 @@ function GetCount(ArrayStr) {
 		html = html + "<li> <span class='numbers'>[" + TheCount[i].toString() + "]</span> " + newArray[i] + "</li>"
 	}
 	return html;
+}
+
+function StartS_L(Lesson_and_Student){
+	var thePassedObj = JSON.parse(decodeURI(Lesson_and_Student))
+	console.log(thePassedObj);
+	console.log(document.location.search);
+	var LessonID = "&LN=Lesson"+thePassedObj.Lesson.LessonID;
+	var guid = "&guid="+thePassedObj.Lesson.GUID;
+	var lessonTitle="&lessonTitle="+encodeURIComponent(thePassedObj.Lesson.ALessonTitle);
+	var URL=launchURL+"&"+document.location.search.split("?")[1]+LessonID+guid+lessonTitle;
+	console.log(launchURL+"&"+document.location.search.split("?")[1]+LessonID+guid+lessonTitle);
+	window.open(URL,"LaunchARC");
 }
 
 function DetailsS_L(Lesson_and_Student) {

@@ -221,7 +221,8 @@ function GetLessons(json){
 					json[i].CMovie,
 					json[i].Description,
 					json[i].Category,
-          json[i].Section
+          json[i].Section,
+          json[i].LessonID
         ]
 	   console.log(row);
 	   TheLessions.push(row);
@@ -230,7 +231,7 @@ function GetLessons(json){
 
 function GetSpreadSheetARC(GoogleID, GoogleSheet) {
 	var theUrl = "https://tools.x-in-y.com/gs?json=";
-	var theObj = { id: GoogleID, page: GoogleSheet,Pub:"1" };
+	var theObj = { id: GoogleID, page: GoogleSheet,Pub:"0" };
 	console.log(GoogleID);
 	theUrl = theUrl + JSON.stringify(theObj);
 	var xmlHttp = new XMLHttpRequest();
