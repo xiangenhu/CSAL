@@ -371,8 +371,9 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 			"$group": {
 				"_id": "$statement.verb.id",
 				"TotalScore": {
-					"$sum": 1
-				}
+					"$sum": 1, 
+				},
+				"time":{"$max":"$statement.timestamp"}
 			}
 		}
 	];
@@ -393,6 +394,11 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 		var ActionFiled = "Ascore_" + i.toString() + "_0";
 		var LogFiled = "Lscore_" + i.toString() + "_0";
 
+		var StatusField = "Sscore_" + i.toString() + "_0";
+			var ActionField = "Ascore_" + i.toString() + "_0";
+			var LogField = "Lscore_" + i.toString() + "_0";
+			var TimeField = "Tscore_" + i.toString() + "_0";
+
 		var TheLessonRowID = "Row_" + i.toString();
 		if (response.length == 0) {
 
@@ -408,13 +414,15 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 				if (TheAssigned[0].result){
 					html = "Assigned";
 				    $("#" + ActionFiled).html(startBtn);
-					var AssignedDate = " Assigned at <span class='numbers'>" + ReturnDate(TheAssigned[0].Time) + "</span>";
+					var AssignedDate = " Assigned at";
 					$("#" + LogFiled).html(AssignedDate);
+					$("#" + TimeField).html( ReturnDate(TheAssigned[0].Time) );
 				}
 			}
 			$("#" + StatusFiled).html(html);
 			return;
 		} else {
+			var timeStamp=response[0].time;
 			var AllVerbs = [];
 			for (var k = 0; k < response.length; k++) {
 				var verb = response[k]._id;
@@ -426,22 +434,26 @@ function GetPassFailInProgress(Lesson, Student, Name, i, j) {
 				var BtnStr = "<span class='btn' style='background-color: green' >&#10003;</span>"
 				$("#" + ActionFiled).html(BtnStr);
 				$("#" + StatusFiled).html("Passed");
+			//	$("#" + TimeField).html( ReturnDate(timeStamp));
 				return;
 			}
 			if (AllVerbs.includes("failed")) {
 				$("#" + ActionFiled).html(failedBtn);
 				$("#" + StatusFiled).html("failed");
+			//	$("#" + TimeField).html( ReturnDate(timeStamp));
 				return;
 			}
 
 			if (AllVerbs.includes("action")) {
 				$("#" + ActionFiled).html(startBtn);
 				$("#" + StatusFiled).html("in progress "+detailInformationLink);
+			//	$("#" + TimeField).html( ReturnDate(timeStamp));
 				return;
 			}
 			if (AllVerbs.includes("start")) {
 				$("#" + ActionFiled).html(startBtn);
 				$("#" + StatusFiled).html("started ");
+			//	$("#" + TimeField).html( ReturnDate(timeStamp));
 				return;
 			}
 		}
@@ -941,6 +953,7 @@ function CreateTable(LessonList, StudentList) {
 	html = html + "<th>Action</th>";
 	html = html + "<th>Status</th>";
 	html = html + "<th>Note </th>";
+	html = html + "<th>Time </th>";
 
 	html = html + "</tr>";
 	html = html + "</thead>";
@@ -955,12 +968,14 @@ function CreateTable(LessonList, StudentList) {
 			html = html + "<tr id='" + TheLessonRowID + "'>";
 			html = html + "<th>" + LessonList[i].Section + "</span></th>";
 			html = html + "<th nowrap>" + LessonList[i].ALessonTitle + "</th>";
-			var StatusFiled = "Sscore_" + i.toString() + "_0";
-			var ActionFiled = "Ascore_" + i.toString() + "_0";
-			var LogFiled = "Lscore_" + i.toString() + "_0";
-			html = html + "<td><span id='" + ActionFiled + "'>" + "" + "</span></td>";
-			html = html + "<td><span id='" + StatusFiled + "'>" + "" + "</span></td>";
-			html = html + "<td><span id='" + LogFiled + "'>" + "" + "</span></td>";
+			var StatusField = "Sscore_" + i.toString() + "_0";
+			var ActionField = "Ascore_" + i.toString() + "_0";
+			var LogField = "Lscore_" + i.toString() + "_0";
+			var TimeField = "Tscore_" + i.toString() + "_0";
+			html = html + "<td><span id='" + ActionField + "'>" + "" + "</span></td>";
+			html = html + "<td><span id='" + StatusField + "'>" + "" + "</span></td>";
+			html = html + "<td><span id='" + LogField + "'>" + "" + "</span></td>";
+			html = html + "<td><span id='" + TimeField + "'>" + "" + "</span></td>";
 		}
 		html = html + "</tr>";
 	}
@@ -975,11 +990,12 @@ function CreateTable(LessonList, StudentList) {
 				var StatusFiled = "Sscore_" + i.toString() + "_0";
 				var ActionFiled = "Ascore_" + i.toString() + "_0";
 				var LogFiled = "Lscore_" + i.toString() + "_0";
+				var TimeField = "Tscore_" + i.toString() + "_0";
 
 
 				if (ThestudentID != "") {
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
-					GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, LogFiled);
+					GetStudentRecord(StudentList[j].mbox, LessonList[i].GUID, LogFiled,TimeField);
 				} else {
 					GetPassFailInProgress(LessonList[i], StudentList[j].mbox, StudentList[j].name, i, j);
 				}
@@ -1145,7 +1161,7 @@ function getTest(email, testID, n, target, link, Title) {
 
 }
 
-function GetStudentRecord(student, CourseGUID, target) {
+function GetStudentRecord(student, CourseGUID, target,TimeField) {
 	var setting = TheLRStheSetting;
 	var QueryObj = [{
 			"$match": {
@@ -1232,9 +1248,10 @@ function GetStudentRecord(student, CourseGUID, target) {
 			}
 			var html = "";
 			html = html + "Last time on this lesson: <span class='numbers'>" + ReturnDate(last) + "</span>";
-		//	html = html + "<li>First time on this lesson : <span class='numbers'>" + ReturnDate(first) + "</span>";
-		//	html = html + "</ul>";
-			$("#" + target).html(html);
+			
+			$("#" + target).html("Last time on this lesson");
+			
+			$("#" + TimeField).html( ReturnDate(last));
 			var LinkObj = {
 				"student": student,
 				"guid": CourseGUID
