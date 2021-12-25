@@ -337,7 +337,7 @@ function GetTheEventAssigned() {
       TheName=realName;
     }
     $("#runningstatus").html(
-      "<center>"+TheName+": Your Internet speed is " + con.downlink + " out of 10.</center>"
+      "<center>"+TheName+", Your Internet speed is " + con.downlink + " out of 10.</center>"
     );
   });
 
