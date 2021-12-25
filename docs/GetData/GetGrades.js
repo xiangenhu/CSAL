@@ -1736,7 +1736,7 @@ function GetAllStudents() {
 $(document).ready(function () {
 	GL = "0";
 	$("#popupWin").hide();
-	GetMsg(qs("sid", ""))
+//	GetMsg(qs("sid", ""))
 	getAssignmentStatus(qs("sid", ""));
 //	GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
 });
@@ -1789,6 +1789,36 @@ function sortGroupingTime(a, b) {
 	return 0;
 }
 
+function GetMessages(email){
+
+	if (email == "") return;
+	TheEmail = decodeURIComponent(email)
+
+	var settings = TheLRStheSetting;
+	var data = [{
+			"$match": {
+				"statement.object.mbox": "mailto:" + TheEmail,
+				"statement.verb.id": "https://app.skoonline.org/ITSProfile/PostMsg"
+			}
+		},
+		{
+			"$project": {
+				"msg": "$statement.result.result",
+				"lesson":"$statement.actor"
+			}
+		}
+	]
+	settings.data = JSON.stringify(data);
+	$.ajax(settings).done(function (response) {
+		if (response.length == 0) {
+			GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
+		} else {
+			console.log(response);
+			GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
+		}
+	});
+}
+
 function getAssignmentStatus(email) {
 
 	if (email == "") return;
@@ -1817,7 +1847,7 @@ function getAssignmentStatus(email) {
 	$.ajax(settings).done(function (response) {
 		if (response.length == 0) {
 			//  console.log(CellID,"false")
-			GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
+			GetMessages(email)
 		} else {
 			response.sort(sortGroupingTime);
 			for (var i = 0; i < response.length; i++) {
@@ -1835,7 +1865,7 @@ function getAssignmentStatus(email) {
 				}
 			}
 			console.log(TheAssignmentStatus)
-			GetGoogleSheetData(LessonInforPointer, "GetLessons", "7");
+			GetMessages(email)
 		}
 	});
 }
