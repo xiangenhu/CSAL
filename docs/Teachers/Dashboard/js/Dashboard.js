@@ -858,7 +858,7 @@ function togglebtn(PerformanceInfo) {
   ThePopupInfor = ThePopupInfor + "<li>Average Score " + TheRealResponse.Average.toFixed(2) + " </li>";
   ThePopupInfor = ThePopupInfor + "</ul>";
   ThePopupInfor = ThePopupInfor + "<li> Click " + detailInformationLink + " for more Details </li>";
-  ThePopupInfor = ThePopupInfor + "<li> " + QuickMsgLink + "</li>";
+//  ThePopupInfor = ThePopupInfor + "<li> " + QuickMsgLink + "</li>";
   ThePopupInfor = ThePopupInfor + "</ul>";
   console.log(ThePopupInfor);
 
