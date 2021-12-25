@@ -348,7 +348,7 @@ function GetTheEventAssigned() {
       TheName=realName;
     }
     $("#runningstatus").html(
-      "<center>"+TheName+":Click to see your internet connection status.</center>"
+      "<center>"+TheName+", Click to see your internet connection status.</center>"
     );
   });
 
