@@ -492,6 +492,12 @@ div#controlButton{
 	z-index:16
 }
 
+#mainscreen{
+	width: 800px;
+	height: 340px;
+	position:absolute;	
+	display:none;
+}
 
 #ScorePanel{
 	font-family: Lato, Verdana, 'Times New Roman';
@@ -523,7 +529,7 @@ div#controlButton{
 	text-align: center;
 	margin-top: 695px;
 	margin-left: 350px;
-	position:absolute;	
+	position:absolute;
 	border-radius: 7px;
 	border: 1px solid white;
 	cursor: pointer;
@@ -536,6 +542,29 @@ div#controlButton{
 	border: 1px solid #f8ffca;
 }
 	
+
+#SetupBtn:hover {
+	color: #f8ffca;
+	border: 1px solid #f8ffca;
+}
+#SetupBtn{
+	font-family: Lato, Verdana, 'Times New Roman';
+	font-size: 20px;
+	background-color: #333;
+	color:rgb(239, 245, 239);
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 695px;
+	margin-left: 100px;
+	position:absolute;	
+	border-radius: 7px;
+	border: 1px solid white;
+	cursor: pointer;
+	z-index: 40;
+	display:none;
+}
 #PauseBtn{
 	font-family: Lato, Verdana, 'Times New Roman';
 	font-size: 20px;

@@ -20,11 +20,30 @@
 	<script src="../js/ShowMovies.js"></script>
 
 	<script src="GetGrades.js"></script>	
+    <style>
 
+#WaitBtn{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+      z-index: 1;
+      color:#ddd;
+      font-size: 50px;
+      background-color: #0d09cf;
+      display:block;
+      border-radius: 50%;
+    }
+
+	</style>
 	
 </head>
 
 <body>
+	<button id="WaitBtn" class="btn">Wait...</button>
 	<div id="popupWin"></div>
 	<div id="TheGrades"></div>
 </body>

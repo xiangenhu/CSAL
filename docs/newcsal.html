@@ -1,168 +1,275 @@
 <!DOCTYPE html>
 <html>
-
-<head>  
-<script src="https://tools.autotutor.org/utils/ATcommonjs/common.js" type="text/javascript"></script>
-    <meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin"><!-- 
+	<head>
+		<script
+			src="https://tools.autotutor.org/utils/ATcommonjs/common.js"
+			type="text/javascript"
+		></script>
+		<meta charset="ISO-8859-1" http-equiv="Access-Control-Allow-Origin" />
+		<!-- 
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0"> -->
-    <title>CSAL Web Application</title>
-	<link rel="stylesheet" type="text/css" href="css/mainPage.css">
-	
+		<title>CSAL Web Application</title>
+		<link rel="stylesheet" type="text/css" href="css/mainPage.css" />
 
-    <script src="https://tools.autotutor.org/author/editor/ace/ace.js"></script>
+		<script src="https://tools.autotutor.org/author/editor/ace/ace.js"></script>
 
-	
-    <script src="https://tools.autotutor.org/author/editor/jquery.min.js" type="text/javascript"></script>
-    <script src="https://tools.autotutor.org/author/editor/jquery-ui.js" type="text/javascript"></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/jquery.min.js"
+			type="text/javascript"
+		></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/jquery-ui.js"
+			type="text/javascript"
+		></script>
 
-    <script src="https://tools.autotutor.org/utils/ATcommonjs/ForAll.js"></script>
+		<script src="https://tools.autotutor.org/utils/ATcommonjs/ForAll.js"></script>
 
-	<script src="https://tools.autotutor.org/author/editor/jstree.min.js" type="text/javascript"></script>
-	<script src="https://tools.autotutor.org/author/editor/xml2json.js"  type="text/javascript"></script>
-	<script src="https://tools.autotutor.org/author/editor/Definitions.js"  type="text/javascript"></script>
-	<script src="https://tools.autotutor.org/author/editor/IONew.js"  type="text/javascript"></script>
-	
-    <script src="https://tools.autotutor.org/author/editor/modal.js"></script>
-	
-	<script src="js/def.js"></script>
-	<script src="js/xAPIPosting/xAPIJSOCollection.js"></script>
-	<script src="js/xAPIPosting/xapiwrapper.min.js"></script>
-    <script src="js/xAPIPosting/CSALxAPIPosting.js"></script>
-	
-    <script src="Teachers/Dashboard/js/Dashboard.js"></script>
-	
-	<link href="https://tools.autotutor.org/author/editor/themes/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-	<link href="https://tools.autotutor.org/author/editor/themes/Interface.css" rel="stylesheet" type="text/css" />
-	
-	
-	<link href="https://tools.autotutor.org/author/editor/themes/default/style.min.css" rel="stylesheet" type="text/css"/>
-	
-	<link href="https://tools.autotutor.org/author/editor/themes/additional.css" rel="stylesheet" type="text/css" /> 
-	<link href="https://tools.autotutor.org/author/editor/themes/editor.css" rel="stylesheet" type="text/css"/>
-    <link href="../GetData/TheStyle.css" rel="stylesheet" type="text/css"/>
-	
-	
-	
-	
-	
-    <script src="js/processbar.js"></script>
-    <script src="js/pagecontrol3.js"></script>
-    <script src="js/actioncontrol.js"></script>
-    <script src="js/csalwebapi2.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/userPerformance.js"></script>
-    <script src="js/URI.js"></script>
-	<script src="js/csal2018.js"></script>
-	<script src="js/ShowMovies.js"></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/jstree.min.js"
+			type="text/javascript"
+		></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/xml2json.js"
+			type="text/javascript"
+		></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/Definitions.js"
+			type="text/javascript"
+		></script>
+		<script
+			src="https://tools.autotutor.org/author/editor/IONew.js"
+			type="text/javascript"
+		></script>
 
-	<style>
-	</style>
-</head>
+		<script src="https://tools.autotutor.org/author/editor/modal.js"></script>
 
-<body>
-    <div id="containerNoImg">
-	    <div id="ScorePanel"></div>
-	    <div id="TheFastForwardCover"> </div>
-	    <div id="CloseCaption">CC</div>
-	    <div id="MuteBtn">Mute</div>
-	    <div id="ScoreBtn">Score</div>
-	    <div id="PauseBtn">Pause</div>
-	    <div id="FeedBackBtn">Feedback</div>
+		<script src="js/def.js"></script>
+		<script src="js/xAPIPosting/xAPIJSOCollection.js"></script>
+		<script src="js/xAPIPosting/xapiwrapper.min.js"></script>
+		<script src="js/xAPIPosting/CSALxAPIPosting.js"></script>
+
+		<script src="Teachers/Dashboard/js/Dashboard.js"></script>
+
+		<link
+			href="https://tools.autotutor.org/author/editor/themes/bootstrap.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://tools.autotutor.org/author/editor/themes/Interface.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<link
+			href="https://tools.autotutor.org/author/editor/themes/default/style.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<link
+			href="https://tools.autotutor.org/author/editor/themes/additional.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://tools.autotutor.org/author/editor/themes/editor.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link href="../GetData/TheStyle.css" rel="stylesheet" type="text/css" />
+
+		<script src="js/processbar.js"></script>
+		<script src="js/pagecontrol3.js"></script>
+		<script src="js/actioncontrol.js"></script>
+		<script src="js/csalwebapi2.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/userPerformance.js"></script>
+		<script src="js/URI.js"></script>
+		<script src="js/csal2018.js"></script>
+		<script src="js/ShowMovies.js"></script>
+
+		<style>
+        #NameChangeTbl{
+			width:640px;
+			height:340px;
+		}
+
+
+		</style>
+	</head>
+
+	<body>
         
-        <div id="agentFrame" style="z-index:-1000;" aligh="center">
-            <iframe id="agentsLarge" src="angentsjs/speakTH.html"  aligh="center"></iframe>
-        </div>
-		<div id="mainscreen" style="display:none">
-        <div id="PB">Progress Bar
+		<div id="containerNoImg">
+			<div id="ScorePanel"></div>
+			<div id="TheFastForwardCover"></div>
+			<div id="CloseCaption">CC</div>
+			<div id="MuteBtn">Mute</div>
+			<div id="ScoreBtn">Score</div>
+			<div id="PauseBtn">Pause</div>
+			<div id="FeedBackBtn">Feedback</div>
+			<div id="SetupBtn">Setup</div>
 
-            <div class="pscontainer">
-                <div class="progressbar"></div>
-            </div>
-        </div>
-        <div id="mainBody" style="z-index:1;">
-            <iframe id="mainFrame" src=""></iframe>
-            <div id="videoDiv">
-                <iframe id="vid" width="799" height="490" src="videos/playlocalvideo.html" frameborder="0" allowfullscreen="false" autoplay="true"></iframe>
-            </div>
-        </div>
-        <div id="home">
-            <img src="images/HomeButton.png" width="40" height="40" />
-        </div>
-        <div id="repeat">Repeat</div>
-		
+			<div id="agentFrame" style="z-index: -1000" aligh="center">
+				<iframe
+					id="agentsLarge"
+					src="angentsjs/speakTH.html"
+					aligh="center"
+				></iframe>
+			</div>
 
-        <div id="btReplayVideo"> Play Video</div>
-        <div id="btNext"> Next </div>
-		
-        <div id="readText">
-            <img id="readTextImg" src="images/SpeakBefore.png" width="30" height="30" />
-            <audio id="audioPlayer2"></audio>
-        </div>
+			<div id="mainscreen" style="display: none">
+                
+				<div id="PB">
+					Progress Bar
 
-        <div id="textInputDialog">
-            <textarea id="textInput" name="textInput" autofocus></textarea>
-            <button id="textInputSubmit" name="textInputSubmit">Submit</button>
-        </div>
-        <div id="displayScoreBoard">
-            <div id="scoreBoardL" class="scoreBoard">
-                <span class="scoreDisplayName" id="scoreBoardUserNameL" style="background-color:#D0CECE">Qinyu</span>
-                <br>
-                <span class="score" id="scoreL">0</span>
+					<div class="pscontainer">
+						<div class="progressbar"></div>
+					</div>
+				</div>
+				<div id="mainBody" style="z-index: 1">
+					<iframe id="mainFrame" src=""></iframe>
+					<div id="videoDiv">
+						<iframe
+							id="vid"
+							width="799"
+							height="490"
+							src="videos/playlocalvideo.html"
+							frameborder="0"
+							allowfullscreen="false"
+							autoplay="true"
+						></iframe>
+					</div>
+				</div>
 
-            </div>
-            <div id="scoreBoardR" class="scoreBoard">
-                <span class="scoreDisplayName" id="scoreBoardUserNameR" style="background-color:#D0CECE">Jordan</span>
-                <br>
-                <span class="score" id="scoreR">0</span>
+				<div id="home">
+					<img src="images/HomeButton.png" width="40" height="40" />
+				</div>
+				<div id="repeat">Repeat</div>
 
-            </div>
-        </div>
-        <div id="displayArea">
-            <textarea id="speechArea" name="textInput" autofocus ></textarea>
-        </div>
-    </div>
-	</div>
-	<ul id="caption" autofocus rows="15" cols="111"> </ul>
-	
-	<textarea id="caption1"> </textarea>
-	
-	<textarea id="caption2"> </textarea>
-	<div id="runningstatus"><center>Click to see your internet connection status.</center></div>
-	<div id="myMessage" class="modal"></div>
+				<div id="btReplayVideo">Play Video</div>
+				<div id="btNext">Next</div>
 
-    <div id="editor">
-        <table width="100%" height="100%">
-        <tr><td><div id="editorMenu"></div></td></tr>
-                    <tr ><td height="100%" width="100%">
-                    <div id="forest" >
-                        <table height="100%" width="100%">
-                            <tr><td heigh="50">
-                                <hr/>
-                                <div id="TreeMenu"></div>
-                            </td></tr>
-                            <tr>
-                                <td height="100%" width="100%"> <div id="Searching"></div>
-                                    <div id = "ShowWholeTree"><div id ="WholeTree"></div><hr/><div id ="TheWholeTreeXMLeditor"></div></div>
-                                    <div id = "ShowID"><div id ="IDTree"></div><hr/><div id ="TheIDXMLeditor"></div></div>
-                                    <div id = "ShowAutoTutor"><div id ="AutoTutorTree"></div><hr/><div id ="TheAutoTutorXMLeditor"></div></div>
-                                    <div id = "ShowLoM"><div id ="LoMTree"></div><hr/><div id ="TheLoMXMLeditor"></div></div>
-                                    <div id = "ShowSKOConfig"><div id ="SKOConfigTree"></div><hr/><div id ="TheSKOConfigXMLeditor"></div></div>
-                                    <div id = "ShowRuningEnv"><div id ="RuningEnvTree"></div></div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id = "XMLtree"></div>
-                    <div id = "Outline"><div id="OutlineContent"></div><div id="SKOHistory"></div></div>
-                    <div id = "About"></div>
-                    <div id = "CommitChanges"><div id="Options"></div></div>
-                    </td></tr>
-                    <tr><td align="center"><div id="statusbar"></div></td></tr>
-                    </table>
-        </div>
-        <div id="popupWin"></div>
-</body>
+				<div id="readText">
+					<img
+						id="readTextImg"
+						src="images/SpeakBefore.png"
+						width="30"
+						height="30"
+					/>
+					<audio id="audioPlayer2"></audio>
+				</div>
 
+				<div id="textInputDialog">
+					<textarea id="textInput" name="textInput" autofocus></textarea>
+					<button id="textInputSubmit" name="textInputSubmit">Submit</button>
+				</div>
+				<div id="displayScoreBoard">
+					<div id="scoreBoardL" class="scoreBoard">
+						<span
+							class="scoreDisplayName"
+							id="scoreBoardUserNameL"
+							style="background-color: #d0cece"
+							>Qinyu</span
+						>
+						<br />
+						<span class="score" id="scoreL">0</span>
+					</div>
+					<div id="scoreBoardR" class="scoreBoard">
+						<span
+							class="scoreDisplayName"
+							id="scoreBoardUserNameR"
+							style="background-color: #d0cece"
+							>Jordan</span
+						>
+						<br />
+						<span class="score" id="scoreR">0</span>
+					</div>
+				</div>
+				<div id="displayArea">
+					<textarea id="speechArea" name="textInput" autofocus></textarea>
+				</div>
+			</div>
+
+		</div>
+		<ul id="caption" autofocus rows="15" cols="111"></ul>
+
+		<textarea id="caption1"> </textarea>
+
+		<textarea id="caption2"> </textarea>
+		<div id="runningstatus">
+			<center>
+				<span id="YourName">Xiangen: </span>Click to see your internet
+				connection status.
+			</center>
+		</div>
+		<div id="myMessage" class="modal"></div>
+
+		<div id="editor">
+			<table width="100%" height="100%">
+				<tr>
+					<td><div id="editorMenu"></div></td>
+				</tr>
+				<tr>
+					<td height="100%" width="100%">
+						<div id="forest">
+							<table height="100%" width="100%">
+								<tr>
+									<td heigh="50">
+										<hr />
+										<div id="TreeMenu"></div>
+									</td>
+								</tr>
+								<tr>
+									<td height="100%" width="100%">
+										<div id="Searching"></div>
+										<div id="ShowWholeTree">
+											<div id="WholeTree"></div>
+											<hr />
+											<div id="TheWholeTreeXMLeditor"></div>
+										</div>
+										<div id="ShowID">
+											<div id="IDTree"></div>
+											<hr />
+											<div id="TheIDXMLeditor"></div>
+										</div>
+										<div id="ShowAutoTutor">
+											<div id="AutoTutorTree"></div>
+											<hr />
+											<div id="TheAutoTutorXMLeditor"></div>
+										</div>
+										<div id="ShowLoM">
+											<div id="LoMTree"></div>
+											<hr />
+											<div id="TheLoMXMLeditor"></div>
+										</div>
+										<div id="ShowSKOConfig">
+											<div id="SKOConfigTree"></div>
+											<hr />
+											<div id="TheSKOConfigXMLeditor"></div>
+										</div>
+										<div id="ShowRuningEnv"><div id="RuningEnvTree"></div></div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="XMLtree"></div>
+						<div id="Outline">
+							<div id="OutlineContent"></div>
+							<div id="SKOHistory"></div>
+						</div>
+						<div id="About"></div>
+						<div id="CommitChanges"><div id="Options"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td align="center"><div id="statusbar"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div id="popupWin"></div>
+	</body>
 </html>

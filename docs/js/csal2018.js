@@ -284,6 +284,13 @@ function getLessonInfo() {
   }
 }
 
+function ChangeName(){
+    realName= $("#newName").val();
+    ChangeNameandPost( $("#newName").val());
+}
+
+
+
 function GetTheEventAssigned() {
   if (qs("ef", "0") == "1") {
     return; // no need to start tutoring if editing.
@@ -293,14 +300,22 @@ function GetTheEventAssigned() {
       navigator.connection ||
       navigator.mozConnection ||
       navigator.webkitConnetion;
+      var TheName=fullname;
+      if (realName!=""){
+        TheName=realName;
+      }
     $("#runningstatus").html(
-      "<center>Your Internet speed is " + con.downlink + " out of 10.</center>"
+      "<center>"+TheName+": Your Internet speed is " + con.downlink + " out of 10.</center>"
     );
   });
 
   $("#runningstatus").mouseup(function () {
+    var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Click to see your internet connection status.</center>"
+      "<center> "+TheName+": Click to see your internet connection status.</center>"
     );
   });
 
@@ -316,14 +331,24 @@ function GetTheEventAssigned() {
       navigator.connection ||
       navigator.mozConnection ||
       navigator.webkitConnetion;
+
+      var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Your Internet speed is " + con.downlink + " out of 10.</center>"
+      "<center>"+TheName+", Your Internet speed is " + con.downlink + " out of 10.</center>"
     );
   });
 
   $("#runningstatus").mouseup(function () {
+    
+    var TheName=fullname;
+    if (realName!=""){
+      TheName=realName;
+    }
     $("#runningstatus").html(
-      "<center>Click to see your internet connection status.</center>"
+      "<center>"+TheName+", Click to see your internet connection status.</center>"
     );
   });
 
@@ -363,9 +388,11 @@ function GetTheEventAssigned() {
   });
 
   $("#PauseBtn").click(function () {
+    $("#SetupBtn").hide();
     var buttonFaceValue = $("#PauseBtn").text();
     if (buttonFaceValue == "Pause") {
       $("#PauseBtn").html("Continue");
+      $("#SetupBtn").show();
       $("#FeedBackBtn").show();
       //	$("#ScoreBtn").show();
       if (allowediting) {
@@ -408,6 +435,49 @@ function GetTheEventAssigned() {
       }
     }
   });
+
+
+
+  $("#SetupBtn").click(function () {
+ //   alert("SetupClicked");
+    var Title="Change your name.";
+    var Footer="You will be called by the new name after the change";
+    var htmlbody="<p align='center'>" 
+    htmlbody=htmlbody+"Type a new name: <br/><br/>";
+    htmlbody=htmlbody+"<input id='newName'/><br/><br/>";
+    htmlbody=htmlbody+"<button class='btn' onclick='ChangeName()' >submit</button>";
+    htmlbody=htmlbody+"</p>";
+
+    var TheTable="";
+    TheTable=TheTable+"<table id='NameChangeTbl'>";
+    TheTable=TheTable+"<tr>";
+    TheTable=TheTable+"<td>";
+    TheTable=TheTable+htmlbody;
+    TheTable=TheTable+"</td>";
+    TheTable=TheTable+"</td>";
+    TheTable=TheTable+"</table>";
+
+
+
+    OpenPopUp(Title, Footer, TheTable, "popupWin");
+    var TheName=fullname;
+      if (realName!=""){
+        TheName=realName;
+      }
+    $("#newName").val(TheName);
+  });
+
+
+  $("#FeedBackBtn").click(function () {
+    var URL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSernYryLw1pTzWprJ3qn8Nxxl3RhtP2W6Sv2rpCRIvEv8TpXw/viewform?usp=pp_url&entry.183686984=";
+    var optionText = JSON.stringify(currentPageInfor);
+    window.open(URL + optionText);
+  });
+
+  
+
+
 
   $("#FeedBackBtn").click(function () {
     var URL =
@@ -1420,19 +1490,47 @@ function TrackARCACEAction(TheJSON){
   ADL.XAPIWrapper.sendStatement(statements);
 }
 
+function ChangeNameandPost(NewName){
+  LearnerID.name=NewName;
+  var actor=LearnerID;
+  var verb={id:xAPIVerbBase+"changeName",display:{"en-US":"changeName"}};
+  var object={id:xAPIVerbBase+"changeName"}
+  var aStatement={actor:actor,verb:verb,object:object};
+  ADL.XAPIWrapper.sendStatement(aStatement,ConfirmationNameChange);
+  console.log("NameChanged")
+  console.log(aStatement)
+}
+
+
+
+var ConfirmationNameChange = function (resp, thing) {
+	var spanclass = "text-info";
+	var text = "";
+	if (resp.status >= 400) {
+		spanclass = "text-danger";
+		text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+		for (var res in thing.results) {
+			text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+			for (var err in thing.results[res].errors) {
+				text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+				text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+			}
+		}
+	} else {
+		if (resp.responseText) {
+			text = "LRS " + TheLRSURL + "Successfully sent " + resp.responseText;
+      console.log("Name Changed "+text)
+//			sendEmail(TheEmail, "Welcome to ARC!", TheEmailMessage);
+		} else
+			text = thing + " " + EXPID;
+	}
+};
+
+
 function CaptureFirstName(Msg){
   if (Msg.indexOf("TheLearnerFirstName")>-1){
       var NamePasredFromMsg=Msg.split("_TheLearnerFirstName_")[1];
-      //
-      LearnerID.name=NamePasredFromMsg;
-      realName=NamePasredFromMsg;
-      var actor=LearnerID;
-      var verb={id:xAPIVerbBase+"changeName",display:{"en-US":"changeName"}};
-      var object={id:xAPIVerbBase+"changeName"}
-      var aStatement={actor:actor,verb:verb,object:object};
-      ADL.XAPIWrapper.sendStatement(aStatement);
-      console.log("NameChanged")
-      console.log(aStatement)
+      ChangeNameandPost(NamePasredFromMsg)
       return Msg.split("_TheLearnerFirstName_")[0];
   }
   return Msg;
