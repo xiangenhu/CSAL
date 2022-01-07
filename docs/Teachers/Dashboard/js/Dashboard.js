@@ -2,6 +2,7 @@
 var ClassIDSpreadsheet = "2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq";
 var studentDatainGS = "2PACX-1vQhXuVJqyd7MSnlkYYYeG1f5jovoubip6VnfrCKJ-QCpYkZV48pq0a6JchcL6BVm6nSmH14TfrGs9S8"
 var Theclass;
+var LearnerPrefix="dsdstudent";
 var TheUniqPointer = qs(
   "TheDashPointer",
   "https://record.x-in-y.com/integrations/embedableDashboards/"
@@ -210,7 +211,7 @@ function CreateLessonByStudentMatrix() {
 
       for (var j = 0; j < Learners.length; j++) {
         var LearnerEmail = JSON.parse(Learners[j]).email;
-        if (LearnerEmail.indexOf("student") > -1) {
+        if (LearnerEmail.indexOf(LearnerPrefix) > -1) {
           TheRealLearner.push(Learners[j]);
         }
       }
@@ -230,7 +231,7 @@ function CreateLessonByStudentMatrix() {
         html =
           html +
           "<th width='30' align='center'>" +
-          JSON.parse(Learners[j]).email.split("student")[1].split("@")[0].split("").join("<br/>");
+          JSON.parse(Learners[j]).email.split(LearnerPrefix)[1].split("@")[0].split("").join("<br/>");
         //        JSON.parse(Learners[j]).name.split(" ")[0] +
         "</p></th>";
       }
@@ -783,10 +784,11 @@ function OpenPopUpReport(header, footer, bodytext, targetwin, data, Verb) {
 
 function GetStudents(json) {
   var TheClassID=classID;
-  if (classID.indexOf("CSALUSNW")==-1);
-  TheClassID=classID.split("CSALUSNW").join("ARCCLASS");
-
+//  if (classID.indexOf("CSALUSNW")==-1);
+//  TheClassID=classID.split("CSALUSNW").join("ARCCLASS");
+  
   Theclass = json.filter((item) => {
+    console.log(item.course1)
 		return item.course1 == TheClassID
 	});
 	html = "";
