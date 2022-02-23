@@ -124,6 +124,12 @@ function CreateCourseLoginForTeacher(TheOriginalList, RemoveList, TeacherEmail, 
 		 html= html +", <br/>There are no class is available. We will create new class for you if you send emails to ";
 		 html= html +"<b>read.autotutor@gmail.com</b>, ";
 		 html= html +"We will get back to you ASAP.";
+		 var EmailMSG="Hello, <br/><b>"+ TeacherName+"</b> with email "+ TeacherEmail.split(":")[1];
+		 EmailMSG=EmailMSG+" is registering to be an ARC teacher. But there are no class avaialble for "+TeacherName;
+		 EmailMSG=EmailMSG+" Sombody need to contact "+TeacherName+ " and add a class for her/him." ;
+		 EmailMSG=EmailMSG+"<br/> ---This message is sent from arcweb.us" ;
+		 var TheEmail="read.autotutor@gmail.com";
+		 sendEmail(TheEmail, "Need to contact a potential teacher", EmailMSG);
 		return html;
 	}
 	var TheIndex = Math.random() * remainList.length;
