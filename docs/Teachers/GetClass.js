@@ -119,6 +119,13 @@ function CreateCourseLoginForTeacher(TheOriginalList, RemoveList, TeacherEmail, 
 		}
 	}
 	console.log(remainList);
+	if (remainList.length==0){
+		var html= "Hello, "+TeacherName.split(" ")[0];
+		 html= html +", <br/>There are no class is available. We will create new class for you if you send emails to ";
+		 html= html +"<b>read.autotutor@gmail.com</b>, ";
+		 html= html +"We will get back to you ASAP.";
+		return html;
+	}
 	var TheIndex = Math.random() * remainList.length;
 	var randomindex = Math.floor(TheIndex);
 	var html = "Hello " + TeacherName.split(" ")[0] + ",<br/><br/>";
