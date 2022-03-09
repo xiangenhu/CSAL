@@ -34,7 +34,7 @@
             classID = qs("classID", "ARCCLASS01_2_1")
             if ((teacherID != "1") && (classID != "1")) {
                 $("#studentsInfor").show();
-                GetGoogleSheetData(studentDatainGS,"GetStudents", "1");
+                GetGoogleSheetData(studentDatainGS,"GetStudents", qs("Pub","1"));
             } 
         });
     </script>
