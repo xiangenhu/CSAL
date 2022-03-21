@@ -125,8 +125,8 @@ function CreateCourseLoginForTeacher(TheOriginalList, RemoveList, TeacherEmail, 
 		 html= html +"<b>read.autotutor@gmail.com</b>, ";
 		 html= html +"We will get back to you ASAP.";
 		 var EmailMSG="Hello, <br/><b>"+ TeacherName+"</b> with the email "+ TeacherEmail.split(":")[1];
-		 EmailMSG=EmailMSG+" is registering to be an ARC teacher. But there are not any classes avaialble for "+TeacherName;
-		 EmailMSG=EmailMSG+". Sombody needs to contact "+TeacherName+ " and add a class for her/him." ;
+		 EmailMSG=EmailMSG+" is registering to be an ARC teacher. But there are not any classes available for "+TeacherName;
+		 EmailMSG=EmailMSG+". Somebody needs to contact "+TeacherName+ " and add a class for her/him." ;
 		 EmailMSG=EmailMSG+"<br/> ---This message is sent from arcweb.us" ;
 		 var TheEmail="read.autotutor@gmail.com";
 		 sendEmail(TheEmail, "Need to contact a potential teacher", EmailMSG);
