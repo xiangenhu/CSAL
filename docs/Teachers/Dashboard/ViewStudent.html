@@ -29,13 +29,12 @@
     <script>
         var teacherID = qs("teacherID", "");
         var classID = qs("classID", "");
-        var ThePub= qs("Pub", "1");
         $(document).ready(function () {
             teacherID = qs("teacherID", "");
             classID = qs("classID", "ARCCLASS01_2_1")
             if ((teacherID != "1") && (classID != "1")) {
                 $("#studentsInfor").show();
-                GetGoogleSheetData(studentDatainGS, "GetStudents", "0");
+                GetGoogleSheetData(studentDatainGS, "GetStudents", "1");
             }
         });
     </script>
