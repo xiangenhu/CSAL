@@ -1,7 +1,9 @@
 ﻿var ClassIDSpreadsheet = "2PACX-1vTq9p6YFnK5zyOKl6I72PSkt5hs3bCzJLq07TLle9SfQ4RzvU5ZxPvakH41Dzq5JDlBe-R4dtf-8XUq";
 var studentDatainGS = "2PACX-1vQhXuVJqyd7MSnlkYYYeG1f5jovoubip6VnfrCKJ-QCpYkZV48pq0a6JchcL6BVm6nSmH14TfrGs9S8"
 var Theclass;
+
 var LearnerPrefix="student";
+
 var TheUniqPointer = qs(
   "TheDashPointer",
   "https://record.x-in-y.com/integrations/embedableDashboards/"

@@ -17,9 +17,9 @@
 
     <link href="css/TheStyle.css" rel="stylesheet" type="text/css" />
 
-	<script src="js/Dashboard.js"></script>
     <script src="../../js/def.js"></script>
 
+    <script src="js/Dashboard.js"></script>
     <script src="../smtp.js"></script>
     <script src="../GetClass.js"></script>
 
@@ -28,19 +28,20 @@
 <body>
     <script>
         var teacherID = qs("teacherID", "");
-        var classID = qs("classID", "")
+        var classID = qs("classID", "");
+        var ThePub= qs("Pub", "1");
         $(document).ready(function () {
             teacherID = qs("teacherID", "");
             classID = qs("classID", "ARCCLASS01_2_1")
             if ((teacherID != "1") && (classID != "1")) {
                 $("#studentsInfor").show();
-                GetGoogleSheetData(studentDatainGS,"GetStudents", qs("Pub","1"));
-            } 
+                GetGoogleSheetData(studentDatainGS, "GetStudents", "0");
+            }
         });
     </script>
 </body>
 <div id="studentsInfor">
-   
+
 </div>
 
 </html>
