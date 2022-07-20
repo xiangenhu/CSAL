@@ -167,7 +167,7 @@ function launchMOVIE() {
   OpenPopUp(MOVIETitle, MOVIEFooter, htmlbody, "popupWin");
 }
 function GetSpreadSheetARC(GoogleID, GoogleSheet) {
-	var theUrl = "https://tools.x-in-y.com/gs?json=";
+	var theUrl = "https://tools.xiangenhu.info/gs?json=";
 	var theObj = { id: GoogleID, page: GoogleSheet ,Pub:qs("Pub","1")};
 //	console.log(GoogleID);
 	theUrl = theUrl + JSON.stringify(theObj);
