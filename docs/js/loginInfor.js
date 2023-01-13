@@ -255,9 +255,9 @@ function GetURL(anApp) {
       "&asatlrs=" +
       qs("asatlrs", "https://xapilrs.x-in-y.com/scripts/xapi/") +
       "&asatlrslogin=" +
-      qs("asatlrslogin", "asatScripts") +
+      qs("asatlrslogin", "a79030cc-2dc7-4686-8571-aa264fb81e14") +
       "&asatlrspassword=" +
-      qs("asatlrspassword", "asatScripts") +
+      qs("asatlrspassword", "a79030cc-2dc7-4686-8571-aa264fb81e14") +
       "&lrs=" +
       qs("lrs", "https://xapilrs.x-in-y.com/arcproduction/xapi/") +
       "&lrslogin=" +
