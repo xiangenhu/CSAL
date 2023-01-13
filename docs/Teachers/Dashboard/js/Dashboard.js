@@ -6,7 +6,7 @@ var LearnerPrefix="student";
 
 var TheUniqPointer = qs(
   "TheDashPointer",
-  "https://record.x-in-y.com/integrations/embedableDashboards/"
+  "https://xapilrs.x-in-y.com/integrations/embedableDashboards/"
 );
 var DashboardAgentLink = qs(
   "DashAgentLink",
