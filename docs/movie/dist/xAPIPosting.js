@@ -12,7 +12,7 @@
 }
 var wrapper;
 
-var TheLRSURL=qs("lrs","https://record.x-in-y.com/arcfinaldebugging/xapi/");
+var TheLRSURL=qs("lrs","https://xapilrs.x-in-y.com/arcfinaldebugging/xapi/");
 var TheLRSLogin=qs("lrslogin","mihamo");
 var theLRSPassword=qs("lrspassword","zutivv");
 

@@ -253,13 +253,13 @@ function GetURL(anApp) {
       qs("aceurl", "https://ace.x-in-y.com/aceapi2021/api/aceaction") +
       // Will Change Later
       "&asatlrs=" +
-      qs("asatlrs", "https://record.x-in-y.com/scripts/xapi/") +
+      qs("asatlrs", "https://xapilrs.x-in-y.com/scripts/xapi/") +
       "&asatlrslogin=" +
       qs("asatlrslogin", "asatScripts") +
       "&asatlrspassword=" +
       qs("asatlrspassword", "asatScripts") +
       "&lrs=" +
-      qs("lrs", "https://record.x-in-y.com/arcproduction/xapi/") +
+      qs("lrs", "https://xapilrs.x-in-y.com/arcproduction/xapi/") +
       "&lrslogin=" +
       qs("lrslogin", "8ab2151b-dd04-478c-9a41-6075ef40d47e") +
       "&lrspassword=" +
